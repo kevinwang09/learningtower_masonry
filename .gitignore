@@ -42,3 +42,4 @@ vignettes/*.pdf
 !/Data/Raw/
 /Data/Raw/*
 !/Data/Raw/*.md
+.Rproj.user
