@@ -39,4 +39,6 @@ vignettes/*.pdf
 .Renviron
 
 # Do not upload the big data, that will go in /Data/Raw
-/Data/Raw/
+!/Data/Raw/
+/Data/Raw/*
+!/Data/Raw/*.md
