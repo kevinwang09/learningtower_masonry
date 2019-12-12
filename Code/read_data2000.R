@@ -34,44 +34,47 @@ v = list_data %>%
 
 v
 
+common_cols = list_data %>% 
+  lapply(colnames) %>% 
+  Reduce(intersect, .)
+
 scie_sub = scie %>% 
-  dplyr::select(COUNTRY,
-                SCHOOLID,
-                STIDSTD,
-                ST03Q01,
-                ST22Q04,
-                ST21Q04,
+  dplyr::select(one_of(common_cols),
                 pv1scie,
                 w_fstuwt)
 
 
 read_sub = read %>% 
-  dplyr::select(COUNTRY,
-                SCHOOLID,
-                STIDSTD,
+  dplyr::select(one_of(common_cols),
                 pv1read)
 
 math_sub = math %>% 
-  dplyr::select(COUNTRY,
-                SCHOOLID,
-                STIDSTD,
+  dplyr::select(one_of(common_cols),
                 pv1math)
 
 joined_data = left_join(
   scie_sub, 
   read_sub, 
-  by = c("COUNTRY",
-         "SCHOOLID",
-         "STIDSTD")) %>% 
+  by = common_cols) %>% 
   left_join(math_sub,
-            by = c("COUNTRY",
-                   "SCHOOLID",
-                   "STIDSTD"))
+            by = common_cols)
 
 
-joined_data
-pryr::object_size(joined_data)
-data2000 = joined_data
+data2000 = joined_data %>% 
+  dplyr::select(
+    COUNTRY,
+    SCHOOLID,
+    STIDSTD,
+    ST03Q01,
+    ST22Q04,
+    ST21Q04,
+    pv1math,
+    pv1read,
+    pv1scie,
+    w_fstuwt)
+
+pryr::object_size(data2000)
+
 save(
   data2000, 
   file = "Data/Output/2000/data2000.rda"
