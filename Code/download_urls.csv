@@ -1,3 +1,10 @@
 year,table,url
 2015,Student questionnaire data file,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_STU_QQQ.zip
+2015,Teacher questionnaire data file,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_TCH_QQQ.zip
+2015,School questionnaire data file,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_SCH_QQQ.zip
+2015,Cognitive item data file,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_STU_COG.zip
+2015,Questionnaire timing data file,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_STU_QTM.zip
+2015,Additional data files for Albania, Argentina, Kazakhstan and Malaysia,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CM2_STU_QQQ_COG_QTM_SCH_TCH.zip
+2015,Financial Literacy data file,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_STU_FLT.zip
+2015,Collaborative Problem Solving,https://webfs.oecd.org/pisa/PUF_SAS_COMBINED_CMB_STU_CPS.zip
 2015,Codebooks for the main files,https://www.oecd.org/pisa/data/2015database/Codebook_CMB.xlsx

@@ -1,6 +1,8 @@
 ---
 title: "Read in the SAS"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 first attempt at reading the sas, using `haven`
