@@ -20,9 +20,9 @@ Use the Haven package to read in the SPSS files.
 # Student questionnaire data files
 stu_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"))
 # School questionnaire data file
-sch_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"))
+sch_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),n_max = 10)
 # Cognitive item data file
-stu_cog <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_COQ.sav"))
+stu_cog <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_COG.sav"),n_max=10) 
 #  Questionnaire timing data files 
 stu_tim <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_TIM.sav"))
 # Teacher questionnaire data file
@@ -30,6 +30,33 @@ tch_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_TCH_QQQ.sav"))
 # Additional data file for Viet Nam
 vnm_stu_cog <- haven::read_sav(here::here("/Data/Raw/2018/CY07_VNM_STU_COG.sav"))
 vnm_stu_pvs <- haven::read_sav(here::here("/Data/Raw/2018/CY07_VNM_STU_PVS.sav"))
+```
+
+```{r create output files}
+#stu_qqq_output<- head(stu_qqq)
+#sch_qqq_output <- head(sch_qqq)
+#tch_qqq_output <- head(tch_qqq)
+stu_cog_output <- head(stu_cog)
+#stu_tim_output <- head(stu_tim)
+#vnm_stu_cog_output <- head(vnm_stu_cog)
+#vnm_stu_pvs_output <- head(vnm_stu_pvs)
+```
+
+
+```{r save files output}
+# Student questionnaire data files
+save(stu_qqq, file= here::here("/Data/Output/2018/CY07_MSU_STU_QQQ.rda"))
+# School questionnaire data file
+save(sch_qqq_output,file=here::here("/Data/Output/2018/CY07_MSU_SCH_QQQ.rda"))
+# Cognitive item data file
+save(stu_cog_output, file=here::here("/Data/Output/2018/CY07_MSU_STU_COG.rda"))
+#  Questionnaire timing data files 
+save(stu_tim_output , file= here::here("/Data/Output/2018/CY07_MSU_STU_TIM.rda"))
+# Teacher questionnaire data file
+save(tch_qqq_output, file=here::here("/Data/Output/2018/CY07_MSU_TCH_QQQ.rda"))
+# Additional data file for Viet Nam
+save(vnm_stu_cog_output, file=(here::here("/Data/Output/2018/CY07_VNM_STU_COG.rda")))
+save(vnm_stu_pvs_output,file=here::here("/Data/Output/2018/CY07_VNM_STU_PVS.rda"))
 ```
 
 
