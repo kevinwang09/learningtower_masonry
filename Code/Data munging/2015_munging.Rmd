@@ -5,6 +5,24 @@ output:
     df_print: paged
 ---
 
+Which columns do we want to keep?
+
+```{r}
+columns_to_keep <- c("CNT",
+         "CNTSCHID",
+         "CNTSTUID",
+         "ST005Q01TA",
+         "ST007Q01TA",
+         "ST004D01T",
+         "ST011Q04TA",
+         "ST011Q06TA",
+         "PV1MATH",
+         "PV1READ",
+         "PV1SCIE",
+         "W_FSTUWT")
+```
+
+
 first attempt at reading the sas, using `haven`
 
 ```{r}
@@ -13,47 +31,43 @@ library(here)
 library(tidyverse)
 ```
 
-read it in with `read_sas`
+read it in with `read_sas` keeping only the columns we agreed upon:
 
 ```{r}
-cy6_ms_cmb_stu_qqq <- read_sas(
+read_2015 <- function(file_name, cols_to_keep) {
+  df <- read_sas(
   here("Data", "Raw", "2015",
-       "cy6_ms_cmb_stu_qqq.sas7bdat")
+       file_name),
+  cols_only = columns_to_keep
   )
+  
+  return(df)
+}
+
+read_and_save <- function(what = "stu_qqq", cols_to_keep) {
+  # compose name of files to read in / write out
+  read_in_file <- paste0("cy6_ms_cmb_",what,".sas7bdat")
+  write_out_rda <- paste0(what,".rda")
+  write_out_csv <- paste0(what,".csv.gz")
+  
+  # read in
+  df_temp <- read_2015(read_in_file, cols_to_keep)
+  
+  # write out an rda
+  save(df_temp,
+       file = here("Data", "Output", "2015",
+                   write_out_rda))
+  # and csv
+  write_csv(df_temp,
+            path = here("Data", "Output", "2015",
+                        write_out_csv))
+}
 ```
 
-keep only the columns we agreed upon
 
 ```{r}
-chunk_2015 <- cy6_ms_cmb_stu_qqq %>%
-  select(CNT,
-         CNTSCHID,
-         CNTSTUID,
-         ST005Q01TA,
-         ST007Q01TA,
-         ST004D01T,
-         ST011Q04TA,
-         ST011Q06TA,
-         PV1MATH,
-         PV1READ,
-         PV1SCIE,
-         W_FSTUWT)
+"stu_qqq" %>%
+  read_and_save(cols_to_keep = columns_to_keep)
 ```
 
-
-and save the results as dataframe in rdata
-
-```{r}
-save(chunk_2015, file = here("Data", "Output", "2015",
-          "stu_qqq.rda"))
-```
-
-Maybe some very preliminary analysis:
-
-```{r}
-library(skimr)
-library(kable)
-skim(chunk_2015) %>%
-  kable()
-```
 

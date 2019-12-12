@@ -1,0 +1,162 @@
+---
+title: "Merging the files"
+author: "the free masons"
+date: "12/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(glue)
+library(here)
+```
+
+the years <- 
+
+```{r}
+dfs <- data_frame(
+  years = seq(2006, 2018, 3)
+) %>%
+  mutate(
+  paths = glue("Data/Output/{years}/{what}.rda", what = "stu_qqq")
+)
+
+df_names <- map_chr(dfs$paths ,~ load(here(.x), envir = .GlobalEnv))
+
+pisa_student_2006 <- pisa_student_2006 %>%
+  mutate(CNT = as.character(CNT))
+```
+
+```{r}
+df_names
+```
+
+```{r}
+target_names <- c(
+"country",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"science",
+"read",
+"stu_wgt"
+  )
+names_2006_2012 <- data_frame(
+  target_names =   target_names,
+  n_2006 = pisa_student_2006[,-1] %>% names(),
+  n_2009 = d_sub_2009 %>% names(),
+  n_2012 = d_sub_2012 %>% names(),
+  n_2015 = df_temp %>% names(),
+  n_2018 = stu_qqq_output %>% names()
+)
+```
+
+Let's see what we have
+
+```{r}
+knitr::kable(names_2006_2012)
+```
+
+apparently it's quite ok, as long as we shift the order of `stu_wgt` in 2015 and 2018.
+
+```{r}
+stu_qqq_output <- stu_qqq_output %>%
+  select(-W_FSTUWT, everything())
+
+df_temp <- df_temp %>%
+  select(-W_FSTUWT, everything())
+```
+
+and now we brute force the name in, remembering that 2006 has one extra variable
+```{r}
+names(pisa_student_2006) <- c("country_code",target_names)
+names(d_sub_2009) <- target_names
+names(d_sub_2012) <- target_names
+names(df_temp) <- target_names
+names(stu_qqq_output) <- target_names
+```
+
+```{r}
+list_dfs <- list(`2006` = pisa_student_2006[,-1] %>% mutate_all(formatC),
+     `2009` = d_sub_2009 %>% mutate_all(formatC),
+     `2012` = d_sub_2012 %>% mutate_all(formatC),
+     `2015` = df_temp  %>% mutate_all(formatC),
+     `2018` = stu_qqq_output  %>% mutate_all(formatC)
+     );
+
+#rm(list = df_names)
+```
+
+
+```{r}
+list_dfs$`2006`
+```
+
+
+```{r}
+student <- bind_rows(list_dfs, .id = "year") %>%
+  mutate(year = as.integer(year)) %>%
+  mutate(country = as.factor(country)) %>%
+  mutate_at(c("mother_educ", "father_educ", "gender", "computer", "internet"),
+              as.integer) %>%
+  mutate_at(c("math", "science", "read", "stu_wgt"),
+              as.numeric)
+```
+
+```{r}
+student %>% group_by(year) %>% sample_n(2)
+```
+
+```{r}
+student %>%
+  names()
+```
+
+
+```{r}
+write_rds(student,
+          path = here("Data/Output/student.rds"),
+          compress = "xz")
+
+save(student,
+     file = here("Data/Output/student.rda"))
+```
+
+
+
+```{r}
+coevar_student_math <- student %>%
+  group_by(year,country) %>%
+  summarise(mean_math = mean(math, na.rm = TRUE),
+            sd_math = sd(math, na.rm = TRUE),
+            coevar_math = sd_math / mean_math)
+
+coevar_student_science <- student %>%
+  group_by(year,country) %>%
+  summarise(mean_science = mean(science, na.rm = TRUE),
+            sd_science = sd(science, na.rm = TRUE),
+            coevar_science = sd_science / mean_science)
+
+coevar_student_read <- student %>%
+  group_by(year,country) %>%
+  summarise(mean_read = mean(read, na.rm = TRUE),
+            sd_read = sd(read, na.rm = TRUE),
+            coevar_read = sd_read / mean_read)
+
+coevar_student_math %>%
+  filter(country == "AUS") %>%
+  ggplot(aes(x = year, y = mean_math, color = country)) +
+  geom_line() +
+  theme_minimal()
+```
+
+
