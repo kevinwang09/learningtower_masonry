@@ -1,0 +1,57 @@
+---
+title: "Read in the SAS"
+output: html_notebook
+---
+
+first attempt at reading the sas, using `haven`
+
+```{r}
+library(haven)
+library(here)
+library(tidyverse)
+```
+
+read it in with `read_sas`
+
+```{r}
+cy6_ms_cmb_stu_qqq <- read_sas(
+  here("Data", "Raw", "2015",
+       "cy6_ms_cmb_stu_qqq.sas7bdat")
+  )
+```
+
+keep only the columns we agreed upon
+
+```{r}
+chunk_2015 <- cy6_ms_cmb_stu_qqq %>%
+  select(CNT,
+         CNTSCHID,
+         CNTSTUID,
+         ST005Q01TA,
+         ST007Q01TA,
+         ST004D01T,
+         ST011Q04TA,
+         ST011Q06TA,
+         PV1MATH,
+         PV1READ,
+         PV1SCIE,
+         W_FSTUWT)
+```
+
+
+and save the results as dataframe in rdata
+
+```{r}
+save(chunk_2015, file = here("Data", "Output", "2015",
+          "stu_qqq.rda"))
+```
+
+Maybe some very preliminary analysis:
+
+```{r}
+library(skimr)
+library(kable)
+skim(chunk_2015) %>%
+  kable()
+```
+
