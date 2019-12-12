@@ -13,13 +13,13 @@ library(tidyverse)
 #   col_positions = fwf_widths(var_table$widths,
 #                              col_names = var_table$names))
 
-scie = haven::read_sav("Data/Raw/2000/intstud_scie.sav")
+scie = haven::read_sav("Data/Raw/2000/sav/intstud_scie.sav")
 head(scie)
 
-read = haven::read_sav("Data/Raw/2000/intstud_read.sav")
+read = haven::read_sav("Data/Raw/2000/sav/intstud_read.sav")
 head(read)
 
-math = haven::read_sav("Data/Raw/2000/intstud_math.sav")
+math = haven::read_sav("Data/Raw/2000/sav/intstud_math.sav")
 head(math)
 
 list_data = list(
@@ -52,30 +52,38 @@ math_sub = math %>%
   dplyr::select(one_of(common_cols),
                 pv1math)
 
-joined_data = left_join(
+pisa_2000_raw = left_join(
   scie_sub, 
   read_sub, 
   by = common_cols) %>% 
   left_join(math_sub,
             by = common_cols)
 
+pisa_2000_raw %>% write_csv(path = "Data/Raw/2000/pisa_2000_raw.csv")
 
-data2000 = joined_data %>% 
+pisa_2000 = pisa_2000_raw %>% 
   dplyr::select(
-    COUNTRY,
-    SCHOOLID,
-    STIDSTD,
-    ST03Q01,
+    COUNTRY, # id columns
+    SCHOOLID, # id columns
+    STIDSTD, # id columns
+    ST03Q01, #
     ST22Q04,
     ST21Q04,
     pv1math,
     pv1read,
     pv1scie,
-    w_fstuwt)
+    w_fstuwt) %>% 
+  dplyr::rename(student_id = STIDSTD,
+                stu_wgt = w_fstuwt,
+                country = COUNTRY,
+                school_id = SCHOOLID,
+                gender = ST03Q01,
+                computer = ST22Q04,
+                internet = ST21Q04,
+                math = pv1math,
+                science = pv1scie,
+                read = pv1read)
 
-pryr::object_size(data2000)
+pryr::object_size(pisa_2000)
 
-save(
-  data2000, 
-  file = "Data/Output/2000/data2000.rda"
-)
+readr::write_rds(pisa_2000, path = "Data/Output/2000/pisa_2000.rds")
