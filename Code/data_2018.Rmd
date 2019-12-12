@@ -1,0 +1,36 @@
+---
+title: "PISA 2018 Data Import and Manipulation"
+author: "Kim Fitter"
+date: "12/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+library(here)
+library(tidyverse)
+```
+
+Use the Haven package to read in the SPSS files.
+
+```{r read in sav files}
+# Student questionnaire data files
+stu_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"))
+# School questionnaire data file
+sch_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"))
+# Cognitive item data file
+stu_cog <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_COQ.sav"))
+#  Questionnaire timing data files 
+stu_tim <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_STU_TIM.sav"))
+# Teacher questionnaire data file
+tch_qqq <- haven::read_sav(here::here("/Data/Raw/2018/CY07_MSU_TCH_QQQ.sav"))
+# Additional data file for Viet Nam
+vnm_stu_cog <- haven::read_sav(here::here("/Data/Raw/2018/CY07_VNM_STU_COG.sav"))
+vnm_stu_pvs <- haven::read_sav(here::here("/Data/Raw/2018/CY07_VNM_STU_PVS.sav"))
+```
+
+
+
