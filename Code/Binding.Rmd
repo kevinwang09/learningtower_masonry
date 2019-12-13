@@ -15,11 +15,41 @@ library(glue)
 library(here)
 ```
 
-the years <- 
+The goal is to have all the various years having the same variable, with the same name, and the same class, in the same order.
+
+```{r}
+target_names <- c(
+  "country",
+  "school_id",
+  "student_id",
+  "mother_educ",
+  "father_educ",
+  "gender",
+  "computer",
+  "internet",
+  "math",
+  "science",
+  "read",
+  "stu_wgt")
+```
+
+
+The year 2000 is saved as rds instead of rda. for sake of sanity, we are going to read it in and save it as rda in place.
+
+```{r}
+
+if(!file.exists(here("Data/Output/2000/stu_qqq.rda"))){
+  stu_qqq_2000 <- read_rds(here("Data/Output/2000/stu_qqq.rds"))
+  save(stu_qqq_2000,file = here("Data/Output/2000/stu_qqq.rda"))
+  rm(stu_qqq_2000)
+}
+```
+
+load all the datasets
 
 ```{r}
 dfs <- data_frame(
-  years = seq(2006, 2018, 3)
+  years = seq(2000, 2018, 3)
 ) %>%
   mutate(
   paths = glue("Data/Output/{years}/{what}.rda", what = "stu_qqq")
@@ -35,28 +65,49 @@ pisa_student_2006 <- pisa_student_2006 %>%
 df_names
 ```
 
+Year 2000 is particular. Let's see what we have there.
+
 ```{r}
-target_names <- c(
-"country",
-"school_id",
-"student_id",
-"mother_educ",
-"father_educ",
-"gender",
-"computer",
-"internet",
-"math",
-"science",
-"read",
-"stu_wgt"
-  )
+stu_qqq_2000 %>% glimpse()
+```
+
+We miss a couple of variable regarding mother and father education, and the order of read and science is wrong. Let's do create them and fill them with explicit missing.
+
+```{r}
+stu_qqq_2000 <- stu_qqq_2000 %>%
+  mutate(
+    mother_educ = NA_character_,
+    father_educ = NA_character_
+  ) %>%
+  select(target_names)
+```
+
+What have we done?
+
+```{r}
+stu_qqq_2000 %>% glimpse()
+```
+
+We will need to solve the `country` encoding mismatch, between the three-characters of 2003 to 2018 and the numeric code of 2000. We can use `countrycode` to do the job.
+
+```{r}
+stu_qqq_2000 <- stu_qqq_2000 %>%
+ mutate(country = country %>%
+           as.numeric() %>%
+           countrycode(origin = "iso3n", destination = "iso3c"))
+```
+
+
+```{r}
 names_2006_2012 <- data_frame(
   target_names =   target_names,
-  n_2006 = pisa_student_2006[,-1] %>% names(),
-  n_2009 = d_sub_2009 %>% names(),
-  n_2012 = d_sub_2012 %>% names(),
-  n_2015 = df_temp %>% names(),
-  n_2018 = stu_qqq_output %>% names()
+  `2000` = stu_qqq_2000 %>% names(),
+  `2003` = d3[,-1] %>% names(),
+  `2006` = pisa_student_2006[,-1] %>% names(),
+  `2009` = d_sub_2009 %>% names(),
+  `2012` = d_sub_2012 %>% names(),
+  `2015` = df_temp %>% names(),
+  `2018` = stu_qqq_output %>% names()
 )
 ```
 
@@ -76,9 +127,12 @@ df_temp <- df_temp %>%
   select(-W_FSTUWT, everything())
 ```
 
-and now we brute force the name in, remembering that 2006 has one extra variable
+and now we brute force the name in, remembering that 2003 and 2006 have one extra variable (the numeric code for countries).
+
 ```{r}
-names(pisa_student_2006) <- c("country_code",target_names)
+names(stu_qqq_2000) <- target_names
+names(d3) <- c("country_n_code",target_names)
+names(pisa_student_2006) <- c("country_n_code",target_names)
 names(d_sub_2009) <- target_names
 names(d_sub_2012) <- target_names
 names(df_temp) <- target_names
@@ -86,21 +140,20 @@ names(stu_qqq_output) <- target_names
 ```
 
 ```{r}
-list_dfs <- list(`2006` = pisa_student_2006[,-1] %>% mutate_all(formatC),
+list_dfs <- list(
+     `2000` = stu_qqq_2000 %>% mutate_all(formatC),
+     `2003` = d3[,-1] %>% mutate_all(formatC),
+     `2006` = pisa_student_2006[,-1] %>% mutate_all(formatC),
      `2009` = d_sub_2009 %>% mutate_all(formatC),
      `2012` = d_sub_2012 %>% mutate_all(formatC),
      `2015` = df_temp  %>% mutate_all(formatC),
      `2018` = stu_qqq_output  %>% mutate_all(formatC)
-     );
+     )
 
-#rm(list = df_names)
+rm(list = df_names)
 ```
 
-
-```{r}
-list_dfs$`2006`
-```
-
+Let's bind EVERYTHING together and reinstate a meaningful class scheme.
 
 ```{r}
 student <- bind_rows(list_dfs, .id = "year") %>%
@@ -112,15 +165,28 @@ student <- bind_rows(list_dfs, .id = "year") %>%
               as.numeric)
 ```
 
+Let's see if we have something reasonable by taking a quick glimpse at two rows per each year.
+
 ```{r}
 student %>% group_by(year) %>% sample_n(2)
 ```
 
+We want the full length country name.
+
 ```{r}
-student %>%
-  names()
+student <-student %>%
+  mutate(
+    country_iso3c = country,
+    country.name = country_iso3c %>%
+      countrycode(origin = "iso3c",
+                  destination = "country.name"),
+    un.name.en = country_iso3c %>%
+      countrycode(origin = "iso3c",
+                  destination = "un.name.en"))
 ```
 
+
+Ok, let's write it to file, (both rds and rda compressed).
 
 ```{r}
 write_rds(student,
@@ -129,34 +195,6 @@ write_rds(student,
 
 save(student,
      file = here("Data/Output/student.rda"))
-```
-
-
-
-```{r}
-coevar_student_math <- student %>%
-  group_by(year,country) %>%
-  summarise(mean_math = mean(math, na.rm = TRUE),
-            sd_math = sd(math, na.rm = TRUE),
-            coevar_math = sd_math / mean_math)
-
-coevar_student_science <- student %>%
-  group_by(year,country) %>%
-  summarise(mean_science = mean(science, na.rm = TRUE),
-            sd_science = sd(science, na.rm = TRUE),
-            coevar_science = sd_science / mean_science)
-
-coevar_student_read <- student %>%
-  group_by(year,country) %>%
-  summarise(mean_read = mean(read, na.rm = TRUE),
-            sd_read = sd(read, na.rm = TRUE),
-            coevar_read = sd_read / mean_read)
-
-coevar_student_math %>%
-  filter(country == "AUS") %>%
-  ggplot(aes(x = year, y = mean_math, color = country)) +
-  geom_line() +
-  theme_minimal()
 ```
 
 

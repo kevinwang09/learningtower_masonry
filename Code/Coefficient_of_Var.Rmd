@@ -1,0 +1,232 @@
+---
+title: "Coefficient of Variation and Trends"
+author: "the free masons"
+date: "13/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load the data
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+load(here::here("Data", "Output",
+                "student.rda"))
+```
+
+
+# Are the trends meaningful?
+
+We want to understand wether the reported trends in the Math, Reading, and Science score are meaningful or it would be better to consider them random fluctuations.
+
+To do that, we consider the coefficient of variation of the mean scores.
+
+## Australia and New Zealand
+
+Let's focus in Australia and New Zealand:
+
+```{r}
+student_aunz <- student %>%
+  filter(country.name %in% c("Australia", "New Zealand"))
+```
+
+For each of the three sectors we compute the mean, the standard deviation, and the coefficient of variation (standard deviation normalized by the mean).
+
+```{r}
+coevar <- function(df, coevar_variable){
+  df %>%
+  dplyr::summarise(max = max({{ coevar_variable }}, na.rm = TRUE),
+            min = min({{ coevar_variable }}, na.rm = TRUE),
+            q75 = Hmisc::wtd.quantile({{ coevar_variable }}, stu_wgt, normwt = TRUE)[4],
+            q25 = Hmisc::wtd.quantile({{ coevar_variable }}, stu_wgt, normwt = TRUE)[2],
+            mean = Hmisc::wtd.mean({{ coevar_variable }}, stu_wgt, normwt = TRUE),
+            unw_mean = mean({{ coevar_variable }}, na.rm = TRUE),
+            median = median({{ coevar_variable }}, na.rm = TRUE),
+            sd = sqrt(Hmisc::wtd.var({{ coevar_variable }},  normwt = TRUE)),
+            #sd = sd({{ coevar_variable }}, na.rm = TRUE),
+            coevar = sd / mean) %>%
+    mutate(country = as_factor(country))
+}
+```
+
+
+```{r}
+coevar_student_math <- student_aunz %>%
+  group_by(year,country) %>%
+  coevar(math)
+
+coevar_student_science <- student_aunz %>%
+  group_by(year,country)%>%
+  coevar(science)
+
+coevar_student_read <- student_aunz %>%
+  group_by(year,country) %>%
+  coevar(read)
+```
+
+```{r}
+coevar_student_math %>%
+  filter(country == "AUS") %>%
+  select(year, mean, unw_mean) 
+```
+
+
+
+```{r}
+read <- coevar_student_read %>%
+  pivot_longer(cols = c(q25, q75, max, min), names_to = "Index", values_to = "Values") %>%
+  mutate(Index = as_factor(Index)) %>%
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line() +
+  geom_line(aes(y = mean)) +
+  geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
+  ylim(0, 900) +
+  facet_wrap(~ country) +
+  theme_minimal()
+
+math <- coevar_student_math %>%
+  pivot_longer(cols = c(q25, q75, max, min), names_to = "Index", values_to = "Values") %>%
+  mutate(Index = as_factor(Index)) %>%
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line() +
+  geom_line(aes(y = mean)) +
+  geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
+  ylim(0, 900) +
+  facet_wrap(~ country) +
+  theme_minimal()
+
+science <- coevar_student_science %>%
+  pivot_longer(cols = c(q25, q75, max, min), names_to = "Index", values_to = "Values") %>%
+  mutate(Index = as_factor(Index)) %>%
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line() +
+  geom_line(aes(y = mean)) +
+  geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
+  ylim(0, 900) +
+  facet_wrap(~ country) +
+  theme_minimal()
+```
+
+```{r}
+library(patchwork)
+read / math / science
+```
+
+
+## Australia: gender
+
+Let's focus in Australia and New Zealand:
+
+```{r}
+student_au <- student %>%
+  filter(country.name %in% c("Australia"),
+         gender %in% c(1,2))
+```
+
+For each of the three sectors we compute the mean, the standard deviation, and the coefficient of variation (standard deviation normalized by the mean).
+
+```{r}
+coevar_g <- function(df, coevar_variable){
+  df %>%
+  dplyr::summarise(max = max({{ coevar_variable }}, na.rm = TRUE),
+            min = min({{ coevar_variable }}, na.rm = TRUE),
+            q75 = Hmisc::wtd.quantile({{ coevar_variable }}, stu_wgt, normwt = TRUE)[4],
+            q25 = Hmisc::wtd.quantile({{ coevar_variable }}, stu_wgt, normwt = TRUE)[2],
+            mean = Hmisc::wtd.mean({{ coevar_variable }}, stu_wgt, normwt = TRUE),
+            median = median({{ coevar_variable }}, na.rm = TRUE),
+            sd = sqrt(Hmisc::wtd.var({{ coevar_variable }},  normwt = TRUE)),
+            #sd = sd({{ coevar_variable }}, na.rm = TRUE),
+            coevar = sd / mean)
+}
+```
+
+
+```{r}
+coevar_student_math_gender <- student_au %>%
+  group_by(year,gender) %>%
+  coevar_g(math)
+
+coevar_student_science_gender <- student_au %>%
+  group_by(year,gender)%>%
+  coevar_g(science)
+
+coevar_student_read_gender <- student_au %>%
+  group_by(year,gender) %>%
+  coevar_g(read)
+```
+
+
+```{r}
+read <- coevar_student_math_gender %>%
+  pivot_longer(cols = c(q25, q75, max, min), names_to = "Index", values_to = "Values") %>%
+  mutate(Index = as_factor(Index)) %>%
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line() +
+  geom_line(aes(y = mean)) +
+  geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
+  ylim(0, 900) +
+  facet_wrap(~ gender) +
+  theme_minimal()
+
+math <- coevar_student_math_gender %>%
+  pivot_longer(cols = c(q25, q75, max, min), names_to = "Index", values_to = "Values") %>%
+  mutate(Index = as_factor(Index)) %>%
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line() +
+  geom_line(aes(y = mean)) +
+  geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
+  ylim(0, 900) +
+  facet_wrap(~ gender) +
+  theme_minimal()
+
+science <- coevar_student_science_gender %>%
+  pivot_longer(cols = c(q25, q75, max, min), names_to = "Index", values_to = "Values") %>%
+  mutate(Index = as_factor(Index)) %>%
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line() +
+  geom_line(aes(y = mean)) +
+  geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
+  ylim(0, 900) +
+  facet_wrap(~ gender) +
+  theme_minimal()
+```
+
+```{r}
+read / math / science
+```
+
+## Everybody
+
+
+
+```{r}
+coevar_student_math <- student %>%
+  group_by(year,country) %>%
+  summarise(mean_math = mean(math, na.rm = TRUE),
+            sd_math = sd(math, na.rm = TRUE),
+            coevar_math = sd_math / mean_math)
+
+coevar_student_science <- student %>%
+  group_by(year,country) %>%
+  summarise(mean_science = mean(science, na.rm = TRUE),
+            sd_science = sd(science, na.rm = TRUE),
+            coevar_science = sd_science / mean_science)
+
+coevar_student_read <- student %>%
+  group_by(year,country) %>%
+  summarise(mean_read = mean(read, na.rm = TRUE),
+            sd_read = sd(read, na.rm = TRUE),
+            coevar_read = sd_read / mean_read)
+
+coevar_student_math %>%
+  filter(country == "AUS") %>%
+  ggplot(aes(x = year, y = mean_math, color = country)) +
+  geom_path() +
+  theme_minimal()
+```
