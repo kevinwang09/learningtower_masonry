@@ -1,0 +1,77 @@
+---
+title: "PISA 2018 Data Import"
+author: "Kim Fitter"
+date: "12/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+library(here)
+library(tidyverse)
+library(haven)
+```
+
+Use the Haven package to read in the SPSS files.
+
+```{r read in spss sav files}
+urls <- read_csv(here("/Code/download_urls.csv")) %>% 
+  filter(year==2018)
+
+# View the files and url links available for 2018
+urls
+
+# Import Student questionnaire data files with selected variables
+stu_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"),
+    col_select = c(CNT,
+         CNTSCHID,
+         CNTSTUID,
+         ST005Q01TA,
+         ST007Q01TA,
+         ST004D01T,
+         ST011Q04TA,
+         ST011Q06TA,
+         PV1MATH,
+         PV1READ,
+         PV1SCIE,
+         W_FSTUWT))
+
+# Import School questionnaire data file with selected variables
+sch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),
+    col_select = c(CNT,
+                   CNTSCHID,
+                   SC016Q01TA,
+                   SC016Q02TA,
+                   SC016Q03TA,
+                   SC002Q01TA,
+                   SC002Q02TA,
+                   SC002Q02TA,
+                   STRATIO,
+                   SC013Q01TA,
+                   STAFFSHORT,
+                   W_SCHGRNRABWT,
+                   SCHSIZE))
+
+```
+
+
+```{r view summary students}
+skimr::skim(stu_qqq) 
+```
+
+```{r view summary students}
+skimr::skim(sch_qqq) 
+```
+
+```{r save files output}
+# Student questionnaire data files
+save(stu_qqq, file= here("/Data/Output/2018/stu_qqq.rda"))
+# School questionnaire data file
+save(sch_qqq,file=here("/Data/Output/2018/sch_qqq.rda"))
+```
+
+
+
