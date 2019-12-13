@@ -22,11 +22,13 @@ dfs_stu_qqq <- tibble(
   years = seq(2000, 2018, 3)
 ) %>%
   mutate(
-  paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq"),
-  data = paths %>% read_rds
+  paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")
 )
 
-list_of_dfs <- dfs_stu_qqq$paths %>%
-  map(read_rds, )
+
+list_of_dfs <- here(dfs_stu_qqq$paths) %>%
+  map(read_rds)
+
+
 walk(list_of_dfs, glimpse)
 ```

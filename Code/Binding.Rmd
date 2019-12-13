@@ -69,8 +69,10 @@ dfs <- data_frame(
 
 df_names <- map_chr(dfs$paths ,~ load(here(.x), envir = .GlobalEnv))
 
-pisa_student_2006 <- pisa_student_2006 %>%
-  mutate(CNT = as.character(CNT))
+PISAschool_2003 %>%
+  select(-country) %>%
+  write_rds(path = here("Data/Output/2003/sch_qqq.rds"))
+
 ```
 
 ```{r}
