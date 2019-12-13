@@ -5,21 +5,92 @@ output:
     df_print: paged
 ---
 
+```{r packages}
+library(here)
+library(tidyverse)
+library(haven)
+```
+
+## Student questionnaire
+
 Which columns do we want to keep?
 
 ```{r}
-columns_to_keep <- c("CNT",
-         "CNTSCHID",
-         "CNTSTUID",
-         "ST005Q01TA",
-         "ST007Q01TA",
-         "ST004D01T",
-         "ST011Q04TA",
-         "ST011Q06TA",
-         "PV1MATH",
-         "PV1READ",
-         "PV1SCIE",
-         "W_FSTUWT")
+columns_to_keep <- c(
+"CNT",
+"CNTSCHID",
+"CNTSTUID",
+"ST005Q01TA",
+"ST007Q01TA",
+"ST004D01T",
+"ST011Q04TA",
+"ST011Q06TA",
+"PV1MATH",
+"PV1READ",
+"PV1SCIE",
+"W_FSTUWT",
+"ST011Q01TA",
+"ST011Q02TA",
+"ST012Q01TA",
+"ST012Q06NA",
+"ST012Q02TA",
+"ST013Q01TA",
+"WEALTH",
+"ESCS" 
+)
+
+
+target_names <- c(
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"desk",
+"room",
+"dishwasher",
+"television",
+"computer_n",
+"car",
+"book",
+"wealth",
+"escs"
+)
+
+target_names_no_dishwasher <- c(
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"desk",
+"room",
+"television",
+"computer_n",
+"car",
+"book",
+"wealth",
+"escs"
+)
+```
+
+
+```{r}
+length(target_names)
 ```
 
 
@@ -47,20 +118,21 @@ read_2015 <- function(file_name, cols_to_keep) {
 read_and_save <- function(what = "stu_qqq", cols_to_keep) {
   # compose name of files to read in / write out
   read_in_file <- paste0("cy6_ms_cmb_",what,".sas7bdat")
-  write_out_rda <- paste0(what,".rda")
-  write_out_csv <- paste0(what,".csv.gz")
+  write_out_rds <- paste0(what,".rds")
   
   # read in
-  df_temp <- read_2015(read_in_file, cols_to_keep)
+  df_temp <- read_2015(read_in_file, cols_to_keep) %>%
+    select(cols_to_keep) # to have them in the right order
   
-  # write out an rda
-  save(df_temp,
-       file = here("Data", "Output", "2015",
-                   write_out_rda))
-  # and csv
-  write_csv(df_temp,
+  names(df_temp) <- target_names_no_dishwasher
+  
+  df_temp <-  df_temp %>%
+    mutate(dishwasher = NA) %>%
+    select(target_names)
+  # write out an rds
+  write_rds(df_temp,
             path = here("Data", "Output", "2015",
-                        write_out_csv))
+                        write_out_rds))  
 }
 ```
 
@@ -70,4 +142,10 @@ read_and_save <- function(what = "stu_qqq", cols_to_keep) {
   read_and_save(cols_to_keep = columns_to_keep)
 ```
 
+# School
+
+```{r}
+"sch_qqq" %>%
+  read_and_save(cols_to_keep = columns_to_keep)
+```
 
