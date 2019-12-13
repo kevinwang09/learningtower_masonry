@@ -131,8 +131,7 @@ read_and_save <- function(what = "stu_qqq", cols_to_keep) {
     select(target_names)
   # write out an rds
   write_rds(df_temp,
-            path = here("Data", "Output", "2015",
-                        write_out_rds))  
+            path = here("Data", "Output", "2015", write_out_rds))  
 }
 ```
 
