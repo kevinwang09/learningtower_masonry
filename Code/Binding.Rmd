@@ -5,6 +5,8 @@ date: "12/12/2019"
 output: html_document
 ---
 
+OUTDATED
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -19,18 +21,28 @@ The goal is to have all the various years having the same variable, with the sam
 
 ```{r}
 target_names <- c(
-  "country",
-  "school_id",
-  "student_id",
-  "mother_educ",
-  "father_educ",
-  "gender",
-  "computer",
-  "internet",
-  "math",
-  "science",
-  "read",
-  "stu_wgt")
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"desk",
+"room",
+"dishwasher",
+"television",
+"computer",
+"car",
+"book",
+"wealth",
+"escs"
+)
 ```
 
 
