@@ -33,10 +33,10 @@ Let's focus in Australia and New Zealand:
 
 ```{r}
 student_aunz <- student %>%
-  filter(country.name %in% c("Australia", "New Zealand"))
+  filter(country_iso3c %in% c("AUS", "NZL"))
 ```
 
-For each of the three sectors we compute the mean, the standard deviation, and the coefficient of variation (standard deviation normalized by the mean).
+For each of the three sectors we compute the weighted mean, standard deviation, quantiles, and the coefficient of variation (standard deviation normalized by the mean).
 
 ```{r}
 coevar <- function(df, coevar_variable){
@@ -50,29 +50,27 @@ coevar <- function(df, coevar_variable){
             median = median({{ coevar_variable }}, na.rm = TRUE),
             sd = sqrt(Hmisc::wtd.var({{ coevar_variable }},  normwt = TRUE)),
             #sd = sd({{ coevar_variable }}, na.rm = TRUE),
-            coevar = sd / mean) %>%
-    mutate(country = as_factor(country))
+            coevar = sd / mean)
 }
 ```
 
 
 ```{r}
 coevar_student_math <- student_aunz %>%
-  group_by(year,country) %>%
+  group_by(year,country_iso3c) %>%
   coevar(math)
 
 coevar_student_science <- student_aunz %>%
-  group_by(year,country)%>%
+  group_by(year,country_iso3c)%>%
   coevar(science)
 
 coevar_student_read <- student_aunz %>%
-  group_by(year,country) %>%
+  group_by(year,country_iso3c) %>%
   coevar(read)
 ```
 
 ```{r}
 coevar_student_math %>%
-  filter(country == "AUS") %>%
   select(year, mean, unw_mean) 
 ```
 
@@ -87,7 +85,7 @@ read <- coevar_student_read %>%
   geom_line(aes(y = mean)) +
   geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
   ylim(0, 900) +
-  facet_wrap(~ country) +
+  facet_wrap(~ country_iso3c) +
   theme_minimal()
 
 math <- coevar_student_math %>%
@@ -98,7 +96,7 @@ math <- coevar_student_math %>%
   geom_line(aes(y = mean)) +
   geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
   ylim(0, 900) +
-  facet_wrap(~ country) +
+  facet_wrap(~ country_iso3c) +
   theme_minimal()
 
 science <- coevar_student_science %>%
@@ -109,7 +107,7 @@ science <- coevar_student_science %>%
   geom_line(aes(y = mean)) +
   geom_errorbar(aes(ymin = mean - sd, ymax = mean + sd)) +
   ylim(0, 900) +
-  facet_wrap(~ country) +
+  facet_wrap(~ country_iso3c) +
   theme_minimal()
 ```
 
@@ -121,15 +119,15 @@ read / math / science
 
 ## Australia: gender
 
-Let's focus in Australia and New Zealand:
+Let's focus in Australia, and filter only specified genders:
 
 ```{r}
 student_au <- student %>%
-  filter(country.name %in% c("Australia"),
+  filter(country_iso3c %in% c("AUS"),
          gender %in% c(1,2))
 ```
 
-For each of the three sectors we compute the mean, the standard deviation, and the coefficient of variation (standard deviation normalized by the mean).
+For each of the three sectors we compute the weighted mean, standard deviation, quantiles, and the coefficient of variation (standard deviation normalized by the mean).
 
 ```{r}
 coevar_g <- function(df, coevar_variable){
@@ -199,34 +197,4 @@ science <- coevar_student_science_gender %>%
 
 ```{r}
 read / math / science
-```
-
-## Everybody
-
-
-
-```{r}
-coevar_student_math <- student %>%
-  group_by(year,country) %>%
-  summarise(mean_math = mean(math, na.rm = TRUE),
-            sd_math = sd(math, na.rm = TRUE),
-            coevar_math = sd_math / mean_math)
-
-coevar_student_science <- student %>%
-  group_by(year,country) %>%
-  summarise(mean_science = mean(science, na.rm = TRUE),
-            sd_science = sd(science, na.rm = TRUE),
-            coevar_science = sd_science / mean_science)
-
-coevar_student_read <- student %>%
-  group_by(year,country) %>%
-  summarise(mean_read = mean(read, na.rm = TRUE),
-            sd_read = sd(read, na.rm = TRUE),
-            coevar_read = sd_read / mean_read)
-
-coevar_student_math %>%
-  filter(country == "AUS") %>%
-  ggplot(aes(x = year, y = mean_math, color = country)) +
-  geom_path() +
-  theme_minimal()
 ```

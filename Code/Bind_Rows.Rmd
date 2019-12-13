@@ -22,13 +22,41 @@ dfs_stu_qqq <- tibble(
   years = seq(2000, 2018, 3)
 ) %>%
   mutate(
-  paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")
-)
+    paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")
+    ) %>%
+  mutate(
+    data = map(paths,
+               ~ .x %>%
+                 here() %>%
+      read_rds() %>%
+      mutate(country = as_factor(country_iso3c),
+             school_id = as_factor(school_id),
+             student_id = as_factor(student_id)) %>%
+      mutate_at(c("mother_educ", "father_educ",
+      "gender", "computer", "internet",
+      "desk", "room", "dishwasher", "television",
+      "computer_n", "car", "book"),
+      as.integer) %>%
+      mutate_at(c("math", "science", "read",
+      "stu_wgt", "wealth", "escs"),
+      as.numeric)
+      )
+    )
 
+names(dfs_stu_qqq$data) <- seq(2000, 2018, 3)
+student <- bind_rows(dfs_stu_qqq$data, .id = "year")
 
-list_of_dfs <- here(dfs_stu_qqq$paths) %>%
-  map(read_rds)
+student %>%
+  group_by(year) %>%
+  sample_n(2)
 
-
-walk(list_of_dfs, glimpse)
+student <- student %>%
+  mutate_at(c("country_iso3c", "school_id", "student_id", "gender"), as_factor) %>%
+  mutate(year = as.integer(year))
 ```
+
+```{r}
+student %>%
+  save(file = here("Data/Output/student.rda"))
+```
+

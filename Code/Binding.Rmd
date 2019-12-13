@@ -37,7 +37,7 @@ target_names <- c(
 "room",
 "dishwasher",
 "television",
-"computer",
+"computer_n",
 "car",
 "book",
 "wealth",
@@ -69,9 +69,16 @@ dfs <- data_frame(
 
 df_names <- map_chr(dfs$paths ,~ load(here(.x), envir = .GlobalEnv))
 
-PISAschool_2003 %>%
-  select(-country) %>%
-  write_rds(path = here("Data/Output/2003/sch_qqq.rds"))
+year <- 2003
+
+stu_qqq <- read_rds(here(glue("Data/Output/{year}/stu_qqq.rds", year = year)))
+
+
+names(stu_qqq) <- target_names
+
+stu_qqq %>%
+  select(target_names) %>%
+  write_rds(path = here(glue("Data/Output/{year}/stu_qqq.rds", year = year)))
 
 ```
 
