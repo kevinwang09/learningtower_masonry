@@ -1,5 +1,5 @@
 ---
-title: "PISA 2018 Data Import"
+title: "PISA 2018 Data Import and Manipulation"
 author: "Kim Fitter"
 date: "12/12/2019"
 output: html_document
@@ -18,13 +18,9 @@ library(haven)
 Use the Haven package to read in the SPSS files.
 
 ```{r read in spss sav files}
-urls <- read_csv(here("/Code/download_urls.csv")) %>% 
-  filter(year==2018)
+list_filenames <- list_files(path=here("/Data/Raw/2018/"), pattern=".sav")
 
-# View the files and url links available for 2018
-urls
-
-# Import Student questionnaire data files with selected variables
+# Student questionnaire data files
 stu_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"),
     col_select = c(CNT,
          CNTSCHID,
@@ -37,6 +33,7 @@ stu_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"),
          PV1MATH,
          PV1READ,
          PV1SCIE,
+<<<<<<< HEAD
          W_FSTUWT,
          ST011Q01TA,
          ST011Q02TA,
@@ -64,23 +61,58 @@ sch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),
                    W_SCHGRNRABWT,
                    SCHSIZE))
 
+=======
+         W_FSTUWT))
+# School questionnaire data file
+sch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),n_max = 10)
+# Cognitive item data file
+stu_cog <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_COG.sav"),n_max=10) 
+#  Questionnaire timing data files 
+stu_tim <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_TIM.sav"),n_max = 10)
+# Teacher questionnaire data file
+tch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_TCH_QQQ.sav"),n_max = 10)
+# Additional data file for Viet Nam
+vnm_stu_cog <- read_sav(here("/Data/Raw/2018/CY07_VNM_STU_COG.sav"),n_max = 10)
+vnm_stu_pvs <- read_sav(here("/Data/Raw/2018/CY07_VNM_STU_PVS.sav"),n_max = 10)
+>>>>>>> b6270c1dfffa7cd1b7bd297789702fa733eab9f3
 ```
 
-
-```{r view summary students}
-skimr::skim(stu_qqq) 
+```{r create output files}
+stu_qqq_output<- stu_qqq 
+sch_qqq_output <- head(sch_qqq)
+tch_qqq_output <- head(tch_qqq)
+stu_cog_output <- head(stu_cog)
+stu_tim_output <- head(stu_tim)
+vnm_stu_cog_output <- head(vnm_stu_cog)
+vnm_stu_pvs_output <- head(vnm_stu_pvs)
 ```
 
-```{r view summary students}
-skimr::skim(sch_qqq) 
+```{r view summary}
+skimr::skim(stu_qqq_output) 
 ```
+
 
 ```{r save files output}
 # Student questionnaire data files
-save(stu_qqq, file= here("/Data/Output/2018/stu_qqq.rda"))
+save(stu_qqq_output, file= here("/Data/Output/2018/CY07_MSU_STU_QQQ.rda"))
 # School questionnaire data file
-save(sch_qqq,file=here("/Data/Output/2018/sch_qqq.rda"))
+save(sch_qqq_output,file=here("/Data/Output/2018/CY07_MSU_SCH_QQQ.rda"))
+# Cognitive item data file
+save(stu_cog_output, file=here("/Data/Output/2018/CY07_MSU_STU_COG.rda"))
+#  Questionnaire timing data files 
+save(stu_tim_output , file= here("/Data/Output/2018/CY07_MSU_STU_TIM.rda"))
+# Teacher questionnaire data file
+save(tch_qqq_output, file=here("/Data/Output/2018/CY07_MSU_TCH_QQQ.rda"))
+# Additional data file for Viet Nam
+save(vnm_stu_cog_output, file=(here("/Data/Output/2018/CY07_VNM_STU_COG.rda")))
+save(vnm_stu_pvs_output,file=here("/Data/Output/2018/CY07_VNM_STU_PVS.rda"))
 ```
 
+head(d_sub_2009)
 
+country_sum <- d_sub_2009 %>%
+                group_by(CNT) %>%
+                summarize(avg_math = mean(PV1MATH)) %>% 
+                ggplot(aes(x = CNT, y = avg_math)) +
+                  geom_point()
 
