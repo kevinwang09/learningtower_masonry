@@ -78,5 +78,11 @@ save(vnm_stu_cog_output, file=(here("/Data/Output/2018/CY07_VNM_STU_COG.rda")))
 save(vnm_stu_pvs_output,file=here("/Data/Output/2018/CY07_VNM_STU_PVS.rda"))
 ```
 
+head(d_sub_2009)
 
+country_sum <- d_sub_2009 %>%
+                group_by(CNT) %>%
+                summarize(avg_math = mean(PV1MATH)) %>% 
+                ggplot(aes(x = CNT, y = avg_math)) +
+                  geom_point()
 
