@@ -37,7 +37,16 @@ stu_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"),
          PV1MATH,
          PV1READ,
          PV1SCIE,
-         W_FSTUWT))
+         W_FSTUWT,
+         ST011Q01TA,
+         ST011Q02TA,
+         ST011Q11TA,
+         ST012Q01TA,
+         ST012Q06NA,
+         ST013Q01TA,
+         WEALTH,
+         ESCS
+         ))
 
 # Import School questionnaire data file with selected variables
 sch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),
