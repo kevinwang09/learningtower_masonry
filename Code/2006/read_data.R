@@ -1,3 +1,11 @@
+# Download data files from 
+# https://www.oecd.org/pisa/pisaproducts/INT_Stu06_Dec07.zip. (151Mb)
+# https://www.oecd.org/pisa/pisaproducts/INT_Sch06_Dec07.zip 
+
+# Download SPSS control files from
+# https://www.oecd.org/pisa/pisaproducts/PISA2006_SPSS_student.txt
+# https://www.oecd.org/pisa/pisaproducts/PISA2006_SPSS_school.txt
+
 # Brute force text conversion
 library(tidyverse)
 
