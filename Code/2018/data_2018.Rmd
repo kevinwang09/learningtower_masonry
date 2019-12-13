@@ -25,19 +25,85 @@ urls <- read_csv(here("/Code/download_urls.csv")) %>%
 urls
 
 # Import Student questionnaire data files with selected variables
+cols_to_keep <- columns_to_keep <- c(
+"CNT",
+"CNTSCHID",
+"CNTSTUID",
+"ST005Q01TA",
+"ST007Q01TA",
+"ST004D01T",
+"ST011Q04TA",
+"ST011Q06TA",
+"PV1MATH",
+"PV1READ",
+"PV1SCIE",
+"W_FSTUWT",
+"ST011Q01TA",
+"ST011Q02TA",
+"ST012Q01TA",
+"ST012Q06NA",
+"ST012Q02TA",
+"ST013Q01TA",
+"WEALTH",
+"ESCS" 
+)
 stu_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_STU_QQQ.sav"),
-    col_select = c(CNT,
-         CNTSCHID,
-         CNTSTUID,
-         ST005Q01TA,
-         ST007Q01TA,
-         ST004D01T,
-         ST011Q04TA,
-         ST011Q06TA,
-         PV1MATH,
-         PV1READ,
-         PV1SCIE,
-         W_FSTUWT))
+                    col_select = cols_to_keep) %>% 
+  select(cols_to_keep)
+
+target_names_no_dishwasher <- c(
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"desk",
+"room",
+"television",
+"computer_n",
+"car",
+"book",
+"wealth",
+"escs"
+)
+target_names <- c(
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"desk",
+"room",
+"dishwasher",
+"television",
+"computer_n",
+"car",
+"book",
+"wealth",
+"escs"
+)
+
+names(stu_qqq) <- target_names_no_dishwasher
+  
+stu_qqq <- stu_qqq %>%
+    mutate(dishwasher = NA) %>%
+    select(target_names)
+  
+
 
 # Import School questionnaire data file with selected variables
 sch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),
@@ -64,13 +130,16 @@ skimr::skim(stu_qqq)
 
 ```{r view summary students}
 skimr::skim(sch_qqq) 
+
 ```
+
+
 
 ```{r save files output}
 # Student questionnaire data files
-save(stu_qqq, file= here("/Data/Output/2018/stu_qqq.rda"))
+save(stu_qqq, file= here("/Data/Output/2018/stu_qqq.rds"))
 # School questionnaire data file
-save(sch_qqq,file=here("/Data/Output/2018/sch_qqq.rda"))
+save(sch_qqq,file=here("/Data/Output/2018/sch_qqq.rds"))
 ```
 
 
