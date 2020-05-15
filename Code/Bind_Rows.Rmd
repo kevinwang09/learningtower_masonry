@@ -43,14 +43,20 @@ student %>%
 unique_country_iso3c = student$country_iso3c %>% unique
 country_tbl = tibble(country_iso3c = unique_country_iso3c) %>% 
   left_join(countrycode::codelist %>% 
-              dplyr::select(iso3c, country_name = country.name.en, un.name.en), 
+              dplyr::select(iso3c, country_name = country.name.en, country_full_name = un.name.en), 
             by = c("country_iso3c" = "iso3c"))
 ## If the iso3c matches multiple names, then we will flag this 
 stopifnot(length(unique_country_iso3c) == nrow(country_tbl))
 
 student = student %>% 
-  mutate(year = as.integer(year)) %>% 
-  left_join(country_tbl, by = "country_iso3c")
+  left_join(country_tbl, by = "country_iso3c") %>% 
+  mutate(year = as.integer(year),
+         country_iso3c = as.factor(country_iso3c),
+         country_name = as.factor(country_name),
+         country_full_name = as.factor(country_full_name),
+         student_id = as.integer(student_id),
+         school_id = as.integer(school_id),
+         gender = as.factor(gender)) 
 ```
 
 ```{r}
