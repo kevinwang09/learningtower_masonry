@@ -1,7 +1,7 @@
 ---
-title: "Untitled"
-author: "the free masons"
-date: "13/12/2019"
+title: "Binding all student data together"
+author: "The Freemasons"
+date: "Initiated on 13/12/2019"
 output: html_document
 ---
 
@@ -18,30 +18,24 @@ library(here)
 
 
 ```{r}
-dfs_stu_qqq <- tibble(
-  years = seq(2000, 2018, 3)
-) %>%
-  mutate(
-    paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")
-    ) %>%
-  mutate(
-    data = map(paths,
-               ~ .x %>%
-                 here() %>%
-      read_rds() %>%
-      mutate(country = as_factor(country_iso3c),
-             school_id = as_factor(school_id),
-             student_id = as_factor(student_id)) %>%
-      mutate_at(c("mother_educ", "father_educ",
-      "gender", "computer", "internet",
-      "desk", "room", "dishwasher", "television",
-      "computer_n", "car", "book"),
-      as.integer) %>%
-      mutate_at(c("math", "science", "read",
-      "stu_wgt", "wealth", "escs"),
-      as.numeric)
-      )
-    )
+## Reading in the all student data as tibbles and make sure all variables are coded in the correct variable type
+dfs_stu_qqq <- tibble(years = seq(2000, 2018, 3)) %>%
+  mutate(paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")) %>%
+  mutate(data = map(.x = paths,
+                    .f = ~ .x %>%
+                      here() %>%
+                      read_rds() %>%
+                      mutate(country = as_factor(country_iso3c),
+                             school_id = as_factor(school_id),
+                             student_id = as_factor(student_id)) %>%
+                      mutate_at(c("mother_educ", "father_educ",
+                                  "gender", "computer", "internet",
+                                  "desk", "room", "dishwasher", "television",
+                                  "computer_n", "car", "book"),
+                                as.integer) %>%
+                      mutate_at(c("math", "science", "read",
+                                  "stu_wgt", "wealth", "escs"),
+                                as.numeric)))
 
 names(dfs_stu_qqq$data) <- seq(2000, 2018, 3)
 student <- bind_rows(dfs_stu_qqq$data, .id = "year")
@@ -56,7 +50,11 @@ student <- student %>%
 ```
 
 ```{r}
-student %>%
-  save(file = here("Data/Output/student.rda"))
+save(student, file = here("Data/Output/student.rda"))
 ```
 
+# Session Info
+
+```{r}
+sessionInfo()
+```

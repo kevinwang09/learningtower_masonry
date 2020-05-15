@@ -198,3 +198,9 @@ science <- coevar_student_science_gender %>%
 ```{r}
 read / math / science
 ```
+
+# Session Info
+```{r}
+sessionInfo()
+```
+
