@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="the free masons" />
+<meta name="author" content="The Freemasons" />
 
 
-<title>Untitled</title>
+<title>Binding all student data together</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -375,13 +375,15 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Untitled</h1>
-<h4 class="author">the free masons</h4>
-<h4 class="date">13/12/2019</h4>
+<h1 class="title toc-ignore">Binding all student data together</h1>
+<h4 class="author">The Freemasons</h4>
+<h4 class="date">Initiated on 13/12/2019</h4>
 
 </div>
 
 
+<div id="loading-package" class="section level1">
+<h1>Loading package</h1>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
@@ -399,6 +401,10 @@ summary {
 ##     collapse</code></pre>
 <pre class="r"><code>library(here)</code></pre>
 <pre><code>## here() starts at /Users/kevinwang/Desktop/learningtower_masonry</code></pre>
+<pre class="r"><code>library(countrycode)</code></pre>
+</div>
+<div id="loading-data" class="section level1">
+<h1>Loading data</h1>
 <pre class="r"><code>## Reading in the all student data as tibbles and make sure all variables are coded in the correct variable type
 dfs_stu_qqq &lt;- tibble(years = seq(2000, 2018, 3)) %&gt;%
   mutate(paths = glue(&quot;Data/Output/{years}/{what}.rds&quot;, what = &quot;stu_qqq&quot;)) %&gt;%
@@ -406,9 +412,8 @@ dfs_stu_qqq &lt;- tibble(years = seq(2000, 2018, 3)) %&gt;%
                     .f = ~ .x %&gt;%
                       here() %&gt;%
                       read_rds() %&gt;%
-                      mutate(country = as_factor(country_iso3c),
-                             school_id = as_factor(school_id),
-                             student_id = as_factor(student_id)) %&gt;%
+                      mutate(school_id = as.character(school_id),
+                             student_id = as.character(student_id)) %&gt;%
                       mutate_at(c(&quot;mother_educ&quot;, &quot;father_educ&quot;,
                                   &quot;gender&quot;, &quot;computer&quot;, &quot;internet&quot;,
                                   &quot;desk&quot;, &quot;room&quot;, &quot;dishwasher&quot;, &quot;television&quot;,
@@ -420,99 +425,46 @@ dfs_stu_qqq &lt;- tibble(years = seq(2000, 2018, 3)) %&gt;%
 
 names(dfs_stu_qqq$data) &lt;- seq(2000, 2018, 3)
 student &lt;- bind_rows(dfs_stu_qqq$data, .id = &quot;year&quot;)</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): Vectorizing &#39;haven_labelled&#39; elements may not
 ## preserve their attributes</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector</code></pre>
 <pre class="r"><code>student %&gt;%
   group_by(year) %&gt;%
   sample_n(2)</code></pre>
-<pre><code>## # A tibble: 14 x 23
+<pre><code>## # A tibble: 14 x 22
 ## # Groups:   year [7]
 ##    year  country_iso3c school_id student_id mother_educ father_educ gender
 ##    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;            &lt;int&gt;       &lt;int&gt;  &lt;int&gt;
-##  1 2000  KOR           21015     3296                NA          NA      2
-##  2 2000  MEX           3035      1791                NA          NA      2
-##  3 2003  CZE           00197     04728                5           4      2
-##  4 2003  MEX           01050     28178                2           4      2
-##  5 2006  SVN           144       2554                 2           9      2
-##  6 2006  JPN           34        1076                 1           1      1
-##  7 2009  MDA           00071     01730                2           2      1
-##  8 2009  USA           00103     03256                1           5      1
-##  9 2012  SRB           0000115   03545                2           2      1
-## 10 2012  GBR           0000011   00274                1           9      2
-## 11 2015  HRV           19100085  19103647             1           1      1
-## 12 2015  ESP           72400216  72425445             1           2      2
-## 13 2018  JPN           39200136  39203021             1           1      1
-## 14 2018  GBR           82600133  82613691             1           2      1
-## # … with 16 more variables: computer &lt;int&gt;, internet &lt;int&gt;, math &lt;dbl&gt;,
+##  1 2000  PER           1126      2216                NA          NA      1
+##  2 2000  RUS           27170     3342                NA          NA      1
+##  3 2003  NOR           00111     02438                5           3      1
+##  4 2003  BEL           00152     04793                2           5      2
+##  5 2006  ITA           107       2857                 3           3      1
+##  6 2006  RUS           77        2145                 3           3      1
+##  7 2009  QAT           00139     07960                1           1      2
+##  8 2009  ITA           00988     27959                2           3      1
+##  9 2012  GBR           0000279   06983                2           3      1
+## 10 2012  COL           0000023   00556                1           5      2
+## 11 2015  LBN           42200228  42201949             1           1      2
+## 12 2015  ROU           64200060  64203403             3           2      1
+## 13 2018  HRV           19100175  19105239             1           1      2
+## 14 2018  MNE           49900012  49901980            NA           2      2
+## # … with 15 more variables: computer &lt;int&gt;, internet &lt;int&gt;, math &lt;dbl&gt;,
 ## #   read &lt;dbl&gt;, science &lt;dbl&gt;, stu_wgt &lt;dbl&gt;, desk &lt;int&gt;, room &lt;int&gt;,
 ## #   dishwasher &lt;int&gt;, television &lt;int&gt;, computer_n &lt;int&gt;, car &lt;int&gt;,
-## #   book &lt;int&gt;, wealth &lt;dbl&gt;, escs &lt;dbl&gt;, country &lt;chr&gt;</code></pre>
-<pre class="r"><code>student &lt;- student %&gt;%
-  mutate_at(c(&quot;country_iso3c&quot;, &quot;school_id&quot;, &quot;student_id&quot;, &quot;gender&quot;), as_factor) %&gt;%
-  mutate(year = as.integer(year))</code></pre>
+## #   book &lt;int&gt;, wealth &lt;dbl&gt;, escs &lt;dbl&gt;</code></pre>
+<pre class="r"><code>unique_country_iso3c = student$country_iso3c %&gt;% unique
+country_tbl = tibble(country_iso3c = unique_country_iso3c) %&gt;% 
+  left_join(countrycode::codelist %&gt;% 
+              dplyr::select(iso3c, country_name = country.name.en, un.name.en), 
+            by = c(&quot;country_iso3c&quot; = &quot;iso3c&quot;))
+## If the iso3c matches multiple names, then we will flag this 
+stopifnot(length(unique_country_iso3c) == nrow(country_tbl))
+
+student = student %&gt;% 
+  mutate(year = as.integer(year)) %&gt;% 
+  left_join(country_tbl, by = &quot;country_iso3c&quot;)</code></pre>
 <pre class="r"><code>save(student, file = here(&quot;Data/Output/student.rda&quot;))</code></pre>
+</div>
 <div id="session-info" class="section level1">
 <h1>Session Info</h1>
 <pre class="r"><code>sessionInfo()</code></pre>
@@ -531,9 +483,9 @@ student &lt;- bind_rows(dfs_stu_qqq$data, .id = &quot;year&quot;)</code></pre>
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] here_0.1        glue_1.4.0      forcats_0.5.0   stringr_1.4.0  
-##  [5] dplyr_0.8.5     purrr_0.3.4     readr_1.3.1     tidyr_1.0.2    
-##  [9] tibble_3.0.1    ggplot2_3.3.0   tidyverse_1.3.0
+##  [1] countrycode_1.1.3 here_0.1          glue_1.4.0        forcats_0.5.0    
+##  [5] stringr_1.4.0     dplyr_0.8.5       purrr_0.3.4       readr_1.3.1      
+##  [9] tidyr_1.0.2       tibble_3.0.1      ggplot2_3.3.0     tidyverse_1.3.0  
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] tidyselect_1.0.0 xfun_0.13        haven_2.2.0      lattice_0.20-41 
