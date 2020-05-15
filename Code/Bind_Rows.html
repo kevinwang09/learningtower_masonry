@@ -434,20 +434,20 @@ student &lt;- bind_rows(dfs_stu_qqq$data, .id = &quot;year&quot;)</code></pre>
 ## # Groups:   year [7]
 ##    year  country_iso3c school_id student_id mother_educ father_educ gender
 ##    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;            &lt;int&gt;       &lt;int&gt;  &lt;int&gt;
-##  1 2000  BEL           13123     5466                NA          NA      1
-##  2 2000  DNK           1047      19                  NA          NA     NA
-##  3 2003  ITA           00218     06227                2           5      1
-##  4 2003  BEL           00250     07908                5           5      1
-##  5 2006  GRC           13        296                  1           1      1
-##  6 2006  URY           153       2713                 1           1      2
-##  7 2009  MEX           00705     17481                3           3      2
-##  8 2009  BRA           00149     03231                4           4      1
-##  9 2012  MEX           0001127   26238                3           8      1
-## 10 2012  MEX           0000917   21314                8           9      2
-## 11 2015  ROU           64200145  64204820             4           1      1
-## 12 2015  RUS           64300182  64300880             1           1      2
-## 13 2018  ESP           72400281  72412447             1           1      1
-## 14 2018  IDN           36000180  36007742             1           1      1
+##  1 2000  MKD           1067      1673                NA          NA      1
+##  2 2000  KOR           22068     4305                NA          NA      1
+##  3 2003  AUT           00047     01031                4           4      2
+##  4 2003  IRL           00042     01127                5           3      2
+##  5 2006  CAN           19        727                  1           1      2
+##  6 2006  KOR           56        1858                 1           1      1
+##  7 2009  MDA           00068     01596                8           8      2
+##  8 2009  KAZ           00081     02180                3           3      2
+##  9 2012  HKG           0000026   00795                2           3      2
+## 10 2012  HKG           0000008   00241                8           2      2
+## 11 2015  DZA           1200160   1200586              4           3      1
+## 12 2015  CZE           20300024  20301395             1           1      1
+## 13 2018  KOR           41000146  41003966             1           2      2
+## 14 2018  NZL           55400067  55401219             1           1      2
 ## # … with 15 more variables: computer &lt;int&gt;, internet &lt;int&gt;, math &lt;dbl&gt;,
 ## #   read &lt;dbl&gt;, science &lt;dbl&gt;, stu_wgt &lt;dbl&gt;, desk &lt;int&gt;, room &lt;int&gt;,
 ## #   dishwasher &lt;int&gt;, television &lt;int&gt;, computer_n &lt;int&gt;, car &lt;int&gt;,
@@ -463,12 +463,13 @@ stopifnot(length(unique_country_iso3c) == nrow(country_tbl))
 student = student %&gt;% 
   left_join(country_tbl, by = &quot;country_iso3c&quot;) %&gt;% 
   mutate(year = as.integer(year),
-         country_iso3c = as.factor(country_iso3c),
+         country = as.factor(country_iso3c),
          country_name = as.factor(country_name),
          country_full_name = as.factor(country_full_name),
-         student_id = as.integer(student_id),
-         school_id = as.integer(school_id),
-         gender = as.factor(gender)) </code></pre>
+         student_id = as.factor(student_id),
+         school_id = as.factor(school_id),
+         gender = as.factor(gender)) %&gt;% 
+  dplyr::select(-country_iso3c) ## We renamed this variable to country</code></pre>
 <pre class="r"><code>save(student, file = here(&quot;Data/Output/student.rda&quot;))</code></pre>
 </div>
 <div id="session-info" class="section level1">

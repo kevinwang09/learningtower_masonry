@@ -51,12 +51,13 @@ stopifnot(length(unique_country_iso3c) == nrow(country_tbl))
 student = student %>% 
   left_join(country_tbl, by = "country_iso3c") %>% 
   mutate(year = as.integer(year),
-         country_iso3c = as.factor(country_iso3c),
+         country = as.factor(country_iso3c),
          country_name = as.factor(country_name),
          country_full_name = as.factor(country_full_name),
-         student_id = as.integer(student_id),
-         school_id = as.integer(school_id),
-         gender = as.factor(gender)) 
+         student_id = as.factor(student_id),
+         school_id = as.factor(school_id),
+         gender = as.factor(gender)) %>% 
+  dplyr::select(-country_iso3c) ## We renamed this variable to country
 ```
 
 ```{r}
