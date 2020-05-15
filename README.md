@@ -16,3 +16,6 @@ The most intensive component of publishing this data is the curation of the trie
 
 One important problem that the masons encountered was to ensure the consistency of variables between different years. For instance, the highest schooling of a student's mother is never recorded in 2000, but it was coded as "ST11R01" between the years 2003 to 2012 and "ST005Q01TA" between the years 2015 and 2018. These variables were manually curated by all masons as an integer variable, "mother_educ", in the output data. 
 
+## Reading in SAS and SPSS data
+
+PISA publishes both a SAS and PRSS version of the data. Where possible, the `.sav` file is used to read in the published raw data. The only exception was in the year 2000, where `.sav` files were not published and instead, `.txt` files with SPSS scripts that are necessary to produce `.sav` files were published. In order to resolve this, we used the actual SPSS software to perform conversions of `.txt` files to `.sav` files. 
