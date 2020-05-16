@@ -1,0 +1,193 @@
+---
+title: "Binding all School data together"
+author: "The Freemasons"
+date: "Initiated on 16/05/2020"
+output: html_document
+---
+
+# Loading package 
+```{r}
+library(tidyverse)
+library(glue)
+library(here)
+library(countrycode)
+library(janitor)
+```
+
+# Curating each data
+Since the column names of each of the data are not consistent as of 16 May 2020, ref commit 96a1d8c55c5f17b22526e8e68c0bfd30799911eb, I will load each data by itself, clean and assemble at the end. 
+
+See the Google Sheet for the commonly agreed variables. 
+
+## 2000
+
+```{r}
+sch_2000 = read_rds(here("Data/Output/2000/sch_qqq.rds"))
+glimpse(sch_2000)
+clean_2000 = sch_2000 %>% dplyr::transmute(
+  country = cnt %>% as.factor(),
+  school_id = schoolid %>% as.character(), 
+  fund_gov = sc04q01 %>% as.numeric(),
+  fund_fees = sc04q02 %>% as.numeric(),
+  fund_donation = sc04q03 %>% as.numeric(),
+  enrol_boys = sc02q01 %>% as.numeric(),
+  enrol_girls = sc02q02 %>% as.numeric(),
+  stratio = stratio %>% as.numeric(),
+  public_private = sc03q01 %>% as.numeric(),
+  staff_shortage = tcshort %>% as.numeric(),
+  sch_wgt = wnrschbw %>% as.numeric(),
+  school_size = schlsize %>% as.numeric())
+
+glimpse(clean_2000)
+```
+
+
+## 2003
+```{r}
+sch_2003 = read_rds(here("Data/Output/2003/sch_qqq.rds"))
+glimpse(sch_2003)
+
+clean_2003 = sch_2003 %>% dplyr::transmute(
+  country = country_iso3c %>% as.factor(),
+  school_id = school_id %>% as.character(), 
+  fund_gov = funding_gov %>% as.numeric(),
+  fund_fees = funding_fees %>% as.numeric(),
+  fund_donation = funding_donations %>% as.numeric(),
+  enrol_boys = enrolment_boys %>% as.numeric(),
+  enrol_girls = enrolment_girls %>% as.numeric(),
+  stratio = student_teacher_ratio %>% as.numeric(),
+  public_private = public_private %>% as.numeric(),
+  staff_shortage = staff_shortage %>% as.numeric(),
+  sch_wgt = sch_wgt %>% as.numeric(),
+  school_size = school_size %>% as.numeric())
+
+glimpse(clean_2003)
+```
+
+
+
+## 2006
+```{r}
+sch_2006 = read_rds(here("Data/Output/2006/sch_qqq.rds"))
+glimpse(sch_2006)
+
+clean_2006 = sch_2006 %>% dplyr::transmute(
+  country = CNT %>% as.factor(),
+  school_id = SCHOOLID %>% as.character(), 
+  fund_gov = SC03Q01 %>% as.numeric(),
+  fund_fees = SC03Q02 %>% as.numeric(),
+  fund_donation = SC03Q03 %>% as.numeric(),
+  enrol_boys = SC01Q01 %>% as.numeric(),
+  enrol_girls = SC01Q02 %>% as.numeric(),
+  stratio = STRATIO %>% as.numeric(),
+  public_private = SC02Q01 %>% as.numeric(),
+  staff_shortage = TCSHORT %>% as.numeric(),
+  sch_wgt = W_FSCHWT %>% as.numeric(),
+  school_size = SCHSIZE %>% as.numeric())
+
+glimpse(clean_2006)
+```
+
+## 2009
+```{r}
+sch_2009 = read_rds(here("Data/Output/2009/sch_qqq.rds"))
+glimpse(sch_2009)
+
+clean_2009 = sch_2009 %>% dplyr::transmute(
+  country = CNT %>% as.factor(),
+  school_id = SCHOOLID %>% as.character(), 
+  fund_gov = SC03Q03 %>% as.numeric(),
+  fund_fees = SC03Q02 %>% as.numeric(),
+  fund_donation = SC03Q03 %>% as.numeric(),
+  enrol_boys = SC06Q01 %>% as.numeric(),
+  enrol_girls = SC06Q02 %>% as.numeric(),
+  stratio = STRATIO %>% as.numeric(),
+  public_private = SC02Q01 %>% as.numeric(),
+  staff_shortage = TCSHORT %>% as.numeric(),
+  sch_wgt = W_FSCHWT %>% as.numeric(),
+  school_size = SCHSIZE %>% as.numeric())
+
+glimpse(clean_2006)
+```
+
+## 2012
+
+```{r}
+sch_2012 = read_rds(here("Data/Output/2012/sch_qqq.rds"))
+glimpse(sch_2012)
+
+clean_2012 = sch_2012 %>% dplyr::transmute(
+  country = CNT %>% as.factor(),
+  school_id = SCHOOLID %>% as.character(), 
+  fund_gov = SC02Q01 %>% as.numeric(),
+  fund_fees = SC02Q02 %>% as.numeric(),
+  fund_donation = SC02Q03 %>% as.numeric(),
+  enrol_boys = SC07Q01 %>% as.numeric(),
+  enrol_girls = SC07Q02 %>% as.numeric(),
+  stratio = STRATIO %>% as.numeric(),
+  public_private = SC01Q01 %>% as.numeric(),
+  staff_shortage = TCSHORT %>% as.numeric(),
+  sch_wgt = W_FSCHWT %>% as.numeric(),
+  school_size = SCHSIZE %>% as.numeric())
+
+glimpse(clean_2012)
+```
+
+## 2015
+
+Missing, referred in issue #5
+
+## 2018
+
+```{r}
+sch_2018 = read_rds(here("Data/Output/2018/sch_qqq.rds"))
+glimpse(sch_2018)
+
+clean_2018 = sch_2018 %>% dplyr::transmute(
+  country = CNT %>% as.factor(),
+  school_id = CNTSCHID %>% as.character(), 
+  fund_gov = SC013Q01TA %>% as.numeric(),
+  fund_fees = SC016Q01TA %>% as.numeric(),
+  fund_donation = SC016Q03TA %>% as.numeric(),
+  enrol_boys = SC002Q01TA %>% as.numeric(),
+  enrol_girls = SC002Q02TA %>% as.numeric(),
+  stratio = STRATIO %>% as.numeric(),
+  public_private = SC013Q01TA %>% as.numeric(),
+  staff_shortage = STAFFSHORT %>% as.numeric(),
+  sch_wgt = W_SCHGRNRABWT %>% as.numeric(),
+  school_size = SCHSIZE %>% as.numeric())
+
+glimpse(clean_2018)
+```
+
+
+# Binding data
+
+```{r}
+list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2018)
+names(list_data) = names(list_data) %>% str_remove("clean_")
+
+school = list_data %>% bind_rows(.id = "year")
+
+unique_country = school$country %>% unique
+country_tbl = tibble(iso3c = unique_country) %>% 
+  left_join(countrycode::codelist %>% 
+              dplyr::select(iso3c, country_name = country.name.en, country_full_name = un.name.en), 
+            by = "iso3c")
+stopifnot(length(unique_country) == nrow(country_tbl))
+
+school = school %>% 
+  left_join(country_tbl, by = c("country" = "iso3c"))
+```
+
+# Save
+```{r}
+save(school, file = here("Data/Output/school.rda"), compress = "xz")
+```
+
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
