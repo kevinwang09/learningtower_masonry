@@ -434,20 +434,20 @@ student &lt;- bind_rows(dfs_stu_qqq$data, .id = &quot;year&quot;)</code></pre>
 ## # Groups:   year [7]
 ##    year  country_iso3c school_id student_id mother_educ father_educ gender
 ##    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;            &lt;int&gt;       &lt;int&gt;  &lt;int&gt;
-##  1 2000  MKD           1067      1673                NA          NA      1
-##  2 2000  KOR           22068     4305                NA          NA      1
-##  3 2003  AUT           00047     01031                4           4      2
-##  4 2003  IRL           00042     01127                5           3      2
-##  5 2006  CAN           19        727                  1           1      2
-##  6 2006  KOR           56        1858                 1           1      1
-##  7 2009  MDA           00068     01596                8           8      2
-##  8 2009  KAZ           00081     02180                3           3      2
-##  9 2012  HKG           0000026   00795                2           3      2
-## 10 2012  HKG           0000008   00241                8           2      2
-## 11 2015  DZA           1200160   1200586              4           3      1
-## 12 2015  CZE           20300024  20301395             1           1      1
-## 13 2018  KOR           41000146  41003966             1           2      2
-## 14 2018  NZL           55400067  55401219             1           1      2
+##  1 2000  CAN           1027      580                 NA          NA      1
+##  2 2000  HUN           1044      1156                NA          NA      2
+##  3 2003  FRA           00078     01963                4           4      2
+##  4 2003  THA           00020     00590                2           2      1
+##  5 2006  SVN           156       2757                 3           2      1
+##  6 2006  LTU           4038      27                   1           1      1
+##  7 2009  JPN           00039     01232                1           1      2
+##  8 2009  GEO           00147     03339                1           2      2
+##  9 2012  MNE           0000008   00636                1           2      1
+## 10 2012  HUN           0000091   02128                2           2      2
+## 11 2015  DZA           1200159   1202675              1           3      2
+## 12 2015  TTO           78000148  78002822             1           1      1
+## 13 2018  KAZ           39800602  39803815             2           2      2
+## 14 2018  LTU           44000063  44003889             1           1      1
 ## # … with 15 more variables: computer &lt;int&gt;, internet &lt;int&gt;, math &lt;dbl&gt;,
 ## #   read &lt;dbl&gt;, science &lt;dbl&gt;, stu_wgt &lt;dbl&gt;, desk &lt;int&gt;, room &lt;int&gt;,
 ## #   dishwasher &lt;int&gt;, television &lt;int&gt;, computer_n &lt;int&gt;, car &lt;int&gt;,
@@ -470,7 +470,7 @@ student = student %&gt;%
          school_id = as.factor(school_id),
          gender = as.factor(gender)) %&gt;% 
   dplyr::select(-country_iso3c) ## We renamed this variable to country</code></pre>
-<pre class="r"><code>save(student, file = here(&quot;Data/Output/student.rda&quot;))</code></pre>
+<pre class="r"><code>save(student, file = here(&quot;Data/Output/student.rda&quot;), compress = &quot;xz&quot;)</code></pre>
 </div>
 <div id="session-info" class="section level1">
 <h1>Session Info</h1>
