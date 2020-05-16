@@ -142,5 +142,10 @@ save(stu_qqq, file= here("/Data/Output/2018/stu_qqq.rds"))
 save(sch_qqq,file=here("/Data/Output/2018/sch_qqq.rds"))
 ```
 
+```{r}
+load("Data/Output/2018/sch_qqq.rds")
+saveRDS(sch_qqq, file = here("/Data/Output/2018/sch_qqq.rds"))
+```
+
 
 
