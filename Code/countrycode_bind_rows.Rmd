@@ -1,0 +1,47 @@
+---
+title: "Binding all country code together"
+author: "The Freemasons"
+date: "Initiated on 19 May 2020"
+output: html_document
+---
+
+# Loading package 
+```{r}
+library(tidyverse)
+library(here)
+```
+
+# Loading data
+```{r}
+load(here("Data/Output/countrycode_kim.rda"))
+countrycode %>% glimpse()
+```
+
+
+# Adding two extra rows of data
+
+According to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations, 
++ ROM represents Romania before 2002 and 
++ YUG represents Yugoslavia before 2003. 
+
+Both countries are part of the PISA data, but standard country code names will not capture these two. Hence, we will manually add them to what Kim has already curated. 
+
+```{r}
+countrycode = countrycode %>% 
+  bind_rows(
+    tibble(
+      country_iso3c = c("ROM", "YUG"), 
+      country_name = c("Romania", "Yugoslavia"))) %>% 
+  dplyr::rename(country = country_iso3c)
+```
+
+
+```{r}
+save(countrycode, file = here("Data/Output/countrycode.rda"), compress = "xz")
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,62 @@
+---
+title: "Binding all student data together"
+author: "The Freemasons"
+date: "Initiated on 13/12/2019"
+output: html_document
+---
+
+# Loading package 
+```{r}
+library(tidyverse)
+library(glue)
+library(here)
+```
+
+# Loading data
+```{r}
+## Reading in the all student data as tibbles and make sure all variables are coded in the correct variable type
+dfs_stu_qqq <- tibble(years = seq(2000, 2018, 3)) %>%
+  mutate(paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")) %>%
+  mutate(data = map(.x = paths,
+                    .f = ~ .x %>%
+                      here() %>%
+                      read_rds() %>%
+                      mutate(school_id = as.character(school_id),
+                             student_id = as.character(student_id)) %>%
+                      mutate_at(c("mother_educ", "father_educ",
+                                  "gender", "computer", "internet",
+                                  "desk", "room", "dishwasher", "television",
+                                  "computer_n", "car", "book"),
+                                as.integer) %>%
+                      mutate_at(c("math", "science", "read",
+                                  "stu_wgt", "wealth", "escs"),
+                                as.numeric)))
+
+names(dfs_stu_qqq$data) <- seq(2000, 2018, 3)
+student <- bind_rows(dfs_stu_qqq$data, .id = "year")
+
+student %>%
+  group_by(year) %>%
+  sample_n(2)
+
+
+load(here("Data/Output/countrycode.rda"))
+
+student = student %>% 
+  mutate(year = as.integer(year),
+         country = as.factor(country_iso3c),
+         student_id = as.factor(student_id),
+         school_id = as.factor(school_id),
+         gender = as.factor(gender)) %>% 
+  dplyr::select(-country_iso3c) ## We will use the 3-character codes as the only identifier (factor)
+```
+
+```{r}
+save(student, file = here("Data/Output/student.rda"), compress = "xz")
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
