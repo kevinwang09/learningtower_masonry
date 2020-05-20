@@ -94,20 +94,20 @@ sch_2009 = read_rds(here("Data/Output/2009/sch_qqq.rds"))
 glimpse(sch_2009)
 
 clean_2009 = sch_2009 %>% dplyr::transmute(
-  country = CNT %>% as.factor(),
-  school_id = SCHOOLID %>% as.character(), 
-  fund_gov = SC03Q03 %>% as.numeric(),
-  fund_fees = SC03Q02 %>% as.numeric(),
-  fund_donation = SC03Q03 %>% as.numeric(),
-  enrol_boys = SC06Q01 %>% as.numeric(),
-  enrol_girls = SC06Q02 %>% as.numeric(),
-  stratio = STRATIO %>% as.numeric(),
-  public_private = SC02Q01 %>% as.numeric(),
-  staff_shortage = TCSHORT %>% as.numeric(),
-  sch_wgt = W_FSCHWT %>% as.numeric(),
-  school_size = SCHSIZE %>% as.numeric())
+  country = country %>% as.factor(),
+  school_id = school_id %>% as.character(), 
+  fund_gov = fund_gov %>% as.numeric(),
+  fund_fees = fund_fees %>% as.numeric(),
+  fund_donation = fund_donation %>% as.numeric(),
+  enrol_boys = enrol_boys %>% as.numeric(),
+  enrol_girls = enrol_girls %>% as.numeric(),
+  stratio = stratio %>% as.numeric(),
+  public_private = public_private %>% as.numeric(),
+  staff_shortage = staff_shortage %>% as.numeric(),
+  sch_wgt = sch_wgt %>% as.numeric(),
+  school_size = school_size %>% as.numeric())
 
-glimpse(clean_2006)
+glimpse(clean_2009)
 ```
 
 ## 2012
