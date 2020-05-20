@@ -135,7 +135,29 @@ glimpse(clean_2012)
 
 ## 2015
 
-Missing, referred in issue #5
+## 2018
+
+```{r}
+sch_2015 = read_rds(here("Data/Output/2015/sch_qqq.rds"))
+glimpse(sch_2015)
+
+clean_2015 = sch_2015 %>% dplyr::transmute(
+  country = CNT %>% as.factor(),
+  school_id = CNTSCHID %>% as.character(), 
+  fund_gov = SC013Q01TA %>% as.numeric(),
+  fund_fees = SC016Q01TA %>% as.numeric(),
+  fund_donation = SC016Q03TA %>% as.numeric(),
+  enrol_boys = SC002Q01TA %>% as.numeric(),
+  enrol_girls = SC002Q02TA %>% as.numeric(),
+  stratio = STRATIO %>% as.numeric(),
+  public_private = SC013Q01TA %>% as.numeric(),
+  staff_shortage = STAFFSHORT %>% as.numeric(),
+  sch_wgt = W_SCHGRNRABWT %>% as.numeric(),
+  school_size = SCHSIZE %>% as.numeric())
+
+glimpse(clean_2015)
+```
+
 
 ## 2018
 
@@ -164,7 +186,7 @@ glimpse(clean_2018)
 # Binding data
 
 ```{r}
-list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2018)
+list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
 names(list_data) = names(list_data) %>% str_remove("clean_")
 
 school = list_data %>% bind_rows(.id = "year")
@@ -178,6 +200,8 @@ stopifnot(length(unique_country) == nrow(country_tbl))
 
 school = school %>% 
   left_join(country_tbl, by = c("country" = "iso3c"))
+
+table(school$year)
 ```
 
 # Save

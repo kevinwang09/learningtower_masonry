@@ -385,12 +385,12 @@ summary {
 <div id="loading-package" class="section level1">
 <h1>Loading package</h1>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
 ## ✓ tidyr   1.0.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(glue)</code></pre>
@@ -656,9 +656,56 @@ glimpse(clean_2012)</code></pre>
 </div>
 <div id="section-5" class="section level2">
 <h2>2015</h2>
-<p>Missing, referred in issue #5</p>
 </div>
 <div id="section-6" class="section level2">
+<h2>2018</h2>
+<pre class="r"><code>sch_2015 = read_rds(here(&quot;Data/Output/2015/sch_qqq.rds&quot;))
+glimpse(sch_2015)</code></pre>
+<pre><code>## Rows: 17,908
+## Columns: 12
+## $ CNT           &lt;chr+lbl&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, A…
+## $ CNTSCHID      &lt;dbl&gt; 800001, 800002, 800003, 800004, 800005, 800006, 800007,…
+## $ SC002Q01TA    &lt;dbl+lbl&gt; 196, NA, NA, NA, 573, NA, NA, NA, 84, 0, 101, NA, 2…
+## $ SC002Q02TA    &lt;dbl+lbl&gt; 295, NA, NA, NA, 577, NA, NA, NA, 78, 1, 169, NA, 2…
+## $ SC013Q01TA    &lt;dbl+lbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, …
+## $ SC016Q01TA    &lt;dbl+lbl&gt; 100, NA, 100, NA, 100, 93, NA, 95, 95, 10, NA, 20, …
+## $ SC016Q02TA    &lt;dbl+lbl&gt; NA, NA, 0, NA, NA, 2, NA, 0, 5, 70, 40, 0, 0, 100, …
+## $ SC016Q03TA    &lt;dbl+lbl&gt; NA, NA, 0, NA, NA, 3, NA, 5, 0, 20, 60, 70, 0, 0, N…
+## $ SCHSIZE       &lt;dbl+lbl&gt; 491, NA, NA, NA, 1150, NA, NA, NA, 162, 1, 270, NA,…
+## $ STAFFSHORT    &lt;dbl+lbl&gt; 1.4002, -0.1241, 0.9777, 1.0937, 0.0814, 2.2801, -0…
+## $ STRATIO       &lt;dbl+lbl&gt; 15.3438, NA, NA, NA, 21.6981, NA, NA, NA, 12.4615, …
+## $ W_SCHGRNRABWT &lt;dbl&gt; 7.671154, 13.711366, 12.216600, 1.532013, 3.451527, 12.…</code></pre>
+<pre class="r"><code>clean_2015 = sch_2015 %&gt;% dplyr::transmute(
+  country = CNT %&gt;% as.factor(),
+  school_id = CNTSCHID %&gt;% as.character(), 
+  fund_gov = SC013Q01TA %&gt;% as.numeric(),
+  fund_fees = SC016Q01TA %&gt;% as.numeric(),
+  fund_donation = SC016Q03TA %&gt;% as.numeric(),
+  enrol_boys = SC002Q01TA %&gt;% as.numeric(),
+  enrol_girls = SC002Q02TA %&gt;% as.numeric(),
+  stratio = STRATIO %&gt;% as.numeric(),
+  public_private = SC013Q01TA %&gt;% as.numeric(),
+  staff_shortage = STAFFSHORT %&gt;% as.numeric(),
+  sch_wgt = W_SCHGRNRABWT %&gt;% as.numeric(),
+  school_size = SCHSIZE %&gt;% as.numeric())
+
+glimpse(clean_2015)</code></pre>
+<pre><code>## Rows: 17,908
+## Columns: 12
+## $ country        &lt;fct&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB,…
+## $ school_id      &lt;chr&gt; &quot;800001&quot;, &quot;800002&quot;, &quot;800003&quot;, &quot;800004&quot;, &quot;800005&quot;, &quot;800…
+## $ fund_gov       &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, …
+## $ fund_fees      &lt;dbl&gt; 100, NA, 100, NA, 100, 93, NA, 95, 95, 10, NA, 20, 80,…
+## $ fund_donation  &lt;dbl&gt; NA, NA, 0, NA, NA, 3, NA, 5, 0, 20, 60, 70, 0, 0, NA, …
+## $ enrol_boys     &lt;dbl&gt; 196, NA, NA, NA, 573, NA, NA, NA, 84, 0, 101, NA, 234,…
+## $ enrol_girls    &lt;dbl&gt; 295, NA, NA, NA, 577, NA, NA, NA, 78, 1, 169, NA, 217,…
+## $ stratio        &lt;dbl&gt; 15.3438, NA, NA, NA, 21.6981, NA, NA, NA, 12.4615, 1.0…
+## $ public_private &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, …
+## $ staff_shortage &lt;dbl&gt; 1.4002, -0.1241, 0.9777, 1.0937, 0.0814, 2.2801, -0.20…
+## $ sch_wgt        &lt;dbl&gt; 7.671154, 13.711366, 12.216600, 1.532013, 3.451527, 12…
+## $ school_size    &lt;dbl&gt; 491, NA, NA, NA, 1150, NA, NA, NA, 162, 1, 270, NA, 45…</code></pre>
+</div>
+<div id="section-7" class="section level2">
 <h2>2018</h2>
 <pre class="r"><code>sch_2018 = read_rds(here(&quot;Data/Output/2018/sch_qqq.rds&quot;))
 glimpse(sch_2018)</code></pre>
@@ -709,12 +756,15 @@ glimpse(clean_2018)</code></pre>
 </div>
 <div id="binding-data" class="section level1">
 <h1>Binding data</h1>
-<pre class="r"><code>list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2018)
+<pre class="r"><code>list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
 names(list_data) = names(list_data) %&gt;% str_remove(&quot;clean_&quot;)
 
 school = list_data %&gt;% bind_rows(.id = &quot;year&quot;)</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
 ## into character vector
 
 ## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
@@ -739,7 +789,12 @@ country_tbl = tibble(iso3c = unique_country) %&gt;%
 stopifnot(length(unique_country) == nrow(country_tbl))
 
 school = school %&gt;% 
-  left_join(country_tbl, by = c(&quot;country&quot; = &quot;iso3c&quot;))</code></pre>
+  left_join(country_tbl, by = c(&quot;country&quot; = &quot;iso3c&quot;))
+
+table(school$year)</code></pre>
+<pre><code>## 
+##  2000  2003  2006  2009  2012  2015  2018 
+##  8526 10274 14365 18641 18139 17908 21903</code></pre>
 </div>
 <div id="save" class="section level1">
 <h1>Save</h1>
@@ -763,23 +818,23 @@ school = school %&gt;%
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] janitor_2.0.1     countrycode_1.1.3 here_0.1          glue_1.4.0       
+##  [1] janitor_2.0.1     countrycode_1.1.3 here_0.1          glue_1.4.1       
 ##  [5] forcats_0.5.0     stringr_1.4.0     dplyr_0.8.5       purrr_0.3.4      
 ##  [9] readr_1.3.1       tidyr_1.0.2       tibble_3.0.1      ggplot2_3.3.0    
 ## [13] tidyverse_1.3.0  
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] tidyselect_1.0.0 xfun_0.13        haven_2.2.0      lattice_0.20-41 
-##  [5] snakecase_0.11.0 colorspace_1.4-1 vctrs_0.2.4      generics_0.0.2  
-##  [9] htmltools_0.4.0  yaml_2.2.1       utf8_1.1.4       rlang_0.4.5     
-## [13] pillar_1.4.3     withr_2.2.0      DBI_1.1.0        dbplyr_1.4.2    
+##  [1] tidyselect_1.1.0 xfun_0.13        haven_2.2.0      lattice_0.20-41 
+##  [5] snakecase_0.11.0 colorspace_1.4-1 vctrs_0.3.0      generics_0.0.2  
+##  [9] htmltools_0.4.0  yaml_2.2.1       utf8_1.1.4       rlang_0.4.6     
+## [13] pillar_1.4.4     withr_2.2.0      DBI_1.1.0        dbplyr_1.4.2    
 ## [17] modelr_0.1.6     readxl_1.3.1     lifecycle_0.2.0  munsell_0.5.0   
 ## [21] gtable_0.3.0     cellranger_1.1.0 rvest_0.3.5      evaluate_0.14   
-## [25] knitr_1.28       fansi_0.4.1      broom_0.5.5      Rcpp_1.0.4.10   
-## [29] scales_1.1.0     backports_1.1.6  jsonlite_1.6.1   fs_1.4.1        
+## [25] knitr_1.28       fansi_0.4.1      broom_0.5.5      Rcpp_1.0.4.11   
+## [29] scales_1.1.1     backports_1.1.7  jsonlite_1.6.1   fs_1.4.1        
 ## [33] hms_0.5.3        digest_0.6.25    stringi_1.4.6    rprojroot_1.3-2 
 ## [37] grid_3.6.2       cli_2.0.2        tools_3.6.2      magrittr_1.5    
-## [41] crayon_1.3.4     pkgconfig_2.0.3  ellipsis_0.3.0   xml2_1.3.1      
+## [41] crayon_1.3.4     pkgconfig_2.0.3  ellipsis_0.3.1   xml2_1.3.2      
 ## [45] reprex_0.3.0     lubridate_1.7.8  assertthat_0.2.1 rmarkdown_2.1   
 ## [49] httr_1.4.1       rstudioapi_0.11  R6_2.4.1         nlme_3.1-147    
 ## [53] compiler_3.6.2</code></pre>
