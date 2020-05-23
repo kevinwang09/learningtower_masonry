@@ -1,0 +1,95 @@
+---
+title: "Student Quality Checks before binding"
+author: "The Freemasons"
+date: "`r paste0('Initiated on 2019 Dec 13, compiled on ', format(Sys.time(), '%Y %b %d'))`"
+output:
+  html_document:
+    code_folding: hide
+    fig_height: 10
+    fig_width: 10
+    toc: yes
+    number_sections: true
+    toc_depth: 3
+    toc_float: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+# Loading package 
+```{r}
+library(tidyverse)
+library(glue)
+library(here)
+```
+
+```{r}
+yes1no2 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "yes",
+    x == 2 ~ "no",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+none1one2two3threemore4 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "0", 
+    x == 2 ~ "1",
+    x == 3 ~ "2",
+    x == 4 ~ "3+",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+```
+
+
+# 2000 data
+```{r}
+stu_2000 = read_rds(here("Data/Output/2000/stu_qqq.rds"))
+
+clean_2000 = stu_2000 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000
+    father_educ = father_educ %>% as.factor(), ## This is all missing in 2000
+    gender = case_when(
+      gender == "1" ~ "female",
+      gender == "2" ~ "male",
+      TRUE ~ NA_character_) %>% as.factor(),
+    computer = computer %>% as.factor(), ## This is all missing in 2000
+    internet = internet %>% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(),
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "none",
+      book == 2 ~ "1-10",
+      book == 3 ~ "11-50",
+      book == 4 ~ "51-100",
+      book == 5 ~ "101-250",
+      book == 6 ~ "251-500",
+      book == 7 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth, escs)
+
+
+skimr::skim(clean_2000)
+```
+
+
+
+# Session info
+```{r}
+sessioninfo::session_info()
+```
+
