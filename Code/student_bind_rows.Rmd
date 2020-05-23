@@ -40,6 +40,17 @@ none1one2two3threemore4 = function(x){
     x == 4 ~ "3+",
     TRUE ~ NA_character_) %>% as.factor()
 }
+
+iscednone12345 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "none", 
+    x == 2 ~ "ISCED 1",
+    x == 3 ~ "ISCED 2",
+    x == 4 ~ "ISCED 3B, C",
+    x == 5 ~ "ISCED 3A",
+    TRUE ~ NA_character_) %>% as.factor()
+}
 ```
 
 
@@ -80,10 +91,56 @@ clean_2000 = stu_2000 %>%
       book == 7 ~ "more than 500",
       TRUE ~ NA_character_
     ) %>% as.factor(),
-    wealth, escs)
+    wealth, 
+    escs)
 
 
 skimr::skim(clean_2000)
+```
+
+
+
+# 2003 data
+```{r}
+stu_2003 = read_rds(here("Data/Output/2003/stu_qqq.rds"))
+
+clean_2003 = stu_2003 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% iscednone12345(),
+    father_educ = father_educ %>% iscednone12345(),
+    gender = case_when(
+      gender == "1" ~ "female",
+      gender == "2" ~ "male",
+      TRUE ~ NA_character_) %>% as.factor(),
+    computer = computer %>% as.factor(), ## This is a wrong column, see Google Sheets
+    internet = internet %>% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(),
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "0-10",
+      book == 2 ~ "11-25",
+      book == 3 ~ "26-100",
+      book == 4 ~ "101-200",
+      book == 5 ~ "201-500",
+      book == 6 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth, 
+    escs)
+
+
+skimr::skim(clean_2003)
 ```
 
 
