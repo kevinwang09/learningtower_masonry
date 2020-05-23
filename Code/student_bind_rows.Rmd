@@ -242,6 +242,52 @@ skimr::skim(clean_2009)
 
 
 
+# 2012 data
+```{r}
+stu_2012 = read_rds(here("Data/Output/2012/stu_qqq.rds"))
+
+clean_2012 = stu_2012 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% isced3a1(),
+    father_educ = father_educ %>% isced3a1(),
+    gender = case_when(
+      gender == "1" ~ "female",
+      gender == "2" ~ "male",
+      TRUE ~ NA_character_) %>% as.factor(),
+    computer = computer %>% yes1no2(),
+    internet = internet %>% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(),
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "0-10",
+      book == 2 ~ "11-25",
+      book == 3 ~ "26-100",
+      book == 4 ~ "101-200",
+      book == 5 ~ "201-500",
+      book == 6 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth = wealth %>% na_if(9997) %>% na_if(9999), 
+    escs = escs %>% na_if(9997) %>% na_if(9999))
+
+skimr::skim(clean_2012)
+```
+
+
+
+
+
 # Session info
 ```{r}
 sessioninfo::session_info()
