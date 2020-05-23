@@ -364,11 +364,6 @@ student %>%
 ```
 
 
-# Saving data
-```{r}
-# save(student, file = here("Data/Output/student.rda"), compress = "xz")
-```
-
 # Session Info
 
 ```{r}

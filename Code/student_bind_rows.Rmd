@@ -128,10 +128,10 @@ clean_2003 = stu_2003 %>%
       TRUE ~ NA_character_) %>% as.factor(),
     computer = computer %>% as.factor(), ## This is a wrong column, see Google Sheets
     internet = internet %>% yes1no2(),
-    math, 
-    read, 
-    science, 
-    stu_wgt, 
+    math = math %>% as.numeric(), 
+    read = read %>% as.numeric(), 
+    science = science %>% as.numeric(), 
+    stu_wgt = stu_wgt %>% as.numeric(), 
     desk = desk %>% yes1no2(),
     room = room %>% yes1no2(),
     dishwasher = dishwasher %>% yes1no2(),
@@ -148,7 +148,7 @@ clean_2003 = stu_2003 %>%
       TRUE ~ NA_character_
     ) %>% as.factor(),
     wealth, 
-    escs)
+    escs = escs %>% as.numeric %>% na_if(999))
 
 
 skimr::skim(clean_2003)
@@ -328,7 +328,68 @@ skimr::skim(clean_2015)
 ```
 
 
+# 2018 data
+```{r}
+stu_2018 = read_rds(here("Data/Output/2018/stu_qqq.rds"))
 
+clean_2018 = stu_2018 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% isced3a1(),
+    father_educ = father_educ %>% isced3a1(),
+    gender = case_when(
+      gender == "1" ~ "female",
+      gender == "2" ~ "male",
+      TRUE ~ NA_character_) %>% as.factor(),
+    computer = computer %>% yes1no2(),
+    internet = internet %>% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(), ## This is all NA because the storage of this variable was very problematic, see issue 7
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "0-10",
+      book == 2 ~ "11-25",
+      book == 3 ~ "26-100",
+      book == 4 ~ "101-200",
+      book == 5 ~ "201-500",
+      book == 6 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth = wealth %>% as.numeric %>% na_if(95) %>% na_if(97) %>% na_if(98) %>% na_if(99), 
+    escs = escs %>% as.numeric %>% na_if(95) %>% na_if(97) %>% na_if(98) %>% na_if(99))
+
+skimr::skim(clean_2018)
+```
+
+
+```{r}
+list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
+names(list_data) = names(list_data) %>% str_remove("clean_")
+
+student = list_data %>% 
+  bind_rows(.id = "year") %>% 
+  dplyr::mutate_if(is.character, as.factor)
+
+glimpse(student)
+
+skimr::skim(student)
+```
+
+
+
+# Saving data
+```{r}
+save(student, file = here("Data/Output/student.rda"), compress = "xz")
+```
 
 
 # Session info

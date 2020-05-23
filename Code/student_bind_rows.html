@@ -1603,12 +1603,12 @@ div.tocify {
 <div id="loading-package" class="section level1" number="1">
 <h1 number="1"><span class="header-section-number">1</span> Loading package</h1>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
 ## ✓ tidyr   1.0.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(glue)</code></pre>
@@ -1993,10 +1993,10 @@ clean_2003 = stu_2003 %&gt;%
       TRUE ~ NA_character_) %&gt;% as.factor(),
     computer = computer %&gt;% as.factor(), ## This is a wrong column, see Google Sheets
     internet = internet %&gt;% yes1no2(),
-    math, 
-    read, 
-    science, 
-    stu_wgt, 
+    math = math %&gt;% as.numeric(), 
+    read = read %&gt;% as.numeric(), 
+    science = science %&gt;% as.numeric(), 
+    stu_wgt = stu_wgt %&gt;% as.numeric(), 
     desk = desk %&gt;% yes1no2(),
     room = room %&gt;% yes1no2(),
     dishwasher = dishwasher %&gt;% yes1no2(),
@@ -2013,7 +2013,7 @@ clean_2003 = stu_2003 %&gt;%
       TRUE ~ NA_character_
     ) %&gt;% as.factor(),
     wealth, 
-    escs)
+    escs = escs %&gt;% as.numeric %&gt;% na_if(999))
 
 
 skimr::skim(clean_2003)</code></pre>
@@ -2041,16 +2041,16 @@ skimr::skim(clean_2003)</code></pre>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">character</td>
-<td align="left">5</td>
-</tr>
-<tr class="odd">
 <td align="left">factor</td>
 <td align="left">15</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">logical</td>
 <td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">numeric</td>
+<td align="left">5</td>
 </tr>
 <tr class="odd">
 <td align="left">________________________</td>
@@ -2059,73 +2059,6 @@ skimr::skim(clean_2003)</code></pre>
 <tr class="even">
 <td align="left">Group variables</td>
 <td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: character</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">min</th>
-<th align="right">max</th>
-<th align="right">empty</th>
-<th align="right">n_unique</th>
-<th align="right">whitespace</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">math</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">7</td>
-<td align="right">8</td>
-<td align="right">0</td>
-<td align="right">6140</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">read</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">6</td>
-<td align="right">8</td>
-<td align="right">0</td>
-<td align="right">9544</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">science</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">6</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">4352</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">stu_wgt</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">6</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">10513</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">escs</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">6</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">34383</td>
-<td align="right">0</td>
 </tr>
 </tbody>
 </table>
@@ -2282,6 +2215,91 @@ skimr::skim(clean_2003)</code></pre>
 <td align="right">0</td>
 <td align="right">NaN</td>
 <td align="left">:</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">math</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">482.13</td>
+<td align="right">105.95</td>
+<td align="right">30.25</td>
+<td align="right">408.66</td>
+<td align="right">483.44</td>
+<td align="right">557.83</td>
+<td align="right">881.09</td>
+<td align="left">▁▂▇▅▁</td>
+</tr>
+<tr class="even">
+<td align="left">read</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">479.76</td>
+<td align="right">103.24</td>
+<td align="right">-79.04</td>
+<td align="right">411.03</td>
+<td align="right">485.47</td>
+<td align="right">553.64</td>
+<td align="right">889.53</td>
+<td align="left">▁▁▇▇▁</td>
+</tr>
+<tr class="odd">
+<td align="left">science</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">485.50</td>
+<td align="right">106.60</td>
+<td align="right">-169.93</td>
+<td align="right">410.07</td>
+<td align="right">484.69</td>
+<td align="right">561.67</td>
+<td align="right">940.31</td>
+<td align="left">▁▁▇▇▁</td>
+</tr>
+<tr class="even">
+<td align="left">stu_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">69.36</td>
+<td align="right">134.95</td>
+<td align="right">1.00</td>
+<td align="right">8.52</td>
+<td align="right">17.37</td>
+<td align="right">57.68</td>
+<td align="right">2045.92</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">escs</td>
+<td align="right">4027</td>
+<td align="right">0.99</td>
+<td align="right">-0.18</td>
+<td align="right">1.08</td>
+<td align="right">-4.61</td>
+<td align="right">-0.87</td>
+<td align="right">-0.13</td>
+<td align="right">0.59</td>
+<td align="right">2.96</td>
+<td align="left">▁▂▇▇▁</td>
 </tr>
 </tbody>
 </table>
@@ -3546,8 +3564,860 @@ skimr::skim(clean_2015)</code></pre>
 </tbody>
 </table>
 </div>
-<div id="session-info" class="section level1" number="8">
-<h1 number="8"><span class="header-section-number">8</span> Session info</h1>
+<div id="data-6" class="section level1" number="8">
+<h1 number="8"><span class="header-section-number">8</span> 2018 data</h1>
+<pre class="r"><code>stu_2018 = read_rds(here(&quot;Data/Output/2018/stu_qqq.rds&quot;))
+
+clean_2018 = stu_2018 %&gt;% 
+  dplyr::transmute(
+    country = country_iso3c %&gt;% as.factor(),
+    school_id = school_id %&gt;% as.factor(),
+    student_id = student_id %&gt;% as.factor(),
+    mother_educ = mother_educ %&gt;% isced3a1(),
+    father_educ = father_educ %&gt;% isced3a1(),
+    gender = case_when(
+      gender == &quot;1&quot; ~ &quot;female&quot;,
+      gender == &quot;2&quot; ~ &quot;male&quot;,
+      TRUE ~ NA_character_) %&gt;% as.factor(),
+    computer = computer %&gt;% yes1no2(),
+    internet = internet %&gt;% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %&gt;% yes1no2(),
+    room = room %&gt;% yes1no2(),
+    dishwasher = dishwasher %&gt;% yes1no2(), ## This is all NA because the storage of this variable was very problematic, see issue 7
+    television = television %&gt;% none1one2two3threemore4(), 
+    computer_n = computer_n %&gt;% none1one2two3threemore4(), 
+    car = car %&gt;% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ &quot;0-10&quot;,
+      book == 2 ~ &quot;11-25&quot;,
+      book == 3 ~ &quot;26-100&quot;,
+      book == 4 ~ &quot;101-200&quot;,
+      book == 5 ~ &quot;201-500&quot;,
+      book == 6 ~ &quot;more than 500&quot;,
+      TRUE ~ NA_character_
+    ) %&gt;% as.factor(),
+    wealth = wealth %&gt;% as.numeric %&gt;% na_if(95) %&gt;% na_if(97) %&gt;% na_if(98) %&gt;% na_if(99), 
+    escs = escs %&gt;% as.numeric %&gt;% na_if(95) %&gt;% na_if(97) %&gt;% na_if(98) %&gt;% na_if(99))
+
+skimr::skim(clean_2018)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2018</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">612004</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">21</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">15</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">80</td>
+<td align="center">ESP: 35943, CAN: 22653, KAZ: 19507, ARE: 19277</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">21903</td>
+<td align="center">634: 491, 499: 423, 634: 349, 499: 323</td>
+</tr>
+<tr class="odd">
+<td align="left">student_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">612004</td>
+<td align="center">800: 1, 800: 1, 800: 1, 800: 1</td>
+</tr>
+<tr class="even">
+<td align="left">mother_educ</td>
+<td align="right">25267</td>
+<td align="right">0.96</td>
+<td align="left">FALSE</td>
+<td align="right">5</td>
+<td align="center">ISC: 319865, ISC: 113304, ISC: 100956, ISC: 34557</td>
+</tr>
+<tr class="odd">
+<td align="left">father_educ</td>
+<td align="right">35914</td>
+<td align="right">0.94</td>
+<td align="left">FALSE</td>
+<td align="right">5</td>
+<td align="center">ISC: 291768, ISC: 130423, ISC: 100865, ISC: 35046</td>
+</tr>
+<tr class="even">
+<td align="left">gender</td>
+<td align="right">2</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">mal: 307044, fem: 304958</td>
+</tr>
+<tr class="odd">
+<td align="left">computer</td>
+<td align="right">19970</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 486324, no: 105710</td>
+</tr>
+<tr class="even">
+<td align="left">internet</td>
+<td align="right">19291</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 543010, no: 49703</td>
+</tr>
+<tr class="odd">
+<td align="left">desk</td>
+<td align="right">19999</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 523492, no: 68513</td>
+</tr>
+<tr class="even">
+<td align="left">room</td>
+<td align="right">24583</td>
+<td align="right">0.96</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 478520, no: 108901</td>
+</tr>
+<tr class="odd">
+<td align="left">dishwasher</td>
+<td align="right">612004</td>
+<td align="right">0.00</td>
+<td align="left">FALSE</td>
+<td align="right">0</td>
+<td align="center">:</td>
+</tr>
+<tr class="even">
+<td align="left">television</td>
+<td align="right">19071</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">3+: 223022, 2: 199649, 1: 158958, 0: 11304</td>
+</tr>
+<tr class="odd">
+<td align="left">computer_n</td>
+<td align="right">19524</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">3+: 176886, 1: 176453, 2: 164784, 0: 74357</td>
+</tr>
+<tr class="even">
+<td align="left">car</td>
+<td align="right">37594</td>
+<td align="right">0.94</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">1: 197311, 2: 173190, 0: 108424, 3+: 95485</td>
+</tr>
+<tr class="odd">
+<td align="left">book</td>
+<td align="right">15646</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">6</td>
+<td align="center">26-: 169222, 0-1: 125583, 11-: 124194, 101: 84750</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">math</td>
+<td align="right">5377</td>
+<td align="right">0.99</td>
+<td align="right">461.22</td>
+<td align="right">104.36</td>
+<td align="right">24.74</td>
+<td align="right">386.66</td>
+<td align="right">460.66</td>
+<td align="right">535.28</td>
+<td align="right">888.06</td>
+<td align="left">▁▃▇▃▁</td>
+</tr>
+<tr class="even">
+<td align="left">read</td>
+<td align="right">41320</td>
+<td align="right">0.93</td>
+<td align="right">454.42</td>
+<td align="right">108.76</td>
+<td align="right">0.00</td>
+<td align="right">375.54</td>
+<td align="right">453.30</td>
+<td align="right">532.17</td>
+<td align="right">887.69</td>
+<td align="left">▁▃▇▃▁</td>
+</tr>
+<tr class="odd">
+<td align="left">science</td>
+<td align="right">5377</td>
+<td align="right">0.99</td>
+<td align="right">460.69</td>
+<td align="right">102.66</td>
+<td align="right">58.74</td>
+<td align="right">385.60</td>
+<td align="right">458.20</td>
+<td align="right">533.44</td>
+<td align="right">886.08</td>
+<td align="left">▁▃▇▃▁</td>
+</tr>
+<tr class="even">
+<td align="left">stu_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">46.86</td>
+<td align="right">110.85</td>
+<td align="right">1.00</td>
+<td align="right">4.95</td>
+<td align="right">11.13</td>
+<td align="right">43.97</td>
+<td align="right">2946.13</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">wealth</td>
+<td align="right">13737</td>
+<td align="right">0.98</td>
+<td align="right">-0.43</td>
+<td align="right">1.24</td>
+<td align="right">-7.55</td>
+<td align="right">-1.14</td>
+<td align="right">-0.37</td>
+<td align="right">0.32</td>
+<td align="right">4.75</td>
+<td align="left">▁▁▇▆▁</td>
+</tr>
+<tr class="even">
+<td align="left">escs</td>
+<td align="right">14379</td>
+<td align="right">0.98</td>
+<td align="right">-0.28</td>
+<td align="right">1.12</td>
+<td align="right">-8.17</td>
+<td align="right">-1.01</td>
+<td align="right">-0.19</td>
+<td align="right">0.59</td>
+<td align="right">4.21</td>
+<td align="left">▁▁▃▇▁</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
+names(list_data) = names(list_data) %&gt;% str_remove(&quot;clean_&quot;)
+
+student = list_data %&gt;% 
+  bind_rows(.id = &quot;year&quot;) %&gt;% 
+  dplyr::mutate_if(is.character, as.factor)</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre class="r"><code>glimpse(student)</code></pre>
+<pre><code>## Rows: 2,929,621
+## Columns: 22
+## $ year        &lt;fct&gt; 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 200…
+## $ country     &lt;fct&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, AL…
+## $ school_id   &lt;fct&gt; 1001, 1001, 1001, 1001, 1001, 1001, 1001, 1001, 1001, 100…
+## $ student_id  &lt;fct&gt; 1, 3, 6, 8, 11, 12, 17, 20, 21, 22, 24, 27, 28, 29, 30, 3…
+## $ mother_educ &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+## $ father_educ &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+## $ gender      &lt;fct&gt; female, female, male, female, female, female, male, femal…
+## $ computer    &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+## $ internet    &lt;fct&gt; no, no, no, no, no, no, yes, no, no, no, no, no, no, no, …
+## $ math        &lt;dbl&gt; 324.35, NA, NA, 235.79, NA, 290.74, NA, 266.31, NA, NA, 2…
+## $ read        &lt;dbl&gt; 397.87, 368.41, 294.17, 241.49, 287.16, 307.84, 181.73, 3…
+## $ science     &lt;dbl&gt; 345.66, 385.83, 327.94, 341.09, 307.15, 277.04, 279.19, 4…
+## $ stu_wgt     &lt;dbl&gt; 2.1600, 2.1600, 2.1600, 2.1600, 2.1600, 2.1600, 2.1600, 2…
+## $ desk        &lt;fct&gt; yes, yes, yes, yes, yes, yes, NA, yes, yes, yes, yes, yes…
+## $ room        &lt;fct&gt; no, yes, yes, yes, yes, yes, yes, no, yes, yes, yes, yes,…
+## $ dishwasher  &lt;fct&gt; no, no, no, no, no, yes, no, yes, no, no, no, no, no, no,…
+## $ television  &lt;fct&gt; 1, 2, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 3+, 2,…
+## $ computer_n  &lt;fct&gt; 3+, 0, 0, 1, 0, NA, 0, 0, NA, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+## $ car         &lt;fct&gt; 1, 0, 0, 0, 1, 3+, 0, NA, NA, 0, 0, 0, 0, 0, 0, 1, 0, 1, …
+## $ book        &lt;fct&gt; 11-50, 1-10, 1-10, 11-50, 11-50, 11-50, 1-10, 1-10, 51-10…
+## $ wealth      &lt;dbl&gt; -0.60, -1.84, -1.46, -1.46, -1.13, -0.40, -1.84, -1.57, -…
+## $ escs        &lt;dbl&gt; 0.10575583, -1.42404458, -1.30668386, -0.46246393, -1.281…</code></pre>
+<pre class="r"><code>skimr::skim(student)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">student</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">2929621</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">22</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">16</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">year</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">7</td>
+<td align="center">201: 612004, 201: 519334, 200: 515958, 201: 480174</td>
+</tr>
+<tr class="even">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">100</td>
+<td align="center">CAN: 154549, MEX: 150425, ESP: 127731, ITA: 121524</td>
+</tr>
+<tr class="odd">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">33499</td>
+<td align="center">000: 4041, 000: 3929, 000: 3799, 000: 3788</td>
+</tr>
+<tr class="even">
+<td align="left">student_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">849620</td>
+<td align="center">1: 814, 3: 805, 6: 803, 5: 802</td>
+</tr>
+<tr class="odd">
+<td align="left">mother_educ</td>
+<td align="right">275555</td>
+<td align="right">0.91</td>
+<td align="left">FALSE</td>
+<td align="right">5</td>
+<td align="center">ISC: 1346638, ISC: 493880, ISC: 482014, ISC: 220129</td>
+</tr>
+<tr class="even">
+<td align="left">father_educ</td>
+<td align="right">342080</td>
+<td align="right">0.88</td>
+<td align="left">FALSE</td>
+<td align="right">5</td>
+<td align="center">ISC: 1239050, ISC: 552697, ISC: 482116, ISC: 214311</td>
+</tr>
+<tr class="odd">
+<td align="left">gender</td>
+<td align="right">1708</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">fem: 1472901, mal: 1455012</td>
+</tr>
+<tr class="even">
+<td align="left">computer</td>
+<td align="right">198929</td>
+<td align="right">0.93</td>
+<td align="left">FALSE</td>
+<td align="right">7</td>
+<td align="center">yes: 2019838, no: 434689, 1: 213991, 2: 59095</td>
+</tr>
+<tr class="odd">
+<td align="left">internet</td>
+<td align="right">81869</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 2210442, no: 637310</td>
+</tr>
+<tr class="even">
+<td align="left">desk</td>
+<td align="right">78007</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 2516093, no: 335521</td>
+</tr>
+<tr class="odd">
+<td align="left">room</td>
+<td align="right">88233</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 2264730, no: 576658</td>
+</tr>
+<tr class="even">
+<td align="left">dishwasher</td>
+<td align="right">1202932</td>
+<td align="right">0.59</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 908220, no: 818469</td>
+</tr>
+<tr class="odd">
+<td align="left">television</td>
+<td align="right">339505</td>
+<td align="right">0.88</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">3+: 1058530, 2: 881104, 1: 607701, 0: 42781</td>
+</tr>
+<tr class="even">
+<td align="left">computer_n</td>
+<td align="right">354698</td>
+<td align="right">0.88</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">1: 877470, 2: 646648, 3+: 645880, 0: 404925</td>
+</tr>
+<tr class="odd">
+<td align="left">car</td>
+<td align="right">381148</td>
+<td align="right">0.87</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">1: 880286, 2: 755497, 0: 530864, 3+: 381826</td>
+</tr>
+<tr class="even">
+<td align="left">book</td>
+<td align="right">78652</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">12</td>
+<td align="center">26-: 787929, 11-: 546608, 0-1: 506940, 101: 412730</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">math</td>
+<td align="right">81368</td>
+<td align="right">0.97</td>
+<td align="right">466.82</td>
+<td align="right">104.88</td>
+<td align="right">-53.45</td>
+<td align="right">392.77</td>
+<td align="right">466.42</td>
+<td align="right">540.76</td>
+<td align="right">1022.21</td>
+<td align="left">▁▂▇▂▁</td>
+</tr>
+<tr class="even">
+<td align="left">read</td>
+<td align="right">46931</td>
+<td align="right">0.98</td>
+<td align="right">465.12</td>
+<td align="right">106.40</td>
+<td align="right">-79.04</td>
+<td align="right">392.52</td>
+<td align="right">468.92</td>
+<td align="right">541.40</td>
+<td align="right">1083.51</td>
+<td align="left">▁▂▇▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">science</td>
+<td align="right">5377</td>
+<td align="right">1.00</td>
+<td align="right">470.87</td>
+<td align="right">104.08</td>
+<td align="right">-169.93</td>
+<td align="right">396.25</td>
+<td align="right">470.08</td>
+<td align="right">545.23</td>
+<td align="right">940.31</td>
+<td align="left">▁▁▇▆▁</td>
+</tr>
+<tr class="even">
+<td align="left">stu_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">56.24</td>
+<td align="right">130.47</td>
+<td align="right">1.00</td>
+<td align="right">5.94</td>
+<td align="right">15.12</td>
+<td align="right">46.52</td>
+<td align="right">6945.81</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">wealth</td>
+<td align="right">320506</td>
+<td align="right">0.89</td>
+<td align="right">-0.40</td>
+<td align="right">1.22</td>
+<td align="right">-7.64</td>
+<td align="right">-1.12</td>
+<td align="right">-0.34</td>
+<td align="right">0.36</td>
+<td align="right">4.75</td>
+<td align="left">▁▁▇▇▁</td>
+</tr>
+<tr class="even">
+<td align="left">escs</td>
+<td align="right">63759</td>
+<td align="right">0.98</td>
+<td align="right">-0.25</td>
+<td align="right">1.11</td>
+<td align="right">-8.17</td>
+<td align="right">-0.98</td>
+<td align="right">-0.18</td>
+<td align="right">0.59</td>
+<td align="right">4.21</td>
+<td align="left">▁▁▃▇▁</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="saving-data" class="section level1" number="9">
+<h1 number="9"><span class="header-section-number">9</span> Saving data</h1>
+<pre class="r"><code>save(student, file = here(&quot;Data/Output/student.rda&quot;), compress = &quot;xz&quot;)</code></pre>
+</div>
+<div id="session-info" class="section level1" number="10">
+<h1 number="10"><span class="header-section-number">10</span> Session info</h1>
 <pre class="r"><code>sessioninfo::session_info()</code></pre>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value                       
@@ -3622,6 +4492,7 @@ skimr::skim(clean_2015)</code></pre>
 ##  tidyr       * 1.0.2    2020-01-24 [1] CRAN (R 3.6.0)                
 ##  tidyselect    1.1.0    2020-05-11 [1] CRAN (R 3.6.2)                
 ##  tidyverse   * 1.3.0    2019-11-21 [1] CRAN (R 3.6.0)                
+##  utf8          1.1.4    2018-05-24 [1] CRAN (R 3.6.0)                
 ##  vctrs         0.3.0    2020-05-11 [1] CRAN (R 3.6.2)                
 ##  withr         2.2.0    2020-04-20 [1] CRAN (R 3.6.2)                
 ##  xfun          0.13     2020-04-13 [1] CRAN (R 3.6.2)                
