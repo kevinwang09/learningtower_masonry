@@ -1,0 +1,376 @@
+---
+title: "Student Quality Checks before binding"
+author: "The Freemasons"
+date: "`r paste0('Initiated on 2019 Dec 13, compiled on ', format(Sys.time(), '%Y %b %d'))`"
+output:
+  html_document:
+    code_folding: hide
+    fig_height: 10
+    fig_width: 10
+    toc: yes
+    number_sections: true
+    toc_depth: 3
+    toc_float: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+# Loading package 
+```{r}
+library(tidyverse)
+library(glue)
+library(here)
+```
+
+# Loading data
+```{r}
+## Reading in the all student data as tibbles and make sure all variables are coded in the correct variable type
+dfs_stu_qqq <- tibble(years = seq(2000, 2018, 3)) %>%
+  mutate(paths = glue("Data/Output/{years}/{what}.rds", what = "stu_qqq")) %>%
+  mutate(data = map(.x = paths,
+                    .f = ~ .x %>%
+                      here() %>%
+                      read_rds() %>%
+                      mutate(school_id = as.character(school_id),
+                             student_id = as.character(student_id)) %>%
+                      mutate_at(c("mother_educ", "father_educ",
+                                  "gender", "computer", "internet",
+                                  "desk", "room", "dishwasher", "television",
+                                  "computer_n", "car", "book"),
+                                as.integer) %>%
+                      mutate_at(c("math", "science", "read",
+                                  "stu_wgt", "wealth", "escs"),
+                                as.numeric)))
+
+names(dfs_stu_qqq$data) <- seq(2000, 2018, 3)
+student <- bind_rows(dfs_stu_qqq$data, .id = "year")
+
+student %>%
+  group_by(year) %>%
+  sample_n(2)
+
+
+load(here("Data/Output/countrycode.rda"))
+
+student = student %>% 
+  mutate(year = as.integer(year),
+         country = as.factor(country_iso3c),
+         student_id = as.factor(student_id),
+         school_id = as.factor(school_id),
+         gender = as.factor(gender)) %>% 
+  dplyr::select(-country_iso3c) ## We will use the 3-character codes as the only identifier (factor)
+```
+
+
+# Quality check for each variable
+
+We will use `janitor::tabyl` for it has a better print method and always includes NA
+
+## Skim through data
+```{r}
+library(skimr)
+colnames(student)
+skimr::skim(student)
+```
+
+
+## `year`
+
+This looks ok, though you can see how the survey was expanded in the later years.
+
+```{r year}
+library(janitor)
+student %>% 
+  tabyl(year)
+```
+
+
+## country
+
+This looks ok.
+```{r country}
+student %>% 
+  tabyl(country)
+```
+
+## School id
+
+This looks ok. Though we can see that a school_id is only unique given a year country combination. So we can't track a school's performance over the years.
+
+```{r schoolid}
+student %>% 
+  tabyl(school_id) %>% 
+  head
+
+student %>% 
+  filter(school_id == "1") %>% 
+  tabyl(country, year) %>% head(20)
+```
+
+## mother_educ
+
+It looks like encoding for this variable changed throughout the survey. 
++ KW can confirm (through provided script in https://github.com/gvdr/learningtower_masonry/blob/master/Code/2000/student2000.R) that this variable is missing in the 2000 survey.
+
+```{r}
+student %>% 
+  tabyl(year, mother_educ)
+```
+
+
+## father_educ
+
+It looks like encoding for this variable changed throughout the survey. 
++ KW can confirm (through provided script in https://github.com/gvdr/learningtower_masonry/blob/master/Code/2000/student2000.R) that this variable is missing in the 2000 survey.
+
+```{r}
+student %>% 
+  tabyl(year, father_educ)
+```
+
+## gender
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, gender)
+```
+
+## computer
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, computer)
+```
+
+
+## internet
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, internet)
+```
+
+## math
+
+It looks like there are lot more missing values in the 2000 data and a small amount in 2018. Otherwise all other years are complete. 
+
+```{r}
+library(ggridges)
+
+student %>% 
+  group_by(year, is.na(math)) %>% 
+  tally()
+
+student %>% 
+  ggplot(aes(x = math, y = factor(year))) +
+  geom_density_ridges()
+```
+
+## read
+
+It looks like there are lot more missing values in the 2018 data. Otherwise all other years are complete. 
+
+2006 also contains outliers (9997) that should be removed/recoded. This coding is likely an error code. 
+
+```{r}
+student %>% 
+  group_by(year, is.na(read)) %>% 
+  tally()
+
+student %>% 
+  ggplot(aes(x = read, y = factor(year))) +
+  geom_density_ridges()
+
+student %>% 
+  dplyr::filter(read > 1000) %>%
+  group_by(year, read) %>% 
+  tally()
+
+
+student %>% 
+  dplyr::filter(read < 1000) %>%
+  ggplot(aes(x = read, y = factor(year))) +
+  geom_density_ridges() +
+  labs(title = "Reading score for under 1000 only")
+```
+
+## science
+
+It looks like there are lot more missing values in the 2018 data. Otherwise all other years are complete. 
+
+```{r}
+student %>% 
+  group_by(year, is.na(science)) %>% 
+  tally()
+
+student %>% 
+  ggplot(aes(x = science, y = factor(year))) +
+  geom_density_ridges()
+```
+
+
+## stu_wgt
+
+Not sure how to judge this variable. This is highly right-skewed, but these values are also plausible observed/computed values. 
+
+```{r}
+student %>% 
+  group_by(year, is.na(stu_wgt)) %>% 
+  tally()
+
+student %>% 
+  ggplot(aes(x = stu_wgt, y = factor(year))) +
+  geom_density_ridges()
+
+
+student %>% 
+  dplyr::filter(stu_wgt > 1000) %>%
+  group_by(year, stu_wgt) %>% 
+  tally()
+
+student %>% 
+  dplyr::filter(stu_wgt < 1000) %>%
+  ggplot(aes(x = stu_wgt, y = factor(year))) +
+  geom_density_ridges() +
+  labs(title = "stu_wgt score for under 1000 only")
+```
+
+
+## desk
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, desk)
+```
+
+
+## room
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, room)
+```
+
+## dishwasher
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, dishwasher)
+```
+
+
+
+## television
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, television)
+```
+
+## computer_n
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, computer_n)
+```
+
+
+## car
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, car)
+```
+
+
+## book
+
+It looks like there are inconsistent coding for NA. Needs to double check this on individual year levels. 
+
+```{r}
+student %>% 
+  tabyl(year, book)
+```
+
+
+## wealth
+
+Outliers (997, 999, 9997, 9999) that should be removed/recoded. These codings are likely an error codes. 
+
+The distribution is also weirdly smooth in 2018 but discretised in 2000. 
+
+```{r}
+student %>% 
+  group_by(year, is.na(wealth)) %>% 
+  tally()
+
+student %>% 
+  ggplot(aes(x = wealth, y = factor(year))) +
+  geom_density_ridges()
+
+student %>% 
+  dplyr::filter(wealth > 5) %>%
+  group_by(year, wealth) %>% 
+  tally()
+
+student %>% 
+  dplyr::filter(wealth < 5) %>%
+  ggplot(aes(x = wealth, y = factor(year))) +
+  geom_density_ridges() +
+  labs(title = "wealth score for under 5 only")
+```
+
+## escs
+
+Outliers (997, 999, 9997, 9999) that should be removed/recoded. These codings are likely an error codes. 
+
+```{r}
+student %>% 
+  group_by(year, is.na(escs)) %>% 
+  tally()
+
+student %>% 
+  ggplot(aes(x = escs, y = factor(year))) +
+  geom_density_ridges()
+
+student %>% 
+  dplyr::filter(escs > 5) %>%
+  group_by(year, escs) %>% 
+  tally()
+
+student %>% 
+  dplyr::filter(escs < 5) %>%
+  ggplot(aes(x = escs, y = factor(year))) +
+  geom_density_ridges() +
+  labs(title = "escs score for under 5 only")
+```
+
+
+# Saving data
+```{r}
+# save(student, file = here("Data/Output/student.rda"), compress = "xz")
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```

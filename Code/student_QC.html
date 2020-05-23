@@ -12,7 +12,7 @@
 <meta name="author" content="The Freemasons" />
 
 
-<title>Binding all student data together</title>
+<title>Student Quality Checks before binding</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1593,7 +1593,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Binding all student data together</h1>
+<h1 class="title toc-ignore">Student Quality Checks before binding</h1>
 <h4 class="author">The Freemasons</h4>
 <h4 class="date">Initiated on 2019 Dec 13, compiled on 2020 May 23</h4>
 
@@ -1651,20 +1651,20 @@ student &lt;- bind_rows(dfs_stu_qqq$data, .id = &quot;year&quot;)</code></pre>
 ## # Groups:   year [7]
 ##    year  country_iso3c school_id student_id mother_educ father_educ gender
 ##    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;            &lt;int&gt;       &lt;int&gt;  &lt;int&gt;
-##  1 2000  FRA           2094      9424                NA          NA      2
-##  2 2000  ISR           1124      2324                NA          NA      1
-##  3 2003  ITA           00155     04507                3           3      1
-##  4 2003  RUS           00025     00705                4           4      1
-##  5 2006  BRA           104       1547                 4           4      2
-##  6 2006  MEX           354       9488                 4           1      2
-##  7 2009  HUN           00034     00859                1           2      1
-##  8 2009  SVN           00319     05751                2           2      2
-##  9 2012  CRI           0000010   00241                1           1      1
-## 10 2012  LUX           0000003   00396                3           1      1
-## 11 2015  BRA           7600631   7610508              3           1      1
-## 12 2015  CAN           12400687  12424023             1          NA      2
-## 13 2018  COL           17000077  17000165             3           3      2
-## 14 2018  ESP           72400450  72427820             1           3      1
+##  1 2000  POL           1070      768                 NA          NA      2
+##  2 2000  CAN           569       2420                NA          NA      2
+##  3 2003  GBR           00037     00868                9           9      1
+##  4 2003  TUN           00028     00861                2           9      1
+##  5 2006  NLD           72        1889                 9           9      2
+##  6 2006  QAT           3         143                  3           3      2
+##  7 2009  AZE           00083     02350                1           2      1
+##  8 2009  SRB           00168     04848                1           2      2
+##  9 2012  LTU           0000011   00203                3           3      1
+## 10 2012  CAN           0000098   02251                1           1      1
+## 11 2015  QES           97100224  97111804             3           1      1
+## 12 2015  THA           76400243  76406321             1           1      1
+## 13 2018  JOR           40000268  40002030             3           1      2
+## 14 2018  SVK           70300238  70304929             1           1      2
 ## # … with 15 more variables: computer &lt;int&gt;, internet &lt;int&gt;, math &lt;dbl&gt;,
 ## #   read &lt;dbl&gt;, science &lt;dbl&gt;, stu_wgt &lt;dbl&gt;, desk &lt;int&gt;, room &lt;int&gt;,
 ## #   dishwasher &lt;int&gt;, television &lt;int&gt;, computer_n &lt;int&gt;, car &lt;int&gt;,
