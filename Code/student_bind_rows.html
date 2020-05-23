@@ -1637,14 +1637,25 @@ none1one2two3threemore4 = function(x){
     TRUE ~ NA_character_) %&gt;% as.factor()
 }
 
-iscednone12345 = function(x){
+iscednone1 = function(x){
   x = as.integer(x)
   case_when(
-    x == 1 ~ &quot;none&quot;, 
+    x == 1 ~ &quot;less than ISCED1&quot;, 
     x == 2 ~ &quot;ISCED 1&quot;,
     x == 3 ~ &quot;ISCED 2&quot;,
     x == 4 ~ &quot;ISCED 3B, C&quot;,
     x == 5 ~ &quot;ISCED 3A&quot;,
+    TRUE ~ NA_character_) %&gt;% as.factor()
+}
+
+isced3a1 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ &quot;ISCED 3A&quot;, 
+    x == 2 ~ &quot;ISCED 3B, C&quot;,
+    x == 3 ~ &quot;ISCED 2&quot;,
+    x == 4 ~ &quot;ISCED 1&quot;,
+    x == 5 ~ &quot;less than ISCED1&quot;,
     TRUE ~ NA_character_) %&gt;% as.factor()
 }</code></pre>
 </div>
@@ -1974,8 +1985,8 @@ clean_2003 = stu_2003 %&gt;%
     country = country_iso3c %&gt;% as.factor(),
     school_id = school_id %&gt;% as.factor(),
     student_id = student_id %&gt;% as.factor(),
-    mother_educ = mother_educ %&gt;% iscednone12345(),
-    father_educ = father_educ %&gt;% iscednone12345(),
+    mother_educ = mother_educ %&gt;% iscednone1(),
+    father_educ = father_educ %&gt;% iscednone1(),
     gender = case_when(
       gender == &quot;1&quot; ~ &quot;female&quot;,
       gender == &quot;2&quot; ~ &quot;male&quot;,
@@ -2275,8 +2286,323 @@ skimr::skim(clean_2003)</code></pre>
 </tbody>
 </table>
 </div>
-<div id="session-info" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Session info</h1>
+<div id="data-2" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> 2006 data</h1>
+<pre class="r"><code>stu_2006 = read_rds(here(&quot;Data/Output/2006/stu_qqq.rds&quot;))
+
+clean_2006 = stu_2006 %&gt;% 
+  dplyr::transmute(
+    country = country_iso3c %&gt;% as.factor(),
+    school_id = school_id %&gt;% as.factor(),
+    student_id = student_id %&gt;% as.factor(),
+    mother_educ = mother_educ %&gt;% isced3a1(),
+    father_educ = father_educ %&gt;% isced3a1(),
+    gender = case_when(
+      gender == &quot;1&quot; ~ &quot;female&quot;,
+      gender == &quot;2&quot; ~ &quot;male&quot;,
+      TRUE ~ NA_character_) %&gt;% as.factor(),
+    computer = computer %&gt;% yes1no2(),
+    internet = internet %&gt;% yes1no2(),
+    math, 
+    read = read %&gt;% na_if(9997), 
+    science, 
+    stu_wgt, 
+    desk = desk %&gt;% yes1no2(),
+    room = room %&gt;% yes1no2(),
+    dishwasher = dishwasher %&gt;% yes1no2(),
+    television = television %&gt;% none1one2two3threemore4(), 
+    computer_n = computer_n %&gt;% none1one2two3threemore4(), 
+    car = car %&gt;% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ &quot;0-10&quot;,
+      book == 2 ~ &quot;11-25&quot;,
+      book == 3 ~ &quot;26-100&quot;,
+      book == 4 ~ &quot;101-200&quot;,
+      book == 5 ~ &quot;201-500&quot;,
+      book == 6 ~ &quot;more than 500&quot;,
+      TRUE ~ NA_character_
+    ) %&gt;% as.factor(),
+    wealth = wealth %&gt;% na_if(997) %&gt;% na_if(999), 
+    escs = escs %&gt;% na_if(997) %&gt;% na_if(999))
+
+skimr::skim(clean_2006)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2006</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">398750</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">21</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">15</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">57</td>
+<td align="center">MEX: 30971, CAN: 22646, ITA: 21773, ESP: 19604</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">1648</td>
+<td align="center">26: 2064, 19: 2022, 4: 1967, 3: 1899</td>
+</tr>
+<tr class="odd">
+<td align="left">student_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">30971</td>
+<td align="center">5: 626, 1: 625, 3: 625, 6: 622</td>
+</tr>
+<tr class="even">
+<td align="left">mother_educ</td>
+<td align="right">19809</td>
+<td align="right">0.95</td>
+<td align="left">FALSE</td>
+<td align="right">5</td>
+<td align="center">ISC: 180629, ISC: 72633, ISC: 72267, ISC: 35273</td>
+</tr>
+<tr class="odd">
+<td align="left">father_educ</td>
+<td align="right">30937</td>
+<td align="right">0.92</td>
+<td align="left">FALSE</td>
+<td align="right">5</td>
+<td align="center">ISC: 168658, ISC: 80309, ISC: 70193, ISC: 33275</td>
+</tr>
+<tr class="even">
+<td align="left">gender</td>
+<td align="right">4</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">fem: 201478, mal: 197268</td>
+</tr>
+<tr class="odd">
+<td align="left">computer</td>
+<td align="right">8553</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 297247, no: 92950</td>
+</tr>
+<tr class="even">
+<td align="left">internet</td>
+<td align="right">10422</td>
+<td align="right">0.97</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 252233, no: 136095</td>
+</tr>
+<tr class="odd">
+<td align="left">desk</td>
+<td align="right">7488</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 348642, no: 42620</td>
+</tr>
+<tr class="even">
+<td align="left">room</td>
+<td align="right">6930</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 308437, no: 83383</td>
+</tr>
+<tr class="odd">
+<td align="left">dishwasher</td>
+<td align="right">21585</td>
+<td align="right">0.95</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 191509, no: 185656</td>
+</tr>
+<tr class="even">
+<td align="left">television</td>
+<td align="right">5490</td>
+<td align="right">0.99</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">3+: 163764, 2: 135564, 1: 88246, 0: 5686</td>
+</tr>
+<tr class="odd">
+<td align="left">computer_n</td>
+<td align="right">9634</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">1: 180612, 0: 85894, 2: 76418, 3+: 46192</td>
+</tr>
+<tr class="even">
+<td align="left">car</td>
+<td align="right">9823</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">4</td>
+<td align="center">1: 138773, 2: 114276, 0: 82700, 3+: 53178</td>
+</tr>
+<tr class="odd">
+<td align="left">book</td>
+<td align="right">7971</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">6</td>
+<td align="center">26-: 116401, 11-: 74769, 101: 63613, 0-1: 61332</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">math</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">471.55</td>
+<td align="right">105.97</td>
+<td align="right">0.62</td>
+<td align="right">399.82</td>
+<td align="right">473.12</td>
+<td align="right">545.64</td>
+<td align="right">921.01</td>
+<td align="left">▁▂▇▃▁</td>
+</tr>
+<tr class="even">
+<td align="left">read</td>
+<td align="right">5611</td>
+<td align="right">0.99</td>
+<td align="right">463.25</td>
+<td align="right">110.11</td>
+<td align="right">0.12</td>
+<td align="right">391.17</td>
+<td align="right">469.83</td>
+<td align="right">542.12</td>
+<td align="right">1083.51</td>
+<td align="left">▁▅▇▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">science</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">475.66</td>
+<td align="right">105.39</td>
+<td align="right">6.01</td>
+<td align="right">399.88</td>
+<td align="right">475.45</td>
+<td align="right">551.50</td>
+<td align="right">920.48</td>
+<td align="left">▁▂▇▃▁</td>
+</tr>
+<tr class="even">
+<td align="left">stu_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">55.92</td>
+<td align="right">118.05</td>
+<td align="right">1.00</td>
+<td align="right">7.46</td>
+<td align="right">17.00</td>
+<td align="right">42.36</td>
+<td align="right">2801.27</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">wealth</td>
+<td align="right">2771</td>
+<td align="right">0.99</td>
+<td align="right">-0.46</td>
+<td align="right">1.17</td>
+<td align="right">-5.00</td>
+<td align="right">-1.14</td>
+<td align="right">-0.34</td>
+<td align="right">0.32</td>
+<td align="right">3.32</td>
+<td align="left">▁▂▇▆▁</td>
+</tr>
+<tr class="even">
+<td align="left">escs</td>
+<td align="right">3913</td>
+<td align="right">0.99</td>
+<td align="right">-0.21</td>
+<td align="right">1.09</td>
+<td align="right">-5.67</td>
+<td align="right">-0.89</td>
+<td align="right">-0.15</td>
+<td align="right">0.58</td>
+<td align="right">3.35</td>
+<td align="left">▁▁▆▇▁</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="session-info" class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> Session info</h1>
 <pre class="r"><code>sessioninfo::session_info()</code></pre>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value                       

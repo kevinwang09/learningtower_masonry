@@ -41,14 +41,25 @@ none1one2two3threemore4 = function(x){
     TRUE ~ NA_character_) %>% as.factor()
 }
 
-iscednone12345 = function(x){
+iscednone1 = function(x){
   x = as.integer(x)
   case_when(
-    x == 1 ~ "none", 
+    x == 1 ~ "less than ISCED1", 
     x == 2 ~ "ISCED 1",
     x == 3 ~ "ISCED 2",
     x == 4 ~ "ISCED 3B, C",
     x == 5 ~ "ISCED 3A",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+isced3a1 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "ISCED 3A", 
+    x == 2 ~ "ISCED 3B, C",
+    x == 3 ~ "ISCED 2",
+    x == 4 ~ "ISCED 1",
+    x == 5 ~ "less than ISCED1",
     TRUE ~ NA_character_) %>% as.factor()
 }
 ```
@@ -109,8 +120,8 @@ clean_2003 = stu_2003 %>%
     country = country_iso3c %>% as.factor(),
     school_id = school_id %>% as.factor(),
     student_id = student_id %>% as.factor(),
-    mother_educ = mother_educ %>% iscednone12345(),
-    father_educ = father_educ %>% iscednone12345(),
+    mother_educ = mother_educ %>% iscednone1(),
+    father_educ = father_educ %>% iscednone1(),
     gender = case_when(
       gender == "1" ~ "female",
       gender == "2" ~ "male",
@@ -143,6 +154,48 @@ clean_2003 = stu_2003 %>%
 skimr::skim(clean_2003)
 ```
 
+
+# 2006 data
+```{r}
+stu_2006 = read_rds(here("Data/Output/2006/stu_qqq.rds"))
+
+clean_2006 = stu_2006 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% isced3a1(),
+    father_educ = father_educ %>% isced3a1(),
+    gender = case_when(
+      gender == "1" ~ "female",
+      gender == "2" ~ "male",
+      TRUE ~ NA_character_) %>% as.factor(),
+    computer = computer %>% yes1no2(),
+    internet = internet %>% yes1no2(),
+    math, 
+    read = read %>% na_if(9997), 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(),
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "0-10",
+      book == 2 ~ "11-25",
+      book == 3 ~ "26-100",
+      book == 4 ~ "101-200",
+      book == 5 ~ "201-500",
+      book == 6 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth = wealth %>% na_if(997) %>% na_if(999), 
+    escs = escs %>% na_if(997) %>% na_if(999))
+
+skimr::skim(clean_2006)
+```
 
 
 # Session info
