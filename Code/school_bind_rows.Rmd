@@ -1,9 +1,20 @@
 ---
 title: "Binding all School data together"
 author: "The Freemasons"
-date: "Initiated on 16/05/2020"
-output: html_document
+date: "`r paste0('Initiated on 2020 May 16, compiled on ', format(Sys.time(), '%Y %b %d'))`"
+output:
+  html_document:
+    code_folding: hide
+    fig_height: 10
+    fig_width: 10
+    toc: yes
+    number_sections: true
+    toc_depth: 3
+    toc_float: yes
+editor_options: 
+  chunk_output_type: console
 ---
+
 
 # Loading package 
 ```{r}
@@ -151,8 +162,8 @@ glimpse(sch_2015)
 clean_2015 = sch_2015 %>% dplyr::transmute(
   country = CNT %>% as.factor(),
   school_id = CNTSCHID %>% as.factor(), 
-  fund_gov = SC013Q01TA %>% as.numeric(),
-  fund_fees = SC016Q01TA %>% as.numeric(),
+  fund_gov = SC016Q01TA %>% as.numeric(),
+  fund_fees = SC016Q02TA %>% as.numeric(),
   fund_donation = SC016Q03TA %>% as.numeric(),
   enrol_boys = SC002Q01TA %>% as.numeric(),
   enrol_girls = SC002Q02TA %>% as.numeric(),
@@ -174,46 +185,38 @@ glimpse(sch_2018)
 
 clean_2018 = sch_2018 %>% dplyr::transmute(
   country = CNT %>% as.factor(),
-  school_id = CNTSCHID %>% as.character(), 
-  fund_gov = SC013Q01TA %>% as.numeric(),
-  fund_fees = SC016Q01TA %>% as.numeric(),
+  school_id = CNTSCHID %>% as.factor(), 
+  fund_gov = SC016Q01TA %>% as.numeric(),
+  fund_fees = SC016Q02TA %>% as.numeric(),
   fund_donation = SC016Q03TA %>% as.numeric(),
   enrol_boys = SC002Q01TA %>% as.numeric(),
   enrol_girls = SC002Q02TA %>% as.numeric(),
   stratio = STRATIO %>% as.numeric(),
-  public_private = SC013Q01TA %>% as.numeric(),
+  public_private = SC013Q01TA %>% public1private2(),
   staff_shortage = STAFFSHORT %>% as.numeric(),
   sch_wgt = W_SCHGRNRABWT %>% as.numeric(),
   school_size = SCHSIZE %>% as.numeric())
 
-glimpse(clean_2018)
+skimr::skim(clean_2018)
 ```
 
 
 # Binding data
 
 ```{r}
-# list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
-# names(list_data) = names(list_data) %>% str_remove("clean_")
-# 
-# school = list_data %>% bind_rows(.id = "year")
-# 
-# unique_country = school$country %>% unique
-# country_tbl = tibble(iso3c = unique_country) %>% 
-#   left_join(countrycode::codelist %>% 
-#               dplyr::select(iso3c, country_name = country.name.en, country_full_name = un.name.en), 
-#             by = "iso3c")
-# stopifnot(length(unique_country) == nrow(country_tbl))
-# 
-# school = school %>% 
-#   left_join(country_tbl, by = c("country" = "iso3c"))
-# 
-# table(school$year)
+list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
+names(list_data) = names(list_data) %>% str_remove("clean_")
+
+school = list_data %>% 
+  bind_rows(.id = "year") %>% 
+  dplyr::mutate_if(is.character, as.factor)
+
+skimr::skim(school)
 ```
 
 # Save
 ```{r}
-# save(school, file = here("Data/Output/school.rda"), compress = "xz")
+save(school, file = here("Data/Output/school.rda"), compress = "xz")
 ```
 
 
