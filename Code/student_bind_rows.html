@@ -1595,7 +1595,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Student Quality Checks before binding</h1>
 <h4 class="author">The Freemasons</h4>
-<h4 class="date">Initiated on 2019 Dec 13, compiled on 2020 May 23</h4>
+<h4 class="date">Initiated on 2019 Dec 13, compiled on 2020 May 24</h4>
 
 </div>
 
@@ -1603,12 +1603,12 @@ div.tocify {
 <div id="loading-package" class="section level1" number="1">
 <h1 number="1"><span class="header-section-number">1</span> Loading package</h1>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
 ## ✓ tidyr   1.0.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(glue)</code></pre>
@@ -1991,7 +1991,7 @@ clean_2003 = stu_2003 %&gt;%
       gender == &quot;1&quot; ~ &quot;female&quot;,
       gender == &quot;2&quot; ~ &quot;male&quot;,
       TRUE ~ NA_character_) %&gt;% as.factor(),
-    computer = computer %&gt;% as.factor(), ## This is a wrong column, see Google Sheets
+    computer = computer %&gt;% yes1no2(), ## This is a wrong column, see Google Sheets
     internet = internet %&gt;% yes1no2(),
     math = math %&gt;% as.numeric(), 
     read = read %&gt;% as.numeric(), 
@@ -2013,10 +2013,16 @@ clean_2003 = stu_2003 %&gt;%
       TRUE ~ NA_character_
     ) %&gt;% as.factor(),
     wealth, 
-    escs = escs %&gt;% as.numeric %&gt;% na_if(999))
+    escs = escs %&gt;% as.numeric %&gt;% na_if(999))</code></pre>
+<pre><code>## Warning in function_list[[k]](value): NAs introduced by coercion
 
+## Warning in function_list[[k]](value): NAs introduced by coercion
 
-skimr::skim(clean_2003)</code></pre>
+## Warning in function_list[[k]](value): NAs introduced by coercion
+
+## Warning in function_list[[k]](value): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in function_list[[i]](value): NAs introduced by coercion</code></pre>
+<pre class="r"><code>skimr::skim(clean_2003)</code></pre>
 <table>
 <caption>Data summary</caption>
 <tbody>
@@ -2045,18 +2051,14 @@ skimr::skim(clean_2003)</code></pre>
 <td align="left">15</td>
 </tr>
 <tr class="odd">
-<td align="left">logical</td>
-<td align="left">1</td>
+<td align="left">numeric</td>
+<td align="left">6</td>
 </tr>
 <tr class="even">
-<td align="left">numeric</td>
-<td align="left">5</td>
-</tr>
-<tr class="odd">
 <td align="left">________________________</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Group variables</td>
 <td align="left">None</td>
 </tr>
@@ -2101,67 +2103,67 @@ skimr::skim(clean_2003)</code></pre>
 </tr>
 <tr class="even">
 <td align="left">mother_educ</td>
-<td align="right">14214</td>
-<td align="right">0.95</td>
+<td align="right">111776</td>
+<td align="right">0.60</td>
 <td align="left">FALSE</td>
 <td align="right">5</td>
-<td align="center">ISC: 125014, ISC: 48433, ISC: 40243, ISC: 32168</td>
+<td align="center">les: 48888, ISC: 44030, ISC: 30539, ISC: 27213</td>
 </tr>
 <tr class="odd">
 <td align="left">father_educ</td>
-<td align="right">23111</td>
-<td align="right">0.92</td>
+<td align="right">80545</td>
+<td align="right">0.71</td>
 <td align="left">FALSE</td>
-<td align="right">5</td>
-<td align="center">ISC: 117410, ISC: 48649, ISC: 44661, ISC: 29400</td>
+<td align="right">2</td>
+<td align="center">ISC: 161891, les: 33729</td>
 </tr>
 <tr class="even">
 <td align="left">gender</td>
-<td align="right">796</td>
-<td align="right">1.00</td>
+<td align="right">276165</td>
+<td align="right">0.00</td>
 <td align="left">FALSE</td>
-<td align="right">2</td>
-<td align="center">fem: 138811, mal: 136558</td>
+<td align="right">0</td>
+<td align="center">:</td>
 </tr>
 <tr class="odd">
 <td align="left">computer</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="left">FALSE</td>
-<td align="right">5</td>
-<td align="center">1: 213991, 2: 59095, 7: 2728, 9: 312</td>
-</tr>
-<tr class="even">
-<td align="left">internet</td>
-<td align="right">3076</td>
+<td align="right">3079</td>
 <td align="right">0.99</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">yes: 150692, no: 122397</td>
+<td align="center">yes: 213991, no: 59095</td>
+</tr>
+<tr class="even">
+<td align="left">internet</td>
+<td align="right">3116</td>
+<td align="right">0.99</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">no: 165689, yes: 107360</td>
 </tr>
 <tr class="odd">
 <td align="left">desk</td>
+<td align="right">38810</td>
+<td align="right">0.86</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">yes: 231333, no: 6022</td>
+</tr>
+<tr class="even">
+<td align="left">room</td>
 <td align="right">3077</td>
 <td align="right">0.99</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
 <td align="center">yes: 235626, no: 37462</td>
 </tr>
-<tr class="even">
-<td align="left">room</td>
-<td align="right">3076</td>
+<tr class="odd">
+<td align="left">dishwasher</td>
+<td align="right">3067</td>
 <td align="right">0.99</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">yes: 214620, no: 58469</td>
-</tr>
-<tr class="odd">
-<td align="left">dishwasher</td>
-<td align="right">13842</td>
-<td align="right">0.95</td>
-<td align="left">FALSE</td>
-<td align="right">2</td>
-<td align="center">no: 133405, yes: 128918</td>
+<td align="center">yes: 255227, no: 17871</td>
 </tr>
 <tr class="even">
 <td align="left">television</td>
@@ -2189,32 +2191,11 @@ skimr::skim(clean_2003)</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">book</td>
-<td align="right">9415</td>
-<td align="right">0.97</td>
+<td align="right">212938</td>
+<td align="right">0.23</td>
 <td align="left">FALSE</td>
-<td align="right">6</td>
-<td align="center">26-: 78959, 101: 46765, 11-: 46363, 0-1: 36349</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: logical</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="left">count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">wealth</td>
-<td align="right">276165</td>
-<td align="right">0</td>
-<td align="right">NaN</td>
-<td align="left">:</td>
+<td align="right">2</td>
+<td align="center">0-1: 42775, 11-: 20452</td>
 </tr>
 </tbody>
 </table>
@@ -2238,68 +2219,81 @@ skimr::skim(clean_2003)</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">math</td>
+<td align="right">276165</td>
 <td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">482.13</td>
-<td align="right">105.95</td>
-<td align="right">30.25</td>
-<td align="right">408.66</td>
-<td align="right">483.44</td>
-<td align="right">557.83</td>
-<td align="right">881.09</td>
-<td align="left">▁▂▇▅▁</td>
+<td align="right">NaN</td>
+<td align="right">NaN</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">read</td>
+<td align="right">276165</td>
 <td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">479.76</td>
-<td align="right">103.24</td>
-<td align="right">-79.04</td>
-<td align="right">411.03</td>
-<td align="right">485.47</td>
-<td align="right">553.64</td>
-<td align="right">889.53</td>
-<td align="left">▁▁▇▇▁</td>
+<td align="right">NaN</td>
+<td align="right">NaN</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">science</td>
+<td align="right">276165</td>
 <td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">485.50</td>
-<td align="right">106.60</td>
-<td align="right">-169.93</td>
-<td align="right">410.07</td>
-<td align="right">484.69</td>
-<td align="right">561.67</td>
-<td align="right">940.31</td>
-<td align="left">▁▁▇▇▁</td>
+<td align="right">NaN</td>
+<td align="right">NaN</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">stu_wgt</td>
+<td align="right">275625</td>
 <td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">69.36</td>
-<td align="right">134.95</td>
-<td align="right">1.00</td>
-<td align="right">8.52</td>
-<td align="right">17.37</td>
-<td align="right">57.68</td>
-<td align="right">2045.92</td>
-<td align="left">▇▁▁▁▁</td>
+<td align="right">47332.69</td>
+<td align="right">29240.86</td>
+<td align="right">1006.34</td>
+<td align="right">21156.3</td>
+<td align="right">51011.77</td>
+<td align="right">71261.34</td>
+<td align="right">92045.92</td>
+<td align="left">▆▆▇▆▇</td>
 </tr>
 <tr class="odd">
+<td align="left">wealth</td>
+<td align="right">276165</td>
+<td align="right">0</td>
+<td align="right">NaN</td>
+<td align="right">NaN</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
 <td align="left">escs</td>
-<td align="right">4027</td>
-<td align="right">0.99</td>
-<td align="right">-0.18</td>
-<td align="right">1.08</td>
-<td align="right">-4.61</td>
-<td align="right">-0.87</td>
-<td align="right">-0.13</td>
-<td align="right">0.59</td>
-<td align="right">2.96</td>
-<td align="left">▁▂▇▇▁</td>
+<td align="right">276165</td>
+<td align="right">0</td>
+<td align="right">NaN</td>
+<td align="right">NaN</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -3883,7 +3877,8 @@ names(list_data) = names(list_data) %&gt;% str_remove(&quot;clean_&quot;)
 
 student = list_data %&gt;% 
   bind_rows(.id = &quot;year&quot;) %&gt;% 
-  dplyr::mutate_if(is.character, as.factor)</code></pre>
+  dplyr::mutate_if(is.character, as.factor) %&gt;% 
+  as_tibble()</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
 ## into character vector
@@ -3943,6 +3938,24 @@ student = list_data %&gt;%
 ## into character vector
 
 ## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
 ## into character vector
 
 ## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
@@ -4054,6 +4067,9 @@ student = list_data %&gt;%
 ## into character vector</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
 <pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
+## into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
 ## into character vector
 
 ## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
@@ -4217,67 +4233,67 @@ student = list_data %&gt;%
 </tr>
 <tr class="odd">
 <td align="left">mother_educ</td>
-<td align="right">275555</td>
-<td align="right">0.91</td>
+<td align="right">373117</td>
+<td align="right">0.87</td>
 <td align="left">FALSE</td>
 <td align="right">5</td>
-<td align="center">ISC: 1346638, ISC: 493880, ISC: 482014, ISC: 220129</td>
+<td align="center">ISC: 1235343, ISC: 480850, ISC: 464120, ISC: 231991</td>
 </tr>
 <tr class="even">
 <td align="left">father_educ</td>
-<td align="right">342080</td>
-<td align="right">0.88</td>
+<td align="right">399514</td>
+<td align="right">0.86</td>
 <td align="left">FALSE</td>
 <td align="right">5</td>
-<td align="center">ISC: 1239050, ISC: 552697, ISC: 482116, ISC: 214311</td>
+<td align="center">ISC: 1121640, ISC: 508036, ISC: 433467, ISC: 346802</td>
 </tr>
 <tr class="odd">
 <td align="left">gender</td>
-<td align="right">1708</td>
-<td align="right">1.00</td>
+<td align="right">277077</td>
+<td align="right">0.91</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">fem: 1472901, mal: 1455012</td>
+<td align="center">fem: 1334090, mal: 1318454</td>
 </tr>
 <tr class="even">
 <td align="left">computer</td>
-<td align="right">198929</td>
+<td align="right">202008</td>
 <td align="right">0.93</td>
 <td align="left">FALSE</td>
-<td align="right">7</td>
-<td align="center">yes: 2019838, no: 434689, 1: 213991, 2: 59095</td>
+<td align="right">2</td>
+<td align="center">yes: 2233829, no: 493784</td>
 </tr>
 <tr class="odd">
 <td align="left">internet</td>
-<td align="right">81869</td>
+<td align="right">81909</td>
 <td align="right">0.97</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">yes: 2210442, no: 637310</td>
+<td align="center">yes: 2167110, no: 680602</td>
 </tr>
 <tr class="even">
 <td align="left">desk</td>
-<td align="right">78007</td>
-<td align="right">0.97</td>
+<td align="right">113740</td>
+<td align="right">0.96</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">yes: 2516093, no: 335521</td>
+<td align="center">yes: 2511800, no: 304081</td>
 </tr>
 <tr class="odd">
 <td align="left">room</td>
-<td align="right">88233</td>
+<td align="right">88234</td>
 <td align="right">0.97</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">yes: 2264730, no: 576658</td>
+<td align="center">yes: 2285736, no: 555651</td>
 </tr>
 <tr class="even">
 <td align="left">dishwasher</td>
-<td align="right">1202932</td>
+<td align="right">1192157</td>
 <td align="right">0.59</td>
 <td align="left">FALSE</td>
 <td align="right">2</td>
-<td align="center">yes: 908220, no: 818469</td>
+<td align="center">yes: 1034529, no: 702935</td>
 </tr>
 <tr class="odd">
 <td align="left">television</td>
@@ -4305,11 +4321,11 @@ student = list_data %&gt;%
 </tr>
 <tr class="even">
 <td align="left">book</td>
-<td align="right">78652</td>
-<td align="right">0.97</td>
+<td align="right">282175</td>
+<td align="right">0.90</td>
 <td align="left">FALSE</td>
 <td align="right">12</td>
-<td align="center">26-: 787929, 11-: 546608, 0-1: 506940, 101: 412730</td>
+<td align="center">26-: 708970, 11-: 520697, 0-1: 513366, 101: 365965</td>
 </tr>
 </tbody>
 </table>
@@ -4333,54 +4349,54 @@ student = list_data %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">math</td>
-<td align="right">81368</td>
-<td align="right">0.97</td>
-<td align="right">466.82</td>
-<td align="right">104.88</td>
+<td align="right">357533</td>
+<td align="right">0.88</td>
+<td align="right">465.17</td>
+<td align="right">104.63</td>
 <td align="right">-53.45</td>
-<td align="right">392.77</td>
-<td align="right">466.42</td>
-<td align="right">540.76</td>
+<td align="right">391.22</td>
+<td align="right">464.56</td>
+<td align="right">538.86</td>
 <td align="right">1022.21</td>
 <td align="left">▁▂▇▂▁</td>
 </tr>
 <tr class="even">
 <td align="left">read</td>
-<td align="right">46931</td>
-<td align="right">0.98</td>
-<td align="right">465.12</td>
-<td align="right">106.40</td>
-<td align="right">-79.04</td>
-<td align="right">392.52</td>
-<td align="right">468.92</td>
-<td align="right">541.40</td>
+<td align="right">323096</td>
+<td align="right">0.89</td>
+<td align="right">463.57</td>
+<td align="right">106.61</td>
+<td align="right">-48.80</td>
+<td align="right">390.63</td>
+<td align="right">467.12</td>
+<td align="right">539.93</td>
 <td align="right">1083.51</td>
-<td align="left">▁▂▇▁▁</td>
+<td align="left">▁▃▇▁▁</td>
 </tr>
 <tr class="odd">
 <td align="left">science</td>
-<td align="right">5377</td>
-<td align="right">1.00</td>
-<td align="right">470.87</td>
-<td align="right">104.08</td>
-<td align="right">-169.93</td>
-<td align="right">396.25</td>
-<td align="right">470.08</td>
-<td align="right">545.23</td>
-<td align="right">940.31</td>
-<td align="left">▁▁▇▆▁</td>
+<td align="right">281542</td>
+<td align="right">0.90</td>
+<td align="right">469.34</td>
+<td align="right">103.69</td>
+<td align="right">0.78</td>
+<td align="right">394.95</td>
+<td align="right">468.61</td>
+<td align="right">543.40</td>
+<td align="right">920.48</td>
+<td align="left">▁▂▇▃▁</td>
 </tr>
 <tr class="even">
 <td align="left">stu_wgt</td>
-<td align="right">0</td>
+<td align="right">275625</td>
+<td align="right">0.91</td>
+<td align="right">64.49</td>
+<td align="right">803.25</td>
 <td align="right">1.00</td>
-<td align="right">56.24</td>
-<td align="right">130.47</td>
-<td align="right">1.00</td>
-<td align="right">5.94</td>
-<td align="right">15.12</td>
-<td align="right">46.52</td>
-<td align="right">6945.81</td>
+<td align="right">5.74</td>
+<td align="right">14.89</td>
+<td align="right">46.01</td>
+<td align="right">92045.92</td>
 <td align="left">▇▁▁▁▁</td>
 </tr>
 <tr class="odd">
@@ -4398,13 +4414,13 @@ student = list_data %&gt;%
 </tr>
 <tr class="even">
 <td align="left">escs</td>
-<td align="right">63759</td>
-<td align="right">0.98</td>
-<td align="right">-0.25</td>
-<td align="right">1.11</td>
+<td align="right">335897</td>
+<td align="right">0.89</td>
+<td align="right">-0.26</td>
+<td align="right">1.12</td>
 <td align="right">-8.17</td>
-<td align="right">-0.98</td>
-<td align="right">-0.18</td>
+<td align="right">-0.99</td>
+<td align="right">-0.19</td>
 <td align="right">0.59</td>
 <td align="right">4.21</td>
 <td align="left">▁▁▃▇▁</td>
@@ -4429,7 +4445,7 @@ student = list_data %&gt;%
 ##  collate  en_AU.UTF-8                 
 ##  ctype    en_AU.UTF-8                 
 ##  tz       Australia/Sydney            
-##  date     2020-05-23                  
+##  date     2020-05-24                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version  date       lib source                        

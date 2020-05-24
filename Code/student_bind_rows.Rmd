@@ -126,7 +126,7 @@ clean_2003 = stu_2003 %>%
       gender == "1" ~ "female",
       gender == "2" ~ "male",
       TRUE ~ NA_character_) %>% as.factor(),
-    computer = computer %>% as.factor(), ## This is a wrong column, see Google Sheets
+    computer = computer %>% yes1no2(), ## This is a wrong column, see Google Sheets
     internet = internet %>% yes1no2(),
     math = math %>% as.numeric(), 
     read = read %>% as.numeric(), 
@@ -377,7 +377,8 @@ names(list_data) = names(list_data) %>% str_remove("clean_")
 
 student = list_data %>% 
   bind_rows(.id = "year") %>% 
-  dplyr::mutate_if(is.character, as.factor)
+  dplyr::mutate_if(is.character, as.factor) %>% 
+  as_tibble()
 
 glimpse(student)
 

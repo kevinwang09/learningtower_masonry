@@ -209,7 +209,8 @@ names(list_data) = names(list_data) %>% str_remove("clean_")
 
 school = list_data %>% 
   bind_rows(.id = "year") %>% 
-  dplyr::mutate_if(is.character, as.factor)
+  dplyr::mutate_if(is.character, as.factor) %>% 
+  as_tibble()
 
 skimr::skim(school)
 ```
