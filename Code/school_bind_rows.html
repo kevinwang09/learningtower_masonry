@@ -401,13 +401,21 @@ summary {
 ##     collapse</code></pre>
 <pre class="r"><code>library(here)</code></pre>
 <pre><code>## here() starts at /Users/kevinwang/Desktop/learningtower_masonry</code></pre>
-<pre class="r"><code>library(countrycode)
-library(janitor)</code></pre>
+<pre class="r"><code>library(janitor)</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;janitor&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
 ## 
 ##     chisq.test, fisher.test</code></pre>
+<pre class="r"><code>library(skimr)
+
+public1private2 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ &quot;public&quot;,
+    x == 2 ~ &quot;private&quot;,
+    TRUE ~ NA_character_) %&gt;% as.factor()
+}</code></pre>
 </div>
 <div id="curating-each-data" class="section level1">
 <h1>Curating each data</h1>
@@ -434,33 +442,236 @@ glimpse(sch_2000)</code></pre>
 ## $ schlsize &lt;dbl+lbl&gt; 2367, 813, 1003, 315, 498, 1397, 265, 1251, 1294, 1464, …</code></pre>
 <pre class="r"><code>clean_2000 = sch_2000 %&gt;% dplyr::transmute(
   country = cnt %&gt;% as.factor(),
-  school_id = schoolid %&gt;% as.character(), 
+  school_id = schoolid %&gt;% as.factor(), 
   fund_gov = sc04q01 %&gt;% as.numeric(),
   fund_fees = sc04q02 %&gt;% as.numeric(),
   fund_donation = sc04q03 %&gt;% as.numeric(),
   enrol_boys = sc02q01 %&gt;% as.numeric(),
   enrol_girls = sc02q02 %&gt;% as.numeric(),
   stratio = stratio %&gt;% as.numeric(),
-  public_private = sc03q01 %&gt;% as.numeric(),
+  public_private = sc03q01 %&gt;% public1private2(),
   staff_shortage = tcshort %&gt;% as.numeric(),
   sch_wgt = wnrschbw %&gt;% as.numeric(),
   school_size = schlsize %&gt;% as.numeric())
 
-glimpse(clean_2000)</code></pre>
-<pre><code>## Rows: 8,526
-## Columns: 12
-## $ country        &lt;fct&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB,…
-## $ school_id      &lt;chr&gt; &quot;01001&quot;, &quot;01004&quot;, &quot;01005&quot;, &quot;01010&quot;, &quot;01013&quot;, &quot;01017&quot;, …
-## $ fund_gov       &lt;dbl&gt; 100, 98, 91, 100, 0, 95, 100, 20, 100, 100, 99, 98, 10…
-## $ fund_fees      &lt;dbl&gt; 0, 1, 5, 0, 50, 2, 0, 80, 0, 0, 0, 0, 0, 1, 0, 0, NA, …
-## $ fund_donation  &lt;dbl&gt; 0, 1, 2, 0, 30, 3, 0, 0, 0, 0, 1, 2, 0, 2, 0, 0, NA, 8…
-## $ enrol_boys     &lt;dbl&gt; 1191, 334, 403, 114, 250, 771, 103, 510, 558, 591, 470…
-## $ enrol_girls    &lt;dbl&gt; 1176, 479, 600, 201, 248, 626, 162, 741, 736, 873, 837…
-## $ stratio        &lt;dbl&gt; 23.67, 24.64, NA, 22.50, 26.92, 25.40, 8.15, 23.17, 24…
-## $ public_private &lt;dbl&gt; 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-## $ staff_shortage &lt;dbl&gt; 0.60, -0.95, -0.17, 1.87, -0.95, 0.27, -0.17, 0.89, -0…
-## $ sch_wgt        &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-## $ school_size    &lt;dbl&gt; 2367, 813, 1003, 315, 498, 1397, 265, 1251, 1294, 1464…</code></pre>
+skimr::skim(clean_2000)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2000</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">8526</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">43</td>
+<td align="center">CAN: 1117, GBR: 362, BRA: 324, IDN: 290</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">4930</td>
+<td align="center">020: 12, 010: 11, 010: 11, 010: 11</td>
+</tr>
+<tr class="odd">
+<td align="left">public_private</td>
+<td align="right">1536</td>
+<td align="right">0.82</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">pub: 5795, pri: 1195</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fund_gov</td>
+<td align="right">671</td>
+<td align="right">0.92</td>
+<td align="right">83.97</td>
+<td align="right">26.54</td>
+<td align="right">0.00</td>
+<td align="right">80.00</td>
+<td align="right">98.00</td>
+<td align="right">100.00</td>
+<td align="right">100.00</td>
+<td align="left">▁▁▁▁▇</td>
+</tr>
+<tr class="even">
+<td align="left">fund_fees</td>
+<td align="right">1513</td>
+<td align="right">0.82</td>
+<td align="right">12.90</td>
+<td align="right">25.28</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">10.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">fund_donation</td>
+<td align="right">1958</td>
+<td align="right">0.77</td>
+<td align="right">3.57</td>
+<td align="right">10.68</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">2.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">enrol_boys</td>
+<td align="right">1682</td>
+<td align="right">0.80</td>
+<td align="right">367.62</td>
+<td align="right">357.76</td>
+<td align="right">0.00</td>
+<td align="right">135.75</td>
+<td align="right">278.00</td>
+<td align="right">495.25</td>
+<td align="right">5100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">enrol_girls</td>
+<td align="right">1682</td>
+<td align="right">0.80</td>
+<td align="right">366.29</td>
+<td align="right">359.84</td>
+<td align="right">0.00</td>
+<td align="right">127.00</td>
+<td align="right">279.00</td>
+<td align="right">505.00</td>
+<td align="right">5500.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">stratio</td>
+<td align="right">1996</td>
+<td align="right">0.77</td>
+<td align="right">15.02</td>
+<td align="right">7.51</td>
+<td align="right">0.02</td>
+<td align="right">10.17</td>
+<td align="right">13.60</td>
+<td align="right">17.96</td>
+<td align="right">49.90</td>
+<td align="left">▃▇▂▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">staff_shortage</td>
+<td align="right">417</td>
+<td align="right">0.95</td>
+<td align="right">0.11</td>
+<td align="right">1.06</td>
+<td align="right">-0.95</td>
+<td align="right">-0.95</td>
+<td align="right">-0.17</td>
+<td align="right">0.89</td>
+<td align="right">3.47</td>
+<td align="left">▇▂▃▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">sch_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">41.50</td>
+<td align="right">117.76</td>
+<td align="right">0.00</td>
+<td align="right">2.68</td>
+<td align="right">9.01</td>
+<td align="right">33.86</td>
+<td align="right">3352.32</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">school_size</td>
+<td align="right">1619</td>
+<td align="right">0.81</td>
+<td align="right">727.21</td>
+<td align="right">604.64</td>
+<td align="right">2.00</td>
+<td align="right">315.00</td>
+<td align="right">599.00</td>
+<td align="right">979.00</td>
+<td align="right">9815.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="section-1" class="section level2">
 <h2>2003</h2>
@@ -482,33 +693,236 @@ glimpse(sch_2003)</code></pre>
 ## $ school_size           &lt;chr&gt; &quot;740&quot;, &quot;864&quot;, &quot;1250&quot;, &quot;1891&quot;, &quot;1060&quot;, &quot;1444&quot;, &quot;…</code></pre>
 <pre class="r"><code>clean_2003 = sch_2003 %&gt;% dplyr::transmute(
   country = country_iso3c %&gt;% as.factor(),
-  school_id = school_id %&gt;% as.character(), 
-  fund_gov = funding_gov %&gt;% as.numeric(),
-  fund_fees = funding_fees %&gt;% as.numeric(),
-  fund_donation = funding_donations %&gt;% as.numeric(),
+  school_id = school_id %&gt;% as.factor(), 
+  fund_gov = funding_gov %&gt;% as.numeric() %&gt;% na_if(997) %&gt;% na_if(998) %&gt;% na_if(999),
+  fund_fees = funding_fees %&gt;% as.numeric() %&gt;% na_if(997) %&gt;% na_if(998) %&gt;% na_if(999),
+  fund_donation = funding_donations %&gt;% as.numeric() %&gt;% na_if(997) %&gt;% na_if(998) %&gt;% na_if(999),
   enrol_boys = enrolment_boys %&gt;% as.numeric(),
   enrol_girls = enrolment_girls %&gt;% as.numeric(),
-  stratio = student_teacher_ratio %&gt;% as.numeric(),
-  public_private = public_private %&gt;% as.numeric(),
-  staff_shortage = staff_shortage %&gt;% as.numeric(),
+  stratio = student_teacher_ratio %&gt;% as.numeric() %&gt;% na_if(997) %&gt;% na_if(998) %&gt;% na_if(999),
+  public_private = public_private %&gt;% public1private2(),
+  staff_shortage = staff_shortage %&gt;% as.numeric() %&gt;% na_if(997) %&gt;% na_if(998) %&gt;% na_if(999),
   sch_wgt = sch_wgt %&gt;% as.numeric(),
-  school_size = school_size %&gt;% as.numeric())
+  school_size = school_size %&gt;% as.numeric() %&gt;% na_if(99997) %&gt;% na_if(99998) %&gt;% na_if(99999))
 
-glimpse(clean_2003)</code></pre>
-<pre><code>## Rows: 10,274
-## Columns: 12
-## $ country        &lt;fct&gt; AUS, AUS, AUS, AUS, AUS, AUS, AUS, AUS, AUS, AUS, AUS,…
-## $ school_id      &lt;chr&gt; &quot;00001&quot;, &quot;00002&quot;, &quot;00003&quot;, &quot;00004&quot;, &quot;00005&quot;, &quot;00006&quot;, …
-## $ fund_gov       &lt;dbl&gt; 80.00, 80.00, 54.36, 70.00, 85.00, 90.00, 68.00, 20.00…
-## $ fund_fees      &lt;dbl&gt; 20.00, 15.00, 42.13, 30.00, 12.00, 7.00, 25.00, 77.00,…
-## $ fund_donation  &lt;dbl&gt; 0.00, 5.00, 2.01, 0.00, 3.00, 3.00, 7.00, 0.00, 0.50, …
-## $ enrol_boys     &lt;dbl&gt; 381, 456, 600, 880, 520, 733, 177, 0, 740, 382, 347, 6…
-## $ enrol_girls    &lt;dbl&gt; 359, 408, 650, 1011, 540, 711, 145, 1040, 808, 383, 38…
-## $ stratio        &lt;dbl&gt; 11.746, 13.714, 12.195, 15.189, 15.704, 15.444, 11.298…
-## $ public_private &lt;dbl&gt; 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, …
-## $ staff_shortage &lt;dbl&gt; 1.108, -0.516, 0.931, 1.521, -0.516, 0.602, 0.602, -1.…
-## $ sch_wgt        &lt;dbl&gt; 3.26145, 1.20747, 3.72524, 2.06353, 6.81398, 2.99955, …
-## $ school_size    &lt;dbl&gt; 740, 864, 1250, 1891, 1060, 1444, 322, 1040, 1548, 765…</code></pre>
+skimr::skim(clean_2003)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2003</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">10274</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">41</td>
+<td align="center">MEX: 1124, CAN: 1087, CHE: 445, ITA: 406</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">1124</td>
+<td align="center">000: 41, 000: 41, 000: 41, 000: 41</td>
+</tr>
+<tr class="odd">
+<td align="left">public_private</td>
+<td align="right">900</td>
+<td align="right">0.91</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">pub: 7796, pri: 1578</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fund_gov</td>
+<td align="right">1059</td>
+<td align="right">0.90</td>
+<td align="right">81.38</td>
+<td align="right">28.99</td>
+<td align="right">0.00</td>
+<td align="right">76.00</td>
+<td align="right">96.00</td>
+<td align="right">100.00</td>
+<td align="right">100.00</td>
+<td align="left">▁▁▁▂▇</td>
+</tr>
+<tr class="even">
+<td align="left">fund_fees</td>
+<td align="right">2161</td>
+<td align="right">0.79</td>
+<td align="right">15.25</td>
+<td align="right">27.48</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">16.33</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">fund_donation</td>
+<td align="right">2472</td>
+<td align="right">0.76</td>
+<td align="right">3.86</td>
+<td align="right">11.36</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">2.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">enrol_boys</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">417.41</td>
+<td align="right">364.31</td>
+<td align="right">0.00</td>
+<td align="right">156.00</td>
+<td align="right">307.00</td>
+<td align="right">573.00</td>
+<td align="right">4581.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">enrol_girls</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">410.61</td>
+<td align="right">364.14</td>
+<td align="right">0.00</td>
+<td align="right">151.00</td>
+<td align="right">306.00</td>
+<td align="right">566.00</td>
+<td align="right">6614.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">stratio</td>
+<td align="right">2592</td>
+<td align="right">0.75</td>
+<td align="right">14.31</td>
+<td align="right">6.56</td>
+<td align="right">0.35</td>
+<td align="right">10.42</td>
+<td align="right">13.57</td>
+<td align="right">16.76</td>
+<td align="right">70.00</td>
+<td align="left">▇▆▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">staff_shortage</td>
+<td align="right">456</td>
+<td align="right">0.96</td>
+<td align="right">0.07</td>
+<td align="right">1.01</td>
+<td align="right">-1.20</td>
+<td align="right">-0.52</td>
+<td align="right">0.07</td>
+<td align="right">0.60</td>
+<td align="right">3.19</td>
+<td align="left">▇▇▅▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">sch_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">47.74</td>
+<td align="right">153.71</td>
+<td align="right">1.00</td>
+<td align="right">2.68</td>
+<td align="right">6.50</td>
+<td align="right">21.69</td>
+<td align="right">1497.41</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">school_size</td>
+<td align="right">897</td>
+<td align="right">0.91</td>
+<td align="right">719.22</td>
+<td align="right">575.94</td>
+<td align="right">3.00</td>
+<td align="right">328.00</td>
+<td align="right">587.00</td>
+<td align="right">953.00</td>
+<td align="right">7781.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="section-2" class="section level2">
 <h2>2006</h2>
@@ -531,33 +945,236 @@ glimpse(sch_2006)</code></pre>
 ## $ SCHSIZE  &lt;dbl&gt; 442, 684, 1303, 2174, 581, 1010, 77, 844, 455, 1719, 333, 62…</code></pre>
 <pre class="r"><code>clean_2006 = sch_2006 %&gt;% dplyr::transmute(
   country = CNT %&gt;% as.factor(),
-  school_id = SCHOOLID %&gt;% as.character(), 
-  fund_gov = SC03Q01 %&gt;% as.numeric(),
-  fund_fees = SC03Q02 %&gt;% as.numeric(),
-  fund_donation = SC03Q03 %&gt;% as.numeric(),
-  enrol_boys = SC01Q01 %&gt;% as.numeric(),
-  enrol_girls = SC01Q02 %&gt;% as.numeric(),
-  stratio = STRATIO %&gt;% as.numeric(),
-  public_private = SC02Q01 %&gt;% as.numeric(),
-  staff_shortage = TCSHORT %&gt;% as.numeric(),
+  school_id = SCHOOLID %&gt;% as.factor(), 
+  fund_gov = SC03Q01 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  fund_fees = SC03Q02 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  fund_donation = SC03Q03 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  enrol_boys = SC01Q01 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  enrol_girls = SC01Q02 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  stratio = STRATIO %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  public_private = SC02Q01 %&gt;% public1private2(),
+  staff_shortage = TCSHORT %&gt;% as.numeric() %&gt;% na_if(997) %&gt;% na_if(998) %&gt;% na_if(999),
   sch_wgt = W_FSCHWT %&gt;% as.numeric(),
-  school_size = SCHSIZE %&gt;% as.numeric())
+  school_size = SCHSIZE %&gt;% as.numeric() %&gt;% na_if(99997) %&gt;% na_if(99998) %&gt;% na_if(99999))
 
-glimpse(clean_2006)</code></pre>
-<pre><code>## Rows: 14,365
-## Columns: 12
-## $ country        &lt;fct&gt; AZE, AZE, AZE, AZE, AZE, AZE, AZE, AZE, AZE, AZE, AZE,…
-## $ school_id      &lt;chr&gt; &quot;00001&quot;, &quot;00002&quot;, &quot;00003&quot;, &quot;00004&quot;, &quot;00005&quot;, &quot;00006&quot;, …
-## $ fund_gov       &lt;dbl&gt; 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 30.0,…
-## $ fund_fees      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 60, 0…
-## $ fund_donation  &lt;dbl&gt; 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,…
-## $ enrol_boys     &lt;dbl&gt; 221, 436, 722, 1110, 292, 523, 36, 440, 243, 1012, 173…
-## $ enrol_girls    &lt;dbl&gt; 221, 248, 581, 1064, 289, 487, 41, 404, 212, 707, 160,…
-## $ stratio        &lt;dbl&gt; 10.780, 9999.000, 12.410, 11.945, 7.851, 7.799, 4.053,…
-## $ public_private &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, …
-## $ staff_shortage &lt;dbl&gt; 0.7142, -1.0568, 1.3917, 0.9414, -1.0568, 1.1634, 1.16…
-## $ sch_wgt        &lt;dbl&gt; 22.8713, 1.7457, 5.9107, 3.6454, 14.9627, 7.8309, 93.9…
-## $ school_size    &lt;dbl&gt; 442, 684, 1303, 2174, 581, 1010, 77, 844, 455, 1719, 3…</code></pre>
+skimr::skim(clean_2006)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2006</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">14365</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">57</td>
+<td align="center">MEX: 1140, CAN: 896, ITA: 799, ESP: 686</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">1648</td>
+<td align="center">000: 54, 000: 54, 000: 54, 000: 54</td>
+</tr>
+<tr class="odd">
+<td align="left">public_private</td>
+<td align="right">961</td>
+<td align="right">0.93</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">pub: 11131, pri: 2273</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fund_gov</td>
+<td align="right">1488</td>
+<td align="right">0.90</td>
+<td align="right">81.56</td>
+<td align="right">29.08</td>
+<td align="right">0.00</td>
+<td align="right">79.00</td>
+<td align="right">96.00</td>
+<td align="right">100.00</td>
+<td align="right">100.00</td>
+<td align="left">▁▁▁▁▇</td>
+</tr>
+<tr class="even">
+<td align="left">fund_fees</td>
+<td align="right">2383</td>
+<td align="right">0.83</td>
+<td align="right">15.22</td>
+<td align="right">27.77</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">15.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">fund_donation</td>
+<td align="right">2718</td>
+<td align="right">0.81</td>
+<td align="right">2.98</td>
+<td align="right">9.64</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">enrol_boys</td>
+<td align="right">711</td>
+<td align="right">0.95</td>
+<td align="right">382.22</td>
+<td align="right">366.20</td>
+<td align="right">0.00</td>
+<td align="right">149.00</td>
+<td align="right">292.50</td>
+<td align="right">506.00</td>
+<td align="right">4712.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">enrol_girls</td>
+<td align="right">693</td>
+<td align="right">0.95</td>
+<td align="right">380.75</td>
+<td align="right">362.05</td>
+<td align="right">0.00</td>
+<td align="right">143.00</td>
+<td align="right">299.00</td>
+<td align="right">512.00</td>
+<td align="right">6000.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">stratio</td>
+<td align="right">1638</td>
+<td align="right">0.89</td>
+<td align="right">15.37</td>
+<td align="right">8.49</td>
+<td align="right">0.27</td>
+<td align="right">10.32</td>
+<td align="right">13.69</td>
+<td align="right">17.79</td>
+<td align="right">100.33</td>
+<td align="left">▇▂▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">staff_shortage</td>
+<td align="right">552</td>
+<td align="right">0.96</td>
+<td align="right">0.08</td>
+<td align="right">1.07</td>
+<td align="right">-1.06</td>
+<td align="right">-1.06</td>
+<td align="right">0.17</td>
+<td align="right">0.71</td>
+<td align="right">3.62</td>
+<td align="left">▇▅▃▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">sch_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">27.26</td>
+<td align="right">84.33</td>
+<td align="right">1.00</td>
+<td align="right">2.23</td>
+<td align="right">5.87</td>
+<td align="right">18.53</td>
+<td align="right">2238.81</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">school_size</td>
+<td align="right">761</td>
+<td align="right">0.95</td>
+<td align="right">762.08</td>
+<td align="right">647.96</td>
+<td align="right">3.00</td>
+<td align="right">336.00</td>
+<td align="right">617.00</td>
+<td align="right">1004.00</td>
+<td align="right">10000.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="section-3" class="section level2">
 <h2>2009</h2>
@@ -579,33 +1196,236 @@ glimpse(sch_2009)</code></pre>
 ## $ school_size    &lt;dbl&gt; 601, 211, 1056, 284, 406, 1002, 292, 263, 297, 586, 81…</code></pre>
 <pre class="r"><code>clean_2009 = sch_2009 %&gt;% dplyr::transmute(
   country = country %&gt;% as.factor(),
-  school_id = school_id %&gt;% as.character(), 
-  fund_gov = fund_gov %&gt;% as.numeric(),
-  fund_fees = fund_fees %&gt;% as.numeric(),
-  fund_donation = fund_donation %&gt;% as.numeric(),
-  enrol_boys = enrol_boys %&gt;% as.numeric(),
-  enrol_girls = enrol_girls %&gt;% as.numeric(),
-  stratio = stratio %&gt;% as.numeric(),
-  public_private = public_private %&gt;% as.numeric(),
-  staff_shortage = staff_shortage %&gt;% as.numeric(),
+  school_id = school_id %&gt;% as.factor(), 
+  fund_gov = fund_gov %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  fund_fees = fund_fees %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  fund_donation = fund_donation %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  enrol_boys = enrol_boys %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  enrol_girls = enrol_girls %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  stratio = stratio %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  public_private = public_private %&gt;% public1private2(),
+  staff_shortage = staff_shortage %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
   sch_wgt = sch_wgt %&gt;% as.numeric(),
-  school_size = school_size %&gt;% as.numeric())
+  school_size = school_size %&gt;% as.numeric() %&gt;% na_if(99997) %&gt;% na_if(99998) %&gt;% na_if(99999))
 
-glimpse(clean_2009)</code></pre>
-<pre><code>## Rows: 18,641
-## Columns: 12
-## $ country        &lt;fct&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB,…
-## $ school_id      &lt;chr&gt; &quot;00001&quot;, &quot;00002&quot;, &quot;00003&quot;, &quot;00004&quot;, &quot;00005&quot;, &quot;00006&quot;, …
-## $ fund_gov       &lt;dbl&gt; 60.0, 90.0, 100.0, 90.0, 95.0, 99.0, 50.0, 56.0, 100.0…
-## $ fund_fees      &lt;dbl&gt; 40, 10, 0, 10, 5, 0, 50, 1, 0, 0, 0, 0, 2, 8, 1, 0, 0,…
-## $ fund_donation  &lt;dbl&gt; 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0,…
-## $ enrol_boys     &lt;dbl&gt; 285, 93, 475, 121, 219, 530, 92, 159, 134, 322, 425, 3…
-## $ enrol_girls    &lt;dbl&gt; 316, 118, 581, 163, 187, 472, 200, 104, 163, 264, 391,…
-## $ stratio        &lt;dbl&gt; 9999.000, 21.100, 22.000, 12.909, 15.615, 21.548, 18.2…
-## $ public_private &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-## $ staff_shortage &lt;dbl&gt; -0.2606, 0.4283, -1.0222, -0.2606, -0.2606, -0.2606, -…
-## $ sch_wgt        &lt;dbl&gt; 1.3226, 25.9638, 4.1397, 3.2925, 7.5364, 1.7948, 4.632…
-## $ school_size    &lt;dbl&gt; 601, 211, 1056, 284, 406, 1002, 292, 263, 297, 586, 81…</code></pre>
+skimr::skim(clean_2009)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2009</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">18641</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">74</td>
+<td align="center">MEX: 1535, ITA: 1097, CAN: 978, BRA: 947</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">1535</td>
+<td align="center">000: 74, 000: 74, 000: 74, 000: 74</td>
+</tr>
+<tr class="odd">
+<td align="left">public_private</td>
+<td align="right">433</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">pub: 14914, pri: 3294</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fund_gov</td>
+<td align="right">1673</td>
+<td align="right">0.91</td>
+<td align="right">80.38</td>
+<td align="right">30.74</td>
+<td align="right">0.00</td>
+<td align="right">75.00</td>
+<td align="right">96.00</td>
+<td align="right">100.00</td>
+<td align="right">100.00</td>
+<td align="left">▁▁▁▂▇</td>
+</tr>
+<tr class="even">
+<td align="left">fund_fees</td>
+<td align="right">3531</td>
+<td align="right">0.81</td>
+<td align="right">17.35</td>
+<td align="right">30.23</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">20.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">fund_donation</td>
+<td align="right">4250</td>
+<td align="right">0.77</td>
+<td align="right">3.17</td>
+<td align="right">9.64</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">enrol_boys</td>
+<td align="right">883</td>
+<td align="right">0.95</td>
+<td align="right">380.48</td>
+<td align="right">389.74</td>
+<td align="right">0.00</td>
+<td align="right">138.00</td>
+<td align="right">285.00</td>
+<td align="right">509.00</td>
+<td align="right">6248.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">enrol_girls</td>
+<td align="right">883</td>
+<td align="right">0.95</td>
+<td align="right">381.67</td>
+<td align="right">394.76</td>
+<td align="right">0.00</td>
+<td align="right">129.00</td>
+<td align="right">291.00</td>
+<td align="right">519.00</td>
+<td align="right">8838.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">stratio</td>
+<td align="right">1925</td>
+<td align="right">0.90</td>
+<td align="right">15.86</td>
+<td align="right">14.25</td>
+<td align="right">0.00</td>
+<td align="right">9.94</td>
+<td align="right">13.52</td>
+<td align="right">17.76</td>
+<td align="right">723.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">staff_shortage</td>
+<td align="right">538</td>
+<td align="right">0.97</td>
+<td align="right">0.00</td>
+<td align="right">0.99</td>
+<td align="right">-1.02</td>
+<td align="right">-1.02</td>
+<td align="right">-0.26</td>
+<td align="right">0.66</td>
+<td align="right">3.34</td>
+<td align="left">▇▅▂▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">sch_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">22.87</td>
+<td align="right">67.36</td>
+<td align="right">1.00</td>
+<td align="right">1.89</td>
+<td align="right">5.37</td>
+<td align="right">16.67</td>
+<td align="right">2521.72</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">school_size</td>
+<td align="right">778</td>
+<td align="right">0.96</td>
+<td align="right">757.66</td>
+<td align="right">695.56</td>
+<td align="right">0.00</td>
+<td align="right">313.00</td>
+<td align="right">604.00</td>
+<td align="right">1003.00</td>
+<td align="right">11268.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="section-4" class="section level2">
 <h2>2012</h2>
@@ -627,39 +1447,239 @@ glimpse(sch_2012)</code></pre>
 ## $ SCHSIZE  &lt;int&gt; 99999, 99999, 99999, 99999, 99999, 99999, 99999, 99999, 9999…</code></pre>
 <pre class="r"><code>clean_2012 = sch_2012 %&gt;% dplyr::transmute(
   country = CNT %&gt;% as.factor(),
-  school_id = SCHOOLID %&gt;% as.character(), 
-  fund_gov = SC02Q01 %&gt;% as.numeric(),
-  fund_fees = SC02Q02 %&gt;% as.numeric(),
-  fund_donation = SC02Q03 %&gt;% as.numeric(),
-  enrol_boys = SC07Q01 %&gt;% as.numeric(),
-  enrol_girls = SC07Q02 %&gt;% as.numeric(),
-  stratio = STRATIO %&gt;% as.numeric(),
-  public_private = SC01Q01 %&gt;% as.numeric(),
-  staff_shortage = TCSHORT %&gt;% as.numeric(),
+  school_id = SCHOOLID %&gt;% as.factor(), 
+  fund_gov = SC02Q01 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  fund_fees = SC02Q02 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  fund_donation = SC02Q03 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  enrol_boys = SC07Q01 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  enrol_girls = SC07Q02 %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  stratio = STRATIO %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
+  public_private = SC01Q01 %&gt;% public1private2(),
+  staff_shortage = TCSHORT %&gt;% as.numeric() %&gt;% na_if(9997) %&gt;% na_if(9998) %&gt;% na_if(9999),
   sch_wgt = W_FSCHWT %&gt;% as.numeric(),
-  school_size = SCHSIZE %&gt;% as.numeric())
+  school_size = SCHSIZE %&gt;% as.numeric() %&gt;% na_if(99997) %&gt;% na_if(99998) %&gt;% na_if(99999))
 
-glimpse(clean_2012)</code></pre>
-<pre><code>## Rows: 18,139
-## Columns: 12
-## $ country        &lt;fct&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB,…
-## $ school_id      &lt;chr&gt; &quot;0000001&quot;, &quot;0000002&quot;, &quot;0000003&quot;, &quot;0000004&quot;, &quot;0000005&quot;,…
-## $ fund_gov       &lt;dbl&gt; 99, 0, 100, 79, 98, 90, 60, 100, 100, 0, 2, 100, 0, 99…
-## $ fund_fees      &lt;dbl&gt; 0, 20, 0, 1, 0, 0, 10, 0, 0, 0, 0, 0, 0, 2, 0, 0, 20, …
-## $ fund_donation  &lt;dbl&gt; 1, 80, 0, 20, 2, 0, 0, 0, 0, 100, 100, 0, 0, 0, 0, 0, …
-## $ enrol_boys     &lt;dbl&gt; 9998, 9998, 9998, 9998, 9998, 9998, 9998, 9998, 9998, …
-## $ enrol_girls    &lt;dbl&gt; 9998, 9998, 9998, 9998, 9998, 9998, 9998, 9998, 9998, …
-## $ stratio        &lt;dbl&gt; 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, …
-## $ public_private &lt;dbl&gt; 1, 2, 1, 1, 1, 9, 1, 1, 1, 1, 9, 1, 2, 1, 1, 1, 1, 1, …
-## $ staff_shortage &lt;dbl&gt; 1.7565, -0.2817, 0.7093, -0.2817, 0.4567, 0.7093, 0.15…
-## $ sch_wgt        &lt;dbl&gt; 8.4871, 1.0039, 8.3450, 8.4388, 2.6435, 2.6435, 5.8744…
-## $ school_size    &lt;dbl&gt; 99999, 99999, 99999, 99999, 99999, 99999, 99999, 99999…</code></pre>
+skimr::skim(clean_2012)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2012</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">18139</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">65</td>
+<td align="center">MEX: 1471, ITA: 1194, ESP: 902, CAN: 885</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">1471</td>
+<td align="center">000: 65, 000: 65, 000: 65, 000: 65</td>
+</tr>
+<tr class="odd">
+<td align="left">public_private</td>
+<td align="right">371</td>
+<td align="right">0.98</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">pub: 14358, pri: 3410</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fund_gov</td>
+<td align="right">2165</td>
+<td align="right">0.88</td>
+<td align="right">79.76</td>
+<td align="right">31.21</td>
+<td align="right">0.00</td>
+<td align="right">72.00</td>
+<td align="right">96.00</td>
+<td align="right">100.00</td>
+<td align="right">100.00</td>
+<td align="left">▁▁▁▁▇</td>
+</tr>
+<tr class="even">
+<td align="left">fund_fees</td>
+<td align="right">2756</td>
+<td align="right">0.85</td>
+<td align="right">16.79</td>
+<td align="right">30.14</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">19.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">fund_donation</td>
+<td align="right">3381</td>
+<td align="right">0.81</td>
+<td align="right">2.94</td>
+<td align="right">9.79</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">enrol_boys</td>
+<td align="right">1269</td>
+<td align="right">0.93</td>
+<td align="right">373.41</td>
+<td align="right">363.68</td>
+<td align="right">0.00</td>
+<td align="right">137.00</td>
+<td align="right">288.00</td>
+<td align="right">503.00</td>
+<td align="right">5896.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">enrol_girls</td>
+<td align="right">1298</td>
+<td align="right">0.93</td>
+<td align="right">375.41</td>
+<td align="right">381.33</td>
+<td align="right">0.00</td>
+<td align="right">129.00</td>
+<td align="right">292.00</td>
+<td align="right">515.00</td>
+<td align="right">9230.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">stratio</td>
+<td align="right">2095</td>
+<td align="right">0.88</td>
+<td align="right">15.01</td>
+<td align="right">14.45</td>
+<td align="right">0.07</td>
+<td align="right">9.73</td>
+<td align="right">13.00</td>
+<td align="right">16.77</td>
+<td align="right">1018.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">staff_shortage</td>
+<td align="right">553</td>
+<td align="right">0.97</td>
+<td align="right">0.04</td>
+<td align="right">1.05</td>
+<td align="right">-1.09</td>
+<td align="right">-1.09</td>
+<td align="right">0.15</td>
+<td align="right">0.71</td>
+<td align="right">3.60</td>
+<td align="left">▇▅▂▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">sch_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">23.80</td>
+<td align="right">63.22</td>
+<td align="right">1.00</td>
+<td align="right">1.87</td>
+<td align="right">5.36</td>
+<td align="right">17.52</td>
+<td align="right">1942.54</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">school_size</td>
+<td align="right">1203</td>
+<td align="right">0.93</td>
+<td align="right">745.19</td>
+<td align="right">654.62</td>
+<td align="right">1.00</td>
+<td align="right">311.00</td>
+<td align="right">607.00</td>
+<td align="right">1000.00</td>
+<td align="right">11483.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="section-5" class="section level2">
 <h2>2015</h2>
-</div>
-<div id="section-6" class="section level2">
-<h2>2018</h2>
 <pre class="r"><code>sch_2015 = read_rds(here(&quot;Data/Output/2015/sch_qqq.rds&quot;))
 glimpse(sch_2015)</code></pre>
 <pre><code>## Rows: 17,908
@@ -678,35 +1698,238 @@ glimpse(sch_2015)</code></pre>
 ## $ W_SCHGRNRABWT &lt;dbl&gt; 7.671154, 13.711366, 12.216600, 1.532013, 3.451527, 12.…</code></pre>
 <pre class="r"><code>clean_2015 = sch_2015 %&gt;% dplyr::transmute(
   country = CNT %&gt;% as.factor(),
-  school_id = CNTSCHID %&gt;% as.character(), 
+  school_id = CNTSCHID %&gt;% as.factor(), 
   fund_gov = SC013Q01TA %&gt;% as.numeric(),
   fund_fees = SC016Q01TA %&gt;% as.numeric(),
   fund_donation = SC016Q03TA %&gt;% as.numeric(),
   enrol_boys = SC002Q01TA %&gt;% as.numeric(),
   enrol_girls = SC002Q02TA %&gt;% as.numeric(),
   stratio = STRATIO %&gt;% as.numeric(),
-  public_private = SC013Q01TA %&gt;% as.numeric(),
+  public_private = SC013Q01TA %&gt;% public1private2(),
   staff_shortage = STAFFSHORT %&gt;% as.numeric(),
   sch_wgt = W_SCHGRNRABWT %&gt;% as.numeric(),
   school_size = SCHSIZE %&gt;% as.numeric())
 
-glimpse(clean_2015)</code></pre>
-<pre><code>## Rows: 17,908
-## Columns: 12
-## $ country        &lt;fct&gt; ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB, ALB,…
-## $ school_id      &lt;chr&gt; &quot;800001&quot;, &quot;800002&quot;, &quot;800003&quot;, &quot;800004&quot;, &quot;800005&quot;, &quot;800…
-## $ fund_gov       &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, …
-## $ fund_fees      &lt;dbl&gt; 100, NA, 100, NA, 100, 93, NA, 95, 95, 10, NA, 20, 80,…
-## $ fund_donation  &lt;dbl&gt; NA, NA, 0, NA, NA, 3, NA, 5, 0, 20, 60, 70, 0, 0, NA, …
-## $ enrol_boys     &lt;dbl&gt; 196, NA, NA, NA, 573, NA, NA, NA, 84, 0, 101, NA, 234,…
-## $ enrol_girls    &lt;dbl&gt; 295, NA, NA, NA, 577, NA, NA, NA, 78, 1, 169, NA, 217,…
-## $ stratio        &lt;dbl&gt; 15.3438, NA, NA, NA, 21.6981, NA, NA, NA, 12.4615, 1.0…
-## $ public_private &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, …
-## $ staff_shortage &lt;dbl&gt; 1.4002, -0.1241, 0.9777, 1.0937, 0.0814, 2.2801, -0.20…
-## $ sch_wgt        &lt;dbl&gt; 7.671154, 13.711366, 12.216600, 1.532013, 3.451527, 12…
-## $ school_size    &lt;dbl&gt; 491, NA, NA, NA, 1150, NA, NA, NA, 162, 1, 270, NA, 45…</code></pre>
+skimr::skim(clean_2015)</code></pre>
+<table>
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">clean_2015</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">17908</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">factor</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">numeric</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="left">ordered</th>
+<th align="right">n_unique</th>
+<th align="center">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">country</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">70</td>
+<td align="center">QES: 976, BRA: 841, CAN: 759, AUS: 758</td>
+</tr>
+<tr class="even">
+<td align="left">school_id</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="left">FALSE</td>
+<td align="right">17908</td>
+<td align="center">800: 1, 800: 1, 800: 1, 800: 1</td>
+</tr>
+<tr class="odd">
+<td align="left">public_private</td>
+<td align="right">1961</td>
+<td align="right">0.89</td>
+<td align="left">FALSE</td>
+<td align="right">2</td>
+<td align="center">pub: 12661, pri: 3286</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fund_gov</td>
+<td align="right">1961</td>
+<td align="right">0.89</td>
+<td align="right">1.21</td>
+<td align="right">0.40</td>
+<td align="right">1.00</td>
+<td align="right">1.00</td>
+<td align="right">1.00</td>
+<td align="right">1.00</td>
+<td align="right">2.00</td>
+<td align="left">▇▁▁▁▂</td>
+</tr>
+<tr class="even">
+<td align="left">fund_fees</td>
+<td align="right">3001</td>
+<td align="right">0.83</td>
+<td align="right">81.32</td>
+<td align="right">30.67</td>
+<td align="right">0.00</td>
+<td align="right">80.00</td>
+<td align="right">97.00</td>
+<td align="right">100.00</td>
+<td align="right">100.00</td>
+<td align="left">▁▁▁▁▇</td>
+</tr>
+<tr class="odd">
+<td align="left">fund_donation</td>
+<td align="right">5134</td>
+<td align="right">0.71</td>
+<td align="right">2.94</td>
+<td align="right">9.17</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">1.00</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">enrol_boys</td>
+<td align="right">2575</td>
+<td align="right">0.86</td>
+<td align="right">391.59</td>
+<td align="right">412.57</td>
+<td align="right">0.00</td>
+<td align="right">142.00</td>
+<td align="right">295.00</td>
+<td align="right">514.00</td>
+<td align="right">8500.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">enrol_girls</td>
+<td align="right">2564</td>
+<td align="right">0.86</td>
+<td align="right">384.98</td>
+<td align="right">406.37</td>
+<td align="right">0.00</td>
+<td align="right">133.00</td>
+<td align="right">294.00</td>
+<td align="right">510.00</td>
+<td align="right">9305.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">stratio</td>
+<td align="right">2451</td>
+<td align="right">0.86</td>
+<td align="right">14.30</td>
+<td align="right">9.15</td>
+<td align="right">1.00</td>
+<td align="right">9.70</td>
+<td align="right">12.74</td>
+<td align="right">16.33</td>
+<td align="right">100.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">staff_shortage</td>
+<td align="right">1530</td>
+<td align="right">0.91</td>
+<td align="right">0.00</td>
+<td align="right">1.10</td>
+<td align="right">-1.68</td>
+<td align="right">-0.79</td>
+<td align="right">0.09</td>
+<td align="right">0.72</td>
+<td align="right">3.72</td>
+<td align="left">▆▇▅▁▁</td>
+</tr>
+<tr class="even">
+<td align="left">sch_wgt</td>
+<td align="right">0</td>
+<td align="right">1.00</td>
+<td align="right">25.87</td>
+<td align="right">77.29</td>
+<td align="right">1.00</td>
+<td align="right">1.99</td>
+<td align="right">5.41</td>
+<td align="right">16.81</td>
+<td align="right">1743.32</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td align="left">school_size</td>
+<td align="right">2421</td>
+<td align="right">0.86</td>
+<td align="right">769.13</td>
+<td align="right">746.80</td>
+<td align="right">0.00</td>
+<td align="right">315.00</td>
+<td align="right">609.00</td>
+<td align="right">996.00</td>
+<td align="right">17805.00</td>
+<td align="left">▇▁▁▁▁</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="section-7" class="section level2">
+<div id="section-6" class="section level2">
 <h2>2018</h2>
 <pre class="r"><code>sch_2018 = read_rds(here(&quot;Data/Output/2018/sch_qqq.rds&quot;))
 glimpse(sch_2018)</code></pre>
@@ -757,49 +1980,26 @@ glimpse(clean_2018)</code></pre>
 </div>
 <div id="binding-data" class="section level1">
 <h1>Binding data</h1>
-<pre class="r"><code>list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
-names(list_data) = names(list_data) %&gt;% str_remove(&quot;clean_&quot;)
-
-school = list_data %&gt;% bind_rows(.id = &quot;year&quot;)</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
-<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector, coercing
-## into character vector</code></pre>
-<pre class="r"><code>unique_country = school$country %&gt;% unique
-country_tbl = tibble(iso3c = unique_country) %&gt;% 
-  left_join(countrycode::codelist %&gt;% 
-              dplyr::select(iso3c, country_name = country.name.en, country_full_name = un.name.en), 
-            by = &quot;iso3c&quot;)
-stopifnot(length(unique_country) == nrow(country_tbl))
-
-school = school %&gt;% 
-  left_join(country_tbl, by = c(&quot;country&quot; = &quot;iso3c&quot;))
-
-table(school$year)</code></pre>
-<pre><code>## 
-##  2000  2003  2006  2009  2012  2015  2018 
-##  8526 10274 14365 18641 18139 17908 21903</code></pre>
+<pre class="r"><code># list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
+# names(list_data) = names(list_data) %&gt;% str_remove(&quot;clean_&quot;)
+# 
+# school = list_data %&gt;% bind_rows(.id = &quot;year&quot;)
+# 
+# unique_country = school$country %&gt;% unique
+# country_tbl = tibble(iso3c = unique_country) %&gt;% 
+#   left_join(countrycode::codelist %&gt;% 
+#               dplyr::select(iso3c, country_name = country.name.en, country_full_name = un.name.en), 
+#             by = &quot;iso3c&quot;)
+# stopifnot(length(unique_country) == nrow(country_tbl))
+# 
+# school = school %&gt;% 
+#   left_join(country_tbl, by = c(&quot;country&quot; = &quot;iso3c&quot;))
+# 
+# table(school$year)</code></pre>
 </div>
 <div id="save" class="section level1">
 <h1>Save</h1>
-<pre class="r"><code>save(school, file = here(&quot;Data/Output/school.rda&quot;), compress = &quot;xz&quot;)</code></pre>
+<pre class="r"><code># save(school, file = here(&quot;Data/Output/school.rda&quot;), compress = &quot;xz&quot;)</code></pre>
 </div>
 <div id="session-info" class="section level1">
 <h1>Session Info</h1>
@@ -819,26 +2019,26 @@ table(school$year)</code></pre>
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] janitor_2.0.1     countrycode_1.1.3 here_0.1          glue_1.4.1       
-##  [5] forcats_0.5.0     stringr_1.4.0     dplyr_0.8.5       purrr_0.3.4      
-##  [9] readr_1.3.1       tidyr_1.0.2       tibble_3.0.1      ggplot2_3.3.0    
-## [13] tidyverse_1.3.0  
+##  [1] skimr_2.1.1     janitor_2.0.1   here_0.1        glue_1.4.1     
+##  [5] forcats_0.5.0   stringr_1.4.0   dplyr_0.8.5     purrr_0.3.4    
+##  [9] readr_1.3.1     tidyr_1.0.2     tibble_3.0.1    ggplot2_3.3.0  
+## [13] tidyverse_1.3.0
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] tidyselect_1.1.0 xfun_0.13        haven_2.2.0      lattice_0.20-41 
-##  [5] snakecase_0.11.0 colorspace_1.4-1 vctrs_0.3.0      generics_0.0.2  
-##  [9] htmltools_0.4.0  yaml_2.2.1       utf8_1.1.4       rlang_0.4.6     
-## [13] pillar_1.4.4     withr_2.2.0      DBI_1.1.0        dbplyr_1.4.2    
-## [17] modelr_0.1.6     readxl_1.3.1     lifecycle_0.2.0  munsell_0.5.0   
-## [21] gtable_0.3.0     cellranger_1.1.0 rvest_0.3.5      evaluate_0.14   
-## [25] knitr_1.28       fansi_0.4.1      broom_0.5.5      Rcpp_1.0.4.11   
-## [29] scales_1.1.1     backports_1.1.7  jsonlite_1.6.1   fs_1.4.1        
-## [33] hms_0.5.3        digest_0.6.25    stringi_1.4.6    rprojroot_1.3-2 
-## [37] grid_3.6.2       cli_2.0.2        tools_3.6.2      magrittr_1.5    
-## [41] crayon_1.3.4     pkgconfig_2.0.3  ellipsis_0.3.1   xml2_1.3.2      
-## [45] reprex_0.3.0     lubridate_1.7.8  assertthat_0.2.1 rmarkdown_2.1   
-## [49] httr_1.4.1       rstudioapi_0.11  R6_2.4.1         nlme_3.1-147    
-## [53] compiler_3.6.2</code></pre>
+##  [1] tidyselect_1.1.0 xfun_0.13        repr_1.1.0       haven_2.2.0     
+##  [5] lattice_0.20-41  snakecase_0.11.0 colorspace_1.4-1 vctrs_0.3.0     
+##  [9] generics_0.0.2   htmltools_0.4.0  base64enc_0.1-3  yaml_2.2.1      
+## [13] utf8_1.1.4       rlang_0.4.6      pillar_1.4.4     withr_2.2.0     
+## [17] DBI_1.1.0        dbplyr_1.4.2     modelr_0.1.6     readxl_1.3.1    
+## [21] lifecycle_0.2.0  munsell_0.5.0    gtable_0.3.0     cellranger_1.1.0
+## [25] rvest_0.3.5      evaluate_0.14    knitr_1.28       fansi_0.4.1     
+## [29] highr_0.8        broom_0.5.5      Rcpp_1.0.4.11    scales_1.1.1    
+## [33] backports_1.1.7  jsonlite_1.6.1   fs_1.4.1         hms_0.5.3       
+## [37] digest_0.6.25    stringi_1.4.6    rprojroot_1.3-2  grid_3.6.2      
+## [41] cli_2.0.2        tools_3.6.2      magrittr_1.5     crayon_1.3.4    
+## [45] pkgconfig_2.0.3  ellipsis_0.3.1   xml2_1.3.2       reprex_0.3.0    
+## [49] lubridate_1.7.8  assertthat_0.2.1 rmarkdown_2.1    httr_1.4.1      
+## [53] rstudioapi_0.11  R6_2.4.1         nlme_3.1-147     compiler_3.6.2</code></pre>
 </div>
 
 
