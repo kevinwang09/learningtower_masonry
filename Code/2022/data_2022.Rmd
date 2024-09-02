@@ -1,0 +1,188 @@
+---
+title: "PISA 2022 Data Import"
+author: "Guan Ru Chen and Shabarish"
+date: "12/8/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+library(here)
+library(tidyverse)
+library(haven)
+```
+
+Use the Haven package to read in the SPSS files.
+
+```{r read in spss sav files}
+urls <- read_csv(here("Code/download_urls.csv")) |> 
+  filter(year==2022)
+
+# View the files and url links available for 2018
+urls
+
+# Import Student questionnaire data files with selected variables
+cols_to_keep <- c(
+"CNT",        #country
+"CNTSCHID",   #school ID
+"CNTSTUID",   #student ID
+"ST005Q01JA", #mother_educ
+"ST007Q01JA", #father_educ
+"ST004D01T",  #gender
+"ST250Q02JA", #computer
+"ST250Q05JA", #internet
+"PV1MATH",    #math
+"PV1READ",    #read
+"PV1SCIE",    #science   
+"W_FSTUWT",   #stu_wgt
+#"ST011Q01TA",#desk(not found)
+"ST250Q01JA", #room
+"ST254Q01JA", #television
+"ST254Q02JA", #desktop
+"ST254Q03JA", #laptop
+"ST251Q01JA", #car
+"ST255Q01JA", #books
+#"WEALTH",    #wealth(not found)
+"ESCS"        #escs
+)
+
+stu_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_STU_QQQ.sav"),
+                    col_select = cols_to_keep) %>% 
+           select(cols_to_keep)
+
+stu_qqq <- stu_qqq |> 
+              select(all_of(cols_to_keep))
+
+# View all the variables inside student questionnaire                           
+#column <- data.frame(Column_Names = colnames(stu_qqq))                      
+
+target_names_2022 <- c(
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"room",
+"television",
+"computer_n",
+"laptop_n",
+"car",
+"book",
+"escs"
+)
+
+names(stu_qqq) <- target_names_2022
+
+target_names_final <- c(
+"country_iso3c",
+"school_id",
+"student_id",
+"mother_educ",
+"father_educ",
+"gender",
+"computer",
+"internet",
+"math",
+"read",
+"science",
+"stu_wgt",
+"desk",
+"room",
+"dishwasher",
+"television",
+"computer_n",
+"laptop_n",
+"car",
+"book",
+"wealth",
+"escs"
+)
+  
+stu_qqq <- stu_qqq %>%
+            mutate(desk = NA,
+                   dishwasher = NA,
+                   wealth = NA) %>%
+            select(target_names_final)
+  
+
+
+# Import School questionnaire data file with selected variables
+sch_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_SCH_QQQ.SAV"),
+    col_select = c(CNT,
+                   CNTSCHID,
+                   SC001Q01TA,
+                   SC013Q01TA,
+                   SC014Q01TA,
+                   SC016Q01TA,
+                   SC016Q02TA,
+                   SC016Q03TA,
+                   SC011Q01TA,
+                   SC002Q01TA,
+                   SC002Q02TA,
+                   SC211Q01JA,
+                   SC211Q02JA,
+                   SC211Q03JA,
+                   SC211Q04JA,
+                   SC211Q05JA,
+                   SC211Q06JA,
+                   SC018Q01TA01,
+                   SC018Q01TA02,
+                   SC018Q02TA01,
+                   SC018Q02TA02,
+                   SC018Q08JA01,
+                   SC018Q08JA02,
+                   SC018Q09JA01,
+                   SC018Q09JA02,
+                   SC018Q10JA01,
+                   SC018Q10JA02,
+                   SC182Q01WA01,
+                   SC182Q01WA02,
+                   SC182Q06WA01,
+                   SC182Q06WA02,
+                   SC182Q07JA01,
+                   SC182Q07JA02,
+                   SC182Q08JA01,
+                   SC182Q08JA02,
+                   SC182Q09JA01,
+                   SC182Q09JA02,
+                   SC182Q10JA01,
+                   SC182Q10JA02,
+                   SC168Q01JA))
+
+```
+
+
+```{r view summary students}
+skimr::skim(stu_qqq) 
+```
+
+```{r view summary schools}
+skimr::skim(sch_qqq) 
+```
+
+
+
+```{r save files output}
+# Student questionnaire data files
+saveRDS(stu_qqq, file = here("Data/Output/2022/stu_qqq.rds"))
+# School questionnaire data file
+saveRDS(sch_qqq, file = here("Data/Output/2022/sch_qqq.rds"))
+```
+
+```{r}
+readRDS(here("Data/Output/2022/stu_qqq.rds"))
+readRDS(here("Data/Output/2022/sch_qqq.rds"))
+```
+
+
+
