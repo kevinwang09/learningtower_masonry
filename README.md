@@ -15,6 +15,12 @@ The most intensive component of publishing this data is the curation of the trie
 
 The main challenge that the contributors encountered was to ensure the consistency of variables between different years. For instance, the highest schooling of a student's mother was never recorded in 2000, but it was coded as "ST11R01" between the years 2003 to 2012 and "ST005Q01TA" between the years 2015 and 2018. These variables were manually curated by all contributors as a factor variable, "mother_educ", in the output data.
 
+We created an online spreadsheet to document the change of variables between different years, please go to [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri} for reference, and the excel file is saved in codebook folder as well.
+
+### Problems in 2022
+
+Several variables may be missing due to the reconstruction of questionnaires. For instance, a question regarding student's possession of desk is not recorded in 2022, but it was coded in previous questionnaires, hence these variables were manually curated by all masons as an character variable in the output data. Another important issue we faced is a missing variable `WEALTH`, this variable could be used to estimate a student's socioeconomic status. So for further related analysis or research, another variable called `ESCS` (economic, social and cultural status) is more suitable.
+
 ## Reading in SAS and SPSS data
 
 PISA publishes data in both SAS and PRSS format for all survey years. Where possible, the `.sav` file was used to read in the published raw data. The only exception was in the year 2000, where `.sav` files were not published and instead, `.txt`files with SPSS scripts were published to allow for the creation of `.sav` files. In order to resolve this, we used the SPSS software to perform conversions of `.txt` files to `.sav` files. 
