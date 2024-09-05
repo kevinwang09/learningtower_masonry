@@ -20,6 +20,7 @@ editor_options:
 library(tidyverse)
 library(glue)
 library(here)
+library(haven)
 ```
 
 ```{r}
@@ -61,6 +62,14 @@ isced3a1 = function(x){
     x == 4 ~ "ISCED 1",
     x == 5 ~ "less than ISCED1",
     TRUE ~ NA_character_) %>% as.factor()
+}
+
+fe1ma2 = function(x){
+      x = as.integer(x)
+      case_when(
+        x == 1 ~ "female",
+        x == 2 ~ "male",
+        TRUE ~ NA_character_) %>% as.factor()
 }
 ```
 
@@ -370,9 +379,47 @@ clean_2018 = stu_2018 %>%
 skimr::skim(clean_2018)
 ```
 
+# 2022 data
+```{r}
+stu_2022 <- read_rds(here("Data/Output/2022/stu_qqq.rds"))
+
+clean_2022 <- stu_2022 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% isced3a1(),
+    father_educ = father_educ %>% isced3a1(),
+    gender = gender %>% fe1ma2(),
+    computer = computer %>% yes1no2(),
+    internet = internet %>% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),             ## This is all NA
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(), ## This is all NA 
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "0-10",
+      book == 2 ~ "11-25",
+      book == 3 ~ "26-100",
+      book == 4 ~ "101-200",
+      book == 5 ~ "201-500",
+      book == 6 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth = wealth %>% as.numeric %>% na_if(95) %>% na_if(97) %>% na_if(98) %>% na_if(99),  ## This is all NA
+    escs = escs %>% as.numeric %>% na_if(95) %>% na_if(97) %>% na_if(98) %>% na_if(99))
+
+skimr::skim(clean_2022)
+```
 
 ```{r}
-list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
+list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018, clean_2022)
 names(list_data) = names(list_data) %>% str_remove("clean_")
 
 student = list_data %>% 
@@ -390,6 +437,7 @@ skimr::skim(student)
 # Saving data
 ```{r}
 save(student, file = here("Data/Output/student.rda"), compress = "xz")
+# load("Data/Output/student.rda") 
 ```
 
 
