@@ -62,9 +62,9 @@ This means that the school ID is only unique within the year and the country.
 # Workflow of adding any future PISA data
 
 1.  Update links to the data at <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/download_urls.csv>
-2.  Set up the proper folder structures using .gitkeep
+2.  Download the data into \``Data\Raw`\` folder and set up the proper folder structures using .gitkeep, but due to size constraints, the raw data were never committed to GitHub.
 3.  Creating new markdowns in `Code/yyyy`.
 4.  Curation of new variables in [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri}
 5.  Adding new codebook into the `codebook` folder if necessary.
-6.  How to add to the new student/school.rda objects etc via <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/school_bind_rows.Rmd>.
+6.  How to add to the new school/student.rda objects etc via <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/school_bind_rows.Rmd> and <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/student_bind_rows.Rmd>.
 7.  Updating README etc.
