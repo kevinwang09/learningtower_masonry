@@ -85,10 +85,7 @@ clean_2000 = stu_2000 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000
     father_educ = father_educ %>% as.factor(), ## This is all missing in 2000
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% as.factor(), ## This is all missing in 2000
     internet = internet %>% yes1no2(),
     math, 
@@ -131,10 +128,7 @@ clean_2003 = stu_2003 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% iscednone1(),
     father_educ = father_educ %>% iscednone1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(), ## This is a wrong column, see Google Sheets
     internet = internet %>% yes1no2(),
     math = math %>% as.numeric(), 
@@ -175,10 +169,7 @@ clean_2006 = stu_2006 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -218,10 +209,7 @@ clean_2009 = stu_2009 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -262,10 +250,7 @@ clean_2012 = stu_2012 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -305,10 +290,7 @@ clean_2015 = stu_2015 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -348,10 +330,7 @@ clean_2018 = stu_2018 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 

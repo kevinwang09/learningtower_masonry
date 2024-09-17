@@ -66,5 +66,5 @@ This means that the school ID is only unique within the year and the country.
 3.  Creating new markdowns in `Code/yyyy`.
 4.  Curation of new variables in [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri}
 5.  Adding new codebook into the `codebook` folder if necessary.
-6.  How to add to the new school/student.rda objects etc via <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/school_bind_rows.Rmd> and <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/student_bind_rows.Rmd>.
-7.  Updating README etc.
+6.  Add to the new school/student.rda objects etc via <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/school_bind_rows.Rmd> and <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/student_bind_rows.Rmd>.
+7.  Update README etc.
