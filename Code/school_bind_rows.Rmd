@@ -200,19 +200,61 @@ clean_2018 = sch_2018 %>% dplyr::transmute(
 skimr::skim(clean_2018)
 ```
 
+## 2022
+
+```{r}
+sch_2022 = read_rds(here("Data/Output/2022/sch_qqq.rds"))
+glimpse(sch_2022)
+
+library(haven)
+clean_2022 = sch_2022 %>% dplyr::transmute(
+  country = CNT %>% as.character(),
+  school_id = CNTSCHID %>% as.factor(),
+  public_private = SC013Q01TA %>% public1private2(),
+  fund_gov = SC016Q01TA %>% as.numeric(),
+  fund_fees = SC016Q02TA %>% as.numeric(),
+  fund_donation = SC016Q03TA %>% as.numeric(),
+  enrol_boys = SC002Q01TA %>% as.numeric(),
+  enrol_girls = SC002Q02TA %>% as.numeric(),
+  stratio = STRATIO %>% as.numeric(),
+  staff_shortage = STAFFSHORT %>% as.numeric(),
+  sch_wgt = W_SCHGRNRABWT %>% as.numeric(),
+  school_size = SCHSIZE %>% as.numeric()) %>% 
+  mutate(across(everything(), ~ ifelse(is.infinite(.), NA, .)))
+
+skimr::skim(clean_2022)
+```
+
 
 # Binding data
 
 ```{r}
-list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
-names(list_data) = names(list_data) %>% str_remove("clean_")
+# Ensure all datasets have the same type for school_id and public_private before binding (converting to character)
+list_data <- lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018, clean_2022)
 
-school = list_data %>% 
-  bind_rows(.id = "year") %>% 
-  dplyr::mutate_if(is.character, as.factor) %>% 
+# Remove "clean_" from the names
+names(list_data) <- names(list_data) %>% str_remove("clean_")
+
+# Convert both school_id and public_private to character in each dataset to avoid type conflicts
+list_data <- list_data %>%
+  map(~ .x %>% 
+        mutate(
+          school_id = as.character(school_id),
+          public_private = as.character(public_private)  # Convert public_private to character
+        ))
+
+# Bind the rows and convert character columns to factors
+school <- list_data %>%
+  bind_rows(.id = "year") %>%
+  dplyr::mutate(school_id = as.factor(school_id),
+                public_private = as.factor(public_private)) %>%  # Convert public_private back to factor
+  dplyr::mutate_if(is.character, as.factor) %>%
   as_tibble()
 
+# Skim the data to inspect
 skimr::skim(school)
+
+
 ```
 
 # Save
