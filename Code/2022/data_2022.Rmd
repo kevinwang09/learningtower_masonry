@@ -116,48 +116,75 @@ stu_qqq <- stu_qqq %>%
   
 
 
-# Import School questionnaire data file with selected variables
-sch_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_SCH_QQQ.SAV"),
-    col_select = c(CNT,
-                   CNTSCHID,
-                   SC001Q01TA,
-                   SC013Q01TA,
-                   SC014Q01TA,
-                   SC016Q01TA,
-                   SC016Q02TA,
-                   SC016Q03TA,
-                   SC011Q01TA,
-                   SC002Q01TA,
-                   SC002Q02TA,
-                   SC211Q01JA,
-                   SC211Q02JA,
-                   SC211Q03JA,
-                   SC211Q04JA,
-                   SC211Q05JA,
-                   SC211Q06JA,
-                   SC018Q01TA01,
-                   SC018Q01TA02,
-                   SC018Q02TA01,
-                   SC018Q02TA02,
-                   SC018Q08JA01,
-                   SC018Q08JA02,
-                   SC018Q09JA01,
-                   SC018Q09JA02,
-                   SC018Q10JA01,
-                   SC018Q10JA02,
-                   SC182Q01WA01,
-                   SC182Q01WA02,
-                   SC182Q06WA01,
-                   SC182Q06WA02,
-                   SC182Q07JA01,
-                   SC182Q07JA02,
-                   SC182Q08JA01,
-                   SC182Q08JA02,
-                   SC182Q09JA01,
-                   SC182Q09JA02,
-                   SC182Q10JA01,
-                   SC182Q10JA02,
-                   SC168Q01JA))
+sch_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_SCH_QQQ.SAV"))
+
+# Select specific columns
+sch_qqq <- sch_qqq %>%
+  select(
+    CNT,
+    CNTSCHID,
+    SC001Q01TA,
+    SC013Q01TA,
+    SC014Q01TA,
+    SC016Q01TA,
+    SC016Q02TA,
+    SC016Q03TA,
+    SC011Q01TA,
+    SC002Q01TA,
+    SC002Q02TA,
+    SC211Q01JA,
+    SC211Q02JA,
+    SC211Q03JA,
+    SC211Q04JA,
+    SC211Q05JA,
+    SC211Q06JA,
+    SC018Q01TA01,
+    SC018Q01TA02,
+    SC018Q02TA01,
+    SC018Q02TA02,
+    SC018Q08JA01,
+    SC018Q08JA02,
+    SC018Q09JA01,
+    SC018Q09JA02,
+    SC018Q10JA01,
+    SC018Q10JA02,
+    SC182Q01WA01,
+    SC182Q01WA02,
+    SC182Q06WA01,
+    SC182Q06WA02,
+    SC182Q07JA01,
+    SC182Q07JA02,
+    SC182Q08JA01,
+    SC182Q08JA02,
+    SC182Q09JA01,
+    SC182Q09JA02,
+    SC182Q10JA01,
+    SC182Q10JA02,
+    SC168Q01JA
+  ) %>% 
+  mutate(
+    Total_Students = SC002Q01TA + SC002Q02TA,
+    Total_Teachers = SC018Q01TA01 + SC018Q01TA02,  # Ensure these column names are correct
+    STRATIO = Total_Students / Total_Teachers,
+    SCHSIZE = SC002Q01TA + SC002Q02TA,
+    Certified_Teachers = SC018Q02TA01 + SC018Q02TA02,  # Ensure these column names are correct
+    STAFFSHORT = 1 - (Certified_Teachers / Total_Teachers),
+    W_SCHGRNRABWT = NA
+  ) %>% 
+  select(
+    CNT,
+    CNTSCHID,
+    SC013Q01TA,
+    SC016Q01TA,
+    SC016Q02TA,
+    SC016Q03TA,
+    SC002Q01TA,
+    SC002Q02TA,
+    STAFFSHORT,
+    STRATIO,
+    SCHSIZE,
+    W_SCHGRNRABWT
+      )
 
 ```
 
