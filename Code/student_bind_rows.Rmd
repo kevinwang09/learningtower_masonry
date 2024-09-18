@@ -20,6 +20,7 @@ editor_options:
 library(tidyverse)
 library(glue)
 library(here)
+library(haven)
 ```
 
 ```{r}
@@ -62,6 +63,14 @@ isced3a1 = function(x){
     x == 5 ~ "less than ISCED1",
     TRUE ~ NA_character_) %>% as.factor()
 }
+
+fe1ma2 = function(x){
+      x = as.integer(x)
+      case_when(
+        x == 1 ~ "female",
+        x == 2 ~ "male",
+        TRUE ~ NA_character_) %>% as.factor()
+}
 ```
 
 
@@ -76,10 +85,7 @@ clean_2000 = stu_2000 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000
     father_educ = father_educ %>% as.factor(), ## This is all missing in 2000
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% as.factor(), ## This is all missing in 2000
     internet = internet %>% yes1no2(),
     math, 
@@ -122,10 +128,7 @@ clean_2003 = stu_2003 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% iscednone1(),
     father_educ = father_educ %>% iscednone1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(), ## This is a wrong column, see Google Sheets
     internet = internet %>% yes1no2(),
     math = math %>% as.numeric(), 
@@ -166,10 +169,7 @@ clean_2006 = stu_2006 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -209,10 +209,7 @@ clean_2009 = stu_2009 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -253,10 +250,7 @@ clean_2012 = stu_2012 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -296,10 +290,7 @@ clean_2015 = stu_2015 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -339,10 +330,7 @@ clean_2018 = stu_2018 %>%
     student_id = student_id %>% as.factor(),
     mother_educ = mother_educ %>% isced3a1(),
     father_educ = father_educ %>% isced3a1(),
-    gender = case_when(
-      gender == "1" ~ "female",
-      gender == "2" ~ "male",
-      TRUE ~ NA_character_) %>% as.factor(),
+    gender = gender %>% fe1ma2(),
     computer = computer %>% yes1no2(),
     internet = internet %>% yes1no2(),
     math, 
@@ -370,9 +358,47 @@ clean_2018 = stu_2018 %>%
 skimr::skim(clean_2018)
 ```
 
+# 2022 data
+```{r}
+stu_2022 <- read_rds(here("Data/Output/2022/stu_qqq.rds"))
+
+clean_2022 <- stu_2022 %>% 
+  dplyr::transmute(
+    country = country_iso3c %>% as.factor(),
+    school_id = school_id %>% as.factor(),
+    student_id = student_id %>% as.factor(),
+    mother_educ = mother_educ %>% isced3a1(),
+    father_educ = father_educ %>% isced3a1(),
+    gender = gender %>% fe1ma2(),
+    computer = computer %>% yes1no2(),
+    internet = internet %>% yes1no2(),
+    math, 
+    read, 
+    science, 
+    stu_wgt, 
+    desk = desk %>% yes1no2(),             ## This is all NA
+    room = room %>% yes1no2(),
+    dishwasher = dishwasher %>% yes1no2(), ## This is all NA 
+    television = television %>% none1one2two3threemore4(), 
+    computer_n = computer_n %>% none1one2two3threemore4(), 
+    car = car %>% none1one2two3threemore4(),
+    book = case_when(
+      book == 1 ~ "0-10",
+      book == 2 ~ "11-25",
+      book == 3 ~ "26-100",
+      book == 4 ~ "101-200",
+      book == 5 ~ "201-500",
+      book == 6 ~ "more than 500",
+      TRUE ~ NA_character_
+    ) %>% as.factor(),
+    wealth = wealth %>% as.numeric %>% na_if(95) %>% na_if(97) %>% na_if(98) %>% na_if(99),  ## This is all NA
+    escs = escs %>% as.numeric %>% na_if(95) %>% na_if(97) %>% na_if(98) %>% na_if(99))
+
+skimr::skim(clean_2022)
+```
 
 ```{r}
-list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018)
+list_data = lst(clean_2000, clean_2003, clean_2006, clean_2009, clean_2012, clean_2015, clean_2018, clean_2022)
 names(list_data) = names(list_data) %>% str_remove("clean_")
 
 student = list_data %>% 
@@ -390,6 +416,7 @@ skimr::skim(student)
 # Saving data
 ```{r}
 save(student, file = here("Data/Output/student.rda"), compress = "xz")
+# load("Data/Output/student.rda") 
 ```
 
 
