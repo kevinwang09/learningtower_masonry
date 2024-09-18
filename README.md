@@ -15,7 +15,9 @@ The most intensive component of publishing this data is the curation of the trie
 
 The main challenge that the contributors encountered was to ensure the consistency of variables between different years. For instance, the highest schooling of a student's mother was never recorded in 2000, but it was coded as "ST11R01" between the years 2003 to 2012 and "ST005Q01TA" between the years 2015 and 2018. These variables were manually curated by all contributors as a factor variable, "mother_educ", in the output data.
 
-We created an online spreadsheet to document the change of variables between different years, please go to [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri} for reference, and the excel file is saved in codebook folder as well.
+
+We created an online spreadsheet to document the change of variables between different years, please go to [PISA Variables' Table](https://github.com/kevinwang09/learningtower_masonry/raw/master/codebook/PISA_data_variables_2022_table.xlsx) for reference, and the excel file is saved in codebook folder as well.
+
 
 ### Problems in 2022
 
@@ -57,7 +59,8 @@ student %>%
 #> 14  2006 LTU           1001         27
 ```
 
-This means that the school ID is only unique within the year and the country.
+
+This means that the school ID is only unique within the year and the country. This means that the school ID is only unique within the year and the country. 
 
 # Workflow of adding any future PISA data
 
@@ -68,3 +71,5 @@ This means that the school ID is only unique within the year and the country.
 5.  Adding new codebook into the `codebook` folder if necessary.
 6.  Add to the new school/student.rda objects etc via <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/school_bind_rows.Rmd> and <https://github.com/kevinwang09/learningtower_masonry/blob/master/Code/student_bind_rows.Rmd>.
 7.  Update README etc.
+
+
