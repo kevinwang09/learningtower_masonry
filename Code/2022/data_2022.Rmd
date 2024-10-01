@@ -46,7 +46,8 @@ cols_to_keep <- c(
 "ST251Q01JA", #car
 "ST255Q01JA", #books
 #"WEALTH",    #wealth(not found)
-"ESCS"        #escs
+"ESCS",       #escs
+"CURIOAGR"    #curiosity
 )
 
 stu_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_STU_QQQ.sav"),
@@ -78,7 +79,8 @@ target_names_2022 <- c(
 "laptop_n",
 "car",
 "book",
-"escs"
+"escs",
+"curiosity"
 )
 
 names(stu_qqq) <- target_names_2022
@@ -105,7 +107,8 @@ target_names_final <- c(
 "car",
 "book",
 "wealth",
-"escs"
+"escs",
+"curiosity"
 )
   
 stu_qqq <- stu_qqq %>%
