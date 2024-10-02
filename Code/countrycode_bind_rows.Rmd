@@ -37,11 +37,12 @@ According to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reser
 Above countries are part of the PISA data, but sometimes standard country code names will not capture these countries. Hence, we will manually add them to what Kim has already curated. 
 
 ```{r}
-countrycode = countrycode %>% 
+countrycode <- countrycode  |>  
   bind_rows(
     tibble(
       country_iso3c = c("ROM", "YUG", "KHM", "SLV", "PSE", "GTM", "JAM", "MNG", "PRY", "QUR", "UZB"), 
-      country_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukraine", "Uzbekistan"))) 
+      country_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukraine", "Uzbekistan"))) |> 
+  rename(country = country_iso3c)
 ```
 
 
