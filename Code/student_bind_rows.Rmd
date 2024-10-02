@@ -422,6 +422,10 @@ skimr::skim(student)
 ```{r}
 save(student, file = here("Data/Output/student.rda"), compress = "xz")
 # load("Data/Output/student.rda") 
+# Create subset data for 2022
+student_2022 <- student |> 
+  filter(year == "2022")
+saveRDS(student_2022, file = here("Data/Output/student_2022.rds"))
 ```
 
 
