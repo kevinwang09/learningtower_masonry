@@ -17,24 +17,32 @@ load(here("Data/Output/countrycode_kim.rda"))
 countrycode %>% glimpse()
 ```
 
-
-# Adding two extra rows of data
+# Adding extra rows of data
 
 According to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations, 
 + ROM represents Romania before 2002 and 
 + YUG represents Yugoslavia before 2003. 
++ KHM represents Cambodia and
++ SLV represents El Salvador and
++ PSE represents Palestine and 
++ GTM represents Guatemala and
++ JAM represents Jamaica and
++ MNG represents Mongolia and
++ PRY represents Paraguay and
++ QUR represents Ukraine and
++ UZB represents Uzbekistan.
 
-Both countries are part of the PISA data, but standard country code names will not capture these two. Hence, we will manually add them to what Kim has already curated. 
+
+Above countries are part of the PISA data, but sometimes standard country code names will not capture these countries. Hence, we will manually add them to what Kim has already curated. 
 
 ```{r}
-countrycode = countrycode %>% 
+countrycode <- countrycode  |>  
   bind_rows(
     tibble(
-      country_iso3c = c("ROM", "YUG"), 
-      country_name = c("Romania", "Yugoslavia"))) %>% 
-  dplyr::rename(country = country_iso3c)
+      country_iso3c = c("ROM", "YUG", "KHM", "SLV", "PSE", "GTM", "JAM", "MNG", "PRY", "QUR", "UZB"), 
+      country_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukraine", "Uzbekistan"))) |> 
+  rename(country = country_iso3c)
 ```
-
 
 ```{r}
 save(countrycode, file = here("Data/Output/countrycode.rda"), compress = "xz")
