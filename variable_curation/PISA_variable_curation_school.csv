@@ -1,25 +1,16 @@
-﻿notes,descriptions,2000,2003,2006,2009,2012,2015,2018,2018 var labels,2018 values,Target Var Name,Target Var Class,2022,2022 values,Target Var Name,Target Var Class
-change coding from 2006 to 2009,Country three-digit code,country,COUNTRY,COUNTRY,,,,CNTRYID,Country Identifier,8-983,,,CNT,country code 3-character,country,character
-,Country three character,cnt,CNT,CNT,CNT,CNT,CNT,CNT,Country code 3-character,,country,character,,,,
-change coding from 2012 to 2015,school ID,SCHOOLID,SCHOOLID,SCHOOLID ,SCHOOLID ,SCHOOLID,CNTSCHID,CNTSCHID,Intl. School ID,800002-98300806,school_id,character,CNTSCHID,800001-90100182,school_id,character
-,Funding government,SC04Q01,SC04Q01,SC03Q01,SC03Q01,SC02Q01,SC016Q01TA,SC016Q01TA,Percentage of total funding for school year from: Government,0-100,fund_gov,numeric,SC016Q01TA,0-100,Percentage of School year funding comes from: Government,numeric
-,Funding - Student Fees,SC04Q02,SC04Q02,SC03Q02,SC03Q02,SC02Q02,SC016Q02TA,SC016Q02TA,Percentage of total funding for school year from: Student fees or school charges paid by parents,,"fund_fees
-",numeric,SC016Q02TA,0-100,Percentage of School year funding comes from: Student fees or School charges paid by parents or Guardians,numeric
-,Funding - Benefactors,SC04Q03,SC04Q03,SC03Q03,SC03Q03,SC02Q03,SC016Q03TA,SC016Q03TA,"Percentage of total funding for school year from: Benefactors, donations, bequests, sponsorships, parent fundraising",,fund_donations,numeric,SC016Q03TA,0-100,"Percentage of School year funding comes from: Benefactors, donations, bequests, sponsorships, parent or guardian fundraising",numeric
-,Number boys,sc02q01,SC02q01,SC01Q01,SC06Q01,SC07Q01,SC002Q01TA,SC002Q01TA,"As of <February 1, 2018>, what was the total school enrolment (number of students)? Number of boys",0-7912,enrol_boys,numeric,SC002Q01TA,0-1673,"As of [Febrauary 1, 2021], what was the total school enrolment (number of students): Number of boys",numeric
-,Number girls,sc02q02,SC02q02,SC01Q02,SC06Q02,SC07Q02,SC002Q02TA,SC002Q02TA,"As of <February 1, 2018>, what was the total school enrolment (number of students)? Number of girls",0-8410,enrol_girls,numeric,SC002Q02TA,0-1656,"As of [Febrauary 1, 2021], what was the total school enrolment (number of students): Number of Girls",numeric
-,Student-Teacher ratio,stratio,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,Student-Teacher ratio,0-3334.5,stratio,numeric,STRATIO,0.2714-Inf,stratio,numeric
-,public/private,SC03Q01,SC03Q01,SC02Q01,SC02Q01,SC01Q01,SC013Q01TA,SC013Q01TA,Is your school a public or a private school?,1-Feb,"public_private
-","character (""Public"",""Private"")",SC013Q01TA,1-Feb,Is your school a public of private school,numeric
-,Teacher/staff Shortage ,tcshort,TCSHORT,TCSHORT,TCSHORT,TCSHORT,STAFFSHORT,STAFFSHORT,Shortage of educational staff (WLE),,staff_shortage,numeric,STAFFSHORT,0-1,STAFFSHORT,numeric
-,School weight,wnrschb,SCWEIGHT,W_FSCHWT,W_FSCHWT,W_FSCHWT,W_SCHGRNRABWT,W_SCHGRNRABWT,GRADE NONRESPONSE ADJUSTED SCHOOL BASE WEIGHT,0.86354-1892.21068,sch_wgt,numeric,W_SCHGRNRABWT,NA,W_SCHGRNRABWT,numeric
-,school size,SCHLSIZE,SCHLSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,School Size (Sum),1-13400,school_size,numeric,SCHSIZE,4-19201,SCHSIZE,numeric
-,Percentage/proportion? of girls in the school,,,PCGIRLS,PCGIRLS,PCGIRLS,,N/A,,,,,,,,
-,School Location,,,- ,,SC03Q01,,N/A,,,,,,,,
-,Class size,,,SC06Q01,,CLSIZE,,,,,,,,,,
-,Activities - Mathematics club,,,- ,-,SC16Q05,,,,,,,,,,
-,Activities - Chess club,,,- ,-,SC16Q07,,,,,,,,,,
-,Teacher morale - High Morale,,,- ,-,SC26Q01,,,,,,,,,,
-,Teacher Appraisal - Salary change,,,- ,-,SC31Q01,,,,,,,,,,
-,Mathematics extension course types offered,,,- ,-,MATHEXC,,,,,,,,,,
-,Funding other,,,,SC03Q04,SC02Q04,,,,,,,,,,
+﻿"published name in package
+",short descriptions,variable class,2000,2003,2006,2009,2012,2015,2018,2022,long description,notes
+country,Country three character,factor,cnt,CNT,CNT,CNT,CNT,CNT,CNT,,,
+school_id,school ID,factor,SCHOOLID,SCHOOLID,SCHOOLID ,SCHOOLID ,SCHOOLID,CNTSCHID,CNTSCHID,CNTSCHID,school_id,
+fund_gov,Funding government,numeric,SC04Q01,SC04Q01,SC03Q01,SC03Q01,SC02Q01,SC016Q01TA,SC016Q01TA,SC016Q01TA,Percentage of School year funding comes from: Government,
+"fund_fees
+",Funding - Student Fees,numeric,SC04Q02,SC04Q02,SC03Q02,SC03Q02,SC02Q02,SC016Q02TA,SC016Q02TA,SC016Q02TA,Percentage of School year funding comes from: Student fees or School charges paid by parents or Guardians,
+fund_donations,Funding - Benefactors,numeric,SC04Q03,SC04Q03,SC03Q03,SC03Q03,SC02Q03,SC016Q03TA,SC016Q03TA,SC016Q03TA,"Percentage of School year funding comes from: Benefactors, donations, bequests, sponsorships, parent or guardian fundraising",
+enrol_boys,Number boys,numeric,sc02q01,SC02q01,SC01Q01,SC06Q01,SC07Q01,SC002Q01TA,SC002Q01TA,SC002Q01TA,"As of [Febrauary 1, 2021], what was the total school enrolment (number of students): Number of boys",
+enrol_girls,Number girls,numeric,sc02q02,SC02q02,SC01Q02,SC06Q02,SC07Q02,SC002Q02TA,SC002Q02TA,SC002Q02TA,"As of [Febrauary 1, 2021], what was the total school enrolment (number of students): Number of Girls",
+stratio,Student-Teacher ratio,numeric,stratio,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,stratio,
+"public_private
+",public/private,"factor(""Public"",""Private"")",SC03Q01,SC03Q01,SC02Q01,SC02Q01,SC01Q01,SC013Q01TA,SC013Q01TA,SC013Q01TA,Is your school a public of private school,
+staff_shortage,Teacher/staff Shortage ,numeric,tcshort,TCSHORT,TCSHORT,TCSHORT,TCSHORT,STAFFSHORT,STAFFSHORT,STAFFSHORT,Teacher/staff shortage as a numeric measurement,
+sch_wgt,School weight,numeric,wnrschb,SCWEIGHT,W_FSCHWT,W_FSCHWT,W_FSCHWT,W_SCHGRNRABWT,W_SCHGRNRABWT,W_SCHGRNRABWT,W_SCHGRNRABWT,
+school_size,school size,numeric,SCHLSIZE,SCHLSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,

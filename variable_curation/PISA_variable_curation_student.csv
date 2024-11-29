@@ -1,38 +1,32 @@
-﻿,notes,2000,2003,2006,2009,2012,2015,2018,2018 var labels,2018 values,Target Var Name,Target Var Class,2022,2022 var labels,2022 values,Target Var Name,Target Var Class,
-change coding from 2006 to 2009,Country three-digit code,,,,,,,,,,,,,,,,,
-,Country three character,cnt,CNT,CNT,CNT,CNT,CNT,CNT,Country code 3-character,,country_iso3c,character,CNT,,,,,
-change coding from 2012 to 2015,school ID,SCHOOLID,SCHOOLID,SCHOOLID ,SCHOOLID ,SCHOOLID,CNTSCHID,CNTSCHID,Intl. School ID,800002-98300806,school_id,"integer
-",CNTSCHID,,,,,
-change coding from 2012 to 2015,Student ID,STIDSTD,STIDSTD,STIDSTD,STIDSTD,STIDSTD,CNTSTUID,CNTSTUID,Intl. Student ID,800001-98329122,student_id,"integer
-",CNTSTUID,,,,,
-,Mother <Highest Schooling>,,ST11R01,ST06Q01,ST10Q01,ST13Q01,ST005Q01TA,ST005Q01TA,What is the <highest level of schooling> completed by your mother?,1-May,mother_educ,"integer
-",ST005Q01JA,What is the <highest level of schooling> completed by your mother?,1-May,mother_educ,mother_educ,
-,Father <Highest Schooling>,,ST13R01,ST09Q01,ST14Q01,ST17Q01,ST007Q01TA,ST007Q01TA,What is the <highest level of schooling> completed by your father?,1-May,father_educ,"integer
-",ST007Q01JA,What is the <highest level of schooling> completed by your father?,1-May,father_educ,father_educ,
-encoded as binary,Gender ,ST03Q01,ST03Q01,ST04Q01,ST04Q01,ST04Q01,ST004D01T,ST004D01T,Student (Standardized) Gender,1-Feb,gender,character,ST004Q01TA,,,,,
-,Possessions computer,ST22Q04,ST17Q03,ST13Q04,ST20Q04,ST26Q04,ST011Q04TA,ST011Q04TA,In your home: A computer you can use for school work,"responses 1 Yes, 2 No, .N/7 Not Applicable, .M/9 No response, SYSTEM MISSING missing",computer,character ,ST250Q02JA,"Which of the following are in your <home>?
-A computer (laptop, desktop, or tablet) that you can
-use for school work","responses 1 Yes, 2 No, .N/7 Not Applicable, .M/9 No response, SYSTEM MISSING missing",computer,computer,
-,Possessions Internet,ST21Q04,ST17Q06,ST13Q06,ST20Q06,ST26Q06,ST011Q06TA,ST011Q06TA,In your home: A link to the Internet,1-Feb,internet,character ,ST250Q05JA,"Which of the following are in your <home>?
-Internet access (e.g. Wi-fi) (excluding through
-smartphones) ",1-Feb,internet,internet,
-,Plausible value 1 in mathematics,pv1math,ty,PV1MATH,PV1MATH,PV1MATH,PV1MATH,PV1MATH,Plausible Value 1 in Mathematics,24.743-888.064,math,numeric,PV1MATC,,,,,
-,Plausible value 1 in reading,pv1read,PV1READ,PV1READ,PV1READ,PV1READ,PV1READ,PV1READ,Plausible Value 1 in Reading,0-887.692,read,numeric,PV1REAC,,,,,
-,Plausible value 1 in science,pv1scie,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,Plausible Value 1 in Science,58.736-886.081,science,numeric,PV1SCIC,,,,,
-,Final student weight,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,FINAL TRIMMED NONRESPONSE ADJUSTED STUDENT WEIGHT,1-2946.13369,stu_wgt,numeric,N/A,,,,,
-,,,,,,,,,,,,,,,,,,
-,Possessions desk,ST21Q07,ST17Q01,ST13Q01,ST20Q01,ST26Q01,ST011Q01TA,ST011Q01TA,In your home: A desk to study at,1-Feb,desk,character ,N/A,,,,,
-,Possessions own room,ST21Q02,ST17Q02,ST13Q02,ST20Q02,ST26Q02,ST011Q02TA,ST011Q02TA,In your home: A room of your own,1-Feb,room,character ,ST250Q01JA,,,,,
-,Possessions textbooks,,ST17Q11,ST13Q11,,ST26Q10,,ST011Q11TA,In your home: <Technical reference books>,1-Feb,,,,,,,,
-,Possessions dishwasher,ST21Q01,ST17Q13,ST13Q13,ST20Q13 ,ST26Q13,,N/A,,,dishwasher,character ,N/A,,,,,
-,How many cell phones,,,ST14Q01,,ST27Q01,,,,1-Apr,,,ST254Q06JA,,,,,
-,How many televisions,ST22Q02,,ST14Q02,ST21Q02,ST27Q02,ST012Q01TA,ST012Q01TA,How many in your home: Televisions,1-Apr,television,integer,ST254Q01JA,,,,,
-,How many computers,ST22Q04,,ST14Q03,ST21Q03 ,ST27Q03,ST012Q06NA,ST012Q06NA,"How many in your home: Computers (desktop computer, portable laptop, or notebook)",1-Apr,computer_n,"integer
-","ST254Q02JA
-ST254Q03JA ",,,,,
-,How many cars,ST22Q06,,ST14Q04,ST21Q04,ST27Q04,ST012Q02TA,ST012Q02TA,How many in your home: Cars,1-Apr,car,integer,ST251Q01JA,,,,,
-,How many books at home,ST37Q01,ST19Q01,ST15Q01,ST22Q01,ST28Q01,ST013Q01TA,ST013Q01TA,How many books are there in your home?,1-Jun,book,integer,ST255Q01JA,,,,,
-,Wealth,WEALTH,,WEALTH,WEALTH,WEALTH,WEALTH,WEALTH,Family wealth (WLE),-12.2999,wealth,numeric,N/A,,,,,created by other columns
-,"Index of economic, social and cultural status",HISEI,ESCS,ESCS,ESCS,ESCS,ESCS,ESCS,"Index of economic, social and cultural status",-12.3785,ESCS,numeric,ESCS,,,,,
-,Out of hours study - homework,,,,ST31Q05+ST31Q08+ST31Q11,,,EC159Q01HA,"On the most recent day you attended school, how long did you study after leaving school? Hours",1-Nov,,,N/A,,,,,
-,,,,,,,,EC158Q01HA,"On the most recent day you attended school, how long did you study in the morning before going to school? Hours",1-Nov,,,N/A,,,,,
+﻿"published name in package
+",short descriptions,variable class,2000,2003,2006,2009,2012,2015,2018,2022,notes
+country_iso3c,Country three character,character,cnt,CNT,CNT,CNT,CNT,CNT,CNT,CNT,
+school_id,school ID,"integer
+",SCHOOLID,SCHOOLID,SCHOOLID ,SCHOOLID ,SCHOOLID,CNTSCHID,CNTSCHID,CNTSCHID,change coding from 2012 to 2015
+student_id,Student ID,"integer
+",STIDSTD,STIDSTD,STIDSTD,STIDSTD,STIDSTD,CNTSTUID,CNTSTUID,CNTSTUID,change coding from 2012 to 2015
+mother_educ,Mother <Highest Schooling>,"integer
+",,ST11R01,ST06Q01,ST10Q01,ST13Q01,ST005Q01TA,ST005Q01TA,ST005Q01JA,
+father_educ,Father <Highest Schooling>,"integer
+",,ST13R01,ST09Q01,ST14Q01,ST17Q01,ST007Q01TA,ST007Q01TA,ST007Q01JA,
+gender,Gender ,character,ST03Q01,ST03Q01,ST04Q01,ST04Q01,ST04Q01,ST004D01T,ST004D01T,ST004Q01TA,encoded as binary
+computer,Possessions computer,character ,ST22Q04,ST17Q03,ST13Q04,ST20Q04,ST26Q04,ST011Q04TA,ST011Q04TA,ST250Q02JA,
+internet,Possessions Internet,character ,ST21Q04,ST17Q06,ST13Q06,ST20Q06,ST26Q06,ST011Q06TA,ST011Q06TA,ST250Q05JA,
+math,Plausible value 1 in mathematics,numeric,pv1math,ty,PV1MATH,PV1MATH,PV1MATH,PV1MATH,PV1MATH,PV1MATC,
+read,Plausible value 1 in reading,numeric,pv1read,PV1READ,PV1READ,PV1READ,PV1READ,PV1READ,PV1READ,PV1REAC,
+science,Plausible value 1 in science,numeric,pv1scie,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIC,
+stu_wgt,Final student weight,numeric,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,N/A,
+,,,,,,,,,,,
+desk,Possessions desk,character ,ST21Q07,ST17Q01,ST13Q01,ST20Q01,ST26Q01,ST011Q01TA,ST011Q01TA,N/A,
+room,Possessions own room,character ,ST21Q02,ST17Q02,ST13Q02,ST20Q02,ST26Q02,ST011Q02TA,ST011Q02TA,ST250Q01JA,
+,Possessions textbooks,,,ST17Q11,ST13Q11,,ST26Q10,,ST011Q11TA,,
+dishwasher,Possessions dishwasher,character ,ST21Q01,ST17Q13,ST13Q13,ST20Q13 ,ST26Q13,,N/A,N/A,
+,How many cell phones,,,,ST14Q01,,ST27Q01,,,ST254Q06JA,
+television,How many televisions,integer,ST22Q02,,ST14Q02,ST21Q02,ST27Q02,ST012Q01TA,ST012Q01TA,ST254Q01JA,
+computer_n,How many computers,"integer
+",ST22Q04,,ST14Q03,ST21Q03 ,ST27Q03,ST012Q06NA,ST012Q06NA,"ST254Q02JA
+ST254Q03JA ",
+car,How many cars,integer,ST22Q06,,ST14Q04,ST21Q04,ST27Q04,ST012Q02TA,ST012Q02TA,ST251Q01JA,
+book,How many books at home,integer,ST37Q01,ST19Q01,ST15Q01,ST22Q01,ST28Q01,ST013Q01TA,ST013Q01TA,ST255Q01JA,
+wealth,Wealth,numeric,WEALTH,,WEALTH,WEALTH,WEALTH,WEALTH,WEALTH,N/A,created by other columns
+ESCS,"Index of economic, social and cultural status",numeric,HISEI,ESCS,ESCS,ESCS,ESCS,ESCS,ESCS,ESCS,
