@@ -3,6 +3,8 @@ title: "PISA 2022 Data Import"
 author: "Guan Ru Chen and Shabarish"
 date: "4/9/2024"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -10,110 +12,111 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r packages}
-library(here)
-library(tidyverse)
-library(haven)
+suppressPackageStartupMessages({
+  library(here)
+  library(tidyverse)
+  library(haven)
+})
 ```
 
 Use the Haven package to read in the SPSS files.
 
 ```{r read in spss sav files}
-urls <- read_csv(here("Code/download_urls.csv")) |> 
+urls <- read_csv(here("Data/download_urls.csv")) |> 
   filter(year==2022)
 
-# View the files and url links available for 2018
-urls
+print(urls)
 
 # Import Student questionnaire data files with selected variables
 cols_to_keep <- c(
-"CNT",        #country
-"CNTSCHID",   #school ID
-"CNTSTUID",   #student ID
-"ST005Q01JA", #mother_educ
-"ST007Q01JA", #father_educ
-"ST004D01T",  #gender
-"ST250Q02JA", #computer
-"ST250Q05JA", #internet
-"PV1MATH",    #math
-"PV1READ",    #read
-"PV1SCIE",    #science   
-"W_FSTUWT",   #stu_wgt
-#"ST011Q01TA",#desk(not found)
-"ST250Q01JA", #room
-"ST254Q01JA", #television
-"ST254Q02JA", #desktop
-"ST254Q03JA", #laptop
-"ST251Q01JA", #car
-"ST255Q01JA", #books
-#"WEALTH",    #wealth(not found)
-"ESCS"        #escs
+  "CNT",        #country
+  "CNTSCHID",   #school ID
+  "CNTSTUID",   #student ID
+  "ST005Q01JA", #mother_educ
+  "ST007Q01JA", #father_educ
+  "ST004D01T",  #gender
+  "ST250Q02JA", #computer
+  "ST250Q05JA", #internet
+  "PV1MATH",    #math
+  "PV1READ",    #read
+  "PV1SCIE",    #science   
+  "W_FSTUWT",   #stu_wgt
+  #"ST011Q01TA",#desk(not found)
+  "ST250Q01JA", #room
+  "ST254Q01JA", #television
+  "ST254Q02JA", #desktop
+  "ST254Q03JA", #laptop
+  "ST251Q01JA", #car
+  "ST255Q01JA", #books
+  #"WEALTH",    #wealth(not found)
+  "ESCS"        #escs
 )
 
-stu_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_STU_QQQ.sav"),
+stu_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_STU_QQQ.SAV"),
                     col_select = cols_to_keep) %>% 
-           select(cols_to_keep)
+  dplyr::select(cols_to_keep)
 
 stu_qqq <- stu_qqq |> 
-              select(all_of(cols_to_keep))
+  dplyr::select(all_of(cols_to_keep))
 
 # View all the variables inside student questionnaire                           
 #column <- data.frame(Column_Names = colnames(stu_qqq))                      
 
 target_names_2022 <- c(
-"country_iso3c",
-"school_id",
-"student_id",
-"mother_educ",
-"father_educ",
-"gender",
-"computer",
-"internet",
-"math",
-"read",
-"science",
-"stu_wgt",
-"room",
-"television",
-"computer_n",
-"laptop_n",
-"car",
-"book",
-"escs"
+  "country_iso3c",
+  "school_id",
+  "student_id",
+  "mother_educ",
+  "father_educ",
+  "gender",
+  "computer",
+  "internet",
+  "math",
+  "read",
+  "science",
+  "stu_wgt",
+  "room",
+  "television",
+  "computer_n",
+  "laptop_n",
+  "car",
+  "book",
+  "escs"
 )
 
 names(stu_qqq) <- target_names_2022
 
 target_names_final <- c(
-"country_iso3c",
-"school_id",
-"student_id",
-"mother_educ",
-"father_educ",
-"gender",
-"computer",
-"internet",
-"math",
-"read",
-"science",
-"stu_wgt",
-"desk",
-"room",
-"dishwasher",
-"television",
-"computer_n",
-"laptop_n",
-"car",
-"book",
-"wealth",
-"escs"
+  "country_iso3c",
+  "school_id",
+  "student_id",
+  "mother_educ",
+  "father_educ",
+  "gender",
+  "computer",
+  "internet",
+  "math",
+  "read",
+  "science",
+  "stu_wgt",
+  "desk",
+  "room",
+  "dishwasher",
+  "television",
+  "computer_n",
+  "laptop_n",
+  "car",
+  "book",
+  "wealth",
+  "escs"
 )
-  
+
 stu_qqq <- stu_qqq %>%
-            mutate(desk = NA,
-                   dishwasher = NA,
-                   wealth = NA) %>%
-            select(target_names_final)
-  
+  mutate(desk = NA,
+         dishwasher = NA,
+         wealth = NA) %>%
+  select(target_names_final)
+
 
 
 sch_qqq <- read_sav(here("Data/Raw/2022/CY08MSP_SCH_QQQ.SAV"))
@@ -184,7 +187,7 @@ sch_qqq <- sch_qqq %>%
     STRATIO,
     SCHSIZE,
     W_SCHGRNRABWT
-      )
+  )
 
 ```
 
@@ -196,8 +199,6 @@ skimr::skim(stu_qqq)
 ```{r view summary schools}
 skimr::skim(sch_qqq) 
 ```
-
-
 
 ```{r save files output}
 # Student questionnaire data files

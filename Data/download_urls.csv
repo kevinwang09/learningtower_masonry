@@ -19,7 +19,4 @@ year,table,url
 2022,Student questionnaire data files,https://webfs.oecd.org/pisa2022/STU_QQQ_SPSS.zip
 2022,School questionnaire data file,https://webfs.oecd.org/pisa2022/SCH_QQQ_SPSS.zip
 2022,Teacher questionnaire data file,https://webfs.oecd.org/pisa2022/TCH_QQQ_SPSS.zip
-2022,Cognitive item data file,https://webfs.oecd.org/pisa2022/STU_COG_SPSS.zip
-2022,Questionnaire timing data file,https://webfs.oecd.org/pisa2022/STU_TIM_SPSS.zip
-2022,Creative Thinking data file,https://webfs.oecd.org/pisa2022/CRT_SPSS.zip
-2022,Financial Literacy data file,https://webfs.oecd.org/pisa2022/FLT_SPSS.zip
+2022,Codebook,https://webfs.oecd.org/pisa2022/CY08MSP_CODEBOOK_27thJune24.xlsx
