@@ -257,9 +257,9 @@ skimr::skim(school)
 
 ```
 
-# Save
+# Saving data (rds file)
 ```{r}
-save(school, file = here("Data/Output/school.rda"), compress = "xz")
+saveRDS(school, file = here("Data/Output/school.rds"), compress = "xz")
 ```
 
 
