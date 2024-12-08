@@ -23,6 +23,7 @@ library(glue)
 library(here)
 library(janitor)
 library(skimr)
+library(haven)
 
 public1private2 = function(x){
   x = as.integer(x)
@@ -206,7 +207,6 @@ skimr::skim(clean_2018)
 sch_2022 = read_rds(here("Data/Output/2022/sch_qqq.rds"))
 glimpse(sch_2022)
 
-library(haven)
 clean_2022 = sch_2022 %>% dplyr::transmute(
   country = CNT %>% as.character(),
   school_id = CNTSCHID %>% as.factor(),
@@ -239,27 +239,71 @@ names(list_data) <- names(list_data) %>% str_remove("clean_")
 list_data <- list_data %>%
   map(~ .x %>% 
         mutate(
-          school_id = as.character(school_id),
+          school_id = as.integer(school_id),
           public_private = as.character(public_private)  # Convert public_private to character
         ))
 
 # Bind the rows and convert character columns to factors
 school <- list_data %>%
   bind_rows(.id = "year") %>%
-  dplyr::mutate(school_id = as.factor(school_id),
-                public_private = as.factor(public_private)) %>%  # Convert public_private back to factor
+  dplyr::mutate(public_private = as.factor(public_private)) %>%  # Convert public_private back to factor
   dplyr::mutate_if(is.character, as.factor) %>%
   as_tibble()
 
 # Skim the data to inspect
 skimr::skim(school)
-
-
 ```
 
-# Saving data (rds file)
+
+# Saving full sized data (rda file)
+
 ```{r}
-saveRDS(school, file = here("Data/Output/school.rds"), compress = "xz")
+full_data_transfer_folder = "Data/Output/Transfer/data"
+dir.create(here(full_data_transfer_folder), recursive = TRUE, showWarnings = FALSE)
+save(school, file = here(full_data_transfer_folder, "school.rda"), compress = "xz")
+```
+
+# Creating heatmap for README
+
+```{r, fig.height=6, fig.width=12}
+# Summarize missingness for each column by year
+missing_summary <- school %>%
+  group_by(year) %>%                                  
+  summarize(across(everything(),                   
+                   ~ sum(is.na(.)) / n(),          
+                   .names = "missing_{col}")) %>%  
+  pivot_longer(cols = starts_with("missing_"),
+               names_to = "column", 
+               values_to = "missing_percentage") %>%
+  mutate(column = str_remove(column, "missing_"),
+         label_missing_percentage = scales::percent(missing_percentage, accuracy = 0.1)) 
+
+# View the summary
+missing_summary
+
+p = missing_summary %>%
+  ggplot(aes(x = year, 
+             y = column, 
+             label = label_missing_percentage,
+             fill = missing_percentage)) +
+  geom_tile() +
+  geom_text() +
+  scale_fill_gradient2(
+    low = "white", 
+    high = "#287afc",
+    breaks = c(0, 0.5, 1),
+    labels = scales::label_percent()) +
+  labs(title = "Missingness Percentage in the Student Data by Variables and Year",
+       x = "Year",
+       y = "Variables", 
+       fill = "Missing Percentage") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+print(p)
+
+ggsave(plot = p, 
+       filename = here("Data/Output/Transfer/README_school_data_missing_values_summary.png"), height = 6, width = 12)
 ```
 
 

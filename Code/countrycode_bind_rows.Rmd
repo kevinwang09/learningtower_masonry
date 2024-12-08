@@ -29,7 +29,7 @@ According to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reser
 + JAM represents Jamaica and
 + MNG represents Mongolia and
 + PRY represents Paraguay and
-+ QUR represents Ukraine and
++ QUR represents Ukrainian regions (18 of 27), see https://www.oecd.org/en/publications/pisa-2022-results-volume-i-and-ii-country-notes_ed6fbcc5-en/ukrainian-regions-18-of-27_78043794-en.html#:~:text=The%20designation%20%E2%80%9CUkrainian%20regions%20(18%20of%2027)%E2%80%9D
 + UZB represents Uzbekistan.
 
 
@@ -40,12 +40,14 @@ countrycode <- countrycode  |>
   bind_rows(
     tibble(
       country_iso3c = c("ROM", "YUG", "KHM", "SLV", "PSE", "GTM", "JAM", "MNG", "PRY", "QUR", "UZB"), 
-      country_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukraine", "Uzbekistan"))) |> 
+      country_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukrainian regions (18 of 27)", "Uzbekistan"))) |> 
   rename(country = country_iso3c)
 ```
 
 ```{r}
-save(countrycode, file = here("Data/Output/countrycode.rda"), compress = "xz")
+full_data_transfer_folder = "Data/Output/Transfer/data"
+dir.create(here(full_data_transfer_folder), recursive = TRUE, showWarnings = FALSE)
+save(countrycode, file = here(full_data_transfer_folder, "countrycode.rda"), compress = "xz")
 ```
 
 # Session Info
