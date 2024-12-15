@@ -47,7 +47,7 @@ glimpse(sch_2000)
 
 clean_2000 = sch_2000 %>% dplyr::transmute(
   country = cnt %>% as.factor(),
-  school_id = schoolid %>% as.factor(), 
+  school_id = schoolid %>% as.character(),
   fund_gov = sc04q01 %>% as.numeric(),
   fund_fees = sc04q02 %>% as.numeric(),
   fund_donation = sc04q03 %>% as.numeric(),
@@ -70,7 +70,7 @@ glimpse(sch_2003)
 
 clean_2003 = sch_2003 %>% dplyr::transmute(
   country = country_iso3c %>% as.factor(),
-  school_id = school_id %>% as.factor(), 
+  school_id = school_id %>% as.character(),
   fund_gov = funding_gov %>% as.numeric() %>% na_if(997) %>% na_if(998) %>% na_if(999),
   fund_fees = funding_fees %>% as.numeric() %>% na_if(997) %>% na_if(998) %>% na_if(999),
   fund_donation = funding_donations %>% as.numeric() %>% na_if(997) %>% na_if(998) %>% na_if(999),
@@ -94,7 +94,7 @@ glimpse(sch_2006)
 
 clean_2006 = sch_2006 %>% dplyr::transmute(
   country = CNT %>% as.factor(),
-  school_id = SCHOOLID %>% as.factor(), 
+  school_id = SCHOOLID %>% as.character(),
   fund_gov = SC03Q01 %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
   fund_fees = SC03Q02 %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
   fund_donation = SC03Q03 %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
@@ -116,7 +116,7 @@ glimpse(sch_2009)
 
 clean_2009 = sch_2009 %>% dplyr::transmute(
   country = country %>% as.factor(),
-  school_id = school_id %>% as.factor(), 
+  school_id = school_id %>% as.character(),
   fund_gov = fund_gov %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
   fund_fees = fund_fees %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
   fund_donation = fund_donation %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
@@ -139,7 +139,7 @@ glimpse(sch_2012)
 
 clean_2012 = sch_2012 %>% dplyr::transmute(
   country = CNT %>% as.factor(),
-  school_id = SCHOOLID %>% as.factor(), 
+  school_id = SCHOOLID %>% as.character(),
   fund_gov = SC02Q01 %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
   fund_fees = SC02Q02 %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
   fund_donation = SC02Q03 %>% as.numeric() %>% na_if(9997) %>% na_if(9998) %>% na_if(9999),
@@ -162,7 +162,7 @@ glimpse(sch_2015)
 
 clean_2015 = sch_2015 %>% dplyr::transmute(
   country = CNT %>% as.factor(),
-  school_id = CNTSCHID %>% as.factor(), 
+  school_id = CNTSCHID %>% as.character(),
   fund_gov = SC016Q01TA %>% as.numeric(),
   fund_fees = SC016Q02TA %>% as.numeric(),
   fund_donation = SC016Q03TA %>% as.numeric(),
@@ -186,7 +186,7 @@ glimpse(sch_2018)
 
 clean_2018 = sch_2018 %>% dplyr::transmute(
   country = CNT %>% as.factor(),
-  school_id = CNTSCHID %>% as.factor(), 
+  school_id = CNTSCHID %>% as.character(),
   fund_gov = SC016Q01TA %>% as.numeric(),
   fund_fees = SC016Q02TA %>% as.numeric(),
   fund_donation = SC016Q03TA %>% as.numeric(),
@@ -209,7 +209,7 @@ glimpse(sch_2022)
 
 clean_2022 = sch_2022 %>% dplyr::transmute(
   country = CNT %>% as.character(),
-  school_id = CNTSCHID %>% as.factor(),
+  school_id = CNTSCHID %>% as.character(),
   public_private = SC013Q01TA %>% public1private2(),
   fund_gov = SC016Q01TA %>% as.numeric(),
   fund_fees = SC016Q02TA %>% as.numeric(),
@@ -239,15 +239,15 @@ names(list_data) <- names(list_data) %>% str_remove("clean_")
 list_data <- list_data %>%
   map(~ .x %>% 
         mutate(
-          school_id = as.integer(school_id),
           public_private = as.character(public_private)  # Convert public_private to character
         ))
 
 # Bind the rows and convert character columns to factors
 school <- list_data %>%
   bind_rows(.id = "year") %>%
-  dplyr::mutate(public_private = as.factor(public_private)) %>%  # Convert public_private back to factor
-  dplyr::mutate_if(is.character, as.factor) %>%
+  dplyr::mutate(
+    year = as.integer(year), 
+    public_private = as.factor(public_private)) %>%  # Convert public_private back to factor
   as_tibble()
 
 # Skim the data to inspect
