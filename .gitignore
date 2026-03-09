@@ -39,9 +39,13 @@ vignettes/*.pdf
 .Renviron
 
 # Do not upload the big data, that will go in /Data/Raw
-!/Data/Raw/
 /Data/Raw/*
+# Files that are used to process the raw data
 !/Data/Raw/*.md
+!/Data/Raw/*.json
+!/Data/Raw/*.py
+!/Data/Raw/PISA Data Files.html
+
 .Rproj.user
 .DS_Store
 
