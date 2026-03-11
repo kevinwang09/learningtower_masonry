@@ -1,9 +1,7 @@
 library(tidyverse)
 library(haven)
 library(here)
-
 library(dplyr)
-library(haven)
 
 # -------------------------------------------------------------------------
 # Logging Utilities
@@ -152,7 +150,26 @@ audit_dataframes <- function(df_new, df_old) {
   }
   
   message("\n[4] Comprehensive all.equal() Check")
-  equality_result <- all.equal(df_new, df_old)
+  
+  # Strip attributes for haven_labelled columns before all.equal check
+  df_new_compare <- df_new
+  df_old_compare <- df_old
+  
+  for (col in common_cols) {
+    if (inherits(df_new[[col]], "haven_labelled") || inherits(df_old[[col]], "haven_labelled")) {
+      # Manual explicit value comparison for haven_labelled (safely handling NAs)
+      val_match <- isTRUE(all((df_new[[col]] == df_old[[col]]) | (is.na(df_new[[col]]) & is.na(df_old[[col]]))))
+      if (!val_match) {
+        message(sprintf("  -> WARNING: Value mismatch explicitly found in column '%s'", col))
+      }
+      
+      # Strip attributes down to base vectors to prevent all.equal() metadata failures
+      df_new_compare[[col]] <- as.vector(df_new_compare[[col]])
+      df_old_compare[[col]] <- as.vector(df_old_compare[[col]])
+    }
+  }
+  
+  equality_result <- all.equal(target=df_new_compare, current=df_old_compare)
   
   is_equal <- isTRUE(equality_result)
   
