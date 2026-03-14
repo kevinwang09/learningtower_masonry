@@ -134,8 +134,8 @@ audit_dataframes <- function(df_new, df_old) {
     
     if (class_new != class_old) {
       type_diffs <- type_diffs + 1
-      if ((class_new == "numeric" && class_old == "haven_labelled") || 
-          (class_new == "haven_labelled" && class_old == "numeric")) {
+      if ((class_new %in% c("numeric", "character", "integer") && class_old == "haven_labelled") || 
+          (class_new == "haven_labelled" && class_old %in% c("numeric", "character", "integer"))) {
         message(sprintf("  -> INFO: %s differs slightly in 'haven' labelling: [New=%s | Old=%s]", col, class_new, class_old))
       } else {
         message(sprintf("  -> WARNING: Type mismatch in '%s': [New=%s | Old=%s]", col, class_new, class_old))
@@ -157,15 +157,19 @@ audit_dataframes <- function(df_new, df_old) {
   
   for (col in common_cols) {
     if (inherits(df_new[[col]], "haven_labelled") || inherits(df_old[[col]], "haven_labelled")) {
+      
+      vec_new <- as.vector(df_new[[col]])
+      vec_old <- as.vector(df_old[[col]])
+      
       # Manual explicit value comparison for haven_labelled (safely handling NAs)
-      val_match <- isTRUE(all((df_new[[col]] == df_old[[col]]) | (is.na(df_new[[col]]) & is.na(df_old[[col]]))))
+      val_match <- isTRUE(all((vec_new == vec_old) | (is.na(vec_new) & is.na(vec_old))))
       if (!val_match) {
         message(sprintf("  -> WARNING: Value mismatch explicitly found in column '%s'", col))
       }
       
       # Strip attributes down to base vectors to prevent all.equal() metadata failures
-      df_new_compare[[col]] <- as.vector(df_new_compare[[col]])
-      df_old_compare[[col]] <- as.vector(df_old_compare[[col]])
+      df_new_compare[[col]] <- vec_new
+      df_old_compare[[col]] <- vec_old
     }
   }
   
