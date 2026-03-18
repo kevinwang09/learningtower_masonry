@@ -457,53 +457,53 @@
             "children": [
                 {
                     "type": "file",
-                    "name": "INT_COG12_DEC03.zip",
-                    "size_mb": 0.01
+                    "name": "INT_COG12_DEC03.txt",
+                    "size_mb": 184.74
                 },
                 {
                     "type": "file",
-                    "name": "INT_COG12_DEC03.zip.md5",
-                    "size_mb": 0.0
+                    "name": "INT_COG12_DEC03.zip",
+                    "size_mb": 26.54
+                },
+                {
+                    "type": "file",
+                    "name": "INT_COG12_S_DEC03.txt",
+                    "size_mb": 118.53
                 },
                 {
                     "type": "file",
                     "name": "INT_COG12_S_DEC03.zip",
-                    "size_mb": 0.01
+                    "size_mb": 12.02
                 },
                 {
                     "type": "file",
-                    "name": "INT_COG12_S_DEC03.zip.md5",
-                    "size_mb": 0.0
+                    "name": "INT_PAQ12_DEC03.txt",
+                    "size_mb": 41.16
                 },
                 {
                     "type": "file",
                     "name": "INT_PAQ12_DEC03.zip",
-                    "size_mb": 0.01
+                    "size_mb": 5.21
                 },
                 {
                     "type": "file",
-                    "name": "INT_PAQ12_DEC03.zip.md5",
-                    "size_mb": 0.0
+                    "name": "INT_SCQ12_DEC03.txt",
+                    "size_mb": 13.49
                 },
                 {
                     "type": "file",
                     "name": "INT_SCQ12_DEC03.zip",
-                    "size_mb": 0.01
+                    "size_mb": 2.69
                 },
                 {
                     "type": "file",
-                    "name": "INT_SCQ12_DEC03.zip.md5",
-                    "size_mb": 0.0
+                    "name": "INT_STU12_DEC03.txt",
+                    "size_mb": 1076.13
                 },
                 {
                     "type": "file",
                     "name": "INT_STU12_DEC03.zip",
-                    "size_mb": 0.01
-                },
-                {
-                    "type": "file",
-                    "name": "INT_STU12_DEC03.zip.md5",
-                    "size_mb": 0.0
+                    "size_mb": 222.05
                 },
                 {
                     "type": "file",
@@ -1313,16 +1313,6 @@
         },
         {
             "type": "file",
-            "name": "download_raw_data_20260308_142932.log",
-            "size_mb": 0.0
-        },
-        {
-            "type": "file",
-            "name": "download_raw_data_20260308_162949.log",
-            "size_mb": 0.0
-        },
-        {
-            "type": "file",
             "name": "download_raw_data_20260308_163239.log",
             "size_mb": 0.0
         },
@@ -1334,11 +1324,26 @@
         {
             "type": "file",
             "name": "prepare_raw_data.py",
-            "size_mb": 0.0
+            "size_mb": 0.01
         },
         {
             "type": "file",
             "name": "prepare_raw_data_20260308_163251.log",
+            "size_mb": 0.01
+        },
+        {
+            "type": "file",
+            "name": "prepare_raw_data_20260317_193940.log",
+            "size_mb": 0.01
+        },
+        {
+            "type": "file",
+            "name": "prepare_raw_data_20260317_194243.log",
+            "size_mb": 0.01
+        },
+        {
+            "type": "file",
+            "name": "prepare_raw_data_20260317_194945.log",
             "size_mb": 0.01
         }
     ]

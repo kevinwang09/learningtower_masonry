@@ -2,8 +2,16 @@ import os
 import zipfile
 import json
 import logging
+import hashlib
 from datetime import datetime
 from pathlib import Path
+
+def calculate_md5(file_path, chunk_size=8192):
+    md5 = hashlib.md5()
+    with open(file_path, 'rb') as f:
+        for chunk in iter(lambda: f.read(chunk_size), b''):
+            md5.update(chunk)
+    return md5.hexdigest()
 
 def load_manifest(manifest_path):
     if manifest_path.exists():
@@ -71,6 +79,10 @@ def extract_zip_files(input_dir, manifest_path):
                     'md5sum': None
                 }
             manifest[manifest_key]['extracted_files'] = extracted_files
+            
+            # Always compute and update md5sum when processed
+            logging.info(f"Computing md5sum for {zip_file.name}...")
+            manifest[manifest_key]['md5sum'] = calculate_md5(zip_file)
             
         except zipfile.BadZipFile:
             logging.error(f"Bad zip file: {zip_file}")

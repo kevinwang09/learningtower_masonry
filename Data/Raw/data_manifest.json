@@ -255,31 +255,39 @@
     "2012/INT_STU12_DEC03.zip": {
         "year": "2012",
         "filename": "INT_STU12_DEC03.zip",
-        "md5sum": "f6af92e57834d2dac2ddb6bb84a723a2",
-        "extracted_files": []
+        "md5sum": "c2dc6253c670cf3f211599ce84db97cb",
+        "extracted_files": [
+            "INT_STU12_DEC03.txt"
+        ]
     },
     "2012/INT_SCQ12_DEC03.zip": {
         "year": "2012",
         "filename": "INT_SCQ12_DEC03.zip",
-        "md5sum": "55b0e5612f7b88ce6d342b4b7c984648",
-        "extracted_files": []
+        "md5sum": "f2ee9eda34f2be7f802719f9af0fa462",
+        "extracted_files": [
+            "INT_SCQ12_DEC03.txt"
+        ]
     },
     "2012/INT_PAQ12_DEC03.zip": {
         "year": "2012",
         "filename": "INT_PAQ12_DEC03.zip",
-        "md5sum": "d72f0cdc74ce5c5d1a6d4e0da145c322",
-        "extracted_files": []
+        "md5sum": "ccb6ac6730ab782e345dec2ce449cc3d",
+        "extracted_files": [
+            "INT_PAQ12_DEC03.txt"
+        ]
     },
     "2012/INT_COG12_DEC03.zip": {
         "year": "2012",
         "filename": "INT_COG12_DEC03.zip",
-        "md5sum": "c50af3a1e84bc18b08baef4d69ef1178",
-        "extracted_files": []
+        "md5sum": "f158b46daa538dc9171b9229cd12487d",
+        "extracted_files": [
+            "INT_COG12_DEC03.txt"
+        ]
     },
     "2009/INT_STQ09_DEC11.zip": {
         "year": "2009",
         "filename": "INT_STQ09_DEC11.zip",
-        "md5sum": "249ab6a692b8603f5a56630ea4ae0795",
+        "md5sum": "ee275389f0d06e81195afe6122eaf5ce",
         "extracted_files": [
             "INT_STQ09_DEC11.txt"
         ]
@@ -287,13 +295,15 @@
     "2012/INT_COG12_S_DEC03.zip": {
         "year": "2012",
         "filename": "INT_COG12_S_DEC03.zip",
-        "md5sum": "3297c23075c8f9215f5f872b4009aeb9",
-        "extracted_files": []
+        "md5sum": "418b9cc8a8e072b267e1f74c1cc39b93",
+        "extracted_files": [
+            "INT_COG12_S_DEC03.txt"
+        ]
     },
     "2009/INT_PAR09_DEC11.zip": {
         "year": "2009",
         "filename": "INT_PAR09_DEC11.zip",
-        "md5sum": "9a0c2968e61f1eb5b550ea78a85e06ad",
+        "md5sum": "d5eb680cd4a0591835edb7ffc126636e",
         "extracted_files": [
             "INT_PAR09_DEC11.txt"
         ]
@@ -301,7 +311,7 @@
     "2009/INT_SCQ09_Dec11.zip": {
         "year": "2009",
         "filename": "INT_SCQ09_Dec11.zip",
-        "md5sum": "2d059b594b009c86ed21bbadf5f42b18",
+        "md5sum": "41d1d87883ad6dd447a55c5a5dc158c5",
         "extracted_files": [
             "INT_SCQ09_Dec11.txt"
         ]
@@ -309,7 +319,7 @@
     "2009/INT_COG09_TD_DEC11.zip": {
         "year": "2009",
         "filename": "INT_COG09_TD_DEC11.zip",
-        "md5sum": "2a12bb17126912254c361aea6fc7205d",
+        "md5sum": "24fb6110a4c4979e0ed64c27ae5e7313",
         "extracted_files": [
             "INT_COG09_TD_DEC11.txt"
         ]
@@ -317,7 +327,7 @@
     "2009/INT_COG09_S_DEC11.zip": {
         "year": "2009",
         "filename": "INT_COG09_S_DEC11.zip",
-        "md5sum": "b7b829d34045e06a7395c3086a309a5f",
+        "md5sum": "ca22c4bc6d89f9a3fe5f31ba342c02c8",
         "extracted_files": [
             "INT_COG09_S_DEC11.txt"
         ]
