@@ -1313,37 +1313,12 @@
         },
         {
             "type": "file",
-            "name": "download_raw_data_20260308_163239.log",
-            "size_mb": 0.0
-        },
-        {
-            "type": "file",
             "name": "extracted_files_tree.json",
             "size_mb": 0.04
         },
         {
             "type": "file",
             "name": "prepare_raw_data.py",
-            "size_mb": 0.01
-        },
-        {
-            "type": "file",
-            "name": "prepare_raw_data_20260308_163251.log",
-            "size_mb": 0.01
-        },
-        {
-            "type": "file",
-            "name": "prepare_raw_data_20260317_193940.log",
-            "size_mb": 0.01
-        },
-        {
-            "type": "file",
-            "name": "prepare_raw_data_20260317_194243.log",
-            "size_mb": 0.01
-        },
-        {
-            "type": "file",
-            "name": "prepare_raw_data_20260317_194945.log",
             "size_mb": 0.01
         }
     ]

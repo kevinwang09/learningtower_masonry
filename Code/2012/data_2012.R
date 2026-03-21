@@ -29,28 +29,6 @@ start_logging(script_path = here("Code", "2012", "data_2012.R"))
 # extracting the variables dynamically and computing their exact `read_fwf()` widths
 # on the fly directly from the raw original downloaded syntax file natively!
 
-## ----variable_parser_function-------------------------------------------------
-# Helper function to programmatically parse SPSS syntax files and return fwf widths
-parse_spss_syntax <- function(syntax_file_path) {
-  raw_lines <- readLines(syntax_file_path, warn = FALSE)
-  
-  # A regex designed to match SPSS syntax structure like: "CNT 1 - 3 (A)" or "ST13Q01 120 - 121 (F,0)"
-  # It skips any standard text headers like "DATA LIST FILE..." or manually skipped space.
-  sps_format_str <- str_extract(raw_lines, "^[A-Za-z0-9_]+\\s+\\d+\\s+-\\s+\\d+")
-  sps_format_str <- sps_format_str[!is.na(sps_format_str)]
-  
-  var_widths <- tibble(raw = sps_format_str) %>%
-    separate(raw, into = c("names", "start", "dash", "end"), sep = "\\s+") %>%
-    mutate(
-      start = as.numeric(start),
-      end = as.numeric(end),
-      widths = end - start + 1
-    ) %>%
-    select(names, widths)
-    
-  return(var_widths)
-}
-
 ## ----student data processing--------------------------------------------------
 message("Loading raw 2012 student data...")
 

@@ -106,7 +106,7 @@ def generate_file_tree_dict(dir_path):
         return tree
     
     for entry in entries:
-        if entry == '.DS_Store':
+        if entry == '.DS_Store' or entry.endswith('.log'):
             continue
             
         full_path = dir_path / entry

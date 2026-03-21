@@ -241,6 +241,35 @@ safe_save_rds <- function(df, path) {
 
 
 # -------------------------------------------------------------------------
+# SPSS Parser Utility
+# -------------------------------------------------------------------------
+#' Parse SPSS Syntax Files (Fixed-Width Formats)
+#'
+#' Scans raw SPSS syntax files to dynamically determine variable names and
+#' their defined widths, replacing manual file trimming.
+#' @param syntax_file_path The filepath to the .txt or .sps file
+#' @return A tibble with `names` and `widths`
+parse_spss_syntax <- function(syntax_file_path) {
+  raw_lines <- stringr::str_trim(readLines(syntax_file_path, warn = FALSE))
+  
+  # A regex designed to match SPSS syntax structure like: "CNT 1 - 3 (A)" or "ST13Q01 120 - 121 (F,0)"
+  # It skips any standard text headers like "DATA LIST FILE..." or manually skipped space.
+  sps_format_str <- str_extract(raw_lines, "^[A-Za-z0-9_]+\\s+\\d+\\s+-\\s+\\d+")
+  sps_format_str <- sps_format_str[!is.na(sps_format_str)]
+  
+  var_widths <- tibble(raw = sps_format_str) %>%
+    separate(raw, into = c("names", "start", "dash", "end"), sep = "\\s+") %>%
+    mutate(
+      start = as.numeric(start),
+      end = as.numeric(end),
+      widths = end - start + 1
+    ) %>%
+    select(names, widths)
+    
+  return(var_widths)
+}
+
+# -------------------------------------------------------------------------
 # Part 1: Raw Data Extraction
 # -------------------------------------------------------------------------
 #' Extract PISA Source Columns Truthfully
