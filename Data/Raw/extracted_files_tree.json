@@ -140,7 +140,7 @@
                 {
                     "type": "file",
                     "name": "INT_cogn_2003.zip",
-                    "size_mb": 0.01
+                    "size_mb": 9.46
                 },
                 {
                     "type": "file",
@@ -149,8 +149,18 @@
                 },
                 {
                     "type": "file",
+                    "name": "INT_cogn_2003_v2.txt",
+                    "size_mb": 52.94
+                },
+                {
+                    "type": "file",
+                    "name": "INT_schi_2003.txt",
+                    "size_mb": 6.33
+                },
+                {
+                    "type": "file",
                     "name": "INT_schi_2003.zip",
-                    "size_mb": 0.01
+                    "size_mb": 1.21
                 },
                 {
                     "type": "file",
@@ -159,8 +169,13 @@
                 },
                 {
                     "type": "file",
+                    "name": "INT_stui_2003_v2.txt",
+                    "size_mb": 496.46
+                },
+                {
+                    "type": "file",
                     "name": "INT_stui_2003_v2.zip",
-                    "size_mb": 0.01
+                    "size_mb": 97.96
                 },
                 {
                     "type": "file",

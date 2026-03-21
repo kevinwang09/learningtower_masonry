@@ -391,8 +391,10 @@
     "2003/INT_stui_2003_v2.zip": {
         "year": "2003",
         "filename": "INT_stui_2003_v2.zip",
-        "md5sum": "96c15b03d703efd1cd3a737d925ba584",
-        "extracted_files": []
+        "md5sum": "1a0d26428c9523d0fc617a9e91e83d19",
+        "extracted_files": [
+            "INT_stui_2003_v2.txt"
+        ]
     },
     "2006/INT_Cogn06_S_Dec07.zip": {
         "year": "2006",
@@ -405,14 +407,18 @@
     "2003/INT_schi_2003.zip": {
         "year": "2003",
         "filename": "INT_schi_2003.zip",
-        "md5sum": "33cf8a27d73344d8e40ee0ecaf5b09cd",
-        "extracted_files": []
+        "md5sum": "b0cbfd72c98b3aff7b9b78c2a02b2127",
+        "extracted_files": [
+            "INT_schi_2003.txt"
+        ]
     },
     "2003/INT_cogn_2003.zip": {
         "year": "2003",
         "filename": "INT_cogn_2003.zip",
-        "md5sum": "51319685f0966ae3b0b603eb9f6c8d45",
-        "extracted_files": []
+        "md5sum": "5889905915a428037f8db92b152d1530",
+        "extracted_files": [
+            "INT_cogn_2003_v2.txt"
+        ]
     },
     "2000/PISA2000_ESCS.zip": {
         "year": "2000",
