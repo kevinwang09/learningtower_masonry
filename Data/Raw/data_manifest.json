@@ -359,26 +359,34 @@
     "2006/INT_Stu06_Dec07.zip": {
         "year": "2006",
         "filename": "INT_Stu06_Dec07.zip",
-        "md5sum": "ced5fdfd75a78cb6b041604569a2b46e",
-        "extracted_files": []
+        "md5sum": "eadaf592974b4101040adcfd8c8102ee",
+        "extracted_files": [
+            "INT_Stu06_Dec07.txt"
+        ]
     },
     "2006/INT_Par06_Dec07.zip": {
         "year": "2006",
         "filename": "INT_Par06_Dec07.zip",
-        "md5sum": "992caa5413327a18f9c1f13d328f884b",
-        "extracted_files": []
+        "md5sum": "729f5d35bdd547c8ac0a5baccfc48a98",
+        "extracted_files": [
+            "INT_Par06_Dec07.txt"
+        ]
     },
     "2006/INT_Sch06_Dec07.zip": {
         "year": "2006",
         "filename": "INT_Sch06_Dec07.zip",
-        "md5sum": "ac7ba9f3ef9ee5ceb9b67252b5a6a829",
-        "extracted_files": []
+        "md5sum": "fe79232f50b351c955b574d64a97cbdc",
+        "extracted_files": [
+            "INT_Sch06_Dec07.txt"
+        ]
     },
     "2006/INT_Cogn06_T_Dec07.zip": {
         "year": "2006",
         "filename": "INT_Cogn06_T_Dec07.zip",
-        "md5sum": "7cc5433fbebd54bacb1a3dcd77164e14",
-        "extracted_files": []
+        "md5sum": "a93826157b43a11f7420c698b053ba48",
+        "extracted_files": [
+            "INT_Cogn06_T_Dec07.txt"
+        ]
     },
     "2003/INT_stui_2003_v2.zip": {
         "year": "2003",
@@ -389,8 +397,10 @@
     "2006/INT_Cogn06_S_Dec07.zip": {
         "year": "2006",
         "filename": "INT_Cogn06_S_Dec07.zip",
-        "md5sum": "896e210b9f40dca1d2f75e853083eb42",
-        "extracted_files": []
+        "md5sum": "ff4a7fc79ed7220a2849b40f6262459d",
+        "extracted_files": [
+            "INT_Cogn06_S_Dec07.txt"
+        ]
     },
     "2003/INT_schi_2003.zip": {
         "year": "2003",
