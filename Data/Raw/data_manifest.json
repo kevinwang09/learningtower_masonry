@@ -423,8 +423,11 @@
     "2000/PISA2000_ESCS.zip": {
         "year": "2000",
         "filename": "PISA2000_ESCS.zip",
-        "md5sum": "43c2ae9fe58c675a0cc13a8483ccaceb",
-        "extracted_files": []
+        "md5sum": "51f737e7e4b1fadbc8d5b3ae53aed1d7",
+        "extracted_files": [
+            "ESCS_PISA2000.sav",
+            "ESCS_PISA2000.sas7bdat"
+        ]
     },
     "2000/PISAMANUAL1020517.zip": {
         "year": "2000",
@@ -435,8 +438,10 @@
     "2000/intscho.zip": {
         "year": "2000",
         "filename": "intscho.zip",
-        "md5sum": "8fbe1b0a2458bdd3559e6a804b292aae",
-        "extracted_files": []
+        "md5sum": "4d7fb116b30ead05fff8fb3f62e0c753",
+        "extracted_files": [
+            "intscho.txt"
+        ]
     },
     "2000/intcogn_v4.zip": {
         "year": "2000",
@@ -447,20 +452,26 @@
     "2000/intstud_math.zip": {
         "year": "2000",
         "filename": "intstud_math.zip",
-        "md5sum": "57f99563fd4b3e443f3bdf7b9f1a0eb6",
-        "extracted_files": []
+        "md5sum": "6bdecb772c7ec9d665d2aab3b178ce48",
+        "extracted_files": [
+            "intstud_math_v3.txt"
+        ]
     },
     "2000/intstud_scie.zip": {
         "year": "2000",
         "filename": "intstud_scie.zip",
-        "md5sum": "f63aa0d2d8510e75dc0ad415f5404c8c",
-        "extracted_files": []
+        "md5sum": "1bd6f674b59f0c8d58e15801be300696",
+        "extracted_files": [
+            "intstud_scie_v3.txt"
+        ]
     },
     "2000/intstud_read.zip": {
         "year": "2000",
         "filename": "intstud_read.zip",
-        "md5sum": "5890fe4173683b23101765fd6ef64ddb",
-        "extracted_files": []
+        "md5sum": "367c9333e68955e7d86769e2d9bdeb7f",
+        "extracted_files": [
+            "intstud_read_v3.txt"
+        ]
     },
     "PISA_for_Development_Data/STU_QQQ_spss.zip": {
         "year": "PISA_for_Development_Data",

@@ -13,8 +13,18 @@
             "children": [
                 {
                     "type": "file",
+                    "name": "ESCS_PISA2000.sas7bdat",
+                    "size_mb": 4.98
+                },
+                {
+                    "type": "file",
+                    "name": "ESCS_PISA2000.sav",
+                    "size_mb": 9.56
+                },
+                {
+                    "type": "file",
                     "name": "PISA2000_ESCS.zip",
-                    "size_mb": 0.01
+                    "size_mb": 3.75
                 },
                 {
                     "type": "file",
@@ -93,8 +103,13 @@
                 },
                 {
                     "type": "file",
+                    "name": "intscho.txt",
+                    "size_mb": 3.32
+                },
+                {
+                    "type": "file",
                     "name": "intscho.zip",
-                    "size_mb": 0.01
+                    "size_mb": 0.87
                 },
                 {
                     "type": "file",
@@ -104,7 +119,7 @@
                 {
                     "type": "file",
                     "name": "intstud_math.zip",
-                    "size_mb": 0.01
+                    "size_mb": 36.77
                 },
                 {
                     "type": "file",
@@ -113,8 +128,13 @@
                 },
                 {
                     "type": "file",
+                    "name": "intstud_math_v3.txt",
+                    "size_mb": 199.12
+                },
+                {
+                    "type": "file",
                     "name": "intstud_read.zip",
-                    "size_mb": 0.01
+                    "size_mb": 54.9
                 },
                 {
                     "type": "file",
@@ -123,13 +143,23 @@
                 },
                 {
                     "type": "file",
+                    "name": "intstud_read_v3.txt",
+                    "size_mb": 341.9
+                },
+                {
+                    "type": "file",
                     "name": "intstud_scie.zip",
-                    "size_mb": 0.01
+                    "size_mb": 33.14
                 },
                 {
                     "type": "file",
                     "name": "intstud_scie.zip.md5",
                     "size_mb": 0.0
+                },
+                {
+                    "type": "file",
+                    "name": "intstud_scie_v3.txt",
+                    "size_mb": 190.39
                 }
             ]
         },

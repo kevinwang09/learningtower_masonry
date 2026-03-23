@@ -252,21 +252,91 @@ safe_save_rds <- function(df, path) {
 parse_spss_syntax <- function(syntax_file_path) {
   raw_lines <- stringr::str_trim(readLines(syntax_file_path, warn = FALSE))
   
-  # A regex designed to match SPSS syntax structure like: "CNT 1 - 3 (A)" or "ST13Q01 120 - 121 (F,0)"
-  # It skips any standard text headers like "DATA LIST FILE..." or manually skipped space.
-  sps_format_str <- str_extract(raw_lines, "^[A-Za-z0-9_]+\\s+\\d+\\s+-\\s+\\d+")
-  sps_format_str <- sps_format_str[!is.na(sps_format_str)]
+  # Truncate the file at "VALUE LABELS" or "EXECUTE" so our optional-hyphen regex 
+  # doesn't accidentally match lines like 'ST03Q01 1 "Female"' as positions!
+  end_idx <- grep("^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)", toupper(raw_lines))
+  if (length(end_idx) > 0) raw_lines <- raw_lines[1:(end_idx[1] - 1)]
   
-  var_widths <- tibble(raw = sps_format_str) %>%
-    separate(raw, into = c("names", "start", "dash", "end"), sep = "\\s+") %>%
-    mutate(
-      start = as.numeric(start),
-      end = as.numeric(end),
+  # A regex designed to match SPSS syntax structure like: "CNT 1 - 3 (A)" or "ST13Q01 120-121 (F,0)"
+  # It uses explicit capture groups: Name (1), Start (2), and an optional End (3).
+  # ^([A-Za-z0-9_]+) : Capture variable name (Group 1)
+  # \\s+(\\d+)       : Capture start width (Group 2)
+  # (?:\\s*-\\s*     : Enter optional non-capturing group for the hyphen
+  # (\\d+))?         : Capture end width (Group 3) if hyphen exists.
+  extracted <- stringr::str_match(raw_lines, "^([A-Za-z0-9_]+)\\s+(\\d+)(?:\\s*-\\s*(\\d+))?")
+  extracted <- extracted[!is.na(extracted[, 1]), , drop = FALSE]
+  
+  var_widths <- dplyr::tibble(
+      names = extracted[, 2],
+      start = as.numeric(extracted[, 3]),
+      end = as.numeric(extracted[, 4])
+    ) %>%
+    dplyr::mutate(
+      end = ifelse(is.na(end), start, end),
       widths = end - start + 1
     ) %>%
-    select(names, widths)
+    dplyr::select(names, start, end, widths)
     
   return(var_widths)
+}
+
+#' Parse SPSS Value Labels
+#'
+#' Scans raw SPSS syntax files to extract the VALUE LABELS mapping definitions.
+#' Safely isolates both categorical string labels and their encoded numeric/string keys.
+#' @param syntax_file_path The filepath to the .txt or .sps file
+#' @return A tibble with `variables`, `value`, and `label`
+parse_spss_value_labels <- function(syntax_file_path) {
+  raw_lines <- readLines(syntax_file_path, warn = FALSE)
+  
+  # Identify the VALUE LABELS block coordinates
+  start_idx <- grep("^\\s*VALUE\\s+LABELS", toupper(raw_lines))
+  if (length(start_idx) == 0) return(dplyr::tibble(variables = character(), value = character(), label = character()))
+  start_idx <- start_idx[1]
+  
+  # Scan for EOF markers to stop parsing labels
+  end_idx <- grep("^\\s*(MISSING\\s+VALUES|EXECUTE\\.?|FORMATS)", toupper(raw_lines))
+  end_idx <- min(end_idx[end_idx > start_idx], length(raw_lines) + 1)
+  
+  vl_lines <- raw_lines[(start_idx + 1):(end_idx - 1)]
+  vl_lines <- stringr::str_trim(vl_lines)
+  vl_lines <- vl_lines[vl_lines != ""]
+  
+  # Collapse all lines into one solid block, then slice by the SPSS slash '/' delimiter separating variable domains.
+  collapsed <- paste(vl_lines, collapse = " ")
+  blocks <- strsplit(collapsed, "/")[[1]]
+  
+  results <- list()
+  
+  for (block in blocks) {
+    block <- stringr::str_trim(block)
+    if (nchar(block) == 0) next
+    
+    # Capture mapped value/label pairs. Value can be digits securely (1) or quoted string ("036"). Label is strictly quoted.
+    pairs <- stringr::str_match_all(block, '(\\d+|\\"[^\\"]+\\")\\s+\\"([^\\"]+)\\"')[[1]]
+    
+    if (nrow(pairs) > 0) {
+      # The target variables are declared textually immediately before the very first key-value mapping execution.
+      first_pair_start <- regexpr('(\\d+|\\"[^\\"]+\\")\\s+\\"([^\\"]+)\\"', block)[1]
+      vars_str <- stringr::str_trim(substring(block, 1, first_pair_start - 1))
+      
+      # Cleanse arbitrary quotes from mappings and register into vertical frame
+      vals <- stringr::str_remove_all(pairs[, 2], '^\\"|\\"$')
+      labs <- pairs[, 3]
+      
+      results[[length(results) + 1]] <- dplyr::tibble(
+        variables = vars_str,
+        value = vals,
+        label = labs
+      )
+    }
+  }
+  
+  if (length(results) > 0) {
+    return(dplyr::bind_rows(results))
+  } else {
+    return(dplyr::tibble(variables = character(), value = character(), label = character()))
+  }
 }
 
 # -------------------------------------------------------------------------
