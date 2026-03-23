@@ -63,7 +63,7 @@ apply_spss_labels <- function(df, labels_df) {
 message("Loading raw 2000 student data (Read, Math, Science)...")
 
 # Isolate requested curation variables to optimize memory parsing limits
-stu_mapped_vars <- read_csv(here("variable_curation/PISA_variable_curation_student.csv"), show_col_types = FALSE) %>%
+stu_mapped_vars <- read_csv(here("variable_curation/PISA_variable_curation_student.csv"), show_col_types = FALSE, comment = "#") %>%
   filter(year == 2000, !is.na(source_col) & source_col != "NA") %>%
   pull(source_col)
 
@@ -137,7 +137,7 @@ stu_qqq <- extract_raw_pisa(
 ## ----school data processing---------------------------------------------------
 message("Loading raw 2000 school data...")
 
-sch_mapped_vars <- read_csv(here("variable_curation/PISA_variable_curation_school.csv"), show_col_types = FALSE) %>%
+sch_mapped_vars <- read_csv(here("variable_curation/PISA_variable_curation_school.csv"), show_col_types = FALSE, comment = "#") %>%
   filter(year == 2000, !is.na(source_col) & source_col != "NA") %>%
   pull(source_col)
 

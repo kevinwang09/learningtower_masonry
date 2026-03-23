@@ -1,3 +1,12 @@
+# Column Definitions:
+# year: The year of the PISA cycle
+# target_name: Required output variable name in the processed data frame
+# source_col: Name of the variable in the raw source data
+# transformation: The R function applied from the transformation registry to standardize the data
+# na_values: Code or values that represent missing data
+# description: Text mapping or label describing the variable
+# type: Target R variable type (e.g. numeric, character, factor, integer) to assert the final output holds
+# note: Extra contextual information
 year,target_name,source_col,transformation,na_values,description,type,note
 2022,country_iso3c,CNT,as.character,,Country three character,character,
 2022,school_id,CNTSCHID,as.character,,school ID,character,
@@ -150,21 +159,20 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2000,country_iso3c,COUNTRY,as.character,,Country three character,character,
 2000,school_id,SCHOOLID,as.character,,school ID,character,
 2000,student_id,STIDSTD,as.character,,Student ID,character,
-2000,mother_educ,NA,as.character,,Mother <Highest Schooling>,factor,
-2000,father_educ,NA,as.character,,Father <Highest Schooling>,factor,
-2000,gender,ST03Q01,as.character,,Gender,character,encoded as binary
-2000,computer,NA,as.character,,Possessions computer,factor,
-2000,internet,ST21Q04,as.character,,Possessions Internet,character,
+2000,mother_educ,NA,as.character,,Mother <Highest Schooling>,factor,missing in all entries in year 2000
+2000,father_educ,NA,as.character,,Father <Highest Schooling>,factor,missing in all entries in year 2000
+2000,gender,ST03Q01,as.factor,,Gender,factor,encoded as binary
+2000,internet,ST21Q04,yes1no2,,Possessions Internet,factor,
 2000,math,pv1math,as.numeric,,Plausible value 1 in mathematics,numeric,
 2000,read,pv1read,as.numeric,,Plausible value 1 in reading,numeric,
 2000,science,pv1scie,as.numeric,,Plausible value 1 in science,numeric,
 2000,stu_wgt,w_fstuwt,as.numeric,,Final student weight,numeric,
-2000,desk,ST21Q07,as.character,,Possessions desk,character,
-2000,room,ST21Q02,as.character,,Possessions own room,character,
-2000,dishwasher,ST21Q01,as.character,,Possessions dishwasher,character,
-2000,television,ST22Q02,as.character,,How many televisions,character,
-2000,computer_n,ST22Q04,as.character,,How many computers,character,
-2000,car,ST22Q06,as.character,,How many cars,character,
-2000,book,ST37Q01,as.integer,,How many books at home,integer,
+2000,desk,ST21Q07,yes1no2,,Possessions desk,factor,
+2000,room,ST21Q02,yes1no2,,Possessions own room,factor,
+2000,dishwasher,ST21Q01,yes1no2,,Possessions dishwasher,factor,
+2000,television,ST22Q02,none1one2two3threemore4,,How many televisions,factor,
+2000,computer_n,ST22Q04,none1one2two3threemore4,,How many computers,factor,
+2000,car,ST22Q06,none1one2two3threemore4,,How many cars,factor,
+2000,book,ST37Q01,as.factor,,How many books at home,factor,
 2000,wealth,wealth,as.numeric,,Wealth,numeric,
 2000,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,

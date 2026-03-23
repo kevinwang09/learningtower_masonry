@@ -356,7 +356,7 @@ parse_spss_value_labels <- function(syntax_file_path) {
 extract_raw_pisa <- function(target_year, df, mapping_csv_path) {
   
   message(sprintf("\n[Extraction] Reading raw variables and standardizing names for %s...", target_year))
-  schema <- read_csv(mapping_csv_path, show_col_types = FALSE)
+  schema <- read_csv(mapping_csv_path, comment = "#", show_col_types = FALSE)
   
   if (!target_year %in% schema$year) {
     stop(paste("Year", target_year, "not found in the schema file."))
@@ -400,17 +400,93 @@ extract_raw_pisa <- function(target_year, df, mapping_csv_path) {
 # Part 2: Schema Transformations & Standardizations
 # -------------------------------------------------------------------------
 # Registry for string-based transformations
+yes1no2 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "yes",
+    x == 2 ~ "no",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+
+none1one2two3threemore4 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "0", 
+    x == 2 ~ "1",
+    x == 3 ~ "2",
+    x == 4 ~ "3+",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+iscednone1 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "less than ISCED1", 
+    x == 2 ~ "ISCED 1",
+    x == 3 ~ "ISCED 2",
+    x == 4 ~ "ISCED 3B, C",
+    x == 5 ~ "ISCED 3A",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+isced3a1 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "ISCED 3A", 
+    x == 2 ~ "ISCED 3B, C",
+    x == 3 ~ "ISCED 2",
+    x == 4 ~ "ISCED 1",
+    x == 5 ~ "less than ISCED1",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+fe1ma2 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "female",
+    x == 2 ~ "male",
+    TRUE ~ NA_character_
+    ) %>% as.factor()
+}
+
+book_levels_7 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "none",
+    x == 2 ~ "1-10",
+    x == 3 ~ "11-50",
+    x == 4 ~ "51-100",
+    x == 5 ~ "101-250",
+    x == 6 ~ "251-500",
+    x == 7 ~ "more than 500",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
+book_levels_6 = function(x){
+  x = as.integer(x)
+  case_when(
+    x == 1 ~ "0-10",
+    x == 2 ~ "11-25",
+    x == 3 ~ "26-100",
+    x == 4 ~ "101-200",
+    x == 5 ~ "201-500",
+    x == 6 ~ "more than 500",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
 transformation_registry <- list(
   "as.character" = as.character,
   "as.numeric" = as.numeric,
   "as.integer" = as.integer,
   
   # Minimal factor placeholders
-  "isced3a1" = function(x) { as.factor(x) },
-  "fe1ma2" = function(x) { as.factor(x) },
-  "yes1no2" = function(x) { as.factor(x) },
-  "none1one2two3threemore4" = function(x) { as.factor(x) },
-  "public_private" = function(x) { as.factor(x) },
+  "isced3a1" = function(x) { isced3a1(x) },
+  "fe1ma2" = function(x) { fe1ma2(x) },
+  "yes1no2" = function(x) { yes1no2(x) },
+  "none1one2two3threemore4" = function(x) { none1one2two3threemore4(x) },
+  "book_levels_7" = function(x) { book_levels_7(x) },
+  "book_levels_6" = function(x) { book_levels_6(x) },
   
   # Derived calculations for 2022
   "sum_computers" = function(df, cols) {
@@ -434,15 +510,24 @@ transformation_registry <- list(
 #' Apply Transformations and Rename to Target
 #'
 #' Evaluates the extracted raw columns and standardizes them to their `target_name`,
-#' computing derivations and applying typing logic.
+#' computing derivations and applying typing logic. This function also verifies that
+#' the transformed variables match their expected data types.
 #' 
-#' @param target_year The study year (e.g., 2022)
-#' @param df The extracted raw dataframe
-#' @param mapping_csv_path Path to the variable mapping CSV
+#' @param target_year The study year (e.g., 2022) to filter the variable mapping schema.
+#' @param df The extracted raw dataframe containing source columns.
+#' @param mapping_csv_path Path to the variable mapping CSV defining schema and transformations.
+#' @return A new dataframe with transformed, standardized columns as defined by the schema.
 transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
   
   message(sprintf("\n[Transformation] Standardizing names and transformations for %s...", target_year))
-  schema <- read_csv(mapping_csv_path, show_col_types = FALSE) %>% filter(year == target_year)
+  
+  # Load the mapping schema and filter for the target year
+  schema <- read_csv(mapping_csv_path, comment = "#", show_col_types = FALSE) %>% filter(year == target_year)
+  
+  # Perform a check that the number of rows in the schema matches the number of columns in the supplied dataframe
+  if (nrow(schema) != ncol(df)) {
+    stop(sprintf("Dimension mismatch! The schema has %d rows, but the input data frame has %d columns.", nrow(schema), ncol(df)))
+  }
   
   out_cols <- list()
   
@@ -450,40 +535,65 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
     target <- schema$target_name[i]
     source_str <- schema$source_col[i]
     trans_str <- schema$transformation[i]
+    expected_type <- schema$type[i]
     
-    # NA Placeholder handling
+    # Handle NA placeholders when the source column is missing in the design
     if (is.na(source_str) || source_str %in% c("NA", "", "N/A")) {
        out_cols[[target]] <- rep(NA, nrow(df))
        message(sprintf("  -> mapped: %s (NA filler)", target))
        next
     }
     
-    source_cols <- str_split(source_str, "\\s+")[[1]]
-    avail_cols <- intersect(source_cols, names(df))
-    
-    if (length(avail_cols) == 0) {
+    # Check if the target name exists in the supplied data frame
+    if (!(target %in% names(df))) {
        out_cols[[target]] <- rep(NA, nrow(df))
-       message(sprintf("  -> mapped: %s (Source columns missing)", target))
+       message(sprintf("  -> mapped: %s (Target column missing in input data frame)", target))
        next
     }
     
+    # Apply transformation if specified in the schema and available in the registry
     if (!is.na(trans_str) && trans_str %in% names(transformation_registry)) {
       func <- transformation_registry[[trans_str]]
       
+      # Determine if the transformation requires multiple columns (calculations)
+      # Note: If multi-col transformations expect source_cols, they might fail if df only has target_names.
+      # We fall back to standard signature func(df, source_cols) if needed.
       if (trans_str %in% c("sum_computers", "calc_stratio", "calc_schsize", "calc_staffshort")) {
-        if (length(avail_cols) == length(source_cols)) {
-          out_cols[[target]] <- func(df, source_cols)
-        } else {
-          out_cols[[target]] <- rep(NA, nrow(df))
-        }
+        source_cols <- str_split(source_str, "\\s+")[[1]]
+        out_cols[[target]] <- tryCatch({
+          func(df, source_cols)
+        }, error = function(e) {
+          warning(sprintf("Multi-column transformation %s failed for %s. Creating NAs.", trans_str, target))
+          rep(NA, nrow(df))
+        })
       } else {
-        out_cols[[target]] <- func(df[[avail_cols[1]]])
+        # Single column transformation using the supplied data frame's target column
+        out_cols[[target]] <- func(df[[target]])
       }
     } else {
-      out_cols[[target]] <- df[[avail_cols[1]]]
+      # Pass through as-is if no valid transformation is defined
+      out_cols[[target]] <- df[[target]]
     }
     
-    message(sprintf("  -> mapped: %s <- %s [via %s]", target, paste(avail_cols, collapse=" "), ifelse(is.na(trans_str), 'none', trans_str)))
+    # Verify the variable is the designated variable type
+    if (!is.na(expected_type) && expected_type != "") {
+      val <- out_cols[[target]]
+      
+      # We check primarily if it's numeric/integer, factor, or character
+      type_match <- switch(expected_type,
+                           "numeric" = is.numeric(val),
+                           "integer" = is.integer(val) || (is.numeric(val) && all(val == as.integer(val), na.rm = TRUE)),
+                           "character" = is.character(val) || is.logical(val), # allow NAs which are logical
+                           "factor" = is.factor(val) || is.logical(val),
+                           TRUE)
+      
+      if (!type_match && !(all(is.na(val)))) {
+        warning(sprintf("Type validation failed for '%s'. Expected type: '%s', but got: '%s'.", 
+                        target, expected_type, class(val)[1]))
+      }
+    }
+    
+    message(sprintf("  -> mapped: %s [via %s]", target, ifelse(is.na(trans_str), 'none', trans_str)))
   }
   
   message("Binding final unified columns...")

@@ -15,105 +15,71 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Loading package 
-```{r}
-library(tidyverse)
-library(glue)
-library(here)
-library(haven)
-```
+# Loading package
 
 ```{r}
-yes1no2 = function(x){
-  x = as.integer(x)
-  case_when(
-    x == 1 ~ "yes",
-    x == 2 ~ "no",
-    TRUE ~ NA_character_) %>% as.factor()
-}
-
-none1one2two3threemore4 = function(x){
-  x = as.integer(x)
-  case_when(
-    x == 1 ~ "0", 
-    x == 2 ~ "1",
-    x == 3 ~ "2",
-    x == 4 ~ "3+",
-    TRUE ~ NA_character_) %>% as.factor()
-}
-
-iscednone1 = function(x){
-  x = as.integer(x)
-  case_when(
-    x == 1 ~ "less than ISCED1", 
-    x == 2 ~ "ISCED 1",
-    x == 3 ~ "ISCED 2",
-    x == 4 ~ "ISCED 3B, C",
-    x == 5 ~ "ISCED 3A",
-    TRUE ~ NA_character_) %>% as.factor()
-}
-
-isced3a1 = function(x){
-  x = as.integer(x)
-  case_when(
-    x == 1 ~ "ISCED 3A", 
-    x == 2 ~ "ISCED 3B, C",
-    x == 3 ~ "ISCED 2",
-    x == 4 ~ "ISCED 1",
-    x == 5 ~ "less than ISCED1",
-    TRUE ~ NA_character_) %>% as.factor()
-}
-
-fe1ma2 = function(x){
-  x = as.integer(x)
-  case_when(
-    x == 1 ~ "female",
-    x == 2 ~ "male",
-    TRUE ~ NA_character_) %>% as.factor()
-}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(glue)
+  library(here)
+  library(haven)
+})
+source(here("Code/process_pisa.R"))
 ```
-
 
 # 2000 data
+
 ```{r}
+system("Rscript Code/2000/data_2000.R")
+
 stu_2000 = read_rds(here("Data/Output/2000/stu_qqq.rds"))
+```
 
-clean_2000 = stu_2000 %>% 
-  dplyr::transmute(
-    country = country_iso3c %>% as.factor(),
-    school_id = school_id |> as.character(),
-    student_id = student_id |> as.integer(),
-    mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000
-    father_educ = father_educ %>% as.factor(), ## This is all missing in 2000
-    gender = gender %>% fe1ma2(),
-    computer = computer %>% as.factor(), ## This is all missing in 2000
-    internet = internet %>% yes1no2(),
-    math, 
-    read, 
-    science, 
-    stu_wgt, 
-    desk = desk %>% yes1no2(),
-    room = room %>% yes1no2(),
-    dishwasher = dishwasher %>% yes1no2(),
-    television = television %>% none1one2two3threemore4(), 
-    computer_n = computer_n %>% none1one2two3threemore4(), 
-    car = car %>% none1one2two3threemore4(),
-    book = case_when(
-      book == 1 ~ "none",
-      book == 2 ~ "1-10",
-      book == 3 ~ "11-50",
-      book == 4 ~ "51-100",
-      book == 5 ~ "101-250",
-      book == 6 ~ "251-500",
-      book == 7 ~ "more than 500",
-      TRUE ~ NA_character_
-    ) %>% as.factor(),
-    wealth, 
-    escs)
-
+```{r}
+clean_2000 = transform_pisa_variables(
+  target_year = 2000, 
+  df = stu_2000, 
+  mapping_csv_path = here("variable_curation/PISA_variable_curation_student.csv")
+)
 
 skimr::skim(clean_2000)
 ```
+
+<!-- clean_2000 = stu_2000 %>%  -->
+<!--   dplyr::transmute( -->
+<!--     country = country_iso3c %>% as.factor(), -->
+<!--     school_id = school_id |> as.character(), -->
+<!--     student_id = student_id |> as.integer(), -->
+<!--     mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000 -->
+<!--     father_educ = father_educ %>% as.factor(), ## This is all missing in 2000 -->
+<!--     gender = gender %>% fe1ma2(), -->
+<!--     computer = computer %>% as.factor(), ## This is all missing in 2000 -->
+<!--     internet = internet %>% yes1no2(), -->
+<!--     math,  -->
+<!--     read,  -->
+<!--     science,  -->
+<!--     stu_wgt,  -->
+<!--     desk = desk %>% yes1no2(), -->
+  <!--     room = room %>% yes1no2(), -->
+<!--     dishwasher = dishwasher %>% yes1no2(), -->
+<!--     television = television %>% none1one2two3threemore4(),  -->
+<!--     computer_n = computer_n %>% none1one2two3threemore4(),  -->
+<!--     car = car %>% none1one2two3threemore4(), -->
+<!--     book = case_when( -->
+<!--       book == 1 ~ "none", -->
+<!--       book == 2 ~ "1-10", -->
+<!--       book == 3 ~ "11-50", -->
+<!--       book == 4 ~ "51-100", -->
+<!--       book == 5 ~ "101-250", -->
+<!--       book == 6 ~ "251-500", -->
+<!--       book == 7 ~ "more than 500", -->
+<!--       TRUE ~ NA_character_ -->
+<!--     ) %>% as.factor(), -->
+<!--     wealth,  -->
+<!--     escs) -->
+
+
+<!-- skimr::skim(clean_2000) -->
 
 
 
@@ -539,7 +505,7 @@ p = missing_summary %>%
     high = "#287afc",
     breaks = c(0, 0.5, 1),
     labels = scales::label_percent()) +
-    scale_x_discrete(breaks = c(2000, 2003, 2006, 2009, 2012, 2015, 2018, 2022)) +
+  scale_x_discrete(breaks = c(2000, 2003, 2006, 2009, 2012, 2015, 2018, 2022)) +
   labs(title = "Missingness Percentage in the Student Data by Variables and Year",
        x = "Year",
        y = "Variables", 

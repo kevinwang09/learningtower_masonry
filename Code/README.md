@@ -4,19 +4,32 @@ This directory contains the code to ingest, standardize, and transform raw PISA 
 
 We employ a two-step pipeline for processing this data, utilizing centralized schemas (like `variable_curation/PISA_variable_curation_student.csv`) to map variable names across multiple years.
 
+## ELT Data Architecture: Transform Late
+
+To maximize data quality, unbroken lineage, and long-term maintainability, this project strictly adheres to an **ELT (Extract, Load, Transform)** database pattern.
+
+**Architectural Rules:**
+
+1. **Raw Ingestion (Extract/Load):** The individual year scripts (e.g., `Code/<year>/data_<year>.R`) MUST act purely as extractors. They strictly slice out the physical target columns specified in the schemas without modifying the underlying raw integers or string values. This ensures `Data/Output/<year>/` serves as an immutable "bronze" data lake securely mirroring the raw SPSS definitions.
+2. **Centralized Transformation:** All data harmonization, factor coercions, and string decodings strictly happen *as late as possible* in the pipeline (e.g., inside `Code/student_bind_rows.Rmd` or via a dedicated centralized schema engine).
+
+**Why Transform Late?**
+
+- **Data Lineage:** It preserves absolute fidelity to the source binary/text `.sav` structures, meaning pipeline extraction operations don't destructively overwrite the fundamental data representations natively in transit.
+- **Missing Value Protection:** PISA handles missingness inconsistently year-to-year (`99`, `9997`, `M/R`). By transporting the unaltered raw values to the central harmoniser, we maintain maximum analytical visibility over mapping decisions.
+- **Scalability:** Baking single-year edge cases and native translations into individualized ETL scripts fragments the codebase and forces researchers to manage localized, differing outputs, whereas a centralized generic processor handles everything consistently.
+
 ## Two-Step Data Pipeline
 
 ### Step 1: Raw Ingestion (`Code/<year>/data_<year>.R`)
 
-The first step of the pipeline focuses solely on safely and truthfully reading the raw SPSS `.sav` files.
+The first step of the pipeline focuses solely on safely and truthfully reading the raw SPSS files.
 
-For each year (e.g., in `Code/2022/data_2022.R`), we utilize the function `extract_raw_pisa()` from `Code/process_pisa.R`. This function reads the relevant schema CSV (e.g., `variable_curation/PISA_variable_curation_student.csv`), looks for the variables indicated in `source_col`, extracts those raw variables from the `.sav` file, and identically renames them to our unified `target_name`.
+For each year, we utilize the function `extract_raw_pisa()` from `Code/process_pisa.R`. This function reads the relevant schema CSV (e.g., `variable_curation/PISA_variable_curation_student.csv`), looks for the variables indicated in `source_col`, extracts those raw variables from the `.sav` or raw ascii dataset, and identically renames them to our unified `target_name`.
 
 At this stage, **no data transformations or categorical factor conversions occur**. We preserve the original values and data types to prevent masking discrepancies.
 
-The scripts then perform an automated validation check using `safe_save_rds()`, comparing the schema (dimensions and data types) of the new extracted dataframe against the previous `.rds` file (if one exists in the `Data/Output/<year>/` folder). These individual data extraction scripts write fully-transparent, localized timestamps and tracking output into `.log` files cleanly placed next to the scripts.
-
-*(Note: In 2026, the `<year>` folder scripts such as `2022/data_2022.R` are being migrated to use this schema-based approach.)*
+The scripts then perform an automated validation check using `safe_save_rds()`, comparing the schema of the new extracted dataframe against the previous `.rds` file. These scripts write fully-transparent, localized timestamps and tracking output into `.log` files.
 
 ### Step 2: Transformation and Ensembling (`Code/student_bind_rows.Rmd` & `Code/school_bind_rows.Rmd`)
 
