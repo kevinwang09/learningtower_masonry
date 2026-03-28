@@ -29,8 +29,9 @@ stu_var_widths <- parse_spss_syntax(here("Data/Raw/2009/PISA2009_SPSS_student.tx
 
 raw_stu_df <- read_fwf(
   file = here("Data/Raw/2009/INT_STQ09_DEC11.txt"), 
-  col_positions = fwf_widths(
-    stu_var_widths$widths, 
+  col_positions = fwf_positions(
+    stu_var_widths$start,
+    stu_var_widths$end,
     col_names = as.character(stu_var_widths$names)
   ),
   show_col_types = FALSE
@@ -51,8 +52,9 @@ sch_var_widths <- parse_spss_syntax(here("Data/Raw/2009/PISA2009_SPSS_school.txt
 
 raw_sch_df <- read_fwf(
   file = here("Data/Raw/2009/INT_SCQ09_Dec11.txt"), 
-  col_positions = fwf_widths(
-    sch_var_widths$widths, 
+  col_positions = fwf_positions(
+    sch_var_widths$start,
+    sch_var_widths$end,
     col_names = as.character(sch_var_widths$names)
   ),
   show_col_types = FALSE

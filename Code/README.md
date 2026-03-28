@@ -25,6 +25,12 @@ To maximize data quality, unbroken lineage, and long-term maintainability, this 
 
 The first step of the pipeline focuses solely on safely and truthfully reading the raw SPSS files.
 
+> **Developer Note: `fwf_positions` vs `fwf_widths`**
+> When reading raw ASCII `.txt` data files with `readr::read_fwf()`, scripts **MUST** strictly use `fwf_positions(start, end)` instead of `fwf_widths(widths)`.
+>
+> - **The Bug:** Raw fixed-width data files often contain scattered blank spaces meant to be skipped by the SPSS dictionary definitions. Using `fwf_widths()` forces `read_fwf` to ingest contiguous blocks of characters. This causes any defined "skipped spaces" in the raw file to push subsequent columns out of alignment, silently corrupting the ingested dataframe.
+> - **The Solution:** `fwf_positions(start, end)` correctly anchors variables to their explicit absolute string indices, natively hurdling over undocumented whitespace.
+
 For each year, we utilize the function `extract_raw_pisa()` from `Code/process_pisa.R`. This function reads the relevant schema CSV (e.g., `variable_curation/PISA_variable_curation_student.csv`), looks for the variables indicated in `source_col`, extracts those raw variables from the `.sav` or raw ascii dataset, and identically renames them to our unified `target_name`.
 
 At this stage, **no data transformations or categorical factor conversions occur**. We preserve the original values and data types to prevent masking discrepancies.
@@ -36,6 +42,15 @@ The scripts then perform an automated validation check using `safe_save_rds()`, 
 Once the localized `.rds` datasets for all individual years have been cleanly extracted, we execute `Code/student_bind_rows.Rmd` and `Code/school_bind_rows.Rmd`.
 
 These Markdown files load the assembled `.rds` files from `Data/Output/` and apply the heavy, year-specific data transformations (converting numeric values into string-based logical factors) necessary to bind all years longitudinally. The output from these scripts drops the polished data directly into the R-package-ready format within the `Data/Output/Transfer/` folder.
+
+## Year-Specific Data Issues
+
+### PISA 2000: Joining Split Assessment Booklets
+
+When a specific year splits its student data across multiple domain-specific text files (e.g., Reading, Math, and Science in 2000), you **MUST** execute `full_join` strictly via the dataset's explicit primary keys: `c("COUNTRY", "SCHOOLID", "STIDSTD")`.
+
+- **The Issue:** Blindly merging across all identically named overlapping columns across tests (e.g., `intersect(names(df1), names(df2))`) will systematically fabricate thousands of duplicate rows. Even though the demographic columns identically overlap, PISA assigns completely different scaled student inclusion weights (`w_fstuwt`) conditionally for each differing domain sub-test. When `full_join` evaluates the different numeric weights over identical students, it fundamentally interprets a mismatch conflict and splits the student into two disparate rows.
+- **The Resolution:** Designate one test as the primary assessment booklet and selectively extract all generic variables (and `w_fstuwt`) exclusively from it. For all supplementary files, strip them down purely to the primary keys and the target plausible values (e.g. `pv1math`) prior to the `full_join`.
 
 ## Target Schema Structure: Long-Format
 

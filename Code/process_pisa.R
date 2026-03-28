@@ -254,7 +254,7 @@ parse_spss_syntax <- function(syntax_file_path) {
   
   # Truncate the file at "VALUE LABELS" or "EXECUTE" so our optional-hyphen regex 
   # doesn't accidentally match lines like 'ST03Q01 1 "Female"' as positions!
-  end_idx <- grep("^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)", toupper(raw_lines))
+  end_idx <- grep("^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)", raw_lines, ignore.case = TRUE)
   if (length(end_idx) > 0) raw_lines <- raw_lines[1:(end_idx[1] - 1)]
   
   # A regex designed to match SPSS syntax structure like: "CNT 1 - 3 (A)" or "ST13Q01 120-121 (F,0)"
@@ -290,12 +290,12 @@ parse_spss_value_labels <- function(syntax_file_path) {
   raw_lines <- readLines(syntax_file_path, warn = FALSE)
   
   # Identify the VALUE LABELS block coordinates
-  start_idx <- grep("^\\s*VALUE\\s+LABELS", toupper(raw_lines))
+  start_idx <- grep("^\\s*VALUE\\s+LABELS", raw_lines, ignore.case = TRUE)
   if (length(start_idx) == 0) return(dplyr::tibble(variables = character(), value = character(), label = character()))
   start_idx <- start_idx[1]
   
   # Scan for EOF markers to stop parsing labels
-  end_idx <- grep("^\\s*(MISSING\\s+VALUES|EXECUTE\\.?|FORMATS)", toupper(raw_lines))
+  end_idx <- grep("^\\s*(MISSING\\s+VALUES|EXECUTE\\.?|FORMATS)", raw_lines, ignore.case = TRUE)
   end_idx <- min(end_idx[end_idx > start_idx], length(raw_lines) + 1)
   
   vl_lines <- raw_lines[(start_idx + 1):(end_idx - 1)]
@@ -356,15 +356,15 @@ parse_spss_value_labels <- function(syntax_file_path) {
 extract_raw_pisa <- function(target_year, df, mapping_csv_path) {
   
   message(sprintf("\n[Extraction] Reading raw variables and standardizing names for %s...", target_year))
-  schema <- read_csv(mapping_csv_path, comment = "#", show_col_types = FALSE)
+  schema <- readr::read_csv(mapping_csv_path, comment = "#", show_col_types = FALSE)
   
   if (!target_year %in% schema$year) {
     stop(paste("Year", target_year, "not found in the schema file."))
   }
   
   year_mapping <- schema %>% 
-    filter(year == target_year) %>%
-    filter(!is.na(target_name) & target_name != "")
+    dplyr::filter(year == target_year) %>%
+    dplyr::filter(!is.na(target_name) & target_name != "")
   
   out_cols <- list()
   
@@ -402,7 +402,7 @@ extract_raw_pisa <- function(target_year, df, mapping_csv_path) {
 # Registry for string-based transformations
 yes1no2 = function(x){
   x = as.integer(x)
-  case_when(
+  dplyr::case_when(
     x == 1 ~ "yes",
     x == 2 ~ "no",
     TRUE ~ NA_character_) %>% as.factor()
@@ -411,7 +411,7 @@ yes1no2 = function(x){
 
 none1one2two3threemore4 = function(x){
   x = as.integer(x)
-  case_when(
+  dplyr::case_when(
     x == 1 ~ "0", 
     x == 2 ~ "1",
     x == 3 ~ "2",
@@ -421,7 +421,7 @@ none1one2two3threemore4 = function(x){
 
 iscednone1 = function(x){
   x = as.integer(x)
-  case_when(
+  dplyr::case_when(
     x == 1 ~ "less than ISCED1", 
     x == 2 ~ "ISCED 1",
     x == 3 ~ "ISCED 2",
@@ -432,7 +432,7 @@ iscednone1 = function(x){
 
 isced3a1 = function(x){
   x = as.integer(x)
-  case_when(
+  dplyr::case_when(
     x == 1 ~ "ISCED 3A", 
     x == 2 ~ "ISCED 3B, C",
     x == 3 ~ "ISCED 2",
@@ -443,42 +443,31 @@ isced3a1 = function(x){
 
 fe1ma2 = function(x){
   x = as.integer(x)
-  case_when(
+  dplyr::case_when(
     x == 1 ~ "female",
     x == 2 ~ "male",
     TRUE ~ NA_character_
     ) %>% as.factor()
 }
 
-book_levels_7 = function(x){
-  x = as.integer(x)
-  case_when(
-    x == 1 ~ "none",
-    x == 2 ~ "1-10",
-    x == 3 ~ "11-50",
-    x == 4 ~ "51-100",
-    x == 5 ~ "101-250",
-    x == 6 ~ "251-500",
-    x == 7 ~ "more than 500",
-    TRUE ~ NA_character_) %>% as.factor()
-}
-
 book_levels_6 = function(x){
   x = as.integer(x)
-  case_when(
+  dplyr::case_when(
     x == 1 ~ "0-10",
     x == 2 ~ "11-25",
     x == 3 ~ "26-100",
     x == 4 ~ "101-200",
     x == 5 ~ "201-500",
-    x == 6 ~ "more than 500",
+    x == 6 ~ "More than 500",
     TRUE ~ NA_character_) %>% as.factor()
 }
 
 transformation_registry <- list(
+  "as.factor" = as.factor,
   "as.character" = as.character,
   "as.numeric" = as.numeric,
   "as.integer" = as.integer,
+  "as.logical" = as.logical,
   
   # Minimal factor placeholders
   "isced3a1" = function(x) { isced3a1(x) },
@@ -490,7 +479,7 @@ transformation_registry <- list(
   
   # Derived calculations for 2022
   "sum_computers" = function(df, cols) {
-    rowSums(df %>% select(all_of(cols)), na.rm = TRUE)
+    rowSums(df %>% dplyr::select(all_of(cols)), na.rm = TRUE)
   },
   "calc_stratio" = function(df, cols) {
     tot_stu <- df[[cols[1]]] + df[[cols[2]]]
@@ -522,7 +511,7 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
   message(sprintf("\n[Transformation] Standardizing names and transformations for %s...", target_year))
   
   # Load the mapping schema and filter for the target year
-  schema <- read_csv(mapping_csv_path, comment = "#", show_col_types = FALSE) %>% filter(year == target_year)
+  schema <- readr::read_csv(mapping_csv_path, comment = "#", show_col_types = FALSE) %>% dplyr::filter(year == target_year)
   
   # Perform a check that the number of rows in the schema matches the number of columns in the supplied dataframe
   if (nrow(schema) != ncol(df)) {
@@ -588,7 +577,7 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
                            TRUE)
       
       if (!type_match && !(all(is.na(val)))) {
-        warning(sprintf("Type validation failed for '%s'. Expected type: '%s', but got: '%s'.", 
+        stop(sprintf("Type validation failed for '%s'. Expected type: '%s', but got: '%s'.", 
                         target, expected_type, class(val)[1]))
       }
     }
@@ -597,5 +586,41 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
   }
   
   message("Binding final unified columns...")
-  return(bind_cols(out_cols))
+  final_df <- bind_cols(out_cols)
+  
+  # Validation: Primary Keys must be unique and completely non-missing.
+  # If student data, PK = country, school_id, student_id
+  # If school data, PK = country, school_id
+  pk_cols <- character(0)
+  if (all(c("country", "school_id", "student_id") %in% names(final_df))) {
+    pk_cols <- c("country", "school_id", "student_id")
+  } else if (all(c("country", "school_id") %in% names(final_df))) {
+    pk_cols <- c("country", "school_id")
+  }
+  
+  if (length(pk_cols) > 0) {
+    message(sprintf("  -> Validating primary keys: [%s]", paste(pk_cols, collapse = ", ")))
+    
+    # 1. Missing Value Check
+    for (col in pk_cols) {
+      if (any(is.na(final_df[[col]]))) {
+        stop(sprintf("Validation Error: Primary key column '%s' contains missing (NA) values.", col))
+      }
+    }
+    
+    # 2. Uniqueness Check
+    if (nrow(final_df) != nrow(dplyr::distinct(final_df, dplyr::across(dplyr::all_of(pk_cols))))) {
+      duplicates <- final_df %>%
+        dplyr::group_by(dplyr::across(dplyr::all_of(pk_cols))) %>%
+        dplyr::filter(dplyr::n() > 1) %>%
+        dplyr::ungroup() %>%
+        dplyr::arrange(dplyr::across(dplyr::all_of(pk_cols)))
+      
+      message("Found duplicate primary keys in the generated dataset!")
+      print(duplicates)
+      stop(sprintf("Validation Error: The combination of [%s] does not uniquely identify every row. See printed table above for duplicated rows.", paste(pk_cols, collapse = ", ")))
+    }
+  }
+  
+  return(final_df)
 }

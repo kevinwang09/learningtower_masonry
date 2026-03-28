@@ -7,8 +7,9 @@
 # description: Text mapping or label describing the variable
 # type: Target R variable type (e.g. numeric, character, factor, integer) to assert the final output holds
 # note: Extra contextual information
+# PRIMARY KEY NOTE: The combination of country, school_id, and student_id forms a unique primary key for each row. None of these identifiers can contain missing values (NAs).
 year,target_name,source_col,transformation,na_values,description,type,note
-2022,country_iso3c,CNT,as.character,,Country three character,character,
+2022,country,CNT,as.character,,Country three character,character,
 2022,school_id,CNTSCHID,as.character,,school ID,character,
 2022,student_id,CNTSTUID,as.character,,Student ID,character,
 2022,mother_educ,ST005Q01JA,isced3a1,,Mother <Highest Schooling>,factor,
@@ -30,7 +31,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2022,book,ST255Q01JA,as.integer,,How many books at home,integer,
 2022,wealth,,as.numeric,,Wealth,numeric,
 2022,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,
-2018,country_iso3c,CNT,as.character,,Country three character,character,
+2018,country,CNT,as.character,,Country three character,character,
 2018,school_id,CNTSCHID,as.character,,school ID,character,
 2018,student_id,CNTSTUID,as.character,,Student ID,character,
 2018,mother_educ,ST005Q01TA,isced3a1,,Mother <Highest Schooling>,factor,
@@ -51,7 +52,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2018,book,ST013Q01TA,as.integer,,How many books at home,integer,
 2018,wealth,WEALTH,as.numeric,,Wealth,numeric,
 2018,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,
-2015,country_iso3c,CNT,as.character,,Country three character,character,
+2015,country,CNT,as.character,,Country three character,character,
 2015,school_id,CNTSCHID,as.character,,school ID,character,
 2015,student_id,CNTSTUID,as.character,,Student ID,character,
 2015,mother_educ,ST005Q01TA,isced3a1,,Mother <Highest Schooling>,factor,
@@ -72,7 +73,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2015,book,ST013Q01TA,as.integer,,How many books at home,integer,
 2015,wealth,WEALTH,as.numeric,,Wealth,numeric,
 2015,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,
-2012,country_iso3c,CNT,as.character,,Country three character,character,
+2012,country,CNT,as.character,,Country three character,character,
 2012,school_id,SCHOOLID,as.character,,school ID,character,
 2012,student_id,StIDStd,as.character,,Student ID,character,
 2012,mother_educ,ST13Q01,isced3a1,,Mother <Highest Schooling>,factor,
@@ -93,7 +94,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2012,book,ST28Q01,as.integer,,How many books at home,integer,
 2012,wealth,WEALTH,as.integer,,Wealth,integer,
 2012,escs,ESCS,as.integer,,Index of economic social and cultural status,integer,
-2009,country_iso3c,CNT,as.character,,Country three character,character,
+2009,country,CNT,as.character,,Country three character,character,
 2009,school_id,SCHOOLID,as.character,,school ID,character,
 2009,student_id,StIDStd,as.character,,Student ID,character,
 2009,mother_educ,ST10Q01,isced3a1,,Mother <Highest Schooling>,factor,
@@ -114,7 +115,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2009,book,ST22Q01,as.integer,,How many books at home,integer,
 2009,wealth,WEALTH,as.integer,,Wealth,integer,
 2009,escs,ESCS,as.integer,,Index of economic social and cultural status,integer,
-2006,country_iso3c,CNT,as.character,,Country three character,character,
+2006,country,CNT,as.character,,Country three character,character,
 2006,school_id,SCHOOLID,as.character,,school ID,character,
 2006,student_id,STIDSTD,as.character,,Student ID,character,
 2006,mother_educ,ST06Q01,isced3a1,,Mother <Highest Schooling>,factor,
@@ -135,7 +136,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2006,book,ST15Q01,as.integer,,How many books at home,integer,
 2006,wealth,WEALTH,as.integer,,Wealth,integer,
 2006,escs,ESCS,as.integer,,Index of economic social and cultural status,integer,
-2003,country_iso3c,CNT,as.character,,Country three character,character,
+2003,country,CNT,as.factor,,Country three character,factor,
 2003,school_id,SCHOOLID,as.character,,school ID,character,
 2003,student_id,STIDSTD,as.character,,Student ID,character,
 2003,mother_educ,ST11R01,isced3a1,,Mother <Highest Schooling>,factor,
@@ -143,25 +144,26 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2003,gender,ST03Q01,fe1ma2,,Gender,factor,encoded as binary
 2003,computer,ST17Q04,yes1no2,,Possessions computer,factor,
 2003,internet,ST17Q06,yes1no2,,Possessions Internet,factor,
-2003,math,PV1MATH,as.integer,,Plausible value 1 in mathematics,integer,
-2003,read,PV1READ,as.integer,,Plausible value 1 in reading,integer,
-2003,science,PV1SCIE,as.integer,,Plausible value 1 in science,integer,
-2003,stu_wgt,W_FSTUWT,as.integer,,Final student weight,integer,
-2003,desk,ST17Q01,as.character,,Possessions desk,character,
+2003,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2003,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2003,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2003,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2003,desk,ST17Q01,yes1no2,,Possessions desk,factor,
 2003,room,ST17Q02,yes1no2,,Possessions own room,factor,
-2003,dishwasher,ST17Q13,as.character,,Possessions dishwasher,character,
-2003,television,NA,none1one2two3threemore4,,How many televisions,factor,
-2003,computer_n,NA,sum_computers,,How many computers,integer,
-2003,car,NA,none1one2two3threemore4,,How many cars,factor,
-2003,book,ST19Q01,as.integer,,How many books at home,integer,
-2003,wealth,NA,as.integer,,Wealth,integer,
-2003,escs,ESCS,as.integer,,Index of economic social and cultural status,integer,
-2000,country_iso3c,COUNTRY,as.character,,Country three character,character,
+2003,dishwasher,ST17Q13,yes1no2,,Possessions dishwasher,factor,
+2003,television,NA,as.logical,,How many televisions,logical,missing in all entries in year 2003
+2003,computer_n,NA,as.logical,,How many computers,logical,missing in all entries in year 2003
+2003,car,NA,as.logical,,How many cars,logical,missing in all entries in year 2003
+2003,book,ST19Q01,book_levels_6,,How many books at home,factor,
+2003,wealth,NA,as.logical,,Wealth,logical,missing in all entries in year 2003
+2003,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,
+2000,country,COUNTRY,as.factor,,Country three character,factor,
 2000,school_id,SCHOOLID,as.character,,school ID,character,
 2000,student_id,STIDSTD,as.character,,Student ID,character,
-2000,mother_educ,NA,as.character,,Mother <Highest Schooling>,factor,missing in all entries in year 2000
-2000,father_educ,NA,as.character,,Father <Highest Schooling>,factor,missing in all entries in year 2000
+2000,mother_educ,NA,as.logical,,Mother <Highest Schooling>,logical,missing in all entries in year 2000
+2000,father_educ,NA,as.logical,,Father <Highest Schooling>,logical,missing in all entries in year 2000
 2000,gender,ST03Q01,as.factor,,Gender,factor,encoded as binary
+2000,computer,NA,as.logical,,Possessions computer,logical,missing in all entries in year 2000
 2000,internet,ST21Q04,yes1no2,,Possessions Internet,factor,
 2000,math,pv1math,as.numeric,,Plausible value 1 in mathematics,numeric,
 2000,read,pv1read,as.numeric,,Plausible value 1 in reading,numeric,

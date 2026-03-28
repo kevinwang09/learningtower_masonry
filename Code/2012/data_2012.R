@@ -38,8 +38,9 @@ stu_var_widths <- parse_spss_syntax(here("Data/Raw/2012/SPSS syntax to read in s
 
 raw_stu_df <- read_fwf(
   file = here("Data/Raw/2012/INT_STU12_DEC03.txt"), 
-  col_positions = fwf_widths(
-    stu_var_widths$widths, 
+  col_positions = fwf_positions(
+    stu_var_widths$start,
+    stu_var_widths$end,
     col_names = as.character(stu_var_widths$names)
   ),
   show_col_types = FALSE
@@ -61,8 +62,9 @@ sch_var_widths <- parse_spss_syntax(here("Data/Raw/2012/SPSS syntax to read in s
 
 raw_sch_df <- read_fwf(
   file = here("Data/Raw/2012/INT_SCQ12_DEC03.txt"), 
-  col_positions = fwf_widths(
-    sch_var_widths$widths, 
+  col_positions = fwf_positions(
+    sch_var_widths$start,
+    sch_var_widths$end,
     col_names = as.character(sch_var_widths$names)
   ),
   show_col_types = FALSE

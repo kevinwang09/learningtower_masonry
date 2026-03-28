@@ -28,8 +28,13 @@ stu_var_widths <- parse_spss_syntax(here("Data/Raw/2003/PISA2003_SPSS_student.tx
 
 raw_stu_df <- read_fwf(
   file = here("Data/Raw/2003/INT_stui_2003_v2.txt"), 
-  col_positions = fwf_widths(
-    stu_var_widths$widths, 
+  # col_positions = fwf_widths(
+  #   stu_var_widths$widths,
+  #   col_names = as.character(stu_var_widths$names)
+  # ),
+  col_positions = fwf_positions(
+    stu_var_widths$start,
+    stu_var_widths$end,
     col_names = as.character(stu_var_widths$names)
   ),
   show_col_types = FALSE
@@ -50,8 +55,9 @@ sch_var_widths <- parse_spss_syntax(here("Data/Raw/2003/PISA2003_SPSS_school.txt
 
 raw_sch_df <- read_fwf(
   file = here("Data/Raw/2003/INT_schi_2003.txt"), 
-  col_positions = fwf_widths(
-    sch_var_widths$widths, 
+  col_positions = fwf_positions(
+    sch_var_widths$start,
+    sch_var_widths$end,
     col_names = as.character(sch_var_widths$names)
   ),
   show_col_types = FALSE
@@ -65,9 +71,11 @@ sch_qqq <- extract_raw_pisa(
 
 ## ----view summary students----------------------------------------------------
 skimr::skim(stu_qqq) 
+dplyr::glimpse(stu_qqq)
 
 ## ----view summary schools-----------------------------------------------------
-skimr::skim(sch_qqq) 
+skimr::skim(sch_qqq)
+dplyr::glimpse(sch_qqq)
 
 ## ----save files output--------------------------------------------------------
 if (!dir.exists(here("Data/Output/2003"))) {

@@ -93,17 +93,21 @@ raw_scie_df <- read_fwf(
 message("Fusing split text vectors...")
 common_cols <- Reduce(intersect, list(colnames(raw_read_df), colnames(raw_math_df), colnames(raw_scie_df)))
 
-# Isolate the exact subset needed for fusing to minimize memory duplication limits
+pk_cols <- c("COUNTRY", "SCHOOLID", "STIDSTD")
+
+# Isolate the exact subset needed for fusing to minimize memory duplication limits.
+# We pull all core variables & weights natively from the primary Reading assessment,
+# and strictly attach only the distinct plausible values from the Math/Science sub-tests.
 read_sub <- raw_read_df %>% select(all_of(common_cols), pv1read)
-math_sub <- raw_math_df %>% select(all_of(common_cols), pv1math)
-scie_sub <- raw_scie_df %>% select(all_of(common_cols), pv1scie)
+math_sub <- raw_math_df %>% select(all_of(pk_cols), pv1math)
+scie_sub <- raw_scie_df %>% select(all_of(pk_cols), pv1scie)
 
 rm(raw_read_df, raw_math_df, raw_scie_df)
 gc()
 
 pisa_2000_merged <- read_sub %>% 
-  full_join(math_sub, by = common_cols) %>% 
-  full_join(scie_sub, by = common_cols)
+  full_join(math_sub, by = pk_cols) %>% 
+  full_join(scie_sub, by = pk_cols)
 
 # Load ESCS index from standalone SPSS Sav because it lacks text representation
 message("Loading ESCS indexing...")
