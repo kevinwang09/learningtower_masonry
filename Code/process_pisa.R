@@ -525,6 +525,7 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
     source_str <- schema$source_col[i]
     trans_str <- schema$transformation[i]
     expected_type <- schema$type[i]
+    na_str <- schema$na_values[i]
     
     # Handle NA placeholders when the source column is missing in the design
     if (is.na(source_str) || source_str %in% c("NA", "", "N/A")) {
@@ -562,6 +563,21 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
     } else {
       # Pass through as-is if no valid transformation is defined
       out_cols[[target]] <- df[[target]]
+    }
+    
+    # Apply dynamically supplied missing value masks from na_values schema column
+    # NAs can be delimited via semicolon, e.g., "997;999"
+    if (!is.na(na_str) && nchar(as.character(na_str)) > 0) {
+      na_arr <- trimws(unlist(strsplit(as.character(na_str), ";")))
+      for (na_code in na_arr) {
+        # Coerce na_code to numeric if the underlying array is numeric to satisfy dplyr::na_if strict type matching
+        if (is.numeric(out_cols[[target]]) && !is.na(suppressWarnings(as.numeric(na_code)))) {
+          replacement <- as.numeric(na_code)
+        } else {
+          replacement <- na_code
+        }
+        out_cols[[target]] <- dplyr::na_if(out_cols[[target]], replacement)
+      }
     }
     
     # Verify the variable is the designated variable type
