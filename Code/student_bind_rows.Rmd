@@ -33,9 +33,41 @@ source(here("Code/process_pisa.R"))
 system("Rscript Code/2000/data_2000.R")
 
 stu_2000 = read_rds(here("Data/Output/2000/stu_qqq.rds"))
-```
 
-```{r}
+
+# clean_2000 = stu_2000 %>%
+#   dplyr::transmute(
+#     country = country_iso3c %>% as.factor(),
+#     school_id = school_id |> as.character(),
+#     student_id = student_id |> as.integer(),
+#     mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000
+#     father_educ = father_educ %>% as.factor(), ## This is all missing in 2000
+#     gender = gender %>% fe1ma2(),
+#     computer = computer %>% as.factor(), ## This is all missing in 2000
+#     internet = internet %>% yes1no2(),
+#     math,
+#     read,
+#     science,
+#     stu_wgt,
+#     desk = desk %>% yes1no2(),
+#     room = room %>% yes1no2(),
+#     dishwasher = dishwasher %>% yes1no2(),
+#     television = television %>% none1one2two3threemore4(),
+#     computer_n = computer_n %>% none1one2two3threemore4(),
+#     car = car %>% none1one2two3threemore4(),
+#     book = case_when(
+#       book == 1 ~ "none",
+#       book == 2 ~ "1-10",
+#       book == 3 ~ "11-50",
+#       book == 4 ~ "51-100",
+#       book == 5 ~ "101-250",
+#       book == 6 ~ "251-500",
+#       book == 7 ~ "more than 500",
+#       TRUE ~ NA_character_
+#     ) %>% as.factor(),
+#     wealth,
+#     escs)
+
 clean_2000 = transform_pisa_variables(
   target_year = 2000, 
   df = stu_2000, 
@@ -46,53 +78,45 @@ skimr::skim(clean_2000)
 dplyr::glimpse(clean_2000)
 ```
 
-<!-- clean_2000 = stu_2000 %>%  -->
-<!--   dplyr::transmute( -->
-<!--     country = country_iso3c %>% as.factor(), -->
-<!--     school_id = school_id |> as.character(), -->
-<!--     student_id = student_id |> as.integer(), -->
-<!--     mother_educ = mother_educ %>% as.factor(), ## This is all missing in 2000 -->
-<!--     father_educ = father_educ %>% as.factor(), ## This is all missing in 2000 -->
-<!--     gender = gender %>% fe1ma2(), -->
-<!--     computer = computer %>% as.factor(), ## This is all missing in 2000 -->
-<!--     internet = internet %>% yes1no2(), -->
-<!--     math,  -->
-<!--     read,  -->
-<!--     science,  -->
-<!--     stu_wgt,  -->
-<!--     desk = desk %>% yes1no2(), -->
-  <!--     room = room %>% yes1no2(), -->
-<!--     dishwasher = dishwasher %>% yes1no2(), -->
-<!--     television = television %>% none1one2two3threemore4(),  -->
-<!--     computer_n = computer_n %>% none1one2two3threemore4(),  -->
-<!--     car = car %>% none1one2two3threemore4(), -->
-<!--     book = case_when( -->
-<!--       book == 1 ~ "none", -->
-<!--       book == 2 ~ "1-10", -->
-<!--       book == 3 ~ "11-50", -->
-<!--       book == 4 ~ "51-100", -->
-<!--       book == 5 ~ "101-250", -->
-<!--       book == 6 ~ "251-500", -->
-<!--       book == 7 ~ "more than 500", -->
-<!--       TRUE ~ NA_character_ -->
-<!--     ) %>% as.factor(), -->
-<!--     wealth,  -->
-<!--     escs) -->
-
-
-<!-- skimr::skim(clean_2000) -->
-
-
-
 # 2003 data
 
 ```{r}
 system("Rscript Code/2003/data_2003.R")
 
 stu_2003 = read_rds(here("Data/Output/2003/stu_qqq.rds"))
-```
 
-```{r}
+# clean_2003 = stu_2003 %>%
+#   dplyr::transmute(
+#     country = country_iso3c %>% as.factor(),
+#     school_id = school_id |> as.character(),
+#     student_id = student_id |> as.integer(),
+#     mother_educ = mother_educ %>% iscednone1(),
+#     father_educ = father_educ %>% iscednone1(),
+#     gender = gender %>% fe1ma2(),
+#     computer = computer %>% yes1no2(), ## This is a wrong column, see Google Sheets
+#     internet = internet %>% yes1no2(),
+#     math = math %>% as.numeric(),
+#     read = read %>% as.numeric(),
+#     science = science %>% as.numeric(),
+#     stu_wgt = stu_wgt %>% as.numeric(),
+#     desk = desk %>% yes1no2(),
+#     room = room %>% yes1no2(),
+#     dishwasher = dishwasher %>% yes1no2(),
+#     television = television %>% none1one2two3threemore4(),
+#     computer_n = computer_n %>% none1one2two3threemore4(),
+#     car = car %>% none1one2two3threemore4(),
+#     book = case_when(
+#       book == 1 ~ "0-10",
+#       book == 2 ~ "11-25",
+#       book == 3 ~ "26-100",
+#       book == 4 ~ "101-200",
+#       book == 5 ~ "201-500",
+#       book == 6 ~ "more than 500",
+#       TRUE ~ NA_character_
+#     ) %>% as.factor(),
+#     wealth,
+#     escs = escs %>% as.numeric %>% na_if(999))
+
 clean_2003 = transform_pisa_variables(
   target_year = 2003, 
   df = stu_2003, 
@@ -104,46 +128,6 @@ dplyr::glimpse(clean_2003)
 ```
 
 
-<!-- ```{r} -->
-<!-- stu_2003 = read_rds(here("Data/Output/2003/stu_qqq.rds")) -->
-
-<!-- clean_2003 = stu_2003 %>%  -->
-<!--   dplyr::transmute( -->
-<!--     country = country_iso3c %>% as.factor(), -->
-<!--     school_id = school_id |> as.character(), -->
-<!--     student_id = student_id |> as.integer(), -->
-<!--     mother_educ = mother_educ %>% iscednone1(), -->
-<!--     father_educ = father_educ %>% iscednone1(), -->
-<!--     gender = gender %>% fe1ma2(), -->
-<!--     computer = computer %>% yes1no2(), ## This is a wrong column, see Google Sheets -->
-<!--     internet = internet %>% yes1no2(), -->
-<!--     math = math %>% as.numeric(),  -->
-<!--     read = read %>% as.numeric(),  -->
-<!--     science = science %>% as.numeric(),  -->
-<!--     stu_wgt = stu_wgt %>% as.numeric(),  -->
-<!--     desk = desk %>% yes1no2(), -->
-<!--     room = room %>% yes1no2(), -->
-<!--     dishwasher = dishwasher %>% yes1no2(), -->
-<!--     television = television %>% none1one2two3threemore4(),  -->
-<!--     computer_n = computer_n %>% none1one2two3threemore4(),  -->
-<!--     car = car %>% none1one2two3threemore4(), -->
-<!--     book = case_when( -->
-<!--       book == 1 ~ "0-10", -->
-<!--       book == 2 ~ "11-25", -->
-<!--       book == 3 ~ "26-100", -->
-<!--       book == 4 ~ "101-200", -->
-<!--       book == 5 ~ "201-500", -->
-<!--       book == 6 ~ "more than 500", -->
-<!--       TRUE ~ NA_character_ -->
-<!--     ) %>% as.factor(), -->
-<!--     wealth,  -->
-<!--     escs = escs %>% as.numeric %>% na_if(999)) -->
-
-
-<!-- skimr::skim(clean_2003) -->
-<!-- ``` -->
-
-
 # 2006 data
 
 
@@ -151,9 +135,39 @@ dplyr::glimpse(clean_2003)
 system("Rscript Code/2006/data_2006.R")
 
 stu_2006 = read_rds(here("Data/Output/2006/stu_qqq.rds"))
-```
 
-```{r}
+# clean_2006 = stu_2006 %>%
+#   dplyr::transmute(
+#     country = country_iso3c %>% as.factor(),
+#     school_id = school_id |> as.character(),
+#     student_id = student_id |> as.integer(),
+#     mother_educ = mother_educ %>% isced3a1(),
+#     father_educ = father_educ %>% isced3a1(),
+#     gender = gender %>% fe1ma2(),
+#     computer = computer %>% yes1no2(),
+#     internet = internet %>% yes1no2(),
+#     math,
+#     read = read %>% na_if(9997),
+#     science,
+#     stu_wgt,
+#     desk = desk %>% yes1no2(),
+#     room = room %>% yes1no2(),
+#     dishwasher = dishwasher %>% yes1no2(),
+#     television = television %>% none1one2two3threemore4(),
+#     computer_n = computer_n %>% none1one2two3threemore4(),
+#     car = car %>% none1one2two3threemore4(),
+#     book = case_when(
+#       book == 1 ~ "0-10",
+#       book == 2 ~ "11-25",
+#       book == 3 ~ "26-100",
+#       book == 4 ~ "101-200",
+#       book == 5 ~ "201-500",
+#       book == 6 ~ "more than 500",
+#       TRUE ~ NA_character_
+#     ) %>% as.factor(),
+#     wealth = wealth %>% na_if(997) %>% na_if(999),
+#     escs = escs %>% na_if(997) %>% na_if(999))
+
 clean_2006 = transform_pisa_variables(
   target_year = 2006, 
   df = stu_2006, 
@@ -163,46 +177,6 @@ clean_2006 = transform_pisa_variables(
 skimr::skim(clean_2006)
 dplyr::glimpse(clean_2006)
 ```
-
-
-<!-- ```{r} -->
-<!-- stu_2006 = read_rds(here("Data/Output/2006/stu_qqq.rds")) -->
-
-<!-- clean_2006 = stu_2006 %>%  -->
-<!--   dplyr::transmute( -->
-<!--     country = country_iso3c %>% as.factor(), -->
-<!--     school_id = school_id |> as.character(), -->
-<!--     student_id = student_id |> as.integer(), -->
-<!--     mother_educ = mother_educ %>% isced3a1(), -->
-<!--     father_educ = father_educ %>% isced3a1(), -->
-<!--     gender = gender %>% fe1ma2(), -->
-<!--     computer = computer %>% yes1no2(), -->
-<!--     internet = internet %>% yes1no2(), -->
-<!--     math,  -->
-<!--     read = read %>% na_if(9997),  -->
-<!--     science,  -->
-<!--     stu_wgt,  -->
-<!--     desk = desk %>% yes1no2(), -->
-<!--     room = room %>% yes1no2(), -->
-<!--     dishwasher = dishwasher %>% yes1no2(), -->
-<!--     television = television %>% none1one2two3threemore4(),  -->
-<!--     computer_n = computer_n %>% none1one2two3threemore4(),  -->
-<!--     car = car %>% none1one2two3threemore4(), -->
-<!--     book = case_when( -->
-<!--       book == 1 ~ "0-10", -->
-<!--       book == 2 ~ "11-25", -->
-<!--       book == 3 ~ "26-100", -->
-<!--       book == 4 ~ "101-200", -->
-<!--       book == 5 ~ "201-500", -->
-<!--       book == 6 ~ "more than 500", -->
-<!--       TRUE ~ NA_character_ -->
-<!--     ) %>% as.factor(), -->
-<!--     wealth = wealth %>% na_if(997) %>% na_if(999),  -->
-<!--     escs = escs %>% na_if(997) %>% na_if(999)) -->
-
-<!-- skimr::skim(clean_2006) -->
-<!-- ``` -->
-
 
 # 2009 data
 ```{r}
@@ -254,7 +228,9 @@ dplyr::glimpse(clean_2009)
 
 
 # 2012 data
+
 ```{r}
+system("Rscript Code/2012/data_2012.R")
 stu_2012 = read_rds(here("Data/Output/2012/stu_qqq.rds"))
 
 # clean_2012 = stu_2012 %>% 
@@ -301,7 +277,9 @@ dplyr::glimpse(clean_2012)
 
 
 # 2015 data
+
 ```{r}
+system("Rscript Code/2015/data_2015.R")
 stu_2015 = read_rds(here("Data/Output/2015/stu_qqq.rds"))
 
 # clean_2015 = stu_2015 %>% 
