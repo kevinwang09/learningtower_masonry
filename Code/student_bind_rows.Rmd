@@ -375,6 +375,7 @@ dplyr::glimpse(clean_2018)
 
 # 2022 data
 ```{r}
+system("Rscript Code/2022/data_2022.R")
 stu_2022 <- read_rds(here("Data/Output/2022/stu_qqq.rds"))
 
 # clean_2022 <- stu_2022 %>% 
