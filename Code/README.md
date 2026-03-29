@@ -52,6 +52,12 @@ When a specific year splits its student data across multiple domain-specific tex
 - **The Issue:** Blindly merging across all identically named overlapping columns across tests (e.g., `intersect(names(df1), names(df2))`) will systematically fabricate thousands of duplicate rows. Even though the demographic columns identically overlap, PISA assigns completely different scaled student inclusion weights (`w_fstuwt`) conditionally for each differing domain sub-test. When `full_join` evaluates the different numeric weights over identical students, it fundamentally interprets a mismatch conflict and splits the student into two disparate rows.
 - **The Resolution:** Designate one test as the primary assessment booklet and selectively extract all generic variables (and `w_fstuwt`) exclusively from it. For all supplementary files, strip them down purely to the primary keys and the target plausible values (e.g. `pv1math`) prior to the `full_join`.
 
+### PISA 2015
+- **Missing Variables:** The `dishwasher` metric natively does not map accurately due to problematic storage inside the raw 2015 source dictionaries. The column is retained structurally for standardization but is explicitly populated with 100% missing (`NA`) values per legacy convention.
+
+### PISA 2022
+- **Missing Variables:** The `desk`, `dishwasher`, and `wealth` metrics were not uniquely surveyed in the 2022 PISA iteration. These missing components formally retain their standard structural identities within the pipeline payload but default strictly to isolated `NA` collections.
+
 ## Target Schema Structure: Long-Format
 
 As of 2026, we are migrating to a **Long-Format** schema, where each row explicitly defines how a single variable is extracted **for a specific year**. This allows us to handle year-to-year changes in variable names and value encodings smoothly.
