@@ -462,6 +462,14 @@ book_levels_6 = function(x){
     TRUE ~ NA_character_) %>% as.factor()
 }
 
+public_private = function(x){
+  x = as.integer(x)
+  dplyr::case_when(
+    x == 1 ~ "public",
+    x == 2 ~ "private",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
 transformation_registry <- list(
   "as.factor" = as.factor,
   "as.character" = as.character,
@@ -474,7 +482,7 @@ transformation_registry <- list(
   "fe1ma2" = function(x) { fe1ma2(x) },
   "yes1no2" = function(x) { yes1no2(x) },
   "none1one2two3threemore4" = function(x) { none1one2two3threemore4(x) },
-  "book_levels_7" = function(x) { book_levels_7(x) },
+  "public_private" = function(x) { public_private(x) },
   "book_levels_6" = function(x) { book_levels_6(x) },
   
   # Derived calculations for 2022
@@ -541,36 +549,24 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
        next
     }
     
-    # Apply transformation if specified in the schema and available in the registry
-    if (!is.na(trans_str) && trans_str %in% names(transformation_registry)) {
-      func <- transformation_registry[[trans_str]]
-      
-      # Determine if the transformation requires multiple columns (calculations)
-      # Note: If multi-col transformations expect source_cols, they might fail if df only has target_names.
-      # We fall back to standard signature func(df, source_cols) if needed.
-      if (trans_str %in% c("sum_computers", "calc_stratio", "calc_schsize", "calc_staffshort")) {
-        source_cols <- str_split(source_str, "\\s+")[[1]]
-        out_cols[[target]] <- tryCatch({
-          func(df, source_cols)
-        }, error = function(e) {
-          warning(sprintf("Multi-column transformation %s failed for %s. Creating NAs.", trans_str, target))
-          rep(NA, nrow(df))
-        })
-      } else {
-        # Single column transformation using the supplied data frame's target column
-        out_cols[[target]] <- func(df[[target]])
-      }
+    # 1. Initialize output array for transformation
+    if (!is.na(trans_str) && trans_str %in% c("sum_computers", "calc_stratio", "calc_schsize", "calc_staffshort")) {
+      source_cols <- str_split(source_str, "\\s+")[[1]]
+      out_cols[[target]] <- tryCatch({
+        transformation_registry[[trans_str]](df, source_cols)
+      }, error = function(e) {
+        warning(sprintf("Multi-column transformation %s failed for %s. Creating NAs.", trans_str, target))
+        rep(NA, nrow(df))
+      })
     } else {
-      # Pass through as-is if no valid transformation is defined
+      # Initialize cleanly targeting single column properties
       out_cols[[target]] <- df[[target]]
     }
     
-    # Apply dynamically supplied missing value masks from na_values schema column
-    # NAs can be delimited via semicolon, e.g., "997;999"
+    # 2. Apply dynamically supplied missing value masks FIRST!
     if (!is.na(na_str) && nchar(as.character(na_str)) > 0) {
       na_arr <- trimws(unlist(strsplit(as.character(na_str), ";")))
       for (na_code in na_arr) {
-        # Coerce na_code to numeric if the underlying array is numeric to satisfy dplyr::na_if strict type matching
         if (is.numeric(out_cols[[target]]) && !is.na(suppressWarnings(as.numeric(na_code)))) {
           replacement <- as.numeric(na_code)
         } else {
@@ -578,6 +574,12 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
         }
         out_cols[[target]] <- dplyr::na_if(out_cols[[target]], replacement)
       }
+    }
+    
+    # 3. Apply single-column transformation POST-masking cleanly
+    if (!is.na(trans_str) && trans_str %in% names(transformation_registry) && !(trans_str %in% c("sum_computers", "calc_stratio", "calc_schsize", "calc_staffshort"))) {
+      func <- transformation_registry[[trans_str]]
+      out_cols[[target]] <- func(out_cols[[target]])
     }
     
     # Verify the variable is the designated variable type

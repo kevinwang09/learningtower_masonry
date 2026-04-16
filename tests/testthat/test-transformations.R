@@ -48,6 +48,12 @@ test_that("none1one2two3threemore4 handles quantities reliably", {
   expect_s3_class(res, "factor")
 })
 
+test_that("public_private handles conversion", {
+  res <- public_private(c(1, 2, 9, NA))
+  expect_equal(as.character(res), c("public", "private", NA, NA))
+  expect_s3_class(res, "factor")
+})
+
 test_that("book_levels_6 convert properly", {
   # 6 levels test
   res6 <- book_levels_6(c(1, 4, 6, NA))
