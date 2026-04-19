@@ -382,7 +382,11 @@ extract_raw_pisa <- function(target_year, df, mapping_csv_path) {
     # Just take the exact variable name or the first if multiple are listed
     source_col_clean <- str_split(source_str, "\\s+")[[1]][1]
     
-    if (source_col_clean %in% names(df)) {
+    if (target %in% names(df)) {
+        # Check if the target explicitly natively exists inside the pre-compiled dataframe
+        out_cols[[target]] <- df[[target]]
+        message(sprintf("  -> mapped: %s <- pre-processed target explicitly evaluated", target))
+    } else if (source_col_clean %in% names(df)) {
         out_cols[[target]] <- df[[source_col_clean]]
         message(sprintf("  -> mapped: %s <- %s", target, source_col_clean))
     } else {
@@ -483,25 +487,7 @@ transformation_registry <- list(
   "yes1no2" = function(x) { yes1no2(x) },
   "none1one2two3threemore4" = function(x) { none1one2two3threemore4(x) },
   "public_private" = function(x) { public_private(x) },
-  "book_levels_6" = function(x) { book_levels_6(x) },
-  
-  # Derived calculations for 2022
-  "sum_computers" = function(df, cols) {
-    rowSums(df %>% dplyr::select(all_of(cols)), na.rm = TRUE)
-  },
-  "calc_stratio" = function(df, cols) {
-    tot_stu <- df[[cols[1]]] + df[[cols[2]]]
-    tot_tch <- df[[cols[3]]] + df[[cols[4]]]
-    tot_stu / tot_tch
-  },
-  "calc_schsize" = function(df, cols) {
-    df[[cols[1]]] + df[[cols[2]]]
-  },
-  "calc_staffshort" = function(df, cols) {
-    tot_tch <- df[[cols[1]]] + df[[cols[2]]]
-    cert_tch <- df[[cols[3]]] + df[[cols[4]]]
-    1 - (cert_tch / tot_tch)
-  }
+  "book_levels_6" = function(x) { book_levels_6(x) }
 )
 
 #' Apply Transformations and Rename to Target
@@ -550,18 +536,7 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
     }
     
     # 1. Initialize output array for transformation
-    if (!is.na(trans_str) && trans_str %in% c("sum_computers", "calc_stratio", "calc_schsize", "calc_staffshort")) {
-      source_cols <- str_split(source_str, "\\s+")[[1]]
-      out_cols[[target]] <- tryCatch({
-        transformation_registry[[trans_str]](df, source_cols)
-      }, error = function(e) {
-        warning(sprintf("Multi-column transformation %s failed for %s. Creating NAs.", trans_str, target))
-        rep(NA, nrow(df))
-      })
-    } else {
-      # Initialize cleanly targeting single column properties
-      out_cols[[target]] <- df[[target]]
-    }
+    out_cols[[target]] <- df[[target]]
     
     # 2. Apply dynamically supplied missing value masks FIRST!
     if (!is.na(na_str) && nchar(as.character(na_str)) > 0) {
@@ -577,7 +552,7 @@ transform_pisa_variables <- function(target_year, df, mapping_csv_path) {
     }
     
     # 3. Apply single-column transformation POST-masking cleanly
-    if (!is.na(trans_str) && trans_str %in% names(transformation_registry) && !(trans_str %in% c("sum_computers", "calc_stratio", "calc_schsize", "calc_staffshort"))) {
+    if (!is.na(trans_str) && trans_str %in% names(transformation_registry)) {
       func <- transformation_registry[[trans_str]]
       out_cols[[target]] <- func(out_cols[[target]])
     }

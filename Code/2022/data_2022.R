@@ -67,6 +67,14 @@ stu_qqq <- extract_raw_pisa(
 message("Loading raw 2022 school data...")
 sch_raw <- read_sav(here("Data/Raw/2022/CY08MSP_SCH_QQQ.SAV"))
 
+# Preliminary processing mapping pre-computed raw variables cleanly
+sch_raw <- sch_raw %>%
+  dplyr::mutate(
+    staff_shortage = STAFFSHORT,
+    stratio = STRATIO,
+    school_size = SCHSIZE
+  )
+
 sch_qqq <- extract_raw_pisa(
   target_year = 2022,
   df = sch_raw,
