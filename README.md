@@ -44,6 +44,12 @@ In 2026, PISA changed how their data can be accessed, hence a new framework that
 
 # Miscellaneous issues
 
+## Geographical and Regional Representation
+
+In the context of the PISA data and the `learningtower` package, the term "country" is used as a convenient shorthand for the various geographic and administrative entities that participate in the survey. It is important to note that these participating entities often represent specific regions, territories, or sub-national economies, rather than fully sovereign states. 
+
+The nomenclature used in this dataset (including ISO-style codes and region names) strictly reflects the administrative labels provided by the official PISA surveys. It is utilized here solely for data organization and statistical purposes, and does not imply any expression of opinion concerning the legal status or geopolitical designation of any territory or area. Furthermore, please be aware that these administrative labels may evolve from year to year depending on how the PISA organizers designate participating entities.
+
 ## Variable naming consistencies between different years (updated: April 2026)
 
 The main challenge that the contributors encountered was to ensure the consistency of variables between different years. For instance, the highest schooling of a student's mother was never recorded in 2000, but it was coded as "ST11R01" between the years 2003 to 2012 and "ST005Q01TA" between the years 2015 and 2018. These variables were manually curated by all contributors as a factor variable, "mother_educ", in the output data.

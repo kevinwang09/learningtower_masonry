@@ -9,8 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="The Freemasons" />
+<meta name="author" content="Kevin Wang" />
 
+<meta name="date" content="2026-04-19" />
 
 <title>Binding all country code together</title>
 
@@ -350,69 +351,1354 @@ display: none;
 
 
 <h1 class="title toc-ignore">Binding all country code together</h1>
-<h4 class="author">The Freemasons</h4>
-<h4 class="date">Initiated on 19 May 2020</h4>
+<h4 class="author">Kevin Wang</h4>
+<h4 class="date">19 April 2026</h4>
 
 </div>
 
 
 <div id="loading-package" class="section level1">
 <h1>Loading package</h1>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.4     ✔ readr     2.1.5
-## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-## ✔ purrr     1.0.2     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<pre class="r"><code>library(here)</code></pre>
-<pre><code>## here() starts at /Users/kevinwang/projects/learningtower_masonry</code></pre>
+<pre class="r"><code>suppressPackageStartupMessages({
+  library(tidyverse)
+  library(here)
+})</code></pre>
 </div>
-<div id="loading-data" class="section level1">
-<h1>Loading data</h1>
-<pre class="r"><code>load(here(&quot;Data/Output/countrycode_kim.rda&quot;))
-countrycode %&gt;% glimpse()</code></pre>
-<pre><code>## Rows: 98
-## Columns: 2
-## $ country_iso3c &lt;chr&gt; &quot;AZE&quot;, &quot;ARG&quot;, &quot;AUS&quot;, &quot;AUT&quot;, &quot;BEL&quot;, &quot;BRA&quot;, &quot;BGR&quot;, &quot;CAN&quot;, …
-## $ country_name  &lt;chr&gt; &quot;Azerbaijan&quot;, &quot;Argentina&quot;, &quot;Australia&quot;, &quot;Austria&quot;, &quot;Belg…</code></pre>
+<div id="loading-school-sav-files" class="section level1">
+<h1>Loading School SAV files</h1>
+<pre class="r"><code>extract_cnt_labels &lt;- function(file_path) {
+  # Dynamically extract year from filepath
+  year_val &lt;- as.integer(stringr::str_extract(file_path, &quot;20[0-9]{2}&quot;))
+  
+  df &lt;- haven::read_sav(file_path, col_select = c(&quot;CNT&quot;))
+  
+  # Assert that the CNT column is of class haven_labelled
+  stopifnot(&quot;CNT column must be of class &#39;haven_labelled&#39;&quot; = inherits(df$CNT, &quot;haven_labelled&quot;))
+  
+  lbls &lt;- attr(df$CNT, &quot;labels&quot;)
+  
+  if (is.null(lbls)) {
+    return(tibble(year = integer(), country = character(), country_name = character()))
+  }
+  
+  tibble(
+    year = year_val,
+    country = as.character(lbls),
+    country_name = names(lbls)
+  )
+}
+
+sav_files &lt;- c(
+  here(&quot;Data/Raw/2022/CY08MSP_SCH_QQQ.SAV&quot;),
+  here(&quot;Data/Raw/2018/SCH/CY07_MSU_SCH_QQQ.sav&quot;),
+  here(&quot;Data/Raw/2015/CY6_MS_CMB_SCH_QQQ.sav&quot;)
+)
+
+countrycode_sav &lt;- purrr::map_dfr(sav_files, extract_cnt_labels)</code></pre>
+<pre class="r"><code>source(here(&quot;Code/process_pisa.R&quot;))
+
+spss_files &lt;- tibble(
+  year = c(2012, 2009, 2006, 2003, 2000),
+  syntax_file = c(
+    here(&quot;Data/Raw/2012/SPSS syntax to read in school questionnaire data file.txt&quot;),
+    here(&quot;Data/Raw/2009/PISA2009_SPSS_school.txt&quot;),
+    here(&quot;Data/Raw/2006/PISA2006_SPSS_school.txt&quot;),
+    here(&quot;Data/Raw/2003/PISA2003_SPSS_school.txt&quot;),
+    here(&quot;Data/Raw/2000/PISA2000_SPSS_school_questionnaire.txt&quot;)
+  ),
+  data_file = c(
+    here(&quot;Data/Raw/2012/INT_SCQ12_DEC03.txt&quot;),
+    here(&quot;Data/Raw/2009/INT_SCQ09_Dec11.txt&quot;),
+    here(&quot;Data/Raw/2006/INT_Sch06_Dec07.txt&quot;),
+    here(&quot;Data/Raw/2003/INT_schi_2003.txt&quot;),
+    here(&quot;Data/Raw/2000/intscho.txt&quot;)
+  )
+)
+
+extract_spss_cnt_fwf &lt;- function(year_val, syntax_file, data_file) {
+  widths &lt;- parse_spss_syntax(syntax_file)
+  
+  df &lt;- readr::read_fwf(
+    file = data_file, 
+    col_positions = readr::fwf_positions(
+      start = widths$start,
+      end = widths$end,
+      col_names = as.character(widths$names)
+    ),
+    show_col_types = FALSE
+  )
+  
+  # Try to grab CNT if it exists, otherwise COUNTRY
+  if (&quot;CNT&quot; %in% names(df)) {
+    cnt &lt;- as.character(df$CNT)
+  } else if (&quot;COUNTRY&quot; %in% names(df)) {
+    cnt &lt;- as.character(df$COUNTRY)
+  } else {
+    return(tibble(year = integer(), country = character()))
+  }
+  
+  # Clean NA and grab unique codes for this file/year
+  cnt &lt;- unique(cnt[!is.na(cnt)])
+  
+  res &lt;- tibble(year = as.integer(year_val), country = cnt)
+  return(res)
+}
+
+countrycode_spss &lt;- purrr::pmap_dfr(
+  list(spss_files$year, spss_files$syntax_file, spss_files$data_file), 
+  extract_spss_cnt_fwf
+)</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC51Q01 &quot;FE Professional development &lt;96&gt; FE Staff&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 548 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC51Q02 &quot;FE Professional development &lt;96&gt; Non FE Staff&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 549 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC52Q01 &quot;Teaching FE &lt;96&gt; Teachers&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 550 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC52Q02 &quot;Teaching FE &lt;96&gt; NGO&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 551 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;LEADCOM &quot;Framing and communicating the school&lt;92&gt;s goals
+## and curricular development&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 558 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;AUT0007&quot; &quot;AUT - stratum 07 : TYPE 7 Berufsschulen
+## kaufm&lt;e4&gt;nnisch and gewerblich&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;AUT0010&quot; &quot;AUT - stratum 10 : TYPE 10 BMS
+## kaufm&lt;e4&gt;nnisch&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;AUT0014&quot; &quot;AUT - stratum 14 : TYPE 14 BHS
+## kaufm&lt;e4&gt;nnisch&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0307&quot; &quot;BRA - stratum 07 : AMAP&lt;c1&gt; - FEDERAL/ESTADUAL
+## &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0308&quot; &quot;BRA - stratum 08 : AMAP&lt;c1&gt; - MUNICIPAL &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0309&quot; &quot;BRA - stratum 09 : AMAP&lt;c1&gt; - PRIVADA &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0616&quot; &quot;BRA - stratum 16 : CEAR&lt;c1&gt; -
+## FEDERAL/ESTADUAL&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0617&quot; &quot;BRA - stratum 17 : CEAR&lt;c1&gt; - MUNICIPAL &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0618&quot; &quot;BRA - stratum 18 : CEAR&lt;c1&gt; - PRIVADA &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0821&quot; &quot;BRA - stratum 21 : ESP&lt;cd&gt;RITO SANTO -
+## FEDERAL/ESTADUAL&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0822&quot; &quot;BRA - stratum 22 : ESP&lt;cd&gt;RITO SANTO -
+## MUNICIPAL &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0823&quot; &quot;BRA - stratum 23 : ESP&lt;cd&gt;RITO SANTO - PRIVADA
+## &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0924&quot; &quot;BRA - stratum 24 : GOI&lt;c1&gt;S - FEDERAL/ESTADUAL
+## &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0925&quot; &quot;BRA - stratum 25 : GOI&lt;c1&gt;S - MUNICIPAL&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA0926&quot; &quot;BRA - stratum 26 : GOI&lt;c1&gt;S - PRIVADA&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1027&quot; &quot;BRA - stratum 27 : MARANH&lt;c3&gt;O -
+## FEDERAL/ESTADUAL&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1028&quot; &quot;BRA - stratum 28 : MARANH&lt;c3&gt;O - MUNICIPAL&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1029&quot; &quot;BRA - stratum 29 : MARANH&lt;c3&gt;O - PRIVADA&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1439&quot; &quot;BRA - stratum 39 : PAR&lt;c1&gt; - FEDERAL/ESTADUAL
+## &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1440&quot; &quot;BRA - stratum 40 : PAR&lt;c1&gt; - MUNICIPAL &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1441&quot; &quot;BRA - stratum 41 : PAR&lt;c1&gt; - PRIVADA&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1542&quot; &quot;BRA - stratum 42 : PARA&lt;cd&gt;BA -
+## FEDERAL/ESTADUAL &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1543&quot; &quot;BRA - stratum 43 : PARA&lt;cd&gt;BA - MUNICIPAL&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1544&quot; &quot;BRA - stratum 44 : PARA&lt;cd&gt;BA - PRIVADA &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1645&quot; &quot;BRA - stratum 45 : PARAN&lt;c1&gt; - FEDERAL/ESTADUAL
+## &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1646&quot; &quot;BRA - stratum 46 : PARAN&lt;c1&gt; - MUNICIPAL &quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1647&quot; &quot;BRA - stratum 47 : PARAN&lt;c1&gt; - PRIVADA &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1851&quot; &quot;BRA - stratum 51 : PIAU&lt;cd&gt; - FEDERAL/ESTADUAL
+## &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1852&quot; &quot;BRA - stratum 52 : PIAU&lt;cd&gt; - MUNICIPAL&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA1853&quot; &quot;BRA - stratum 53 : PIAU&lt;cd&gt; - PRIVADA&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA2263&quot; &quot;BRA - stratum 63 : ROND&lt;d4&gt;NIA -
+## FEDERAL/ESTADUAL&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA2264&quot; &quot;BRA - stratum 64 : ROND&lt;d4&gt;NIA - MUNICIPAL&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA2265&quot; &quot;BRA - stratum 65 : ROND&lt;d4&gt;NIA - PRIVADA&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA2572&quot; &quot;BRA - stratum 72 : S&lt;c3&gt;O PAULO -
+## FEDERAL/ESTADUAL&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA2573&quot; &quot;BRA - stratum 73 : S&lt;c3&gt;O PAULO - MUNICIPAL&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;BRA2574&quot; &quot;BRA - stratum 74 : S&lt;c3&gt;O PAULO - PRIVADA&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;COL0101&quot; &quot;COL - stratum 01 : BOGOT&lt;c1&gt;&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;COL0404&quot; &quot;COL - stratum 04 : MEDELL&lt;cd&gt;N &quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0005&quot; &quot;ISL - stratum 05 : N&lt;e1&gt;grenni Reykjav&lt;ed&gt;kur /
+## 1-8&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0006&quot; &quot;ISL - stratum 06 : N&lt;e1&gt;grenni Reykjav&lt;ed&gt;kur /
+## 9-16&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0007&quot; &quot;ISL - stratum 07 : N&lt;e1&gt;grenni Reykjav&lt;ed&gt;kur /
+## 17-35&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0008&quot; &quot;ISL - stratum 08 : N&lt;e1&gt;grenni Reykjav&lt;ed&gt;kur /
+## &gt; 35&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0009&quot; &quot;ISL - stratum 09 : Su&lt;f0&gt;urnes / 1-8&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0011&quot; &quot;ISL - stratum 11 : Su&lt;f0&gt;urnes / 17-35&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0012&quot; &quot;ISL - stratum 12 : Su&lt;f0&gt;urnes / &gt;35&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0017&quot; &quot;ISL - stratum 17 : Vestfir&lt;f0&gt;ir / 1-8&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0018&quot; &quot;ISL - stratum 18 : Vestfir&lt;f0&gt;ir / 9-16&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0020&quot; &quot;ISL - stratum 20 : Vestfir&lt;f0&gt;ir / &gt; 35&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0021&quot; &quot;ISL - stratum 21 : Nor&lt;f0&gt;urland vestra / 1-8&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0022&quot; &quot;ISL - stratum 22 : Nor&lt;f0&gt;urland vestra /
+## 9-16&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0023&quot; &quot;ISL - stratum 23 : Nor&lt;f0&gt;urland vestra
+## /17-35&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0024&quot; &quot;ISL - stratum 24 : Nor&lt;f0&gt;urland vestra / &gt;35&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0025&quot; &quot;ISL - stratum 25 : Nor&lt;f0&gt;urland eystra / 1-8&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0027&quot; &quot;ISL - stratum 27 : Nor&lt;f0&gt;urland eystra /
+## 17-35&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0028&quot; &quot;ISL - stratum 28 : Nor&lt;f0&gt;urland eystra / &gt;
+## 35&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0033&quot; &quot;ISL - stratum 33 : Su&lt;f0&gt;urland / 1-8&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0034&quot; &quot;ISL - stratum 34 : Su&lt;f0&gt;urland / 9-16&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0035&quot; &quot;ISL - stratum 35 : Su&lt;f0&gt;urland /17-35&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;ISL0036&quot; &quot;ISL - stratum 36 : Su&lt;f0&gt;urland / &gt; 35&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;POL0001&quot; &quot;POL - stratum 01 : 1 &lt;96&gt; Public Gymnasium&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;POL0002&quot; &quot;POL - stratum 02 : 2 &lt;96&gt; Private Gymnasium&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;POL0003&quot; &quot;POL - stratum 03 : 3 &lt;96&gt; Lycee&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;POL0004&quot; &quot;POL - stratum 04 : 4 &lt;96&gt; Vocational&lt;94&gt;&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0005&quot; &quot;PRT - stratum 05 : Alentejo - Lez&lt;ed&gt;ria do
+## Tejo&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0012&quot; &quot;PRT - stratum 12 : Centro - D&lt;e3&gt;o Laf&lt;f5&gt;es&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0013&quot; &quot;PRT - stratum 13 : Centro - M&lt;e9&gt;dio Tejo&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0020&quot; &quot;PRT - stratum 20 : Lisboa - Pen&lt;ed&gt;nsula de
+## Set&lt;fa&gt;bal&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0021&quot; &quot;PRT - stratum 21 : Norte - Alto
+## Tr&lt;e1&gt;s-os-Montes&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0023&quot; &quot;PRT - stratum 23 : Norte - C&lt;e1&gt;vado&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0028&quot; &quot;PRT - stratum 28 : Norte - T&lt;e2&gt;mega&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0029&quot; &quot;PRT - stratum 29 : Regi&lt;e3&gt;o Aut&lt;f3&gt;noma da
+## Madeira &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;PRT0030&quot; &quot;PRT - stratum 30 : Regi&lt;e3&gt;o Aut&lt;f3&gt;noma dos
+## A&lt;e7&gt;ores&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;QAT0001&quot; &quot;QAT - stratum 01 : 1 &lt;96&gt; Independent&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;QAT0002&quot; &quot;QAT - stratum 02 : 2 &lt;96&gt; Independent complex&quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;QAT0003&quot; &quot;QAT - stratum 03 : 3 &lt;96&gt; Community&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;QAT0004&quot; &quot;QAT - stratum 04 : 4 &lt;96&gt; International&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;QAT0005&quot; &quot;QAT - stratum 05 : 5 &lt;96&gt; Private&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;QAT0006&quot; &quot;QAT - stratum 06 : 6 &lt;96&gt; Private complex&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;024800&quot; &quot;&lt;c5&gt;land Islands&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;038400&quot; &quot;C&lt;f4&gt;te d&#39;Ivoire&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;063800&quot; &quot;R&lt;e9&gt;union&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;065200&quot; &quot;Saint-Barth&lt;e9&gt;lemy &quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07607&quot; &quot;BRA: AMAP&lt;c1&gt; - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1104 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07608&quot; &quot;BRA: AMAP&lt;c1&gt; - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1105 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07609&quot; &quot;BRA: AMAP&lt;c1&gt; - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1106 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07616&quot; &quot;BRA: CEAR&lt;c1&gt; - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1113 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07617&quot; &quot;BRA: CEAR&lt;c1&gt; - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1114 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07618&quot; &quot;BRA: CEAR&lt;c1&gt; - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07622&quot; &quot;BRA: ESP&lt;cd&gt;RITO SANTO - no grade 9&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07623&quot; &quot;BRA: ESP&lt;cd&gt;RITO SANTO - grade 9, SMOP=1&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07624&quot; &quot;BRA: ESP&lt;cd&gt;RITO SANTO - grade 9, SMOP=53&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07625&quot; &quot;BRA: GOI&lt;c1&gt;S - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07626&quot; &quot;BRA: GOI&lt;c1&gt;S - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07627&quot; &quot;BRA: GOI&lt;c1&gt;S - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07628&quot; &quot;BRA: MARANH&lt;c3&gt;O - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07629&quot; &quot;BRA: MARANH&lt;c3&gt;O - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07630&quot; &quot;BRA: MARANH&lt;c3&gt;O - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07640&quot; &quot;BRA: PAR&lt;c1&gt; - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07641&quot; &quot;BRA: PAR&lt;c1&gt; - grade 9, SMOP=1&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07642&quot; &quot;BRA: PAR&lt;c1&gt; - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07643&quot; &quot;BRA: PARA&lt;cd&gt;BA - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07644&quot; &quot;BRA: PARA&lt;cd&gt;BA - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07645&quot; &quot;BRA: PARA&lt;cd&gt;BA - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07646&quot; &quot;BRA: PARAN&lt;c1&gt; - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07647&quot; &quot;BRA: PARAN&lt;c1&gt; - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07648&quot; &quot;BRA: PARAN&lt;c1&gt; - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07652&quot; &quot;BRA: PIAU&lt;cd&gt; - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07653&quot; &quot;BRA: PIAU&lt;cd&gt; - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07654&quot; &quot;BRA: PIAU&lt;cd&gt; - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07664&quot; &quot;BRA: ROND&lt;d4&gt;NIA - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07665&quot; &quot;BRA: ROND&lt;d4&gt;NIA - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07666&quot; &quot;BRA: ROND&lt;d4&gt;NIA - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07673&quot; &quot;BRA: S&lt;c3&gt;O PAULO - no grade 9&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07674&quot; &quot;BRA: S&lt;c3&gt;O PAULO - grade 9, SMOP=1&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;07675&quot; &quot;BRA: S&lt;c3&gt;O PAULO - grade 9, SMOP=53&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;17002&quot; &quot;COL: 02: BOGOT&lt;c1&gt;&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;17003&quot; &quot;COL: 03: C&lt;da&gt;CUTA&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;17006&quot; &quot;COL: 06: MEDELL&lt;cd&gt;N&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25001&quot; &quot;FRA: lyc&lt;e9&gt;e g&lt;e9&gt;n&lt;e9&gt;ral et technologique,
+## ENR&gt;=32&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25002&quot; &quot;FRA: coll&lt;e8&gt;ge, ENR&gt;=32&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25003&quot; &quot;FRA: lyc&lt;e9&gt;e professionnel, ENR&gt;=32&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25004&quot; &quot;FRA: lyc&lt;e9&gt;e agricole, ENR&gt;=32&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;35202&quot; &quot;ISL: 02: N&lt;e1&gt;grenni Reykjav&lt;ed&gt;kur&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;35203&quot; &quot;ISL: 03: Su&lt;f0&gt;urnes&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;35205&quot; &quot;ISL: 05: Vestfir&lt;f0&gt;ir,&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;35206&quot; &quot;ISL: 06: Nor&lt;f0&gt;urland-vestra&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;35207&quot; &quot;ISL: 07: Nor&lt;f0&gt;urland-eystra&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;35209&quot; &quot;ISL: 09: Su&lt;f0&gt;urland&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;39202&quot; &quot;JPN: 2 &lt;96&gt; Public &amp; Practical&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;39203&quot; &quot;JPN: 3 &lt;96&gt; Private &amp; Academic&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;39204&quot; &quot;JPN: 4 &lt;96&gt; Private &amp; Practical&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62005&quot; &quot;PRT: 05: Alentejo - Lez&lt;ed&gt;ria do Tejo&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62012&quot; &quot;PRT: 12: Centro - D&lt;e3&gt;o Laf&lt;f5&gt;es&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62013&quot; &quot;PRT: 13: Centro - M&lt;e9&gt;dio Tejo&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62020&quot; &quot;PRT: 20: Lisboa - Pen&lt;ed&gt;nsula de Set&lt;fa&gt;bal&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62021&quot; &quot;PRT: 21: Norte - Alto Tr&lt;e1&gt;s-os-Montes&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62023&quot; &quot;PRT: 23: Norte - C&lt;e1&gt;vado&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62028&quot; &quot;PRT: 28: Norte - T&lt;e2&gt;mega&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62029&quot; &quot;PRT: 29: Regi&lt;e3&gt;o Aut&lt;f3&gt;noma da Madeira &quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62030&quot; &quot;PRT: 30: Regi&lt;e3&gt;o Aut&lt;f3&gt;noma dos A&lt;e7&gt;ores &quot;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;70203&quot; &quot;SGP: 3 &lt;96&gt; Private Secondary&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;78481&quot; &quot;DUBAI: National &lt;96&gt; Public - Arabic&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;78483&quot; &quot;DUBAI: National &lt;96&gt; Private - Arabic&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&#39;25001&#39; &#39;FRA: Lyc&lt;e9&gt;es g&lt;e9&gt;n&lt;e9&gt;raux et technologiques&#39;&#39;
+## to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 948 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&#39;25002&#39; &#39;FRA: Coll&lt;e8&gt;ges&#39;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 949 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&#39;25003&#39; &#39;FRA: Lyc&lt;e9&gt;es professionnels&#39;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 950 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&#39;25004&#39; &#39;FRA: Lyc&lt;e9&gt;es agricoles&#39;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 951 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC10Q04 &quot;Admittance Parents&lt;92&gt; endorsement Q10d&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 258 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC13Q05 &quot;Assessment school&lt;92&gt;s progress Q13e&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 278 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;SC13Q06 &quot;Assessment teachers&lt;92&gt; effectiveness Q13f&quot;&#39; to a
+## wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 279 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;04010&quot; &quot;Austria: Berufsschule
+## (kaufm&lt;e4&gt;nn./Handel/Verkehr)&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1266 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;04013&quot; &quot;Austria: BMS (kaufm&lt;e4&gt;nnisch/Handelschulen)&quot;&#39; to
+## a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## input string 1268 is invalid</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;04017&quot; &quot;Austria: BHS (kaufm&lt;e4&gt;nnisch)&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;04020&quot; &quot;Austria: Anstalt der
+## Kindergarten-/Sozialp&lt;e4&gt;dagogik&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25001&quot; &quot;France: Lyc&lt;e9&gt;es g&lt;e9&gt;n&lt;e9&gt;raux et
+## technologiques&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25002&quot; &quot;France: Coll&lt;e8&gt;ges&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25003&quot; &quot;France: Lyc&lt;e9&gt;es professionnels&quot;&#39; to a wide
+## string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;25004&quot; &quot;France: Lyc&lt;e9&gt;es agricoles&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning in grep(&quot;^\\s*(VALUE\\s+LABELS|EXECUTE\\.?|VARIABLE\\s+LABELS)&quot;, :
+## unable to translate &#39;&quot;62001&quot; &quot;Portugal: A&lt;e7&gt;ores&quot;&#39; to a wide string</code></pre>
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
+## e.g.:
+##   dat &lt;- vroom(...)
+##   problems(dat)</code></pre>
+<pre class="r"><code># Manually map specific historical and transitional codes as an internal dictionary
+country_manual_dict &lt;- tibble(
+  country = c(&quot;ROM&quot;, &quot;YUG&quot;, &quot;KHM&quot;, &quot;SLV&quot;, &quot;PSE&quot;, &quot;GTM&quot;, &quot;JAM&quot;, &quot;MNG&quot;, &quot;PRY&quot;, &quot;QUR&quot;, &quot;UZB&quot;, &quot;TAP&quot;, &quot;AZB&quot;), 
+  manual_name = c(&quot;Romania&quot;, &quot;Yugoslavia&quot;, &quot;Cambodia&quot;, &quot;El Salvador&quot;, &quot;Palestine&quot;, &quot;Guatemala&quot;, &quot;Jamaica&quot;, &quot;Mongolia&quot;, &quot;Paraguay&quot;, &quot;Ukrainian regions (18 of 27)&quot;, &quot;Uzbekistan&quot;, &quot;Chinese Taipei&quot;, &quot;Azerbaijan&quot;)
+)
+
+# Extract known valid mappings from SAV processing (use earliest known name as historical fallback)
+sav_names_fallback &lt;- countrycode_sav |&gt; 
+  dplyr::filter(!is.na(country_name) &amp; nchar(country_name) &gt; 0) |&gt; 
+  dplyr::group_by(country) |&gt; 
+  dplyr::slice_min(year, n = 1, with_ties = FALSE) |&gt; 
+  dplyr::ungroup() |&gt; 
+  dplyr::select(country, fallback_name = country_name)
+
+# Map SPSS codes safely using the dictionaries
+countrycode_spss_mapped &lt;- countrycode_spss |&gt; 
+  dplyr::left_join(sav_names_fallback, by = &quot;country&quot;) |&gt; 
+  dplyr::left_join(country_manual_dict, by = &quot;country&quot;) |&gt; 
+  dplyr::mutate(country_name = dplyr::coalesce(manual_name, fallback_name)) |&gt; 
+  dplyr::select(year, country, country_name)
+
+# Construct final chronological countrycode ledger
+countrycode &lt;- dplyr::bind_rows(
+  countrycode_sav,
+  countrycode_spss_mapped
+) |&gt; 
+  dplyr::arrange(desc(year), country)</code></pre>
 </div>
-<div id="adding-extra-rows-of-data" class="section level1">
-<h1>Adding extra rows of data</h1>
-<p>According to <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations" class="uri">https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations</a>,
-+ ROM represents Romania before 2002 and + YUG represents Yugoslavia
-before 2003. + KHM represents Cambodia and + SLV represents El Salvador
-and + PSE represents Palestine and + GTM represents Guatemala and + JAM
-represents Jamaica and + MNG represents Mongolia and + PRY represents
-Paraguay and + QUR represents Ukrainian regions (18 of 27), see <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-i-and-ii-country-notes_ed6fbcc5-en/ukrainian-regions-18-of-27_78043794-en.html#" class="uri">https://www.oecd.org/en/publications/pisa-2022-results-volume-i-and-ii-country-notes_ed6fbcc5-en/ukrainian-regions-18-of-27_78043794-en.html#</a>:~:text=The%20designation%20%E2%80%9CUkrainian%20regions%20(18%20of%2027)%E2%80%9D
-+ UZB represents Uzbekistan.</p>
-<p>Above countries are part of the PISA data, but sometimes standard
-country code names will not capture these countries. Hence, we will
-manually add them to what Kim has already curated.</p>
-<pre class="r"><code>countrycode &lt;- countrycode  |&gt;  
-  bind_rows(
-    tibble(
-      country_iso3c = c(&quot;ROM&quot;, &quot;YUG&quot;, &quot;KHM&quot;, &quot;SLV&quot;, &quot;PSE&quot;, &quot;GTM&quot;, &quot;JAM&quot;, &quot;MNG&quot;, &quot;PRY&quot;, &quot;QUR&quot;, &quot;UZB&quot;), 
-      country_name = c(&quot;Romania&quot;, &quot;Yugoslavia&quot;, &quot;Cambodia&quot;, &quot;El Salvador&quot;, &quot;Palestine&quot;, &quot;Guatemala&quot;, &quot;Jamaica&quot;, &quot;Mongolia&quot;, &quot;Paraguay&quot;, &quot;Ukrainian regions (18 of 27)&quot;, &quot;Uzbekistan&quot;))) |&gt; 
-  rename(country = country_iso3c)</code></pre>
-<pre class="r"><code>full_data_transfer_folder = &quot;Data/Output/Transfer/data&quot;
+<div id="historical-and-supplemental-region-mappings" class="section level1">
+<h1>Historical and Supplemental Region Mappings</h1>
+<p>According to <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations">Wikipedia’s
+Transitional Reservations</a>, standard country codes periodically
+change or omit transitional/regional states historically present in the
+PISA surveys. For instance:</p>
+<ul>
+<li><code>ROM</code> represents Romania before 2002</li>
+<li><code>YUG</code> represents Yugoslavia before 2003</li>
+<li><code>KHM</code> represents Cambodia</li>
+<li><code>SLV</code> represents El Salvador</li>
+<li><code>PSE</code> represents Palestine</li>
+<li><code>GTM</code> represents Guatemala</li>
+<li><code>JAM</code> represents Jamaica</li>
+<li><code>MNG</code> represents Mongolia</li>
+<li><code>PRY</code> represents Paraguay</li>
+<li><code>QUR</code> represents Ukrainian regions (18 of 27)</li>
+<li><code>UZB</code> represents Uzbekistan</li>
+</ul>
+<p>Because standard dynamic packages often fail to capture these
+transitional periods accurately, we process them by mapping these
+specific country iso3c codes statically via a manually curated internal
+dictionary (<code>country_manual_dict</code>) incorporated seamlessly
+into the extraction pipeline above.</p>
+</div>
+<div id="audit-against-legacy-package-data" class="section level1">
+<h1>Audit Against Legacy Package Data</h1>
+<p>Before saving, we verify exactly what has changed relative to the
+historical dictionary previously published in the
+<code>learningtower</code> package. This explicit two-sided
+<code>anti_join</code> on both the ISO code and the region name
+highlights any net new entries, deprecated codes, or nomenclature
+adjustments.</p>
+<pre class="r"><code># Safely load the legacy dataset without overwriting our newly built `countrycode` object
+env_legacy &lt;- new.env()
+data(countrycode, package = &quot;learningtower&quot;, envir = env_legacy)
+legacy_countrycode &lt;- env_legacy$countrycode
+
+# Synthesize discrepancies into a unified tracking table natively
+discrepancies &lt;- dplyr::full_join(
+  countrycode |&gt; 
+    dplyr::group_by(country, country_name) |&gt; 
+    dplyr::summarize(years = paste(sort(unique(year)), collapse = &quot;, &quot;), .groups = &quot;drop&quot;),
+  legacy_countrycode |&gt; dplyr::rename(legacy_name = country_name),
+  by = &quot;country&quot;
+) |&gt; 
+  dplyr::group_by(country) |&gt; 
+  dplyr::summarize(
+    legacy_name = unique(legacy_name)[1],
+    legacy_years = paste(na.omit(years[!is.na(country_name) &amp; !is.na(legacy_name) &amp; country_name == legacy_name]), collapse = &quot; ; &quot;),
+    current_name = paste(na.omit(country_name[is.na(legacy_name) | is.na(country_name) | country_name != legacy_name]), collapse = &quot; ; &quot;),
+    current_years = paste(na.omit(years[is.na(legacy_name) | is.na(country_name) | country_name != legacy_name]), collapse = &quot; ; &quot;),
+    .groups = &quot;drop&quot;
+  ) |&gt; 
+  # Isolate only the rows that do not align perfectly (i.e., any current name exists, or it was completely dropped)
+  dplyr::filter(current_name != &quot;&quot; | (legacy_years == &quot;&quot; &amp; !is.na(legacy_name))) |&gt; 
+  dplyr::mutate(
+    status = dplyr::case_when(
+      is.na(legacy_name) ~ &quot;New Addition&quot;,
+      current_name == &quot;&quot; ~ &quot;Dropped Legacy&quot;,
+      TRUE               ~ &quot;Nomenclature Change&quot;
+    )
+  ) |&gt; 
+  dplyr::arrange(status, country)
+
+# Render beautifully using gt to explicitly classify discrepancy semantics
+discrepancies |&gt; 
+  gt::gt() |&gt; 
+  gt::tab_style(
+    style = gt::cell_fill(color = &quot;#e6ffe6&quot;), # Light green
+    locations = gt::cells_body(rows = status == &quot;New Addition&quot;)
+  ) |&gt; 
+  gt::tab_style(
+    style = gt::cell_fill(color = &quot;#ffe6e6&quot;), # Light pink
+    locations = gt::cells_body(rows = status == &quot;Dropped Legacy&quot;)
+  ) |&gt; 
+  gt::tab_style(
+    style = gt::cell_fill(color = &quot;#fffbe6&quot;), # Light yellow
+    locations = gt::cells_body(rows = status == &quot;Nomenclature Change&quot;)
+  ) |&gt; 
+  gt::tab_header(
+    title = &quot;Country Nomenclature Discrepancies&quot;,
+    subtitle = &quot;Comparing freshly parsed mappings vs learningtower legacy data&quot;
+  ) |&gt; 
+  gt::cols_label(
+    country = &quot;ISO Code&quot;,
+    legacy_name = &quot;Legacy Name&quot;,
+    legacy_years = &quot;Legacy Years&quot;,
+    current_name = &quot;Current Name&quot;,
+    current_years = &quot;Current Years&quot;,
+    status = &quot;Delta&quot;
+  )</code></pre>
+<div id="lqcymxskel" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lqcymxskel table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+#lqcymxskel thead, #lqcymxskel tbody, #lqcymxskel tfoot, #lqcymxskel tr, #lqcymxskel td, #lqcymxskel th {
+border-style: none;
+}
+#lqcymxskel p {
+margin: 0;
+padding: 0;
+}
+#lqcymxskel .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#lqcymxskel .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#lqcymxskel .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#lqcymxskel .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#lqcymxskel .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#lqcymxskel .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#lqcymxskel .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#lqcymxskel .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#lqcymxskel .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#lqcymxskel .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#lqcymxskel .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#lqcymxskel .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#lqcymxskel .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#lqcymxskel .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#lqcymxskel .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#lqcymxskel .gt_from_md > :first-child {
+margin-top: 0;
+}
+#lqcymxskel .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#lqcymxskel .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#lqcymxskel .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#lqcymxskel .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#lqcymxskel .gt_row_group_first td {
+border-top-width: 2px;
+}
+#lqcymxskel .gt_row_group_first th {
+border-top-width: 2px;
+}
+#lqcymxskel .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#lqcymxskel .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#lqcymxskel .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#lqcymxskel .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#lqcymxskel .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#lqcymxskel .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#lqcymxskel .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#lqcymxskel .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#lqcymxskel .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#lqcymxskel .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#lqcymxskel .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#lqcymxskel .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#lqcymxskel .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#lqcymxskel .gt_left {
+text-align: left;
+}
+#lqcymxskel .gt_center {
+text-align: center;
+}
+#lqcymxskel .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#lqcymxskel .gt_font_normal {
+font-weight: normal;
+}
+#lqcymxskel .gt_font_bold {
+font-weight: bold;
+}
+#lqcymxskel .gt_font_italic {
+font-style: italic;
+}
+#lqcymxskel .gt_super {
+font-size: 65%;
+}
+#lqcymxskel .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#lqcymxskel .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#lqcymxskel .gt_indent_1 {
+text-indent: 5px;
+}
+#lqcymxskel .gt_indent_2 {
+text-indent: 10px;
+}
+#lqcymxskel .gt_indent_3 {
+text-indent: 15px;
+}
+#lqcymxskel .gt_indent_4 {
+text-indent: 20px;
+}
+#lqcymxskel .gt_indent_5 {
+text-indent: 25px;
+}
+#lqcymxskel .katex-display {
+display: inline-flex !important;
+margin-bottom: 0.75em !important;
+}
+#lqcymxskel div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="6" class="gt_heading gt_title gt_font_normal" style>Country Nomenclature Discrepancies</td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Comparing freshly parsed mappings vs learningtower legacy data</td>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="country">ISO Code</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="legacy_name">Legacy Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="legacy_years">Legacy Years</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="current_name">Current Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="current_years">Current Years</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="status">Delta</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">AZE</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Azerbaijan</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2006, 2009</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">KGZ</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Kyrgyzstan</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2006, 2009</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">LIE</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Liechtenstein</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2003, 2006, 2009, 2012</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">MUS</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Mauritius</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2009</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">QCN</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Shanghai-China</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2009, 2012</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">QHP</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Himachal Pradesh-India</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2009</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">QRS</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Perm(Russian Federation)</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2012</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">QTN</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Tamil Nadu-India</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2009</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">QVE</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Miranda-Venezuela</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;">2009</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFE6E6;">ROM</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFE6E6;">Romania</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFE6E6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFE6E6;"></td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFE6E6;">Dropped Legacy</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">BFL</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">Belgium (Flemish)</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">BFR</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">Belgium (French)</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">CHN</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">China</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">QCY</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">Cyprus</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015, 2018, 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">QMC</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">Moscow City (RUS)</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2018</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">QSC</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">Scotland</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">QUK</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">United Kingdom - excl. Scotland</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #E6FFE6;">ZZZ</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #E6FFE6;">NA</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #E6FFE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #E6FFE6;">International Master</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #E6FFE6;">2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #E6FFE6;">New Addition</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">BIH</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Bosnia &amp; Herzegovina</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Bosnia and Herzegovina</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2018</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">BRN</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Brunei</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Brunei Darussalam</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2018, 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">CZE</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Czechia</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Czech Republic</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018, 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">HKG</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Hong Kong SAR China</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Hong Kong ; Hong Kong (China)</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018 ; 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">KOR</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">South Korea</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Korea</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018, 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">MAC</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Macau SAR China</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Macao ; Macao (China)</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018 ; 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">MDA</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Moldova</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;">2009, 2015, 2018</td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Republic of Moldova</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">MKD</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Macedonia</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">FYROM ; North Macedonia</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2015 ; 2018, 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">PSE</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Palestine</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Palestinian Authority</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">RUS</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Russia</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Russian Federation</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">SVK</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Slovakia</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Slovak Republic</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018, 2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">TTO</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Trinidad &amp; Tobago</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;"></td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Trinidad and Tobago</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2009, 2015</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">TUR</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Turkey</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;">2003, 2006, 2009, 2012, 2015, 2018</td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Türkiye</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+    <tr><td headers="country" class="gt_row gt_left" style="background-color: #FFFBE6;">VNM</td>
+<td headers="legacy_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Vietnam</td>
+<td headers="legacy_years" class="gt_row gt_right" style="background-color: #FFFBE6;">2012, 2015, 2018</td>
+<td headers="current_name" class="gt_row gt_left" style="background-color: #FFFBE6;">Viet Nam</td>
+<td headers="current_years" class="gt_row gt_left" style="background-color: #FFFBE6;">2022</td>
+<td headers="status" class="gt_row gt_left" style="background-color: #FFFBE6;">Nomenclature Change</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+<div id="saving-the-curated-country-registry" class="section level1">
+<h1>Saving the Curated Country Registry</h1>
+<p>We finally export the standardized registry mapping for deployment in
+the main package. Note that we ensure <code>distinct()</code> is applied
+right before export and the chronological <code>year</code> anchor is
+intentionally dropped to finalize the schema.</p>
+<pre class="r"><code># Drop metadata explicitly before finalize 
+countrycode &lt;- countrycode |&gt; 
+  dplyr::select(country, country_name) |&gt; 
+  dplyr::distinct()
+
+full_data_transfer_folder &lt;- &quot;Data/Output/Transfer/data&quot;
 dir.create(here(full_data_transfer_folder), recursive = TRUE, showWarnings = FALSE)
-save(countrycode, file = here(full_data_transfer_folder, &quot;countrycode.rda&quot;), compress = &quot;xz&quot;)</code></pre>
+# save(countrycode, file = here(full_data_transfer_folder, &quot;countrycode.rda&quot;), compress = &quot;xz&quot;)</code></pre>
 </div>
 <div id="session-info" class="section level1">
 <h1>Session Info</h1>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.4.2 (2024-10-31)
+<pre><code>## R version 4.5.3 (2026-03-11)
 ## Platform: aarch64-apple-darwin20
-## Running under: macOS Sonoma 14.7.1
+## Running under: macOS Sequoia 15.3.1
 ## 
 ## Matrix products: default
-## BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
-## LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
 ## 
 ## locale:
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -424,21 +1710,23 @@ save(countrycode, file = here(full_data_transfer_folder, &quot;countrycode.rda&q
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] here_1.0.1      lubridate_1.9.3 forcats_1.0.0   stringr_1.5.1  
-##  [5] dplyr_1.1.4     purrr_1.0.2     readr_2.1.5     tidyr_1.3.1    
-##  [9] tibble_3.2.1    ggplot2_3.5.1   tidyverse_2.0.0
+##  [1] haven_2.5.5     here_1.0.2      lubridate_1.9.5 forcats_1.0.1  
+##  [5] stringr_1.6.0   dplyr_1.2.0     purrr_1.2.1     readr_2.2.0    
+##  [9] tidyr_1.3.2     tibble_3.3.1    ggplot2_4.0.2   tidyverse_2.0.0
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] gtable_0.3.6      jsonlite_1.8.9    compiler_4.4.2    tidyselect_1.2.1 
-##  [5] jquerylib_0.1.4   scales_1.3.0      yaml_2.3.10       fastmap_1.2.0    
-##  [9] R6_2.5.1          generics_0.1.3    knitr_1.49        rprojroot_2.0.4  
-## [13] munsell_0.5.1     bslib_0.8.0       pillar_1.9.0      tzdb_0.4.0       
-## [17] rlang_1.1.4       utf8_1.2.4        stringi_1.8.4     cachem_1.1.0     
-## [21] xfun_0.49         sass_0.4.9        timechange_0.3.0  cli_3.6.3        
-## [25] withr_3.0.2       magrittr_2.0.3    digest_0.6.37     grid_4.4.2       
-## [29] rstudioapi_0.17.1 hms_1.1.3         lifecycle_1.0.4   vctrs_0.6.5      
-## [33] evaluate_1.0.1    glue_1.8.0        fansi_1.0.6       colorspace_2.1-1 
-## [37] rmarkdown_2.29    tools_4.4.2       pkgconfig_2.0.3   htmltools_0.5.8.1</code></pre>
+##  [1] gt_1.3.0           sass_0.4.10        generics_0.1.4     xml2_1.5.2        
+##  [5] stringi_1.8.7      hms_1.1.4          digest_0.6.39      magrittr_2.0.4    
+##  [9] evaluate_1.0.5     grid_4.5.3         timechange_0.4.0   RColorBrewer_1.1-3
+## [13] fastmap_1.2.0      rprojroot_2.1.1    jsonlite_2.0.0     scales_1.4.0      
+## [17] jquerylib_0.1.4    cli_3.6.5          rlang_1.1.7        crayon_1.5.3      
+## [21] bit64_4.6.0-1      withr_3.0.2        cachem_1.1.0       yaml_2.3.12       
+## [25] otel_0.2.0         tools_4.5.3        parallel_4.5.3     tzdb_0.5.0        
+## [29] vctrs_0.7.2        R6_2.6.1           lifecycle_1.0.5    fs_2.0.1          
+## [33] bit_4.6.0          vroom_1.7.0        pkgconfig_2.0.3    pillar_1.11.1     
+## [37] bslib_0.10.0       gtable_0.3.6       glue_1.8.0         xfun_0.57         
+## [41] tidyselect_1.2.1   rstudioapi_0.18.0  knitr_1.51         farver_2.1.2      
+## [45] htmltools_0.5.9    rmarkdown_2.31     compiler_4.5.3     S7_0.2.1</code></pre>
 </div>
 
 
