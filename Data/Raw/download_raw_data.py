@@ -39,7 +39,7 @@ def load_manifest():
                 return {}
     return {}
 
-def update_manifest_md5(key, md5sum, year_name, filename):
+def update_manifest_md5(key, md5sum, year_name, filename, url=None):
     with manifest_lock:
         manifest = load_manifest()
         if key not in manifest:
@@ -47,6 +47,8 @@ def update_manifest_md5(key, md5sum, year_name, filename):
         manifest[key]['year'] = year_name
         manifest[key]['filename'] = filename
         manifest[key]['md5sum'] = md5sum
+        if url is not None:
+            manifest[key]['url'] = url
         if 'extracted_files' not in manifest[key]:
             manifest[key]['extracted_files'] = []
         with open(MANIFEST_FILE, 'w', encoding='utf-8') as f:
@@ -99,7 +101,8 @@ def save_file(url, folder, year_name, position=0, dry_run=False):
                 # File already downloaded and matches MD5. 
                 # Ensure the manifest is updated since it might have used the .md5 fallback
                 if not dry_run:
-                    update_manifest_md5(manifest_key, current_md5, year_name, filename)
+                    update_manifest_md5(manifest_key, current_md5, year_name, filename, url)
+                logging.info(f"Skipping {file_path}: already exists and MD5 matches.")
                 return
                 
         if dry_run:
@@ -132,7 +135,8 @@ def save_file(url, folder, year_name, position=0, dry_run=False):
                 if not os.path.exists(md5_path):
                     with open(md5_path, 'w') as f:
                         f.write(md5_hash)
-                update_manifest_md5(manifest_key, md5_hash, year_name, filename)
+                update_manifest_md5(manifest_key, md5_hash, year_name, filename, url)
+                logging.info(f"Skipping {file_path}: already exists and local file size matches remote size.")
                 return
             elif total_size > 0 and local_size < total_size:
                 resume_byte_pos = local_size
@@ -179,7 +183,7 @@ def save_file(url, folder, year_name, position=0, dry_run=False):
         with open(md5_path, 'w') as f:
             f.write(md5_hash)
             
-        update_manifest_md5(manifest_key, md5_hash, year_name, filename)
+        update_manifest_md5(manifest_key, md5_hash, year_name, filename, url)
             
         # Be polite to the server
         time.sleep(DELAY)
