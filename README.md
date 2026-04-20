@@ -2,7 +2,7 @@
 
 This is the code respository for curating the `learningtower` package in `R`. This package is currently available at <https://github.com/kevinwang09/learningtower> and via CRAN at <https://cran.r-project.org/web/packages/learningtower/index.html>.
 
-The `learningtower` package contains a subset of the [PISA data published by OECD](https://www.oecd.org/pisa/data/). The data curated by OECD is very comprehensive but can be formidable for exploratory data analysis. The most intensive component of publishing the `learningtower` package is the curation of the triennial data to ensure consistency. This repository, `learningtower_masonry` is a repo that documents clearly how every data is curated from its raw form to a curated form. 
+The `learningtower` package contains a subset of the [PISA data published by OECD](https://www.oecd.org/pisa/data/). The data curated by OECD is very comprehensive but can be formidable for exploratory data analysis. The most intensive component of publishing the `learningtower` package is the curation of the triennial data to ensure consistency. This repository, `learningtower_masonry` is a repo that documents clearly how every data is curated from its raw form to a curated form.
 
 # Acknowledgment of authorship
 
@@ -10,46 +10,48 @@ The `learningtower` package contains a subset of the [PISA data published by OEC
   
 + This data was later curated by Priya Dingorkar, Guan Ru Chen and Shabarish from Monash University, under the supervision of Dr Kevin Wang and Professor Di Cook.
 
-
 # Data structrure
 
-It is important to recognise the structure of the PISA data being curated. Every 3 years, the PISA data is published with: 
+It is important to recognise the structure of the PISA data being curated. Every 3 years, the PISA data is published with:
 
 + Student questionnaire, typically named as "STU_QQQ.zip".
 + School questionnaire, typically named as "SCH_QQQ.zip".
 + Teacher questionnaire, typically named as "TCH_QQQ.zip".
-+ "Code books", which are similar to data dictionaries. 
++ "Code books", which are similar to data dictionaries.
 
-The questionnarie zip folders can contain data in either SAS or SPSS formats. Depending on the data specifications of that year, these data can be read by their respective proprietary software or through open-source `R` libraries. The code books are always in Excel file formats. 
+The questionnarie zip folders can contain data in either SAS or SPSS formats. Depending on the data specifications of that year, these data can be read by their respective proprietary software or through open-source `R` libraries. The code books are always in Excel file formats.
 
-**In the `learningtower` package we only curate**: 
+**In the `learningtower` package we only curate**:
 
 1. Student data
 2. School data
 3. Country data
 
-Since the list of countries do not differ significantly between the years, the student and school data are typically the ones that needs to be updated upon new publication of PISA data. 
+Since the list of countries do not differ significantly between the years, the student and school data are typically the ones that needs to be updated upon new publication of PISA data.
 
-
-## Workflow to cureate new data (updated: Nov 2024)
+## Workflow to cureate new data (updated: April 2026)
 
 Please consult with either Kevin Wang or Di Cook about adding new data.
 
-  - Download the raw data into `Data/Raw` folder. Raw data should be documented in `Data/download_urls.csv`. **Due to size constraints, the raw data were never committed to GitHub. You should set up the proper folder structures using .gitkeep.** See how this is done for previous years. 
-  - Add new code books into the `codebook` folder.
-  - Create a new Rmarkdown/Quarto to document how the raw data should be curated into a cleaned format that is ready to be used in the `R` package. This document should be added to the folder `Code/yyyy`. Consult how data curation is done for the previous years to ensure data consistency.
-  - **CAUTION: we do not accept curation of new variables unless there are some fundamental changes in how PISA publishes their data**. Curate of new variables must be documented in [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri}
-  - The cleaned data should be saved in the `Data/Output/yyyy`. The student data should be named `stu_qqq.rds` and the school data should be named `sch_qqq.rds`. 
-  - Update `Code/student_bind_rows.Rmd` and `Code/school_bind_rows.Rmd`. The updated data with all years binded together will be available at `Data/Output/student.rda` and `Data/Output/school.rda`.
-  - Copy over the files to a forked copy of the `learningtower` package. Update relevant vignettes and scripts. 
+In 2026, PISA changed how their data can be accessed, hence a new framework that automates the raw data download process was developed, see [this document](Data/Raw/README.md) to understand how the raw data can now be downloaded using the PISA html file and and a python script. **Due to size constraints, the raw data were never committed to GitHub. The proper folder structures are preserved using .gitkeep.**.
+
++ After the raw data are downloaded, create a new R script to document how the raw data should be extracted into a `rds` format at `Data/yyyy/sch_qqq.rds` and `Data/yyyy/stu_qqq.rds`. The student data should be named `stu_qqq.rds` and the school data should be named `sch_qqq.rds`. These rds format should be a 'faith' extraction of the raw data without additional transformations.
++ Add new code books into the `codebook` folder.
++ **CAUTION: we do not accept curation of new variables unless there are some fundamental changes in how PISA publishes their data**. Curate of new variables must be documented in [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri}
++ The cleaned data should be saved in the `Data/Output/yyyy`.
++ Update `Code/student_bind_rows.Rmd` and `Code/school_bind_rows.Rmd`. The updated data with all years binded together will be available at `Data/Output/student.rda` and `Data/Output/school.rda`.
++ Copy over the files to a forked copy of the `learningtower` package. Update relevant vignettes and scripts.
 
 # Miscellaneous issues
 
-## Variable naming consistencies between different years
+## Variable naming consistencies between different years (updated: April 2026)
 
 The main challenge that the contributors encountered was to ensure the consistency of variables between different years. For instance, the highest schooling of a student's mother was never recorded in 2000, but it was coded as "ST11R01" between the years 2003 to 2012 and "ST005Q01TA" between the years 2015 and 2018. These variables were manually curated by all contributors as a factor variable, "mother_educ", in the output data.
 
-We created an online spreadsheet to document the change of variables between different years, please go to [PISA Variables' Table](https://github.com/kevinwang09/learningtower_masonry/raw/master/codebook/PISA_data_variables_2022_table.xlsx) for reference, and the Excel file is saved in `codebook` folder as well.
+We created schema files to document these variable changes:
+
++ [Schema for student data variable curation](variable_curation/PISA_variable_curation_student.csv)
++ [Schema for school data variable curation](variable_curation/PISA_variable_curation_school.csv)
 
 ### Data issues in 2022
 
@@ -91,4 +93,4 @@ student %>%
 #> 14  2006 LTU           1001         27
 ```
 
-This means that the school ID is only unique within the year and the country. This means that the school ID is only unique within the year and the country. 
+This means that the school ID is only unique within the year and the country. This means that the school ID is only unique within the year and the country.
