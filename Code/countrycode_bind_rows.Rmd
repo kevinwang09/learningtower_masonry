@@ -157,6 +157,7 @@ Because standard dynamic packages often fail to capture these transitional perio
 
 Before saving, we verify exactly what has changed relative to the historical dictionary previously published in the `learningtower` package. This explicit two-sided `anti_join` on both the ISO code and the region name highlights any net new entries, deprecated codes, or nomenclature adjustments.
 
+Specifically, for nomenclature changes, the discrepancy tracking table explicitly writes out when a nomenclature shift occurred and identifies exactly which years that specific change was applied to (e.g., documenting that Turkey shifted to "Türkiye", Moldova to "Republic of Moldova", and Vietnam to "Viet Nam" in the 2022 dataset).
 ```{r}
 # Safely load the legacy dataset without overwriting our newly built `countrycode` object
 env_legacy <- new.env()
@@ -231,7 +232,7 @@ countrycode <- countrycode |>
 
 full_data_transfer_folder <- "Data/Output/Transfer/data"
 dir.create(here(full_data_transfer_folder), recursive = TRUE, showWarnings = FALSE)
-# save(countrycode, file = here(full_data_transfer_folder, "countrycode.rda"), compress = "xz")
+save(countrycode, file = here(full_data_transfer_folder, "countrycode.rda"), compress = "xz")
 ```
 
 # Session Info
