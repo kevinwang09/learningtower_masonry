@@ -1,0 +1,574 @@
+{
+  "Year": 2001.0,
+  "cookbook_type": "student",
+  "codebook_entries": [
+    {
+      "variable_key": "COUNTRY",
+      "format_specifier": "(A3)",
+      "variable_key_value": null,
+      "variable_description": "Country three-digit code",
+      "fixed_width_specification": "2-4"
+    },
+    {
+      "variable_key": "SCHOOLID",
+      "format_specifier": "(A5)",
+      "variable_key_value": null,
+      "variable_description": "School ID (unique)",
+      "fixed_width_specification": "5-9"
+    },
+    {
+      "variable_key": "STIDSTD",
+      "format_specifier": "(A5)",
+      "variable_key_value": null,
+      "variable_description": "Student ID",
+      "fixed_width_specification": "10-14"
+    },
+    {
+      "variable_key": "SUBNATIO",
+      "format_specifier": "(A2)",
+      "variable_key_value": null,
+      "variable_description": "Subnational entities",
+      "fixed_width_specification": "16-17"
+    },
+    {
+      "variable_key": "ST01Q01",
+      "format_specifier": "(A2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "99",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Birth Day - Q1 Day",
+      "fixed_width_specification": "19-20"
+    },
+    {
+      "variable_key": "ST01Q02",
+      "format_specifier": "(A2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "99",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Birth Month - Q1 Month",
+      "fixed_width_specification": "21-22"
+    },
+    {
+      "variable_key": "ST01Q03",
+      "format_specifier": "(A4)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Birth Year - Q1 Year",
+      "fixed_width_specification": "23-26"
+    },
+    {
+      "variable_key": "ST02Q01",
+      "format_specifier": "(F2.0)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "99",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade - Q2",
+      "fixed_width_specification": "27-28"
+    },
+    {
+      "variable_key": "ST03Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Female"
+        },
+        {
+          "key": "2",
+          "value": "Male"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Sex - Q3",
+      "fixed_width_specification": "29-29"
+    },
+    {
+      "variable_key": "ST04Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Mother - Q4a",
+      "fixed_width_specification": "30-30"
+    },
+    {
+      "variable_key": "ST04Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Female Guardian - Q4b",
+      "fixed_width_specification": "31-31"
+    },
+    {
+      "variable_key": "ST04Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Father - Q4c",
+      "fixed_width_specification": "32-32"
+    },
+    {
+      "variable_key": "ST04Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Male Guardian - Q4d",
+      "fixed_width_specification": "33-33"
+    },
+    {
+      "variable_key": "ST04Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Brothers - Q4e",
+      "fixed_width_specification": "34-34"
+    },
+    {
+      "variable_key": "ST04Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Sisters - Q4f",
+      "fixed_width_specification": "35-35"
+    },
+    {
+      "variable_key": "ST04Q07",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grandparents - Q4g",
+      "fixed_width_specification": "36-36"
+    },
+    {
+      "variable_key": "ST04Q08",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Others - Q4h",
+      "fixed_width_specification": "37-37"
+    },
+    {
+      "variable_key": "ST05Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "None"
+        },
+        {
+          "key": "2",
+          "value": "One"
+        },
+        {
+          "key": "3",
+          "value": "Two"
+        },
+        {
+          "key": "4",
+          "value": "Three"
+        },
+        {
+          "key": "5",
+          "value": "Four or more"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Older - Q5a",
+      "fixed_width_specification": "38-38"
+    },
+    {
+      "variable_key": "ST05Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "None"
+        },
+        {
+          "key": "2",
+          "value": "One"
+        },
+        {
+          "key": "3",
+          "value": "Two"
+        },
+        {
+          "key": "4",
+          "value": "Three"
+        },
+        {
+          "key": "5",
+          "value": "Four or more"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Younger - Q5b",
+      "fixed_width_specification": "39-39"
+    },
+    {
+      "variable_key": "ST05Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "None"
+        },
+        {
+          "key": "2",
+          "value": "One"
+        },
+        {
+          "key": "3",
+          "value": "Two"
+        },
+        {
+          "key": "4",
+          "value": "Three"
+        },
+        {
+          "key": "5",
+          "value": "Four or more"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Same age -Q5c",
+      "fixed_width_specification": "40-40"
+    },
+    {
+      "variable_key": "ST06Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Working full-time"
+        },
+        {
+          "key": "2",
+          "value": "Working part-time"
+        },
+        {
+          "key": "3",
+          "value": "Looking for job"
+        },
+        {
+          "key": "4",
+          "value": "Other"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Mother currently doing -Q6",
+      "fixed_width_specification": "41-41"
+    },
+    {
+      "variable_key": "ST07Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Working full-time"
+        },
+        {
+          "key": "2",
+          "value": "Working part-time"
+        },
+        {
+          "key": "3",
+          "value": "Looking for job"
+        },
+        {
+          "key": "4",
+          "value": "Other"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Father currently doing -Q7",
+      "fixed_width_specification": "42-42"
+    },
+    {
+      "variable_key": "ST09Q01",
+      "format_specifier": "(A4)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "MIS"
+        }
+      ],
+      "variable_description": "Mother's main job - Q8&9",
+      "fixed_width_specification": "43-46"
+    },
+    {
+      "variable_key": "ST11Q01",
+      "format_specifier": "(A4)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "MIS"
+        }
+      ],
+      "variable_description": "Father's main job - Q10&11",
+      "fixed_width_specification": "47-50"
+    }
+  ]
+}

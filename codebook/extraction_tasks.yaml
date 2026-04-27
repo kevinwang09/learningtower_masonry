@@ -1,0 +1,5 @@
+tasks:
+  - year: 2000
+    schema_file: llamaextract_2000.json
+    school_file: 2000school.pdf
+    student_file: 2000student.pdf
