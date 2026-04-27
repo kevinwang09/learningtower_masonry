@@ -5,7 +5,7 @@ import tempfile
 import yaml
 import PyPDF2
 from dotenv import load_dotenv
-from llama_cloud_services import LlamaExtract
+from llama_cloud import LlamaCloud
 
 def extract_codebook():
     """
@@ -52,15 +52,12 @@ def extract_codebook():
         print("\nYou can get an API key by signing up at https://cloud.llamaindex.ai/")
         return
 
-    print("Initializing LlamaExtract client...")
+    print("Initializing LlamaCloud client...")
     try:
-        extractor = LlamaExtract(api_key=api_key, show_progress=True, verbose=True)
+        client = LlamaCloud(api_key=api_key)
     except Exception as e:
-        print(f"Failed to initialize LlamaExtract: {e}")
+        print(f"Failed to initialize LlamaCloud client: {e}")
         return
-
-    # Keep track of agents by schema path
-    agents = {}
 
     for task in tasks:
         year = task.get("year")
@@ -92,13 +89,6 @@ def extract_codebook():
         json_schema = config.get("data_schema", {})
         if not json_schema:
             raise ValueError(f"No 'data_schema' found in the schema file {schema_file}.")
-
-        # Create or reuse agent
-        if schema_file not in agents:
-            print(f"\nCreating extraction agent for schema {schema_file}...")
-            agents[schema_file] = extractor.create_agent(name=f"codebook-parser-{year}", data_schema=json_schema)
-        
-        agent = agents[schema_file]
 
         for pdf_path in pdfs_to_process:
             if not os.path.exists(pdf_path):
@@ -132,11 +122,33 @@ def extract_codebook():
                 print(f"\nProcessing {pdf_path} (All pages)...")
                 file_to_extract = pdf_path
             
-            print("Extracting data using LlamaExtract API. This may take a while...")
+            print("Extracting data using LlamaCloud API. This may take a while...")
             try:
-                result = agent.extract(file_to_extract)
+                # Upload the file
+                print("Uploading file...")
+                with open(file_to_extract, "rb") as f:
+                    file_obj = client.files.create(file=f, purpose="extract")
                 
-                output_data = result.data
+                # Extract structured data
+                print("Running extraction...")
+                result = client.extract.run(
+                    file_input=file_obj.id,
+                    configuration={
+                        "data_schema": json_schema,
+                        "tier": "agentic",
+                        "extraction_target": "per_doc",
+                        "parse_tier": "agentic",
+                        "cite_sources": True,
+                        "confidence_scores": True
+                    },
+                )
+                
+                # output_data could be a dict or a Pydantic model depending on SDK version
+                output_data = result.extract_result
+                if hasattr(output_data, "model_dump"):
+                    output_data = output_data.model_dump()
+                elif hasattr(output_data, "dict"):
+                    output_data = output_data.dict()
                 
                 with open(output_path, "w") as f:
                     json.dump(output_data, f, indent=2)

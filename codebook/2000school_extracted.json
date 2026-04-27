@@ -1,5 +1,667 @@
 {
-  "Year": 2001,
+  "Year": 2001.0,
   "cookbook_type": "school",
-  "codebook_entries": []
+  "codebook_entries": [
+    {
+      "variable_key": "COUNTRY",
+      "format_specifier": "(A3)",
+      "variable_key_value": null,
+      "variable_description": "Country three-digit code",
+      "fixed_width_specification": "2-4"
+    },
+    {
+      "variable_key": "SCHOOLID",
+      "format_specifier": "(A5)",
+      "variable_key_value": null,
+      "variable_description": "School ID (unique)",
+      "fixed_width_specification": "5-9"
+    },
+    {
+      "variable_key": "SUBNATIO",
+      "format_specifier": "(A2)",
+      "variable_key_value": null,
+      "variable_description": "Subnational entities",
+      "fixed_width_specification": "11-12"
+    },
+    {
+      "variable_key": "SC01Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Village (less 3 000)"
+        },
+        {
+          "key": "2",
+          "value": "Small town (3 000 to 15 000)"
+        },
+        {
+          "key": "3",
+          "value": "Town (15 000 to 100 000)"
+        },
+        {
+          "key": "4",
+          "value": "City (100 000 to 1 000 000)"
+        },
+        {
+          "key": "5",
+          "value": "City (more 1 000 000) centre"
+        },
+        {
+          "key": "6",
+          "value": "City (more 1 000 000) elswhere"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "School location - Q1",
+      "fixed_width_specification": "14-14"
+    },
+    {
+      "variable_key": "SC02Q01",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Number of boys - Q2a",
+      "fixed_width_specification": "15-18"
+    },
+    {
+      "variable_key": "SC02Q02",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Number of girls - Q2b",
+      "fixed_width_specification": "19-22"
+    },
+    {
+      "variable_key": "SC03Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Public"
+        },
+        {
+          "key": "2",
+          "value": "Private"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "School public/private - Q3",
+      "fixed_width_specification": "23-23"
+    },
+    {
+      "variable_key": "SC04Q01",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Funds, government - Q4a",
+      "fixed_width_specification": "24-26"
+    },
+    {
+      "variable_key": "SC04Q02",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Funds, student fees - Q4b",
+      "fixed_width_specification": "27-29"
+    },
+    {
+      "variable_key": "SC04Q03",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Funds, benefactors - Q4c",
+      "fixed_width_specification": "30-32"
+    },
+    {
+      "variable_key": "SC04Q04",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Funds, other - Q4d",
+      "fixed_width_specification": "33-35"
+    },
+    {
+      "variable_key": "SC05Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 1 - Q5a",
+      "fixed_width_specification": "36-36"
+    },
+    {
+      "variable_key": "SC05Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 2 - Q5b",
+      "fixed_width_specification": "37-37"
+    },
+    {
+      "variable_key": "SC05Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 3 - Q5c",
+      "fixed_width_specification": "38-38"
+    },
+    {
+      "variable_key": "SC05Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 4 - Q5d",
+      "fixed_width_specification": "39-39"
+    },
+    {
+      "variable_key": "SC05Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 5 - Q5e",
+      "fixed_width_specification": "40-40"
+    },
+    {
+      "variable_key": "SC05Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 6 - Q5f",
+      "fixed_width_specification": "41-41"
+    },
+    {
+      "variable_key": "SC05Q07",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 7 - Q5g",
+      "fixed_width_specification": "42-42"
+    },
+    {
+      "variable_key": "SC05Q08",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 8 - Q5h",
+      "fixed_width_specification": "43-43"
+    },
+    {
+      "variable_key": "SC05Q09",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 9 - Q5i",
+      "fixed_width_specification": "44-44"
+    },
+    {
+      "variable_key": "SC05Q10",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 10 - Q5j",
+      "fixed_width_specification": "45-45"
+    },
+    {
+      "variable_key": "SC05Q11",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 11 - Q5k",
+      "fixed_width_specification": "46-46"
+    },
+    {
+      "variable_key": "SC05Q12",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 12 - Q5l",
+      "fixed_width_specification": "47-47"
+    },
+    {
+      "variable_key": "SC05Q13",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Grade 13 - Q5m",
+      "fixed_width_specification": "48-48"
+    },
+    {
+      "variable_key": "SC05Q14",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ungraded- Q5n",
+      "fixed_width_specification": "49-49"
+    },
+    {
+      "variable_key": "SC06Q01",
+      "format_specifier": "(F2.0)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "99",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Instructional weeks - Q6a",
+      "fixed_width_specification": "50-51"
+    },
+    {
+      "variable_key": "SC06Q02",
+      "format_specifier": "(F2.0)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "99",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Instructional periods - Q6b",
+      "fixed_width_specification": "52-53"
+    },
+    {
+      "variable_key": "SC06Q03",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Instructional minutes - Q6c",
+      "fixed_width_specification": "54-56"
+    },
+    {
+      "variable_key": "SC07Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Residence - Q7a",
+      "fixed_width_specification": "57-57"
+    }
+  ]
 }
