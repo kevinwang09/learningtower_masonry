@@ -95,4 +95,4 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2000,staff_shortage,tcshort,as.numeric,97,Teacher/staff shortage,numeric,
 2000,stratio,stratio,as.numeric,97;99,Student-teacher ratio,numeric,
 2000,school_size,schlsize,as.numeric,99997;99999,School size,numeric,
-2000,sch_wgt,wnrschbw,as.numeric,,School weight,numeric,
+2000,sch_wgt,wnrschbw,as.numeric,,School weight,numeric,"While the codebook named this variable as wnrschbw, the PDF codebook named this variable as wnrschb."

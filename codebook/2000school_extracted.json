@@ -1,5 +1,5 @@
 {
-  "Year": 2001.0,
+  "Year": 2000,
   "cookbook_type": "school",
   "codebook_entries": [
     {
@@ -662,6 +662,3500 @@
       ],
       "variable_description": "Residence - Q7a",
       "fixed_width_specification": "57-57"
+    },
+    {
+      "variable_key": "SC07Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Academic performance - Q7b",
+      "fixed_width_specification": "58-58"
+    },
+    {
+      "variable_key": "SC07Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Feeder schools - Q7c",
+      "fixed_width_specification": "59-59"
+    },
+    {
+      "variable_key": "SC07Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Phylosophy and religion - Q7d",
+      "fixed_width_specification": "60-60"
+    },
+    {
+      "variable_key": "SC07Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Special program - Q7e",
+      "fixed_width_specification": "61-61"
+    },
+    {
+      "variable_key": "SC07Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Family preference - Q7f",
+      "fixed_width_specification": "62-62"
+    },
+    {
+      "variable_key": "SC07Q07",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Admittance factors, other - Q7g",
+      "fixed_width_specification": "63-63"
+    },
+    {
+      "variable_key": "SC08Q01",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<ISCED 2A> - Q8a",
+      "fixed_width_specification": "64-66"
+    },
+    {
+      "variable_key": "SC08Q02",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<ISCED 2B> - Q8b",
+      "fixed_width_specification": "67-69"
+    },
+    {
+      "variable_key": "SC08Q03",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<ISCED 2C> - Q8c",
+      "fixed_width_specification": "70-72"
+    },
+    {
+      "variable_key": "SC08Q04",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<ISCED 3A> - Q8d",
+      "fixed_width_specification": "73-75"
+    },
+    {
+      "variable_key": "SC08Q05",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<ISCED 3B> - Q8e",
+      "fixed_width_specification": "76-78"
+    },
+    {
+      "variable_key": "SC08Q06",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<ISCED 3C> - Q8f",
+      "fixed_width_specification": "79-81"
+    },
+    {
+      "variable_key": "SC09Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not important"
+        },
+        {
+          "key": "2",
+          "value": "Important"
+        },
+        {
+          "key": "3",
+          "value": "Very important"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Student's choice - Q9a",
+      "fixed_width_specification": "82-82"
+    },
+    {
+      "variable_key": "SC09Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not important"
+        },
+        {
+          "key": "2",
+          "value": "Important"
+        },
+        {
+          "key": "3",
+          "value": "Very important"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Academic record - Q9b",
+      "fixed_width_specification": "83-83"
+    },
+    {
+      "variable_key": "SC09Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not important"
+        },
+        {
+          "key": "2",
+          "value": "Important"
+        },
+        {
+          "key": "3",
+          "value": "Very important"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Placement exams - Q9c",
+      "fixed_width_specification": "84-84"
+    },
+    {
+      "variable_key": "SC09Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not important"
+        },
+        {
+          "key": "2",
+          "value": "Important"
+        },
+        {
+          "key": "3",
+          "value": "Very important"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teacher recommend - Q9d",
+      "fixed_width_specification": "85-85"
+    },
+    {
+      "variable_key": "SC09Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not important"
+        },
+        {
+          "key": "2",
+          "value": "Important"
+        },
+        {
+          "key": "3",
+          "value": "Very important"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Parents' request - Q9e",
+      "fixed_width_specification": "86-86"
+    },
+    {
+      "variable_key": "SC10Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Low achievement - Q10a",
+      "fixed_width_specification": "87-87"
+    },
+    {
+      "variable_key": "SC10Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "High achievement - Q10b",
+      "fixed_width_specification": "88-88"
+    },
+    {
+      "variable_key": "SC10Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Behaviour - Q10c",
+      "fixed_width_specification": "89-89"
+    },
+    {
+      "variable_key": "SC10Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Special needs - Q10d",
+      "fixed_width_specification": "90-90"
+    },
+    {
+      "variable_key": "SC10Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Parents' request -Q10e",
+      "fixed_width_specification": "91-91"
+    },
+    {
+      "variable_key": "SC10Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Transfer reason, other - Q10f",
+      "fixed_width_specification": "92-92"
+    },
+    {
+      "variable_key": "SC11Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor buildings - Q11a",
+      "fixed_width_specification": "93-93"
+    },
+    {
+      "variable_key": "SC11Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor heating - Q11b",
+      "fixed_width_specification": "94-94"
+    },
+    {
+      "variable_key": "SC11Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Inadequate space - Q11c",
+      "fixed_width_specification": "95-95"
+    },
+    {
+      "variable_key": "SC11Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Lack of instruct materials - Q11d",
+      "fixed_width_specification": "96-96"
+    },
+    {
+      "variable_key": "SC11Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Lack of computers - Q11e",
+      "fixed_width_specification": "97-97"
+    },
+    {
+      "variable_key": "SC11Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor library - Q11f",
+      "fixed_width_specification": "98-98"
+    },
+    {
+      "variable_key": "SC11Q07",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor multi-media Q11g",
+      "fixed_width_specification": "99-99"
+    },
+    {
+      "variable_key": "SC11Q08",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor science equip - Q11h",
+      "fixed_width_specification": "100-100"
+    },
+    {
+      "variable_key": "SC11Q09",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor art facilities - Q11i",
+      "fixed_width_specification": "101-101"
+    },
+    {
+      "variable_key": "SC12Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Courses for gifted - Q12a",
+      "fixed_width_specification": "102-102"
+    },
+    {
+      "variable_key": "SC12Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Language training - Q12b",
+      "fixed_width_specification": "103-103"
+    },
+    {
+      "variable_key": "SC12Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Study skills - Q12c",
+      "fixed_width_specification": "104-104"
+    },
+    {
+      "variable_key": "SC12Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Special tutoring - Q12d",
+      "fixed_width_specification": "105-105"
+    },
+    {
+      "variable_key": "SC12Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Help rooms - Q12e",
+      "fixed_width_specification": "106-106"
+    },
+    {
+      "variable_key": "SC13Q01",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Computers altogether - Q13a",
+      "fixed_width_specification": "107-110"
+    },
+    {
+      "variable_key": "SC13Q02",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Computers students - Q13b",
+      "fixed_width_specification": "111-114"
+    },
+    {
+      "variable_key": "SC13Q03",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Computers teachers - Q13c",
+      "fixed_width_specification": "115-118"
+    },
+    {
+      "variable_key": "SC13Q04",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Computers admin - Q13d",
+      "fixed_width_specification": "119-122"
+    },
+    {
+      "variable_key": "SC13Q05",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Computers with Web - Q13e",
+      "fixed_width_specification": "123-126"
+    },
+    {
+      "variable_key": "SC13Q06",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Computers with Lan - Q13f",
+      "fixed_width_specification": "127-130"
+    },
+    {
+      "variable_key": "SC14Q01",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach in total - Q14a1",
+      "fixed_width_specification": "131-133"
+    },
+    {
+      "variable_key": "SC14Q02",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach in total - Q14a2",
+      "fixed_width_specification": "134-136"
+    },
+    {
+      "variable_key": "SC14Q03",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <ISCED5A> in <pedag> -",
+      "fixed_width_specification": "137-139"
+    },
+    {
+      "variable_key": "SC14Q04",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach <ISCED5A> in <pedag> -",
+      "fixed_width_specification": "140-142"
+    },
+    {
+      "variable_key": "SC14Q05",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach fully certified - q14c1",
+      "fixed_width_specification": "143-145"
+    },
+    {
+      "variable_key": "SC14Q06",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach fully certified - Q14c2",
+      "fixed_width_specification": "146-148"
+    },
+    {
+      "variable_key": "SC14Q07",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <test language> - Q14d1",
+      "fixed_width_specification": "149-151"
+    },
+    {
+      "variable_key": "SC14Q08",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach <test language> - Q14d2",
+      "fixed_width_specification": "152-154"
+    },
+    {
+      "variable_key": "SC14Q09",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <ISCED5A> in <test lang>",
+      "fixed_width_specification": "155-157"
+    },
+    {
+      "variable_key": "SC14Q10",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach <ISCED5A> in <test lang",
+      "fixed_width_specification": "158-160"
+    },
+    {
+      "variable_key": "SC14Q11",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <maths> - Q14f1",
+      "fixed_width_specification": "161-163"
+    },
+    {
+      "variable_key": "SC14Q12",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach <maths> - Q14f2",
+      "fixed_width_specification": "164-166"
+    },
+    {
+      "variable_key": "SC14Q13",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <ISCED5A> in <maths> -",
+      "fixed_width_specification": "167-169"
+    },
+    {
+      "variable_key": "SC14Q14",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach <ISCED5A> in <maths> -",
+      "fixed_width_specification": "170-172"
+    },
+    {
+      "variable_key": "SC14Q15",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <science> - Q14h1",
+      "fixed_width_specification": "173-175"
+    },
+    {
+      "variable_key": "SC14Q16",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach <science> - q14h2",
+      "fixed_width_specification": "176-178"
+    },
+    {
+      "variable_key": "SC14Q17",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ftime teach <ISCED5A> in <science>",
+      "fixed_width_specification": "179-181"
+    },
+    {
+      "variable_key": "SC14Q18",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ptime teach - <ISCED5A> in <science",
+      "fixed_width_specification": "182-184"
+    },
+    {
+      "variable_key": "SC15Q01",
+      "format_specifier": "(F3.0)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Professional development - Q15",
+      "fixed_width_specification": "185-187"
+    },
+    {
+      "variable_key": "SC16Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Standardised test - Q16a",
+      "fixed_width_specification": "188-188"
+    },
+    {
+      "variable_key": "SC16Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teacher's test - Q16b",
+      "fixed_width_specification": "189-189"
+    },
+    {
+      "variable_key": "SC16Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teacher's ratings - Q16c",
+      "fixed_width_specification": "190-190"
+    },
+    {
+      "variable_key": "SC16Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Students' portfolios - Q16d",
+      "fixed_width_specification": "191-191"
+    },
+    {
+      "variable_key": "SC16Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Assignments - Q16e",
+      "fixed_width_specification": "192-192"
+    },
+    {
+      "variable_key": "SC17Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Parents - Q17a",
+      "fixed_width_specification": "193-193"
+    },
+    {
+      "variable_key": "SC17Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Principal - Q17b",
+      "fixed_width_specification": "194-194"
+    },
+    {
+      "variable_key": "SC17Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Yearly"
+        },
+        {
+          "key": "3",
+          "value": "Twice a year"
+        },
+        {
+          "key": "4",
+          "value": "3 times a year"
+        },
+        {
+          "key": "5",
+          "value": "4 or more times a year"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Government - Q17c",
+      "fixed_width_specification": "195-195"
+    },
+    {
+      "variable_key": "SC18Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Parents information - Q18a",
+      "fixed_width_specification": "196-196"
+    },
+    {
+      "variable_key": "SC18Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Promotion decisions - Q18b",
+      "fixed_width_specification": "197-197"
+    },
+    {
+      "variable_key": "SC18Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Instructional grouping - Q18c",
+      "fixed_width_specification": "198-198"
+    },
+    {
+      "variable_key": "SC18Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "National comparison - Q18d",
+      "fixed_width_specification": "199-199"
+    },
+    {
+      "variable_key": "SC18Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Progress monitoring - Q18e",
+      "fixed_width_specification": "200-200"
+    },
+    {
+      "variable_key": "SC18Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teachers' effectiveness - Q18f",
+      "fixed_width_specification": "201-201"
+    },
+    {
+      "variable_key": "SC19Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Low expectations - Q19a",
+      "fixed_width_specification": "202-202"
+    },
+    {
+      "variable_key": "SC19Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Student absenteeism - Q19b",
+      "fixed_width_specification": "203-203"
+    },
+    {
+      "variable_key": "SC19Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Stud-teach relations - Q19c",
+      "fixed_width_specification": "204-204"
+    },
+    {
+      "variable_key": "SC19Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teacher turnover - Q19d",
+      "fixed_width_specification": "205-205"
+    },
+    {
+      "variable_key": "SC19Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Lack parent support - Q19e",
+      "fixed_width_specification": "206-206"
+    },
+    {
+      "variable_key": "SC19Q06",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Disruptions of classes - Q19f",
+      "fixed_width_specification": "207-207"
+    },
+    {
+      "variable_key": "SC19Q07",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Ignoring students - Q19g",
+      "fixed_width_specification": "208-208"
+    },
+    {
+      "variable_key": "SC19Q08",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teacher absenteeism - Q19h",
+      "fixed_width_specification": "209-209"
+    },
+    {
+      "variable_key": "SC19Q09",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Skipping classes - Q19i",
+      "fixed_width_specification": "210-210"
+    },
+    {
+      "variable_key": "SC19Q10",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Lack of respect -Q19j",
+      "fixed_width_specification": "211-211"
+    },
+    {
+      "variable_key": "SC19Q11",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Resisting change - Q19k",
+      "fixed_width_specification": "212-212"
+    },
+    {
+      "variable_key": "SC19Q12",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Lack of instr time - Q19l",
+      "fixed_width_specification": "213-213"
+    },
+    {
+      "variable_key": "SC19Q13",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Use of alcohol - Q19m",
+      "fixed_width_specification": "214-214"
+    },
+    {
+      "variable_key": "SC19Q14",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teachers' strictness - Q19n",
+      "fixed_width_specification": "215-215"
+    },
+    {
+      "variable_key": "SC19Q15",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Bullying - Q19o",
+      "fixed_width_specification": "216-216"
+    },
+    {
+      "variable_key": "SC19Q16",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Lack of encouragm - Q19p",
+      "fixed_width_specification": "217-217"
+    },
+    {
+      "variable_key": "SC19Q17",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Poor home envrm - Q19q",
+      "fixed_width_specification": "218-218"
+    },
+    {
+      "variable_key": "SC20Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Disagree"
+        },
+        {
+          "key": "2",
+          "value": "Disagree"
+        },
+        {
+          "key": "3",
+          "value": "Agree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "High morale - Q20a",
+      "fixed_width_specification": "219-219"
+    },
+    {
+      "variable_key": "SC20Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Disagree"
+        },
+        {
+          "key": "2",
+          "value": "Disagree"
+        },
+        {
+          "key": "3",
+          "value": "Agree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Enthusiasm - Q20b",
+      "fixed_width_specification": "220-220"
+    },
+    {
+      "variable_key": "SC20Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Disagree"
+        },
+        {
+          "key": "2",
+          "value": "Disagree"
+        },
+        {
+          "key": "3",
+          "value": "Agree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Pride in school - Q20c",
+      "fixed_width_specification": "221-221"
+    },
+    {
+      "variable_key": "SC20Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Disagree"
+        },
+        {
+          "key": "2",
+          "value": "Disagree"
+        },
+        {
+          "key": "3",
+          "value": "Agree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Value acad achvm - Q20d",
+      "fixed_width_specification": "222-222"
+    },
+    {
+      "variable_key": "SC21Q01",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teachers - Q21a",
+      "fixed_width_specification": "223-223"
+    },
+    {
+      "variable_key": "SC21Q02",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<Test language> teachers - Q21b",
+      "fixed_width_specification": "224-224"
+    },
+    {
+      "variable_key": "SC21Q03",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<Mathematics> teacher - Q21c",
+      "fixed_width_specification": "225-225"
+    },
+    {
+      "variable_key": "SC21Q04",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "<Science> teachers - Q21d",
+      "fixed_width_specification": "226-226"
+    },
+    {
+      "variable_key": "SC21Q05",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "A little"
+        },
+        {
+          "key": "3",
+          "value": "Some"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "M/R"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Support personnel - Q21e",
+      "fixed_width_specification": "227-227"
+    },
+    {
+      "variable_key": "SC22Q01",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Hiring teachers - Q22a",
+      "fixed_width_specification": "228-232"
+    },
+    {
+      "variable_key": "SC22Q02",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Firing teachers - Q22b",
+      "fixed_width_specification": "233-237"
+    },
+    {
+      "variable_key": "SC22Q03",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Teacher salaries - Q22c",
+      "fixed_width_specification": "238-242"
+    },
+    {
+      "variable_key": "SC22Q04",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Salary increase - Q22d",
+      "fixed_width_specification": "243-247"
+    },
+    {
+      "variable_key": "SC22Q05",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Budget formulation - Q22e",
+      "fixed_width_specification": "248-252"
+    },
+    {
+      "variable_key": "SC22Q06",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Budget allocation - Q22f",
+      "fixed_width_specification": "253-257"
+    },
+    {
+      "variable_key": "SC22Q07",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Disciplinary policies - Q22g",
+      "fixed_width_specification": "258-262"
+    },
+    {
+      "variable_key": "SC22Q08",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Assessment policies - Q22h",
+      "fixed_width_specification": "263-267"
+    },
+    {
+      "variable_key": "SC22Q09",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Student admittance - Q22i",
+      "fixed_width_specification": "268-272"
+    },
+    {
+      "variable_key": "SC22Q10",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Textbooks - Q22j",
+      "fixed_width_specification": "273-277"
+    },
+    {
+      "variable_key": "SC22Q11",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Course content - Q22k",
+      "fixed_width_specification": "278-282"
+    },
+    {
+      "variable_key": "SC22Q12",
+      "format_specifier": "(A5)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Course offer - Q22l",
+      "fixed_width_specification": "283-287"
+    },
+    {
+      "variable_key": "SCHLSIZE",
+      "format_specifier": "(F5.0)",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Number of students in the school",
+      "fixed_width_specification": "289-293"
+    },
+    {
+      "variable_key": "PCGIRLS",
+      "format_specifier": "(F5.3)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Percentage of girls in the school",
+      "fixed_width_specification": "294-298"
+    },
+    {
+      "variable_key": "SCHLTYPE",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Private, government independent"
+        },
+        {
+          "key": "2",
+          "value": "Private, government dependent"
+        },
+        {
+          "key": "3",
+          "value": "Government"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Type of school",
+      "fixed_width_specification": "299-299"
+    },
+    {
+      "variable_key": "TOTHRS",
+      "format_specifier": "(F4.0)",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Total number of schooling hours per ye",
+      "fixed_width_specification": "300-303"
+    },
+    {
+      "variable_key": "RATCOMP",
+      "format_specifier": "(F6.3)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "999",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Total number of computer / school size",
+      "fixed_width_specification": "304-309"
+    },
+    {
+      "variable_key": "PERCOMP1",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "% of computers available to 15 year old",
+      "fixed_width_specification": "310-313"
+    },
+    {
+      "variable_key": "PERCOMP2",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "% of computers available only to teach",
+      "fixed_width_specification": "314-317"
+    },
+    {
+      "variable_key": "PERCOMP3",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "% of computers available for admin staf",
+      "fixed_width_specification": "318-321"
+    },
+    {
+      "variable_key": "PERCOMP4",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "% of computers connected to the Web",
+      "fixed_width_specification": "322-325"
+    },
+    {
+      "variable_key": "PERCOMP5",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "% of computers connected to a LAN",
+      "fixed_width_specification": "326-329"
+    },
+    {
+      "variable_key": "STRATIO",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "99",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "School size / number of teachers",
+      "fixed_width_specification": "330-334"
+    },
+    {
+      "variable_key": "PROPQUAL",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Prop of teachers w ISCED5A in pedag",
+      "fixed_width_specification": "335-338"
+    },
+    {
+      "variable_key": "PROPCERT",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Proportion of teachers fully certified",
+      "fixed_width_specification": "339-342"
+    },
+    {
+      "variable_key": "PROPREAD",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Prop langu teachers ISCED5A in peda",
+      "fixed_width_specification": "343-346"
+    },
+    {
+      "variable_key": "PROPMATH",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Prop of math teachers w ISCED5A in",
+      "fixed_width_specification": "347-350"
+    },
+    {
+      "variable_key": "PROPSCIE",
+      "format_specifier": "(F4.2)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Mis"
+        }
+      ],
+      "variable_description": "Prop of sci teachers with ISCED5A in s",
+      "fixed_width_specification": "351-354"
+    },
+    {
+      "variable_key": "SCMATEDU",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Instructional resources",
+      "fixed_width_specification": "355-359"
+    },
+    {
+      "variable_key": "TCSHORT",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Shortage of teachers",
+      "fixed_width_specification": "360-364"
+    },
+    {
+      "variable_key": "TEACBEHA",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Teacher behaviors",
+      "fixed_width_specification": "365-369"
+    },
+    {
+      "variable_key": "STUDBEHA",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Student behaviors",
+      "fixed_width_specification": "370-374"
+    },
+    {
+      "variable_key": "TCMORALE",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Teacher morale",
+      "fixed_width_specification": "375-379"
+    },
+    {
+      "variable_key": "SCHAUTON",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "School autonomy",
+      "fixed_width_specification": "380-384"
+    },
+    {
+      "variable_key": "TCHPARTI",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Teacher participation to decision makin",
+      "fixed_width_specification": "385-389"
+    },
+    {
+      "variable_key": "SCMATBUI",
+      "format_specifier": "(F5.2)",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        }
+      ],
+      "variable_description": "Material ressources",
+      "fixed_width_specification": "390-394"
+    },
+    {
+      "variable_key": "WNRSCHB",
+      "format_specifier": "(F8.2)",
+      "variable_key_value": null,
+      "variable_description": "School weight",
+      "fixed_width_specification": "395-402"
+    },
+    {
+      "variable_key": "CNT",
+      "format_specifier": "(A3)",
+      "variable_key_value": null,
+      "variable_description": "Country alphanumeric code",
+      "fixed_width_specification": "404-406"
     }
   ]
 }

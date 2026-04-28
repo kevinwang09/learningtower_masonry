@@ -26,7 +26,9 @@ def validate_curation(json_path, csv_path, year):
     }
     
     issues = []
+    csv_vars = set()
     
+    print("\n--- Variable and NA Value Check ---")
     for row in csv_data:
         target_name = row.get('target_name', 'Unknown')
         source_cols_str = row.get('source_col', '').strip()
@@ -41,6 +43,7 @@ def validate_curation(json_path, csv_path, year):
         
         for col in source_cols:
             col_upper = col.upper()
+            csv_vars.add(col_upper)
             
             # 1. Check if raw variable exists
             if col_upper not in extracted_vars:
@@ -64,6 +67,18 @@ def validate_curation(json_path, csv_path, year):
                 missing_nas = expected_na_values - codebook_keys
                 if missing_nas:
                     issues.append(f"Variable '{col}' (target: {target_name}) is missing expected NA keys in codebook: {missing_nas}. Found keys: {codebook_keys}")
+                else:
+                    print(f" [OK] {col} (target: {target_name}) -> NA values matched successfully: {expected_na_values}")
+            else:
+                print(f" [OK] {col} (target: {target_name}) -> Exists in codebook (No NA checking required)")
+                
+    json_only_vars = set(extracted_vars.keys()) - csv_vars
+    if json_only_vars:
+        print("\n--- Variables found in JSON but NOT in CSV ---")
+        for v in sorted(json_only_vars):
+            entry = extracted_vars[v]
+            description = entry.get('variable_description', 'No description provided')
+            print(f"- {v}: {description}")
 
     if issues:
         print("\n--- Validation Failed ---")
