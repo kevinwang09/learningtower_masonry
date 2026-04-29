@@ -1,0 +1,24 @@
+# ==============================================================================
+# CONDA ENVIRONMENT SETUP
+# ==============================================================================
+# 1. Create the environment:
+#    conda create -n learningtower python=3.11 -y
+#
+# 2. Activate the environment:
+#    conda activate learningtower
+#
+# 3. Install dependencies:
+#    pip install -r requirements.txt --no-cache-dir --force-reinstall
+# ==============================================================================
+
+# Core dependencies
+PyYAML
+PyPDF2
+python-dotenv
+llama-cloud
+jsonschema
+
+# Data collection & processing
+requests
+beautifulsoup4
+tqdm

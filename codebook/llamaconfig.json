@@ -83,7 +83,7 @@
         "additionalProperties": false
     },
     "extraction_target": "per_doc",
-    "confidence_scores": true,
     "parse_tier": "fast",
-    "product_type": "extract_v2"
+    "product_type": "extract_v2",
+    "extract_printed_page_number": false
 }
