@@ -9407,6 +9407,14 @@
       "variable_description": "Original stratum",
       "fixed_width_specification": "386-390",
       "Year": 2006
+    },
+    {
+      "variable_key": "VER_SCH",
+      "format_specifier": "(A13)",
+      "variable_key_value": null,
+      "variable_description": "Version of school database and date of release",
+      "fixed_width_specification": "391-403",
+      "Year": 2006
     }
   ]
 }

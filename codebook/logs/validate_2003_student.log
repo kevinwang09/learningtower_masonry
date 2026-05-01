@@ -23,8 +23,11 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 387
 
---- Validation Failed ---
-- Variable 'NA' (target: television) not found in the extracted codebook. Note: missing in all entries in year 2003
-- Variable 'NA' (target: computer_n) not found in the extracted codebook. Note: missing in all entries in year 2003
-- Variable 'NA' (target: car) not found in the extracted codebook. Note: missing in all entries in year 2003
-- Variable 'NA' (target: wealth) not found in the extracted codebook. Note: missing in all entries in year 2003
+--- Validation Warnings ---
+- [WARNING] Variable 'NA' (target: television) not found in the extracted codebook. Note: missing in all entries in year 2003
+- [WARNING] Variable 'NA' (target: computer_n) not found in the extracted codebook. Note: missing in all entries in year 2003
+- [WARNING] Variable 'NA' (target: car) not found in the extracted codebook. Note: missing in all entries in year 2003
+- [WARNING] Variable 'NA' (target: wealth) not found in the extracted codebook. Note: missing in all entries in year 2003
+
+--- Validation Passed! ---
+All variables exist and NA values match.

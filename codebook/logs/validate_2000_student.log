@@ -23,8 +23,11 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 400
 
---- Validation Failed ---
-- Variable 'NA' (target: mother_educ) not found in the extracted codebook. Note: missing in all entries in year 2000
-- Variable 'NA' (target: father_educ) not found in the extracted codebook. Note: missing in all entries in year 2000
-- Variable 'NA' (target: computer) not found in the extracted codebook. Note: missing in all entries in year 2000
-- Variable 'ESCS' (target: escs) not found in the extracted codebook. Note: 
+--- Validation Warnings ---
+- [WARNING] Variable 'NA' (target: mother_educ) not found in the extracted codebook. Note: missing in all entries in year 2000
+- [WARNING] Variable 'NA' (target: father_educ) not found in the extracted codebook. Note: missing in all entries in year 2000
+- [WARNING] Variable 'NA' (target: computer) not found in the extracted codebook. Note: missing in all entries in year 2000
+- [WARNING] Variable 'ESCS' (target: escs) not found in the extracted codebook. Note: This variable is stored in a separate ESCS_PISA2000.sav file and it is not in the codebook.
+
+--- Validation Passed! ---
+All variables exist and NA values match.

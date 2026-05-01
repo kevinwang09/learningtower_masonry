@@ -4767,6 +4767,27 @@
       "Year": 2012
     },
     {
+      "variable_key": "VAR",
+      "format_specifier": "(F1.0)",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Variable indicating the status of the data entry with possible values including N/A, Invalid, and Missing.",
+      "fixed_width_specification": "7-7",
+      "Year": 2012
+    },
+    {
       "variable_key": "SC39Q09",
       "format_specifier": "Num 1.",
       "variable_key_value": [
@@ -12293,6 +12314,95 @@
       "variable_key_value": null,
       "variable_description": "Date of the database creation",
       "fixed_width_specification": "521-527",
+      "Year": 2012
+    },
+    {
+      "variable_key": "COUNTRY",
+      "format_specifier": "(A3)",
+      "variable_key_value": [
+        {
+          "key": "ARE",
+          "value": "United Arab Emirates"
+        },
+        {
+          "key": "ARG",
+          "value": "Argentina"
+        },
+        {
+          "key": "AUS",
+          "value": "Australia"
+        },
+        {
+          "key": "AUT",
+          "value": "Austria"
+        },
+        {
+          "key": "BEL",
+          "value": "Belgium"
+        },
+        {
+          "key": "BGR",
+          "value": "Bulgaria"
+        },
+        {
+          "key": "BRA",
+          "value": "Brazil"
+        },
+        {
+          "key": "CAN",
+          "value": "Canada"
+        },
+        {
+          "key": "CHE",
+          "value": "Switzerland"
+        },
+        {
+          "key": "CHL",
+          "value": "Chile"
+        },
+        {
+          "key": "COL",
+          "value": "Colombia"
+        },
+        {
+          "key": "CRI",
+          "value": "Costa Rica"
+        },
+        {
+          "key": "CZE",
+          "value": "Czech Republic"
+        },
+        {
+          "key": "DEU",
+          "value": "Germany"
+        },
+        {
+          "key": "DNK",
+          "value": "Denmark"
+        },
+        {
+          "key": "ESP",
+          "value": "Spain"
+        },
+        {
+          "key": "EST",
+          "value": "Estonia"
+        },
+        {
+          "key": "FIN",
+          "value": "Finland"
+        },
+        {
+          "key": "FRA",
+          "value": "France"
+        },
+        {
+          "key": "GBR",
+          "value": "United Kingdom"
+        }
+      ],
+      "variable_description": "Country code as a three-letter ISO code",
+      "fixed_width_specification": "1-3",
       "Year": 2012
     }
   ]

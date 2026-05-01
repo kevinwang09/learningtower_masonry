@@ -7,15 +7,15 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] W_FSCHWT (target: sch_wgt) -> Exists in codebook (No NA checking required)
 
 --- Variables found in JSON but NOT in CSV ---
-Total variables in this category: 229
+Total variables in this category: 228
 
 --- Validation Failed ---
-- Variable 'CNT' (target: country) not found in the extracted codebook. Note: 
-- Variable 'SC03Q01' (target: fund_gov) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'SC03Q02' (target: fund_fees) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'SC03Q03' (target: fund_donation) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'SC06Q01' (target: enrol_boys) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'SC06Q02' (target: enrol_girls) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'TCSHORT' (target: staff_shortage) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'STRATIO' (target: stratio) expects NA values {'9998', '9999', '9997'} but has no value mapping in codebook. Note: 
-- Variable 'SCHSIZE' (target: school_size) expects NA values {'99997', '99999', '99998'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'CNT' (target: country) not found in the extracted codebook. Note: 
+- [FAIL] Variable 'SC03Q01' (target: fund_gov) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'SC03Q02' (target: fund_fees) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'SC03Q03' (target: fund_donation) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'SC06Q01' (target: enrol_boys) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'SC06Q02' (target: enrol_girls) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'TCSHORT' (target: staff_shortage) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'STRATIO' (target: stratio) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'SCHSIZE' (target: school_size) expects NA values {'99999', '99998', '99997'} but has no value mapping in codebook. Note: 

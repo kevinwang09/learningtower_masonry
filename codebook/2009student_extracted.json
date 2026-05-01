@@ -19631,6 +19631,30 @@
       "Year": 2009
     },
     {
+      "variable_key": "WVARSTRR",
+      "format_specifier": "F2",
+      "variable_key_value": null,
+      "variable_description": "RANDOMIZED FINAL VARIANCE STRATUM (1-80)",
+      "fixed_width_specification": "1810-1811",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RANDUNIT",
+      "format_specifier": "F1",
+      "variable_key_value": null,
+      "variable_description": "RANDOMLY ASSIGNED VARIANCE UNIT",
+      "fixed_width_specification": "1812-1812",
+      "Year": 2009
+    },
+    {
+      "variable_key": "VER_STU",
+      "format_specifier": "A13",
+      "variable_key_value": null,
+      "variable_description": "Version of student database and date of release",
+      "fixed_width_specification": "1813-1825",
+      "Year": 2009
+    },
+    {
       "variable_key": "LANGUAGES",
       "format_specifier": "",
       "variable_key_value": [
@@ -19753,6 +19777,184 @@
       ],
       "variable_description": "List of language codes and their corresponding language names as presented in the source text.",
       "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "COUNTRY_CODE",
+      "format_specifier": "(A3)",
+      "variable_key_value": [
+        {
+          "key": "GBR",
+          "value": "United Kingdom"
+        },
+        {
+          "key": "GEO",
+          "value": "GEORGIAN"
+        },
+        {
+          "key": "GRC",
+          "value": "Greece"
+        },
+        {
+          "key": "HKG",
+          "value": "Hong Kong-China"
+        },
+        {
+          "key": "HRV",
+          "value": "Croatia"
+        },
+        {
+          "key": "HUN",
+          "value": "HUNGARIAN"
+        },
+        {
+          "key": "QHP",
+          "value": "Himachal Pradesh-India"
+        },
+        {
+          "key": "QTN",
+          "value": "Tamil Nadu-India"
+        },
+        {
+          "key": "QVE",
+          "value": "Miranda-Venezuela"
+        },
+        {
+          "key": "ROU",
+          "value": "Romania"
+        },
+        {
+          "key": "RUS",
+          "value": "RUSSIAN"
+        },
+        {
+          "key": "SGP",
+          "value": "Singapore"
+        },
+        {
+          "key": "SRB",
+          "value": "Serbia"
+        },
+        {
+          "key": "SVK",
+          "value": "Slovak Republic"
+        },
+        {
+          "key": "SVN",
+          "value": "Slovenia"
+        },
+        {
+          "key": "SWE",
+          "value": "SWEDISH"
+        },
+        {
+          "key": "TAP",
+          "value": "Chinese Taipei"
+        },
+        {
+          "key": "THA",
+          "value": "THAI"
+        },
+        {
+          "key": "TTO",
+          "value": "Trinidad and Tobago"
+        },
+        {
+          "key": "TUN",
+          "value": "Tunisia"
+        }
+      ],
+      "variable_description": "Country code abbreviation",
+      "fixed_width_specification": "1-3",
+      "Year": 2009
+    },
+    {
+      "variable_key": "LANG_CODE",
+      "format_specifier": "(A3)",
+      "variable_key_value": [
+        {
+          "key": "TUR",
+          "value": "TURKISH"
+        },
+        {
+          "key": "URY",
+          "value": "Uruguay"
+        },
+        {
+          "key": "USA",
+          "value": "United States"
+        },
+        {
+          "key": "CHI",
+          "value": "CHINESE"
+        },
+        {
+          "key": "DAN",
+          "value": "DANISH"
+        },
+        {
+          "key": "DUT",
+          "value": "DUTCH"
+        },
+        {
+          "key": "ENG",
+          "value": "ENGLISH"
+        },
+        {
+          "key": "FRE",
+          "value": "FRENCH"
+        },
+        {
+          "key": "GER",
+          "value": "GERMAN"
+        },
+        {
+          "key": "GLE",
+          "value": "IRISH"
+        },
+        {
+          "key": "GLG",
+          "value": "GALICIAN"
+        },
+        {
+          "key": "GRE",
+          "value": "GREEK"
+        },
+        {
+          "key": "HEB",
+          "value": "HEBREW"
+        },
+        {
+          "key": "HIN",
+          "value": "HINDI"
+        },
+        {
+          "key": "ICE",
+          "value": "ICELANDIC"
+        },
+        {
+          "key": "IND",
+          "value": "INDONESIAN"
+        },
+        {
+          "key": "KIR",
+          "value": "KYRGYZ"
+        },
+        {
+          "key": "LAV",
+          "value": "LATVIAN"
+        },
+        {
+          "key": "LIT",
+          "value": "LITHUANIAN"
+        },
+        {
+          "key": "MAY",
+          "value": "MALAY"
+        }
+      ],
+      "variable_description": "Language code abbreviation",
+      "fixed_width_specification": "1-3",
       "Year": 2009
     }
   ]

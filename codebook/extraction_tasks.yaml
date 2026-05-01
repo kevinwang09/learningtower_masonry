@@ -19,7 +19,3 @@ tasks:
     schema_file: llamaconfig.json
     school_file: 2012school.pdf
     student_file: 2012student.pdf
-  - year: 2015
-    schema_file: llamaconfig.json
-    school_file: 2015school.pdf
-    student_file: 2015student.pdf

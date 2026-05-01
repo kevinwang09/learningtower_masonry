@@ -204,10 +204,17 @@ async def extract_batch(async_client, batch_content, extraction_config, batch_nu
 
             # Run LlamaExtract
             # Note: Using AsyncLlamaCloud's run equivalent
-            result = await async_client.extract.run(
-                file_input=file_obj.id,
-                configuration=extraction_config,
-            )
+            try:
+                result = await asyncio.wait_for(
+                    async_client.extract.run(
+                        file_input=file_obj.id,
+                        configuration=extraction_config,
+                    ),
+                    timeout=600.0  # 10 minute absolute timeout per batch
+                )
+            except asyncio.TimeoutError:
+                print(f"    [TIMEOUT] Batch {batch_num} exceeded 10 minutes. Skipping for now (will be caught by patch logic later).")
+                return []
 
             batch_data = result.extract_result
             if hasattr(batch_data, "model_dump"):
@@ -250,8 +257,13 @@ async def process_extraction(async_client, chunks, output_path, extraction_confi
     Extracts chunks concurrently, deduplicates, merges with existing variables,
     sorts chronologically, and saves to JSON.
     """
-    new_extracted_variables = []
+    all_extracted_variables = list(existing_variables)
     
+    expected_order = {k: i for i, k in enumerate(expected_vars.keys())}
+    def sort_key(var):
+        k = var.get("variable_key", "").strip().upper()
+        return expected_order.get(k, float('inf'))
+        
     if chunks:
         # Concurrent extraction with semaphore
         print(f"  Submitting {len(chunks)} chunks to LlamaCloud (concurrency limit: {concurrency_limit})...")
@@ -260,31 +272,35 @@ async def process_extraction(async_client, chunks, output_path, extraction_confi
         for idx, chunk_content in enumerate(chunks):
             tasks.append(extract_batch(async_client, chunk_content, extraction_config, idx + 1, len(chunks), semaphore))
 
-        batch_results = await asyncio.gather(*tasks)
+        # Incremental checkpointing
+        for future in asyncio.as_completed(tasks):
+            batch_vars = await future
+            if batch_vars:
+                # Merge immediately
+                all_extracted_variables.extend(batch_vars)
+                # Deduplicate
+                all_extracted_variables = deduplicate_variables(all_extracted_variables)
+                # Sort
+                all_extracted_variables.sort(key=sort_key)
 
-        # Flatten the results
-        for batch_vars in batch_results:
-            new_extracted_variables.extend(batch_vars)
+                # Save checkpoint
+                output_data = {"codebook_entries": all_extracted_variables}
+                for var in output_data["codebook_entries"]:
+                    var["Year"] = int(year)
+                    
+                with open(output_path, "w", encoding="utf-8") as f:
+                    json.dump(output_data, f, indent=2)
+                print(f"  [Checkpoint] Saved {len(all_extracted_variables)} variables to {output_path}")
 
-        # Deduplicate newly extracted variables
-        new_extracted_variables = deduplicate_variables(new_extracted_variables)
-
-    # Merge existing and new
-    all_extracted_variables = existing_variables + new_extracted_variables
-
-    # Final Deduplication across combined list
-    all_extracted_variables = deduplicate_variables(all_extracted_variables)
-
-    # Sort based on expected chronological order
-    expected_order = {k: i for i, k in enumerate(expected_vars.keys())}
-    def sort_key(var):
-        k = var.get("variable_key", "").strip().upper()
-        return expected_order.get(k, float('inf'))
-        
-    all_extracted_variables.sort(key=sort_key)
-
-    # Final aggregation using canonical structure (matching llamaconfig.json)
-    output_data = {"codebook_entries": all_extracted_variables}
+    else:
+        # No chunks to extract, but we still sort and save to ensure consistency
+        all_extracted_variables.sort(key=sort_key)
+        output_data = {"codebook_entries": all_extracted_variables}
+        for var in output_data["codebook_entries"]:
+            var["Year"] = int(year)
+            
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(output_data, f, indent=2)
 
     # Post-process: Ensure Year is integer and matches task year
     for var in output_data["codebook_entries"]:

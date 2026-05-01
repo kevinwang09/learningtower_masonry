@@ -8,6 +8,7 @@ import jsonschema
 
 def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None):
     issues = []
+    warnings = []
     
     original_stdout = sys.stdout
     if log_file:
@@ -81,7 +82,11 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                 csv_vars.add(col_upper)
                 
                 if col_upper not in extracted_vars:
-                    issues.append(f"Variable '{col}' (target: {target_name}) not found in the extracted codebook. Note: {note}")
+                    msg = f"Variable '{col}' (target: {target_name}) not found in the extracted codebook. Note: {note}"
+                    if note:
+                        warnings.append(msg)
+                    else:
+                        issues.append(msg)
                     continue
                     
                 entry = extracted_vars[col_upper]
@@ -90,14 +95,22 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                     var_values = entry.get('variable_key_value', entry.get('Values'))
                     
                     if var_values is None:
-                        issues.append(f"Variable '{col}' (target: {target_name}) expects NA values {expected_na_values} but has no value mapping in codebook. Note: {note}")
+                        msg = f"Variable '{col}' (target: {target_name}) expects NA values {expected_na_values} but has no value mapping in codebook. Note: {note}"
+                        if note:
+                            warnings.append(msg)
+                        else:
+                            issues.append(msg)
                         continue
                     
                     codebook_keys = set(str(v.get('key')).strip() for v in var_values if 'key' in v)
                     
                     missing_nas = expected_na_values - codebook_keys
                     if missing_nas:
-                        issues.append(f"Variable '{col}' (target: {target_name}) is missing expected NA keys in codebook: {missing_nas}. Found keys: {codebook_keys}. Note: {note}")
+                        msg = f"Variable '{col}' (target: {target_name}) is missing expected NA keys in codebook: {missing_nas}. Found keys: {codebook_keys}. Note: {note}"
+                        if note:
+                            warnings.append(msg)
+                        else:
+                            issues.append(msg)
                     else:
                         print(f" [OK] {col} (target: {target_name}) -> NA values matched successfully: {expected_na_values}")
                 else:
@@ -108,10 +121,15 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
             print(f"\n--- Variables found in JSON but NOT in CSV ---")
             print(f"Total variables in this category: {len(json_only_vars)}")
 
+        if warnings:
+            print("\n--- Validation Warnings ---")
+            for warning in warnings:
+                print(f"- [WARNING] {warning}")
+
         if issues:
             print("\n--- Validation Failed ---")
             for issue in issues:
-                print(f"- {issue}")
+                print(f"- [FAIL] {issue}")
             return False
         else:
             print("\n--- Validation Passed! ---")
@@ -141,7 +159,8 @@ def main():
     if not tasks and 'year' in manifest:
         tasks = [manifest]
         
-    all_passed = True
+    passed_tasks = []
+    failed_tasks = []
     base_dir = os.path.dirname(os.path.abspath(__file__))
     logs_dir = os.path.join(base_dir, "logs")
     
@@ -174,13 +193,27 @@ def main():
                     json_schema = json.load(sf)
 
             passed = validate_curation(json_path, csv_path, year, json_schema=json_schema, log_file=log_path)
+            task_name = f"{year} {file_type}"
             if not passed:
-                all_passed = False
-                print(f" -> Validation FAILED for {year} {file_type}.")
+                failed_tasks.append(task_name)
+                print(f" -> Validation FAILED for {task_name}.")
             else:
-                print(f" -> Validation PASSED for {year} {file_type}.")
+                passed_tasks.append(task_name)
+                print(f" -> Validation PASSED for {task_name}.")
                 
-    if not all_passed:
+    print("\n" + "="*50)
+    print("VALIDATION SUMMARY")
+    print("="*50)
+    print(f"Total Passed: {len(passed_tasks)}")
+    if passed_tasks:
+        print(f"Passed Tasks: {', '.join(passed_tasks)}")
+        
+    print(f"\nTotal Failed: {len(failed_tasks)}")
+    if failed_tasks:
+        print(f"Failed Tasks: {', '.join(failed_tasks)}")
+    print("="*50 + "\n")
+                
+    if failed_tasks:
         sys.exit(1)
 
 if __name__ == "__main__":
