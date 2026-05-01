@@ -109,46 +109,39 @@ def get_expected_variables(markdown_text):
     Returns a dictionary mapping expected variable_keys to their raw text blocks,
     preserving the chronological order of the document.
     """
-    # Regex captures the exact variable key in group 1
-    anchor_pattern = re.compile(r'(?m)^([A-Z][A-Z0-9_]{2,9})(?:\s+|\s+\()')
+    # Relaxed regex to handle both plain text and Markdown/HTML table cells
+    anchor_pattern = re.compile(r'(?:^|<td>|>|\s)([A-Z][A-Z0-9_]{2,9})(?:</td>|<|\s+|\()')
     matches = list(anchor_pattern.finditer(markdown_text))
     
     expected_vars = {}
     for i, match in enumerate(matches):
         key = match.group(1).strip().upper()
-        start_idx = match.start()
-        end_idx = matches[i+1].start() if i+1 < len(matches) else len(markdown_text)
+        # Filter out common false positives (like HTML tags or table headers)
+        if key in ["VARIABLE", "NAME", "POSITION", "FORMAT", "COLUMNS", "VALUE", "LABEL"]:
+             continue
+             
+        start_idx = match.start(1) # Start at the actual variable name
+        end_idx = matches[i+1].start(1) if i+1 < len(matches) else len(markdown_text)
         expected_vars[key] = markdown_text[start_idx:end_idx]
         
     return expected_vars
 
 
 def chunk_markdown(markdown_text, window_size=30, step_size=27):
-    """
-    Create overlapping text chunks using a broad universal anchor pattern.
-
-    Instead of perfectly splitting every variable (which breaks across PISA
-    year formatting changes), we find approximate variable start positions
-    and create overlapping windows. Duplicate extractions from the overlap
-    regions are resolved later via deduplicate_variables().
-
-    Args:
-        markdown_text: Full Markdown string from the parsed codebook.
-        window_size:   Number of variable anchors per chunk.
-        step_size:     Number of anchors to advance before starting the
-                       next chunk. Overlap = window_size - step_size.
-
-    Returns:
-        A list of text chunks (strings), each covering `window_size` anchors.
-    """
-    # Universal anchor: uppercase identifier (3-10 chars) at start of line,
-    # followed by whitespace or '(' — matches across all PISA year formats.
-    anchor_pattern = re.compile(r'(?m)^([A-Z][A-Z0-9_]{2,9}(?:\s+|\s+\())')
+    # Use the same relaxed regex here
+    anchor_pattern = re.compile(r'(?:^|<td>|>|\s)([A-Z][A-Z0-9_]{2,9})(?:</td>|<|\s+|\()')
     matches = list(anchor_pattern.finditer(markdown_text))
-    indices = [m.start() for m in matches]
+    
+    # Filter out the table header false positives to keep chunks aligned
+    valid_matches = []
+    for m in matches:
+        key = m.group(1).strip().upper()
+        if key not in ["VARIABLE", "NAME", "POSITION", "FORMAT", "COLUMNS", "VALUE", "LABEL"]:
+            valid_matches.append(m)
+            
+    indices = [m.start(1) for m in valid_matches]
 
     if not indices:
-        # No anchors found — return the whole text as a single chunk
         return [markdown_text]
 
     chunks = []

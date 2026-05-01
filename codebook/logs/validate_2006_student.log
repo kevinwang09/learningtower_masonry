@@ -21,8 +21,8 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] ST14Q03 (target: computer_n) -> Exists in codebook (No NA checking required)
  [OK] ST14Q04 (target: car) -> Exists in codebook (No NA checking required)
  [OK] ST15Q01 (target: book) -> Exists in codebook (No NA checking required)
- [OK] WEALTH (target: wealth) -> NA values matched successfully: {'999', '997'}
- [OK] ESCS (target: escs) -> NA values matched successfully: {'999', '997'}
+ [OK] WEALTH (target: wealth) -> NA values matched successfully: {'997', '999'}
+ [OK] ESCS (target: escs) -> NA values matched successfully: {'997', '999'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 471

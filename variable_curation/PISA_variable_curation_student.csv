@@ -91,8 +91,8 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2012,computer_n,ST27Q03,none1one2two3threemore4,,How many computers,factor,
 2012,car,ST27Q04,none1one2two3threemore4,,How many cars,factor,
 2012,book,ST28Q01,book_levels_6,,How many books at home,factor,
-2012,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,
-2012,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,
+2012,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2012,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
 2009,country,CNT,as.factor,,Country three character,factor,
 2009,school_id,SCHOOLID,as.character,,school ID,character,
 2009,student_id,StIDStd,as.character,,Student ID,character,

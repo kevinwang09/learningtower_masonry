@@ -8,16 +8,16 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] W_FSCHWT (target: sch_wgt) -> Exists in codebook (No NA checking required)
 
 --- Variables found in JSON but NOT in CSV ---
-Total variables in this category: 767
+Total variables in this category: 904
 
 --- Validation Warnings ---
-- [WARNING] Variable 'SC02Q01' (target: fund_gov) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC02Q02' (target: fund_fees) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC02Q03' (target: fund_donation) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC07Q01' (target: enrol_boys) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC07Q02' (target: enrol_girls) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'TCSHORT' (target: staff_shortage) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'STRATIO' (target: stratio) expects NA values {'9998', '9997', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC02Q01' (target: fund_gov) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC02Q02' (target: fund_fees) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC02Q03' (target: fund_donation) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC07Q01' (target: enrol_boys) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC07Q02' (target: enrol_girls) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'TCSHORT' (target: staff_shortage) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'STRATIO' (target: stratio) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
 - [WARNING] Variable 'SCHSIZE' (target: school_size) expects NA values {'99999', '99998', '99997'} but has no value mapping in codebook. Note: The 99997, 99998 and 99999 NA values were inferred from the data, since this was not documented in the codebook.
 
 --- Validation Passed! ---

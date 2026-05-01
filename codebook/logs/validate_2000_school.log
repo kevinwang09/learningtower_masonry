@@ -4,14 +4,14 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variable and NA Value Check ---
  [OK] country (target: country) -> Exists in codebook (No NA checking required)
  [OK] schoolid (target: school_id) -> Exists in codebook (No NA checking required)
- [OK] sc03q01 (target: public_private) -> NA values matched successfully: {'7', '9', '8'}
- [OK] sc04q01 (target: fund_gov) -> NA values matched successfully: {'999', '997'}
- [OK] sc04q02 (target: fund_fees) -> NA values matched successfully: {'999', '997'}
- [OK] sc04q03 (target: fund_donation) -> NA values matched successfully: {'999', '997'}
- [OK] sc02q01 (target: enrol_boys) -> NA values matched successfully: {'9997', '9999'}
- [OK] sc02q02 (target: enrol_girls) -> NA values matched successfully: {'9997', '9999'}
+ [OK] sc03q01 (target: public_private) -> NA values matched successfully: {'8', '9', '7'}
+ [OK] sc04q01 (target: fund_gov) -> NA values matched successfully: {'997', '999'}
+ [OK] sc04q02 (target: fund_fees) -> NA values matched successfully: {'997', '999'}
+ [OK] sc04q03 (target: fund_donation) -> NA values matched successfully: {'997', '999'}
+ [OK] sc02q01 (target: enrol_boys) -> NA values matched successfully: {'9999', '9997'}
+ [OK] sc02q02 (target: enrol_girls) -> NA values matched successfully: {'9999', '9997'}
  [OK] tcshort (target: staff_shortage) -> NA values matched successfully: {'97'}
- [OK] stratio (target: stratio) -> NA values matched successfully: {'97', '99'}
+ [OK] stratio (target: stratio) -> NA values matched successfully: {'99', '97'}
  [OK] schlsize (target: school_size) -> NA values matched successfully: {'99999', '99997'}
 
 --- Variables found in JSON but NOT in CSV ---

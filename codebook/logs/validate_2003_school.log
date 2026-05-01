@@ -5,13 +5,13 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
  [OK] SC03Q01 (target: public_private) -> Exists in codebook (No NA checking required)
- [OK] SC04Q01 (target: fund_gov) -> NA values matched successfully: {'998', '999', '997'}
- [OK] SC04Q02 (target: fund_fees) -> NA values matched successfully: {'998', '999', '997'}
- [OK] SC04Q03 (target: fund_donation) -> NA values matched successfully: {'998', '999', '997'}
+ [OK] SC04Q01 (target: fund_gov) -> NA values matched successfully: {'997', '998', '999'}
+ [OK] SC04Q02 (target: fund_fees) -> NA values matched successfully: {'997', '998', '999'}
+ [OK] SC04Q03 (target: fund_donation) -> NA values matched successfully: {'997', '998', '999'}
  [OK] SC02Q01 (target: enrol_boys) -> Exists in codebook (No NA checking required)
  [OK] SC02Q02 (target: enrol_girls) -> Exists in codebook (No NA checking required)
  [OK] TCSHORT (target: staff_shortage) -> NA values matched successfully: {'997'}
- [OK] STRATIO (target: stratio) -> NA values matched successfully: {'998', '999', '997'}
+ [OK] STRATIO (target: stratio) -> NA values matched successfully: {'997', '998', '999'}
  [OK] SCHLSIZE (target: school_size) -> NA values matched successfully: {'99999', '99998', '99997'}
  [OK] SCWEIGHT (target: sch_wgt) -> Exists in codebook (No NA checking required)
 

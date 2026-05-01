@@ -130,6 +130,232 @@
       "Year": 2009
     },
     {
+      "variable_key": "ALB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Albania",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ARE",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Stratum 10 78481 DUBAI: National \u2013 Public - Arabic",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ARG",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Argentina",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "AUS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Australia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "AUT",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Austria",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "AZE",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Azerbaijani",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "BEL",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "No home cinema",
+          "value": "No home cinema"
+        }
+      ],
+      "variable_description": "Flemish Community: No home cinema",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "BGR",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Bulgaria",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "BRA",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Brazil",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CAN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Canada",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Chile",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "COL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Colombia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CRI",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Costa Rica",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CZE",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Czech Republic",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "DEU",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Germany",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "DNK",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Denmark",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Spain",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "EST",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Estonia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "FIN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Finland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "FRA",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for France",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "Scotland",
+          "value": "No premium TV package (e.g. Sky Movies, Sky Sports)"
+        }
+      ],
+      "variable_description": "GBR(Scotland): No premium TV package (e.g. Sky Movies, Sky Sports)",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GEO",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Georgia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GRC",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Greece",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "HKG",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Hong Kong-China",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "HRV",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Croatia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "HUN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Country code for Hungarian",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
       "variable_key": "IDN",
       "format_specifier": "(A12)",
       "variable_key_value": null,
@@ -367,6 +593,38 @@
       "variable_key_value": null,
       "variable_description": "Country code for Shanghai-China",
       "fixed_width_specification": "237-251",
+      "Year": 2009
+    },
+    {
+      "variable_key": "QHP",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Himachal Pradesh-India",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "QTN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Tamil Nadu-India",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "QVE",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Miranda-Venezuela",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TUN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "78801 TUN: East",
+      "fixed_width_specification": "",
       "Year": 2009
     },
     {
@@ -667,6 +925,75 @@
         }
       ],
       "variable_description": "Country code ISO 3-digit",
+      "fixed_width_specification": "4-6",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ISO",
+      "format_specifier": "A3",
+      "variable_key_value": [
+        {
+          "key": "008",
+          "value": "Albania"
+        },
+        {
+          "key": "031",
+          "value": "Azerbaijan"
+        },
+        {
+          "key": "032",
+          "value": "Argentina"
+        },
+        {
+          "key": "036",
+          "value": "Australia"
+        },
+        {
+          "key": "040",
+          "value": "Austria"
+        },
+        {
+          "key": "056",
+          "value": "Belgium"
+        },
+        {
+          "key": "076",
+          "value": "Brazil"
+        },
+        {
+          "key": "100",
+          "value": "Bulgaria"
+        },
+        {
+          "key": "124",
+          "value": "Canada"
+        },
+        {
+          "key": "152",
+          "value": "Chile"
+        },
+        {
+          "key": "156",
+          "value": "Shanghai-China"
+        },
+        {
+          "key": "158",
+          "value": "Chinese Taipei"
+        },
+        {
+          "key": "170",
+          "value": "Colombia"
+        },
+        {
+          "key": "188",
+          "value": "Costa Rica"
+        },
+        {
+          "key": "191",
+          "value": "Croatia"
+        }
+      ],
+      "variable_description": "ISO 3-digit country code",
       "fixed_width_specification": "4-6",
       "Year": 2009
     },
@@ -16657,10 +16984,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT28",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 28",
+      "fixed_width_specification": "1317-1325",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR29",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT29",
+      "fixed_width_specification": "1326-1334",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT29",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 29",
       "fixed_width_specification": "1326-1334",
       "Year": 2009
     },
@@ -16673,10 +17016,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT30",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 30",
+      "fixed_width_specification": "1335-1343",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR31",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT31",
+      "fixed_width_specification": "1344-1352",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT31",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 31",
       "fixed_width_specification": "1344-1352",
       "Year": 2009
     },
@@ -16689,10 +17048,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT32",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 32",
+      "fixed_width_specification": "1353-1361",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR33",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT33",
+      "fixed_width_specification": "1362-1370",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT33",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 33",
       "fixed_width_specification": "1362-1370",
       "Year": 2009
     },
@@ -16705,10 +17080,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT34",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 34",
+      "fixed_width_specification": "1371-1379",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR35",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT35",
+      "fixed_width_specification": "1380-1388",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT35",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 35",
       "fixed_width_specification": "1380-1388",
       "Year": 2009
     },
@@ -16721,10 +17112,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT36",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 36",
+      "fixed_width_specification": "1389-1397",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR37",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT37",
+      "fixed_width_specification": "1398-1406",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT37",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 37",
       "fixed_width_specification": "1398-1406",
       "Year": 2009
     },
@@ -16737,10 +17144,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT38",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 38",
+      "fixed_width_specification": "1407-1415",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR39",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT39",
+      "fixed_width_specification": "1416-1424",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT39",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 39",
       "fixed_width_specification": "1416-1424",
       "Year": 2009
     },
@@ -16753,10 +17176,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT40",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 40",
+      "fixed_width_specification": "1425-1433",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR41",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT41",
+      "fixed_width_specification": "1434-1442",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT41",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 41",
       "fixed_width_specification": "1434-1442",
       "Year": 2009
     },
@@ -16769,10 +17208,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT42",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 42",
+      "fixed_width_specification": "1443-1451",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR43",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT43",
+      "fixed_width_specification": "1452-1460",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT43",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 43",
       "fixed_width_specification": "1452-1460",
       "Year": 2009
     },
@@ -16785,10 +17240,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT44",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 44",
+      "fixed_width_specification": "1461-1469",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR45",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT45",
+      "fixed_width_specification": "1470-1478",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT45",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 45",
       "fixed_width_specification": "1470-1478",
       "Year": 2009
     },
@@ -16801,10 +17272,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT46",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 46",
+      "fixed_width_specification": "1479-1487",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR47",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT47",
+      "fixed_width_specification": "1488-1496",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT47",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 47",
       "fixed_width_specification": "1488-1496",
       "Year": 2009
     },
@@ -16817,10 +17304,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT48",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 48",
+      "fixed_width_specification": "1497-1505",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR49",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT49",
+      "fixed_width_specification": "1506-1514",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT49",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 49",
       "fixed_width_specification": "1506-1514",
       "Year": 2009
     },
@@ -16833,10 +17336,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT50",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 50",
+      "fixed_width_specification": "1515-1523",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR51",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT51",
+      "fixed_width_specification": "1524-1532",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT51",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 51",
       "fixed_width_specification": "1524-1532",
       "Year": 2009
     },
@@ -16849,10 +17368,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT52",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 52",
+      "fixed_width_specification": "1533-1541",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR53",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT53",
+      "fixed_width_specification": "1542-1550",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT53",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 53",
       "fixed_width_specification": "1542-1550",
       "Year": 2009
     },
@@ -16865,10 +17400,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT54",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 54",
+      "fixed_width_specification": "1551-1559",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR55",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT55",
+      "fixed_width_specification": "1560-1568",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT55",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 55",
       "fixed_width_specification": "1560-1568",
       "Year": 2009
     },
@@ -16881,10 +17432,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT56",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 56",
+      "fixed_width_specification": "1569-1577",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR57",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT57",
+      "fixed_width_specification": "1578-1586",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT57",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable 57",
       "fixed_width_specification": "1578-1586",
       "Year": 2009
     },
@@ -16897,10 +17464,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT58",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT58",
+      "fixed_width_specification": "1587-1595",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR59",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT59",
+      "fixed_width_specification": "1596-1604",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT59",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT59",
       "fixed_width_specification": "1596-1604",
       "Year": 2009
     },
@@ -16913,10 +17496,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT60",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT60",
+      "fixed_width_specification": "1605-1613",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR61",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT61",
+      "fixed_width_specification": "1614-1622",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT61",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT61",
       "fixed_width_specification": "1614-1622",
       "Year": 2009
     },
@@ -16929,10 +17528,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT62",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT62",
+      "fixed_width_specification": "1623-1631",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR63",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT63",
+      "fixed_width_specification": "1632-1640",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT63",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT63",
       "fixed_width_specification": "1632-1640",
       "Year": 2009
     },
@@ -16945,10 +17560,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT64",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT64",
+      "fixed_width_specification": "1641-1649",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR65",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT65",
+      "fixed_width_specification": "1650-1658",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT65",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT65",
       "fixed_width_specification": "1650-1658",
       "Year": 2009
     },
@@ -16961,10 +17592,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT66",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT66",
+      "fixed_width_specification": "1659-1667",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR67",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT67",
+      "fixed_width_specification": "1668-1676",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT67",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT67",
       "fixed_width_specification": "1668-1676",
       "Year": 2009
     },
@@ -16977,10 +17624,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT68",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT68",
+      "fixed_width_specification": "1677-1685",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR69",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT69",
+      "fixed_width_specification": "1686-1694",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT69",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT69",
       "fixed_width_specification": "1686-1694",
       "Year": 2009
     },
@@ -16993,10 +17656,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT70",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT70",
+      "fixed_width_specification": "1695-1703",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR71",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT71",
+      "fixed_width_specification": "1704-1712",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT71",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT71",
       "fixed_width_specification": "1704-1712",
       "Year": 2009
     },
@@ -17009,10 +17688,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT72",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT72",
+      "fixed_width_specification": "1713-1721",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR73",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT73",
+      "fixed_width_specification": "1722-1730",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT73",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT73",
       "fixed_width_specification": "1722-1730",
       "Year": 2009
     },
@@ -17025,10 +17720,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT74",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT74",
+      "fixed_width_specification": "1731-1739",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR75",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT75",
+      "fixed_width_specification": "1740-1748",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT75",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT75",
       "fixed_width_specification": "1740-1748",
       "Year": 2009
     },
@@ -17041,10 +17752,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT76",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT76",
+      "fixed_width_specification": "1749-1757",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR77",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT77",
+      "fixed_width_specification": "1758-1766",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT77",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT77",
       "fixed_width_specification": "1758-1766",
       "Year": 2009
     },
@@ -17057,6 +17784,14 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT78",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT78",
+      "fixed_width_specification": "1767-1775",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR79",
       "format_specifier": "F9.4",
       "variable_key_value": null,
@@ -17065,10 +17800,26 @@
       "Year": 2009
     },
     {
+      "variable_key": "WEIGHT79",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT79",
+      "fixed_width_specification": "1776-1784",
+      "Year": 2009
+    },
+    {
       "variable_key": "W_FSTR80",
       "format_specifier": "F9.4",
       "variable_key_value": null,
       "variable_description": "FINAL STUDENT REPLICATE BRR-FAY WEIGHT80",
+      "fixed_width_specification": "1785-1793",
+      "Year": 2009
+    },
+    {
+      "variable_key": "WEIGHT80",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "Weight variable WEIGHT80",
       "fixed_width_specification": "1785-1793",
       "Year": 2009
     },
@@ -17147,14 +17898,6 @@
       ],
       "variable_description": "Test Language",
       "fixed_width_specification": "1794-1796",
-      "Year": 2009
-    },
-    {
-      "variable_key": "CNTFAC",
-      "format_specifier": "F8.4",
-      "variable_key_value": null,
-      "variable_description": "Country weight factor for equal weights (1000)",
-      "fixed_width_specification": "433-440",
       "Year": 2009
     },
     {
@@ -19647,11 +20390,35 @@
       "Year": 2009
     },
     {
+      "variable_key": "UNIT",
+      "format_specifier": "F1",
+      "variable_key_value": null,
+      "variable_description": "Final variance assigned variance unit",
+      "fixed_width_specification": "436",
+      "Year": 2009
+    },
+    {
       "variable_key": "VER_STU",
       "format_specifier": "A13",
       "variable_key_value": null,
       "variable_description": "Version of student database and date of release",
       "fixed_width_specification": "1813-1825",
+      "Year": 2009
+    },
+    {
+      "variable_key": "A13",
+      "format_specifier": "A13",
+      "variable_key_value": null,
+      "variable_description": "Final variance assigned variance A13",
+      "fixed_width_specification": "1813-1825",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CNTFAC",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Country weight factor for equal weights (1000)",
+      "fixed_width_specification": "433-440",
       "Year": 2009
     },
     {
@@ -19955,6 +20722,2278 @@
       ],
       "variable_description": "Language code abbreviation",
       "fixed_width_specification": "1-3",
+      "Year": 2009
+    },
+    {
+      "variable_key": "F1",
+      "format_specifier": "F1",
+      "variable_key_value": null,
+      "variable_description": "Final variance assigned variance F1",
+      "fixed_width_specification": "1812-1812",
+      "Year": 2009
+    },
+    {
+      "variable_key": "Variable Name",
+      "format_specifier": "F4",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Variable with special codes for missing or invalid data",
+      "fixed_width_specification": "183-187",
+      "Year": 2009
+    },
+    {
+      "variable_key": "USB (memory) stick",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes, I use it"
+        },
+        {
+          "key": "2",
+          "value": "Yes, but I don't use it"
+        },
+        {
+          "key": "3",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "USB (memory) stick usage",
+      "fixed_width_specification": "267-267",
+      "Year": 2009
+    },
+    {
+      "variable_key": "Region_SchoolType_ITA",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "38015",
+          "value": "LIGURIA MEDIE"
+        },
+        {
+          "key": "38042",
+          "value": "VALLE D'AOSTA LICEI"
+        },
+        {
+          "key": "38043",
+          "value": "VALLE D'AOSTA TECNICI"
+        },
+        {
+          "key": "38020",
+          "value": "VALLE D'AOSTA MEDIE"
+        },
+        {
+          "key": "38026",
+          "value": "VENETO FORMAZIONE PROFESSIONALE"
+        },
+        {
+          "key": "38030",
+          "value": "TRENTO MEDIE"
+        },
+        {
+          "key": "38035",
+          "value": "BOLZANO MEDIE"
+        },
+        {
+          "key": "38040",
+          "value": "FRIULI VENEZIA GIULIA MEDIE"
+        },
+        {
+          "key": "38045",
+          "value": "EMILIA ROMAGNA PROFESSIONALI"
+        },
+        {
+          "key": "38050",
+          "value": "MARCHE MEDIE"
+        },
+        {
+          "key": "38054",
+          "value": "TOSCANA MEDIE"
+        },
+        {
+          "key": "38058",
+          "value": "UMBRIA MEDIE"
+        },
+        {
+          "key": "38063",
+          "value": "LAZIO MEDIE"
+        },
+        {
+          "key": "38069",
+          "value": "ABRUZZO FORMAZIONE PROFESSIONALE"
+        },
+        {
+          "key": "38073",
+          "value": "MOLISE MEDIE"
+        },
+        {
+          "key": "38078",
+          "value": "CAMPANIA MEDIE"
+        },
+        {
+          "key": "38082",
+          "value": "PUGLIA PROFESSIONALI"
+        },
+        {
+          "key": "38086",
+          "value": "BASILICATA PROFESSIONALI"
+        },
+        {
+          "key": "38090",
+          "value": "CALABRIA MEDIE"
+        },
+        {
+          "key": "38094",
+          "value": "SARDEGNA MEDIE"
+        },
+        {
+          "key": "38098",
+          "value": "SICILIA MEDIE"
+        }
+      ],
+      "variable_description": "Region and school type in Italy with associated codes and subcodes",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "UNRWA_Private_JOR",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "40004",
+          "value": "UNRWA Private"
+        }
+      ],
+      "variable_description": "UNRWA private school code in Jordan",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SchoolTypes_MYS_MLT",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "45806",
+          "value": "MARA Science Junior College MYS non-MOE-control, Other Schools"
+        },
+        {
+          "key": "47001",
+          "value": "MLT Church boys school"
+        },
+        {
+          "key": "47002",
+          "value": "MLT Church girls schools"
+        },
+        {
+          "key": "47003",
+          "value": "MLT State boys junior lyceum schools"
+        },
+        {
+          "key": "47004",
+          "value": "MLT State girls junior lyceum schools"
+        },
+        {
+          "key": "47005",
+          "value": "MLT State boys secondary schools"
+        },
+        {
+          "key": "47006",
+          "value": "MLT State girls secondary schools"
+        },
+        {
+          "key": "47008",
+          "value": "MLT Independent schools"
+        }
+      ],
+      "variable_description": "School types and codes in Malaysia and Malta",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SchoolTypes_MUS",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "48001",
+          "value": "MUS Urban/General only/Mixed ISCED/Boys"
+        },
+        {
+          "key": "48002",
+          "value": "MUS Urban/General only/Mixed ISCED/Girls"
+        },
+        {
+          "key": "48003",
+          "value": "MUS Urban/General only/Mixed ISCED/Mixed gender"
+        },
+        {
+          "key": "48004",
+          "value": "MUS Urban/Pre-Vocational only/ISCED2 only/Boys"
+        },
+        {
+          "key": "48005",
+          "value": "MUS Urban/Vocational only"
+        }
+      ],
+      "variable_description": "School types and codes in Mauritius",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SchoolSize_Region_MEX",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "48410",
+          "value": "BAJA CALIFORNIA SUR, very small schools"
+        },
+        {
+          "key": "48411",
+          "value": "CAMPECHE, large schools"
+        },
+        {
+          "key": "48412",
+          "value": "CAMPECHE, moderately small schools"
+        },
+        {
+          "key": "48413",
+          "value": "CAMPECHE, very small schools"
+        },
+        {
+          "key": "48416",
+          "value": "COAHUILA DE ZARAGOZA, very small schools"
+        },
+        {
+          "key": "48417",
+          "value": "COLIMA, large schools"
+        },
+        {
+          "key": "48418",
+          "value": "COLIMA, moderately small schools"
+        },
+        {
+          "key": "48419",
+          "value": "COLIMA, very small schools"
+        },
+        {
+          "key": "48420",
+          "value": "CHIAPAS, large schools"
+        },
+        {
+          "key": "48421",
+          "value": "CHIAPAS, moderately small schools"
+        },
+        {
+          "key": "48422",
+          "value": "CHIAPAS, very small schools"
+        },
+        {
+          "key": "48423",
+          "value": "CHIHUAHUA, large schools"
+        },
+        {
+          "key": "48424",
+          "value": "CHIHUAHUA, moderately small schools"
+        },
+        {
+          "key": "48425",
+          "value": "CHIHUAHUA, very small schools"
+        },
+        {
+          "key": "48449",
+          "value": "MICHOACAN DE OCAMPO, very small schools"
+        },
+        {
+          "key": "48450",
+          "value": "MORELOS, large schools"
+        },
+        {
+          "key": "48451",
+          "value": "MORELOS, moderately small schools"
+        },
+        {
+          "key": "48452",
+          "value": "MORELOS, very small schools"
+        },
+        {
+          "key": "48458",
+          "value": "NUEVO LEON, very small schools"
+        },
+        {
+          "key": "48459",
+          "value": "OAXACA, large schools"
+        },
+        {
+          "key": "48460",
+          "value": "OAXACA, moderately small schools"
+        },
+        {
+          "key": "48461",
+          "value": "OAXACA, very small schools"
+        },
+        {
+          "key": "48462",
+          "value": "PUEBLA, large schools"
+        },
+        {
+          "key": "48463",
+          "value": "PUEBLA, moderately small schools"
+        },
+        {
+          "key": "48464",
+          "value": "PUEBLA, very small schools"
+        },
+        {
+          "key": "48467",
+          "value": "QUERETARO DE ARTEAGA, very small schools"
+        }
+      ],
+      "variable_description": "School size and region codes in Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "305",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "ICT at school",
+      "fixed_width_specification": "691-699",
+      "Year": 2009
+    },
+    {
+      "variable_key": "352",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT1",
+      "fixed_width_specification": "1074-1082",
+      "Year": 2009
+    },
+    {
+      "variable_key": "353",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT2",
+      "fixed_width_specification": "1083-1091",
+      "Year": 2009
+    },
+    {
+      "variable_key": "354",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT3",
+      "fixed_width_specification": "1092-1100",
+      "Year": 2009
+    },
+    {
+      "variable_key": "355",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT4",
+      "fixed_width_specification": "1101-1109",
+      "Year": 2009
+    },
+    {
+      "variable_key": "356",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT5",
+      "fixed_width_specification": "1110-1118",
+      "Year": 2009
+    },
+    {
+      "variable_key": "357",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT6",
+      "fixed_width_specification": "1119-1127",
+      "Year": 2009
+    },
+    {
+      "variable_key": "358",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT7",
+      "fixed_width_specification": "1128-1136",
+      "Year": 2009
+    },
+    {
+      "variable_key": "359",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT8",
+      "fixed_width_specification": "1137-1145",
+      "Year": 2009
+    },
+    {
+      "variable_key": "360",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT9",
+      "fixed_width_specification": "1146-1154",
+      "Year": 2009
+    },
+    {
+      "variable_key": "361",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT10",
+      "fixed_width_specification": "1155-1163",
+      "Year": 2009
+    },
+    {
+      "variable_key": "362",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT11",
+      "fixed_width_specification": "1164-1172",
+      "Year": 2009
+    },
+    {
+      "variable_key": "363",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT12",
+      "fixed_width_specification": "1173-1181",
+      "Year": 2009
+    },
+    {
+      "variable_key": "364",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT13",
+      "fixed_width_specification": "1182-1190",
+      "Year": 2009
+    },
+    {
+      "variable_key": "365",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT14",
+      "fixed_width_specification": "1191-1199",
+      "Year": 2009
+    },
+    {
+      "variable_key": "366",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT15",
+      "fixed_width_specification": "1200-1208",
+      "Year": 2009
+    },
+    {
+      "variable_key": "367",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT16",
+      "fixed_width_specification": "1209-1217",
+      "Year": 2009
+    },
+    {
+      "variable_key": "368",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT17",
+      "fixed_width_specification": "1218-1226",
+      "Year": 2009
+    },
+    {
+      "variable_key": "369",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT18",
+      "fixed_width_specification": "1227-1235",
+      "Year": 2009
+    },
+    {
+      "variable_key": "370",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT19",
+      "fixed_width_specification": "1236-1244",
+      "Year": 2009
+    },
+    {
+      "variable_key": "371",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT20",
+      "fixed_width_specification": "1245-1253",
+      "Year": 2009
+    },
+    {
+      "variable_key": "372",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT21",
+      "fixed_width_specification": "1254-1262",
+      "Year": 2009
+    },
+    {
+      "variable_key": "373",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT22",
+      "fixed_width_specification": "1263-1271",
+      "Year": 2009
+    },
+    {
+      "variable_key": "374",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT23",
+      "fixed_width_specification": "1272-1280",
+      "Year": 2009
+    },
+    {
+      "variable_key": "375",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT24",
+      "fixed_width_specification": "1281-1289",
+      "Year": 2009
+    },
+    {
+      "variable_key": "376",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT25",
+      "fixed_width_specification": "1290-1298",
+      "Year": 2009
+    },
+    {
+      "variable_key": "377",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT26",
+      "fixed_width_specification": "1299-1307",
+      "Year": 2009
+    },
+    {
+      "variable_key": "378",
+      "format_specifier": "F9.4",
+      "variable_key_value": null,
+      "variable_description": "STUDENT REPLICATE BRR-FAY WEIGHT27",
+      "fixed_width_specification": "1308-1316",
+      "Year": 2009
+    },
+    {
+      "variable_key": "076001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "An Ipod"
+        }
+      ],
+      "variable_description": "BRA: An Ipod",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "076002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Ipod"
+        }
+      ],
+      "variable_description": "BRA: No Ipod",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "100001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Air-conditioner"
+        }
+      ],
+      "variable_description": "BGR: Air-conditioner",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "100002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No air-conditioner"
+        }
+      ],
+      "variable_description": "BGR: No air-conditioner",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "124001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Central air conditioning"
+        }
+      ],
+      "variable_description": "CAN: Central air conditioning",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "124002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Central air conditioning"
+        }
+      ],
+      "variable_description": "CAN: No Central air conditioning",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "152001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Microwave oven"
+        }
+      ],
+      "variable_description": "CHL: Microwave oven",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "152002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Microwave oven"
+        }
+      ],
+      "variable_description": "CHL: No Microwave oven",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "156001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Juice extractor"
+        }
+      ],
+      "variable_description": "QCN: Juice extractor",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "156002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No juice extractor"
+        }
+      ],
+      "variable_description": "QCN: No juice extractor",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "158001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Digital camera"
+        }
+      ],
+      "variable_description": "TAP: Digital camera",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "158002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No digital camera"
+        }
+      ],
+      "variable_description": "TAP: No digital camera",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "170001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Encyclopaedia"
+        }
+      ],
+      "variable_description": "COL: Encyclopaedia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "170002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Encyclopaedia"
+        }
+      ],
+      "variable_description": "COL: No Encyclopaedia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "188001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Encyclopedia"
+        }
+      ],
+      "variable_description": "CRI: Encyclopedia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "188002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Encyclopedia"
+        }
+      ],
+      "variable_description": "CRI: No Encyclopedia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "191001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Alarm system at home, Cable or digital TV"
+        }
+      ],
+      "variable_description": "HRV: Alarm system at home, Cable or digital TV",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "191002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Alarm system at home Cable or digital TV"
+        }
+      ],
+      "variable_description": "HRV: No Alarm system at home Cable or digital TV",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "203001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Home cinema"
+        }
+      ],
+      "variable_description": "CZE: Home cinema (screen",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "840001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "A musical instrument"
+        }
+      ],
+      "variable_description": "USA: A musical instrument",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "840002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No musical instrument"
+        }
+      ],
+      "variable_description": "USA: No musical instrument",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "858001",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Laptop (XO Ceibal not included)"
+        }
+      ],
+      "variable_description": "URY: Laptop (XO Ceibal not included)",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "858002",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Laptop (XO Ceibal not included)"
+        }
+      ],
+      "variable_description": "URY: No Laptop (XO Ceibal not included)",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "862011",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Encyclopedia"
+        }
+      ],
+      "variable_description": "QVE: Encyclopedia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "862012",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "No Encyclopedia"
+        }
+      ],
+      "variable_description": "QVE: No Encyclopedia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "BRAZIL_REGIONS_GRADE9",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "07604",
+          "value": "ACRE - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07607",
+          "value": "ALAGOAS - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07608",
+          "value": "AMAP\u00c1 - no grade 9 BRA"
+        },
+        {
+          "key": "07609",
+          "value": "AMAP\u00c1 - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07610",
+          "value": "AMAP\u00c1 - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07613",
+          "value": "AMAZONAS - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07616",
+          "value": "BAHIA - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07617",
+          "value": "CEAR\u00c1 - no grade 9 BRA"
+        },
+        {
+          "key": "07618",
+          "value": "CEAR\u00c1 - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07619",
+          "value": "CEAR\u00c1 - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07625",
+          "value": "SANTO - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07626",
+          "value": "GOI\u00c1S - no grade 9 BRA"
+        },
+        {
+          "key": "07627",
+          "value": "GOI\u00c1S - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07628",
+          "value": "GOI\u00c1S - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07629",
+          "value": "MARANH\u00c3O - no grade 9 BRA"
+        },
+        {
+          "key": "07630",
+          "value": "MARANH\u00c3O - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07631",
+          "value": "MARANH\u00c3O - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07640",
+          "value": "MINAS GERAIS - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07641",
+          "value": "PAR\u00c1 - no grade 9 BRA"
+        },
+        {
+          "key": "07642",
+          "value": "PAR\u00c1 - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07643",
+          "value": "PAR\u00c1 - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07644",
+          "value": "PARA\u00cdBA - no grade 9 BRA"
+        },
+        {
+          "key": "07645",
+          "value": "PARA\u00cdBA - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07646",
+          "value": "PARA\u00cdBA - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07647",
+          "value": "PARAN\u00c1 - no grade 9 BRA"
+        },
+        {
+          "key": "07648",
+          "value": "PARAN\u00c1 - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07649",
+          "value": "PARAN\u00c1 - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07652",
+          "value": "PERNAMBUCO - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07653",
+          "value": "PIAU\u00cd - no grade 9 BRA"
+        },
+        {
+          "key": "07654",
+          "value": "PIAU\u00cd - grade 9, SMOP=1 BRA"
+        },
+        {
+          "key": "07655",
+          "value": "PIAU\u00cd - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07658",
+          "value": "RIO GRANDE DO JANEIRO - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07661",
+          "value": "NORTE - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07670",
+          "value": "RORAIMA - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07673",
+          "value": "SANTA CATARINA - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07676",
+          "value": "S\u00c3O PAULO - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07679",
+          "value": "SERGIPE - grade 9, SMOP=53 BRA"
+        },
+        {
+          "key": "07682",
+          "value": "TOCANTINS - grade 9, SMOP=53 BRA"
+        }
+      ],
+      "variable_description": "Region and grade level information for Brazilian states with SMOP codes, e.g., 'ACRE - grade 9, SMOP=53 BRA'",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MEXICO_SCHOOL_SIZE",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "48428",
+          "value": "DISTRITO FEDERAL, very small schools MEX"
+        },
+        {
+          "key": "48429",
+          "value": "DURANGO, large schools MEX"
+        },
+        {
+          "key": "48430",
+          "value": "DURANGO, moderately small schools MEX"
+        },
+        {
+          "key": "48431",
+          "value": "DURANGO, very small schools MEX"
+        },
+        {
+          "key": "48432",
+          "value": "GUANAJUATO, large schools MEX"
+        },
+        {
+          "key": "48433",
+          "value": "GUANAJUATO, moderately small schools MEX"
+        },
+        {
+          "key": "48434",
+          "value": "GUANAJUATO, very small schools MEX"
+        },
+        {
+          "key": "48435",
+          "value": "GUERRERO, large schools MEX"
+        },
+        {
+          "key": "48436",
+          "value": "GUERRERO, moderately small schools MEX"
+        },
+        {
+          "key": "48437",
+          "value": "GUERRERO, very small schools MEX"
+        },
+        {
+          "key": "48438",
+          "value": "HIDALGO, large schools MEX"
+        },
+        {
+          "key": "48439",
+          "value": "HIDALGO, moderately small schools MEX"
+        },
+        {
+          "key": "48440",
+          "value": "HIDALGO, very small schools MEX"
+        },
+        {
+          "key": "48441",
+          "value": "JALISCO, large schools MEX"
+        },
+        {
+          "key": "48442",
+          "value": "JALISCO, moderately small schools MEX"
+        },
+        {
+          "key": "48443",
+          "value": "JALISCO, very small schools MEX"
+        },
+        {
+          "key": "48444",
+          "value": "MEXICO, large schools MEX"
+        },
+        {
+          "key": "48445",
+          "value": "MEXICO, moderately small schools MEX"
+        },
+        {
+          "key": "48446",
+          "value": "MEXICO, very small schools MEX"
+        }
+      ],
+      "variable_description": "School size categories for Mexican states, e.g., 'DISTRITO FEDERAL, very small schools MEX'",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "BGR_ISCED3_GENERAL_PROFILED",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "10001",
+          "value": "Stratum 82 BGR"
+        },
+        {
+          "key": "10002",
+          "value": "1. General profiled ISCED3,1 BGR"
+        },
+        {
+          "key": "10003",
+          "value": "1. General profiled ISCED3,2 BGR"
+        },
+        {
+          "key": "10004",
+          "value": "1. General profiled ISCED3,3 BGR"
+        },
+        {
+          "key": "10005",
+          "value": "1. General profiled ISCED3,4 BGR"
+        },
+        {
+          "key": "10006",
+          "value": "1. General profiled ISCED3,5 BGR"
+        },
+        {
+          "key": "10007",
+          "value": "1. General profiled ISCED3,6 BGR"
+        },
+        {
+          "key": "10008",
+          "value": "1. General profiled ISCED3,7 BGR"
+        },
+        {
+          "key": "10009",
+          "value": "1. General profiled ISCED3,8 BGR"
+        },
+        {
+          "key": "10010",
+          "value": "1. General profiled ISCED3,9 BGR"
+        },
+        {
+          "key": "10011",
+          "value": "1. General profiled ISCED3,10 BGR"
+        },
+        {
+          "key": "10012",
+          "value": "1. General profiled ISCED3,11 BGR"
+        }
+      ],
+      "variable_description": "Stratum codes for Bulgaria general profiled ISCED3 schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "COL_CITIES",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "17005",
+          "value": "MANIZALES 05: Manizales-Escuela Activa COL"
+        },
+        {
+          "key": "17006",
+          "value": "06: MEDELL\u00cdN COL"
+        },
+        {
+          "key": "17007",
+          "value": "07: PASTO COL"
+        },
+        {
+          "key": "17008",
+          "value": "08: PEREIRA COL"
+        },
+        {
+          "key": "17009",
+          "value": "09: REST OF THE COUNTRY COL"
+        },
+        {
+          "key": "17011",
+          "value": "11: VILLAVICENCIO COL"
+        }
+      ],
+      "variable_description": "Colombian city school codes",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CRI_SCHOOL_TYPES",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "18801",
+          "value": "Stratum 12 CRI: Public, academic, urban"
+        },
+        {
+          "key": "18802",
+          "value": "Public, academic, rural CRI"
+        },
+        {
+          "key": "18803",
+          "value": "Public, technical, urban CRI"
+        }
+      ],
+      "variable_description": "Costa Rican school types by stratum and location",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GEO_PUBLIC_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "26801",
+          "value": "ENR<16 GEO: Public urban schools"
+        },
+        {
+          "key": "26802",
+          "value": "Public rural schools GEO"
+        }
+      ],
+      "variable_description": "Georgian public school types by location and enrollment",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GREECE_HONGKONG_SCHOOL_TYPES",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "34401",
+          "value": "17: 27 - All of Greece evening schools HKG: Government"
+        },
+        {
+          "key": "34402",
+          "value": "Aided or Caput HKG"
+        },
+        {
+          "key": "34403",
+          "value": "Private HKG"
+        },
+        {
+          "key": "34404",
+          "value": "Direct Subsidy Scheme HKG"
+        }
+      ],
+      "variable_description": "School types in Greece evening schools and Hong Kong school types",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "HUN_SCHOOL_TYPES",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "34801",
+          "value": "primary school HUN"
+        },
+        {
+          "key": "34802",
+          "value": "grammar school HUN"
+        },
+        {
+          "key": "34803",
+          "value": "vocational secondary school HUN"
+        },
+        {
+          "key": "34804",
+          "value": "vocational school HUN"
+        }
+      ],
+      "variable_description": "Hungarian school types",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ISL_REYKJAVIK",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "35201",
+          "value": "01: Reykjavik ISL"
+        }
+      ],
+      "variable_description": "Iceland Reykjavik school code",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ITA_REGIONAL_SCHOOL_STRATA",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "38005",
+          "value": "[Sub 08] Piemonte FORMAZIONE PROFESSIONALE ITA"
+        },
+        {
+          "key": "38010",
+          "value": "[Sub 07] Lombardia MEDIE ITA"
+        },
+        {
+          "key": "38099",
+          "value": "Stratum 99 ITA"
+        }
+      ],
+      "variable_description": "Italian regional school strata",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "JPN_SCHOOL_TYPES",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "39201",
+          "value": "1- Public & Academic JPN"
+        },
+        {
+          "key": "39202",
+          "value": "2 \u2013 Public & Practical JPN"
+        },
+        {
+          "key": "39203",
+          "value": "3 \u2013 Private & Academic JPN"
+        },
+        {
+          "key": "39204",
+          "value": "4 \u2013 Private & Practical JPN"
+        }
+      ],
+      "variable_description": "Japanese school types",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "KAZ_SCHOOL_TYPES",
+      "format_specifier": "",
+      "variable_key_value": [
+        {
+          "key": "39801",
+          "value": "Akmola/ Kazakh only KAZ"
+        },
+        {
+          "key": "39802",
+          "value": "Akmola/ Russian only KAZ"
+        },
+        {
+          "key": "39803",
+          "value": "Akmola/ multiple KAZ"
+        },
+        {
+          "key": "39804",
+          "value": "Aktobe/ Kazakh only KAZ"
+        },
+        {
+          "key": "39805",
+          "value": "Aktobe/ Russian only KAZ"
+        },
+        {
+          "key": "39806",
+          "value": "Aktobe/ multiple KAZ"
+        },
+        {
+          "key": "39807",
+          "value": "Almaty/ Kazakh only KAZ"
+        },
+        {
+          "key": "39808",
+          "value": "Almaty/ Russian only KAZ"
+        },
+        {
+          "key": "39809",
+          "value": "Almaty/ multiple KAZ"
+        },
+        {
+          "key": "39810",
+          "value": "Almaty City/ Kazakh only KAZ"
+        },
+        {
+          "key": "39811",
+          "value": "Almaty City/ Russian only KAZ"
+        },
+        {
+          "key": "39812",
+          "value": "Almaty City/ multiple KAZ"
+        },
+        {
+          "key": "39813",
+          "value": "Astana City/ Kazakh only KAZ"
+        },
+        {
+          "key": "39814",
+          "value": "Astana City/ Russian only KAZ"
+        },
+        {
+          "key": "39815",
+          "value": "Astana City/ multiple KAZ"
+        },
+        {
+          "key": "39816",
+          "value": "Atyrau/ Kazakh only KAZ"
+        },
+        {
+          "key": "39817",
+          "value": "Atyrau/ Russian only KAZ"
+        },
+        {
+          "key": "39818",
+          "value": "Atyrau/ multiple KAZ"
+        },
+        {
+          "key": "39819",
+          "value": "East Kaz./ Kazakh only KAZ"
+        },
+        {
+          "key": "39820",
+          "value": "East Kaz./ Russian only KAZ"
+        },
+        {
+          "key": "39821",
+          "value": "East Kaz./ multiple KAZ"
+        },
+        {
+          "key": "39822",
+          "value": "Zhambyl/ Kazakh only KAZ"
+        }
+      ],
+      "variable_description": "Kazakhstan regional and language school types",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "QUINTANA_ROO_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Quintana Roo, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SAN_LUIS_POTOSI_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in San Luis Potosi, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SINALOA_LARGE_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Large schools in Sinaloa, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SINALOA_MODERATELY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Moderately small schools in Sinaloa, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SINALOA_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Sinaloa, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SONORA_LARGE_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Large schools in Sonora, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SONORA_MODERATELY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Moderately small schools in Sonora, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SONORA_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Sonora, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TABASCO_LARGE_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Large schools in Tabasco, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TABASCO_MODERATELY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Moderately small schools in Tabasco, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TABASCO_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Tabasco, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "VERACRUZ_IGNACIO_DE_LA_LLAVE_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Veracruz Ignacio de la Llave, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "YUCATAN_LARGE_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Large schools in Yucatan, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "YUCATAN_MODERATELY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Moderately small schools in Yucatan, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "YUCATAN_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Yucatan, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ZACATECAS_LARGE_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Large schools in Zacatecas, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ZACATECAS_MODERATELY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Moderately small schools in Zacatecas, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ZACATECAS_VERY_SMALL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Very small schools in Zacatecas, Mexico",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "STRATUM_97",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Stratum 97",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MDA_ROMANIAN_RURAL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Romanian, rural in Moldova",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MDA_ROMANIAN_URBAN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Romanian, urban in Moldova",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MDA_RUSSIAN_RURAL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russian, rural in Moldova",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MDA_RUSSIAN_URBAN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russian, urban in Moldova",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MDA_BOTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Both in Moldova",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_ACADEMIC_CENTRAL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro academic central",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_ACADEMIC_NORTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro academic north",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_ACADEMIC_SOUTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro academic south",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_VOCATIONAL_CENTRAL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro vocational central",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_VOCATIONAL_NORTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro vocational north",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_VOCATIONAL_SOUTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro vocational south",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MNE_MIXED_NORTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Montenegro mixed north",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GIM_64202_ROU_02",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "GIM 64202 Romania 02",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SAM_64203_ROU_03",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "SAM 64203 Romania 03",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "LIC_64301_RUS_ADYGEYA",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "LIC 64301 Russia Republic of Adygeya",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_BASHKORTOSTAN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Bashkortostan",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_DAGESTAN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Dagestan",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KARELIA",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Karelia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KOMI",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Komi",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_MARIJ_EL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Marij El",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_SAKHA_YAKUTIA",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Sakha (Yakutia)",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_TATARSTAN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Republic of Tatarstan",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_UDMURTIAN_REPUBLIC",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Udmurtian Republic",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_CHUVASHI_REPUBLIC",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Chuvashi Republic",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_ALTAI_TERRITORY",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Altai territory",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KRASNODAR_TERRITORY",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Krasnodar territory",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KRASNOYARSK_TERRITORY",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Krasnoyarsk territory",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_PRIMORIE_TERRITORY",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Primorie territory",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_STAVROPOL_TERRITORY",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Stavropol territory",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_ASTRAKHAN_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Astrakhan region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_VLADIMIR_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Vladimir region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_VOLGOGRAD_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Volgograd region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_VOLOGDA_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Vologda region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_VORONEZH_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Voronezh region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KALUGA_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Kaluga region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KEMEROVO_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Kemerovo region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_KURSK_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Kursk region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RUS_MOSCOW_REGION",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Russia Moscow region",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "STSI_TECHNICAL_EDUCATIONAL_PROGRAMMES_SVN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Technical educational programmes in Slovenia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SPI_VOCATIONAL_MEDIUM_DURATION_SVN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Vocational of medium duration in Slovenia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "NPI_VOCATIONAL_SHORT_DURATION_SVN",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Vocational of short duration in Slovenia",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_ANDALUSIA_PUBLIC_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Andalusia, Spain, public",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_ANDALUSIA_PRIVATE_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Andalusia, Spain, private",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_ARAGON_PUBLIC_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Aragon, Spain, public",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_ARAGON_PRIVATE_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Aragon, Spain, private",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_ASTURIAS_PUBLIC_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Asturias, Spain, public",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_ASTURIAS_PRIVATE_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Asturias, Spain, private",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_BALEARIC_ISLANDS_PUBLIC_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Balearic Islands, Spain, public",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_BALEARIC_ISLANDS_PRIVATE_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Balearic Islands, Spain, private",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ESP_CANARY_ISLANDS_PUBLIC_ELEMENTARY_SCHOOL",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Elementary school in Canary Islands, Spain, public",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SWE_LOWER_SEC_METRO",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Lower secondary metropolitan schools in Sweden",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SWE_INDEP_OTHER_LARGE",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Independent other large schools in Sweden",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SWE_INDEP_LEAST_12500",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Independent least 12500 schools in Sweden",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SWE_INDEP_SPARSE_POP",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Independent sparse population schools in Sweden",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_UPPER_SEC",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Upper secondary schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_AG_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Agricultural grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_AR_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Aragon grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_BE_D_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Bern (d) grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_SG_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "St. Gallen grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_SH_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Schaffhausen grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_VS_D_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Vaud (d) grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_D_REST_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Astrakhan region grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_CH_OTHER_V1",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "CH other version 1 schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_D_CH_OTHER_V2",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "D-CH other version 2 schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_D_CH_OTHER_V3",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "D-CH other version 3 schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_D_CH_OTHER_B",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "D-CH other b schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_D_CH_GR9_PRIV",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "D-CH grade 9 private schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_BE_F_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Bern (f) grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_FR_F_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Fribourg (f) grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_GE_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Geneva grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CHE_JU_GR9_PUB",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "Jura grade 9 public schools in Switzerland",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "MAG_AND_MODEL_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "MAG and Model schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "CBSE_SCHOOLS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "CBSE schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TR1_VOCATIONAL_SECONDARY_GBR",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "TR1 Vocational Secondary schools in Great Britain",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR_ENGLAND_MAINTAINED_SELECTIVE_NORTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "England Maintained selective North schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR_ENGLAND_MAINTAINED_SELECTIVE_MIDLANDS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "England Maintained selective Midlands schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR_ENGLAND_MAINTAINED_SELECTIVE_SOUTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "England Maintained selective South schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR_ENGLAND_MAINTAINED_SELECTIVE_LONDON",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "England Maintained selective London schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR_ENGLAND_MAINTAINED_NON_SELECTIVE_NORTH",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "England Maintained non-selective North schools",
+      "fixed_width_specification": "",
+      "Year": 2009
+    },
+    {
+      "variable_key": "GBR_ENGLAND_MAINTAINED_NON_SELECTIVE_MIDLANDS",
+      "format_specifier": "",
+      "variable_key_value": null,
+      "variable_description": "England Maintained non-selective Midlands schools",
+      "fixed_width_specification": "",
       "Year": 2009
     }
   ]
