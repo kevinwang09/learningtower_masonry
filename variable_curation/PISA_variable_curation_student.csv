@@ -176,4 +176,4 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2000,car,ST22Q06,none1one2two3threemore4,,How many cars,factor,
 2000,book,ST37Q01,as.factor,,How many books at home,factor,
 2000,wealth,wealth,as.numeric,,Wealth,numeric,
-2000,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,
+2000,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,"This variable is stored in a separate ESCS_PISA2000.sav file and it is not in the codebook."

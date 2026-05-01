@@ -1,0 +1,30 @@
+Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_curation/PISA_variable_curation_student.csv against /Users/kevinwang/projects/learningtower_masonry/codebook/2003student_extracted.json for year 2003...
+ [OK] JSON schema validation passed.
+
+--- Variable and NA Value Check ---
+ [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
+ [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
+ [OK] STIDSTD (target: student_id) -> Exists in codebook (No NA checking required)
+ [OK] ST11R01 (target: mother_educ) -> Exists in codebook (No NA checking required)
+ [OK] ST13R01 (target: father_educ) -> Exists in codebook (No NA checking required)
+ [OK] ST03Q01 (target: gender) -> Exists in codebook (No NA checking required)
+ [OK] ST17Q04 (target: computer) -> Exists in codebook (No NA checking required)
+ [OK] ST17Q06 (target: internet) -> Exists in codebook (No NA checking required)
+ [OK] PV1MATH (target: math) -> Exists in codebook (No NA checking required)
+ [OK] PV1READ (target: read) -> Exists in codebook (No NA checking required)
+ [OK] PV1SCIE (target: science) -> Exists in codebook (No NA checking required)
+ [OK] W_FSTUWT (target: stu_wgt) -> Exists in codebook (No NA checking required)
+ [OK] ST17Q01 (target: desk) -> Exists in codebook (No NA checking required)
+ [OK] ST17Q02 (target: room) -> Exists in codebook (No NA checking required)
+ [OK] ST17Q13 (target: dishwasher) -> Exists in codebook (No NA checking required)
+ [OK] ST19Q01 (target: book) -> Exists in codebook (No NA checking required)
+ [OK] ESCS (target: escs) -> Exists in codebook (No NA checking required)
+
+--- Variables found in JSON but NOT in CSV ---
+Total variables in this category: 387
+
+--- Validation Failed ---
+- Variable 'NA' (target: television) not found in the extracted codebook. Note: missing in all entries in year 2003
+- Variable 'NA' (target: computer_n) not found in the extracted codebook. Note: missing in all entries in year 2003
+- Variable 'NA' (target: car) not found in the extracted codebook. Note: missing in all entries in year 2003
+- Variable 'NA' (target: wealth) not found in the extracted codebook. Note: missing in all entries in year 2003

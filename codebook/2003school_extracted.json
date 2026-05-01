@@ -1551,7 +1551,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage classrooms Q8m",
+      "variable_description": "Shortage of classrooms (Q8m)",
       "fixed_width_specification": "109-109",
       "Year": 2003
     },
@@ -1588,7 +1588,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage special equipment Q8n",
+      "variable_description": "Shortage of special equipment (Q8n)",
       "fixed_width_specification": "110-110",
       "Year": 2003
     },
@@ -1625,7 +1625,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage computers Q8o",
+      "variable_description": "Shortage of computers (Q8o)",
       "fixed_width_specification": "111-111",
       "Year": 2003
     },
@@ -1662,7 +1662,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage computer software Q8p",
+      "variable_description": "Shortage of computer software (Q8p)",
       "fixed_width_specification": "112-112",
       "Year": 2003
     },
@@ -1699,7 +1699,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage calculators Q8q",
+      "variable_description": "Shortage of calculators (Q8q)",
       "fixed_width_specification": "113-113",
       "Year": 2003
     },
@@ -1736,7 +1736,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage library material Q8r",
+      "variable_description": "Shortage of library material (Q8r)",
       "fixed_width_specification": "114-114",
       "Year": 2003
     },
@@ -1773,7 +1773,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage audio-vidio Q8s",
+      "variable_description": "Shortage of audio-video equipment (Q8s)",
       "fixed_width_specification": "115-115",
       "Year": 2003
     },
@@ -1810,7 +1810,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Shortage lab equipment Q8t",
+      "variable_description": "Shortage of lab equipment (Q8t)",
       "fixed_width_specification": "116-116",
       "Year": 2003
     },
@@ -1831,7 +1831,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Computers altogether Q9a",
+      "variable_description": "Number of computers altogether (Q9a)",
       "fixed_width_specification": "117-124",
       "Year": 2003
     },
@@ -1852,7 +1852,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Computers students Q9b",
+      "variable_description": "Number of computers for students (Q9b)",
       "fixed_width_specification": "125-132",
       "Year": 2003
     },
@@ -2195,7 +2195,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Prerequisite",
+      "variable_description": "Q10g",
       "fixed_width_specification": "171-171",
       "Year": 2003
     },
@@ -2232,7 +2232,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students enjoy",
+      "variable_description": "Students enjoy Q11a",
       "fixed_width_specification": "172-172",
       "Year": 2003
     },
@@ -2269,7 +2269,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students enthusiasm",
+      "variable_description": "Students enthusiasm Q11b",
       "fixed_width_specification": "173-173",
       "Year": 2003
     },
@@ -2306,7 +2306,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students take pride",
+      "variable_description": "Students take pride Q11c",
       "fixed_width_specification": "174-174",
       "Year": 2003
     },
@@ -2343,7 +2343,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students value academic",
+      "variable_description": "Students value academic Q11d",
       "fixed_width_specification": "175-175",
       "Year": 2003
     },
@@ -2380,7 +2380,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students respectful",
+      "variable_description": "Students respectful Q11e",
       "fixed_width_specification": "176-176",
       "Year": 2003
     },
@@ -2417,7 +2417,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students value education",
+      "variable_description": "Students value education Q11f",
       "fixed_width_specification": "177-177",
       "Year": 2003
     },
@@ -2454,7 +2454,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Students learn",
+      "variable_description": "Students learn Q11g",
       "fixed_width_specification": "178-178",
       "Year": 2003
     },
@@ -2495,7 +2495,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Standardised test",
+      "variable_description": "Standardised test Q12a",
       "fixed_width_specification": "179-179",
       "Year": 2003
     },
@@ -2536,7 +2536,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Teacher's test",
+      "variable_description": "Teacher's test Q12b",
       "fixed_width_specification": "180-180",
       "Year": 2003
     },
@@ -2746,7 +2746,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Assessment group students",
+      "variable_description": "Assessment group students Q13c",
       "fixed_width_specification": "186-186",
       "Year": 2003
     },
@@ -2775,7 +2775,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Assessment compare to national",
+      "variable_description": "Assessment compare to national Q13d",
       "fixed_width_specification": "187-187",
       "Year": 2003
     },
@@ -2804,7 +2804,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Assessment school's progress",
+      "variable_description": "Assessment school's progress Q13e",
       "fixed_width_specification": "188-188",
       "Year": 2003
     },
@@ -2833,7 +2833,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Assessment teachers' effectiveness",
+      "variable_description": "Assessment teachers' effectiveness Q13f",
       "fixed_width_specification": "189-189",
       "Year": 2003
     },
@@ -2862,7 +2862,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Assessment to improve curriculum",
+      "variable_description": "Assessment to improve curriculum Q13g",
       "fixed_width_specification": "190-190",
       "Year": 2003
     },
@@ -3552,7 +3552,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Ptime teach ISCED5A Maths Q19b2",
+      "variable_description": "Part-time teaching hours ISCED5A Maths (Q19b2)",
       "fixed_width_specification": "300-307",
       "Year": 2003
     },
@@ -3573,7 +3573,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Ptime Maths teach ISCED5A no major Q19c2",
+      "variable_description": "Part-time Maths teaching hours ISCED5A no major (Q19c2)",
       "fixed_width_specification": "308-315",
       "Year": 2003
     },
@@ -3594,7 +3594,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Ptime Maths teach ISCED5A pedag Q19d2",
+      "variable_description": "Part-time Maths teaching hours ISCED5A pedagogy (Q19d2)",
       "fixed_width_specification": "316-323",
       "Year": 2003
     },
@@ -3615,7 +3615,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Ptime Maths teach ISCED5B Q19e2",
+      "variable_description": "Part-time Maths teaching hours ISCED5B (Q19e2)",
       "fixed_width_specification": "324-331",
       "Year": 2003
     },
@@ -3644,7 +3644,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "By students' achievement Q20a",
+      "variable_description": "By students' achievement (Q20a)",
       "fixed_width_specification": "332-332",
       "Year": 2003
     },
@@ -5537,7 +5537,12 @@
     {
       "variable_key": "SCMATEDU",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
       "variable_description": "Quality of educational resources (WLE)",
       "fixed_width_specification": "567-574",
       "Year": 2003
@@ -5545,7 +5550,12 @@
     {
       "variable_key": "STMORALE",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
       "variable_description": "Student morale (WLE)",
       "fixed_width_specification": "575-582",
       "Year": 2003
@@ -5553,7 +5563,12 @@
     {
       "variable_key": "TCMORALE",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
       "variable_description": "Teacher morale (WLE)",
       "fixed_width_specification": "583-590",
       "Year": 2003
@@ -5561,7 +5576,12 @@
     {
       "variable_key": "STUDBEHA",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
       "variable_description": "Student behaviours (WLE)",
       "fixed_width_specification": "591-598",
       "Year": 2003
@@ -5569,7 +5589,12 @@
     {
       "variable_key": "TEACBEHA",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
       "variable_description": "Teacher behaviours (WLE)",
       "fixed_width_specification": "599-606",
       "Year": 2003
@@ -5577,32 +5602,52 @@
     {
       "variable_key": "TCHCONS",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
-      "variable_description": "Mathematics teacher consensus (WLE)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "TCHCONS (186) Mathematics teacher consensus (WLE)",
       "fixed_width_specification": "607-614",
       "Year": 2003
     },
     {
       "variable_key": "SCHAUTON",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
-      "variable_description": "School autonomy (WLE)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "SCHAUTON (187) School autonomy (WLE)",
       "fixed_width_specification": "615-622",
       "Year": 2003
     },
     {
       "variable_key": "TCHPARTI",
       "format_specifier": "F8.3",
-      "variable_key_value": null,
-      "variable_description": "Teacher participation (WLE)",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "TCHPARTI (188) Teacher participation (WLE)",
       "fixed_width_specification": "623-630",
       "Year": 2003
     },
     {
       "variable_key": "SCWEIGHT",
       "format_specifier": "F8.5",
-      "variable_key_value": null,
-      "variable_description": "school Weight",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "SCWEIGHT (189) school Weight",
       "fixed_width_specification": "631-638",
       "Year": 2003
     },
@@ -5672,7 +5717,7 @@
         },
         {
           "key": "04012",
-          "value": "Austria: BMS (gewerblich-technisch-kunstgewerbl.)"
+          "value": "Austria: BMS (gewer l ch-techn sch-kunstgewerbl.)"
         },
         {
           "key": "04013",
@@ -6552,19 +6597,19 @@
         },
         {
           "key": "39201",
-          "value": "Japan: Public  Public & Academic Course"
+          "value": "Japan: Public & Academic Course"
         },
         {
           "key": "39202",
-          "value": "Japan: Public : Public & Practical Course"
+          "value": "Japan: Public & Practical Course"
         },
         {
           "key": "39203",
-          "value": "Japan: Private : Private & Academic Course"
+          "value": "Japan: Private & Academic Course"
         },
         {
           "key": "39204",
-          "value": "Japan: Private : Private & Practical Course"
+          "value": "Japan: Private & Practical Course"
         },
         {
           "key": "41001",
@@ -6584,7 +6629,7 @@
         },
         {
           "key": "41005",
-          "value": "Korea: Urban General  Urban General & Vocational"
+          "value": "Korea: Urban General & Vocational"
         },
         {
           "key": "41006",
@@ -6596,7 +6641,7 @@
         },
         {
           "key": "41008",
-          "value": "Korea: Rural General  General & Vocational"
+          "value": "Korea: Rural General & Vocational"
         },
         {
           "key": "41009",
@@ -7787,7 +7832,7 @@
           "value": "Yugoslavia: Stratum 8"
         }
       ],
-      "variable_description": "STRATUM",
+      "variable_description": "STRATUM (190) STRATUM",
       "fixed_width_specification": "640-644",
       "Year": 2003
     }

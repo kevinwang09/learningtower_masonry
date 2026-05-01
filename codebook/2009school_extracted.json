@@ -1,0 +1,4073 @@
+{
+  "codebook_entries": [
+    {
+      "variable_key": "SC24QB4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility firing teachers - School governing board Q24b3",
+      "fixed_width_specification": "222-222",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QB5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility firing teachers - Regional or local educational authority Q24b4",
+      "fixed_width_specification": "223-223",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QC1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility starting salaries - Principal Q24c1",
+      "fixed_width_specification": "224-224",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QC2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility starting salaries - Teachers Q24c2",
+      "fixed_width_specification": "225-225",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QC3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility starting salaries - School governing board Q24c3",
+      "fixed_width_specification": "226-226",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QC4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility starting salaries - Regional or local educational authority Q24c4",
+      "fixed_width_specification": "227-227",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QC5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility starting salaries - National education authority Q24c5",
+      "fixed_width_specification": "228-228",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QD1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility salary increases - Principal Q24d1",
+      "fixed_width_specification": "229-229",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QD2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility salary increases - Teachers Q24d2",
+      "fixed_width_specification": "230-230",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QD3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility salary increases - School governing board Q24d3",
+      "fixed_width_specification": "231-231",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QD4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility salary increases - Regional or local educational authority Q24d4",
+      "fixed_width_specification": "232-232",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QD5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility salary increases - National education authority Q24d5",
+      "fixed_width_specification": "233-233",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QE1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility formulate budget - Principal Q24e1",
+      "fixed_width_specification": "234-234",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QE2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility formulate budget - Teachers Q24e2",
+      "fixed_width_specification": "235-235",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QE3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility formulate budget - School governing board Q24e3",
+      "fixed_width_specification": "236-236",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QE4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility formulate budget - Regional or local educational authority Q24e4",
+      "fixed_width_specification": "237-237",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QE5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility formulate budget - National education authority Q24e5",
+      "fixed_width_specification": "238-238",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QF1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility budget allocations - Principal Q24f1",
+      "fixed_width_specification": "239-239",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QF2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility budget allocations - Teachers Q24f2",
+      "fixed_width_specification": "240-240",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QF3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility budget allocations - School governing board Q24f3",
+      "fixed_width_specification": "241-241",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QF4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility budget allocations - Regional or local educational authority Q24f4",
+      "fixed_width_specification": "242-242",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QF5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility budget allocations - National education authority Q24f5",
+      "fixed_width_specification": "243-243",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QG1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student discipline - Principal Q24g1",
+      "fixed_width_specification": "244-244",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QG2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student discipline - Teachers Q24g2",
+      "fixed_width_specification": "245-245",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QG3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student discipline - School governing board Q24g3",
+      "fixed_width_specification": "246-246",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QG4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student discipline - Regional or local educational authority Q24g4",
+      "fixed_width_specification": "247-247",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QG5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student discipline - National education authority Q24g5",
+      "fixed_width_specification": "248-248",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QH1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student assessment - Principal Q24h1",
+      "fixed_width_specification": "249-249",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QH2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility student assessment - Teachers Q24h2",
+      "fixed_width_specification": "250-250",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QH3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - assessment - School governing board",
+      "fixed_width_specification": "251-251",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QH4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - assessment - Regional or local educational authority",
+      "fixed_width_specification": "252-252",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QH5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - assessment - National education authority",
+      "fixed_width_specification": "253-253",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QI1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - admission - Principal",
+      "fixed_width_specification": "254-254",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QI2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - admission - Teachers",
+      "fixed_width_specification": "255-255",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QI3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - admission - School governing board",
+      "fixed_width_specification": "256-256",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QI4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - admission - Regional or local educational authority",
+      "fixed_width_specification": "257-257",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QI5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility student - admission - National education authority",
+      "fixed_width_specification": "258-258",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QJ1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility textbook use - Principal",
+      "fixed_width_specification": "259-259",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QJ2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility textbook use - Teachers",
+      "fixed_width_specification": "260-260",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QJ3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility textbook use - School governing board",
+      "fixed_width_specification": "261-261",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QJ4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility textbook use - Regional or local educational authority",
+      "fixed_width_specification": "262-262",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QJ5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility textbook use - National education authority",
+      "fixed_width_specification": "263-263",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QK1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility course content - Principal",
+      "fixed_width_specification": "264-264",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QK2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility course content - Teachers",
+      "fixed_width_specification": "265-265",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QK3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility course content - School governing board",
+      "fixed_width_specification": "266-266",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QK4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility course content - Regional or local educational authority",
+      "fixed_width_specification": "267-267",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QK5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility course content - National education authority",
+      "fixed_width_specification": "268-268",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QL1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility courses offered - Principal",
+      "fixed_width_specification": "269-269",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QL2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility courses offered - Teachers",
+      "fixed_width_specification": "270-270",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QL3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility courses offered - School governing board",
+      "fixed_width_specification": "271-271",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QL4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility courses offered - Regional or local educational authority",
+      "fixed_width_specification": "272-272",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QL5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Responsibility courses offered - National education authority",
+      "fixed_width_specification": "273-273",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QA1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Regional or national authority - Influence staffing",
+      "fixed_width_specification": "274-274",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QA2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Regional or national authority - Influence budget",
+      "fixed_width_specification": "275-275",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QA3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Regional or national authority - Influence instructional content",
+      "fixed_width_specification": "276-276",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QA4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        }
+      ],
+      "variable_description": "Regional or national authority - Influence assessment",
+      "fixed_width_specification": "277-277",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QB1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "School governing board - Influence staffing",
+      "fixed_width_specification": "278-278",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QB2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "School governing board - Influence budget",
+      "fixed_width_specification": "279-279",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QB3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "School governing board - Influence instructional content",
+      "fixed_width_specification": "280-280",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QB4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "School governing board - Influence assessment",
+      "fixed_width_specification": "281-281",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QC1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Parent groups - Influence staffing",
+      "fixed_width_specification": "282-282",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QC2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Parent groups - Influence budget",
+      "fixed_width_specification": "283-283",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QC3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Parent groups - Influence instructional content",
+      "fixed_width_specification": "284-284",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QC4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Parent groups - Influence assessment",
+      "fixed_width_specification": "285-285",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SCHOOLID",
+      "format_specifier": "A5",
+      "variable_key_value": null,
+      "variable_description": "5 digit school ID",
+      "fixed_width_specification": "13-17",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 1",
+      "fixed_width_specification": "18-18",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 2",
+      "fixed_width_specification": "19-19",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 3",
+      "fixed_width_specification": "20-20",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 4",
+      "fixed_width_specification": "21-21",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 5",
+      "fixed_width_specification": "22-22",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 6",
+      "fixed_width_specification": "23-23",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 7",
+      "fixed_width_specification": "24-24",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 8",
+      "fixed_width_specification": "25-25",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 9",
+      "fixed_width_specification": "26-26",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 10",
+      "fixed_width_specification": "27-27",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 11",
+      "fixed_width_specification": "28-28",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 12",
+      "fixed_width_specification": "29-29",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Grade 13",
+      "fixed_width_specification": "30-30",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC01Q14",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Ungraded",
+      "fixed_width_specification": "31-31",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC02Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Public"
+        },
+        {
+          "key": "2",
+          "value": "Private"
+        }
+      ],
+      "variable_description": "school Public or private",
+      "fixed_width_specification": "32-32",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC03Q01",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Funding Government",
+      "fixed_width_specification": "33-39",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC03Q02",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Funding Student fees",
+      "fixed_width_specification": "40-46",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC03Q03",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Funding Benefactors",
+      "fixed_width_specification": "47-53",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC03Q04",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Funding Other",
+      "fixed_width_specification": "54-60",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC04Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Village Small"
+        },
+        {
+          "key": "2",
+          "value": "Town Town"
+        },
+        {
+          "key": "3",
+          "value": "City Large"
+        },
+        {
+          "key": "4",
+          "value": "City"
+        },
+        {
+          "key": "5",
+          "value": ""
+        }
+      ],
+      "variable_description": "School Community",
+      "fixed_width_specification": "61-61",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC05Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Two or More Schools"
+        },
+        {
+          "key": "2",
+          "value": "One"
+        },
+        {
+          "key": "3",
+          "value": "Others"
+        }
+      ],
+      "variable_description": "Available Schooling",
+      "fixed_width_specification": "62-62",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC06Q01",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Number of boys",
+      "fixed_width_specification": "63-69",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC06Q02",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Number of girls",
+      "fixed_width_specification": "70-76",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC07Q01",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Repeat at",
+      "fixed_width_specification": "77-83",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC07Q02",
+      "format_specifier": "F8.2",
+      "variable_key_value": null,
+      "variable_description": "Repeat at",
+      "fixed_width_specification": "84-90",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC08Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "60% or more"
+        },
+        {
+          "key": "2",
+          "value": "40% up to"
+        },
+        {
+          "key": "3",
+          "value": "60% 20% up to 40%"
+        },
+        {
+          "key": "4",
+          "value": "10% up to 20%"
+        },
+        {
+          "key": "5",
+          "value": "up to 10%"
+        },
+        {
+          "key": "6",
+          "value": "None"
+        }
+      ],
+      "variable_description": "First lang not test lang",
+      "fixed_width_specification": "91-91",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC09Q11",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Ftime Teach in TOTAL",
+      "fixed_width_specification": "92-95",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC09Q12",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Ptime Teach in TOTAL",
+      "fixed_width_specification": "96-99",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC09Q21",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Ftime Teach fully certified Qual",
+      "fixed_width_specification": "100-103",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC09Q22",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Ptime Teach fully certified Qual",
+      "fixed_width_specification": "104-107",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC09Q31",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Ftime Teach ISCED5A Qual",
+      "fixed_width_specification": "108-111",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC09Q32",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Ptime Teach ISCED5A Qual",
+      "fixed_width_specification": "112-115",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC10Q01",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Total number of students",
+      "fixed_width_specification": "116-119",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC10Q02",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Computers for Education",
+      "fixed_width_specification": "120-123",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC10Q03",
+      "format_specifier": "F4",
+      "variable_key_value": null,
+      "variable_description": "Computers with Internet",
+      "fixed_width_specification": "124-127",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage of Sci Teachers",
+      "fixed_width_specification": "128-128",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage of Math Teachers",
+      "fixed_width_specification": "129-129",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage of Qualified Teachers",
+      "fixed_width_specification": "130-130",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage of library staff",
+      "fixed_width_specification": "131-131",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage of other personnel",
+      "fixed_width_specification": "132-132",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage sci lab equip",
+      "fixed_width_specification": "133-133",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage instruct material",
+      "fixed_width_specification": "134-134",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage computers",
+      "fixed_width_specification": "135-135",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage internet",
+      "fixed_width_specification": "136-136",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage computer software",
+      "fixed_width_specification": "137-137",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage library materials",
+      "fixed_width_specification": "138-138",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC11Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little To some extent"
+        },
+        {
+          "key": "3",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Shortage audio-visual",
+      "fixed_width_specification": "139-139",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC12Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "For all subjects"
+        },
+        {
+          "key": "2",
+          "value": "For some subjects"
+        },
+        {
+          "key": "3",
+          "value": "Not for any subject"
+        }
+      ],
+      "variable_description": "Streaming by levels",
+      "fixed_width_specification": "141-141",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC12Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "For all subjects"
+        },
+        {
+          "key": "2",
+          "value": "For some subjects"
+        },
+        {
+          "key": "3",
+          "value": "Not for any subject"
+        }
+      ],
+      "variable_description": "Streaming by content",
+      "fixed_width_specification": "142-142",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Band or choir",
+      "fixed_width_specification": "143-143",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "School Play",
+      "fixed_width_specification": "144-144",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "School Yearbook",
+      "fixed_width_specification": "145-145",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Volunteering",
+      "fixed_width_specification": "146-146",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Book Club",
+      "fixed_width_specification": "147-147",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Debating Club",
+      "fixed_width_specification": "148-148",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "School competition",
+      "fixed_width_specification": "149-149",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "SC13Q08",
+      "fixed_width_specification": "150-150",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Art Activities",
+      "fixed_width_specification": "151-151",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Sporting Team",
+      "fixed_width_specification": "152-152",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Lectures or Seminars",
+      "fixed_width_specification": "153-153",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Local Libraries",
+      "fixed_width_specification": "154-154",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Local Newspapers",
+      "fixed_width_specification": "155-155",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC13Q14",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "SC13Q14",
+      "fixed_width_specification": "156-156",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC14Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Additional Instruction",
+      "fixed_width_specification": "157-157",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC14Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Preparatory Programme",
+      "fixed_width_specification": "158-158",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC14Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Some instruction",
+      "fixed_width_specification": "159-159",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC14Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "More instruction",
+      "fixed_width_specification": "160-160",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC14Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Class size reduced",
+      "fixed_width_specification": "161-161",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC15Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never 1-2 times a year"
+        },
+        {
+          "key": "2",
+          "value": "3-5 times a year"
+        },
+        {
+          "key": "3",
+          "value": "Monthly"
+        },
+        {
+          "key": "4",
+          "value": "More than once a month"
+        }
+      ],
+      "variable_description": "Standardised Tests",
+      "fixed_width_specification": "162-162",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC15Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never 1-2 times a year"
+        },
+        {
+          "key": "2",
+          "value": "3-5 times a year"
+        },
+        {
+          "key": "3",
+          "value": "Monthly"
+        },
+        {
+          "key": "4",
+          "value": "More than once a month"
+        }
+      ],
+      "variable_description": "Teacher-developed tests",
+      "fixed_width_specification": "163-163",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC15Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never 1-2 times a year"
+        },
+        {
+          "key": "2",
+          "value": "3-5 times a year"
+        },
+        {
+          "key": "3",
+          "value": "Monthly"
+        },
+        {
+          "key": "4",
+          "value": "More than once a month"
+        }
+      ],
+      "variable_description": "Teacher judgements",
+      "fixed_width_specification": "164-164",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC15Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never 1-2 times a year"
+        },
+        {
+          "key": "2",
+          "value": "3-5 times a year"
+        },
+        {
+          "key": "3",
+          "value": "Monthly"
+        },
+        {
+          "key": "4",
+          "value": "More than once a month"
+        }
+      ],
+      "variable_description": "Student portfolios",
+      "fixed_width_specification": "165-165",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC15Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never 1-2 times a year"
+        },
+        {
+          "key": "2",
+          "value": "3-5 times a year"
+        },
+        {
+          "key": "3",
+          "value": "Monthly"
+        },
+        {
+          "key": "4",
+          "value": "More than once a month"
+        }
+      ],
+      "variable_description": "Student Assignments",
+      "fixed_width_specification": "166-166",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - Child's Progress",
+      "fixed_width_specification": "167-167",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - Student Promotion",
+      "fixed_width_specification": "168-168",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - Instruction",
+      "fixed_width_specification": "169-169",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - National Perform",
+      "fixed_width_specification": "170-170",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - School's Progress",
+      "fixed_width_specification": "171-171",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - Teachers",
+      "fixed_width_specification": "172-172",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - Curriculum",
+      "fixed_width_specification": "173-173",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC16Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Assessments - Other Schools",
+      "fixed_width_specification": "174-174",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Teacher's low expectations",
+      "fixed_width_specification": "175-175",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Student absenteeism",
+      "fixed_width_specification": "176-176",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Student-teacher relations",
+      "fixed_width_specification": "177-177",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Disruption",
+      "fixed_width_specification": "178-178",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Student's needs not met",
+      "fixed_width_specification": "179-179",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Teacher absenteeism",
+      "fixed_width_specification": "180-180",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Skipping classes",
+      "fixed_width_specification": "181-181",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Students lacking respect",
+      "fixed_width_specification": "182-182",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Staff resisting change",
+      "fixed_width_specification": "183-183",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Student drug use",
+      "fixed_width_specification": "184-184",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Teachers too strict",
+      "fixed_width_specification": "185-185",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Students being bullied",
+      "fixed_width_specification": "186-186",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC17Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        }
+      ],
+      "variable_description": "Students not encouraged",
+      "fixed_width_specification": "187-187",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC18Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Many Parents"
+        },
+        {
+          "key": "2",
+          "value": "Minority of Parents"
+        },
+        {
+          "key": "3",
+          "value": "Largely absent"
+        }
+      ],
+      "variable_description": "Pressure Academic standards",
+      "fixed_width_specification": "188-188",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Residence",
+      "fixed_width_specification": "189-189",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Academic record",
+      "fixed_width_specification": "190-190",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Feeder schools",
+      "fixed_width_specification": "191-191",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Parent's endorsement",
+      "fixed_width_specification": "192-192",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Special Programme",
+      "fixed_width_specification": "193-193",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Family members",
+      "fixed_width_specification": "194-194",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC19Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "Sometimes"
+        },
+        {
+          "key": "3",
+          "value": "Always"
+        }
+      ],
+      "variable_description": "Admission - Other",
+      "fixed_width_specification": "195-195",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC20Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        }
+      ],
+      "variable_description": "Transfer - Low Achievement",
+      "fixed_width_specification": "196-196",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC20Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        }
+      ],
+      "variable_description": "Transfer - High Achievement",
+      "fixed_width_specification": "197-197",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC20Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        }
+      ],
+      "variable_description": "Transfer - Behaviour problems",
+      "fixed_width_specification": "198-198",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC20Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        }
+      ],
+      "variable_description": "Transfer - Special learning",
+      "fixed_width_specification": "199-199",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC20Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        }
+      ],
+      "variable_description": "Transfer - Parents request",
+      "fixed_width_specification": "200-200",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC20Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not likely"
+        },
+        {
+          "key": "2",
+          "value": "Likely"
+        },
+        {
+          "key": "3",
+          "value": "Very likely"
+        }
+      ],
+      "variable_description": "Transfer - other reasons",
+      "fixed_width_specification": "201-201",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC21Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Relative to other students",
+      "fixed_width_specification": "202-202",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC21Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Relative to benchmarks",
+      "fixed_width_specification": "203-203",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC21Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Relative to same grade",
+      "fixed_width_specification": "204-204",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC22Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Achievement Public",
+      "fixed_width_specification": "205-205",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC22Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Achievement Principal",
+      "fixed_width_specification": "206-206",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC22Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Achievement Teachers",
+      "fixed_width_specification": "207-207",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC22Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Achievement Resources",
+      "fixed_width_specification": "208-208",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC22Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Achievement Tracked",
+      "fixed_width_specification": "209-209",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC23Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Student Achievement tests",
+      "fixed_width_specification": "210-210",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC23Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Teacher peer review",
+      "fixed_width_specification": "211-211",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC23Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "Principal staff",
+      "fixed_width_specification": "212-212",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC23Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        }
+      ],
+      "variable_description": "External observers",
+      "fixed_width_specification": "213-213",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QA1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility teacher hire - Principal Q24a1",
+      "fixed_width_specification": "214-214",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QA2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility teacher hire - Teachers Q24a2",
+      "fixed_width_specification": "215-215",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QA3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility teacher hire - School governing board Q24a3",
+      "fixed_width_specification": "216-216",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QA4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility teacher hire - Regional or local educational authority Q24a4",
+      "fixed_width_specification": "217-217",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QA5",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility teacher hire - National education authority Q24a5",
+      "fixed_width_specification": "218-218",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QB1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility firing teachers - Principal Q24b1",
+      "fixed_width_specification": "219-219",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QB2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility firing teachers - Teachers Q24b2",
+      "fixed_width_specification": "220-220",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QD1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Teacher groups - Influence staffing",
+      "fixed_width_specification": "286-286",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QD2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Teacher groups - Influence budget",
+      "fixed_width_specification": "287-287",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QD3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Teacher groups - Influence instructional content",
+      "fixed_width_specification": "288-288",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QD4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Teacher groups - Influence assessment",
+      "fixed_width_specification": "289-289",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QE1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Student groups - Influence staffing",
+      "fixed_width_specification": "290-290",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QE2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Student groups - Influence budget",
+      "fixed_width_specification": "291-291",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QE3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Student groups - Influence instructional content",
+      "fixed_width_specification": "292-292",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QE4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Student groups - Influence assessment",
+      "fixed_width_specification": "293-293",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QF1",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Examination board - Influence staffing",
+      "fixed_width_specification": "294-294",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QF2",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Examination board - Influence budget",
+      "fixed_width_specification": "295-295",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QF3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Examination board - Influence instructional content",
+      "fixed_width_specification": "296-296",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC25QF4",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Examination board - Influence assessment",
+      "fixed_width_specification": "297-297",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Professional development",
+      "fixed_width_specification": "298-298",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Educational goals - Teachers",
+      "fixed_width_specification": "299-299",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Observe in classrooms",
+      "fixed_width_specification": "300-300",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Student performance",
+      "fixed_width_specification": "301-301",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Give suggestions",
+      "fixed_width_specification": "302-302",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Monitor student's work",
+      "fixed_width_specification": "303-303",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Teacher's problems",
+      "fixed_width_specification": "304-304",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Teachers Updating skills",
+      "fixed_width_specification": "305-305",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Educational Goals - Classroom",
+      "fixed_width_specification": "306-306",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Exam results into account",
+      "fixed_width_specification": "307-307",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Curriculum Responsibility",
+      "fixed_width_specification": "308-308",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Classroom problems",
+      "fixed_width_specification": "309-309",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Disruptive behaviour",
+      "fixed_width_specification": "310-310",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC26Q14",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "2",
+          "value": "Never"
+        },
+        {
+          "key": "3",
+          "value": "Seldom"
+        },
+        {
+          "key": "4",
+          "value": "Quite often"
+        },
+        {
+          "key": "5",
+          "value": "Very often"
+        }
+      ],
+      "variable_description": "Take over lessons",
+      "fixed_width_specification": "311-311",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC27Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Female"
+        },
+        {
+          "key": "2",
+          "value": "Male"
+        }
+      ],
+      "variable_description": "Gender",
+      "fixed_width_specification": "312-312",
+      "Year": 2009
+    },
+    {
+      "variable_key": "ABGROUP",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not for any subjects"
+        },
+        {
+          "key": "2",
+          "value": "For some subjects"
+        },
+        {
+          "key": "3",
+          "value": "For all subjects"
+        }
+      ],
+      "variable_description": "Ability grouping between classes",
+      "fixed_width_specification": "313-313",
+      "Year": 2009
+    },
+    {
+      "variable_key": "COMPWEB",
+      "format_specifier": "F9.3",
+      "variable_key_value": null,
+      "variable_description": "Proportion of computers connected to the Internet",
+      "fixed_width_specification": "314-322",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TCOMP",
+      "format_specifier": "F9.3",
+      "variable_key_value": null,
+      "variable_description": "Ratio of computers and school size",
+      "fixed_width_specification": "323-331",
+      "Year": 2009
+    },
+    {
+      "variable_key": "PCGIRLS",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Proportion of girls in the school",
+      "fixed_width_specification": "332-340",
+      "Year": 2009
+    },
+    {
+      "variable_key": "PROPCERT",
+      "format_specifier": "F9.3",
+      "variable_key_value": null,
+      "variable_description": "Proportion of certified teachers",
+      "fixed_width_specification": "341-349",
+      "Year": 2009
+    },
+    {
+      "variable_key": "PROPQUAL",
+      "format_specifier": "F9.3",
+      "variable_key_value": null,
+      "variable_description": "Proportion of qualified teachers",
+      "fixed_width_specification": "350-358",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SCHSIZE",
+      "format_specifier": "F9.3",
+      "variable_key_value": null,
+      "variable_description": "Total school enrolment",
+      "fixed_width_specification": "359-367",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SCHTYPE",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Public"
+        },
+        {
+          "key": "2",
+          "value": "Private government-dependent"
+        },
+        {
+          "key": "3",
+          "value": "Private Independent"
+        }
+      ],
+      "variable_description": "School Type",
+      "fixed_width_specification": "368-368",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SELSCH",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Two factors are never considered"
+        },
+        {
+          "key": "2",
+          "value": "At least one sometimes but neither always considered"
+        },
+        {
+          "key": "3",
+          "value": "At least one always considered"
+        }
+      ],
+      "variable_description": "Index of academic school selectivity",
+      "fixed_width_specification": "369-369",
+      "Year": 2009
+    },
+    {
+      "variable_key": "STRATIO",
+      "format_specifier": "F9.3",
+      "variable_key_value": null,
+      "variable_description": "Teacher-Student ratio",
+      "fixed_width_specification": "370-378",
+      "Year": 2009
+    },
+    {
+      "variable_key": "EXCURACT",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Extra-curricular activities offered by school",
+      "fixed_width_specification": "379-387",
+      "Year": 2009
+    },
+    {
+      "variable_key": "LDRSHP",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "School leadership",
+      "fixed_width_specification": "388-396",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RESPCURR",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "School responsibility: curriculum and assessment",
+      "fixed_width_specification": "397-405",
+      "Year": 2009
+    },
+    {
+      "variable_key": "RESPRES",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "School responsibility: resource allocation",
+      "fixed_width_specification": "406-414",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SCMATEDU",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Quality of the educational resources",
+      "fixed_width_specification": "415-423",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TCHPARTI",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Teacher participation",
+      "fixed_width_specification": "433-441",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TCSHORT",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Teacher shortage",
+      "fixed_width_specification": "442-450",
+      "Year": 2009
+    },
+    {
+      "variable_key": "TEACBEHA",
+      "format_specifier": "F8.4",
+      "variable_key_value": null,
+      "variable_description": "Teacher behaviour",
+      "fixed_width_specification": "451-459",
+      "Year": 2009
+    },
+    {
+      "variable_key": "W_FSCHWT",
+      "format_specifier": "F10.4",
+      "variable_key_value": null,
+      "variable_description": "Final school weight",
+      "fixed_width_specification": "460-468",
+      "Year": 2009
+    },
+    {
+      "variable_key": "STRATUM",
+      "format_specifier": "A5",
+      "variable_key_value": null,
+      "variable_description": "Original stratum",
+      "fixed_width_specification": "469-473",
+      "Year": 2009
+    },
+    {
+      "variable_key": "SC24QB3",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Tick"
+        },
+        {
+          "key": "2",
+          "value": "No Tick"
+        }
+      ],
+      "variable_description": "Responsibility firing teachers - School governing board Q24b3",
+      "fixed_width_specification": "221-221",
+      "Year": 2009
+    }
+  ]
+}

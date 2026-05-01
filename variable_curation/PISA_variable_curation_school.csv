@@ -80,7 +80,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2003,fund_donation,SC04Q03,as.numeric,997;998;999,"Percentage of School year funding comes from: Benefactors, donations, bequests",numeric,
 2003,enrol_boys,SC02Q01,as.numeric,,Number of boys,numeric,
 2003,enrol_girls,SC02Q02,as.numeric,,Number of girls,numeric,
-2003,staff_shortage,TCSHORT,as.numeric,997;998;999,Teacher/staff shortage,numeric,
+2003,staff_shortage,TCSHORT,as.numeric,997,Teacher/staff shortage,numeric,
 2003,stratio,STRATIO,as.numeric,997;998;999,Student-teacher ratio,numeric,
 2003,school_size,SCHLSIZE,as.numeric,99997;99998;99999,School size,numeric,
 2003,sch_wgt,SCWEIGHT,as.numeric,,School weight,numeric,

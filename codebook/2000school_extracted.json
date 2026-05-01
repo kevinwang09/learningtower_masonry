@@ -1,27 +1,28 @@
 {
-  "Year": 2000,
-  "cookbook_type": "school",
   "codebook_entries": [
     {
       "variable_key": "COUNTRY",
       "format_specifier": "(A3)",
       "variable_key_value": null,
       "variable_description": "Country three-digit code",
-      "fixed_width_specification": "2-4"
+      "fixed_width_specification": "2-4",
+      "Year": 2000
     },
     {
       "variable_key": "SCHOOLID",
       "format_specifier": "(A5)",
       "variable_key_value": null,
       "variable_description": "School ID (unique)",
-      "fixed_width_specification": "5-9"
+      "fixed_width_specification": "5-9",
+      "Year": 2000
     },
     {
       "variable_key": "SUBNATIO",
       "format_specifier": "(A2)",
       "variable_key_value": null,
       "variable_description": "Subnational entities",
-      "fixed_width_specification": "11-12"
+      "fixed_width_specification": "11-12",
+      "Year": 2000
     },
     {
       "variable_key": "SC01Q01",
@@ -65,7 +66,8 @@
         }
       ],
       "variable_description": "School location - Q1",
-      "fixed_width_specification": "14-14"
+      "fixed_width_specification": "14-14",
+      "Year": 2000
     },
     {
       "variable_key": "SC02Q01",
@@ -81,7 +83,8 @@
         }
       ],
       "variable_description": "Number of boys - Q2a",
-      "fixed_width_specification": "15-18"
+      "fixed_width_specification": "15-18",
+      "Year": 2000
     },
     {
       "variable_key": "SC02Q02",
@@ -97,7 +100,8 @@
         }
       ],
       "variable_description": "Number of girls - Q2b",
-      "fixed_width_specification": "19-22"
+      "fixed_width_specification": "19-22",
+      "Year": 2000
     },
     {
       "variable_key": "SC03Q01",
@@ -125,7 +129,8 @@
         }
       ],
       "variable_description": "School public/private - Q3",
-      "fixed_width_specification": "23-23"
+      "fixed_width_specification": "23-23",
+      "Year": 2000
     },
     {
       "variable_key": "SC04Q01",
@@ -141,7 +146,8 @@
         }
       ],
       "variable_description": "Funds, government - Q4a",
-      "fixed_width_specification": "24-26"
+      "fixed_width_specification": "24-26",
+      "Year": 2000
     },
     {
       "variable_key": "SC04Q02",
@@ -157,7 +163,8 @@
         }
       ],
       "variable_description": "Funds, student fees - Q4b",
-      "fixed_width_specification": "27-29"
+      "fixed_width_specification": "27-29",
+      "Year": 2000
     },
     {
       "variable_key": "SC04Q03",
@@ -173,7 +180,8 @@
         }
       ],
       "variable_description": "Funds, benefactors - Q4c",
-      "fixed_width_specification": "30-32"
+      "fixed_width_specification": "30-32",
+      "Year": 2000
     },
     {
       "variable_key": "SC04Q04",
@@ -189,7 +197,8 @@
         }
       ],
       "variable_description": "Funds, other - Q4d",
-      "fixed_width_specification": "33-35"
+      "fixed_width_specification": "33-35",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q01",
@@ -217,7 +226,8 @@
         }
       ],
       "variable_description": "Grade 1 - Q5a",
-      "fixed_width_specification": "36-36"
+      "fixed_width_specification": "36-36",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q02",
@@ -245,7 +255,8 @@
         }
       ],
       "variable_description": "Grade 2 - Q5b",
-      "fixed_width_specification": "37-37"
+      "fixed_width_specification": "37-37",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q03",
@@ -273,7 +284,8 @@
         }
       ],
       "variable_description": "Grade 3 - Q5c",
-      "fixed_width_specification": "38-38"
+      "fixed_width_specification": "38-38",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q04",
@@ -301,7 +313,8 @@
         }
       ],
       "variable_description": "Grade 4 - Q5d",
-      "fixed_width_specification": "39-39"
+      "fixed_width_specification": "39-39",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q05",
@@ -329,7 +342,8 @@
         }
       ],
       "variable_description": "Grade 5 - Q5e",
-      "fixed_width_specification": "40-40"
+      "fixed_width_specification": "40-40",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q06",
@@ -357,7 +371,8 @@
         }
       ],
       "variable_description": "Grade 6 - Q5f",
-      "fixed_width_specification": "41-41"
+      "fixed_width_specification": "41-41",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q07",
@@ -385,7 +400,8 @@
         }
       ],
       "variable_description": "Grade 7 - Q5g",
-      "fixed_width_specification": "42-42"
+      "fixed_width_specification": "42-42",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q08",
@@ -413,7 +429,8 @@
         }
       ],
       "variable_description": "Grade 8 - Q5h",
-      "fixed_width_specification": "43-43"
+      "fixed_width_specification": "43-43",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q09",
@@ -441,7 +458,8 @@
         }
       ],
       "variable_description": "Grade 9 - Q5i",
-      "fixed_width_specification": "44-44"
+      "fixed_width_specification": "44-44",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q10",
@@ -469,7 +487,8 @@
         }
       ],
       "variable_description": "Grade 10 - Q5j",
-      "fixed_width_specification": "45-45"
+      "fixed_width_specification": "45-45",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q11",
@@ -497,7 +516,8 @@
         }
       ],
       "variable_description": "Grade 11 - Q5k",
-      "fixed_width_specification": "46-46"
+      "fixed_width_specification": "46-46",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q12",
@@ -525,7 +545,8 @@
         }
       ],
       "variable_description": "Grade 12 - Q5l",
-      "fixed_width_specification": "47-47"
+      "fixed_width_specification": "47-47",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q13",
@@ -553,7 +574,8 @@
         }
       ],
       "variable_description": "Grade 13 - Q5m",
-      "fixed_width_specification": "48-48"
+      "fixed_width_specification": "48-48",
+      "Year": 2000
     },
     {
       "variable_key": "SC05Q14",
@@ -581,7 +603,8 @@
         }
       ],
       "variable_description": "Ungraded- Q5n",
-      "fixed_width_specification": "49-49"
+      "fixed_width_specification": "49-49",
+      "Year": 2000
     },
     {
       "variable_key": "SC06Q01",
@@ -590,14 +613,11 @@
         {
           "key": "97",
           "value": "N/A"
-        },
-        {
-          "key": "99",
-          "value": "Mis"
         }
       ],
       "variable_description": "Instructional weeks - Q6a",
-      "fixed_width_specification": "50-51"
+      "fixed_width_specification": "50-51",
+      "Year": 2000
     },
     {
       "variable_key": "SC06Q02",
@@ -606,14 +626,11 @@
         {
           "key": "97",
           "value": "N/A"
-        },
-        {
-          "key": "99",
-          "value": "Mis"
         }
       ],
       "variable_description": "Instructional periods - Q6b",
-      "fixed_width_specification": "52-53"
+      "fixed_width_specification": "52-53",
+      "Year": 2000
     },
     {
       "variable_key": "SC06Q03",
@@ -622,14 +639,11 @@
         {
           "key": "997",
           "value": "N/A"
-        },
-        {
-          "key": "999",
-          "value": "Mis"
         }
       ],
       "variable_description": "Instructional minutes - Q6c",
-      "fixed_width_specification": "54-56"
+      "fixed_width_specification": "54-56",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q01",
@@ -661,7 +675,8 @@
         }
       ],
       "variable_description": "Residence - Q7a",
-      "fixed_width_specification": "57-57"
+      "fixed_width_specification": "57-57",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q02",
@@ -693,7 +708,8 @@
         }
       ],
       "variable_description": "Academic performance - Q7b",
-      "fixed_width_specification": "58-58"
+      "fixed_width_specification": "58-58",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q03",
@@ -725,7 +741,8 @@
         }
       ],
       "variable_description": "Feeder schools - Q7c",
-      "fixed_width_specification": "59-59"
+      "fixed_width_specification": "59-59",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q04",
@@ -757,7 +774,8 @@
         }
       ],
       "variable_description": "Phylosophy and religion - Q7d",
-      "fixed_width_specification": "60-60"
+      "fixed_width_specification": "60-60",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q05",
@@ -789,7 +807,8 @@
         }
       ],
       "variable_description": "Special program - Q7e",
-      "fixed_width_specification": "61-61"
+      "fixed_width_specification": "61-61",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q06",
@@ -821,7 +840,8 @@
         }
       ],
       "variable_description": "Family preference - Q7f",
-      "fixed_width_specification": "62-62"
+      "fixed_width_specification": "62-62",
+      "Year": 2000
     },
     {
       "variable_key": "SC07Q07",
@@ -853,7 +873,8 @@
         }
       ],
       "variable_description": "Admittance factors, other - Q7g",
-      "fixed_width_specification": "63-63"
+      "fixed_width_specification": "63-63",
+      "Year": 2000
     },
     {
       "variable_key": "SC08Q01",
@@ -868,8 +889,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<ISCED 2A> - Q8a",
-      "fixed_width_specification": "64-66"
+      "variable_description": "Q8a",
+      "fixed_width_specification": "64-66",
+      "Year": 2000
     },
     {
       "variable_key": "SC08Q02",
@@ -884,8 +906,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<ISCED 2B> - Q8b",
-      "fixed_width_specification": "67-69"
+      "variable_description": "Q8b",
+      "fixed_width_specification": "67-69",
+      "Year": 2000
     },
     {
       "variable_key": "SC08Q03",
@@ -900,8 +923,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<ISCED 2C> - Q8c",
-      "fixed_width_specification": "70-72"
+      "variable_description": "Q8c",
+      "fixed_width_specification": "70-72",
+      "Year": 2000
     },
     {
       "variable_key": "SC08Q04",
@@ -916,8 +940,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<ISCED 3A> - Q8d",
-      "fixed_width_specification": "73-75"
+      "variable_description": "Q8d",
+      "fixed_width_specification": "73-75",
+      "Year": 2000
     },
     {
       "variable_key": "SC08Q05",
@@ -932,8 +957,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<ISCED 3B> - Q8e",
-      "fixed_width_specification": "76-78"
+      "variable_description": "Q8e",
+      "fixed_width_specification": "76-78",
+      "Year": 2000
     },
     {
       "variable_key": "SC08Q06",
@@ -948,8 +974,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<ISCED 3C> - Q8f",
-      "fixed_width_specification": "79-81"
+      "variable_description": "Q8f",
+      "fixed_width_specification": "79-81",
+      "Year": 2000
     },
     {
       "variable_key": "SC09Q01",
@@ -981,7 +1008,8 @@
         }
       ],
       "variable_description": "Student's choice - Q9a",
-      "fixed_width_specification": "82-82"
+      "fixed_width_specification": "82-82",
+      "Year": 2000
     },
     {
       "variable_key": "SC09Q02",
@@ -1013,7 +1041,8 @@
         }
       ],
       "variable_description": "Academic record - Q9b",
-      "fixed_width_specification": "83-83"
+      "fixed_width_specification": "83-83",
+      "Year": 2000
     },
     {
       "variable_key": "SC09Q03",
@@ -1045,7 +1074,8 @@
         }
       ],
       "variable_description": "Placement exams - Q9c",
-      "fixed_width_specification": "84-84"
+      "fixed_width_specification": "84-84",
+      "Year": 2000
     },
     {
       "variable_key": "SC09Q04",
@@ -1077,7 +1107,8 @@
         }
       ],
       "variable_description": "Teacher recommend - Q9d",
-      "fixed_width_specification": "85-85"
+      "fixed_width_specification": "85-85",
+      "Year": 2000
     },
     {
       "variable_key": "SC09Q05",
@@ -1109,7 +1140,8 @@
         }
       ],
       "variable_description": "Parents' request - Q9e",
-      "fixed_width_specification": "86-86"
+      "fixed_width_specification": "86-86",
+      "Year": 2000
     },
     {
       "variable_key": "SC10Q01",
@@ -1141,7 +1173,8 @@
         }
       ],
       "variable_description": "Low achievement - Q10a",
-      "fixed_width_specification": "87-87"
+      "fixed_width_specification": "87-87",
+      "Year": 2000
     },
     {
       "variable_key": "SC10Q02",
@@ -1173,7 +1206,8 @@
         }
       ],
       "variable_description": "High achievement - Q10b",
-      "fixed_width_specification": "88-88"
+      "fixed_width_specification": "88-88",
+      "Year": 2000
     },
     {
       "variable_key": "SC10Q03",
@@ -1205,7 +1239,8 @@
         }
       ],
       "variable_description": "Behaviour - Q10c",
-      "fixed_width_specification": "89-89"
+      "fixed_width_specification": "89-89",
+      "Year": 2000
     },
     {
       "variable_key": "SC10Q04",
@@ -1237,7 +1272,8 @@
         }
       ],
       "variable_description": "Special needs - Q10d",
-      "fixed_width_specification": "90-90"
+      "fixed_width_specification": "90-90",
+      "Year": 2000
     },
     {
       "variable_key": "SC10Q05",
@@ -1268,8 +1304,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Parents' request -Q10e",
-      "fixed_width_specification": "91-91"
+      "variable_description": "Parents' request - Q10e",
+      "fixed_width_specification": "91-91",
+      "Year": 2000
     },
     {
       "variable_key": "SC10Q06",
@@ -1301,7 +1338,8 @@
         }
       ],
       "variable_description": "Transfer reason, other - Q10f",
-      "fixed_width_specification": "92-92"
+      "fixed_width_specification": "92-92",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q01",
@@ -1337,7 +1375,8 @@
         }
       ],
       "variable_description": "Poor buildings - Q11a",
-      "fixed_width_specification": "93-93"
+      "fixed_width_specification": "93-93",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q02",
@@ -1373,7 +1412,8 @@
         }
       ],
       "variable_description": "Poor heating - Q11b",
-      "fixed_width_specification": "94-94"
+      "fixed_width_specification": "94-94",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q03",
@@ -1409,7 +1449,8 @@
         }
       ],
       "variable_description": "Inadequate space - Q11c",
-      "fixed_width_specification": "95-95"
+      "fixed_width_specification": "95-95",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q04",
@@ -1445,7 +1486,8 @@
         }
       ],
       "variable_description": "Lack of instruct materials - Q11d",
-      "fixed_width_specification": "96-96"
+      "fixed_width_specification": "96-96",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q05",
@@ -1481,7 +1523,8 @@
         }
       ],
       "variable_description": "Lack of computers - Q11e",
-      "fixed_width_specification": "97-97"
+      "fixed_width_specification": "97-97",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q06",
@@ -1517,7 +1560,8 @@
         }
       ],
       "variable_description": "Poor library - Q11f",
-      "fixed_width_specification": "98-98"
+      "fixed_width_specification": "98-98",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q07",
@@ -1553,7 +1597,8 @@
         }
       ],
       "variable_description": "Poor multi-media Q11g",
-      "fixed_width_specification": "99-99"
+      "fixed_width_specification": "99-99",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q08",
@@ -1589,7 +1634,8 @@
         }
       ],
       "variable_description": "Poor science equip - Q11h",
-      "fixed_width_specification": "100-100"
+      "fixed_width_specification": "100-100",
+      "Year": 2000
     },
     {
       "variable_key": "SC11Q09",
@@ -1625,7 +1671,8 @@
         }
       ],
       "variable_description": "Poor art facilities - Q11i",
-      "fixed_width_specification": "101-101"
+      "fixed_width_specification": "101-101",
+      "Year": 2000
     },
     {
       "variable_key": "SC12Q01",
@@ -1653,7 +1700,8 @@
         }
       ],
       "variable_description": "Courses for gifted - Q12a",
-      "fixed_width_specification": "102-102"
+      "fixed_width_specification": "102-102",
+      "Year": 2000
     },
     {
       "variable_key": "SC12Q02",
@@ -1681,7 +1729,8 @@
         }
       ],
       "variable_description": "Language training - Q12b",
-      "fixed_width_specification": "103-103"
+      "fixed_width_specification": "103-103",
+      "Year": 2000
     },
     {
       "variable_key": "SC12Q03",
@@ -1709,7 +1758,8 @@
         }
       ],
       "variable_description": "Study skills - Q12c",
-      "fixed_width_specification": "104-104"
+      "fixed_width_specification": "104-104",
+      "Year": 2000
     },
     {
       "variable_key": "SC12Q04",
@@ -1737,7 +1787,8 @@
         }
       ],
       "variable_description": "Special tutoring - Q12d",
-      "fixed_width_specification": "105-105"
+      "fixed_width_specification": "105-105",
+      "Year": 2000
     },
     {
       "variable_key": "SC12Q05",
@@ -1765,7 +1816,8 @@
         }
       ],
       "variable_description": "Help rooms - Q12e",
-      "fixed_width_specification": "106-106"
+      "fixed_width_specification": "106-106",
+      "Year": 2000
     },
     {
       "variable_key": "SC13Q01",
@@ -1781,7 +1833,8 @@
         }
       ],
       "variable_description": "Computers altogether - Q13a",
-      "fixed_width_specification": "107-110"
+      "fixed_width_specification": "107-110",
+      "Year": 2000
     },
     {
       "variable_key": "SC13Q02",
@@ -1797,7 +1850,8 @@
         }
       ],
       "variable_description": "Computers students - Q13b",
-      "fixed_width_specification": "111-114"
+      "fixed_width_specification": "111-114",
+      "Year": 2000
     },
     {
       "variable_key": "SC13Q03",
@@ -1813,7 +1867,8 @@
         }
       ],
       "variable_description": "Computers teachers - Q13c",
-      "fixed_width_specification": "115-118"
+      "fixed_width_specification": "115-118",
+      "Year": 2000
     },
     {
       "variable_key": "SC13Q04",
@@ -1829,7 +1884,8 @@
         }
       ],
       "variable_description": "Computers admin - Q13d",
-      "fixed_width_specification": "119-122"
+      "fixed_width_specification": "119-122",
+      "Year": 2000
     },
     {
       "variable_key": "SC13Q05",
@@ -1845,7 +1901,8 @@
         }
       ],
       "variable_description": "Computers with Web - Q13e",
-      "fixed_width_specification": "123-126"
+      "fixed_width_specification": "123-126",
+      "Year": 2000
     },
     {
       "variable_key": "SC13Q06",
@@ -1861,7 +1918,8 @@
         }
       ],
       "variable_description": "Computers with Lan - Q13f",
-      "fixed_width_specification": "127-130"
+      "fixed_width_specification": "127-130",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q01",
@@ -1877,7 +1935,8 @@
         }
       ],
       "variable_description": "Ftime teach in total - Q14a1",
-      "fixed_width_specification": "131-133"
+      "fixed_width_specification": "131-133",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q02",
@@ -1893,7 +1952,8 @@
         }
       ],
       "variable_description": "Ptime teach in total - Q14a2",
-      "fixed_width_specification": "134-136"
+      "fixed_width_specification": "134-136",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q03",
@@ -1908,8 +1968,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <ISCED5A> in <pedag> -",
-      "fixed_width_specification": "137-139"
+      "variable_description": "Ftime teach in",
+      "fixed_width_specification": "137-139",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q04",
@@ -1924,8 +1985,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach <ISCED5A> in <pedag> -",
-      "fixed_width_specification": "140-142"
+      "variable_description": "Ptime teach in",
+      "fixed_width_specification": "140-142",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q05",
@@ -1941,7 +2003,8 @@
         }
       ],
       "variable_description": "Ftime teach fully certified - q14c1",
-      "fixed_width_specification": "143-145"
+      "fixed_width_specification": "143-145",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q06",
@@ -1957,7 +2020,8 @@
         }
       ],
       "variable_description": "Ptime teach fully certified - Q14c2",
-      "fixed_width_specification": "146-148"
+      "fixed_width_specification": "146-148",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q07",
@@ -1972,8 +2036,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <test language> - Q14d1",
-      "fixed_width_specification": "149-151"
+      "variable_description": "Ftime teach - Q14d1",
+      "fixed_width_specification": "149-151",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q08",
@@ -1988,8 +2053,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach <test language> - Q14d2",
-      "fixed_width_specification": "152-154"
+      "variable_description": "Ptime teach - Q14d2",
+      "fixed_width_specification": "152-154",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q09",
@@ -2004,8 +2070,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <ISCED5A> in <test lang>",
-      "fixed_width_specification": "155-157"
+      "variable_description": "Ftime teach in",
+      "fixed_width_specification": "155-157",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q10",
@@ -2020,8 +2087,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach <ISCED5A> in <test lang",
-      "fixed_width_specification": "158-160"
+      "variable_description": "Ptime teach in <test lang",
+      "fixed_width_specification": "158-160",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q11",
@@ -2036,8 +2104,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <maths> - Q14f1",
-      "fixed_width_specification": "161-163"
+      "variable_description": "Ftime teach - Q14f1",
+      "fixed_width_specification": "161-163",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q12",
@@ -2052,8 +2121,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach <maths> - Q14f2",
-      "fixed_width_specification": "164-166"
+      "variable_description": "Ptime teach - Q14f2",
+      "fixed_width_specification": "164-166",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q13",
@@ -2068,8 +2138,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <ISCED5A> in <maths> -",
-      "fixed_width_specification": "167-169"
+      "variable_description": "Ftime teach in",
+      "fixed_width_specification": "167-169",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q14",
@@ -2084,8 +2155,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach <ISCED5A> in <maths> -",
-      "fixed_width_specification": "170-172"
+      "variable_description": "Ptime teach in",
+      "fixed_width_specification": "170-172",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q15",
@@ -2100,8 +2172,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <science> - Q14h1",
-      "fixed_width_specification": "173-175"
+      "variable_description": "Ftime teach - Q14h1",
+      "fixed_width_specification": "173-175",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q16",
@@ -2116,8 +2189,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach <science> - q14h2",
-      "fixed_width_specification": "176-178"
+      "variable_description": "Ptime teach - q14h2",
+      "fixed_width_specification": "176-178",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q17",
@@ -2132,8 +2206,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ftime teach <ISCED5A> in <science>",
-      "fixed_width_specification": "179-181"
+      "variable_description": "Ftime teach in",
+      "fixed_width_specification": "179-181",
+      "Year": 2000
     },
     {
       "variable_key": "SC14Q18",
@@ -2148,24 +2223,17 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Ptime teach - <ISCED5A> in <science",
-      "fixed_width_specification": "182-184"
+      "variable_description": "Ptime teach - in <science",
+      "fixed_width_specification": "182-184",
+      "Year": 2000
     },
     {
       "variable_key": "SC15Q01",
       "format_specifier": "(F3.0)",
-      "variable_key_value": [
-        {
-          "key": "997",
-          "value": "N/A"
-        },
-        {
-          "key": "999",
-          "value": "Mis"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Professional development - Q15",
-      "fixed_width_specification": "185-187"
+      "fixed_width_specification": "185-187",
+      "Year": 2000
     },
     {
       "variable_key": "SC16Q01",
@@ -2205,7 +2273,8 @@
         }
       ],
       "variable_description": "Standardised test - Q16a",
-      "fixed_width_specification": "188-188"
+      "fixed_width_specification": "188-188",
+      "Year": 2000
     },
     {
       "variable_key": "SC16Q02",
@@ -2245,7 +2314,8 @@
         }
       ],
       "variable_description": "Teacher's test - Q16b",
-      "fixed_width_specification": "189-189"
+      "fixed_width_specification": "189-189",
+      "Year": 2000
     },
     {
       "variable_key": "SC16Q03",
@@ -2285,7 +2355,8 @@
         }
       ],
       "variable_description": "Teacher's ratings - Q16c",
-      "fixed_width_specification": "190-190"
+      "fixed_width_specification": "190-190",
+      "Year": 2000
     },
     {
       "variable_key": "SC16Q04",
@@ -2325,7 +2396,8 @@
         }
       ],
       "variable_description": "Students' portfolios - Q16d",
-      "fixed_width_specification": "191-191"
+      "fixed_width_specification": "191-191",
+      "Year": 2000
     },
     {
       "variable_key": "SC16Q05",
@@ -2365,7 +2437,8 @@
         }
       ],
       "variable_description": "Assignments - Q16e",
-      "fixed_width_specification": "192-192"
+      "fixed_width_specification": "192-192",
+      "Year": 2000
     },
     {
       "variable_key": "SC17Q01",
@@ -2405,7 +2478,8 @@
         }
       ],
       "variable_description": "Parents - Q17a",
-      "fixed_width_specification": "193-193"
+      "fixed_width_specification": "193-193",
+      "Year": 2000
     },
     {
       "variable_key": "SC17Q02",
@@ -2445,7 +2519,8 @@
         }
       ],
       "variable_description": "Principal - Q17b",
-      "fixed_width_specification": "194-194"
+      "fixed_width_specification": "194-194",
+      "Year": 2000
     },
     {
       "variable_key": "SC17Q03",
@@ -2485,7 +2560,8 @@
         }
       ],
       "variable_description": "Government - Q17c",
-      "fixed_width_specification": "195-195"
+      "fixed_width_specification": "195-195",
+      "Year": 2000
     },
     {
       "variable_key": "SC18Q01",
@@ -2513,7 +2589,8 @@
         }
       ],
       "variable_description": "Parents information - Q18a",
-      "fixed_width_specification": "196-196"
+      "fixed_width_specification": "196-196",
+      "Year": 2000
     },
     {
       "variable_key": "SC18Q02",
@@ -2541,7 +2618,8 @@
         }
       ],
       "variable_description": "Promotion decisions - Q18b",
-      "fixed_width_specification": "197-197"
+      "fixed_width_specification": "197-197",
+      "Year": 2000
     },
     {
       "variable_key": "SC18Q03",
@@ -2569,7 +2647,8 @@
         }
       ],
       "variable_description": "Instructional grouping - Q18c",
-      "fixed_width_specification": "198-198"
+      "fixed_width_specification": "198-198",
+      "Year": 2000
     },
     {
       "variable_key": "SC18Q04",
@@ -2597,7 +2676,8 @@
         }
       ],
       "variable_description": "National comparison - Q18d",
-      "fixed_width_specification": "199-199"
+      "fixed_width_specification": "199-199",
+      "Year": 2000
     },
     {
       "variable_key": "SC18Q05",
@@ -2625,7 +2705,8 @@
         }
       ],
       "variable_description": "Progress monitoring - Q18e",
-      "fixed_width_specification": "200-200"
+      "fixed_width_specification": "200-200",
+      "Year": 2000
     },
     {
       "variable_key": "SC18Q06",
@@ -2653,7 +2734,8 @@
         }
       ],
       "variable_description": "Teachers' effectiveness - Q18f",
-      "fixed_width_specification": "201-201"
+      "fixed_width_specification": "201-201",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q01",
@@ -2688,8 +2770,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Low expectations - Q19a",
-      "fixed_width_specification": "202-202"
+      "variable_description": "Low expectations (Q19a)",
+      "fixed_width_specification": "202-202",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q02",
@@ -2724,8 +2807,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Student absenteeism - Q19b",
-      "fixed_width_specification": "203-203"
+      "variable_description": "Student absenteeism (Q19b)",
+      "fixed_width_specification": "203-203",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q03",
@@ -2760,8 +2844,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Stud-teach relations - Q19c",
-      "fixed_width_specification": "204-204"
+      "variable_description": "Student-teacher relations (Q19c)",
+      "fixed_width_specification": "204-204",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q04",
@@ -2796,8 +2881,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Teacher turnover - Q19d",
-      "fixed_width_specification": "205-205"
+      "variable_description": "Teacher turnover (Q19d)",
+      "fixed_width_specification": "205-205",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q05",
@@ -2832,8 +2918,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Lack parent support - Q19e",
-      "fixed_width_specification": "206-206"
+      "variable_description": "Lack parent support (Q19e)",
+      "fixed_width_specification": "206-206",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q06",
@@ -2869,7 +2956,8 @@
         }
       ],
       "variable_description": "Disruptions of classes - Q19f",
-      "fixed_width_specification": "207-207"
+      "fixed_width_specification": "207-207",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q07",
@@ -2905,7 +2993,8 @@
         }
       ],
       "variable_description": "Ignoring students - Q19g",
-      "fixed_width_specification": "208-208"
+      "fixed_width_specification": "208-208",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q08",
@@ -2941,7 +3030,8 @@
         }
       ],
       "variable_description": "Teacher absenteeism - Q19h",
-      "fixed_width_specification": "209-209"
+      "fixed_width_specification": "209-209",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q09",
@@ -2977,7 +3067,8 @@
         }
       ],
       "variable_description": "Skipping classes - Q19i",
-      "fixed_width_specification": "210-210"
+      "fixed_width_specification": "210-210",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q10",
@@ -3013,7 +3104,8 @@
         }
       ],
       "variable_description": "Lack of respect -Q19j",
-      "fixed_width_specification": "211-211"
+      "fixed_width_specification": "211-211",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q11",
@@ -3049,7 +3141,8 @@
         }
       ],
       "variable_description": "Resisting change - Q19k",
-      "fixed_width_specification": "212-212"
+      "fixed_width_specification": "212-212",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q12",
@@ -3085,7 +3178,8 @@
         }
       ],
       "variable_description": "Lack of instr time - Q19l",
-      "fixed_width_specification": "213-213"
+      "fixed_width_specification": "213-213",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q13",
@@ -3121,7 +3215,8 @@
         }
       ],
       "variable_description": "Use of alcohol - Q19m",
-      "fixed_width_specification": "214-214"
+      "fixed_width_specification": "214-214",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q14",
@@ -3157,7 +3252,8 @@
         }
       ],
       "variable_description": "Teachers' strictness - Q19n",
-      "fixed_width_specification": "215-215"
+      "fixed_width_specification": "215-215",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q15",
@@ -3193,7 +3289,8 @@
         }
       ],
       "variable_description": "Bullying - Q19o",
-      "fixed_width_specification": "216-216"
+      "fixed_width_specification": "216-216",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q16",
@@ -3229,7 +3326,8 @@
         }
       ],
       "variable_description": "Lack of encouragm - Q19p",
-      "fixed_width_specification": "217-217"
+      "fixed_width_specification": "217-217",
+      "Year": 2000
     },
     {
       "variable_key": "SC19Q17",
@@ -3265,7 +3363,8 @@
         }
       ],
       "variable_description": "Poor home envrm - Q19q",
-      "fixed_width_specification": "218-218"
+      "fixed_width_specification": "218-218",
+      "Year": 2000
     },
     {
       "variable_key": "SC20Q01",
@@ -3300,8 +3399,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "High morale - Q20a",
-      "fixed_width_specification": "219-219"
+      "variable_description": "High morale -Q20a",
+      "fixed_width_specification": "219-219",
+      "Year": 2000
     },
     {
       "variable_key": "SC20Q02",
@@ -3336,8 +3436,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Enthusiasm - Q20b",
-      "fixed_width_specification": "220-220"
+      "variable_description": "Enthusiasm -Q20b",
+      "fixed_width_specification": "220-220",
+      "Year": 2000
     },
     {
       "variable_key": "SC20Q03",
@@ -3372,8 +3473,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Pride in school - Q20c",
-      "fixed_width_specification": "221-221"
+      "variable_description": "Pride in school -Q20c",
+      "fixed_width_specification": "221-221",
+      "Year": 2000
     },
     {
       "variable_key": "SC20Q04",
@@ -3408,8 +3510,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Value acad achvm - Q20d",
-      "fixed_width_specification": "222-222"
+      "variable_description": "Value acad achvm -Q20d",
+      "fixed_width_specification": "222-222",
+      "Year": 2000
     },
     {
       "variable_key": "SC21Q01",
@@ -3445,7 +3548,8 @@
         }
       ],
       "variable_description": "Teachers - Q21a",
-      "fixed_width_specification": "223-223"
+      "fixed_width_specification": "223-223",
+      "Year": 2000
     },
     {
       "variable_key": "SC21Q02",
@@ -3480,8 +3584,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<Test language> teachers - Q21b",
-      "fixed_width_specification": "224-224"
+      "variable_description": "teachers - Q21b",
+      "fixed_width_specification": "224-224",
+      "Year": 2000
     },
     {
       "variable_key": "SC21Q03",
@@ -3516,8 +3621,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<Mathematics> teacher - Q21c",
-      "fixed_width_specification": "225-225"
+      "variable_description": "teacher - Q21c",
+      "fixed_width_specification": "225-225",
+      "Year": 2000
     },
     {
       "variable_key": "SC21Q04",
@@ -3552,8 +3658,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "<Science> teachers - Q21d",
-      "fixed_width_specification": "226-226"
+      "variable_description": "teachers - Q21d",
+      "fixed_width_specification": "226-226",
+      "Year": 2000
     },
     {
       "variable_key": "SC21Q05",
@@ -3589,7 +3696,8 @@
         }
       ],
       "variable_description": "Support personnel - Q21e",
-      "fixed_width_specification": "227-227"
+      "fixed_width_specification": "227-227",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q01",
@@ -3605,7 +3713,8 @@
         }
       ],
       "variable_description": "Hiring teachers - Q22a",
-      "fixed_width_specification": "228-232"
+      "fixed_width_specification": "228-232",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q02",
@@ -3621,7 +3730,8 @@
         }
       ],
       "variable_description": "Firing teachers - Q22b",
-      "fixed_width_specification": "233-237"
+      "fixed_width_specification": "233-237",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q03",
@@ -3637,7 +3747,8 @@
         }
       ],
       "variable_description": "Teacher salaries - Q22c",
-      "fixed_width_specification": "238-242"
+      "fixed_width_specification": "238-242",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q04",
@@ -3653,7 +3764,8 @@
         }
       ],
       "variable_description": "Salary increase - Q22d",
-      "fixed_width_specification": "243-247"
+      "fixed_width_specification": "243-247",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q05",
@@ -3669,7 +3781,8 @@
         }
       ],
       "variable_description": "Budget formulation - Q22e",
-      "fixed_width_specification": "248-252"
+      "fixed_width_specification": "248-252",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q06",
@@ -3685,7 +3798,8 @@
         }
       ],
       "variable_description": "Budget allocation - Q22f",
-      "fixed_width_specification": "253-257"
+      "fixed_width_specification": "253-257",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q07",
@@ -3701,7 +3815,8 @@
         }
       ],
       "variable_description": "Disciplinary policies - Q22g",
-      "fixed_width_specification": "258-262"
+      "fixed_width_specification": "258-262",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q08",
@@ -3717,7 +3832,8 @@
         }
       ],
       "variable_description": "Assessment policies - Q22h",
-      "fixed_width_specification": "263-267"
+      "fixed_width_specification": "263-267",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q09",
@@ -3733,7 +3849,8 @@
         }
       ],
       "variable_description": "Student admittance - Q22i",
-      "fixed_width_specification": "268-272"
+      "fixed_width_specification": "268-272",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q10",
@@ -3749,7 +3866,8 @@
         }
       ],
       "variable_description": "Textbooks - Q22j",
-      "fixed_width_specification": "273-277"
+      "fixed_width_specification": "273-277",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q11",
@@ -3765,7 +3883,8 @@
         }
       ],
       "variable_description": "Course content - Q22k",
-      "fixed_width_specification": "278-282"
+      "fixed_width_specification": "278-282",
+      "Year": 2000
     },
     {
       "variable_key": "SC22Q12",
@@ -3781,7 +3900,8 @@
         }
       ],
       "variable_description": "Course offer - Q22l",
-      "fixed_width_specification": "283-287"
+      "fixed_width_specification": "283-287",
+      "Year": 2000
     },
     {
       "variable_key": "SCHLSIZE",
@@ -3797,7 +3917,8 @@
         }
       ],
       "variable_description": "Number of students in the school",
-      "fixed_width_specification": "289-293"
+      "fixed_width_specification": "289-293",
+      "Year": 2000
     },
     {
       "variable_key": "PCGIRLS",
@@ -3813,7 +3934,8 @@
         }
       ],
       "variable_description": "Percentage of girls in the school",
-      "fixed_width_specification": "294-298"
+      "fixed_width_specification": "294-298",
+      "Year": 2000
     },
     {
       "variable_key": "SCHLTYPE",
@@ -3841,7 +3963,8 @@
         }
       ],
       "variable_description": "Type of school",
-      "fixed_width_specification": "299-299"
+      "fixed_width_specification": "299-299",
+      "Year": 2000
     },
     {
       "variable_key": "TOTHRS",
@@ -3856,8 +3979,9 @@
           "value": "Mis"
         }
       ],
-      "variable_description": "Total number of schooling hours per ye",
-      "fixed_width_specification": "300-303"
+      "variable_description": "Total number of schooling hours per year",
+      "fixed_width_specification": "300-303",
+      "Year": 2000
     },
     {
       "variable_key": "RATCOMP",
@@ -3873,7 +3997,8 @@
         }
       ],
       "variable_description": "Total number of computer / school size",
-      "fixed_width_specification": "304-309"
+      "fixed_width_specification": "304-309",
+      "Year": 2000
     },
     {
       "variable_key": "PERCOMP1",
@@ -3885,7 +4010,8 @@
         }
       ],
       "variable_description": "% of computers available to 15 year old",
-      "fixed_width_specification": "310-313"
+      "fixed_width_specification": "310-313",
+      "Year": 2000
     },
     {
       "variable_key": "PERCOMP2",
@@ -3901,7 +4027,8 @@
         }
       ],
       "variable_description": "% of computers available only to teach",
-      "fixed_width_specification": "314-317"
+      "fixed_width_specification": "314-317",
+      "Year": 2000
     },
     {
       "variable_key": "PERCOMP3",
@@ -3917,7 +4044,8 @@
         }
       ],
       "variable_description": "% of computers available for admin staf",
-      "fixed_width_specification": "318-321"
+      "fixed_width_specification": "318-321",
+      "Year": 2000
     },
     {
       "variable_key": "PERCOMP4",
@@ -3933,7 +4061,8 @@
         }
       ],
       "variable_description": "% of computers connected to the Web",
-      "fixed_width_specification": "322-325"
+      "fixed_width_specification": "322-325",
+      "Year": 2000
     },
     {
       "variable_key": "PERCOMP5",
@@ -3949,7 +4078,8 @@
         }
       ],
       "variable_description": "% of computers connected to a LAN",
-      "fixed_width_specification": "326-329"
+      "fixed_width_specification": "326-329",
+      "Year": 2000
     },
     {
       "variable_key": "STRATIO",
@@ -3965,7 +4095,8 @@
         }
       ],
       "variable_description": "School size / number of teachers",
-      "fixed_width_specification": "330-334"
+      "fixed_width_specification": "330-334",
+      "Year": 2000
     },
     {
       "variable_key": "PROPQUAL",
@@ -3981,7 +4112,8 @@
         }
       ],
       "variable_description": "Prop of teachers w ISCED5A in pedag",
-      "fixed_width_specification": "335-338"
+      "fixed_width_specification": "335-338",
+      "Year": 2000
     },
     {
       "variable_key": "PROPCERT",
@@ -3997,7 +4129,8 @@
         }
       ],
       "variable_description": "Proportion of teachers fully certified",
-      "fixed_width_specification": "339-342"
+      "fixed_width_specification": "339-342",
+      "Year": 2000
     },
     {
       "variable_key": "PROPREAD",
@@ -4013,7 +4146,8 @@
         }
       ],
       "variable_description": "Prop langu teachers ISCED5A in peda",
-      "fixed_width_specification": "343-346"
+      "fixed_width_specification": "343-346",
+      "Year": 2000
     },
     {
       "variable_key": "PROPMATH",
@@ -4029,7 +4163,8 @@
         }
       ],
       "variable_description": "Prop of math teachers w ISCED5A in",
-      "fixed_width_specification": "347-350"
+      "fixed_width_specification": "347-350",
+      "Year": 2000
     },
     {
       "variable_key": "PROPSCIE",
@@ -4045,7 +4180,8 @@
         }
       ],
       "variable_description": "Prop of sci teachers with ISCED5A in s",
-      "fixed_width_specification": "351-354"
+      "fixed_width_specification": "351-354",
+      "Year": 2000
     },
     {
       "variable_key": "SCMATEDU",
@@ -4057,7 +4193,8 @@
         }
       ],
       "variable_description": "Instructional resources",
-      "fixed_width_specification": "355-359"
+      "fixed_width_specification": "355-359",
+      "Year": 2000
     },
     {
       "variable_key": "TCSHORT",
@@ -4069,7 +4206,8 @@
         }
       ],
       "variable_description": "Shortage of teachers",
-      "fixed_width_specification": "360-364"
+      "fixed_width_specification": "360-364",
+      "Year": 2000
     },
     {
       "variable_key": "TEACBEHA",
@@ -4081,7 +4219,8 @@
         }
       ],
       "variable_description": "Teacher behaviors",
-      "fixed_width_specification": "365-369"
+      "fixed_width_specification": "365-369",
+      "Year": 2000
     },
     {
       "variable_key": "STUDBEHA",
@@ -4093,7 +4232,8 @@
         }
       ],
       "variable_description": "Student behaviors",
-      "fixed_width_specification": "370-374"
+      "fixed_width_specification": "370-374",
+      "Year": 2000
     },
     {
       "variable_key": "TCMORALE",
@@ -4105,7 +4245,8 @@
         }
       ],
       "variable_description": "Teacher morale",
-      "fixed_width_specification": "375-379"
+      "fixed_width_specification": "375-379",
+      "Year": 2000
     },
     {
       "variable_key": "SCHAUTON",
@@ -4117,45 +4258,50 @@
         }
       ],
       "variable_description": "School autonomy",
-      "fixed_width_specification": "380-384"
+      "fixed_width_specification": "380-384",
+      "Year": 2000
     },
     {
       "variable_key": "TCHPARTI",
-      "format_specifier": "(F5.2)",
+      "format_specifier": "7",
       "variable_key_value": [
         {
           "key": "97",
           "value": "N/A"
         }
       ],
-      "variable_description": "Teacher participation to decision makin",
-      "fixed_width_specification": "385-389"
+      "variable_description": "Teacher participation to decision makin (F5.2)",
+      "fixed_width_specification": "385-389",
+      "Year": 2000
     },
     {
       "variable_key": "SCMATBUI",
-      "format_specifier": "(F5.2)",
+      "format_specifier": "7",
       "variable_key_value": [
         {
           "key": "97",
           "value": "N/A"
         }
       ],
-      "variable_description": "Material ressources",
-      "fixed_width_specification": "390-394"
+      "variable_description": "Material ressources (F5.2)",
+      "fixed_width_specification": "390-394",
+      "Year": 2000
     },
     {
       "variable_key": "WNRSCHB",
-      "format_specifier": "(F8.2)",
+      "format_specifier": "7",
       "variable_key_value": null,
-      "variable_description": "School weight",
-      "fixed_width_specification": "395-402"
+      "variable_description": "School weight (F8.2)",
+      "fixed_width_specification": "395-402",
+      "Year": 2000
     },
     {
       "variable_key": "CNT",
       "format_specifier": "(A3)",
       "variable_key_value": null,
       "variable_description": "Country alphanumeric code",
-      "fixed_width_specification": "404-406"
+      "fixed_width_specification": "404-406",
+      "Year": 2000
     }
   ]
 }

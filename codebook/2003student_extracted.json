@@ -291,19 +291,19 @@
         },
         {
           "key": "3804",
-          "value": "Piemonte-Nord-Ovest"
+          "value": "Italy: Piemonte-Nord-Ovest"
         },
         {
           "key": "3805",
-          "value": "Lombardia-Nord Ovest"
+          "value": "Italy: Lombardia-Nord Ovest"
         },
         {
           "key": "3806",
-          "value": "Bolzano"
+          "value": "Italy: Bolzano"
         },
         {
           "key": "3807",
-          "value": "Other regions"
+          "value": "Italy: Other regions"
         },
         {
           "key": "3920",
@@ -766,7 +766,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Mother\u2019s main job Q7",
+      "variable_description": "Mother's main job Q7",
       "fixed_width_specification": "36-39",
       "Year": 2003
     },
@@ -787,7 +787,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Father\u2019s main job Q9",
+      "variable_description": "Father's main job Q9",
       "fixed_width_specification": "40-43",
       "Year": 2003
     },
@@ -6911,7 +6911,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -6948,7 +6948,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -6985,7 +6985,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -7022,7 +7022,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -7059,7 +7059,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -7096,7 +7096,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -7133,7 +7133,7 @@
         },
         {
           "key": "4",
-          "value": "Don't know"
+          "value": "Don t know"
         },
         {
           "key": "7",
@@ -7355,7 +7355,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7370,7 +7370,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well download file IC6m",
+      "variable_description": "How well download file",
       "fixed_width_specification": "378-378",
       "Year": 2003
     },
@@ -7392,7 +7392,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7407,7 +7407,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well attach IC6n",
+      "variable_description": "How well attach",
       "fixed_width_specification": "379-379",
       "Year": 2003
     },
@@ -7429,7 +7429,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7444,7 +7444,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well program IC6o",
+      "variable_description": "How well program",
       "fixed_width_specification": "380-380",
       "Year": 2003
     },
@@ -7466,7 +7466,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7481,7 +7481,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well spreadsheet plot IC6p",
+      "variable_description": "How well spreadsheet plot",
       "fixed_width_specification": "381-381",
       "Year": 2003
     },
@@ -7503,7 +7503,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7518,7 +7518,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well PowerPoint IC6q",
+      "variable_description": "How well PowerPoint",
       "fixed_width_specification": "382-382",
       "Year": 2003
     },
@@ -7540,7 +7540,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7555,7 +7555,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well games IC6r",
+      "variable_description": "How well games",
       "fixed_width_specification": "383-383",
       "Year": 2003
     },
@@ -7577,7 +7577,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7592,7 +7592,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well download music IC6s",
+      "variable_description": "How well download music",
       "fixed_width_specification": "384-384",
       "Year": 2003
     },
@@ -7614,7 +7614,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7629,7 +7629,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well multimedia IC6t",
+      "variable_description": "How well multimedia",
       "fixed_width_specification": "385-385",
       "Year": 2003
     },
@@ -7651,7 +7651,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7666,7 +7666,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well draw IC6u",
+      "variable_description": "How well draw",
       "fixed_width_specification": "386-386",
       "Year": 2003
     },
@@ -7688,7 +7688,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7703,7 +7703,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well emails IC6v",
+      "variable_description": "How well emails",
       "fixed_width_specification": "387-387",
       "Year": 2003
     },
@@ -7725,7 +7725,7 @@
         },
         {
           "key": "4",
-          "value": "Don t know"
+          "value": "Don't know"
         },
         {
           "key": "7",
@@ -7740,7 +7740,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How well web page IC6w",
+      "variable_description": "How well web page",
       "fixed_width_specification": "388-388",
       "Year": 2003
     },
@@ -7777,7 +7777,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Feel important IC7a",
+      "variable_description": "Feel important",
       "fixed_width_specification": "389-389",
       "Year": 2003
     },
@@ -7814,7 +7814,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Feel fun IC7b",
+      "variable_description": "Feel fun",
       "fixed_width_specification": "390-390",
       "Year": 2003
     },
@@ -7851,7 +7851,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Feel interested IC7c",
+      "variable_description": "Feel interested",
       "fixed_width_specification": "391-391",
       "Year": 2003
     },
@@ -7888,7 +7888,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Feel forget time IC7d",
+      "variable_description": "Feel forget time",
       "fixed_width_specification": "392-392",
       "Year": 2003
     },
@@ -7929,7 +7929,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Learn Computer IC8",
+      "variable_description": "Learn Computer",
       "fixed_width_specification": "393-393",
       "Year": 2003
     },
@@ -7939,7 +7939,7 @@
       "variable_key_value": [
         {
           "key": "1",
-          "value": "Don t know how to use"
+          "value": "Don't know how to use"
         },
         {
           "key": "2",
@@ -7974,7 +7974,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "Learn Internet IC9",
+      "variable_description": "Learn Internet",
       "fixed_width_specification": "394-394",
       "Year": 2003
     },
@@ -8016,7 +8016,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How much Effort was invested-in the test",
+      "variable_description": "How much Effort was invested in the test",
       "fixed_width_specification": "398-402",
       "Year": 2003
     },
@@ -8037,7 +8037,7 @@
           "value": "Miss"
         }
       ],
-      "variable_description": "How much Effort would has been invested- if masks were counted by school",
+      "variable_description": "How much Effort would has been invested if masks were counted by school",
       "fixed_width_specification": "403-407",
       "Year": 2003
     },
@@ -8181,7 +8181,980 @@
     {
       "variable_key": "PROGN",
       "format_specifier": "A6",
-      "variable_key_value": null,
+      "variable_key_value": [
+        {
+          "key": "036001",
+          "value": "AUS: <Year 10 in a general academic program"
+        },
+        {
+          "key": "036002",
+          "value": "AUS: <Year 10 in a general program (vocational)"
+        },
+        {
+          "key": "036003",
+          "value": "AUS: Year 11 or 12 in a general academic program"
+        },
+        {
+          "key": "036004",
+          "value": "AUS: Year 11 or 12 in a VET (vocational) course"
+        },
+        {
+          "key": "040002",
+          "value": "AUT: Hauptschule (Lower Secondary school)"
+        },
+        {
+          "key": "040003",
+          "value": "AUT: Polytechnische Schule (Vocational)"
+        },
+        {
+          "key": "040004",
+          "value": "AUT: Sonderschule (Special school (lower sec.))"
+        },
+        {
+          "key": "040005",
+          "value": "AUT: Sonderschul-Oberstufe (Special school (upper sec.))"
+        },
+        {
+          "key": "040006",
+          "value": "AUT: AHS-Unterstufe (Gymnasium Lower Secondary )"
+        },
+        {
+          "key": "040007",
+          "value": "AUT: AHS-Oberstufe (Gymnasium Upper Secondary )"
+        },
+        {
+          "key": "040010",
+          "value": "AUT: Berufsschule (Apprenticeship)"
+        },
+        {
+          "key": "040011",
+          "value": "AUT: BMS (Medium vocational school )"
+        },
+        {
+          "key": "040012",
+          "value": "AUT: Haushaltungs- und Hauswirtschaftsschulen (Medium voc.)"
+        },
+        {
+          "key": "040014",
+          "value": "AUT: BHS (Higher vocational school)"
+        },
+        {
+          "key": "040015",
+          "value": "AUT: Anst. Der Kindergarten-/Sozialpadagogik (Voc. college)"
+        },
+        {
+          "key": "056111",
+          "value": "BEL: 1st year A of 1st stage of General Education (Fl.)"
+        },
+        {
+          "key": "056112",
+          "value": "BEL: 1st year B of 1st stage of General Education (Fl.)"
+        },
+        {
+          "key": "056113",
+          "value": "BEL: 2nd year of 1st stage, prep. voc. sec. education (Fl.)"
+        },
+        {
+          "key": "056114",
+          "value": "BEL: 2nd year of 1st stage, prep. reg. sec. education (Fl.)"
+        },
+        {
+          "key": "056115",
+          "value": "BEL: 2nd & 3rd stage regular sec. education (Fl.)"
+        },
+        {
+          "key": "056116",
+          "value": "BEL: 2nd & 3rd stage technical sec. education (Fl.)"
+        },
+        {
+          "key": "056117",
+          "value": "BEL: 2nd & 3rd stage artistic sec. education (Fl.)"
+        },
+        {
+          "key": "056118",
+          "value": "BEL: 2nd & 3rd stage vocational sec. ed. (Fl.)"
+        },
+        {
+          "key": "056119",
+          "value": "BEL: Part-time vocational sec. ed. for labour market (Fl.)"
+        },
+        {
+          "key": "056120",
+          "value": "BEL: Special sec. education (Fl.)"
+        },
+        {
+          "key": "056197",
+          "value": "BEL: Missing (Fl.)"
+        },
+        {
+          "key": "056231",
+          "value": "BEL: (1st grade of )General Education (Fr.)"
+        },
+        {
+          "key": "056232",
+          "value": "BEL: Special needs (Fr.)"
+        },
+        {
+          "key": "056233",
+          "value": "BEL: Vocational Education (Fr.)"
+        },
+        {
+          "key": "056234",
+          "value": "BEL: Complementary year or programme for 1st degree (Fr.)"
+        },
+        {
+          "key": "056235",
+          "value": "BEL: General Education (Fr.)"
+        },
+        {
+          "key": "056236",
+          "value": "BEL: Technical or Artistical Education (transition) (Fr.)"
+        },
+        {
+          "key": "056237",
+          "value": "BEL: Technical or Artistical Education (qualif.) (Fr.)"
+        },
+        {
+          "key": "056238",
+          "value": "BEL: Vocational Education (Fr.)"
+        },
+        {
+          "key": "056239",
+          "value": "BEL: Vocational training for labour market (Fr.)"
+        },
+        {
+          "key": "056242",
+          "value": "BEL: Special sec. education (form 3 or 4 - voc.) (Fr.)"
+        },
+        {
+          "key": "056244",
+          "value": "BEL: Special sec. education form 3 (Germ.)"
+        },
+        {
+          "key": "056245",
+          "value": "BEL: Part-time Vocational Education (Germ.)"
+        },
+        {
+          "key": "056246",
+          "value": "BEL: Vocational Education (Germ.)"
+        },
+        {
+          "key": "056297",
+          "value": "BEL: Missing (Fr.&Germ.)"
+        },
+        {
+          "key": "076001",
+          "value": "BRA: Lower sec. education"
+        },
+        {
+          "key": "076002",
+          "value": "BRA: Upper sec. education"
+        },
+        {
+          "key": "076097",
+          "value": "BRA: Missing"
+        },
+        {
+          "key": "124102",
+          "value": "CAN: Grades 7 - 9"
+        },
+        {
+          "key": "124103",
+          "value": "CAN: Grades 10 - 12"
+        },
+        {
+          "key": "124197",
+          "value": "CAN: Missing"
+        },
+        {
+          "key": "203001",
+          "value": "CZE: Basic school"
+        },
+        {
+          "key": "203002",
+          "value": "CZE: 6, 8-year gymnasium & 8-year conservatory (lower sec.)"
+        },
+        {
+          "key": "203003",
+          "value": "CZE: 6, 8-year gymnasium (upper sec.)"
+        },
+        {
+          "key": "203004",
+          "value": "CZE: 4- year gymnasium"
+        },
+        {
+          "key": "203005",
+          "value": "CZE: Voc/tech sec. school with maturate"
+        },
+        {
+          "key": "203006",
+          "value": "CZE: Conservatory (upper sec.)"
+        },
+        {
+          "key": "203007",
+          "value": "CZE: Voc/tech sec. school without maturate"
+        },
+        {
+          "key": "203008",
+          "value": "CZE: Special schools"
+        },
+        {
+          "key": "203009",
+          "value": "CZE: Practical schools, vocational education predominantly"
+        },
+        {
+          "key": "208001",
+          "value": "DNK: Lower sec."
+        },
+        {
+          "key": "208002",
+          "value": "DNK: Continuation school"
+        },
+        {
+          "key": "208004",
+          "value": "DNK: Upper sec."
+        },
+        {
+          "key": "208097",
+          "value": "DNK: Missing"
+        },
+        {
+          "key": "246001",
+          "value": "FIN: Comprehensive sec. school"
+        },
+        {
+          "key": "250001",
+          "value": "FRA: 5\ufffd\ufffdme, 4\ufffd\ufffdme, 3\ufffd\ufffdme (lower sec.)"
+        },
+        {
+          "key": "250002",
+          "value": "FRA: SEGPA, CPA (special education)"
+        },
+        {
+          "key": "250003",
+          "value": "FRA: 2nde ou 1\ufffd\ufffdre (g\ufffd\ufffdn\ufffd\ufffdrale ou techn.) (upper sec. general)"
+        },
+        {
+          "key": "250004",
+          "value": "FRA: Enseignement professionnel (upper sec. vocational)"
+        },
+        {
+          "key": "250005",
+          "value": "FRA: apprentissage (upper sec. vocational)"
+        },
+        {
+          "key": "276001",
+          "value": "DEU: Lower sec. access to upper sec. (compr., special educ.)"
+        },
+        {
+          "key": "276002",
+          "value": "DEU: Lower sec. no access to upper sec. (Hauptschule)"
+        },
+        {
+          "key": "276003",
+          "value": "DEU: Lower sec. no access to upper sec. (Realschule)"
+        },
+        {
+          "key": "276004",
+          "value": "DEU: Lower sec. access to upper sec. (Gymnasium)"
+        },
+        {
+          "key": "276005",
+          "value": "DEU: Lower sec. access to upper sec. (comprehensive)"
+        },
+        {
+          "key": "276006",
+          "value": "DEU: Lower sec. no access to upper sec. (Koop. Gesamtschule)"
+        },
+        {
+          "key": "276009",
+          "value": "DEU: Lower sec. no access to upper sec."
+        },
+        {
+          "key": "276010",
+          "value": "DEU: Lower sec. no access to upper sec."
+        },
+        {
+          "key": "276011",
+          "value": "DEU: Lower sec. no access to upper sec."
+        },
+        {
+          "key": "276012",
+          "value": "DEU: Lower sec. no access to upper sec."
+        },
+        {
+          "key": "276013",
+          "value": "DEU: Lower sec. with access to upper sec. (comprehensive)"
+        },
+        {
+          "key": "276014",
+          "value": "DEU: pre-vocational training year"
+        },
+        {
+          "key": "276015",
+          "value": "DEU: Vocational school (Berufsschule)"
+        },
+        {
+          "key": "276016",
+          "value": "DEU: Vocational school (Berufsfachschule)"
+        },
+        {
+          "key": "276017",
+          "value": "DEU: Upper sec. (Gymnasium)"
+        },
+        {
+          "key": "276018",
+          "value": "DEU: Upper sec. (comprehensive)"
+        },
+        {
+          "key": "276097",
+          "value": "DEU: Missing"
+        },
+        {
+          "key": "300001",
+          "value": "GRC: Gymnasio ( lower sec. education)"
+        },
+        {
+          "key": "300002",
+          "value": "GRC: Eniaio Lykeio (upper sec. education)"
+        },
+        {
+          "key": "300003",
+          "value": "GRC: Technical-vocational training inst.): 1st & 2nd cycle"
+        },
+        {
+          "key": "344001",
+          "value": "HKG: Lower sec. in G & I Sch."
+        },
+        {
+          "key": "344002",
+          "value": "HKG: Upper sec. in G & I Sch."
+        },
+        {
+          "key": "344003",
+          "value": "HKG: Lower sec. in P & T Sch."
+        },
+        {
+          "key": "344004",
+          "value": "HKG: Upper sec. in P & T Sch."
+        },
+        {
+          "key": "348001",
+          "value": "HUN: Primary school"
+        },
+        {
+          "key": "348002",
+          "value": "HUN: Grammar school"
+        },
+        {
+          "key": "348003",
+          "value": "HUN: Vocational sec. school"
+        },
+        {
+          "key": "348004",
+          "value": "HUN: Vocational school"
+        },
+        {
+          "key": "352001",
+          "value": "ISL: Lower sec. school"
+        },
+        {
+          "key": "360002",
+          "value": "IDN: Junior sec. School"
+        },
+        {
+          "key": "360003",
+          "value": "IDN: Islamic Junior sec. School"
+        },
+        {
+          "key": "360004",
+          "value": "IDN: High School"
+        },
+        {
+          "key": "360005",
+          "value": "IDN: Islamic High School"
+        },
+        {
+          "key": "360006",
+          "value": "IDN: Vocational & Technical School"
+        },
+        {
+          "key": "372001",
+          "value": "IRL: Junior Cert"
+        },
+        {
+          "key": "372002",
+          "value": "IRL: Transition Year Programme"
+        },
+        {
+          "key": "372003",
+          "value": "IRL: Leaving Cert. Applied"
+        },
+        {
+          "key": "372004",
+          "value": "IRL: Leaving Cert. General"
+        },
+        {
+          "key": "372005",
+          "value": "IRL: Leaving Cert. Vocational"
+        },
+        {
+          "key": "380001",
+          "value": "ITA: Lower sec. education"
+        },
+        {
+          "key": "380002",
+          "value": "ITA: Technical Institute"
+        },
+        {
+          "key": "380003",
+          "value": "ITA: Professional or Art Institute, Art High School"
+        },
+        {
+          "key": "380004",
+          "value": "ITA: Scientif., Classical or linguistic High School"
+        },
+        {
+          "key": "380005",
+          "value": "ITA: Professional School (only in Bolzano)"
+        },
+        {
+          "key": "392001",
+          "value": "JPN: Upper sec. school (General)"
+        },
+        {
+          "key": "392002",
+          "value": "JPN: Technical college (1st 3 years)"
+        },
+        {
+          "key": "392003",
+          "value": "JPN: Upper sec. school (Vocational)"
+        },
+        {
+          "key": "410001",
+          "value": "KOR: Lower sec. Education (Jung-hakgyo)"
+        },
+        {
+          "key": "410002",
+          "value": "KOR: Upper sec. Education (Ilban Kodeung-hakgyo)"
+        },
+        {
+          "key": "410003",
+          "value": "KOR: Upper sec. Education (Silup Kodeung-hakgyo)"
+        },
+        {
+          "key": "428001",
+          "value": "LVA: Basic education"
+        },
+        {
+          "key": "428004",
+          "value": "LVA: General sec. education"
+        },
+        {
+          "key": "428097",
+          "value": "LVA: Missing"
+        },
+        {
+          "key": "438001",
+          "value": "LIE: sec. education, 1st stage"
+        },
+        {
+          "key": "438002",
+          "value": "LIE: Preparatory course for vocational education"
+        },
+        {
+          "key": "438003",
+          "value": "LIE: School prep. for the university entrance certificate"
+        },
+        {
+          "key": "442001",
+          "value": "LUX: Year 7 or 8 or 9"
+        },
+        {
+          "key": "442002",
+          "value": "LUX: Year 7 or 8 or 9"
+        },
+        {
+          "key": "442003",
+          "value": "LUX: Year 10 or 11, with mostly VET (vocational) subjects"
+        },
+        {
+          "key": "442004",
+          "value": "LUX: Year 10-12, in a program leading to an apprenticeship"
+        },
+        {
+          "key": "442005",
+          "value": "LUX: Year 10-12 in a program leading to higher education"
+        },
+        {
+          "key": "442006",
+          "value": "LUX: Year 10-12 in a program leading to university"
+        },
+        {
+          "key": "446001",
+          "value": "MAC: Lower sec. in G & I Sch."
+        },
+        {
+          "key": "446002",
+          "value": "MAC: Upper sec. in G & I Sch."
+        },
+        {
+          "key": "446003",
+          "value": "MAC: Lower sec. in P & T Sch."
+        },
+        {
+          "key": "446004",
+          "value": "MAC: Upper sec. in P & T Sch."
+        },
+        {
+          "key": "484001",
+          "value": "MEX: General Lower sec."
+        },
+        {
+          "key": "484002",
+          "value": "MEX: Technical Lower sec."
+        },
+        {
+          "key": "484003",
+          "value": "MEX: Lower sec. for workers"
+        },
+        {
+          "key": "484004",
+          "value": "MEX: General Lower sec. by Television"
+        },
+        {
+          "key": "484005",
+          "value": "MEX: Job Training"
+        },
+        {
+          "key": "484006",
+          "value": "MEX: General Baccalaureate or Upper sec.(Years prog.)"
+        },
+        {
+          "key": "484007",
+          "value": "MEX: General Baccalaureate or Upper sec.(semester prog.)"
+        },
+        {
+          "key": "484008",
+          "value": "MEX: General Baccalaureate or Upper sec.(two years prog.)"
+        },
+        {
+          "key": "484009",
+          "value": "MEX: Technical Baccalaureate or Upper sec. (semester prog.)"
+        },
+        {
+          "key": "484010",
+          "value": "MEX: Professional Technician (semester prog.)"
+        },
+        {
+          "key": "528001",
+          "value": "NLD: PRO"
+        },
+        {
+          "key": "528002",
+          "value": "NLD: VMBO"
+        },
+        {
+          "key": "528003",
+          "value": "NLD: VMBO BB"
+        },
+        {
+          "key": "528004",
+          "value": "NLD: VMBO KB"
+        },
+        {
+          "key": "528005",
+          "value": "NLD: VMBO GL"
+        },
+        {
+          "key": "528006",
+          "value": "NLD: VMBO TL"
+        },
+        {
+          "key": "528007",
+          "value": "NLD: HAVO 2/3"
+        },
+        {
+          "key": "528008",
+          "value": "NLD: HAVO 4/5"
+        },
+        {
+          "key": "528009",
+          "value": "NLD: VWO 2/3"
+        },
+        {
+          "key": "528010",
+          "value": "NLD: VWO 4/5"
+        },
+        {
+          "key": "528097",
+          "value": "NLD: Missing"
+        },
+        {
+          "key": "554001",
+          "value": "NZL: Years 7 to 10"
+        },
+        {
+          "key": "554002",
+          "value": "NZL: Years 11 to 13"
+        },
+        {
+          "key": "554097",
+          "value": "NZL: Missing"
+        },
+        {
+          "key": "578001",
+          "value": "NOR: Lower sec."
+        },
+        {
+          "key": "578002",
+          "value": "NOR: Upper sec."
+        },
+        {
+          "key": "616001",
+          "value": "POL: Gymnasium"
+        },
+        {
+          "key": "616002",
+          "value": "POL: Lyceum - General education"
+        },
+        {
+          "key": "620001",
+          "value": "PRT: Lower sec."
+        },
+        {
+          "key": "620003",
+          "value": "PRT: Upper sec."
+        },
+        {
+          "key": "620004",
+          "value": "PRT: Vocational sec. (technological)"
+        },
+        {
+          "key": "620005",
+          "value": "PRT: Vocational sec. (professional)"
+        },
+        {
+          "key": "643001",
+          "value": "RUS: Basic general education (Lower sec.)"
+        },
+        {
+          "key": "643002",
+          "value": "RUS: Sec. general education (Upper sec.)"
+        },
+        {
+          "key": "643003",
+          "value": "RUS: Initial professional education (prof. schools, etc.)"
+        },
+        {
+          "key": "643004",
+          "value": "RUS: Sec. professional education (technikum, college, etc.)"
+        },
+        {
+          "key": "643099",
+          "value": "RUS: Missing"
+        },
+        {
+          "key": "703002",
+          "value": "SVK: Basic school (lower sec.)"
+        },
+        {
+          "key": "703004",
+          "value": "SVK: Vocational Basic school (lower sec.)"
+        },
+        {
+          "key": "703005",
+          "value": "SVK: sec. school (lower sec.)"
+        },
+        {
+          "key": "703006",
+          "value": "SVK: sec. school (upper sec.)"
+        },
+        {
+          "key": "703007",
+          "value": "SVK: High School (Gymnasium)"
+        },
+        {
+          "key": "703008",
+          "value": "SVK: sec. College"
+        },
+        {
+          "key": "703009",
+          "value": "SVK: Technical College"
+        },
+        {
+          "key": "703010",
+          "value": "SVK: Vocational College"
+        },
+        {
+          "key": "724101",
+          "value": "ESP: Compulsory sec. Education"
+        },
+        {
+          "key": "724102",
+          "value": "ESP: Baccalaureat"
+        },
+        {
+          "key": "724201",
+          "value": "ESP: Compulsory sec. Education"
+        },
+        {
+          "key": "724301",
+          "value": "ESP: Compulsory sec. Education"
+        },
+        {
+          "key": "724401",
+          "value": "ESP: Compulsory sec. Education"
+        },
+        {
+          "key": "752001",
+          "value": "SWE: Compulsory basic school"
+        },
+        {
+          "key": "752002",
+          "value": "SWE: Upper sec. school, general orientation"
+        },
+        {
+          "key": "752003",
+          "value": "SWE: Upper sec. school, vocational orientation"
+        },
+        {
+          "key": "752004",
+          "value": "SWE: Upper sec. school, the individual programme"
+        },
+        {
+          "key": "752097",
+          "value": "SWE: Missing"
+        },
+        {
+          "key": "756001",
+          "value": "CHE: sec. education, 1st stage"
+        },
+        {
+          "key": "756002",
+          "value": "CHE: Preparatory course for vocational education"
+        },
+        {
+          "key": "756003",
+          "value": "CHE: School prep. for the university entrance certificate"
+        },
+        {
+          "key": "756004",
+          "value": "CHE: Vocational baccalaureat, dual system 3-4 years"
+        },
+        {
+          "key": "756005",
+          "value": "CHE: Vocational education, dual system 3-4 years"
+        },
+        {
+          "key": "756006",
+          "value": "CHE: Intermediate diploma school 3-4 years"
+        },
+        {
+          "key": "756007",
+          "value": "CHE: Basic vocational education, dual system 1-2 years"
+        },
+        {
+          "key": "756008",
+          "value": "CHE: Intermediate Diploma School"
+        },
+        {
+          "key": "756099",
+          "value": "CHE: Missing"
+        },
+        {
+          "key": "764001",
+          "value": "THA: Lower sec. level"
+        },
+        {
+          "key": "764002",
+          "value": "THA: Upper sec. level"
+        },
+        {
+          "key": "764003",
+          "value": "THA: Vocational stream"
+        },
+        {
+          "key": "788001",
+          "value": "TUN: Enseignement de base (lower sec.)"
+        },
+        {
+          "key": "788002",
+          "value": "TUN: 2ndaire (upper sec.)"
+        },
+        {
+          "key": "792001",
+          "value": "TUR: Primary education (lower sec.)"
+        },
+        {
+          "key": "792002",
+          "value": "TUR: General high school (upper sec.)"
+        },
+        {
+          "key": "792003",
+          "value": "TUR: Anatolian high school (upper sec.)"
+        },
+        {
+          "key": "792004",
+          "value": "TUR: High school with foreign language (upper sec.)"
+        },
+        {
+          "key": "792005",
+          "value": "TUR: Science high schools (upper sec.)"
+        },
+        {
+          "key": "792006",
+          "value": "TUR: Vocational high schools"
+        },
+        {
+          "key": "792007",
+          "value": "TUR: Anatolian vocational high schools"
+        },
+        {
+          "key": "792008",
+          "value": "TUR: Technical high schools"
+        },
+        {
+          "key": "792009",
+          "value": "TUR: Anatolian technical high schools"
+        },
+        {
+          "key": "826101",
+          "value": "GBR: Studies toward Entry Level Certificates"
+        },
+        {
+          "key": "826102",
+          "value": "GBR: Studies toward academic GCSEs eg history, Fr."
+        },
+        {
+          "key": "826103",
+          "value": "GBR: Studies toward applied or vocational GCSEs"
+        },
+        {
+          "key": "826104",
+          "value": "GBR: Studies at GNVQ Foundation or Intermed. Level (6-unit)"
+        },
+        {
+          "key": "826105",
+          "value": "GBR: Studies toward NVQ Level 1 or 2"
+        },
+        {
+          "key": "826106",
+          "value": "GBR: Studies toward for AS or A Levels"
+        },
+        {
+          "key": "826109",
+          "value": "GBR: < Year 10 (England&Wales) or < Year 11 (North. Ireland)"
+        },
+        {
+          "key": "826201",
+          "value": "SCO: All students in S4"
+        },
+        {
+          "key": "826202",
+          "value": "SCO: S5 and studies at Higher level, A-level, or equivalent"
+        },
+        {
+          "key": "826203",
+          "value": "SCO: S5 and studies at Intermed., Access level or equivalent"
+        },
+        {
+          "key": "840001",
+          "value": "USA: Grades 7 - 9"
+        },
+        {
+          "key": "840002",
+          "value": "USA: Grades 10 - 12"
+        },
+        {
+          "key": "840097",
+          "value": "USA: Missing"
+        },
+        {
+          "key": "858001",
+          "value": "URY: Lower sec. (Plan 86)"
+        },
+        {
+          "key": "858002",
+          "value": "URY: Lower sec. (Plan 96)"
+        },
+        {
+          "key": "858003",
+          "value": "URY: Lower sec. (Plan 96 technological)"
+        },
+        {
+          "key": "858004",
+          "value": "URY: Vocational lower sec. (basic courses)"
+        },
+        {
+          "key": "858005",
+          "value": "URY: Vocational lower sec. (basic professional)"
+        },
+        {
+          "key": "858006",
+          "value": "URY: Rural lower sec."
+        },
+        {
+          "key": "858007",
+          "value": "URY: General upper sec."
+        },
+        {
+          "key": "858008",
+          "value": "URY: Technical upper sec."
+        },
+        {
+          "key": "858009",
+          "value": "URY: Vocational upper sec."
+        },
+        {
+          "key": "858010",
+          "value": "URY: Military School"
+        },
+        {
+          "key": "891001",
+          "value": "YUG: Gymnasium"
+        },
+        {
+          "key": "891002",
+          "value": "YUG: Technical"
+        },
+        {
+          "key": "891003",
+          "value": "YUG: Technical Vocational"
+        },
+        {
+          "key": "891004",
+          "value": "YUG: Medical"
+        },
+        {
+          "key": "891005",
+          "value": "YUG: Medical Vocational"
+        },
+        {
+          "key": "891006",
+          "value": "YUG: Economic"
+        },
+        {
+          "key": "891007",
+          "value": "YUG: Economic Vocational"
+        },
+        {
+          "key": "891008",
+          "value": "YUG: Agricultural"
+        },
+        {
+          "key": "891009",
+          "value": "YUG: Agricultaral Vocational"
+        },
+        {
+          "key": "891010",
+          "value": "YUG: Artistic"
+        },
+        {
+          "key": "891097",
+          "value": "YUG: Missing"
+        }
+      ],
       "variable_description": "Unique national programme code",
       "fixed_width_specification": "418-423",
       "Year": 2003
@@ -8545,14 +9518,6 @@
     },
     {
       "variable_key": "ISO_S",
-      "format_specifier": "A8",
-      "variable_key_value": null,
-      "variable_description": "ISO code country of birth Student",
-      "fixed_width_specification": "442-449",
-      "Year": 2003
-    },
-    {
-      "variable_key": "ISO_M",
       "format_specifier": "A8",
       "variable_key_value": [
         {
@@ -9216,6 +10181,14 @@
           "value": "Zambia"
         }
       ],
+      "variable_description": "ISO code country of birth Student",
+      "fixed_width_specification": "442-449",
+      "Year": 2003
+    },
+    {
+      "variable_key": "ISO_M",
+      "format_specifier": "A8",
+      "variable_key_value": null,
       "variable_description": "ISO code country of birth Mother",
       "fixed_width_specification": "450-457",
       "Year": 2003
@@ -9223,668 +10196,7 @@
     {
       "variable_key": "ISO_F",
       "format_specifier": "A8",
-      "variable_key_value": [
-        {
-          "key": "03608261",
-          "value": "AUS: England"
-        },
-        {
-          "key": "03608262",
-          "value": "AUS: Scotland"
-        },
-        {
-          "key": "03609996",
-          "value": "AUS: Other"
-        },
-        {
-          "key": "04000391",
-          "value": "AUT: Yugoslavia"
-        },
-        {
-          "key": "04009996",
-          "value": "AUT: Other"
-        },
-        {
-          "key": "05610021",
-          "value": "BFL: An African country (not Maghreb)"
-        },
-        {
-          "key": "05610151",
-          "value": "BFL: A Maghreb country"
-        },
-        {
-          "key": "05611501",
-          "value": "BFL: An other country of the EU"
-        },
-        {
-          "key": "05619996",
-          "value": "BFL: Other"
-        },
-        {
-          "key": "05620021",
-          "value": "BFR: An African country (not Maghreb)"
-        },
-        {
-          "key": "05620151",
-          "value": "BFR: A Maghreb country"
-        },
-        {
-          "key": "05621501",
-          "value": "BFR: Another country of the EU"
-        },
-        {
-          "key": "05629996",
-          "value": "BFR: Other"
-        },
-        {
-          "key": "07609996",
-          "value": "BRA: Other"
-        },
-        {
-          "key": "12419996",
-          "value": "CAE: Other"
-        },
-        {
-          "key": "12429996",
-          "value": "CAF: Other"
-        },
-        {
-          "key": "12439996",
-          "value": "CAN: Other"
-        },
-        {
-          "key": "20309996",
-          "value": "CZE: Other"
-        },
-        {
-          "key": "20800391",
-          "value": "DNK: The former Yugoslavia"
-        },
-        {
-          "key": "20809996",
-          "value": "DNK: Other"
-        },
-        {
-          "key": "24609996",
-          "value": "FIN: Other"
-        },
-        {
-          "key": "25009996",
-          "value": "FRA: Other"
-        },
-        {
-          "key": "27601501",
-          "value": "DEU: Russia, Kazakhstan or another former Soviet republic"
-        },
-        {
-          "key": "27608911",
-          "value": "DEU: Montenegro"
-        },
-        {
-          "key": "27608912",
-          "value": "DEU: Serbia"
-        },
-        {
-          "key": "27609996",
-          "value": "DEU: Other"
-        },
-        {
-          "key": "30001501",
-          "value": "GRC: Country that belonged to the USSR"
-        },
-        {
-          "key": "30009996",
-          "value": "GRC: Other"
-        },
-        {
-          "key": "34409996",
-          "value": "HKG: Other"
-        },
-        {
-          "key": "34809996",
-          "value": "HUN: Other"
-        },
-        {
-          "key": "35209996",
-          "value": "ISL: Other"
-        },
-        {
-          "key": "36009996",
-          "value": "IDN: Other"
-        },
-        {
-          "key": "37200701",
-          "value": "IRL: Bosnia"
-        },
-        {
-          "key": "37203761",
-          "value": "IRL: Palestine"
-        },
-        {
-          "key": "37208261",
-          "value": "IRL: Northern Ireland"
-        },
-        {
-          "key": "37208262",
-          "value": "IRL: Great Britain"
-        },
-        {
-          "key": "37209996",
-          "value": "IRL: Other"
-        },
-        {
-          "key": "38001501",
-          "value": "ITA: In an European country that is not member of the EU"
-        },
-        {
-          "key": "38009996",
-          "value": "ITA: Other"
-        },
-        {
-          "key": "39209996",
-          "value": "JPN: Other"
-        },
-        {
-          "key": "41009996",
-          "value": "KOR: Other"
-        },
-        {
-          "key": "42809996",
-          "value": "LVA: Other"
-        },
-        {
-          "key": "44209996",
-          "value": "LUX: Other"
-        },
-        {
-          "key": "44609996",
-          "value": "MAC: Other"
-        },
-        {
-          "key": "48409996",
-          "value": "MEX: Other"
-        },
-        {
-          "key": "52801501",
-          "value": "NLD: Other European country"
-        },
-        {
-          "key": "52809996",
-          "value": "NLD: Other"
-        },
-        {
-          "key": "55409996",
-          "value": "NZL: Other"
-        },
-        {
-          "key": "57809996",
-          "value": "NOR: Other"
-        },
-        {
-          "key": "61609996",
-          "value": "POL: Other"
-        },
-        {
-          "key": "62009996",
-          "value": "PRT: Other"
-        },
-        {
-          "key": "64301501",
-          "value": "RUS: Former USSR republics"
-        },
-        {
-          "key": "64309996",
-          "value": "RUS: Other"
-        },
-        {
-          "key": "70301501",
-          "value": "SVK: In other country of Europe"
-        },
-        {
-          "key": "70309996",
-          "value": "SVK: Other"
-        },
-        {
-          "key": "72419996",
-          "value": "ESC: Other"
-        },
-        {
-          "key": "72429996",
-          "value": "ECL: Other"
-        },
-        {
-          "key": "72439996",
-          "value": "ECT: Other"
-        },
-        {
-          "key": "72449996",
-          "value": "EBS: Other"
-        },
-        {
-          "key": "75209996",
-          "value": "SWE: Other"
-        },
-        {
-          "key": "75600391",
-          "value": "CHE: Ex-Yugoslavia"
-        },
-        {
-          "key": "75600392",
-          "value": "CHE: Albania or Kosovo"
-        },
-        {
-          "key": "75601551",
-          "value": "CHE: Germany or Austria"
-        },
-        {
-          "key": "75601552",
-          "value": "CHE: France or Belgium"
-        },
-        {
-          "key": "75607560",
-          "value": "CHE: Switzerland"
-        },
-        {
-          "key": "75609996",
-          "value": "CHE: Other"
-        },
-        {
-          "key": "76409996",
-          "value": "THA: Other"
-        },
-        {
-          "key": "78809996",
-          "value": "TUN: Other"
-        },
-        {
-          "key": "79209996",
-          "value": "TUR: Other"
-        },
-        {
-          "key": "82619996",
-          "value": "GRB: Other"
-        },
-        {
-          "key": "82620301",
-          "value": "SCO: China (incl Hong Kong)"
-        },
-        {
-          "key": "82621421",
-          "value": "SCO: Middle East"
-        },
-        {
-          "key": "82621501",
-          "value": "SCO: Other European country"
-        },
-        {
-          "key": "82628261",
-          "value": "SCO: England, Wales, N Ireland"
-        },
-        {
-          "key": "82628262",
-          "value": "SCO: Scotland"
-        },
-        {
-          "key": "82629996",
-          "value": "SCO: Other"
-        },
-        {
-          "key": "84009996",
-          "value": "USA: Other"
-        },
-        {
-          "key": "85809996",
-          "value": "URY: Other"
-        },
-        {
-          "key": "89101491",
-          "value": "YUG: The former Yugoslavia"
-        },
-        {
-          "key": "89109996",
-          "value": "YUG: Other"
-        },
-        {
-          "key": "99990020",
-          "value": "Africa"
-        },
-        {
-          "key": "99990080",
-          "value": "Albania"
-        },
-        {
-          "key": "99990290",
-          "value": "Caribbean"
-        },
-        {
-          "key": "99990320",
-          "value": "Argentina"
-        },
-        {
-          "key": "99990360",
-          "value": "Australia"
-        },
-        {
-          "key": "99990400",
-          "value": "Austria"
-        },
-        {
-          "key": "99990500",
-          "value": "Bangladesh"
-        },
-        {
-          "key": "99990560",
-          "value": "Belgium"
-        },
-        {
-          "key": "99990600",
-          "value": "Bermuda"
-        },
-        {
-          "key": "99990700",
-          "value": "Bosnia-Herzegovina"
-        },
-        {
-          "key": "99990760",
-          "value": "Brazil"
-        },
-        {
-          "key": "99991000",
-          "value": "Bulgaria"
-        },
-        {
-          "key": "99991040",
-          "value": "Myanmar (Burma)"
-        },
-        {
-          "key": "99991120",
-          "value": "Belarus"
-        },
-        {
-          "key": "99991240",
-          "value": "Canada"
-        },
-        {
-          "key": "99991440",
-          "value": "Sri Lanka"
-        },
-        {
-          "key": "99991490",
-          "value": "Ex-Yugoslavia"
-        },
-        {
-          "key": "99991510",
-          "value": "An East-European country"
-        },
-        {
-          "key": "99991560",
-          "value": "China"
-        },
-        {
-          "key": "99991840",
-          "value": "Cook Islands"
-        },
-        {
-          "key": "99991910",
-          "value": "Croatia"
-        },
-        {
-          "key": "99992030",
-          "value": "Czech Republic"
-        },
-        {
-          "key": "99992080",
-          "value": "Denmark"
-        },
-        {
-          "key": "99992330",
-          "value": "Estonia"
-        },
-        {
-          "key": "99992420",
-          "value": "Fiji"
-        },
-        {
-          "key": "99992460",
-          "value": "Finland"
-        },
-        {
-          "key": "99992500",
-          "value": "France"
-        },
-        {
-          "key": "99992680",
-          "value": "Georgia"
-        },
-        {
-          "key": "99992760",
-          "value": "Germany"
-        },
-        {
-          "key": "99993000",
-          "value": "Greece"
-        },
-        {
-          "key": "99993440",
-          "value": "Hong Kong"
-        },
-        {
-          "key": "99993480",
-          "value": "Hungary"
-        },
-        {
-          "key": "99993520",
-          "value": "Iceland"
-        },
-        {
-          "key": "99993560",
-          "value": "India"
-        },
-        {
-          "key": "99993600",
-          "value": "Indonesia"
-        },
-        {
-          "key": "99993640",
-          "value": "Iran"
-        },
-        {
-          "key": "99993680",
-          "value": "Iraq"
-        },
-        {
-          "key": "99993720",
-          "value": "Ireland"
-        },
-        {
-          "key": "99993800",
-          "value": "Italy"
-        },
-        {
-          "key": "99993880",
-          "value": "Jamaica"
-        },
-        {
-          "key": "99993920",
-          "value": "Japan"
-        },
-        {
-          "key": "99994000",
-          "value": "Jordan"
-        },
-        {
-          "key": "99994100",
-          "value": "Korea"
-        },
-        {
-          "key": "99994220",
-          "value": "Lebanon"
-        },
-        {
-          "key": "99994280",
-          "value": "Latvia"
-        },
-        {
-          "key": "99994340",
-          "value": "Libya"
-        },
-        {
-          "key": "99994400",
-          "value": "Lithuania"
-        },
-        {
-          "key": "99994420",
-          "value": "Luxembourg"
-        },
-        {
-          "key": "99994460",
-          "value": "Macau"
-        },
-        {
-          "key": "99994580",
-          "value": "Malaysia"
-        },
-        {
-          "key": "99994840",
-          "value": "Mexico"
-        },
-        {
-          "key": "99995160",
-          "value": "Namibia"
-        },
-        {
-          "key": "99995280",
-          "value": "Netherlands"
-        },
-        {
-          "key": "99995540",
-          "value": "New Zealand"
-        },
-        {
-          "key": "99995660",
-          "value": "Nigeria"
-        },
-        {
-          "key": "99995780",
-          "value": "Norway"
-        },
-        {
-          "key": "99995860",
-          "value": "Pakistan"
-        },
-        {
-          "key": "99996080",
-          "value": "Philippines"
-        },
-        {
-          "key": "99996160",
-          "value": "Poland"
-        },
-        {
-          "key": "99996200",
-          "value": "Portugal"
-        },
-        {
-          "key": "99996420",
-          "value": "Romania"
-        },
-        {
-          "key": "99996430",
-          "value": "Russia"
-        },
-        {
-          "key": "99996820",
-          "value": "Saudi Arabia"
-        },
-        {
-          "key": "99997030",
-          "value": "Slovakia"
-        },
-        {
-          "key": "99997040",
-          "value": "Vietnam"
-        },
-        {
-          "key": "99997050",
-          "value": "Slowenia"
-        },
-        {
-          "key": "99997100",
-          "value": "South Africa"
-        },
-        {
-          "key": "99997160",
-          "value": "Zimbabwe"
-        },
-        {
-          "key": "99997240",
-          "value": "Spain"
-        },
-        {
-          "key": "99997520",
-          "value": "Sweden"
-        },
-        {
-          "key": "99997560",
-          "value": "Switzerland"
-        },
-        {
-          "key": "99997640",
-          "value": "Thailand"
-        },
-        {
-          "key": "99997760",
-          "value": "Tonga"
-        },
-        {
-          "key": "99997880",
-          "value": "Tunisia"
-        },
-        {
-          "key": "99997920",
-          "value": "Turkey"
-        },
-        {
-          "key": "99998040",
-          "value": "Ukraine"
-        },
-        {
-          "key": "99998070",
-          "value": "Macedonia"
-        },
-        {
-          "key": "99998180",
-          "value": "Egypt"
-        },
-        {
-          "key": "99998260",
-          "value": "United Kingdom"
-        },
-        {
-          "key": "99998340",
-          "value": "Tanzania"
-        },
-        {
-          "key": "99998400",
-          "value": "United States"
-        },
-        {
-          "key": "99998580",
-          "value": "Uruguay"
-        },
-        {
-          "key": "99998820",
-          "value": "Samoa"
-        },
-        {
-          "key": "99998910",
-          "value": "Yugoslavia"
-        },
-        {
-          "key": "99998940",
-          "value": "Zambia"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ISO code country of birth Father",
       "fixed_width_specification": "458-465",
       "Year": 2003
@@ -9946,1652 +10258,7 @@
     {
       "variable_key": "LANGN",
       "format_specifier": "A6",
-      "variable_key_value": [
-        {
-          "key": "036001",
-          "value": "AUS: English"
-        },
-        {
-          "key": "036002",
-          "value": "AUS: Indigenous Australian languages"
-        },
-        {
-          "key": "036003",
-          "value": "AUS: Italian"
-        },
-        {
-          "key": "036004",
-          "value": "AUS: Greek"
-        },
-        {
-          "key": "036005",
-          "value": "AUS: Cantonese"
-        },
-        {
-          "key": "036006",
-          "value": "AUS: Mandarin"
-        },
-        {
-          "key": "036007",
-          "value": "AUS: Arabic"
-        },
-        {
-          "key": "036008",
-          "value": "AUS: Vietnamese"
-        },
-        {
-          "key": "036009",
-          "value": "AUS: German"
-        },
-        {
-          "key": "036010",
-          "value": "AUS: Spanish"
-        },
-        {
-          "key": "036011",
-          "value": "AUS: Tagalog (Philippines)"
-        },
-        {
-          "key": "036012",
-          "value": "AUS: Other languages"
-        },
-        {
-          "key": "036097",
-          "value": "AUS: N/A"
-        },
-        {
-          "key": "036098",
-          "value": "AUS: Invalid"
-        },
-        {
-          "key": "036099",
-          "value": "AUS: Missing"
-        },
-        {
-          "key": "040001",
-          "value": "AUT: German"
-        },
-        {
-          "key": "040002",
-          "value": "AUT: Turkish"
-        },
-        {
-          "key": "040003",
-          "value": "AUT: Serbo-Croat"
-        },
-        {
-          "key": "040004",
-          "value": "AUT: Romanian"
-        },
-        {
-          "key": "040005",
-          "value": "AUT: Polish"
-        },
-        {
-          "key": "040006",
-          "value": "AUT: Hungarian"
-        },
-        {
-          "key": "040007",
-          "value": "AUT: Albanian"
-        },
-        {
-          "key": "040008",
-          "value": "AUT: Czech"
-        },
-        {
-          "key": "040009",
-          "value": "AUT: Slovak"
-        },
-        {
-          "key": "040010",
-          "value": "AUT: Slovenian"
-        },
-        {
-          "key": "040011",
-          "value": "AUT: Other languages"
-        },
-        {
-          "key": "040097",
-          "value": "AUT: N/A"
-        },
-        {
-          "key": "040098",
-          "value": "AUT: Invalid"
-        },
-        {
-          "key": "040099",
-          "value": "AUT: Missing"
-        },
-        {
-          "key": "056101",
-          "value": "BEL (Fl.): Dutch"
-        },
-        {
-          "key": "056102",
-          "value": "BEL (Fl.): French"
-        },
-        {
-          "key": "056103",
-          "value": "BEL (Fl.): German"
-        },
-        {
-          "key": "056104",
-          "value": "BEL (Fl.): Flemish dialect"
-        },
-        {
-          "key": "056105",
-          "value": "BEL (Fl.): English"
-        },
-        {
-          "key": "056106",
-          "value": "BEL (Fl.): Other EU languages"
-        },
-        {
-          "key": "056107",
-          "value": "BEL (Fl.): Arabic"
-        },
-        {
-          "key": "056108",
-          "value": "BEL (Fl.): Turkish"
-        },
-        {
-          "key": "056109",
-          "value": "BEL (Fl.): Eastern European languages"
-        },
-        {
-          "key": "056110",
-          "value": "BEL (Fl.): Other languages"
-        },
-        {
-          "key": "056197",
-          "value": "BEL (Fl.): N/A"
-        },
-        {
-          "key": "056198",
-          "value": "BEL (Fl.): Invalid"
-        },
-        {
-          "key": "056199",
-          "value": "BEL (Fl.): Missing"
-        },
-        {
-          "key": "056201",
-          "value": "BEL (Fr.): French"
-        },
-        {
-          "key": "056202",
-          "value": "BEL (Fr.): Dutch"
-        },
-        {
-          "key": "056203",
-          "value": "BEL (Fr.): German"
-        },
-        {
-          "key": "056204",
-          "value": "BEL (Fr.): Wallon"
-        },
-        {
-          "key": "056205",
-          "value": "BEL (Fr.): English"
-        },
-        {
-          "key": "056206",
-          "value": "BEL (Fr.): Other EU languages"
-        },
-        {
-          "key": "056207",
-          "value": "BEL (Fr.): Arabic"
-        },
-        {
-          "key": "056208",
-          "value": "BEL (Fr.): Turkish"
-        },
-        {
-          "key": "056209",
-          "value": "BEL (Fr.): Eastern European languages"
-        },
-        {
-          "key": "056210",
-          "value": "BEL (Fr.): Other languages"
-        },
-        {
-          "key": "056297",
-          "value": "BEL (Fr.): N/A"
-        },
-        {
-          "key": "056298",
-          "value": "BEL (Fr.): Invalid"
-        },
-        {
-          "key": "056299",
-          "value": "BEL (Fr.): Missing"
-        },
-        {
-          "key": "056301",
-          "value": "BEL (German): German"
-        },
-        {
-          "key": "056302",
-          "value": "BEL (German): French"
-        },
-        {
-          "key": "056303",
-          "value": "BEL (German): Dutch"
-        },
-        {
-          "key": "056304",
-          "value": "BEL (German): Wallon"
-        },
-        {
-          "key": "056305",
-          "value": "BEL (German): English"
-        },
-        {
-          "key": "056306",
-          "value": "BEL (German): Other EU languages"
-        },
-        {
-          "key": "056307",
-          "value": "BEL (German): Arabic"
-        },
-        {
-          "key": "056309",
-          "value": "BEL (German): Eastern European languages"
-        },
-        {
-          "key": "056398",
-          "value": "BEL (German): Invalid"
-        },
-        {
-          "key": "056399",
-          "value": "BEL (German): Missing"
-        },
-        {
-          "key": "076001",
-          "value": "BRA: Portuguese"
-        },
-        {
-          "key": "076002",
-          "value": "BRA: Other national language - indigenous"
-        },
-        {
-          "key": "076003",
-          "value": "BRA: Other languages"
-        },
-        {
-          "key": "076097",
-          "value": "BRA: N/A"
-        },
-        {
-          "key": "076098",
-          "value": "BRA: Invalid"
-        },
-        {
-          "key": "076099",
-          "value": "BRA: Missing"
-        },
-        {
-          "key": "124101",
-          "value": "CAN: English"
-        },
-        {
-          "key": "124102",
-          "value": "CAN: French"
-        },
-        {
-          "key": "124103",
-          "value": "CAN: Other languages"
-        },
-        {
-          "key": "124197",
-          "value": "CAN: N/A"
-        },
-        {
-          "key": "124198",
-          "value": "CAN: Invalid"
-        },
-        {
-          "key": "124199",
-          "value": "CAN: Missing"
-        },
-        {
-          "key": "203001",
-          "value": "CZE: Czech"
-        },
-        {
-          "key": "203002",
-          "value": "CZE: Slovak"
-        },
-        {
-          "key": "203003",
-          "value": "CZE: Romani"
-        },
-        {
-          "key": "203004",
-          "value": "CZE: Other languages"
-        },
-        {
-          "key": "203097",
-          "value": "CZE: N/A"
-        },
-        {
-          "key": "203098",
-          "value": "CZE: Invalid"
-        },
-        {
-          "key": "203099",
-          "value": "CZE: Missing"
-        },
-        {
-          "key": "208001",
-          "value": "DNK: Danish"
-        },
-        {
-          "key": "208002",
-          "value": "DNK: Turkish"
-        },
-        {
-          "key": "208003",
-          "value": "DNK: Serbo-Croatian"
-        },
-        {
-          "key": "208004",
-          "value": "DNK: Punjabi"
-        },
-        {
-          "key": "208005",
-          "value": "DNK: Urdu"
-        },
-        {
-          "key": "208006",
-          "value": "DNK: Arabic"
-        },
-        {
-          "key": "208007",
-          "value": "DNK: Other languages"
-        },
-        {
-          "key": "208097",
-          "value": "DNK: N/A"
-        },
-        {
-          "key": "208098",
-          "value": "DNK: Invalid"
-        },
-        {
-          "key": "208099",
-          "value": "DNK: Missing"
-        },
-        {
-          "key": "246001",
-          "value": "FIN: Finnish"
-        },
-        {
-          "key": "246002",
-          "value": "FIN: Swedish"
-        },
-        {
-          "key": "246003",
-          "value": "FIN: Sami"
-        },
-        {
-          "key": "246004",
-          "value": "FIN: Romani"
-        },
-        {
-          "key": "246005",
-          "value": "FIN: Russian"
-        },
-        {
-          "key": "246006",
-          "value": "FIN: Estonian"
-        },
-        {
-          "key": "246007",
-          "value": "FIN: Other language"
-        },
-        {
-          "key": "246097",
-          "value": "FIN: N/A"
-        },
-        {
-          "key": "246098",
-          "value": "FIN: Invalid"
-        },
-        {
-          "key": "246099",
-          "value": "FIN: Missing"
-        },
-        {
-          "key": "250001",
-          "value": "FRA: French"
-        },
-        {
-          "key": "250002",
-          "value": "FRA: Other national dialects or languages"
-        },
-        {
-          "key": "250003",
-          "value": "FRA: Other languages"
-        },
-        {
-          "key": "250097",
-          "value": "FRA: N/A"
-        },
-        {
-          "key": "250099",
-          "value": "FRA: Missing"
-        },
-        {
-          "key": "276001",
-          "value": "DEU: German"
-        },
-        {
-          "key": "276004",
-          "value": "DEU: Bosnian"
-        },
-        {
-          "key": "276005",
-          "value": "DEU: Greek"
-        },
-        {
-          "key": "276006",
-          "value": "DEU: Italian"
-        },
-        {
-          "key": "276007",
-          "value": "DEU: Croatian"
-        },
-        {
-          "key": "276008",
-          "value": "DEU: Polish"
-        },
-        {
-          "key": "276009",
-          "value": "DEU: Russian"
-        },
-        {
-          "key": "276010",
-          "value": "DEU: Serbian"
-        },
-        {
-          "key": "276011",
-          "value": "DEU: Turkish"
-        },
-        {
-          "key": "276012",
-          "value": "DEU: Kurdish"
-        },
-        {
-          "key": "276013",
-          "value": "DEU: Other languages"
-        },
-        {
-          "key": "276097",
-          "value": "DEU: N/A"
-        },
-        {
-          "key": "276098",
-          "value": "DEU: Invalid"
-        },
-        {
-          "key": "276099",
-          "value": "DEU: Missing"
-        },
-        {
-          "key": "300001",
-          "value": "GRC: Greek"
-        },
-        {
-          "key": "300002",
-          "value": "GRC: Albanian"
-        },
-        {
-          "key": "300003",
-          "value": "GRC: Languages of the former USSR"
-        },
-        {
-          "key": "300004",
-          "value": "GRC: Bulgarian"
-        },
-        {
-          "key": "300005",
-          "value": "GRC: Other languages"
-        },
-        {
-          "key": "300097",
-          "value": "GRC: N/A"
-        },
-        {
-          "key": "300098",
-          "value": "GRC: Invalid"
-        },
-        {
-          "key": "300099",
-          "value": "GRC: Missing"
-        },
-        {
-          "key": "344001",
-          "value": "HKG: Cantonese"
-        },
-        {
-          "key": "344002",
-          "value": "HKG: English"
-        },
-        {
-          "key": "344003",
-          "value": "HKG: Other national dialects or languages"
-        },
-        {
-          "key": "344004",
-          "value": "HKG: Other languages"
-        },
-        {
-          "key": "344097",
-          "value": "HKG: N/A"
-        },
-        {
-          "key": "344098",
-          "value": "HKG: Invalid"
-        },
-        {
-          "key": "344099",
-          "value": "HKG: Missing"
-        },
-        {
-          "key": "344298",
-          "value": "HKI: Invalid"
-        },
-        {
-          "key": "348001",
-          "value": "HUN: Hungarian"
-        },
-        {
-          "key": "348002",
-          "value": "HUN: Other languages"
-        },
-        {
-          "key": "348097",
-          "value": "HUN: N/A"
-        },
-        {
-          "key": "348098",
-          "value": "HUN: Invalid"
-        },
-        {
-          "key": "348099",
-          "value": "HUN: Missing"
-        },
-        {
-          "key": "352001",
-          "value": "ISL: Icelandic"
-        },
-        {
-          "key": "352002",
-          "value": "ISL: Other languages"
-        },
-        {
-          "key": "352097",
-          "value": "ISL: N/A"
-        },
-        {
-          "key": "352098",
-          "value": "ISL: Invalid"
-        },
-        {
-          "key": "352099",
-          "value": "ISL: Missing"
-        },
-        {
-          "key": "360001",
-          "value": "IDN: Bahasa Indonesian"
-        },
-        {
-          "key": "360002",
-          "value": "IDN: Other dialects, local languages"
-        },
-        {
-          "key": "360003",
-          "value": "IDN: Other languages"
-        },
-        {
-          "key": "360097",
-          "value": "IDN: N/A"
-        },
-        {
-          "key": "360098",
-          "value": "IDN: Invalid"
-        },
-        {
-          "key": "360099",
-          "value": "IDN: Missing"
-        },
-        {
-          "key": "372001",
-          "value": "IRL: English"
-        },
-        {
-          "key": "372002",
-          "value": "IRL: Irish"
-        },
-        {
-          "key": "372003",
-          "value": "IRL: Other languages"
-        },
-        {
-          "key": "372097",
-          "value": "IRL: N/A"
-        },
-        {
-          "key": "372098",
-          "value": "IRL: Invalid"
-        },
-        {
-          "key": "372099",
-          "value": "IRL: Missing"
-        },
-        {
-          "key": "380001",
-          "value": "ITA: Italian"
-        },
-        {
-          "key": "380002",
-          "value": "ITA: Other official languages"
-        },
-        {
-          "key": "380003",
-          "value": "ITA: National dialects"
-        },
-        {
-          "key": "380004",
-          "value": "ITA: English or another EU language"
-        },
-        {
-          "key": "380005",
-          "value": "ITA: Other languages"
-        },
-        {
-          "key": "380097",
-          "value": "ITA: N/A"
-        },
-        {
-          "key": "380098",
-          "value": "ITA: Invalid"
-        },
-        {
-          "key": "380099",
-          "value": "ITA: Missing"
-        },
-        {
-          "key": "380701",
-          "value": "ITA (German): German"
-        },
-        {
-          "key": "380702",
-          "value": "ITA (German): Other official languages"
-        },
-        {
-          "key": "380703",
-          "value": "ITA (German): National dialects"
-        },
-        {
-          "key": "380704",
-          "value": "ITA (German): English or another EU language"
-        },
-        {
-          "key": "380705",
-          "value": "ITA (German): Other languages"
-        },
-        {
-          "key": "380797",
-          "value": "ITA (German): N/A"
-        },
-        {
-          "key": "380798",
-          "value": "ITA (German): Invalid"
-        },
-        {
-          "key": "392001",
-          "value": "JPN: Japanese"
-        },
-        {
-          "key": "392002",
-          "value": "JPN: Other languages"
-        },
-        {
-          "key": "392097",
-          "value": "JPN: N/A"
-        },
-        {
-          "key": "392098",
-          "value": "JPN: Invalid"
-        },
-        {
-          "key": "392099",
-          "value": "JPN: Missing"
-        },
-        {
-          "key": "410001",
-          "value": "KOR: Korean"
-        },
-        {
-          "key": "410002",
-          "value": "KOR: Other languages"
-        },
-        {
-          "key": "410097",
-          "value": "KOR: N/A"
-        },
-        {
-          "key": "410098",
-          "value": "KOR: Invalid"
-        },
-        {
-          "key": "410099",
-          "value": "KOR: Missing"
-        },
-        {
-          "key": "428001",
-          "value": "LVA: Latvian"
-        },
-        {
-          "key": "428002",
-          "value": "LVA: Russian"
-        },
-        {
-          "key": "428003",
-          "value": "LVA: Belarusian"
-        },
-        {
-          "key": "428004",
-          "value": "LVA: Ukrainian"
-        },
-        {
-          "key": "428005",
-          "value": "LVA: Other languages"
-        },
-        {
-          "key": "428097",
-          "value": "LVA: N/A"
-        },
-        {
-          "key": "428098",
-          "value": "LVA: Invalid"
-        },
-        {
-          "key": "428099",
-          "value": "LVA: Missing"
-        },
-        {
-          "key": "438001",
-          "value": "LIE: Swiss German"
-        },
-        {
-          "key": "438002",
-          "value": "LIE: German"
-        },
-        {
-          "key": "438003",
-          "value": "LIE: French"
-        },
-        {
-          "key": "438004",
-          "value": "LIE: Swiss Italian"
-        },
-        {
-          "key": "438005",
-          "value": "LIE: Italian"
-        },
-        {
-          "key": "438006",
-          "value": "LIE: romance"
-        },
-        {
-          "key": "438007",
-          "value": "LIE: Spanish"
-        },
-        {
-          "key": "438008",
-          "value": "LIE: Portuguese"
-        },
-        {
-          "key": "438009",
-          "value": "LIE: South Slavic languages"
-        },
-        {
-          "key": "438010",
-          "value": "LIE: Albanian"
-        },
-        {
-          "key": "438011",
-          "value": "LIE: Turkish"
-        },
-        {
-          "key": "438012",
-          "value": "LIE: English"
-        },
-        {
-          "key": "438013",
-          "value": "LIE: Other languagess"
-        },
-        {
-          "key": "438098",
-          "value": "LIE: Invalid"
-        },
-        {
-          "key": "438099",
-          "value": "LIE: Missing"
-        },
-        {
-          "key": "442001",
-          "value": "LUX: German"
-        },
-        {
-          "key": "442002",
-          "value": "LUX: French"
-        },
-        {
-          "key": "442003",
-          "value": "LUX: Luxembourgian"
-        },
-        {
-          "key": "442004",
-          "value": "LUX: Portuguese"
-        },
-        {
-          "key": "442005",
-          "value": "LUX: Italian"
-        },
-        {
-          "key": "442006",
-          "value": "LUX: Yugoslavian - Serbian, Croatian, etc"
-        },
-        {
-          "key": "442007",
-          "value": "LUX: Other languages"
-        },
-        {
-          "key": "442097",
-          "value": "LUX: N/A"
-        },
-        {
-          "key": "442098",
-          "value": "LUX: Invalid"
-        },
-        {
-          "key": "442099",
-          "value": "LUX: Missing"
-        },
-        {
-          "key": "446001",
-          "value": "MAC: Cantonese"
-        },
-        {
-          "key": "446002",
-          "value": "MAC: Portugese"
-        },
-        {
-          "key": "446003",
-          "value": "MAC: Other national dialects"
-        },
-        {
-          "key": "446004",
-          "value": "MAC: English"
-        },
-        {
-          "key": "446005",
-          "value": "MAC: Other languages"
-        },
-        {
-          "key": "446098",
-          "value": "MAC: Invalid"
-        },
-        {
-          "key": "446099",
-          "value": "MAC: Missing"
-        },
-        {
-          "key": "484001",
-          "value": "MEX: Spanish"
-        },
-        {
-          "key": "484002",
-          "value": "MEX: American-Indian"
-        },
-        {
-          "key": "484003",
-          "value": "MEX: English"
-        },
-        {
-          "key": "484004",
-          "value": "MEX: French"
-        },
-        {
-          "key": "484005",
-          "value": "MEX: German"
-        },
-        {
-          "key": "484006",
-          "value": "MEX: Other languages"
-        },
-        {
-          "key": "484097",
-          "value": "MEX: N/A"
-        },
-        {
-          "key": "484098",
-          "value": "MEX: Invalid"
-        },
-        {
-          "key": "484099",
-          "value": "MEX: Missing"
-        },
-        {
-          "key": "528001",
-          "value": "NLD: Dutch"
-        },
-        {
-          "key": "528003",
-          "value": "NLD: Dutch regional languages or dialects"
-        },
-        {
-          "key": "528004",
-          "value": "NLD: Other European languages"
-        },
-        {
-          "key": "528005",
-          "value": "NLD: Other non-European languages"
-        },
-        {
-          "key": "528097",
-          "value": "NLD: N/A"
-        },
-        {
-          "key": "528098",
-          "value": "NLD: Invalid"
-        },
-        {
-          "key": "528099",
-          "value": "NLD: Missing"
-        },
-        {
-          "key": "554001",
-          "value": "NZL: English"
-        },
-        {
-          "key": "554002",
-          "value": "NZL: Te Reo Maori"
-        },
-        {
-          "key": "554003",
-          "value": "NZL: Samoan"
-        },
-        {
-          "key": "554004",
-          "value": "NZL: Tongan"
-        },
-        {
-          "key": "554005",
-          "value": "NZL: Mandarin"
-        },
-        {
-          "key": "554006",
-          "value": "NZL: Cantonese"
-        },
-        {
-          "key": "554007",
-          "value": "NZL: Hindi"
-        },
-        {
-          "key": "554008",
-          "value": "NZL: Other languages"
-        },
-        {
-          "key": "554097",
-          "value": "NZL: N/A"
-        },
-        {
-          "key": "554098",
-          "value": "NZL: Invalid"
-        },
-        {
-          "key": "554099",
-          "value": "NZL: Missing"
-        },
-        {
-          "key": "578001",
-          "value": "NOR: Norwegian"
-        },
-        {
-          "key": "578002",
-          "value": "NOR: Sami"
-        },
-        {
-          "key": "578003",
-          "value": "NOR: Swedish"
-        },
-        {
-          "key": "578004",
-          "value": "NOR: Danish"
-        },
-        {
-          "key": "578005",
-          "value": "NOR: Other languages"
-        },
-        {
-          "key": "578097",
-          "value": "NOR: N/A"
-        },
-        {
-          "key": "578098",
-          "value": "NOR: Invalid"
-        },
-        {
-          "key": "578099",
-          "value": "NOR: Missing"
-        },
-        {
-          "key": "616001",
-          "value": "POL: Polish"
-        },
-        {
-          "key": "616002",
-          "value": "POL: Other languages"
-        },
-        {
-          "key": "616099",
-          "value": "POL: Missing"
-        },
-        {
-          "key": "620001",
-          "value": "PRT: Portuguese"
-        },
-        {
-          "key": "620002",
-          "value": "PRT: Other languages"
-        },
-        {
-          "key": "620097",
-          "value": "PRT: N/A"
-        },
-        {
-          "key": "620098",
-          "value": "PRT: Invalid"
-        },
-        {
-          "key": "620099",
-          "value": "PRT: Missing"
-        },
-        {
-          "key": "643001",
-          "value": "RUS: Russian"
-        },
-        {
-          "key": "643002",
-          "value": "RUS: Other languages"
-        },
-        {
-          "key": "643097",
-          "value": "RUS: N/A"
-        },
-        {
-          "key": "643098",
-          "value": "RUS: Invalid"
-        },
-        {
-          "key": "643099",
-          "value": "RUS: Missing"
-        },
-        {
-          "key": "703001",
-          "value": "SVK: Slovak"
-        },
-        {
-          "key": "703002",
-          "value": "SVK: Hungarian"
-        },
-        {
-          "key": "703004",
-          "value": "SVK: Czech"
-        },
-        {
-          "key": "703005",
-          "value": "SVK: Other Slavonic languages"
-        },
-        {
-          "key": "703006",
-          "value": "SVK: Romani"
-        },
-        {
-          "key": "703007",
-          "value": "SVK: Other languages"
-        },
-        {
-          "key": "703097",
-          "value": "SVK: N/A"
-        },
-        {
-          "key": "703098",
-          "value": "SVK: Invalid"
-        },
-        {
-          "key": "703099",
-          "value": "SVK: Missing"
-        },
-        {
-          "key": "724001",
-          "value": "ESP: Castilian"
-        },
-        {
-          "key": "724002",
-          "value": "ESP: Catalonian"
-        },
-        {
-          "key": "724003",
-          "value": "ESP: Galician"
-        },
-        {
-          "key": "724004",
-          "value": "ESP: Valencian"
-        },
-        {
-          "key": "724005",
-          "value": "ESP: Basque"
-        },
-        {
-          "key": "724006",
-          "value": "ESP: Other languagess"
-        },
-        {
-          "key": "724097",
-          "value": "ESP: N/A"
-        },
-        {
-          "key": "724098",
-          "value": "ESP: Invalid"
-        },
-        {
-          "key": "724099",
-          "value": "ESP: Missing"
-        },
-        {
-          "key": "752001",
-          "value": "SWE: Swedish"
-        },
-        {
-          "key": "752002",
-          "value": "SWE: Finnish, Yiddish, Romani, Sami or Tornedalen"
-        },
-        {
-          "key": "752003",
-          "value": "SWE: Other languages"
-        },
-        {
-          "key": "752097",
-          "value": "SWE: N/A"
-        },
-        {
-          "key": "752098",
-          "value": "SWE: Invalid"
-        },
-        {
-          "key": "752099",
-          "value": "SWE: Missing"
-        },
-        {
-          "key": "756101",
-          "value": "CHE (French): Swiss German"
-        },
-        {
-          "key": "756102",
-          "value": "CHE (French): German"
-        },
-        {
-          "key": "756103",
-          "value": "CHE (French): French"
-        },
-        {
-          "key": "756104",
-          "value": "CHE (French): Swiss Italian"
-        },
-        {
-          "key": "756105",
-          "value": "CHE (French): Italian"
-        },
-        {
-          "key": "756106",
-          "value": "CHE (French): Romansch"
-        },
-        {
-          "key": "756107",
-          "value": "CHE (French): Spanish"
-        },
-        {
-          "key": "756108",
-          "value": "CHE (French): Portuguese"
-        },
-        {
-          "key": "756109",
-          "value": "CHE (French): South Slavic languages"
-        },
-        {
-          "key": "756110",
-          "value": "CHE (French): Albanian"
-        },
-        {
-          "key": "756111",
-          "value": "CHE (French): Turkish"
-        },
-        {
-          "key": "756112",
-          "value": "CHE (French): English"
-        },
-        {
-          "key": "756113",
-          "value": "CHE (French): Other languages"
-        },
-        {
-          "key": "756197",
-          "value": "CHE (French): N/A"
-        },
-        {
-          "key": "756198",
-          "value": "CHE (French): Invalid"
-        },
-        {
-          "key": "756199",
-          "value": "CHE (French): Missing"
-        },
-        {
-          "key": "756201",
-          "value": "CHE (German): Swiss German"
-        },
-        {
-          "key": "756202",
-          "value": "CHE (German): German"
-        },
-        {
-          "key": "756203",
-          "value": "CHE (German): French"
-        },
-        {
-          "key": "756204",
-          "value": "CHE (German): Swiss Italian"
-        },
-        {
-          "key": "756205",
-          "value": "CHE (German): Italian"
-        },
-        {
-          "key": "756206",
-          "value": "CHE (German): romance"
-        },
-        {
-          "key": "756207",
-          "value": "CHE (German): Spanish"
-        },
-        {
-          "key": "756208",
-          "value": "CHE (German): Portuguese"
-        },
-        {
-          "key": "756209",
-          "value": "CHE (German): South Slavic languages"
-        },
-        {
-          "key": "756210",
-          "value": "CHE (German): Albanian"
-        },
-        {
-          "key": "756211",
-          "value": "CHE (German): Turkish"
-        },
-        {
-          "key": "756212",
-          "value": "CHE (German): English"
-        },
-        {
-          "key": "756213",
-          "value": "CHE (German): Other languagess"
-        },
-        {
-          "key": "756297",
-          "value": "CHE (German): N/A"
-        },
-        {
-          "key": "756298",
-          "value": "CHE (German): Invalid"
-        },
-        {
-          "key": "756299",
-          "value": "CHE (German): Missing"
-        },
-        {
-          "key": "756301",
-          "value": "CHE (Italian): Swiss German"
-        },
-        {
-          "key": "756302",
-          "value": "CHE (Italian): German"
-        },
-        {
-          "key": "756303",
-          "value": "CHE (Italian): French"
-        },
-        {
-          "key": "756304",
-          "value": "CHE (Italian): Swiss Italian"
-        },
-        {
-          "key": "756305",
-          "value": "CHE (Italian): Italian"
-        },
-        {
-          "key": "756306",
-          "value": "CHE (Italian): romance"
-        },
-        {
-          "key": "756307",
-          "value": "CHE (Italian): Spanish"
-        },
-        {
-          "key": "756308",
-          "value": "CHE (Italian): Portuguese"
-        },
-        {
-          "key": "756309",
-          "value": "CHE (Italian): South Slavic languages"
-        },
-        {
-          "key": "756310",
-          "value": "CHE (Italian): Albanian"
-        },
-        {
-          "key": "756311",
-          "value": "CHE (Italian): Turkish"
-        },
-        {
-          "key": "756312",
-          "value": "CHE (Italian): English"
-        },
-        {
-          "key": "756313",
-          "value": "CHE (Italian): Other languages"
-        },
-        {
-          "key": "756397",
-          "value": "CHE (Italian): N/A"
-        },
-        {
-          "key": "756398",
-          "value": "CHE (Italian): Invalid"
-        },
-        {
-          "key": "756399",
-          "value": "CHE (Italian): Missing"
-        },
-        {
-          "key": "764001",
-          "value": "THA: Thai central"
-        },
-        {
-          "key": "764002",
-          "value": "THA: Other Thai dialects"
-        },
-        {
-          "key": "764003",
-          "value": "THA: Other languages"
-        },
-        {
-          "key": "764099",
-          "value": "THA: Missing"
-        },
-        {
-          "key": "788001",
-          "value": "TUN: Arabic"
-        },
-        {
-          "key": "788002",
-          "value": "TUN: Arabic, Tunisian dialect"
-        },
-        {
-          "key": "788003",
-          "value": "TUN: French"
-        },
-        {
-          "key": "788004",
-          "value": "TUN: Other languages"
-        },
-        {
-          "key": "788097",
-          "value": "TUN: N/A"
-        },
-        {
-          "key": "788098",
-          "value": "TUN: Invalid"
-        },
-        {
-          "key": "788099",
-          "value": "TUN: Missing"
-        },
-        {
-          "key": "792001",
-          "value": "TUR: Turkish"
-        },
-        {
-          "key": "792002",
-          "value": "TUR: Other national dialects or languages"
-        },
-        {
-          "key": "792003",
-          "value": "TUR: English"
-        },
-        {
-          "key": "792004",
-          "value": "TUR: French"
-        },
-        {
-          "key": "792005",
-          "value": "TUR: German"
-        },
-        {
-          "key": "792006",
-          "value": "TUR: Other languages"
-        },
-        {
-          "key": "792097",
-          "value": "TUR: N/A"
-        },
-        {
-          "key": "792098",
-          "value": "TUR: Invalid"
-        },
-        {
-          "key": "792099",
-          "value": "TUR: Missing"
-        },
-        {
-          "key": "826101",
-          "value": "GBR (Eng., Wales, NI): English"
-        },
-        {
-          "key": "826102",
-          "value": "GBR (Eng., Wales, NI): Irish"
-        },
-        {
-          "key": "826103",
-          "value": "GBR (Eng., Wales, NI): Ulster Scots"
-        },
-        {
-          "key": "826104",
-          "value": "GBR (Eng., Wales, NI): Welsh"
-        },
-        {
-          "key": "826105",
-          "value": "GBR (Eng., Wales, NI): Other languages"
-        },
-        {
-          "key": "826197",
-          "value": "GBR (Eng., Wales, NI): N/A"
-        },
-        {
-          "key": "826198",
-          "value": "GBR (Eng., Wales, NI): Invalid"
-        },
-        {
-          "key": "826199",
-          "value": "GBR (Eng., Wales, NI): Missing"
-        },
-        {
-          "key": "826201",
-          "value": "GBR (Scotland): English or Scots"
-        },
-        {
-          "key": "826202",
-          "value": "GBR (Scotland): Gaelic"
-        },
-        {
-          "key": "826204",
-          "value": "GBR (Scotland): Arabic"
-        },
-        {
-          "key": "826205",
-          "value": "GBR (Scotland): Bengali"
-        },
-        {
-          "key": "826206",
-          "value": "GBR (Scotland): Cantonese or Mandarin"
-        },
-        {
-          "key": "826207",
-          "value": "GBR (Scotland): Gujarati"
-        },
-        {
-          "key": "826208",
-          "value": "GBR (Scotland): Hindi"
-        },
-        {
-          "key": "826209",
-          "value": "GBR (Scotland): Malay"
-        },
-        {
-          "key": "826210",
-          "value": "GBR (Scotland): Punjabi"
-        },
-        {
-          "key": "826211",
-          "value": "GBR (Scotland): Urdu"
-        },
-        {
-          "key": "826212",
-          "value": "GBR (Scotland): Other European languages"
-        },
-        {
-          "key": "826213",
-          "value": "GBR (Scotland): Other non-European languages"
-        },
-        {
-          "key": "826297",
-          "value": "GBR (Scotland): N/A"
-        },
-        {
-          "key": "826298",
-          "value": "GBR (Scotland): Invalid"
-        },
-        {
-          "key": "826299",
-          "value": "GBR (Scotland): Missing"
-        },
-        {
-          "key": "840001",
-          "value": "USA: English"
-        },
-        {
-          "key": "840002",
-          "value": "USA: Spanish"
-        },
-        {
-          "key": "840003",
-          "value": "USA: Other languages"
-        },
-        {
-          "key": "840097",
-          "value": "USA: N/A"
-        },
-        {
-          "key": "840098",
-          "value": "USA: Invalid"
-        },
-        {
-          "key": "840099",
-          "value": "USA: Missing"
-        },
-        {
-          "key": "858001",
-          "value": "URY: Spanish"
-        },
-        {
-          "key": "858002",
-          "value": "URY: Portuguese"
-        },
-        {
-          "key": "858003",
-          "value": "URY: English"
-        },
-        {
-          "key": "858004",
-          "value": "URY: Other languages"
-        },
-        {
-          "key": "858097",
-          "value": "URY: N/A"
-        },
-        {
-          "key": "858098",
-          "value": "URY: Invalid"
-        },
-        {
-          "key": "858099",
-          "value": "URY: Missing"
-        },
-        {
-          "key": "891001",
-          "value": "YUG: Serbian"
-        },
-        {
-          "key": "891002",
-          "value": "YUG: Hungarian"
-        },
-        {
-          "key": "891003",
-          "value": "YUG: Albanian"
-        },
-        {
-          "key": "891004",
-          "value": "YUG: Romanian"
-        },
-        {
-          "key": "891005",
-          "value": "YUG: Slovak"
-        },
-        {
-          "key": "891006",
-          "value": "YUG: Other languages"
-        },
-        {
-          "key": "891097",
-          "value": "YUG: N/A"
-        },
-        {
-          "key": "891098",
-          "value": "YUG: Invalid"
-        },
-        {
-          "key": "891099",
-          "value": "YUG: Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Language at home, national",
       "fixed_width_specification": "468-473",
       "Year": 2003
@@ -11842,12 +10509,7 @@
     {
       "variable_key": "ANXMAT",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Mathematics anxiety (WLE)",
       "fixed_width_specification": "595-603",
       "Year": 2003
@@ -11855,12 +10517,7 @@
     {
       "variable_key": "SCMAT",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Mathematics self-concept (WLE)",
       "fixed_width_specification": "604-612",
       "Year": 2003
@@ -11868,12 +10525,7 @@
     {
       "variable_key": "CSTRAT",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Control strategies (WLE)",
       "fixed_width_specification": "613-621",
       "Year": 2003
@@ -11881,12 +10533,7 @@
     {
       "variable_key": "ELAB",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Elaboration strategies (WLE)",
       "fixed_width_specification": "622-630",
       "Year": 2003
@@ -11894,12 +10541,7 @@
     {
       "variable_key": "MEMOR",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Memorisation strategies (WLE)",
       "fixed_width_specification": "631-639",
       "Year": 2003
@@ -11907,12 +10549,7 @@
     {
       "variable_key": "COMPLRN",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Competitive learning (WLE)",
       "fixed_width_specification": "640-648",
       "Year": 2003
@@ -11920,12 +10557,7 @@
     {
       "variable_key": "COOPLRN",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Co-operative learning (WLE)",
       "fixed_width_specification": "649-657",
       "Year": 2003
@@ -11933,12 +10565,7 @@
     {
       "variable_key": "TEACHSUP",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Teacher support in maths lessons (WLE)",
       "fixed_width_specification": "658-666",
       "Year": 2003
@@ -11946,12 +10573,7 @@
     {
       "variable_key": "DISCLIM",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Disciplinary climate in maths lessons (WLE)",
       "fixed_width_specification": "667-675",
       "Year": 2003
@@ -11959,12 +10581,7 @@
     {
       "variable_key": "INTUSE",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ICT: Internet/entertainment use (WLE)",
       "fixed_width_specification": "676-684",
       "Year": 2003
@@ -11972,12 +10589,7 @@
     {
       "variable_key": "PRGUSE",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ICT: Programs/software use (WLE)",
       "fixed_width_specification": "685-693",
       "Year": 2003
@@ -11985,12 +10597,7 @@
     {
       "variable_key": "ROUTCONF",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ICT: Confidence in routine tasks (WLE)",
       "fixed_width_specification": "694-702",
       "Year": 2003
@@ -11998,12 +10605,7 @@
     {
       "variable_key": "INTCONF",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ICT: Confidence in internet tasks (WLE)",
       "fixed_width_specification": "703-711",
       "Year": 2003
@@ -12011,12 +10613,7 @@
     {
       "variable_key": "HIGHCONF",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ICT: Confidence in high-level tasks (WLE)",
       "fixed_width_specification": "712-720",
       "Year": 2003
@@ -12024,12 +10621,7 @@
     {
       "variable_key": "ATTCOMP",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "999.0000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "ICT: Attitudes towards computers (WLE)",
       "fixed_width_specification": "721-729",
       "Year": 2003
@@ -12037,12 +10629,7 @@
     {
       "variable_key": "ESCS",
       "format_specifier": "F10.5",
-      "variable_key_value": [
-        {
-          "key": "999.00000",
-          "value": "Missing"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Index of Socio-Economic and Cultural Status",
       "fixed_width_specification": "730-739",
       "Year": 2003
@@ -12167,12 +10754,7 @@
     {
       "variable_key": "PV5MATH1",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Space and Shape",
       "fixed_width_specification": "821-829",
       "Year": 2003
@@ -12180,12 +10762,7 @@
     {
       "variable_key": "PV1MATH2",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math- Change and Relationships",
       "fixed_width_specification": "830-838",
       "Year": 2003
@@ -12193,12 +10770,7 @@
     {
       "variable_key": "PV2MATH2",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math- Change and Relationships",
       "fixed_width_specification": "839-847",
       "Year": 2003
@@ -12206,12 +10778,7 @@
     {
       "variable_key": "PV3MATH2",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math- Change and Relationships",
       "fixed_width_specification": "848-856",
       "Year": 2003
@@ -12219,12 +10786,7 @@
     {
       "variable_key": "PV4MATH2",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math- Change and Relationships",
       "fixed_width_specification": "857-865",
       "Year": 2003
@@ -12297,12 +10859,7 @@
     {
       "variable_key": "PV5MATH3",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Uncertainty",
       "fixed_width_specification": "911-919",
       "Year": 2003
@@ -12310,12 +10867,7 @@
     {
       "variable_key": "PV1MATH4",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Quantity",
       "fixed_width_specification": "920-928",
       "Year": 2003
@@ -12323,12 +10875,7 @@
     {
       "variable_key": "PV2MATH4",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Quantity",
       "fixed_width_specification": "929-937",
       "Year": 2003
@@ -12336,12 +10883,7 @@
     {
       "variable_key": "PV3MATH4",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Quantity",
       "fixed_width_specification": "938-946",
       "Year": 2003
@@ -12349,12 +10891,7 @@
     {
       "variable_key": "PV4MATH4",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Quantity",
       "fixed_width_specification": "947-955",
       "Year": 2003
@@ -12362,12 +10899,7 @@
     {
       "variable_key": "PV5MATH4",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in math - Quantity",
       "fixed_width_specification": "956-964",
       "Year": 2003
@@ -12375,12 +10907,7 @@
     {
       "variable_key": "PV1READ",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in reading",
       "fixed_width_specification": "965-973",
       "Year": 2003
@@ -12388,12 +10915,7 @@
     {
       "variable_key": "PV2READ",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in reading",
       "fixed_width_specification": "974-982",
       "Year": 2003
@@ -12401,12 +10923,7 @@
     {
       "variable_key": "PV3READ",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in reading",
       "fixed_width_specification": "983-991",
       "Year": 2003
@@ -12414,12 +10931,7 @@
     {
       "variable_key": "PV4READ",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "Plausible value in reading",
       "fixed_width_specification": "992-1000",
       "Year": 2003
@@ -12614,23 +11126,6 @@
       "Year": 2003
     },
     {
-      "variable_key": "UH",
-      "format_specifier": "F1",
-      "variable_key_value": [
-        {
-          "key": "0",
-          "value": "Two-hour booklet"
-        },
-        {
-          "key": "1",
-          "value": "One-hour booklet"
-        }
-      ],
-      "variable_description": "One-hour booklet indicator",
-      "fixed_width_specification": "1126-1126",
-      "Year": 2003
-    },
-    {
       "variable_key": "W_FSTR1",
       "format_specifier": "F9.4",
       "variable_key_value": [
@@ -12698,12 +11193,7 @@
     {
       "variable_key": "W_FSTR6",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "BRR replicate",
       "fixed_width_specification": "1172-1180",
       "Year": 2003
@@ -12711,12 +11201,7 @@
     {
       "variable_key": "W_FSTR7",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "BRR replicate",
       "fixed_width_specification": "1181-1189",
       "Year": 2003
@@ -12724,12 +11209,7 @@
     {
       "variable_key": "W_FSTR8",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "BRR replicate",
       "fixed_width_specification": "1190-1198",
       "Year": 2003
@@ -12737,12 +11217,7 @@
     {
       "variable_key": "W_FSTR9",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "BRR replicate",
       "fixed_width_specification": "1199-1207",
       "Year": 2003
@@ -12750,12 +11225,7 @@
     {
       "variable_key": "W_FSTR10",
       "format_specifier": "F9.4",
-      "variable_key_value": [
-        {
-          "key": "9997.0000",
-          "value": "N/A"
-        }
-      ],
+      "variable_key_value": null,
       "variable_description": "BRR replicate",
       "fixed_width_specification": "1208-1216",
       "Year": 2003
@@ -12769,7 +11239,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate variable W_FSTR11",
       "fixed_width_specification": "1217-1225",
       "Year": 2003
     },
@@ -12782,7 +11252,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate variable W_FSTR12",
       "fixed_width_specification": "1226-1234",
       "Year": 2003
     },
@@ -12795,7 +11265,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate variable W_FSTR13",
       "fixed_width_specification": "1235-1243",
       "Year": 2003
     },
@@ -12808,7 +11278,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate variable W_FSTR14",
       "fixed_width_specification": "1244-1252",
       "Year": 2003
     },
@@ -12821,7 +11291,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate variable W_FSTR15",
       "fixed_width_specification": "1253-1261",
       "Year": 2003
     },
@@ -12834,7 +11304,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate W_FSTR16",
       "fixed_width_specification": "1262-1270",
       "Year": 2003
     },
@@ -12847,7 +11317,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate W_FSTR17",
       "fixed_width_specification": "1271-1279",
       "Year": 2003
     },
@@ -12860,7 +11330,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate W_FSTR18",
       "fixed_width_specification": "1280-1288",
       "Year": 2003
     },
@@ -12873,7 +11343,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate W_FSTR19",
       "fixed_width_specification": "1289-1297",
       "Year": 2003
     },
@@ -12899,7 +11369,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR21",
+      "variable_description": "BRR replicate variable W_FSTR21",
       "fixed_width_specification": "1307-1315",
       "Year": 2003
     },
@@ -12912,7 +11382,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR22",
+      "variable_description": "BRR replicate variable W_FSTR22",
       "fixed_width_specification": "1316-1324",
       "Year": 2003
     },
@@ -12925,7 +11395,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR23",
+      "variable_description": "BRR replicate variable W_FSTR23",
       "fixed_width_specification": "1325-1333",
       "Year": 2003
     },
@@ -12938,7 +11408,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR24",
+      "variable_description": "BRR replicate variable W_FSTR24",
       "fixed_width_specification": "1334-1342",
       "Year": 2003
     },
@@ -12951,7 +11421,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR25",
+      "variable_description": "BRR replicate variable W_FSTR25",
       "fixed_width_specification": "1343-1351",
       "Year": 2003
     },
@@ -12964,7 +11434,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR26",
+      "variable_description": "BRR replicate",
       "fixed_width_specification": "1352-1360",
       "Year": 2003
     },
@@ -12977,7 +11447,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR27",
+      "variable_description": "BRR replicate",
       "fixed_width_specification": "1361-1369",
       "Year": 2003
     },
@@ -12990,7 +11460,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR28",
+      "variable_description": "BRR replicate",
       "fixed_width_specification": "1370-1378",
       "Year": 2003
     },
@@ -13003,7 +11473,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR29",
+      "variable_description": "BRR replicate",
       "fixed_width_specification": "1379-1387",
       "Year": 2003
     },
@@ -13016,7 +11486,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR30",
+      "variable_description": "BRR replicate",
       "fixed_width_specification": "1388-1396",
       "Year": 2003
     },
@@ -13029,7 +11499,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR31",
+      "variable_description": "BRR replicate variable W_FSTR31",
       "fixed_width_specification": "1397-1405",
       "Year": 2003
     },
@@ -13042,7 +11512,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR32",
+      "variable_description": "BRR replicate variable W_FSTR32",
       "fixed_width_specification": "1406-1414",
       "Year": 2003
     },
@@ -13055,7 +11525,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR33",
+      "variable_description": "BRR replicate variable W_FSTR33",
       "fixed_width_specification": "1415-1423",
       "Year": 2003
     },
@@ -13068,7 +11538,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR34",
+      "variable_description": "BRR replicate variable W_FSTR34",
       "fixed_width_specification": "1424-1432",
       "Year": 2003
     },
@@ -13081,7 +11551,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate W_FSTR35",
+      "variable_description": "BRR replicate variable W_FSTR35",
       "fixed_width_specification": "1433-1441",
       "Year": 2003
     },
@@ -13146,7 +11616,7 @@
           "value": "N/A"
         }
       ],
-      "variable_description": "BRR replicate",
+      "variable_description": "BRR replicate W_FSTR40",
       "fixed_width_specification": "1478-1486",
       "Year": 2003
     },
@@ -13752,7 +12222,7 @@
         },
         {
           "key": "04012",
-          "value": "Austria: BMS (gewerblich-technisch-kunstgewerbl.)"
+          "value": "Austria: BMS (gewer l ch-techn sch-kunstgewerbl.)"
         },
         {
           "key": "04013",
@@ -14640,7 +13110,7 @@
         },
         {
           "key": "39203",
-          "value": "Japan: Private : Private & Academic Course"
+          "value": "Japan: Private & Academic Course"
         },
         {
           "key": "39204",
@@ -15869,6 +14339,23 @@
       ],
       "variable_description": "Stratum",
       "fixed_width_specification": "1851-1855",
+      "Year": 2003
+    },
+    {
+      "variable_key": "UH",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "0",
+          "value": "Two-hour booklet"
+        },
+        {
+          "key": "1",
+          "value": "One-hour booklet"
+        }
+      ],
+      "variable_description": "One-hour booklet indicator",
+      "fixed_width_specification": "1126-1126",
       "Year": 2003
     }
   ]

@@ -7,3 +7,19 @@ tasks:
     schema_file: llamaconfig.json
     school_file: 2003school.pdf
     student_file: 2003student.pdf
+  - year: 2006
+    schema_file: llamaconfig.json
+    school_file: 2006school.pdf
+    student_file: 2006student.pdf
+  - year: 2009
+    schema_file: llamaconfig.json
+    school_file: 2009school.pdf
+    student_file: 2009student.pdf
+  - year: 2012
+    schema_file: llamaconfig.json
+    school_file: 2012school.pdf
+    student_file: 2012student.pdf
+  - year: 2015
+    schema_file: llamaconfig.json
+    school_file: 2015school.pdf
+    student_file: 2015student.pdf
