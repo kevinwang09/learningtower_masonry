@@ -70,8 +70,8 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2015,computer_n,ST012Q06NA,none1one2two3threemore4,,How many computers,factor,
 2015,car,ST012Q02TA,none1one2two3threemore4,,How many cars,factor,
 2015,book,ST013Q01TA,book_levels_6,,How many books at home,factor,
-2015,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,
-2015,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,
+2015,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2015,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
 2012,country,CNT,as.factor,,Country three character,factor,
 2012,school_id,SCHOOLID,as.character,,school ID,character,
 2012,student_id,StIDStd,as.character,,Student ID,character,

@@ -289,6 +289,7 @@
           "value": "Argentina (Ciudad Aut\u00f3noma de Buenos)"
         }
       ],
+      "na_values": [],
       "source_page": "2",
       "Year": 2015
     },
@@ -579,6 +580,7 @@
           "value": "Vietnam"
         }
       ],
+      "na_values": [],
       "source_page": "74",
       "Year": 2015
     },
@@ -587,7 +589,8 @@
       "variable_description": "Intl. School ID",
       "format_specifier": "8.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "146",
       "Year": 2015
     },
@@ -596,7 +599,8 @@
       "variable_description": "PISA Assessment Cycle (2 digits + 2 character Assessment type - MS\\FT)",
       "format_specifier": "$4.",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "148",
       "Year": 2015
     },
@@ -887,6 +891,7 @@
           "value": "Uruguay"
         }
       ],
+      "na_values": [],
       "source_page": "150",
       "Year": 2015
     },
@@ -1357,6 +1362,7 @@
           "value": "B-S-J-G (China)"
         }
       ],
+      "na_values": [],
       "source_page": "222",
       "Year": 2015
     },
@@ -3217,14 +3223,6 @@
         {
           "key": "GBR0005",
           "value": "QSC - stratum 05: pub fund-highest"
-        },
-        {
-          "key": "GBR0006",
-          "value": "QSC - stratum 06: pub fund-missing"
-        },
-        {
-          "key": "GBR0012",
-          "value": "QSC - stratum 12: indep-missing"
         },
         {
           "key": "GBR1101",
@@ -5691,6 +5689,10 @@
           "value": "VNM - stratum 17: Southern Vietnam,<50% public funding,Rural"
         }
       ],
+      "na_values": [
+        "GBR0006",
+        "GBR0012"
+      ],
       "source_page": "339",
       "Year": 2015
     },
@@ -6061,6 +6063,7 @@
           "value": "B-S-J-G (China)"
         }
       ],
+      "na_values": [],
       "source_page": "1422",
       "Year": 2015
     },
@@ -6077,11 +6080,10 @@
         {
           "key": "1",
           "value": "Yes"
-        },
-        {
-          "key": "2",
-          "value": "Not Applicable"
         }
+      ],
+      "na_values": [
+        "2"
       ],
       "source_page": "1514",
       "Year": 2015
@@ -6101,6 +6103,7 @@
           "value": "Computer"
         }
       ],
+      "na_values": [],
       "source_page": "1519",
       "Year": 2015
     },
@@ -6289,11 +6292,10 @@
         {
           "key": "622",
           "value": "Serb (Yekavian)"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "SYSTEM MISSING"
       ],
       "source_page": "1523",
       "Year": 2015
@@ -6323,19 +6325,12 @@
         {
           "key": "5",
           "value": "A large city (with over 1 000 000 people)"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1571",
       "Year": 2015
@@ -6345,7 +6340,8 @@
       "variable_description": "As at <February 1, 2014>, what was the total school enrolment (number of students)? Number of boys:",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1581",
       "Year": 2015
     },
@@ -6354,7 +6350,8 @@
       "variable_description": "As at <February 1, 2014>, what was the total school enrolment (number of students)? Number of girls:",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1583",
       "Year": 2015
     },
@@ -6399,23 +6396,13 @@
         {
           "key": "9",
           "value": "More than 50 students"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1585",
       "Year": 2015
@@ -6425,7 +6412,8 @@
       "variable_description": "Student-comp ratio in <national modal grade for 15-year-olds>. Total num.\\stud. <national modal grade for 15-year-old",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1600",
       "Year": 2015
     },
@@ -6434,7 +6422,8 @@
       "variable_description": "Student-comp ratio in <national modal grade for 15-year-olds>. How many comps are avail for students for ed",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1602",
       "Year": 2015
     },
@@ -6443,7 +6432,8 @@
       "variable_description": "Student-comp ratio in <national modal grade for 15-year-olds>. How many comps are connected to Internet\\World",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1604",
       "Year": 2015
     },
@@ -6452,7 +6442,8 @@
       "variable_description": "Student-comp ratio in <national modal grade for 15-year-olds>. How many comps are portable (e.g. laptop, tablet)?",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1606",
       "Year": 2015
     },
@@ -6461,7 +6452,8 @@
       "variable_description": "Total No. of interactive whiteboards in the school altogether",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1608",
       "Year": 2015
     },
@@ -6470,7 +6462,8 @@
       "variable_description": "Total No. of data projectors in the school altogether",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1610",
       "Year": 2015
     },
@@ -6479,7 +6472,8 @@
       "variable_description": "Total No. of computers with internet connection available for teachers in the school.",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "1612",
       "Year": 2015
     },
@@ -6496,15 +6490,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1614",
       "Year": 2015
@@ -6522,19 +6512,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1620",
       "Year": 2015
@@ -6552,15 +6535,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1627",
       "Year": 2015
@@ -6578,19 +6557,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1633",
       "Year": 2015
@@ -6608,15 +6580,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1640",
       "Year": 2015
@@ -6634,19 +6602,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1646",
       "Year": 2015
@@ -6664,15 +6625,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1653",
       "Year": 2015
@@ -6690,19 +6647,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1659",
       "Year": 2015
@@ -6720,15 +6670,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1666",
       "Year": 2015
@@ -6746,15 +6692,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1672",
       "Year": 2015
@@ -7210,6 +7152,7 @@
           "value": "N\\A"
         }
       ],
+      "na_values": [],
       "source_page": "1678",
       "Year": 2015
     },
@@ -7226,23 +7169,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1792",
       "Year": 2015
@@ -7260,15 +7193,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1800",
       "Year": 2015
@@ -7286,23 +7215,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1806",
       "Year": 2015
@@ -7320,19 +7239,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1814",
       "Year": 2015
@@ -7350,15 +7262,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1821",
       "Year": 2015
@@ -7376,19 +7284,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1827",
       "Year": 2015
@@ -7406,15 +7307,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1834",
       "Year": 2015
@@ -7432,19 +7329,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1840",
       "Year": 2015
@@ -7462,15 +7352,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1847",
       "Year": 2015
@@ -7488,15 +7374,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "1853",
       "Year": 2015
@@ -7530,19 +7412,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1859",
       "Year": 2015
@@ -7576,19 +7451,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1870",
       "Year": 2015
@@ -7622,15 +7490,11 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1881",
       "Year": 2015
@@ -7664,19 +7528,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1891",
       "Year": 2015
@@ -7710,19 +7567,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1902",
       "Year": 2015
@@ -7756,19 +7606,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1913",
       "Year": 2015
@@ -7802,15 +7645,11 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1924",
       "Year": 2015
@@ -7844,15 +7683,11 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1934",
       "Year": 2015
@@ -7886,23 +7721,13 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1944",
       "Year": 2015
@@ -7936,23 +7761,13 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1956",
       "Year": 2015
@@ -7986,23 +7801,13 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1968",
       "Year": 2015
@@ -8036,19 +7841,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1980",
       "Year": 2015
@@ -8082,19 +7880,12 @@
         {
           "key": "6",
           "value": "More than once a week"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "1991",
       "Year": 2015
@@ -8112,15 +7903,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2002",
       "Year": 2015
@@ -8138,15 +7925,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2008",
       "Year": 2015
@@ -8164,15 +7947,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2014",
       "Year": 2015
@@ -8190,19 +7969,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2020",
       "Year": 2015
@@ -8220,19 +7992,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2027",
       "Year": 2015
@@ -8250,15 +8015,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2034",
       "Year": 2015
@@ -8276,15 +8037,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2040",
       "Year": 2015
@@ -8302,15 +8059,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2046",
       "Year": 2015
@@ -8328,19 +8081,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2052",
       "Year": 2015
@@ -8358,19 +8104,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2059",
       "Year": 2015
@@ -8388,15 +8127,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2066",
       "Year": 2015
@@ -8414,15 +8149,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2072",
       "Year": 2015
@@ -8440,15 +8171,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2078",
       "Year": 2015
@@ -8466,19 +8193,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2084",
       "Year": 2015
@@ -8496,19 +8216,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2091",
       "Year": 2015
@@ -8526,15 +8239,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2098",
       "Year": 2015
@@ -8552,15 +8261,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2104",
       "Year": 2015
@@ -8578,15 +8283,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2110",
       "Year": 2015
@@ -8604,19 +8305,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2116",
       "Year": 2015
@@ -8634,19 +8328,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2123",
       "Year": 2015
@@ -8664,15 +8351,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2130",
       "Year": 2015
@@ -8690,15 +8373,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2136",
       "Year": 2015
@@ -8716,19 +8395,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2142",
       "Year": 2015
@@ -8746,19 +8418,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2149",
       "Year": 2015
@@ -8776,19 +8441,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2156",
       "Year": 2015
@@ -8806,15 +8464,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2163",
       "Year": 2015
@@ -8832,15 +8486,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2169",
       "Year": 2015
@@ -8858,15 +8508,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2175",
       "Year": 2015
@@ -8884,19 +8530,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2181",
       "Year": 2015
@@ -8914,19 +8553,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2188",
       "Year": 2015
@@ -8944,15 +8576,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2195",
       "Year": 2015
@@ -8970,15 +8598,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2201",
       "Year": 2015
@@ -8996,15 +8620,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2207",
       "Year": 2015
@@ -9022,19 +8642,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2213",
       "Year": 2015
@@ -9052,23 +8665,13 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2220",
       "Year": 2015
@@ -9086,15 +8689,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2228",
       "Year": 2015
@@ -9112,15 +8711,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2234",
       "Year": 2015
@@ -9138,15 +8733,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2240",
       "Year": 2015
@@ -9164,19 +8755,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2246",
       "Year": 2015
@@ -9194,19 +8778,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2253",
       "Year": 2015
@@ -9224,15 +8801,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2260",
       "Year": 2015
@@ -9250,15 +8823,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2266",
       "Year": 2015
@@ -9276,15 +8845,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2272",
       "Year": 2015
@@ -9302,19 +8867,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2278",
       "Year": 2015
@@ -9332,19 +8890,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2285",
       "Year": 2015
@@ -9362,15 +8913,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2292",
       "Year": 2015
@@ -9388,15 +8935,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2298",
       "Year": 2015
@@ -9414,15 +8957,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2304",
       "Year": 2015
@@ -9440,19 +8979,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2310",
       "Year": 2015
@@ -9470,19 +9002,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2317",
       "Year": 2015
@@ -9500,15 +9025,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2324",
       "Year": 2015
@@ -9526,15 +9047,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2330",
       "Year": 2015
@@ -9552,15 +9069,11 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2336",
       "Year": 2015
@@ -9578,19 +9091,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2342",
       "Year": 2015
@@ -9608,19 +9114,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2349",
       "Year": 2015
@@ -9638,19 +9137,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2356",
       "Year": 2015
@@ -9668,19 +9160,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2363",
       "Year": 2015
@@ -9698,19 +9183,12 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2370",
       "Year": 2015
@@ -9728,23 +9206,13 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2377",
       "Year": 2015
@@ -9762,23 +9230,13 @@
         {
           "key": "1",
           "value": "Checked"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2385",
       "Year": 2015
@@ -9800,19 +9258,12 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2393",
       "Year": 2015
@@ -9834,23 +9285,13 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2401",
       "Year": 2015
@@ -9872,23 +9313,13 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2410",
       "Year": 2015
@@ -9910,23 +9341,13 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2419",
       "Year": 2015
@@ -9948,19 +9369,12 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2428",
       "Year": 2015
@@ -9982,23 +9396,13 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2436",
       "Year": 2015
@@ -10020,23 +9424,13 @@
         {
           "key": "3",
           "value": "Always"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2445",
       "Year": 2015
@@ -10054,19 +9448,12 @@
         {
           "key": "2",
           "value": "A private school"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2454",
       "Year": 2015
@@ -10088,27 +9475,14 @@
         {
           "key": "3",
           "value": "A for-profit organisation"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2461",
       "Year": 2015
@@ -10118,7 +9492,8 @@
       "variable_description": "Percent. total funding for school year comes from? Government",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2471",
       "Year": 2015
     },
@@ -10127,7 +9502,8 @@
       "variable_description": "Percent. total funding for school year comes from? Student fees or school charges paid by parents",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2473",
       "Year": 2015
     },
@@ -10136,7 +9512,8 @@
       "variable_description": "Percent. total funding for school year comes from? Benefactors, donations, bequests, sponsorships, parent funraising",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2475",
       "Year": 2015
     },
@@ -10145,7 +9522,8 @@
       "variable_description": "Percent. total funding for school year comes from? Other",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2477",
       "Year": 2015
     },
@@ -10170,19 +9548,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2479",
       "Year": 2015
@@ -10208,19 +9579,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2488",
       "Year": 2015
@@ -10246,19 +9610,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2497",
       "Year": 2015
@@ -10284,19 +9641,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2506",
       "Year": 2015
@@ -10322,19 +9672,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2515",
       "Year": 2015
@@ -10360,19 +9703,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2524",
       "Year": 2015
@@ -10398,23 +9734,13 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2533",
       "Year": 2015
@@ -10440,19 +9766,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2543",
       "Year": 2015
@@ -10462,7 +9781,8 @@
       "variable_description": "Teachers in TOTAL: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2552",
       "Year": 2015
     },
@@ -10471,7 +9791,8 @@
       "variable_description": "Teachers in TOTAL: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2554",
       "Year": 2015
     },
@@ -10480,7 +9801,8 @@
       "variable_description": "Teachers <fully certified> by <the appropriate authority>: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2556",
       "Year": 2015
     },
@@ -10489,7 +9811,8 @@
       "variable_description": "Teachers <fully certified> by <the appropriate authority>: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2558",
       "Year": 2015
     },
@@ -10498,7 +9821,8 @@
       "variable_description": "Teachers with an <ISCED Level 5A Bachelor degree> qualification: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2560",
       "Year": 2015
     },
@@ -10507,7 +9831,8 @@
       "variable_description": "Teachers with an <ISCED Level 5A Bachelor degree> qualification: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2562",
       "Year": 2015
     },
@@ -10516,7 +9841,8 @@
       "variable_description": "Teachers with an <ISCED Level 5A Master's degree> qualification: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2564",
       "Year": 2015
     },
@@ -10525,7 +9851,8 @@
       "variable_description": "Teachers with an <ISCED Level 5A Master's degree> qualification: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2566",
       "Year": 2015
     },
@@ -10534,7 +9861,8 @@
       "variable_description": "Teachers with an <ISCED Level 6> qualification: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2568",
       "Year": 2015
     },
@@ -10543,7 +9871,8 @@
       "variable_description": "Teachers with an <ISCED Level 6> qualification: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2570",
       "Year": 2015
     },
@@ -10552,7 +9881,8 @@
       "variable_description": "<School science> teachers in TOTAL: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2572",
       "Year": 2015
     },
@@ -10561,7 +9891,8 @@
       "variable_description": "<School science> teachers in TOTAL: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2574",
       "Year": 2015
     },
@@ -10570,7 +9901,8 @@
       "variable_description": "<School science> teachers <fully certified> by <the appropriate authority>: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2576",
       "Year": 2015
     },
@@ -10579,7 +9911,8 @@
       "variable_description": "<School science> teachers <fully certified> by <the appropriate authority>: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2578",
       "Year": 2015
     },
@@ -10588,7 +9921,8 @@
       "variable_description": "<School science> teachers\\<ISCED Level 5A or higher> qualification <with a major> in <school science>: Full-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2580",
       "Year": 2015
     },
@@ -10597,7 +9931,8 @@
       "variable_description": "<School science> teachers\\<ISCED Level 5A or higher> qualification <with a major> in <school science>: Part-time",
       "format_specifier": "5.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2582",
       "Year": 2015
     },
@@ -10606,7 +9941,8 @@
       "variable_description": "Teaching staff in your school has attended a programme of professional development? All teaching staff",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2584",
       "Year": 2015
     },
@@ -10615,7 +9951,8 @@
       "variable_description": "Teaching staff in your school has attended a programme of profess dev? Science teaching staff",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "2586",
       "Year": 2015
     },
@@ -10632,19 +9969,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2588",
       "Year": 2015
@@ -10662,19 +9992,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2595",
       "Year": 2015
@@ -10692,19 +10015,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2602",
       "Year": 2015
@@ -10722,15 +10038,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2609",
       "Year": 2015
@@ -10748,15 +10060,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2615",
       "Year": 2015
@@ -10774,15 +10082,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2621",
       "Year": 2015
@@ -10800,15 +10104,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2627",
       "Year": 2015
@@ -10826,19 +10126,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2633",
       "Year": 2015
@@ -10868,23 +10161,13 @@
         {
           "key": "5",
           "value": "More than once a month"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "2640",
       "Year": 2015
@@ -10914,23 +10197,13 @@
         {
           "key": "5",
           "value": "More than once a month"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "2651",
       "Year": 2015
@@ -10960,23 +10233,13 @@
         {
           "key": "5",
           "value": "More than once a month"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "2662",
       "Year": 2015
@@ -11006,23 +10269,13 @@
         {
           "key": "5",
           "value": "More than once a month"
-        },
-        {
-          "key": "97 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "98 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "99 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "97",
+        "98",
+        "99",
+        "SYSTEM MISSING"
       ],
       "source_page": "2673",
       "Year": 2015
@@ -11040,27 +10293,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2684",
       "Year": 2015
@@ -11078,27 +10318,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2693",
       "Year": 2015
@@ -11116,27 +10343,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2702",
       "Year": 2015
@@ -11154,23 +10368,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2711",
       "Year": 2015
@@ -11188,27 +10392,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2719",
       "Year": 2015
@@ -11226,23 +10417,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2728",
       "Year": 2015
@@ -11260,23 +10441,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2736",
       "Year": 2015
@@ -11294,23 +10465,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2744",
       "Year": 2015
@@ -11328,27 +10489,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2752",
       "Year": 2015
@@ -11366,19 +10514,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2761",
       "Year": 2015
@@ -11396,27 +10537,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2768",
       "Year": 2015
@@ -11434,23 +10562,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2777",
       "Year": 2015
@@ -11468,23 +10586,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2785",
       "Year": 2015
@@ -11502,27 +10610,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2793",
       "Year": 2015
@@ -11540,23 +10635,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2802",
       "Year": 2015
@@ -11574,19 +10659,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2810",
       "Year": 2015
@@ -11604,23 +10682,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2817",
       "Year": 2015
@@ -11638,23 +10706,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2825",
       "Year": 2015
@@ -11672,23 +10730,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2833",
       "Year": 2015
@@ -11706,23 +10754,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2841",
       "Year": 2015
@@ -11740,27 +10778,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2849",
       "Year": 2015
@@ -11778,19 +10803,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2858",
       "Year": 2015
@@ -11808,19 +10826,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2865",
       "Year": 2015
@@ -11838,19 +10849,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2872",
       "Year": 2015
@@ -11868,15 +10872,11 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2879",
       "Year": 2015
@@ -11898,23 +10898,13 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2885",
       "Year": 2015
@@ -11936,23 +10926,13 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2894",
       "Year": 2015
@@ -11974,23 +10954,13 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2903",
       "Year": 2015
@@ -12012,19 +10982,12 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2912",
       "Year": 2015
@@ -12046,23 +11009,13 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2920",
       "Year": 2015
@@ -12084,23 +11037,13 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2929",
       "Year": 2015
@@ -12122,19 +11065,12 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2938",
       "Year": 2015
@@ -12156,19 +11092,12 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2946",
       "Year": 2015
@@ -12190,19 +11119,12 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2954",
       "Year": 2015
@@ -12224,23 +11146,13 @@
         {
           "key": "3",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2962",
       "Year": 2015
@@ -12262,27 +11174,14 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2971",
       "Year": 2015
@@ -12304,27 +11203,14 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2981",
       "Year": 2015
@@ -12346,27 +11232,14 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "2991",
       "Year": 2015
@@ -12388,23 +11261,13 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3001",
       "Year": 2015
@@ -12426,27 +11289,14 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3010",
       "Year": 2015
@@ -12468,23 +11318,13 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3020",
       "Year": 2015
@@ -12506,23 +11346,13 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3029",
       "Year": 2015
@@ -12544,27 +11374,14 @@
         {
           "key": "3",
           "value": "No for other reasons"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3038",
       "Year": 2015
@@ -12582,27 +11399,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3048",
       "Year": 2015
@@ -12620,23 +11424,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3057",
       "Year": 2015
@@ -12654,23 +11448,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3065",
       "Year": 2015
@@ -12688,27 +11472,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3073",
       "Year": 2015
@@ -12726,27 +11497,14 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "5 / .V",
-          "value": "Valid Skip"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3082",
       "Year": 2015
@@ -12768,19 +11526,12 @@
         {
           "key": "3",
           "value": "Not for any subjects"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3091",
       "Year": 2015
@@ -12802,19 +11553,12 @@
         {
           "key": "3",
           "value": "Not for any subjects"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3099",
       "Year": 2015
@@ -12824,7 +11568,8 @@
       "variable_description": "Est. percent. <national modal grade for 15-year-olds>. Students <heritage language> is differ. fm <test language>",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3107",
       "Year": 2015
     },
@@ -12833,7 +11578,8 @@
       "variable_description": "Est. percent. <national modal grade for 15-year-olds>. Students with special needs",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3109",
       "Year": 2015
     },
@@ -12842,7 +11588,8 @@
       "variable_description": "Est. percent. <national modal grade for 15-year-olds>. Students from socioeconomic disadvantaged homes",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3111",
       "Year": 2015
     },
@@ -12867,23 +11614,13 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3113",
       "Year": 2015
@@ -12909,19 +11646,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3123",
       "Year": 2015
@@ -12947,19 +11677,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3132",
       "Year": 2015
@@ -12985,19 +11708,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3141",
       "Year": 2015
@@ -13023,23 +11739,13 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3150",
       "Year": 2015
@@ -13065,19 +11771,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3160",
       "Year": 2015
@@ -13103,23 +11802,13 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3169",
       "Year": 2015
@@ -13145,19 +11834,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3179",
       "Year": 2015
@@ -13183,19 +11865,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3188",
       "Year": 2015
@@ -13221,19 +11896,12 @@
         {
           "key": "4",
           "value": "A lot"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3197",
       "Year": 2015
@@ -13251,19 +11919,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3206",
       "Year": 2015
@@ -13281,19 +11942,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3213",
       "Year": 2015
@@ -13311,23 +11965,13 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "8",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3220",
       "Year": 2015
@@ -13345,19 +11989,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3228",
       "Year": 2015
@@ -13375,19 +12012,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3235",
       "Year": 2015
@@ -13405,19 +12035,12 @@
         {
           "key": "2",
           "value": "No"
-        },
-        {
-          "key": "7 / .N",
-          "value": "Not Applicable"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
-        },
-        {
-          "key": "SYSTEM MISSING",
-          "value": "Missing"
         }
+      ],
+      "na_values": [
+        "7",
+        "9",
+        "SYSTEM MISSING"
       ],
       "source_page": "3242",
       "Year": 2015
@@ -13427,7 +12050,8 @@
       "variable_description": "<the last academic year>, what proport. of parents part. school-related activit? On their own initiative",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3249",
       "Year": 2015
     },
@@ -13436,7 +12060,8 @@
       "variable_description": "<the last academic year>, what proport. of parents part. school-related activit? On initiative of child's teachers",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3251",
       "Year": 2015
     },
@@ -13445,7 +12070,8 @@
       "variable_description": "<the last academic year>, what proport. of parents part. school-related activit? Partici. in local school government",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3253",
       "Year": 2015
     },
@@ -13454,7 +12080,8 @@
       "variable_description": "<the last academic year>, what proport. of parents part. school-related activit? Volun\\phys, or extra-curricular act",
       "format_specifier": "3.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3255",
       "Year": 2015
     },
@@ -13463,7 +12090,8 @@
       "variable_description": "School Size (Sum)",
       "format_specifier": "8.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3257",
       "Year": 2015
     },
@@ -13472,7 +12100,8 @@
       "variable_description": "Class Size",
       "format_specifier": "2.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3259",
       "Year": 2015
     },
@@ -13481,7 +12110,8 @@
       "variable_description": "Number of available computers per student at modal grade",
       "format_specifier": "8.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3261",
       "Year": 2015
     },
@@ -13490,7 +12120,8 @@
       "variable_description": "Proportion of available computers that are connected to the Internet",
       "format_specifier": "8.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3263",
       "Year": 2015
     },
@@ -13499,7 +12130,8 @@
       "variable_description": "Educational leadership (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3265",
       "Year": 2015
     },
@@ -13508,7 +12140,8 @@
       "variable_description": "Curricular development (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3267",
       "Year": 2015
     },
@@ -13517,7 +12150,8 @@
       "variable_description": "Instructional leadership (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3269",
       "Year": 2015
     },
@@ -13526,7 +12160,8 @@
       "variable_description": "Professional development (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3271",
       "Year": 2015
     },
@@ -13535,7 +12170,8 @@
       "variable_description": "Teachers participation (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3273",
       "Year": 2015
     },
@@ -13544,7 +12180,8 @@
       "variable_description": "Responsibility for curriculum",
       "format_specifier": "12.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3275",
       "Year": 2015
     },
@@ -13553,7 +12190,8 @@
       "variable_description": "Responsibility for ressources",
       "format_specifier": "12.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3277",
       "Year": 2015
     },
@@ -13562,7 +12200,8 @@
       "variable_description": "School autonomy (Mean)",
       "format_specifier": "6.2",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3279",
       "Year": 2015
     },
@@ -13571,7 +12210,8 @@
       "variable_description": "Teacher participation (Sum)",
       "format_specifier": "2.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3281",
       "Year": 2015
     },
@@ -13580,7 +12220,8 @@
       "variable_description": "Shortage of educational material (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3283",
       "Year": 2015
     },
@@ -13589,7 +12230,8 @@
       "variable_description": "Shortage of educational staff (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3285",
       "Year": 2015
     },
@@ -13598,7 +12240,8 @@
       "variable_description": "Index proportion of all teachers ISCED LEVEL 5A Bachelor",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3287",
       "Year": 2015
     },
@@ -13607,7 +12250,8 @@
       "variable_description": "Index proportion of all teachers ISCED LEVEL 5A Master",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3289",
       "Year": 2015
     },
@@ -13616,7 +12260,8 @@
       "variable_description": "Index proportion of all teachers ISCED LEVEL 6",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3291",
       "Year": 2015
     },
@@ -13625,7 +12270,8 @@
       "variable_description": "Index proportion of all teachers fully certified",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3293",
       "Year": 2015
     },
@@ -13634,7 +12280,8 @@
       "variable_description": "Total number of all teachers at school",
       "format_specifier": "7.1",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3295",
       "Year": 2015
     },
@@ -13643,7 +12290,8 @@
       "variable_description": "Index propotion of science teachers by all teachers",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3297",
       "Year": 2015
     },
@@ -13652,7 +12300,8 @@
       "variable_description": "Index proportion of science teachers fully certified",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3299",
       "Year": 2015
     },
@@ -13661,7 +12310,8 @@
       "variable_description": "Index proportion of science teachers with ISCED level 5A and a major in science",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3301",
       "Year": 2015
     },
@@ -13670,7 +12320,8 @@
       "variable_description": "Total number of science teachers at school",
       "format_specifier": "7.1",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3303",
       "Year": 2015
     },
@@ -13679,7 +12330,8 @@
       "variable_description": "Creative extra-curricular activities (Sum)",
       "format_specifier": "12.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3305",
       "Year": 2015
     },
@@ -13688,7 +12340,8 @@
       "variable_description": "Index science specific ressources (Sum)",
       "format_specifier": "2.0",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3307",
       "Year": 2015
     },
@@ -13697,7 +12350,8 @@
       "variable_description": "Student behaviour hindering learning (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3309",
       "Year": 2015
     },
@@ -13706,7 +12360,8 @@
       "variable_description": "Teacher behaviour hindering learning (WLE)",
       "format_specifier": "7.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3311",
       "Year": 2015
     },
@@ -13715,7 +12370,8 @@
       "variable_description": "Student-Teacher ratio",
       "format_specifier": "8.4",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3313",
       "Year": 2015
     },
@@ -13736,15 +12392,11 @@
         {
           "key": "3",
           "value": "Public"
-        },
-        {
-          "key": "8 / .I",
-          "value": "Invalid"
-        },
-        {
-          "key": "9 / .M",
-          "value": "No Response"
         }
+      ],
+      "na_values": [
+        "8",
+        "9"
       ],
       "source_page": "3315",
       "Year": 2015
@@ -13754,7 +12406,8 @@
       "variable_description": "GRADE NONRESPONSE ADJUSTED SCHOOL BASE WEIGHT",
       "format_specifier": "8.5",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3322",
       "Year": 2015
     },
@@ -13763,7 +12416,8 @@
       "variable_description": "Senate Weight (sum of 5000 per country)",
       "format_specifier": "12.5",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3324",
       "Year": 2015
     },
@@ -13772,7 +12426,8 @@
       "variable_description": "Date of the database creation",
       "format_specifier": "$20.",
       "fixed_width_specification": "",
-      "variable_key_value": [],
+      "variable_key_value": null,
+      "na_values": [],
       "source_page": "3326",
       "Year": 2015
     }

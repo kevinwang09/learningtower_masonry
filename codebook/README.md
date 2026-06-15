@@ -31,17 +31,45 @@ The pipeline consists of three main components that work together to guarantee d
 
 This YAML file serves as the central orchestration manifest for the entire pipeline. It defines which PISA years to process and maps them to their respective school and student PDF codebooks, alongside the required LlamaCloud configuration.
 
-### 2. The Extraction Process (`extract_codebook.py`)
+### 2. The Extraction Process (`extract_codebook.py` & `extract_tabular_codebook.py`)
 
+Depending on the format of the source codebook for a given year, we use one of two extraction methods:
+
+**A. PDF Codebooks (e.g., 2000-2012) via `extract_codebook.py`:**
 Because legacy PDF codebooks have varying and complex formats (and often exceed LLM context windows), we use an advanced chunking and extraction strategy:
-
 * **Markdown Preprocessing:** Raw PDFs are first parsed into Markdown files (stored in `codebook/markdown/`). *Note: This step is typically handled by `parse_codebook.py`.*
-* **Anchor-Based Sliding Window:** The `extract_codebook.py` script scans the markdown for "Seed Anchors" (e.g., uppercase variable names). It creates overlapping text windows based on these anchors to ensure no context is lost at the boundaries.
-* **LlamaCloud Extract API:** These chunks are sent to LlamaCloud to extract structured data.
+* **Anchor-Based Sliding Window:** The script scans the markdown for "Seed Anchors" (e.g., uppercase variable names). It creates overlapping text windows based on these anchors to ensure no context is lost at the boundaries.
+* **LlamaCloud Extract API:** These chunks are sent to LlamaCloud to extract structured data based on `extracted_pdf_schema.json`.
 * **Deduplication & Sorting:** Overlapping results are deduplicated in Python and sorted chronologically to match the original document flow.
-* **Output:** The script generates structured JSON files (e.g., `2012school_extracted.json`).
 
-### 3. The Validation Process (`validate_curation.py`)
+**B. Tabular Codebooks (e.g., 2015-2022) via `extract_tabular_codebook.py`:**
+For more recent years, PISA releases codebooks in `.xlsx` format.
+* **Pandas Parsing:** The script uses `pandas` to read specific sheets defined in the YAML manifest.
+* **Heuristic Processing:** It processes each row sequentially, tracking the current "active" variable, inferring metadata, and extracting categorical discrete values into a dictionary.
+* **NA Values:** It cleanly separates valid categorical mappings from `na_values` using predefined indicators.
+
+Both methods generate a standardized JSON file format (e.g., `2015school_extracted.json`).
+
+### 3. Architecture of the Codebook JSON
+
+Regardless of whether the source was a PDF or an Excel spreadsheet, the output JSON strictly adheres to a standard schema architecture (defined in `extracted_pdf_schema.json` and `tabular_schema.json`).
+
+The architecture of a generated codebook is a JSON object containing:
+- `Year`: The integer year of the codebook.
+- `cookbook_type`: Either `"school"` or `"student"`.
+- `codebook_entries`: A list of objects, where each object represents a single variable in the codebook.
+
+**Variable Architecture:**
+Each variable entry in `codebook_entries` contains:
+- `variable_key` (String): The uppercase ID of the variable (e.g., `"ST004D01T"`).
+- `variable_description` (String): Human-readable definition or prompt.
+- `format_specifier` (String): The data type or length format.
+- `fixed_width_specification` (String): Byte-width locations (mostly relevant for legacy data).
+- `variable_key_value` (List of Objects | Null): If the variable is discrete/categorical, this holds a list of `{"key": "1", "value": "Female"}` mappings. If continuous, this is `null`.
+- `na_values` (List of Strings): A distinct list of keys representing missing/NA indicators (e.g., `["9997", "9999"]`).
+- `source_page` (String): Where in the original document this was found.
+
+### 4. The Validation Process (`validate_curation.py`)
 
 Once the JSON codebooks are generated, we must ensure they align with our project's data architecture defined in the `variable_curation/` directory.
 

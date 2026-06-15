@@ -24,6 +24,9 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 901
 
---- Validation Failed ---
-- [FAIL] Variable 'WEALTH' (target: wealth) is missing expected NA keys in codebook: {'9997', '9999'}. Found keys: {}. Note: 
-- [FAIL] Variable 'ESCS' (target: escs) is missing expected NA keys in codebook: {'9997', '9999'}. Found keys: {}. Note: 
+--- Validation Warnings ---
+- [WARNING] Variable 'WEALTH' (target: wealth) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'ESCS' (target: escs) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+
+--- Validation Passed! ---
+All variables exist and NA values match.

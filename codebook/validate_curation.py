@@ -92,17 +92,22 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                 entry = extracted_vars[col_upper]
                 
                 if expected_na_values:
-                    var_values = entry.get('variable_key_value', entry.get('Values'))
+                    # Check the newer 'na_values' field first
+                    codebook_na_values = entry.get('na_values', [])
+                    codebook_keys = set(str(k).strip() for k in codebook_na_values) if codebook_na_values else set()
                     
-                    if var_values is None:
+                    # Also look in the legacy 'variable_key_value' or 'Values' mappings if needed
+                    var_values = entry.get('variable_key_value', entry.get('Values'))
+                    if var_values:
+                        codebook_keys.update(str(v.get('key')).strip() for v in var_values if 'key' in v)
+                    
+                    if not codebook_keys:
                         msg = f"Variable '{col}' (target: {target_name}) expects NA values {{{', '.join(repr(x) for x in sorted(expected_na_values))}}} but has no value mapping in codebook. Note: {note}"
                         if note:
                             warnings.append(msg)
                         else:
                             issues.append(msg)
                         continue
-                    
-                    codebook_keys = set(str(v.get('key')).strip() for v in var_values if 'key' in v)
                     
                     missing_nas = expected_na_values - codebook_keys
                     if missing_nas:
