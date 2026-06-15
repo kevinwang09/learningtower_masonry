@@ -95,7 +95,7 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                     var_values = entry.get('variable_key_value', entry.get('Values'))
                     
                     if var_values is None:
-                        msg = f"Variable '{col}' (target: {target_name}) expects NA values {expected_na_values} but has no value mapping in codebook. Note: {note}"
+                        msg = f"Variable '{col}' (target: {target_name}) expects NA values {{{', '.join(repr(x) for x in sorted(expected_na_values))}}} but has no value mapping in codebook. Note: {note}"
                         if note:
                             warnings.append(msg)
                         else:
@@ -106,13 +106,13 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                     
                     missing_nas = expected_na_values - codebook_keys
                     if missing_nas:
-                        msg = f"Variable '{col}' (target: {target_name}) is missing expected NA keys in codebook: {missing_nas}. Found keys: {codebook_keys}. Note: {note}"
+                        msg = f"Variable '{col}' (target: {target_name}) is missing expected NA keys in codebook: {{{', '.join(repr(x) for x in sorted(missing_nas))}}}. Found keys: {{{', '.join(repr(x) for x in sorted(codebook_keys))}}}. Note: {note}"
                         if note:
                             warnings.append(msg)
                         else:
                             issues.append(msg)
                     else:
-                        print(f" [OK] {col} (target: {target_name}) -> NA values matched successfully: {expected_na_values}")
+                        print(f" [OK] {col} (target: {target_name}) -> NA values matched successfully: {{{', '.join(repr(x) for x in sorted(expected_na_values))}}}")
                 else:
                     print(f" [OK] {col} (target: {target_name}) -> Exists in codebook (No NA checking required)")
                     
@@ -170,11 +170,29 @@ def main():
             continue
             
         for file_type in ["school", "student"]:
-            pdf_file = task.get(f"{file_type}_file")
-            if not pdf_file:
+            file_entry = task.get(f"{file_type}_file")
+            if not file_entry:
                 continue
                 
-            json_name = pdf_file.replace(".pdf", "_extracted.json")
+            # Determine the filename and schema based on type
+            file_name = None
+            if isinstance(file_entry, str):
+                file_name = file_entry
+            elif isinstance(file_entry, dict):
+                file_name = file_entry.get("file")
+                
+            if not file_name:
+                continue
+                
+            if file_name.lower().endswith(".pdf"):
+                json_name = file_name.replace(".pdf", "_extracted.json")
+                schema_name = "extracted_pdf_schema.json"
+            elif file_name.lower().endswith((".csv", ".xlsx", ".xls")):
+                json_name = f"{year}{file_type}_extracted.json"
+                schema_name = "tabular_schema.json"
+            else:
+                continue
+                
             json_path = os.path.join(base_dir, json_name)
             
             csv_name = f"PISA_variable_curation_{file_type}.csv"
@@ -186,7 +204,7 @@ def main():
             print(f"Processing {file_type} for year {year}... Check {log_path} for details.")
 
             # Load the unified validation schema
-            schema_file = os.path.join(base_dir, "extracted_schema.json")
+            schema_file = os.path.join(base_dir, schema_name)
             json_schema = None
             if os.path.exists(schema_file):
                 with open(schema_file, 'r') as sf:

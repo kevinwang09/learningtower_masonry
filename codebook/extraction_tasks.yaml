@@ -19,3 +19,11 @@ tasks:
     schema_file: llamaconfig.json
     school_file: 2012school.pdf
     student_file: 2012student.pdf
+  - year: 2015
+    schema_file: llamaconfig.json
+    school_file: 
+      file: 2015codebook.xlsx
+      sheet: "School"
+    student_file: 
+      file: 2015codebook.xlsx
+      sheet: "Student - QQQ"

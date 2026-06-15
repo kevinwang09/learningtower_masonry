@@ -11,14 +11,14 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 Total variables in this category: 447
 
 --- Validation Warnings ---
-- [WARNING] Variable 'SC03Q01' (target: fund_gov) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC03Q02' (target: fund_fees) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC03Q03' (target: fund_donation) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC06Q01' (target: enrol_boys) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SC06Q02' (target: enrol_girls) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'TCSHORT' (target: staff_shortage) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'STRATIO' (target: stratio) expects NA values {'9999', '9998', '9997'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'SCHSIZE' (target: school_size) expects NA values {'99999', '99998', '99997'} but has no value mapping in codebook. Note: The 99997, 99998 and 99999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC03Q01' (target: fund_gov) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC03Q02' (target: fund_fees) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC03Q03' (target: fund_donation) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC06Q01' (target: enrol_boys) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SC06Q02' (target: enrol_girls) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'TCSHORT' (target: staff_shortage) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'STRATIO' (target: stratio) expects NA values {'9997', '9998', '9999'} but has no value mapping in codebook. Note: The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'SCHSIZE' (target: school_size) expects NA values {'99997', '99998', '99999'} but has no value mapping in codebook. Note: The 99997, 99998 and 99999 NA values were inferred from the data, since this was not documented in the codebook.
 
 --- Validation Passed! ---
 All variables exist and NA values match.

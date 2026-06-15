@@ -26,8 +26,8 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 Total variables in this category: 950
 
 --- Validation Warnings ---
-- [WARNING] Variable 'WEALTH' (target: wealth) expects NA values {'9999', '9997'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
-- [WARNING] Variable 'ESCS' (target: escs) expects NA values {'9999', '9997'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'WEALTH' (target: wealth) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'ESCS' (target: escs) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
 
 --- Validation Passed! ---
 All variables exist and NA values match.

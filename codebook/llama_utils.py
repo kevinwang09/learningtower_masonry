@@ -75,7 +75,7 @@ def normalize_variable_entry(entry):
 
 def load_output_schema():
     """Load the unified validation schema for extracted JSON output."""
-    schema_path = os.path.join(CODEBOOK_DIR, "extracted_schema.json")
+    schema_path = os.path.join(CODEBOOK_DIR, "extracted_pdf_schema.json")
     if os.path.exists(schema_path):
         with open(schema_path, "r") as f:
             return json.load(f)
@@ -107,11 +107,12 @@ def collect_pdf_files(tasks):
     for task in tasks:
         for file_type in ["school_file", "student_file"]:
             pdf_path = task.get(file_type)
-            if pdf_path:
+            if isinstance(pdf_path, str) and pdf_path.lower().endswith(".pdf"):
                 results.append((task, pdf_path))
         # Fallback for legacy "files" key
         for pdf_path in task.get("files", []):
-            results.append((task, pdf_path))
+            if isinstance(pdf_path, str) and pdf_path.lower().endswith(".pdf"):
+                results.append((task, pdf_path))
     return results
 
 
@@ -125,11 +126,17 @@ def filter_pending_tasks(tasks):
     for task in tasks:
         pdfs = []
         if "school_file" in task:
-            pdfs.append(task["school_file"])
+            val = task["school_file"]
+            if isinstance(val, str) and val.lower().endswith(".pdf"):
+                pdfs.append(val)
         if "student_file" in task:
-            pdfs.append(task["student_file"])
+            val = task["student_file"]
+            if isinstance(val, str) and val.lower().endswith(".pdf"):
+                pdfs.append(val)
         if not pdfs and "files" in task:
-            pdfs = task["files"]
+            for val in task["files"]:
+                if isinstance(val, str) and val.lower().endswith(".pdf"):
+                    pdfs.append(val)
 
         pending_pdfs = []
         for pdf_path in pdfs:

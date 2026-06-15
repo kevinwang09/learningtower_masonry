@@ -1,0 +1,22 @@
+Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_curation/PISA_variable_curation_school.csv against /Users/kevinwang/projects/learningtower_masonry/codebook/2015school_extracted.json for year 2015...
+ [OK] JSON schema validation passed.
+
+--- Variable and NA Value Check ---
+ [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
+ [OK] CNTSCHID (target: school_id) -> Exists in codebook (No NA checking required)
+ [OK] SC013Q01TA (target: public_private) -> Exists in codebook (No NA checking required)
+ [OK] SC016Q01TA (target: fund_gov) -> Exists in codebook (No NA checking required)
+ [OK] SC016Q02TA (target: fund_fees) -> Exists in codebook (No NA checking required)
+ [OK] SC016Q03TA (target: fund_donation) -> Exists in codebook (No NA checking required)
+ [OK] SC002Q01TA (target: enrol_boys) -> Exists in codebook (No NA checking required)
+ [OK] SC002Q02TA (target: enrol_girls) -> Exists in codebook (No NA checking required)
+ [OK] STAFFSHORT (target: staff_shortage) -> Exists in codebook (No NA checking required)
+ [OK] STRATIO (target: stratio) -> Exists in codebook (No NA checking required)
+ [OK] SCHSIZE (target: school_size) -> Exists in codebook (No NA checking required)
+ [OK] W_SCHGRNRABWT (target: sch_wgt) -> Exists in codebook (No NA checking required)
+
+--- Variables found in JSON but NOT in CSV ---
+Total variables in this category: 261
+
+--- Validation Passed! ---
+All variables exist and NA values match.

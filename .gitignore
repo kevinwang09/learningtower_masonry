@@ -61,3 +61,4 @@ stu_qqq_old.rds
 # These are variable audit logs and it is necessary to keep these. Thus, unignore them.
 !/codebook/logs/*.log
 __pycache__
+~$*
