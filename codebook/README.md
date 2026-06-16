@@ -22,7 +22,7 @@ While LlamaCloud can extract directly from PDFs, parsing to Markdown first gives
 The pipeline consists of three main components that work together to guarantee data fidelity:
 
 1. **Manifest Configuration (`extraction_tasks.yaml`)**
-2. **LLM-based Extraction (`extract_codebook.py` & Markdown)**
+2. **Extraction (`extract_pdf_codebook.py` / `extract_tabular_codebook.py`)**
 3. **Automated Validation (`validate_curation.py` & CSV Schemas)**
 
 ---
@@ -31,11 +31,11 @@ The pipeline consists of three main components that work together to guarantee d
 
 This YAML file serves as the central orchestration manifest for the entire pipeline. It defines which PISA years to process and maps them to their respective school and student PDF codebooks, alongside the required LlamaCloud configuration.
 
-### 2. The Extraction Process (`extract_codebook.py` & `extract_tabular_codebook.py`)
+### 2. The Extraction Process (`extract_codebook.py`)
 
-Depending on the format of the source codebook for a given year, we use one of two extraction methods:
+The primary entry point for extraction is `extract_codebook.py`. This script acts as an intelligent **wrapper**: it reads the `extraction_tasks.yaml` manifest, determines the file format for each year, and automatically routes the work to one of two specialized extraction scripts:
 
-**A. PDF Codebooks (e.g., 2000-2012) via `extract_codebook.py`:**
+**A. PDF Codebooks (e.g., 2000-2012) via `extract_pdf_codebook.py`:**
 Because legacy PDF codebooks have varying and complex formats (and often exceed LLM context windows), we use an advanced chunking and extraction strategy:
 * **Markdown Preprocessing:** Raw PDFs are first parsed into Markdown files (stored in `codebook/markdown/`). *Note: This step is typically handled by `parse_codebook.py`.*
 * **Anchor-Based Sliding Window:** The script scans the markdown for "Seed Anchors" (e.g., uppercase variable names). It creates overlapping text windows based on these anchors to ensure no context is lost at the boundaries.
@@ -98,13 +98,29 @@ Before running the extraction pipeline, you must configure your Python environme
 
 ## How to Run the Pipeline
 
-**1. Extract Codebooks to JSON**
+**1. Parse PDF Codebooks to Markdown** (Required before extracting PDFs)
 
+```bash
+python parse_codebook.py --tasks extraction_tasks.yaml
+```
+
+**2. Extract Codebooks to JSON**
+
+The recommended method is to run the wrapper script, which will intelligently route tasks to the specialized modules:
 ```bash
 python extract_codebook.py --tasks extraction_tasks.yaml
 ```
 
-**2. Validate JSON against Curated CSVs**
+Alternatively, you can run the underlying python modules directly if your YAML manifest only contains a specific file format:
+```bash
+# For PDF Codebooks
+python extract_pdf_codebook.py --tasks extraction_tasks.yaml
+
+# For Tabular Codebooks
+python extract_tabular_codebook.py --tasks extraction_tasks.yaml
+```
+
+**3. Validate JSON against Curated CSVs**
 
 ```bash
 python validate_curation.py --tasks extraction_tasks.yaml

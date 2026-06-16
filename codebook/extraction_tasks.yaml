@@ -27,3 +27,11 @@ tasks:
     student_file: 
       file: 2015codebook.xlsx
       sheet: "Student - QQQ"
+  - year: 2018
+    schema_file: llamaconfig.json
+    school_file: 
+      file: 2018codebook.xlsx
+      sheet: "CY07_MSU_SCH_QQQ"
+    student_file: 
+      file: 2018codebook.xlsx
+      sheet: "CY07_MSU_STU_QQQ"

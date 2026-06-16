@@ -5,6 +5,8 @@ import subprocess
 import tempfile
 import yaml
 from llama_utils import load_tasks_manifest
+import extract_pdf_codebook
+import extract_tabular_codebook
 
 def split_tasks(manifest):
     """
@@ -72,9 +74,6 @@ def split_tasks(manifest):
             tab_tasks.append(tab_task)
             
     return pdf_tasks, tab_tasks
-
-import extract_pdf_codebook
-import extract_tabular_codebook
 
 def main():
     parser = argparse.ArgumentParser(description="Wrapper to route extraction to PDF or Tabular processors.", add_help=False)
