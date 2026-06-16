@@ -35,3 +35,11 @@ tasks:
     student_file: 
       file: 2018codebook.xlsx
       sheet: "CY07_MSU_STU_QQQ"
+  - year: 2022
+    schema_file: llamaconfig.json
+    school_file: 
+      file: 2022codebook.xlsx
+      sheet: "CY08MSP_SCH_QQQ"
+    student_file: 
+      file: 2022codebook.xlsx
+      sheet: "CY08MSP_STU_QQQ"
