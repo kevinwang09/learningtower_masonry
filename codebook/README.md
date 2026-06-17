@@ -1,8 +1,12 @@
 # PISA Codebook Extraction and Validation Pipeline
 
-This directory contains the automated pipeline for extracting structured variable metadata from raw PISA PDF codebooks, converting them to JSON format, and validating them against our curated CSV schemas.
+This directory contains the Python scripts and architecture responsible for extracting structured metadata from raw PISA PDF and Excel codebooks, converting them to JSON format, and validating them against our curated CSV schemas.
 
-## Why LlamaIndex and LlamaParse?
+## Why this matters for Reproducibility
+
+Historically, making sense of PISA codebooks required researchers to manually read through thousands of pages of PDFs and Excel files to copy-paste variable keys and undocumented `NA` codes. This manual process is highly prone to human error and impossible to trace or verify.
+
+By fully automating this process using `extract_codebook.py` and strictly validating the outputs with `validate_curation.py`, we provide a **transparent, auditable, and reproducible** bridge between the raw PISA documentation and our R harmonization scripts. Every extraction and validation pass generates deterministic JSON data and logs, mathematically proving exactly which variables were found and successfully mapped.
 
 Legacy PISA PDF codebooks are notoriously difficult to process due to complex table structures, nested hierarchies, and formatting drift across the years (2000-2022). Traditional PDF extraction libraries struggle to reliably extract relationships between variables, definitions, and their mapped categorical values.
 
@@ -125,3 +129,15 @@ python extract_tabular_codebook.py --tasks extraction_tasks.yaml
 ```bash
 python validate_curation.py --tasks extraction_tasks.yaml
 ```
+
+## Codebook Anomalies & Known Issues
+
+During the validation of extracted JSON codebooks against our curated schemas, we have identified several recurring inconsistencies where the published PISA codebook fundamentally disagrees with the physical raw data (`.sav` / `.sas` files). These exceptions are explicitly documented in the `variable_curation` CSV notes, allowing the validator to pass them as known warnings rather than hard failures.
+
+**Key Anomalies Include:**
+
+- **2018 & 2022 `ESCS` and `WEALTH` NA Encodings:** The published codebook erroneously documents the missing values for these indices as massive integers (e.g., `9999995`, `9999997`). However, in the actual `.sav` raw datasets, these missing values are cleanly represented as `95`, `97`, `98`, `99`. The validation schema enforces the empirically correct `95-99` values inferred directly from the data.
+- **2022 `WEALTH` Missing Variable:** The `WEALTH` variable is entirely absent from the 2022 published codebook. However, the variable is structurally maintained in the pipeline payload as a legacy requirement.
+- **2015 `dishwasher` Variable:** The documentation for this variable in the legacy PDFs is severely problematic, and the extracted data mappings natively fail codebook extraction.
+
+Whenever a new codebook is extracted, the `validate_curation.py` script serves as the primary line of defense to catch these undocumented changes before they silently contaminate the final R transformations.

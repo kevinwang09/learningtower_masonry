@@ -10,9 +10,11 @@ The general process for acquiring and preparing raw data is:
 2. **Downloading:** Execute `download_raw_data.py` to download the specific dataset `.zip` archives.
 3. **Extraction:** Execute `prepare_raw_data.py` to seamlessly extract the `.zip` files directly within their respective year folders (e.g., extracting `2000/data.zip` into `2000/`).
 
-## Why do we need to do this?
+## Why do we need to do this? (Ensuring Reproducibility)
 
-In the past the PISA data was downloadable through an URL link. However, in 2026, this was updated and users must fill out a form to download the data. This is not ideal and broke our reproducibility pipeline. Hence, we have updated our workflow to make sure that we are still able to maintain the data curation at high quality and automation.
+In the past, the PISA data was downloadable through a simple, persistent URL link. However, in 2026, the OECD updated their portal requiring users to manually fill out forms to download the data. This change broke our automated reproducibility pipeline. 
+
+To overcome this, we developed this raw data framework. By automating the download and extraction steps using `download_raw_data.py` and `prepare_raw_data.py`, and strictly verifying file integrity via MD5 checksums in `data_manifest.json`, we guarantee that any researcher running this pipeline acquires the **exact same foundational binary datasets**. This completely eliminates manual download errors and secures the very first critical step of our reproducible data lifecycle.
 
 ### Special Considerations: CloudFlare protection
 

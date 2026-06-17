@@ -13,9 +13,9 @@ To maximize data quality, unbroken lineage, and long-term maintainability, this 
 1. **Raw Ingestion (Extract/Load):** The individual year scripts (e.g., `Code/<year>/data_<year>.R`) MUST act purely as extractors. They strictly slice out the physical target columns specified in the schemas without modifying the underlying raw integers or string values. This ensures `Data/Output/<year>/` serves as an immutable "bronze" data lake securely mirroring the raw SPSS definitions.
 2. **Centralized Transformation:** All data harmonization, factor coercions, and string decodings strictly happen *as late as possible* in the pipeline (e.g., inside `Code/student_bind_rows.Rmd` or via a dedicated centralized schema engine).
 
-**Why Transform Late?**
+**Why Transform Late? (The Reproducibility Guarantee)**
 
-- **Data Lineage:** It preserves absolute fidelity to the source binary/text `.sav` structures, meaning pipeline extraction operations don't destructively overwrite the fundamental data representations natively in transit.
+- **Data Lineage:** It preserves absolute fidelity to the source binary/text `.sav` structures. Because extraction operations never destructively overwrite or coerce data in flight, researchers can independently trace our final outputs straight back to these transparent, untouched intermediate `.rds` tables, guaranteeing perfect reproducibility.
 - **Missing Value Protection:** PISA handles missingness inconsistently year-to-year (`99`, `9997`, `M/R`). By transporting the unaltered raw values to the central harmoniser, we maintain maximum analytical visibility over mapping decisions.
 - **Scalability:** Baking single-year edge cases and native translations into individualized ETL scripts fragments the codebase and forces researchers to manage localized, differing outputs, whereas a centralized generic processor handles everything consistently.
 
