@@ -35,15 +35,25 @@ The pipeline consists of three main components that work together to guarantee d
 
 This YAML file serves as the central orchestration manifest for the entire pipeline. It defines which PISA years to process and maps them to their respective school and student PDF codebooks, alongside the required LlamaCloud configuration.
 
-### 2. The Extraction Process (`extract_codebook.py`)
+### 2. Shared Utilities (`llama_utils.py`)
 
-The primary entry point for extraction is `extract_codebook.py`. This script acts as an intelligent **wrapper**: it reads the `extraction_tasks.yaml` manifest, determines the file format for each year, and automatically routes the work to one of two specialized extraction scripts:
+The `llama_utils.py` module provides shared helper infrastructure for all Python scripts in `codebook/`:
+* **Manifest Parsing:** `load_tasks_manifest()` loads and validates `extraction_tasks.yaml`.
+* **API Authentication:** `initialize_client()` and `initialize_async_client()` manage synchronous/asynchronous LlamaCloud credentials.
+* **Schema & Config:** `load_output_schema()`, `load_extraction_config()`, and `normalize_variable_entry()` enforce standardized JSON key normalization across PDF and tabular extraction runs.
+* **Cost Estimation:** `estimate_cost_for_files()` calculates estimated LlamaCloud credit consumption prior to execution.
+
+### 3. The Extraction Process (`extract_codebook.py`)
+
+The primary entry point for extraction is `extract_codebook.py`. This script acts as an intelligent **wrapper**:
+* **Task Splitting:** It inspects `extraction_tasks.yaml` via `split_tasks()` and cleanly separates PDF tasks from tabular tasks into temporary sub-manifests.
+* **Specialized Routing:** It dynamically invokes `extract_pdf_codebook.py` for `.pdf` files and `extract_tabular_codebook.py` for `.csv`/`.xlsx` files:
 
 **A. PDF Codebooks (e.g., 2000-2012) via `extract_pdf_codebook.py`:**
 Because legacy PDF codebooks have varying and complex formats (and often exceed LLM context windows), we use an advanced chunking and extraction strategy:
-* **Markdown Preprocessing:** Raw PDFs are first parsed into Markdown files (stored in `codebook/markdown/`). *Note: This step is typically handled by `parse_codebook.py`.*
-* **Anchor-Based Sliding Window:** The script scans the markdown for "Seed Anchors" (e.g., uppercase variable names). It creates overlapping text windows based on these anchors to ensure no context is lost at the boundaries.
-* **LlamaCloud Extract API:** These chunks are sent to LlamaCloud to extract structured data based on `extracted_pdf_schema.json`.
+* **Markdown Preprocessing:** Raw PDFs are first parsed into Markdown files (stored in `codebook/markdown/`). *Note: This step is handled by `parse_codebook.py`.*
+* **Anchor-Based Sliding Window:** The script scans the markdown for "Seed Anchors" (e.g., uppercase variable names). It creates overlapping text windows based on these anchors (`window_size=30`, `step_size=27`) to ensure no context is lost at boundaries.
+* **LlamaCloud Extract API:** These chunks are sent concurrently (up to concurrency limit 10) to LlamaCloud to extract structured data based on `extracted_pdf_schema.json`.
 * **Deduplication & Sorting:** Overlapping results are deduplicated in Python and sorted chronologically to match the original document flow.
 
 **B. Tabular Codebooks (e.g., 2015-2022) via `extract_tabular_codebook.py`:**
@@ -52,9 +62,9 @@ For more recent years, PISA releases codebooks in `.xlsx` format.
 * **Heuristic Processing:** It processes each row sequentially, tracking the current "active" variable, inferring metadata, and extracting categorical discrete values into a dictionary.
 * **NA Values:** It cleanly separates valid categorical mappings from `na_values` using predefined indicators.
 
-Both methods generate a standardized JSON file format (e.g., `2015school_extracted.json`).
+Both methods generate a standardized JSON file format (e.g., `2015school_extracted.json` or `2000student_extracted.json`).
 
-### 3. Architecture of the Codebook JSON
+### 4. Architecture of the Codebook JSON
 
 Regardless of whether the source was a PDF or an Excel spreadsheet, the output JSON strictly adheres to a standard schema architecture (defined in `extracted_pdf_schema.json` and `tabular_schema.json`).
 
@@ -73,16 +83,16 @@ Each variable entry in `codebook_entries` contains:
 - `na_values` (List of Strings): A distinct list of keys representing missing/NA indicators (e.g., `["9997", "9999"]`).
 - `source_page` (String): Where in the original document this was found.
 
-### 4. The Validation Process (`validate_curation.py`)
+### 5. The Validation Process (`validate_curation.py`)
 
 Once the JSON codebooks are generated, we must ensure they align with our project's data architecture defined in the `variable_curation/` directory.
 
-* The `validate_curation.py` script reads the `extraction_tasks.yaml` to iterate over all active years and datasets.
-* It loads the newly generated `*_extracted.json` files and cross-references them against our curated mappings (`PISA_variable_curation_school.csv` and `PISA_variable_curation_student.csv`).
+* The `validate_curation.py` script reads `extraction_tasks.yaml` to iterate over all active years and datasets.
+* It loads the newly generated `*_extracted.json` files and cross-references them against our master curated CSV mappings (`PISA_variable_curation_school.csv` and `PISA_variable_curation_student.csv`).
 * **Validation Checks:**
   1. **Existence:** Confirms every source column defined in the CSV actually exists in the extracted codebook JSON.
-  2. **NA Values:** Confirms that any `na_values` specified in the CSV (e.g., `9997;9999`) have corresponding documentation in the extracted JSON's value mapping list (`variable_key_value`).
-* **Logging:** Validation results are output directly to the console and detailed logs are saved in the `logs/` directory (e.g., `logs/validate_2012_student.log`).
+  2. **NA Values:** Confirms that any `na_values` specified in the CSV (e.g., `9997;9999`) have corresponding documentation in the extracted JSON's value mapping list (`variable_key_value` or `na_values`).
+* **Logging:** Validation results are output directly to the console and detailed logs are saved in the `codebook/logs/` directory (e.g., `codebook/logs/validate_2012_student.log`).
 
 ## Environment Setup
 

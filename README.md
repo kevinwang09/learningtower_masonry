@@ -83,17 +83,17 @@ These CSV schemas act as the "rosetta stone" for the pipeline—they instruct th
 
 Since the list of countries do not differ significantly between the years, the student and school data are typically the ones that needs to be updated upon new publication of PISA data.
 
-## Workflow to cureate new data (updated: April 2026)
+## Workflow to curate new data (updated: April 2026)
 
 Please consult with either Kevin Wang about adding new data.
 
-In 2026, PISA changed how their data can be accessed, hence a new framework that automates the raw data download process was developed, see [this document](Data/Raw/README.md) to understand how the raw data can now be downloaded using the PISA html file and and a python script. **Due to size constraints, the raw data were never committed to GitHub. The proper folder structures are preserved using .gitkeep.**.
+In 2026, PISA changed how their data can be accessed, hence a new framework that automates the raw data download process was developed, see [this document](Data/Raw/README.md) to understand how the raw data can now be downloaded using the PISA html file and a python script. **Due to size constraints, the raw data were never committed to GitHub. The proper folder structures are preserved using .gitkeep.**.
 
-+ After the raw data are downloaded, create a new R script to document how the raw data should be extracted into a `rds` format at `Data/yyyy/sch_qqq.rds` and `Data/yyyy/stu_qqq.rds`. The student data should be named `stu_qqq.rds` and the school data should be named `sch_qqq.rds`. These rds format should be a 'faith' extraction of the raw data without additional transformations.
++ After the raw data are downloaded, create a new R script to document how the raw data should be extracted into an `rds` format at `Data/Output/yyyy/sch_qqq.rds` and `Data/Output/yyyy/stu_qqq.rds`. The student data should be named `stu_qqq.rds` and the school data should be named `sch_qqq.rds`. These rds format should be a 'faithful' extraction of the raw data without additional transformations.
 + Add new code books into the `codebook` folder.
-+ **CAUTION: we do not accept curation of new variables unless there are some fundamental changes in how PISA publishes their data**. Curate of new variables must be documented in [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri}
-+ The cleaned data should be saved in the `Data/Output/yyyy`.
-+ Update `Code/student_bind_rows.Rmd` and `Code/school_bind_rows.Rmd`. The updated data with all years binded together will be available at `Data/Output/student.rda` and `Data/Output/school.rda`.
++ **CAUTION: we do not accept curation of new variables unless there are some fundamental changes in how PISA publishes their data**. Curation of new variables must be documented in [PISA Variables' Table](https://docs.google.com/spreadsheets/d/1yuwYUO3A9fBThuMFnTZaP_Bb8lD0TF5w7lPvoEo7HvU/edit?gid=0#gid=0){.uri}
++ The cleaned data should be saved in `Data/Output/yyyy`.
++ Update `Code/student_bind_rows.Rmd` and `Code/school_bind_rows.Rmd`. The updated data with all years bound together will be saved under `Data/Output/Transfer/` (including `Data/Output/Transfer/data/` for `.rda` subsets and `Data/Output/Transfer/student_full_data/` for full `.rds` files).
 + Copy over the files to a forked copy of the `learningtower` package. Update relevant vignettes and scripts.
 
 ## Automated Codebook Extraction Architecture (New in 2026)

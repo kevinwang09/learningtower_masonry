@@ -34,6 +34,7 @@ This script processes the HTML source file and downloads the dataset ZIP archive
 - **Data Integrity:** It uses a JSON manifest (`data_manifest.json`) to track downloaded files. It computes the MD5 checksum of each file.
 - **Idempotency and Resumes:** If the script is run multiple times, it will skip files that have already been downloaded and whose MD5 checksum perfectly matches the recording in the manifest. If a checksum mismatch occurs on an existing file, a `ValueError` is aggressively raised to alert developers of corruption.
 - **Hardcoded Exceptions:** The script contains a modular `HARDCODED_EXCEPTIONS` dictionary to safely manage specific datasets that are inconsistently linked in the OECD HTML (such as the year 2000 ESCS dataset), routing them safely into their respective year folders.
+- **Timestamped Execution Logs:** Automatically writes full execution logs to `download_raw_data_YYYYMMDD_HHMMSS.log` in `Data/Raw/`.
 
 **Command Line Usage:**
 
@@ -47,6 +48,7 @@ This script extracts the downloaded `.zip` files directly in place within their 
 - **Structure Preservation:** It preserves the year-based folder structure during extraction.
 - **Manifest Updates:** It leverages the same `data_manifest.json` file. Upon successfully unzipping a file, it catalogs the internal `namelist` of the archive and registers the extracted files within the manifest.
 - **Tree Generation:** It automatically generates a lightweight `extracted_files_tree.json` file summarizing the resulting local folder structure and file sizes of the unzipped data in a structured JSON format.
+- **Timestamped Execution Logs:** Automatically writes full execution logs to `prepare_raw_data_YYYYMMDD_HHMMSS.log` in `Data/Raw/`.
 
 ### `data_manifest.json`
 

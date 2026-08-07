@@ -4,6 +4,29 @@ This folder contains the authoritative, designed schema files for curating and t
 - `PISA_variable_curation_school.csv`
 - `PISA_variable_curation_student.csv`
 
+## Schema Specifications
+
+The active curation matrices (`PISA_variable_curation_student.csv` and `PISA_variable_curation_school.csv`) use a long-format structure with the following standardized header columns:
+
+| Column | Description | Example |
+| --- | --- | --- |
+| `year` | The study year (PISA cycle) the mapping applies to. | `2022` |
+| `target_name` | The unified, generic variable name published in `learningtower`. | `mother_educ` |
+| `source_col` | Original column name in the raw dataset (`.sav` or `.txt`). Can be empty/NA if absent. | `ST005Q01JA` |
+| `transformation` | R function from `transformation_registry` (in `Code/process_pisa.R`) applied to decode or coerce values. | `isced3a1` |
+| `na_values` | Semicolon-separated raw codes representing missing `NA` values. | `9997;9999` |
+| `description` | Human-readable note or label describing the variable. | `Mother <Highest Schooling>` |
+| `type` | Target R data type (`character`, `factor`, `numeric`, `integer`) asserted upon extraction. | `factor` |
+| `note` | Additional contextual notes or extraction anomalies. | `encoded as binary` |
+
+### Primary Key Constraints
+
+The pipeline enforces strict primary key non-nullness and uniqueness checks via `transform_pisa_variables()`:
+- **Student Data Primary Key:** `country`, `school_id`, `student_id`
+- **School Data Primary Key:** `country`, `school_id`
+
+None of these primary key identifiers may contain `NA` values.
+
 ## Purpose
 These curation matrices are highly effective at providing a unified, standardized schema mapping for variables across all PISA years. They dictate how raw column names and formats from various years map to our unified `learningtower` dataset structure.
 

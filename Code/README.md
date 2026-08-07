@@ -31,17 +31,26 @@ The first step of the pipeline focuses solely on safely and truthfully reading t
 > - **The Bug:** Raw fixed-width data files often contain scattered blank spaces meant to be skipped by the SPSS dictionary definitions. Using `fwf_widths()` forces `read_fwf` to ingest contiguous blocks of characters. This causes any defined "skipped spaces" in the raw file to push subsequent columns out of alignment, silently corrupting the ingested dataframe.
 > - **The Solution:** `fwf_positions(start, end)` correctly anchors variables to their explicit absolute string indices, natively hurdling over undocumented whitespace.
 
-For each year, we utilize the function `extract_raw_pisa()` from `Code/process_pisa.R`. This function reads the relevant schema CSV (e.g., `variable_curation/PISA_variable_curation_student.csv`), looks for the variables indicated in `source_col`, extracts those raw variables from the `.sav` or raw ascii dataset, and identically renames them to our unified `target_name`.
+For each year, we utilize core helper utilities from `Code/process_pisa.R`:
 
-At this stage, **no data transformations or categorical factor conversions occur**. We preserve the original values and data types to prevent masking discrepancies.
+- **`extract_raw_pisa(target_year, df, mapping_csv_path)`**: Reads the curation schema CSV (e.g. `variable_curation/PISA_variable_curation_student.csv`), looks for raw columns in `source_col`, extracts them from `.sav` or ascii datasets, and standardizes column names.
+- **`transform_pisa_variables(target_year, df, mapping_csv_path)`**: Standardizes column names, applies missing value masks (`na_values`), executes factor transformations from the `transformation_registry`, verifies expected R data types, and validates primary key uniqueness (`country`, `school_id`, `student_id`).
+- **`safe_save_rds(df, path)`**: Compares new extracted dataframes against existing `.rds` files via `audit_dataframes()` and safely overwrites with audit logging.
+- **`audit_dataframes(df_new, df_old)`**: Audits row/column counts, data types, haven label attributes, and `all.equal()` equivalence.
+- **`parse_spss_syntax(syntax_file_path)` & `parse_spss_value_labels(syntax_file_path)`**: Dynamically parses column widths and value label mappings from raw SPSS `.txt` control files.
+- **`start_logging()` & `stop_logging()`**: Automatically captures stdout/stderr, warnings, errors, and session info into timestamped `.log` files in each year directory.
 
-The scripts then perform an automated validation check using `safe_save_rds()`, comparing the schema of the new extracted dataframe against the previous `.rds` file. These scripts write fully-transparent, localized timestamps and tracking output into `.log` files.
+At Step 1, **no data transformations or categorical factor conversions occur**. We preserve the original values and data types to prevent masking discrepancies.
+
+The scripts write fully-transparent, localized timestamps and tracking output into `.log` files (e.g., `Code/2022/data_2022_YYYYMMDD_HHMMSS.log`).
 
 ### Step 2: Transformation and Ensembling (`Code/student_bind_rows.Rmd` & `Code/school_bind_rows.Rmd`)
 
 Once the localized `.rds` datasets for all individual years have been cleanly extracted, we execute `Code/student_bind_rows.Rmd` and `Code/school_bind_rows.Rmd`.
 
-These Markdown files load the assembled `.rds` files from `Data/Output/` and apply the heavy, year-specific data transformations (converting numeric values into string-based logical factors) necessary to bind all years longitudinally. The output from these scripts drops the polished data directly into the R-package-ready format within the `Data/Output/Transfer/` folder.
+These Markdown files load the assembled `.rds` files from `Data/Output/` and apply the heavy, year-specific data transformations (converting numeric values into string-based logical factors) necessary to bind all years longitudinally. The output from these scripts drops the polished data directly into:
+- `Data/Output/Transfer/data/`: Compressed `.rda` files for OECD sample subsets (e.g. `student_subset_2022.rda`).
+- `Data/Output/Transfer/student_full_data/`: Compressed `.rds` files for complete single-year datasets (e.g. `student_2022.rds`).
 
 ## Year-Specific Data Issues
 
@@ -60,9 +69,11 @@ When a specific year splits its student data across multiple domain-specific tex
 
 ## Target Schema Structure: Long-Format
 
-As of 2026, we are migrating to a **Long-Format** schema, where each row explicitly defines how a single variable is extracted **for a specific year**. This allows us to handle year-to-year changes in variable names and value encodings smoothly.
+As of 2026, we use a **Long-Format** schema, where each row explicitly defines how a single variable is extracted **for a specific year**. This allows us to handle year-to-year changes in variable names and value encodings smoothly.
 
-The authoritative schema format is defined in `Code/pisa_variable_mapping.csv`.
+The authoritative schema files are defined in:
+- `variable_curation/PISA_variable_curation_student.csv`
+- `variable_curation/PISA_variable_curation_school.csv`
 
 ### Column Definitions
 
@@ -71,22 +82,24 @@ The authoritative schema format is defined in `Code/pisa_variable_mapping.csv`.
 | `year` | The study year the mapping applies to. | `2006` |
 | `target_name` | The unified, generic variable name that will be published and consumed by downstream scripts. | `mother_educ` |
 | `source_col` | The original column name as it appears in the specific year's raw data file. Can be `NA` if absent. | `ST13Q01` |
-| `transformation` | The specific R function to apply, referencing the `transformation_registry` (see below) to perform explicit categorical decoding or type coercion. | `isced3a1`, `as.numeric` |
-| `na_values` | Specific string or numeric codes in the raw data that should be explicitly interpreted as missing `NA` values. | `"9997,9999"` |
+| `transformation` | The specific R function to apply, referencing the `transformation_registry` in `process_pisa.R` to perform explicit categorical decoding or type coercion. | `isced3a1`, `as.numeric` |
+| `na_values` | Specific string or numeric codes in the raw data that should be explicitly interpreted as missing `NA` values (semicolon-separated). | `9997;9999` |
 | `description` | A human-readable note or description of the variable. | `Mother's highest level of education (factor)` |
-| `type` | The final expected R data type for the transformed column. | `factor`, `numeric` |
+| `type` | The final expected R data type for the transformed column (`character`, `factor`, `numeric`, `integer`). | `factor`, `numeric` |
+| `note` | Additional contextual information or known extraction anomalies. | `encoded as binary` |
 
 ### Example Layout
 
-| year | target_name | source_col | transformation | na_values | description | type |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2000 | mother_educ | NA | NA | NA | Mother's highest education | factor |
-| 2003 | mother_educ | ST11R01 | iscednone1 | NA | Mother's highest education | factor |
-| 2006 | mother_educ | ST13Q01 | isced3a1 | NA | Mother's highest education | factor |
-| 2018 | wealth | WEALTH | as.numeric | "95,97,98" | Family wealth index | numeric |
+| year | target_name | source_col | transformation | na_values | description | type | note |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2000 | mother_educ | NA | NA | NA | Mother's highest education | factor | |
+| 2003 | mother_educ | ST11R01 | iscednone1 | NA | Mother's highest education | factor | |
+| 2006 | mother_educ | ST13Q01 | isced3a1 | NA | Mother's highest education | factor | |
+| 2018 | wealth | WEALTH | as.numeric | 95;97;98 | Family wealth index | numeric | |
 
 ## Historical Information
 
 The initial goal of this design was to resolve the maintenance nightmare of hardcoding variable name mappings, categorical value decodings, and ad-hoc data cleaning steps within separate R scripts for each year. We use a CSV tabular format to act as the single source of truth for all PISA variables across all years.
 
 The old schema definitions were stored in wide-format files (`variable_curation/OUTDATED_PISA_variable_curation_student.csv`), which led to generic types and difficult management when encodings changed between years, prompting the shift to long-format schemas.
+
