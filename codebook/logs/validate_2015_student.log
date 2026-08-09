@@ -1,0 +1,32 @@
+Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_curation/PISA_variable_curation_student.csv against /Users/kevinwang/projects/learningtower_masonry/codebook/2015student_extracted.json for year 2015...
+ [OK] JSON schema validation passed.
+
+--- Variable and NA Value Check ---
+ [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
+ [OK] CNTSCHID (target: school_id) -> Exists in codebook (No NA checking required)
+ [OK] CNTSTUID (target: student_id) -> Exists in codebook (No NA checking required)
+ [OK] ST005Q01TA (target: mother_educ) -> Exists in codebook (No NA checking required)
+ [OK] ST007Q01TA (target: father_educ) -> Exists in codebook (No NA checking required)
+ [OK] ST004D01T (target: gender) -> Exists in codebook (No NA checking required)
+ [OK] ST011Q04TA (target: computer) -> Exists in codebook (No NA checking required)
+ [OK] ST011Q06TA (target: internet) -> Exists in codebook (No NA checking required)
+ [OK] PV1MATH (target: math) -> Exists in codebook (No NA checking required)
+ [OK] PV1READ (target: read) -> Exists in codebook (No NA checking required)
+ [OK] PV1SCIE (target: science) -> Exists in codebook (No NA checking required)
+ [OK] W_FSTUWT (target: stu_wgt) -> Exists in codebook (No NA checking required)
+ [OK] ST011Q01TA (target: desk) -> Exists in codebook (No NA checking required)
+ [OK] ST011Q02TA (target: room) -> Exists in codebook (No NA checking required)
+ [OK] ST012Q01TA (target: television) -> Exists in codebook (No NA checking required)
+ [OK] ST012Q06NA (target: computer_n) -> Exists in codebook (No NA checking required)
+ [OK] ST012Q02TA (target: car) -> Exists in codebook (No NA checking required)
+ [OK] ST013Q01TA (target: book) -> Exists in codebook (No NA checking required)
+
+--- Variables found in JSON but NOT in CSV ---
+Total variables in this category: 901
+
+--- Validation Warnings ---
+- [WARNING] Variable 'WEALTH' (target: wealth) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+- [WARNING] Variable 'ESCS' (target: escs) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
+
+--- Validation Passed! ---
+All variables exist and NA values match.

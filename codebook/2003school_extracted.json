@@ -1,0 +1,7840 @@
+{
+  "codebook_entries": [
+    {
+      "variable_key": "COUNTRY",
+      "format_specifier": "A3",
+      "variable_key_value": [
+        {
+          "key": "0008",
+          "value": "Albania"
+        },
+        {
+          "key": "0032",
+          "value": "Argentina"
+        },
+        {
+          "key": "0036",
+          "value": "Australia"
+        },
+        {
+          "key": "0040",
+          "value": "Austria"
+        },
+        {
+          "key": "0056",
+          "value": "Belgium"
+        },
+        {
+          "key": "0076",
+          "value": "Brazil"
+        },
+        {
+          "key": "0100",
+          "value": "Bulgaria"
+        },
+        {
+          "key": "0124",
+          "value": "Canada"
+        },
+        {
+          "key": "0152",
+          "value": "Chile"
+        },
+        {
+          "key": "0203",
+          "value": "Czech Republic"
+        },
+        {
+          "key": "0208",
+          "value": "Denmark"
+        },
+        {
+          "key": "0246",
+          "value": "Finland"
+        },
+        {
+          "key": "0250",
+          "value": "France"
+        },
+        {
+          "key": "0276",
+          "value": "Germany"
+        },
+        {
+          "key": "0300",
+          "value": "Greece"
+        },
+        {
+          "key": "0344",
+          "value": "Hong Kong (China)"
+        },
+        {
+          "key": "0348",
+          "value": "Hungary"
+        },
+        {
+          "key": "0352",
+          "value": "Iceland"
+        },
+        {
+          "key": "0360",
+          "value": "Indonesia"
+        },
+        {
+          "key": "0372",
+          "value": "Ireland"
+        },
+        {
+          "key": "0376",
+          "value": "Israel"
+        },
+        {
+          "key": "0380",
+          "value": "Italy"
+        },
+        {
+          "key": "0392",
+          "value": "Japan"
+        },
+        {
+          "key": "0410",
+          "value": "Korea"
+        },
+        {
+          "key": "0428",
+          "value": "Latvia"
+        },
+        {
+          "key": "0438",
+          "value": "Liechtenstein"
+        },
+        {
+          "key": "0442",
+          "value": "Luxembourg"
+        },
+        {
+          "key": "0446",
+          "value": "Macao (China)"
+        },
+        {
+          "key": "0484",
+          "value": "Mexico"
+        },
+        {
+          "key": "0528",
+          "value": "Netherlands"
+        },
+        {
+          "key": "0554",
+          "value": "New Zealand"
+        },
+        {
+          "key": "0578",
+          "value": "Norway"
+        },
+        {
+          "key": "0604",
+          "value": "Peru"
+        },
+        {
+          "key": "0616",
+          "value": "Poland"
+        },
+        {
+          "key": "0620",
+          "value": "Portugal"
+        },
+        {
+          "key": "0643",
+          "value": "Russian Federation"
+        },
+        {
+          "key": "0703",
+          "value": "Slovakia"
+        },
+        {
+          "key": "0724",
+          "value": "Spain"
+        },
+        {
+          "key": "0752",
+          "value": "Sweden"
+        },
+        {
+          "key": "0756",
+          "value": "Switzerland"
+        },
+        {
+          "key": "0764",
+          "value": "Thailand"
+        },
+        {
+          "key": "0788",
+          "value": "Tunisia"
+        },
+        {
+          "key": "0792",
+          "value": "Turkey"
+        },
+        {
+          "key": "0807",
+          "value": "Macedonia"
+        },
+        {
+          "key": "0826",
+          "value": "United Kingdom"
+        },
+        {
+          "key": "0840",
+          "value": "United States"
+        },
+        {
+          "key": "0858",
+          "value": "Uruguay"
+        },
+        {
+          "key": "0891",
+          "value": "Yugoslavia"
+        }
+      ],
+      "variable_description": "Country ID",
+      "fixed_width_specification": "1-3",
+      "Year": 2003
+    },
+    {
+      "variable_key": "CNT",
+      "format_specifier": "A3",
+      "variable_key_value": null,
+      "variable_description": "Nation code",
+      "fixed_width_specification": "4-6",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SUBNATIO",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "0360",
+          "value": "Australia"
+        },
+        {
+          "key": "0400",
+          "value": "Austria"
+        },
+        {
+          "key": "0560",
+          "value": "Belgium"
+        },
+        {
+          "key": "0760",
+          "value": "Brazil"
+        },
+        {
+          "key": "1240",
+          "value": "Canada"
+        },
+        {
+          "key": "2030",
+          "value": "Czech Republic"
+        },
+        {
+          "key": "2080",
+          "value": "Denmark"
+        },
+        {
+          "key": "2460",
+          "value": "Finland"
+        },
+        {
+          "key": "2500",
+          "value": "France"
+        },
+        {
+          "key": "2760",
+          "value": "Germany"
+        },
+        {
+          "key": "3000",
+          "value": "Greece"
+        },
+        {
+          "key": "3440",
+          "value": "Hong Kong SAR"
+        },
+        {
+          "key": "3480",
+          "value": "Hungary"
+        },
+        {
+          "key": "3520",
+          "value": "Iceland"
+        },
+        {
+          "key": "3600",
+          "value": "Indonesia"
+        },
+        {
+          "key": "3720",
+          "value": "Ireland"
+        },
+        {
+          "key": "3801",
+          "value": "Italy: Veneto-Nord Est"
+        },
+        {
+          "key": "3802",
+          "value": "Italy: Trento-Nord-Est"
+        },
+        {
+          "key": "3803",
+          "value": "Italy: Toscana-Centro"
+        },
+        {
+          "key": "3804",
+          "value": "Italy: Piemonte-Nord-Ovest"
+        },
+        {
+          "key": "3805",
+          "value": "Italy: Lombardia-Nord Ovest"
+        },
+        {
+          "key": "3806",
+          "value": "Italy: Bolzano"
+        },
+        {
+          "key": "3807",
+          "value": "Italy: Other regions"
+        },
+        {
+          "key": "3920",
+          "value": "Japan"
+        },
+        {
+          "key": "4100",
+          "value": "Korea"
+        },
+        {
+          "key": "4280",
+          "value": "Latvia"
+        },
+        {
+          "key": "4380",
+          "value": "Liechtenstein"
+        },
+        {
+          "key": "4420",
+          "value": "Luxembourg"
+        },
+        {
+          "key": "4460",
+          "value": "Macao SAR"
+        },
+        {
+          "key": "4840",
+          "value": "Mexico"
+        },
+        {
+          "key": "5280",
+          "value": "Netherlands"
+        },
+        {
+          "key": "5540",
+          "value": "New Zealand"
+        },
+        {
+          "key": "5780",
+          "value": "Norway"
+        },
+        {
+          "key": "6160",
+          "value": "Poland"
+        },
+        {
+          "key": "6200",
+          "value": "Portugal"
+        },
+        {
+          "key": "6430",
+          "value": "Russian Federation"
+        },
+        {
+          "key": "7030",
+          "value": "Slovak Republic"
+        },
+        {
+          "key": "7241",
+          "value": "Spain: Other regions"
+        },
+        {
+          "key": "7242",
+          "value": "Spain: Castilia y Leon"
+        },
+        {
+          "key": "7243",
+          "value": "Spain: Catalonia"
+        },
+        {
+          "key": "7244",
+          "value": "Spain: Basque Country"
+        },
+        {
+          "key": "7520",
+          "value": "Sweden"
+        },
+        {
+          "key": "7560",
+          "value": "Switzerland"
+        },
+        {
+          "key": "7640",
+          "value": "Thailand"
+        },
+        {
+          "key": "7880",
+          "value": "Tunisia"
+        },
+        {
+          "key": "7920",
+          "value": "Turkey"
+        },
+        {
+          "key": "8261",
+          "value": "United Kingdom: England, Wales & NI"
+        },
+        {
+          "key": "8262",
+          "value": "United Kingdom: Scotland"
+        },
+        {
+          "key": "8400",
+          "value": "United States"
+        },
+        {
+          "key": "8580",
+          "value": "Uruguay"
+        },
+        {
+          "key": "8910",
+          "value": "Yugoslavia"
+        }
+      ],
+      "variable_description": "Adjudicated sub-region",
+      "fixed_width_specification": "7-10",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCHOOLID",
+      "format_specifier": "A5",
+      "variable_key_value": null,
+      "variable_description": "School ID",
+      "fixed_width_specification": "11-15",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC01Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Village (less 3 000)"
+        },
+        {
+          "key": "2",
+          "value": "Small town (3 000 to 15 000)"
+        },
+        {
+          "key": "3",
+          "value": "Town (15 000 to 100 000)"
+        },
+        {
+          "key": "4",
+          "value": "City (100 000 to 1 000 000)"
+        },
+        {
+          "key": "5",
+          "value": "Large city (more 1 000 000)"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "School location Q1",
+      "fixed_width_specification": "17-17",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC02Q01",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Number of boys Q2a",
+      "fixed_width_specification": "18-25",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC02Q02",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Number of girls Q2b",
+      "fixed_width_specification": "26-33",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC03Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Public"
+        },
+        {
+          "key": "2",
+          "value": "Private"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Public or private Q3",
+      "fixed_width_specification": "34-34",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC04Q01",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Funding Government Q4a",
+      "fixed_width_specification": "35-42",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC04Q02",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Funding Student fees Q4b",
+      "fixed_width_specification": "43-50",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC04Q03",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Funding Benefactors Q4c",
+      "fixed_width_specification": "51-58",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC04Q04",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Funding Other Q4d",
+      "fixed_width_specification": "59-66",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 1 Q5a",
+      "fixed_width_specification": "67-67",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 2 Q5b",
+      "fixed_width_specification": "68-68",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 3 Q5c",
+      "fixed_width_specification": "69-69",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 4 Q5d",
+      "fixed_width_specification": "70-70",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 5 Q5e",
+      "fixed_width_specification": "71-71",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 6 Q5f",
+      "fixed_width_specification": "72-72",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 7 Q5g",
+      "fixed_width_specification": "73-73",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 8 Q5h",
+      "fixed_width_specification": "74-74",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 9 Q5i",
+      "fixed_width_specification": "75-75",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 10 Q5j",
+      "fixed_width_specification": "76-76",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 11 Q5k",
+      "fixed_width_specification": "77-77",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 12 Q5l",
+      "fixed_width_specification": "78-78",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grade 13 Q5m",
+      "fixed_width_specification": "79-79",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC05Q14",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ungraded school Q5n",
+      "fixed_width_specification": "80-80",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC06Q01",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Repeat at Q6a",
+      "fixed_width_specification": "81-88",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC06Q02",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Repeat at Q6b",
+      "fixed_width_specification": "89-96",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage Maths teach. Q8a",
+      "fixed_width_specification": "97-97",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage Sci teach. Q8b",
+      "fixed_width_specification": "98-98",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage test_lang. teach. Q8c",
+      "fixed_width_specification": "99-99",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage oth nat_lang. teach. Q8d",
+      "fixed_width_specification": "100-100",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage forn_lang. teach. Q8e",
+      "fixed_width_specification": "101-101",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage exper. teach. Q8f",
+      "fixed_width_specification": "102-102",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage emerg. teach. Q8g",
+      "fixed_width_specification": "103-103",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage supp personnel Q8h",
+      "fixed_width_specification": "104-104",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage textbooks Q8i",
+      "fixed_width_specification": "105-105",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage supplies Q8j",
+      "fixed_width_specification": "106-106",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage buildings Q8k",
+      "fixed_width_specification": "107-107",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage heating Q8l",
+      "fixed_width_specification": "108-108",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of classrooms (Q8m)",
+      "fixed_width_specification": "109-109",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q14",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of special equipment (Q8n)",
+      "fixed_width_specification": "110-110",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q15",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of computers (Q8o)",
+      "fixed_width_specification": "111-111",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q16",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of computer software (Q8p)",
+      "fixed_width_specification": "112-112",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q17",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of calculators (Q8q)",
+      "fixed_width_specification": "113-113",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q18",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of library material (Q8r)",
+      "fixed_width_specification": "114-114",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q19",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of audio-video equipment (Q8s)",
+      "fixed_width_specification": "115-115",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC08Q20",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Shortage of lab equipment (Q8t)",
+      "fixed_width_specification": "116-116",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC09Q01",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Number of computers altogether (Q9a)",
+      "fixed_width_specification": "117-124",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC09Q02",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Number of computers for students (Q9b)",
+      "fixed_width_specification": "125-132",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC09Q03",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Computers teachers Q9c",
+      "fixed_width_specification": "133-140",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC09Q04",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Computers admin Q9d",
+      "fixed_width_specification": "141-148",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC09Q05",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Computers with Web Q9e",
+      "fixed_width_specification": "149-156",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC09Q06",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "9997",
+          "value": "N/A"
+        },
+        {
+          "key": "9998",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Computers with LAN Q9f",
+      "fixed_width_specification": "157-164",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Admittance Residence Q10a",
+      "fixed_width_specification": "165-165",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Admittance Student Record Q10b",
+      "fixed_width_specification": "166-166",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Admittance Recommendation Q10c",
+      "fixed_width_specification": "167-167",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Admittance Parents' endorsement Q10d",
+      "fixed_width_specification": "168-168",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Admittance Special programme Q10e",
+      "fixed_width_specification": "169-169",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Admittance Family preference Q10f",
+      "fixed_width_specification": "170-170",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC10Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Prerequisite"
+        },
+        {
+          "key": "2",
+          "value": "High priority"
+        },
+        {
+          "key": "3",
+          "value": "Considered"
+        },
+        {
+          "key": "4",
+          "value": "Not considered"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Q10g",
+      "fixed_width_specification": "171-171",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students enjoy Q11a",
+      "fixed_width_specification": "172-172",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students enthusiasm Q11b",
+      "fixed_width_specification": "173-173",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students take pride Q11c",
+      "fixed_width_specification": "174-174",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students value academic Q11d",
+      "fixed_width_specification": "175-175",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students respectful Q11e",
+      "fixed_width_specification": "176-176",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students value education Q11f",
+      "fixed_width_specification": "177-177",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC11Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly Agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students learn Q11g",
+      "fixed_width_specification": "178-178",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC12Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "1 to 2 times a year"
+        },
+        {
+          "key": "3",
+          "value": "3 to 5 times a year"
+        },
+        {
+          "key": "4",
+          "value": "Monthly"
+        },
+        {
+          "key": "5",
+          "value": "More once a month"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Standardised test Q12a",
+      "fixed_width_specification": "179-179",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC12Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "1 to 2 times a year"
+        },
+        {
+          "key": "3",
+          "value": "3 to 5 times a year"
+        },
+        {
+          "key": "4",
+          "value": "Monthly"
+        },
+        {
+          "key": "5",
+          "value": "More once a month"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Teacher's test Q12b",
+      "fixed_width_specification": "180-180",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC12Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "1 to 2 times a year"
+        },
+        {
+          "key": "3",
+          "value": "3 to 5 times a year"
+        },
+        {
+          "key": "4",
+          "value": "Monthly"
+        },
+        {
+          "key": "5",
+          "value": "More once a month"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Teacher's ratings",
+      "fixed_width_specification": "181-181",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC12Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "1 to 2 times a year"
+        },
+        {
+          "key": "3",
+          "value": "3 to 5 times a year"
+        },
+        {
+          "key": "4",
+          "value": "Monthly"
+        },
+        {
+          "key": "5",
+          "value": "More once a month"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Students' portfolios",
+      "fixed_width_specification": "182-182",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC12Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Never"
+        },
+        {
+          "key": "2",
+          "value": "1 to 2 times a year"
+        },
+        {
+          "key": "3",
+          "value": "3 to 5 times a year"
+        },
+        {
+          "key": "4",
+          "value": "Monthly"
+        },
+        {
+          "key": "5",
+          "value": "More once a month"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Student assignments",
+      "fixed_width_specification": "183-183",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment inform parents",
+      "fixed_width_specification": "184-184",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment retention",
+      "fixed_width_specification": "185-185",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment group students Q13c",
+      "fixed_width_specification": "186-186",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment compare to national Q13d",
+      "fixed_width_specification": "187-187",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment school's progress Q13e",
+      "fixed_width_specification": "188-188",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment teachers' effectiveness Q13f",
+      "fixed_width_specification": "189-189",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment to improve curriculum Q13g",
+      "fixed_width_specification": "190-190",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC13Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment compare to other schools Q13h",
+      "fixed_width_specification": "191-191",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC14Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "40% or more"
+        },
+        {
+          "key": "2",
+          "value": "more 20% less 40%"
+        },
+        {
+          "key": "3",
+          "value": "more 10% less 20%"
+        },
+        {
+          "key": "4",
+          "value": "Less than 10%"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Language Percent Q14",
+      "fixed_width_specification": "192-192",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC15Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "No"
+        },
+        {
+          "key": "2",
+          "value": "Yes for one"
+        },
+        {
+          "key": "3",
+          "value": "Yes for 2 or more"
+        },
+        {
+          "key": "4",
+          "value": "Not Applicable"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Separate subject Q15a",
+      "fixed_width_specification": "193-193",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC15Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "No"
+        },
+        {
+          "key": "2",
+          "value": "Yes for one"
+        },
+        {
+          "key": "3",
+          "value": "Yes for 2 or more"
+        },
+        {
+          "key": "4",
+          "value": "Not Applicable"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Other parts Q15b",
+      "fixed_width_specification": "194-194",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC16Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "For all classes"
+        },
+        {
+          "key": "2",
+          "value": "For some classes"
+        },
+        {
+          "key": "3",
+          "value": "Not for any classes"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Streaming by levels Q16a",
+      "fixed_width_specification": "195-195",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC16Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "For all classes"
+        },
+        {
+          "key": "2",
+          "value": "For some classes"
+        },
+        {
+          "key": "3",
+          "value": "Not for any classes"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Streaming by content Q16b",
+      "fixed_width_specification": "196-196",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC16Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "For all classes"
+        },
+        {
+          "key": "2",
+          "value": "For some classes"
+        },
+        {
+          "key": "3",
+          "value": "Not for any classes"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Grouped by Ability Q16c",
+      "fixed_width_specification": "197-197",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC16Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "For all classes"
+        },
+        {
+          "key": "2",
+          "value": "For some classes"
+        },
+        {
+          "key": "3",
+          "value": "Not for any classes"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Not grouped by ability Q16d",
+      "fixed_width_specification": "198-198",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC17Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Enrichment Mathematics Q17a",
+      "fixed_width_specification": "199-199",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC17Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Remedial mathematics Q17b",
+      "fixed_width_specification": "200-200",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC17Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Mathematics competitions Q17c",
+      "fixed_width_specification": "201-201",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC17Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Mathematics Clubs Q17d",
+      "fixed_width_specification": "202-202",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC17Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Computer clubs Q17e",
+      "fixed_width_specification": "203-203",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC18Q11",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime teach in TOTAL Q18a1",
+      "fixed_width_specification": "204-211",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC18Q12",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime teach fully certified Q18b1",
+      "fixed_width_specification": "212-219",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC18Q13",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime teach ISCED5A pedag Q18c1",
+      "fixed_width_specification": "220-227",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC18Q21",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ptime teach in TOTAL Q18a2",
+      "fixed_width_specification": "228-235",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC18Q22",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ptime teach fully certified Q18b2",
+      "fixed_width_specification": "236-243",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC18Q23",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ptime teach ISCED5A pedag Q18c2",
+      "fixed_width_specification": "244-251",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q11",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime Maths teach Q19a1",
+      "fixed_width_specification": "252-259",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q12",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime teach ISCED5A Maths Q19b1",
+      "fixed_width_specification": "260-267",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q13",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime Maths teach ISCED5A no major Q19c1",
+      "fixed_width_specification": "268-275",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q14",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime Maths teach ISCED5A pedag Q19d1",
+      "fixed_width_specification": "276-283",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q15",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ftime Maths teach ISCED5B Q19e1",
+      "fixed_width_specification": "284-291",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q21",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Ptime Maths teach Q19a2",
+      "fixed_width_specification": "292-299",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q22",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Part-time teaching hours ISCED5A Maths (Q19b2)",
+      "fixed_width_specification": "300-307",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q23",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Part-time Maths teaching hours ISCED5A no major (Q19c2)",
+      "fixed_width_specification": "308-315",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q24",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Part-time Maths teaching hours ISCED5A pedagogy (Q19d2)",
+      "fixed_width_specification": "316-323",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC19Q25",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Part-time Maths teaching hours ISCED5B (Q19e2)",
+      "fixed_width_specification": "324-331",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC20Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "By students' achievement (Q20a)",
+      "fixed_width_specification": "332-332",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC20Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "By teacher review Q20b",
+      "fixed_width_specification": "333-333",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC20Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "By principal Q20c",
+      "fixed_width_specification": "334-334",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC20Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Yes"
+        },
+        {
+          "key": "2",
+          "value": "No"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "By inspectors Q20d",
+      "fixed_width_specification": "335-335",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC21Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Innovative teachers Q21a",
+      "fixed_width_specification": "336-336",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC21Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Traditional teachers Q21b",
+      "fixed_width_specification": "337-337",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC21Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Innovation disagreements Q21c",
+      "fixed_width_specification": "338-338",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC22Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Require high achievement Q22a",
+      "fixed_width_specification": "339-339",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC22Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Adapt standards Q22b",
+      "fixed_width_specification": "340-340",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC22Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Frequent disagreements Q22c",
+      "fixed_width_specification": "341-341",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC23Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Goals social development Q23a",
+      "fixed_width_specification": "342-342",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC23Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Goals Maths skills Q23b",
+      "fixed_width_specification": "343-343",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC23Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Goals disagreements Q23c",
+      "fixed_width_specification": "344-344",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC24Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "High morale Q24a",
+      "fixed_width_specification": "345-345",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC24Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Enthusiasm Q24b",
+      "fixed_width_specification": "346-346",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC24Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Pride in school Q24c",
+      "fixed_width_specification": "347-347",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC24Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Strongly agree"
+        },
+        {
+          "key": "2",
+          "value": "Agree"
+        },
+        {
+          "key": "3",
+          "value": "Disagree"
+        },
+        {
+          "key": "4",
+          "value": "Strongly disagree"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Academic Achievement Q24d",
+      "fixed_width_specification": "348-348",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q01",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Low expectations Q25a",
+      "fixed_width_specification": "349-349",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q02",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Student absenteeism Q25b",
+      "fixed_width_specification": "350-350",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q03",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Stud-teacher relations Q25c",
+      "fixed_width_specification": "351-351",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q04",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Disruption of Classes Q25d",
+      "fixed_width_specification": "352-352",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q05",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Not meeting needs Q25e",
+      "fixed_width_specification": "353-353",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q06",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Teacher absenteeism Q25f",
+      "fixed_width_specification": "354-354",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q07",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Skipping classes Q25g",
+      "fixed_width_specification": "355-355",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q08",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Lack of respect Q25h",
+      "fixed_width_specification": "356-356",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q09",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Resisting change Q25i",
+      "fixed_width_specification": "357-357",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q10",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Use of alcohol Q25j",
+      "fixed_width_specification": "358-358",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q11",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Teacher strictness Q25k",
+      "fixed_width_specification": "359-359",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q12",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Bullying Q25l",
+      "fixed_width_specification": "360-360",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC25Q13",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not at all"
+        },
+        {
+          "key": "2",
+          "value": "Very Little"
+        },
+        {
+          "key": "3",
+          "value": "To some extent"
+        },
+        {
+          "key": "4",
+          "value": "A lot"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "8",
+          "value": "Invalid"
+        },
+        {
+          "key": "9",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Lack encouragement Q25m",
+      "fixed_width_specification": "361-361",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q01",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Hiring teachers Q26a",
+      "fixed_width_specification": "362-366",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q02",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Firing teachers Q26b",
+      "fixed_width_specification": "367-371",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q03",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Teacher salaries Q26c",
+      "fixed_width_specification": "372-376",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q04",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Salary increase Q26d",
+      "fixed_width_specification": "377-381",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q05",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Budget formulation Q26e",
+      "fixed_width_specification": "382-386",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q06",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Budget allocation Q26f",
+      "fixed_width_specification": "387-391",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q07",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Disciplinary policies Q26g",
+      "fixed_width_specification": "392-396",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q08",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Assessment policies Q26h",
+      "fixed_width_specification": "397-401",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q09",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Student admittance Q26i",
+      "fixed_width_specification": "402-406",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q10",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Textbooks Q26j",
+      "fixed_width_specification": "407-411",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q11",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Course content Q26k",
+      "fixed_width_specification": "412-416",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC26Q12",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "77777",
+          "value": "N/A"
+        },
+        {
+          "key": "88888",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Course offer Q26l",
+      "fixed_width_specification": "417-421",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q01",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making national Q27a",
+      "fixed_width_specification": "422-425",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q02",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making local Q27b",
+      "fixed_width_specification": "426-429",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q03",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making employers Q27c",
+      "fixed_width_specification": "430-433",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q04",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making parents Q27d",
+      "fixed_width_specification": "434-437",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q05",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making teachers Q27e",
+      "fixed_width_specification": "438-441",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q06",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making students Q27f",
+      "fixed_width_specification": "442-445",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SC27Q07",
+      "format_specifier": "A4",
+      "variable_key_value": [
+        {
+          "key": "7777",
+          "value": "N/A"
+        },
+        {
+          "key": "8888",
+          "value": "Invalid"
+        },
+        {
+          "key": "9999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Decision making external Q27g",
+      "fixed_width_specification": "446-449",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCHLSIZE",
+      "format_specifier": "F8",
+      "variable_key_value": [
+        {
+          "key": "99997",
+          "value": "N/A"
+        },
+        {
+          "key": "99998",
+          "value": "Invalid"
+        },
+        {
+          "key": "99999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "School size",
+      "fixed_width_specification": "450-457",
+      "Year": 2003
+    },
+    {
+      "variable_key": "PCGIRLS",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Proportion of girls",
+      "fixed_width_specification": "458-465",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCHLTYPE",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Private Independent"
+        },
+        {
+          "key": "2",
+          "value": "Private government-dependent"
+        },
+        {
+          "key": "3",
+          "value": "Public"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "School Ownership",
+      "fixed_width_specification": "466-466",
+      "Year": 2003
+    },
+    {
+      "variable_key": "RATCOMP",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "97",
+          "value": "N/A"
+        },
+        {
+          "key": "98",
+          "value": "Invalid"
+        },
+        {
+          "key": "99",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Computer ratio to school size",
+      "fixed_width_specification": "467-474",
+      "Year": 2003
+    },
+    {
+      "variable_key": "COMPWEB",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Proportion of computers connected to WEB",
+      "fixed_width_specification": "475-482",
+      "Year": 2003
+    },
+    {
+      "variable_key": "COMPLAN",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Proportion of computers connected to LAN",
+      "fixed_width_specification": "483-490",
+      "Year": 2003
+    },
+    {
+      "variable_key": "STRATIO",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Teacher/student ratio",
+      "fixed_width_specification": "491-498",
+      "Year": 2003
+    },
+    {
+      "variable_key": "PROPCERT",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Proportion of certified teachers",
+      "fixed_width_specification": "499-506",
+      "Year": 2003
+    },
+    {
+      "variable_key": "PROPQPED",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Proportion of teachers with ISCED 5A in Pedagogy",
+      "fixed_width_specification": "507-514",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SMRATIO",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Maths teacher-student ratio",
+      "fixed_width_specification": "515-522",
+      "Year": 2003
+    },
+    {
+      "variable_key": "PROPMATH",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Proportion of Maths teachers",
+      "fixed_width_specification": "523-530",
+      "Year": 2003
+    },
+    {
+      "variable_key": "PROPMA5A",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "N/A"
+        },
+        {
+          "key": "998",
+          "value": "Invalid"
+        },
+        {
+          "key": "999",
+          "value": "Miss"
+        }
+      ],
+      "variable_description": "Proportion of math teachers with a ISCED 5A level in math",
+      "fixed_width_specification": "531-538",
+      "Year": 2003
+    },
+    {
+      "variable_key": "ASSESS",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "<20"
+        },
+        {
+          "key": "2",
+          "value": "20-39"
+        },
+        {
+          "key": "3",
+          "value": ">40"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Estimated Number of assessments per year",
+      "fixed_width_specification": "539-539",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SELECT",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "0",
+          "value": "Not considered"
+        },
+        {
+          "key": "1",
+          "value": "At least one considered"
+        },
+        {
+          "key": "2",
+          "value": "At least one high priority"
+        },
+        {
+          "key": "3",
+          "value": "At least one pre-requiste"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "School selectivity",
+      "fixed_width_specification": "540-540",
+      "Year": 2003
+    },
+    {
+      "variable_key": "ABGROUP",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "1",
+          "value": "Not for any classes"
+        },
+        {
+          "key": "2",
+          "value": "For some classes"
+        },
+        {
+          "key": "3",
+          "value": "For all classes"
+        },
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Streaming within schools",
+      "fixed_width_specification": "541-541",
+      "Year": 2003
+    },
+    {
+      "variable_key": "EXCOURSE",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "School offering extension courses (number of types)",
+      "fixed_width_specification": "542-542",
+      "Year": 2003
+    },
+    {
+      "variable_key": "MACTIV",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "School offering Maths activities (number of types)",
+      "fixed_width_specification": "543-543",
+      "Year": 2003
+    },
+    {
+      "variable_key": "AUTRES",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Resource autonomy",
+      "fixed_width_specification": "544-544",
+      "Year": 2003
+    },
+    {
+      "variable_key": "AUTCURR",
+      "format_specifier": "F1",
+      "variable_key_value": [
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Curricular autonomy",
+      "fixed_width_specification": "545-545",
+      "Year": 2003
+    },
+    {
+      "variable_key": "MSTREL",
+      "format_specifier": "F5.2",
+      "variable_key_value": [
+        {
+          "key": "7",
+          "value": "N/A"
+        },
+        {
+          "key": "9",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Index of poor student-teacher relations (school average)",
+      "fixed_width_specification": "546-550",
+      "Year": 2003
+    },
+    {
+      "variable_key": "TCSHORT",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Shortage of teachers (WLE)",
+      "fixed_width_specification": "551-558",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCMATBUI",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Quality of material resources (WLE)",
+      "fixed_width_specification": "559-566",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCMATEDU",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Quality of educational resources (WLE)",
+      "fixed_width_specification": "567-574",
+      "Year": 2003
+    },
+    {
+      "variable_key": "STMORALE",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Student morale (WLE)",
+      "fixed_width_specification": "575-582",
+      "Year": 2003
+    },
+    {
+      "variable_key": "TCMORALE",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Teacher morale (WLE)",
+      "fixed_width_specification": "583-590",
+      "Year": 2003
+    },
+    {
+      "variable_key": "STUDBEHA",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Student behaviours (WLE)",
+      "fixed_width_specification": "591-598",
+      "Year": 2003
+    },
+    {
+      "variable_key": "TEACBEHA",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "Teacher behaviours (WLE)",
+      "fixed_width_specification": "599-606",
+      "Year": 2003
+    },
+    {
+      "variable_key": "TCHCONS",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "TCHCONS (186) Mathematics teacher consensus (WLE)",
+      "fixed_width_specification": "607-614",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCHAUTON",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "SCHAUTON (187) School autonomy (WLE)",
+      "fixed_width_specification": "615-622",
+      "Year": 2003
+    },
+    {
+      "variable_key": "TCHPARTI",
+      "format_specifier": "F8.3",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "TCHPARTI (188) Teacher participation (WLE)",
+      "fixed_width_specification": "623-630",
+      "Year": 2003
+    },
+    {
+      "variable_key": "SCWEIGHT",
+      "format_specifier": "F8.5",
+      "variable_key_value": [
+        {
+          "key": "997",
+          "value": "Missing"
+        }
+      ],
+      "variable_description": "SCWEIGHT (189) school Weight",
+      "fixed_width_specification": "631-638",
+      "Year": 2003
+    },
+    {
+      "variable_key": "STRATUM",
+      "format_specifier": "A5",
+      "variable_key_value": [
+        {
+          "key": "03601",
+          "value": "Australia: ACT"
+        },
+        {
+          "key": "03602",
+          "value": "Australia: NSW"
+        },
+        {
+          "key": "03603",
+          "value": "Australia: VIC"
+        },
+        {
+          "key": "03604",
+          "value": "Australia: QLD"
+        },
+        {
+          "key": "03605",
+          "value": "Australia: SA"
+        },
+        {
+          "key": "03606",
+          "value": "Australia: WA"
+        },
+        {
+          "key": "03607",
+          "value": "Australia: TAS"
+        },
+        {
+          "key": "03608",
+          "value": "Australia: NT"
+        },
+        {
+          "key": "04002",
+          "value": "Austria: Hauptschule"
+        },
+        {
+          "key": "04003",
+          "value": "Austria: Polytechn. Schule"
+        },
+        {
+          "key": "04005",
+          "value": "Austria: Gymnasium"
+        },
+        {
+          "key": "04006",
+          "value": "Austria: Realgymnasium"
+        },
+        {
+          "key": "04007",
+          "value": "Austria: Oberstufenrealgymnasium"
+        },
+        {
+          "key": "04009",
+          "value": "Austria: Berufsschule (techn.-gewerbl.)"
+        },
+        {
+          "key": "04010",
+          "value": "Austria: Berufsschule (kaufm\u00e4nn./Handel/Verkehr)"
+        },
+        {
+          "key": "04012",
+          "value": "Austria: BMS (gewer l ch-techn sch-kunstgewerbl.)"
+        },
+        {
+          "key": "04013",
+          "value": "Austria: BMS (kaufm\u00e4nnisch/Handelschulen)"
+        },
+        {
+          "key": "04014",
+          "value": "Austria: BMS (wirtschafts-/sozialberufl.)"
+        },
+        {
+          "key": "04015",
+          "value": "Austria: BMS (land-/forstwirtschaftl.)"
+        },
+        {
+          "key": "04016",
+          "value": "Austria: BHS (techn.-gewerblich)"
+        },
+        {
+          "key": "04017",
+          "value": "Austria: BHS (kaufm\u00e4nnisch)"
+        },
+        {
+          "key": "04018",
+          "value": "Austria: BHS (wirtschafts-/sozialberufl)"
+        },
+        {
+          "key": "04019",
+          "value": "Austria: BHS (land-/forstwirtschaftl.)"
+        },
+        {
+          "key": "04020",
+          "value": "Austria: Anstalt der Kindergarten-/Sozialp\u00e4dagogik"
+        },
+        {
+          "key": "04021",
+          "value": "Moderately small schools"
+        },
+        {
+          "key": "04022",
+          "value": "Very small schools"
+        },
+        {
+          "key": "05601",
+          "value": "Belgium (Flemish): Only general education, private"
+        },
+        {
+          "key": "05602",
+          "value": "Belgium (Flemish): Only general education, public"
+        },
+        {
+          "key": "05603",
+          "value": "Belgium (Flemish): Gen.-techn.-vocat.-arts, private"
+        },
+        {
+          "key": "05604",
+          "value": "Belgium (Flemish): Gen.-techn.-vocat.-arts, public"
+        },
+        {
+          "key": "05605",
+          "value": "Belgium (Flemish): Techn.,arts, not general, private"
+        },
+        {
+          "key": "05606",
+          "value": "Belgium (Flemish): Techn.-vocat.-arts, not gen., public"
+        },
+        {
+          "key": "05607",
+          "value": "Belgium (Flemish): Special education - private"
+        },
+        {
+          "key": "05608",
+          "value": "Belgium (Flemish): Special education - public"
+        },
+        {
+          "key": "05609",
+          "value": "Belgium (Flemish): Part time vocational"
+        },
+        {
+          "key": "05610",
+          "value": "Belgium (Flemish): Moderately small schools"
+        },
+        {
+          "key": "05611",
+          "value": "Belgium (Flemish): Very small schools"
+        },
+        {
+          "key": "05612",
+          "value": "Belgium (French): Organised by community"
+        },
+        {
+          "key": "05613",
+          "value": "Belgium (French): Organised by community, spec. ed."
+        },
+        {
+          "key": "05614",
+          "value": "Belgium (French): Official schools subsidised by comm."
+        },
+        {
+          "key": "05615",
+          "value": "Belgium (French): Subsidised special education"
+        },
+        {
+          "key": "05616",
+          "value": "Belgium (French): Subsidised confessional"
+        },
+        {
+          "key": "05617",
+          "value": "Belgium (French): Subsidised confessional - spec. ed."
+        },
+        {
+          "key": "05618",
+          "value": "Belgium (French): Subsidised non-confessional"
+        },
+        {
+          "key": "05619",
+          "value": "Belgium (French): Subsidised non-confessional - spec. ed."
+        },
+        {
+          "key": "05620",
+          "value": "Belgium (German)"
+        },
+        {
+          "key": "07601",
+          "value": "Brazil: Central (private)"
+        },
+        {
+          "key": "07602",
+          "value": "Brazil: Central (public)"
+        },
+        {
+          "key": "07603",
+          "value": "Brazil: North (private)"
+        },
+        {
+          "key": "07604",
+          "value": "Brazil: North (public)"
+        },
+        {
+          "key": "07605",
+          "value": "Brazil: Northeast (private)"
+        },
+        {
+          "key": "07606",
+          "value": "Brazil: Northeast (public)"
+        },
+        {
+          "key": "07607",
+          "value": "Brazil: South (private)"
+        },
+        {
+          "key": "07608",
+          "value": "Brazil: South (public)"
+        },
+        {
+          "key": "07609",
+          "value": "Brazil: Southeast (private)"
+        },
+        {
+          "key": "07610",
+          "value": "Brazil: Southeast (public)"
+        },
+        {
+          "key": "07611",
+          "value": "Brazil: Small schools"
+        },
+        {
+          "key": "07612",
+          "value": "Brazil: Very small schools"
+        },
+        {
+          "key": "12400",
+          "value": "Canada"
+        },
+        {
+          "key": "20301",
+          "value": "Czech Republic: Stratum 1"
+        },
+        {
+          "key": "20302",
+          "value": "Czech Republic: Stratum 2"
+        },
+        {
+          "key": "20303",
+          "value": "Czech Republic: Stratum 3"
+        },
+        {
+          "key": "20304",
+          "value": "Czech Republic: Stratum 4"
+        },
+        {
+          "key": "20305",
+          "value": "Czech Republic: Stratum 5"
+        },
+        {
+          "key": "20306",
+          "value": "Czech Republic: Stratum 6"
+        },
+        {
+          "key": "20307",
+          "value": "Czech Republic: Stratum 7"
+        },
+        {
+          "key": "20308",
+          "value": "Czech Republic: Stratum 8"
+        },
+        {
+          "key": "20309",
+          "value": "Czech Republic: Stratum 9"
+        },
+        {
+          "key": "20310",
+          "value": "Czech Republic: Stratum 10"
+        },
+        {
+          "key": "20311",
+          "value": "Czech Republic: Stratum 11"
+        },
+        {
+          "key": "20312",
+          "value": "Czech Republic: Stratum 12"
+        },
+        {
+          "key": "20313",
+          "value": "Czech Republic: Stratum 13"
+        },
+        {
+          "key": "20314",
+          "value": "Czech Republic: Stratum 14"
+        },
+        {
+          "key": "20315",
+          "value": "Czech Republic: Stratum 15"
+        },
+        {
+          "key": "20316",
+          "value": "Czech Republic: Stratum 16"
+        },
+        {
+          "key": "20317",
+          "value": "Czech Republic: Stratum 17"
+        },
+        {
+          "key": "20318",
+          "value": "Czech Republic: Stratum 18"
+        },
+        {
+          "key": "20319",
+          "value": "Czech Republic: Stratum 19"
+        },
+        {
+          "key": "20320",
+          "value": "Czech Republic: Stratum 20"
+        },
+        {
+          "key": "20321",
+          "value": "Czech Republic: Stratum 21"
+        },
+        {
+          "key": "20322",
+          "value": "Czech Republic: Stratum 22"
+        },
+        {
+          "key": "20323",
+          "value": "Czech Republic: Stratum 23"
+        },
+        {
+          "key": "20324",
+          "value": "Czech Republic: Stratum 24"
+        },
+        {
+          "key": "20325",
+          "value": "Czech Republic: Stratum 25"
+        },
+        {
+          "key": "20326",
+          "value": "Czech Republic: Stratum 26"
+        },
+        {
+          "key": "20327",
+          "value": "Czech Republic: Stratum 27"
+        },
+        {
+          "key": "20328",
+          "value": "Czech Republic: Stratum 28"
+        },
+        {
+          "key": "20329",
+          "value": "Czech Republic: Stratum 29"
+        },
+        {
+          "key": "20330",
+          "value": "Czech Republic: Stratum 30"
+        },
+        {
+          "key": "20331",
+          "value": "Czech Republic: Stratum 31"
+        },
+        {
+          "key": "20332",
+          "value": "Czech Republic: Stratum 32"
+        },
+        {
+          "key": "20333",
+          "value": "Czech Republic: Stratum 33"
+        },
+        {
+          "key": "20334",
+          "value": "Czech Republic: Stratum 34"
+        },
+        {
+          "key": "20801",
+          "value": "Denmark: Large schools"
+        },
+        {
+          "key": "20802",
+          "value": "Denmark: Moderately small schools"
+        },
+        {
+          "key": "20803",
+          "value": "Denmark: Very Small schools"
+        },
+        {
+          "key": "24601",
+          "value": "Finland: Stratum 1"
+        },
+        {
+          "key": "24602",
+          "value": "Finland: Stratum 2"
+        },
+        {
+          "key": "24603",
+          "value": "Finland: Stratum 3"
+        },
+        {
+          "key": "24604",
+          "value": "Finland: Stratum 4"
+        },
+        {
+          "key": "24605",
+          "value": "Finland: Stratum 5"
+        },
+        {
+          "key": "24606",
+          "value": "Finland: Stratum 6"
+        },
+        {
+          "key": "24607",
+          "value": "Finland: Stratum 7"
+        },
+        {
+          "key": "24608",
+          "value": "Finland: Stratum 8"
+        },
+        {
+          "key": "24609",
+          "value": "Finland: Stratum 9"
+        },
+        {
+          "key": "24610",
+          "value": "Finland: Stratum 10"
+        },
+        {
+          "key": "24611",
+          "value": "Finland: Stratum 11"
+        },
+        {
+          "key": "24612",
+          "value": "Finland: Stratum 12"
+        },
+        {
+          "key": "25001",
+          "value": "France: Lyc\u00e9es g\u00e9n\u00e9raux et technologiques"
+        },
+        {
+          "key": "25002",
+          "value": "France: Coll\u00e8ges"
+        },
+        {
+          "key": "25003",
+          "value": "France: Lyc\u00e9es professionnels"
+        },
+        {
+          "key": "25004",
+          "value": "France: Lyc\u00e9es agricoles"
+        },
+        {
+          "key": "25005",
+          "value": "France: Moderately small schools"
+        },
+        {
+          "key": "25006",
+          "value": "France: Very small schools"
+        },
+        {
+          "key": "27601",
+          "value": "Germany: Stratum 1"
+        },
+        {
+          "key": "27602",
+          "value": "Germany: Stratum 2"
+        },
+        {
+          "key": "27603",
+          "value": "Germany: Stratum 3"
+        },
+        {
+          "key": "27604",
+          "value": "Germany: Stratum 4"
+        },
+        {
+          "key": "27605",
+          "value": "Germany: Stratum 5"
+        },
+        {
+          "key": "27606",
+          "value": "Germany: Stratum 6"
+        },
+        {
+          "key": "27607",
+          "value": "Germany: Stratum 7"
+        },
+        {
+          "key": "27608",
+          "value": "Germany: Stratum 8"
+        },
+        {
+          "key": "27609",
+          "value": "Germany: Stratum 9"
+        },
+        {
+          "key": "27610",
+          "value": "Germany: Stratum 10"
+        },
+        {
+          "key": "27611",
+          "value": "Germany: Stratum 11"
+        },
+        {
+          "key": "27612",
+          "value": "Germany: Stratum 12"
+        },
+        {
+          "key": "27613",
+          "value": "Germany: Stratum 13"
+        },
+        {
+          "key": "27614",
+          "value": "Germany: Stratum 14"
+        },
+        {
+          "key": "27615",
+          "value": "Germany: Stratum 15"
+        },
+        {
+          "key": "27616",
+          "value": "Germany: Stratum 16"
+        },
+        {
+          "key": "27617",
+          "value": "Germany: Stratum 17"
+        },
+        {
+          "key": "27618",
+          "value": "Germany: Stratum 18"
+        },
+        {
+          "key": "30001",
+          "value": "Greece: Stratum 1"
+        },
+        {
+          "key": "30002",
+          "value": "Greece: Stratum 2"
+        },
+        {
+          "key": "30003",
+          "value": "Greece: Stratum 3"
+        },
+        {
+          "key": "30004",
+          "value": "Greece: Stratum 4"
+        },
+        {
+          "key": "30005",
+          "value": "Greece: Stratum 5"
+        },
+        {
+          "key": "30006",
+          "value": "Greece: Stratum 6"
+        },
+        {
+          "key": "30007",
+          "value": "Greece: Stratum 7"
+        },
+        {
+          "key": "30008",
+          "value": "Greece: Stratum 8"
+        },
+        {
+          "key": "30009",
+          "value": "Greece: Stratum 9"
+        },
+        {
+          "key": "30010",
+          "value": "Greece: Stratum 10"
+        },
+        {
+          "key": "30011",
+          "value": "Greece: Stratum 11"
+        },
+        {
+          "key": "30012",
+          "value": "Greece: Stratum 12"
+        },
+        {
+          "key": "34401",
+          "value": "Hong Kong SAR: Stratum 1"
+        },
+        {
+          "key": "34402",
+          "value": "Hong Kong SAR: Stratum 2"
+        },
+        {
+          "key": "34403",
+          "value": "Hong Kong SAR: Stratum 3"
+        },
+        {
+          "key": "34801",
+          "value": "Hungary: Stratum 1"
+        },
+        {
+          "key": "34802",
+          "value": "Hungary: Stratum 2"
+        },
+        {
+          "key": "34803",
+          "value": "Hungary: Stratum 3"
+        },
+        {
+          "key": "34804",
+          "value": "Hungary: Stratum 4"
+        },
+        {
+          "key": "34805",
+          "value": "Hungary: Stratum 5"
+        },
+        {
+          "key": "35201",
+          "value": "Iceland: Stratum 1"
+        },
+        {
+          "key": "35202",
+          "value": "Iceland: Stratum 2"
+        },
+        {
+          "key": "35203",
+          "value": "Iceland: Stratum 3"
+        },
+        {
+          "key": "35204",
+          "value": "Iceland: Stratum 4"
+        },
+        {
+          "key": "35205",
+          "value": "Iceland: Stratum 5"
+        },
+        {
+          "key": "35206",
+          "value": "Iceland: Stratum 6"
+        },
+        {
+          "key": "35207",
+          "value": "Iceland: Stratum 7"
+        },
+        {
+          "key": "35208",
+          "value": "Iceland: Stratum 8"
+        },
+        {
+          "key": "35209",
+          "value": "Iceland: Stratum 9"
+        },
+        {
+          "key": "36001",
+          "value": "Indonesia: Stratum 1"
+        },
+        {
+          "key": "36002",
+          "value": "Indonesia: Stratum 2"
+        },
+        {
+          "key": "36003",
+          "value": "Indonesia: Stratum 3"
+        },
+        {
+          "key": "36004",
+          "value": "Indonesia: Stratum 4"
+        },
+        {
+          "key": "36005",
+          "value": "Indonesia: Stratum 5"
+        },
+        {
+          "key": "36006",
+          "value": "Indonesia: Stratum 6"
+        },
+        {
+          "key": "36007",
+          "value": "Indonesia: Stratum 7"
+        },
+        {
+          "key": "36008",
+          "value": "Indonesia: Stratum 8"
+        },
+        {
+          "key": "36009",
+          "value": "Indonesia: Stratum 9"
+        },
+        {
+          "key": "36010",
+          "value": "Indonesia: Stratum 10"
+        },
+        {
+          "key": "36011",
+          "value": "Indonesia: Stratum 11"
+        },
+        {
+          "key": "36012",
+          "value": "Indonesia: Stratum 12"
+        },
+        {
+          "key": "36013",
+          "value": "Indonesia: Stratum 13"
+        },
+        {
+          "key": "36014",
+          "value": "Indonesia: Stratum 14"
+        },
+        {
+          "key": "36015",
+          "value": "Indonesia: Stratum 15"
+        },
+        {
+          "key": "36016",
+          "value": "Indonesia: Stratum 16"
+        },
+        {
+          "key": "36017",
+          "value": "Indonesia: Stratum 17"
+        },
+        {
+          "key": "36018",
+          "value": "Indonesia: Stratum 18"
+        },
+        {
+          "key": "36019",
+          "value": "Indonesia: Stratum 19"
+        },
+        {
+          "key": "36020",
+          "value": "Indonesia: Stratum 20"
+        },
+        {
+          "key": "36021",
+          "value": "Indonesia: Stratum 21"
+        },
+        {
+          "key": "36022",
+          "value": "Indonesia: Stratum 22"
+        },
+        {
+          "key": "36023",
+          "value": "Indonesia: Stratum 23"
+        },
+        {
+          "key": "36024",
+          "value": "Indonesia: Stratum 24"
+        },
+        {
+          "key": "36025",
+          "value": "Indonesia: Stratum 25"
+        },
+        {
+          "key": "36026",
+          "value": "Indonesia: Stratum 26"
+        },
+        {
+          "key": "36027",
+          "value": "Indonesia: Stratum 27"
+        },
+        {
+          "key": "36028",
+          "value": "Indonesia: Stratum 28"
+        },
+        {
+          "key": "37201",
+          "value": "Ireland: Stratum 1"
+        },
+        {
+          "key": "37202",
+          "value": "Ireland: Stratum 2"
+        },
+        {
+          "key": "37203",
+          "value": "Ireland: Stratum 3"
+        },
+        {
+          "key": "38001",
+          "value": "Italy, Piemonte-Nord-Ovest: Stratum 1"
+        },
+        {
+          "key": "38002",
+          "value": "Italy, Piemonte-Nord-Ovest: Stratum 2"
+        },
+        {
+          "key": "38003",
+          "value": "Italy, Piemonte-Nord-Ovest: Stratum 3"
+        },
+        {
+          "key": "38004",
+          "value": "Italy, Piemonte-Nord-Ovest: Stratum 4"
+        },
+        {
+          "key": "38005",
+          "value": "Italy, Lombardia-Nord Ovest: Stratum 5"
+        },
+        {
+          "key": "38006",
+          "value": "Italy, Lombardia-Nord Ovest: Stratum 6"
+        },
+        {
+          "key": "38007",
+          "value": "Italy, Lombardia-Nord Ovest: Stratum 7"
+        },
+        {
+          "key": "38008",
+          "value": "Italy, Lombardia-Nord Ovest: Stratum 8"
+        },
+        {
+          "key": "38009",
+          "value": "Italy, Other regions: Stratum 9"
+        },
+        {
+          "key": "38010",
+          "value": "Italy, Other regions: Stratum 10"
+        },
+        {
+          "key": "38011",
+          "value": "Italy, Other regions: Stratum 11"
+        },
+        {
+          "key": "38012",
+          "value": "Italy, Other regions: Stratum 12"
+        },
+        {
+          "key": "38013",
+          "value": "Italy, Other regions: Stratum 13"
+        },
+        {
+          "key": "38014",
+          "value": "Italy, Veneto-Nord Est: Stratum 14"
+        },
+        {
+          "key": "38015",
+          "value": "Italy, Veneto-Nord Est: Stratum 15"
+        },
+        {
+          "key": "38016",
+          "value": "Italy, Veneto-Nord Est: Stratum 16"
+        },
+        {
+          "key": "38017",
+          "value": "Italy, Veneto-Nord Est: Stratum 17"
+        },
+        {
+          "key": "38018",
+          "value": "Italy, Veneto-Nord Est: Stratum 18"
+        },
+        {
+          "key": "38019",
+          "value": "Italy, Trento-Nord-Est: Stratum 19"
+        },
+        {
+          "key": "38020",
+          "value": "Italy, Trento-Nord-Est: Stratum 20"
+        },
+        {
+          "key": "38021",
+          "value": "Italy, Bolzano: Stratum 21"
+        },
+        {
+          "key": "38022",
+          "value": "Italy, Bolzano: Stratum 22"
+        },
+        {
+          "key": "38023",
+          "value": "Italy, Other regions: Stratum 23"
+        },
+        {
+          "key": "38024",
+          "value": "Italy, Other regions: Stratum 24"
+        },
+        {
+          "key": "38025",
+          "value": "Italy, Other regions: Stratum 25"
+        },
+        {
+          "key": "38026",
+          "value": "Italy, Other regions: Stratum 26"
+        },
+        {
+          "key": "38028",
+          "value": "Italy, Toscana-Centro: Stratum 28"
+        },
+        {
+          "key": "38029",
+          "value": "Italy, Toscana-Centro: Stratum 29"
+        },
+        {
+          "key": "38030",
+          "value": "Italy, Toscana-Centro: Stratum 30"
+        },
+        {
+          "key": "38031",
+          "value": "Italy, Toscana-Centro: Stratum 31"
+        },
+        {
+          "key": "38032",
+          "value": "Italy, Other regions: Stratum 32"
+        },
+        {
+          "key": "38033",
+          "value": "Italy, Other regions: Stratum 33"
+        },
+        {
+          "key": "38034",
+          "value": "Italy, Other regions: Stratum 34"
+        },
+        {
+          "key": "38035",
+          "value": "Italy, Other regions: Stratum 35"
+        },
+        {
+          "key": "38036",
+          "value": "Italy, Other regions: Stratum 36"
+        },
+        {
+          "key": "38037",
+          "value": "Italy, Other regions: Stratum 37"
+        },
+        {
+          "key": "38038",
+          "value": "Italy, Other regions: Stratum 38"
+        },
+        {
+          "key": "38039",
+          "value": "Italy, Other regions: Stratum 39"
+        },
+        {
+          "key": "38040",
+          "value": "Italy, Other regions: Stratum 40"
+        },
+        {
+          "key": "38041",
+          "value": "Italy, Other regions: Stratum 41"
+        },
+        {
+          "key": "38042",
+          "value": "Italy, Other regions: Stratum 42"
+        },
+        {
+          "key": "38043",
+          "value": "Italy, Other regions: Stratum 43"
+        },
+        {
+          "key": "38044",
+          "value": "Italy, Other regions: Stratum 44"
+        },
+        {
+          "key": "39201",
+          "value": "Japan: Public & Academic Course"
+        },
+        {
+          "key": "39202",
+          "value": "Japan: Public & Practical Course"
+        },
+        {
+          "key": "39203",
+          "value": "Japan: Private & Academic Course"
+        },
+        {
+          "key": "39204",
+          "value": "Japan: Private & Practical Course"
+        },
+        {
+          "key": "41001",
+          "value": "Korea: Metropolitan General"
+        },
+        {
+          "key": "41002",
+          "value": "Korea: Metropolitan Vocational"
+        },
+        {
+          "key": "41003",
+          "value": "Korea: Urban General"
+        },
+        {
+          "key": "41004",
+          "value": "Korea: Urban Vocational"
+        },
+        {
+          "key": "41005",
+          "value": "Korea: Urban General & Vocational"
+        },
+        {
+          "key": "41006",
+          "value": "Korea: Rural General"
+        },
+        {
+          "key": "41007",
+          "value": "Korea: Rural Vocational"
+        },
+        {
+          "key": "41008",
+          "value": "Korea: Rural General & Vocational"
+        },
+        {
+          "key": "41009",
+          "value": "Korea: Moderately small schools"
+        },
+        {
+          "key": "42801",
+          "value": "Latvia: Large schools"
+        },
+        {
+          "key": "42802",
+          "value": "Latvia: Moderately small schools"
+        },
+        {
+          "key": "42803",
+          "value": "Latvia: Very small schools"
+        },
+        {
+          "key": "43840",
+          "value": "Liechtenstein"
+        },
+        {
+          "key": "44201",
+          "value": "Luxembourg: Stratum 1"
+        },
+        {
+          "key": "44202",
+          "value": "Luxembourg: Stratum 2"
+        },
+        {
+          "key": "44203",
+          "value": "Luxembourg: Stratum 3"
+        },
+        {
+          "key": "44601",
+          "value": "Macao SAR: Stratum 1"
+        },
+        {
+          "key": "44602",
+          "value": "Macao SAR: Stratum 2"
+        },
+        {
+          "key": "44603",
+          "value": "Macao SAR: Stratum 3"
+        },
+        {
+          "key": "48401",
+          "value": "Mexico: Aguascalientes"
+        },
+        {
+          "key": "48402",
+          "value": "Mexico: Baja California"
+        },
+        {
+          "key": "48403",
+          "value": "Mexico: Baja California Sur"
+        },
+        {
+          "key": "48404",
+          "value": "Mexico: Campeche Coahuila"
+        },
+        {
+          "key": "48405",
+          "value": "Mexico: Coahuila"
+        },
+        {
+          "key": "48406",
+          "value": "Mexico: Colima"
+        },
+        {
+          "key": "48407",
+          "value": "Mexico: Chiapas"
+        },
+        {
+          "key": "48408",
+          "value": "Mexico: Chihuahua"
+        },
+        {
+          "key": "48409",
+          "value": "Mexico: Distrito Federal"
+        },
+        {
+          "key": "48410",
+          "value": "Mexico: Durango"
+        },
+        {
+          "key": "48411",
+          "value": "Mexico: Guanajuato"
+        },
+        {
+          "key": "48412",
+          "value": "Mexico: Guerrero"
+        },
+        {
+          "key": "48413",
+          "value": "Mexico: Hidalgo"
+        },
+        {
+          "key": "48414",
+          "value": "Mexico: Jalisco"
+        },
+        {
+          "key": "48415",
+          "value": "Mexico: Mexico"
+        },
+        {
+          "key": "48417",
+          "value": "Mexico: Morelos"
+        },
+        {
+          "key": "48418",
+          "value": "Mexico: Nayarit"
+        },
+        {
+          "key": "48419",
+          "value": "Mexico: Nuevo Leon"
+        },
+        {
+          "key": "48420",
+          "value": "Mexico: Oaxaca"
+        },
+        {
+          "key": "48421",
+          "value": "Mexico: Puebla"
+        },
+        {
+          "key": "48422",
+          "value": "Mexico: Queretaro"
+        },
+        {
+          "key": "48423",
+          "value": "Mexico: Quintana Roo"
+        },
+        {
+          "key": "48424",
+          "value": "Mexico: San Luis Potosi"
+        },
+        {
+          "key": "48425",
+          "value": "Mexico: Sinaloa"
+        },
+        {
+          "key": "48426",
+          "value": "Mexico: Sonora"
+        },
+        {
+          "key": "48427",
+          "value": "Mexico: Tabasco"
+        },
+        {
+          "key": "48428",
+          "value": "Mexico: Tamaulipas"
+        },
+        {
+          "key": "48429",
+          "value": "Mexico: Tlaxcala"
+        },
+        {
+          "key": "48430",
+          "value": "Mexico: Veracruz"
+        },
+        {
+          "key": "48431",
+          "value": "Mexico: Yucatan"
+        },
+        {
+          "key": "48432",
+          "value": "Mexico: Zacatecas"
+        },
+        {
+          "key": "48433",
+          "value": "Mexico: Small schools"
+        },
+        {
+          "key": "48434",
+          "value": "Mexico: Very small schools"
+        },
+        {
+          "key": "52801",
+          "value": "Netherlands: Lower secondary schools"
+        },
+        {
+          "key": "52802",
+          "value": "Netherlands: Upper secondary schools"
+        },
+        {
+          "key": "55401",
+          "value": "New Zealand"
+        },
+        {
+          "key": "57801",
+          "value": "Norway: Stratum 1"
+        },
+        {
+          "key": "57802",
+          "value": "Norway: Stratum 2"
+        },
+        {
+          "key": "57803",
+          "value": "Norway: Stratum 3"
+        },
+        {
+          "key": "57804",
+          "value": "Norway: Stratum 4"
+        },
+        {
+          "key": "61601",
+          "value": "Poland: Gimnazja"
+        },
+        {
+          "key": "61602",
+          "value": "Poland: Licea (vss)"
+        },
+        {
+          "key": "62001",
+          "value": "Portugal: A\u00e7ores"
+        },
+        {
+          "key": "62002",
+          "value": "Portugal: DREA"
+        },
+        {
+          "key": "62003",
+          "value": "Portugal: DREALG"
+        },
+        {
+          "key": "62004",
+          "value": "Portugal: DREC"
+        },
+        {
+          "key": "62005",
+          "value": "Portugal: DREL"
+        },
+        {
+          "key": "62006",
+          "value": "Portugal: DREN"
+        },
+        {
+          "key": "62007",
+          "value": "Portugal: Madeira"
+        },
+        {
+          "key": "62008",
+          "value": "Portugal: Small schools"
+        },
+        {
+          "key": "62009",
+          "value": "Portugal: Very small schools"
+        },
+        {
+          "key": "64303",
+          "value": "Russian Federation: Stratum 3"
+        },
+        {
+          "key": "64304",
+          "value": "Russian Federation: Stratum 4"
+        },
+        {
+          "key": "64307",
+          "value": "Russian Federation: Stratum 7"
+        },
+        {
+          "key": "64308",
+          "value": "Russian Federation: Stratum 8"
+        },
+        {
+          "key": "64314",
+          "value": "Russian Federation: Stratum 14"
+        },
+        {
+          "key": "64316",
+          "value": "Russian Federation: Stratum 16"
+        },
+        {
+          "key": "64318",
+          "value": "Russian Federation: Stratum 18"
+        },
+        {
+          "key": "64321",
+          "value": "Russian Federation: Stratum 21"
+        },
+        {
+          "key": "64322",
+          "value": "Russian Federation: Stratum 22"
+        },
+        {
+          "key": "64323",
+          "value": "Russian Federation: Stratum 23"
+        },
+        {
+          "key": "64324",
+          "value": "Russian Federation: Stratum 24"
+        },
+        {
+          "key": "64325",
+          "value": "Russian Federation: Stratum 25"
+        },
+        {
+          "key": "64326",
+          "value": "Russian Federation: Stratum 26"
+        },
+        {
+          "key": "64327",
+          "value": "Russian Federation: Stratum 27"
+        },
+        {
+          "key": "64331",
+          "value": "Russian Federation: Stratum 31"
+        },
+        {
+          "key": "64332",
+          "value": "Russian Federation: Stratum 32"
+        },
+        {
+          "key": "64334",
+          "value": "Russian Federation: Stratum 34"
+        },
+        {
+          "key": "64335",
+          "value": "Russian Federation: Stratum 35"
+        },
+        {
+          "key": "64336",
+          "value": "Russian Federation: Stratum 36"
+        },
+        {
+          "key": "64337",
+          "value": "Russian Federation: Stratum 37"
+        },
+        {
+          "key": "64338",
+          "value": "Russian Federation: Stratum 38"
+        },
+        {
+          "key": "64342",
+          "value": "Russian Federation: Stratum 42"
+        },
+        {
+          "key": "64343",
+          "value": "Russian Federation: Stratum 43"
+        },
+        {
+          "key": "64347",
+          "value": "Russian Federation: Stratum 47"
+        },
+        {
+          "key": "64348",
+          "value": "Russian Federation: Stratum 48"
+        },
+        {
+          "key": "64350",
+          "value": "Russian Federation: Stratum 50"
+        },
+        {
+          "key": "64351",
+          "value": "Russian Federation: Stratum 51"
+        },
+        {
+          "key": "64352",
+          "value": "Russian Federation: Stratum 52"
+        },
+        {
+          "key": "64353",
+          "value": "Russian Federation: Stratum 53"
+        },
+        {
+          "key": "64354",
+          "value": "Russian Federation: Stratum 54"
+        },
+        {
+          "key": "64355",
+          "value": "Russian Federation: Stratum 55"
+        },
+        {
+          "key": "64356",
+          "value": "Russian Federation: Stratum 56"
+        },
+        {
+          "key": "64358",
+          "value": "Russian Federation: Stratum 58"
+        },
+        {
+          "key": "64359",
+          "value": "Russian Federation: Stratum 59"
+        },
+        {
+          "key": "64361",
+          "value": "Russian Federation: Stratum 61"
+        },
+        {
+          "key": "64363",
+          "value": "Russian Federation: Stratum 63"
+        },
+        {
+          "key": "64364",
+          "value": "Russian Federation: Stratum 64"
+        },
+        {
+          "key": "64366",
+          "value": "Russian Federation: Stratum 66"
+        },
+        {
+          "key": "64370",
+          "value": "Russian Federation: Stratum 70"
+        },
+        {
+          "key": "64371",
+          "value": "Russian Federation: Stratum 71"
+        },
+        {
+          "key": "64374",
+          "value": "Russian Federation: Stratum 74"
+        },
+        {
+          "key": "64376",
+          "value": "Russian Federation: Stratum 76"
+        },
+        {
+          "key": "64377",
+          "value": "Russian Federation: Stratum 77"
+        },
+        {
+          "key": "64378",
+          "value": "Russian Federation: Stratum 78"
+        },
+        {
+          "key": "64386",
+          "value": "Russian Federation: Stratum 86"
+        },
+        {
+          "key": "70301",
+          "value": "Slovak Republic: Stratum 1"
+        },
+        {
+          "key": "70302",
+          "value": "Slovak Republic: Stratum 2"
+        },
+        {
+          "key": "70303",
+          "value": "Slovak Republic: Stratum 3"
+        },
+        {
+          "key": "70304",
+          "value": "Slovak Republic: Stratum 4"
+        },
+        {
+          "key": "70305",
+          "value": "Slovak Republic: Stratum 5"
+        },
+        {
+          "key": "70306",
+          "value": "Slovak Republic: Stratum 6"
+        },
+        {
+          "key": "70307",
+          "value": "Slovak Republic: Stratum 7"
+        },
+        {
+          "key": "70308",
+          "value": "Slovak Republic: Stratum 8"
+        },
+        {
+          "key": "70309",
+          "value": "Slovak Republic: Stratum 9"
+        },
+        {
+          "key": "70310",
+          "value": "Slovak Republic: Stratum 10"
+        },
+        {
+          "key": "70311",
+          "value": "Slovak Republic: Stratum 11"
+        },
+        {
+          "key": "70312",
+          "value": "Slovak Republic: Stratum 12"
+        },
+        {
+          "key": "70313",
+          "value": "Slovak Republic: Stratum 13"
+        },
+        {
+          "key": "70314",
+          "value": "Slovak Republic: Stratum 14"
+        },
+        {
+          "key": "70315",
+          "value": "Slovak Republic: Stratum 15"
+        },
+        {
+          "key": "70316",
+          "value": "Slovak Republic: Stratum 16"
+        },
+        {
+          "key": "70317",
+          "value": "Slovak Republic: Stratum 17"
+        },
+        {
+          "key": "70318",
+          "value": "Slovak Republic: Stratum 18"
+        },
+        {
+          "key": "70319",
+          "value": "Slovak Republic: Stratum 19"
+        },
+        {
+          "key": "70320",
+          "value": "Slovak Republic: Stratum 20"
+        },
+        {
+          "key": "72401",
+          "value": "Spain: Stratum 1"
+        },
+        {
+          "key": "72402",
+          "value": "Spain: Stratum 2"
+        },
+        {
+          "key": "72403",
+          "value": "Spain: Stratum 3"
+        },
+        {
+          "key": "72404",
+          "value": "Spain, Castilia y Leon: Stratum 4"
+        },
+        {
+          "key": "72405",
+          "value": "Spain, Castilia y Leon: Stratum 5"
+        },
+        {
+          "key": "72406",
+          "value": "Spain, Castilia y Leon: Stratum 6"
+        },
+        {
+          "key": "72407",
+          "value": "Spain, Castilia y Leon: Stratum 7"
+        },
+        {
+          "key": "72408",
+          "value": "Spain, Catalonia: Stratum 8"
+        },
+        {
+          "key": "72409",
+          "value": "Spain, Catalonia: Stratum 9"
+        },
+        {
+          "key": "72410",
+          "value": "Spain, Catalonia: Stratum 10"
+        },
+        {
+          "key": "72411",
+          "value": "Spain, Basque Country: Stratum 11"
+        },
+        {
+          "key": "72412",
+          "value": "Spain, Basque Country: Stratum 12"
+        },
+        {
+          "key": "72413",
+          "value": "Spain, Basque Country: Stratum 13"
+        },
+        {
+          "key": "72414",
+          "value": "Spain, Basque Country: Stratum 14"
+        },
+        {
+          "key": "72415",
+          "value": "Spain, Basque Country: Stratum 15"
+        },
+        {
+          "key": "72416",
+          "value": "Spain, Basque Country: Stratum 16"
+        },
+        {
+          "key": "72417",
+          "value": "Spain, Basque Country: Stratum 17"
+        },
+        {
+          "key": "72418",
+          "value": "Spain, Basque Country: Stratum 18"
+        },
+        {
+          "key": "72419",
+          "value": "Spain: Stratum 19"
+        },
+        {
+          "key": "72420",
+          "value": "Spain: Stratum 20"
+        },
+        {
+          "key": "72421",
+          "value": "Spain: Stratum 21"
+        },
+        {
+          "key": "72422",
+          "value": "Spain: Stratum 22"
+        },
+        {
+          "key": "72423",
+          "value": "Spain: Stratum 23"
+        },
+        {
+          "key": "72424",
+          "value": "Spain: Stratum 24"
+        },
+        {
+          "key": "72425",
+          "value": "Spain: Stratum 25"
+        },
+        {
+          "key": "72426",
+          "value": "Spain: Stratum 26"
+        },
+        {
+          "key": "72427",
+          "value": "Spain: Stratum 27"
+        },
+        {
+          "key": "72428",
+          "value": "Spain: Stratum 28"
+        },
+        {
+          "key": "72429",
+          "value": "Spain: Stratum 29"
+        },
+        {
+          "key": "72430",
+          "value": "Spain: Stratum 30"
+        },
+        {
+          "key": "72431",
+          "value": "Spain: Stratum 31"
+        },
+        {
+          "key": "72432",
+          "value": "Spain: Stratum 32"
+        },
+        {
+          "key": "72433",
+          "value": "Spain: Stratum 33"
+        },
+        {
+          "key": "72434",
+          "value": "Spain: Stratum 34"
+        },
+        {
+          "key": "72435",
+          "value": "Spain: Stratum 35"
+        },
+        {
+          "key": "72436",
+          "value": "Spain: Stratum 36"
+        },
+        {
+          "key": "72437",
+          "value": "Spain: Stratum 37"
+        },
+        {
+          "key": "72438",
+          "value": "Spain: Stratum 38"
+        },
+        {
+          "key": "72439",
+          "value": "Spain: Stratum 39"
+        },
+        {
+          "key": "72440",
+          "value": "Spain: Stratum 40"
+        },
+        {
+          "key": "72441",
+          "value": "Spain: Stratum 41"
+        },
+        {
+          "key": "72442",
+          "value": "Spain: Stratum 42"
+        },
+        {
+          "key": "72443",
+          "value": "Spain: Stratum 43"
+        },
+        {
+          "key": "72444",
+          "value": "Spain: Stratum 44"
+        },
+        {
+          "key": "72445",
+          "value": "Spain: Stratum 45"
+        },
+        {
+          "key": "75201",
+          "value": "Sweden: Stratum 1"
+        },
+        {
+          "key": "75202",
+          "value": "Sweden: Stratum 2"
+        },
+        {
+          "key": "75203",
+          "value": "Sweden: Stratum 3"
+        },
+        {
+          "key": "75204",
+          "value": "Sweden: Stratum 4"
+        },
+        {
+          "key": "75205",
+          "value": "Sweden: Stratum 5"
+        },
+        {
+          "key": "75206",
+          "value": "Sweden: Stratum 6"
+        },
+        {
+          "key": "75207",
+          "value": "Sweden: Stratum 7"
+        },
+        {
+          "key": "75208",
+          "value": "Sweden: Stratum 8"
+        },
+        {
+          "key": "75209",
+          "value": "Sweden: Stratum 9"
+        },
+        {
+          "key": "75601",
+          "value": "Switzerland (German): Stratum 1"
+        },
+        {
+          "key": "75602",
+          "value": "Switzerland (German): Stratum 2"
+        },
+        {
+          "key": "75603",
+          "value": "Switzerland (German): Stratum 3"
+        },
+        {
+          "key": "75604",
+          "value": "Switzerland (German): Stratum 4"
+        },
+        {
+          "key": "75605",
+          "value": "Switzerland (German): Stratum 5"
+        },
+        {
+          "key": "75606",
+          "value": "Switzerland (German): Stratum 6"
+        },
+        {
+          "key": "75607",
+          "value": "Switzerland (German): Stratum 7"
+        },
+        {
+          "key": "75608",
+          "value": "Switzerland (German): Stratum 8"
+        },
+        {
+          "key": "75609",
+          "value": "Switzerland (German): Stratum 9"
+        },
+        {
+          "key": "75610",
+          "value": "Switzerland (German): Stratum 10"
+        },
+        {
+          "key": "75611",
+          "value": "Switzerland (German): Stratum 11"
+        },
+        {
+          "key": "75612",
+          "value": "Switzerland (German): Stratum 12"
+        },
+        {
+          "key": "75613",
+          "value": "Switzerland (German): Stratum 13"
+        },
+        {
+          "key": "75614",
+          "value": "Switzerland (German): Stratum 14"
+        },
+        {
+          "key": "75615",
+          "value": "Switzerland (French): Stratum 15"
+        },
+        {
+          "key": "75616",
+          "value": "Switzerland (French): Stratum 16"
+        },
+        {
+          "key": "75617",
+          "value": "Switzerland (French): Stratum 17"
+        },
+        {
+          "key": "75618",
+          "value": "Switzerland (French): Stratum 18"
+        },
+        {
+          "key": "75619",
+          "value": "Switzerland (French): Stratum 19"
+        },
+        {
+          "key": "75620",
+          "value": "Switzerland (French): Stratum 20"
+        },
+        {
+          "key": "75621",
+          "value": "Switzerland (French): Stratum 21"
+        },
+        {
+          "key": "75623",
+          "value": "Switzerland (French): Stratum 23"
+        },
+        {
+          "key": "75624",
+          "value": "Switzerland (French): Stratum 24"
+        },
+        {
+          "key": "75625",
+          "value": "Switzerland (French): Stratum 25"
+        },
+        {
+          "key": "75626",
+          "value": "Switzerland (French): Stratum 26"
+        },
+        {
+          "key": "75628",
+          "value": "Switzerland (French): Stratum 28"
+        },
+        {
+          "key": "75629",
+          "value": "Switzerland (Italian): Stratum 29"
+        },
+        {
+          "key": "75631",
+          "value": "Switzerland (Italian): Stratum 31"
+        },
+        {
+          "key": "75632",
+          "value": "Switzerland (Italian): Stratum 32"
+        },
+        {
+          "key": "75634",
+          "value": "Switzerland (Italian): Stratum 34"
+        },
+        {
+          "key": "76401",
+          "value": "Thailand: Stratum 1"
+        },
+        {
+          "key": "76402",
+          "value": "Thailand: Stratum 2"
+        },
+        {
+          "key": "76403",
+          "value": "Thailand: Stratum 3"
+        },
+        {
+          "key": "76404",
+          "value": "Thailand: Stratum 4"
+        },
+        {
+          "key": "76405",
+          "value": "Thailand: Stratum 5"
+        },
+        {
+          "key": "76406",
+          "value": "Thailand: Stratum 6"
+        },
+        {
+          "key": "76407",
+          "value": "Thailand: Stratum 7"
+        },
+        {
+          "key": "76408",
+          "value": "Thailand: Stratum 8"
+        },
+        {
+          "key": "76409",
+          "value": "Thailand: Stratum 9"
+        },
+        {
+          "key": "76410",
+          "value": "Thailand: Stratum 10"
+        },
+        {
+          "key": "76411",
+          "value": "Thailand: Stratum 11"
+        },
+        {
+          "key": "76412",
+          "value": "Thailand: Stratum 12"
+        },
+        {
+          "key": "76413",
+          "value": "Thailand: Stratum 13"
+        },
+        {
+          "key": "76414",
+          "value": "Thailand: Stratum 14"
+        },
+        {
+          "key": "76415",
+          "value": "Thailand: Stratum 15"
+        },
+        {
+          "key": "78801",
+          "value": "Tunisia: East"
+        },
+        {
+          "key": "78802",
+          "value": "Tunisia: West"
+        },
+        {
+          "key": "79201",
+          "value": "Turkey: Stratum 1"
+        },
+        {
+          "key": "79202",
+          "value": "Turkey: Stratum 2"
+        },
+        {
+          "key": "79203",
+          "value": "Turkey: Stratum 3"
+        },
+        {
+          "key": "79204",
+          "value": "Turkey: Stratum 4"
+        },
+        {
+          "key": "79205",
+          "value": "Turkey: Stratum 5"
+        },
+        {
+          "key": "79206",
+          "value": "Turkey: Stratum 6"
+        },
+        {
+          "key": "79207",
+          "value": "Turkey: Stratum 7"
+        },
+        {
+          "key": "79208",
+          "value": "Turkey: Stratum 8"
+        },
+        {
+          "key": "79209",
+          "value": "Turkey: Stratum 9"
+        },
+        {
+          "key": "79210",
+          "value": "Turkey: Stratum 10"
+        },
+        {
+          "key": "79211",
+          "value": "Turkey: Stratum 11"
+        },
+        {
+          "key": "79212",
+          "value": "Turkey: Stratum 12"
+        },
+        {
+          "key": "79213",
+          "value": "Turkey: Stratum 13"
+        },
+        {
+          "key": "79214",
+          "value": "Turkey: Stratum 14"
+        },
+        {
+          "key": "79215",
+          "value": "Turkey: Stratum 15"
+        },
+        {
+          "key": "79216",
+          "value": "Turkey: Stratum 16"
+        },
+        {
+          "key": "79217",
+          "value": "Turkey: Stratum 17"
+        },
+        {
+          "key": "79218",
+          "value": "Turkey: Stratum 18"
+        },
+        {
+          "key": "79219",
+          "value": "Turkey: Stratum 19"
+        },
+        {
+          "key": "79220",
+          "value": "Turkey: Stratum 20"
+        },
+        {
+          "key": "79221",
+          "value": "Turkey: Stratum 21"
+        },
+        {
+          "key": "79222",
+          "value": "Turkey: Stratum 22"
+        },
+        {
+          "key": "79223",
+          "value": "Turkey: Stratum 23"
+        },
+        {
+          "key": "79224",
+          "value": "Turkey: Stratum 24"
+        },
+        {
+          "key": "79225",
+          "value": "Turkey: Stratum 25"
+        },
+        {
+          "key": "79226",
+          "value": "Turkey: Stratum 26"
+        },
+        {
+          "key": "79227",
+          "value": "Turkey: Stratum 27"
+        },
+        {
+          "key": "79228",
+          "value": "Turkey: Stratum 28"
+        },
+        {
+          "key": "79229",
+          "value": "Turkey: Stratum 29"
+        },
+        {
+          "key": "79230",
+          "value": "Turkey: Stratum 30"
+        },
+        {
+          "key": "79231",
+          "value": "Turkey: Stratum 31"
+        },
+        {
+          "key": "79232",
+          "value": "Turkey: Stratum 32"
+        },
+        {
+          "key": "79233",
+          "value": "Turkey: Stratum 33"
+        },
+        {
+          "key": "79234",
+          "value": "Turkey: Stratum 34"
+        },
+        {
+          "key": "79235",
+          "value": "Turkey: Stratum 35"
+        },
+        {
+          "key": "79236",
+          "value": "Turkey: Stratum 36"
+        },
+        {
+          "key": "79237",
+          "value": "Turkey: Stratum 37"
+        },
+        {
+          "key": "79238",
+          "value": "Turkey: Stratum 38"
+        },
+        {
+          "key": "79239",
+          "value": "Turkey: Stratum 39"
+        },
+        {
+          "key": "79240",
+          "value": "Turkey: Stratum 40"
+        },
+        {
+          "key": "79241",
+          "value": "Turkey: Stratum 41"
+        },
+        {
+          "key": "79242",
+          "value": "Turkey: Stratum 42"
+        },
+        {
+          "key": "79243",
+          "value": "Turkey: Stratum 43"
+        },
+        {
+          "key": "82601",
+          "value": "Scotland: Stratum 1"
+        },
+        {
+          "key": "82602",
+          "value": "Scotland: Stratum 2"
+        },
+        {
+          "key": "82603",
+          "value": "Scotland: Stratum 3"
+        },
+        {
+          "key": "82604",
+          "value": "Scotland: Stratum 4"
+        },
+        {
+          "key": "82605",
+          "value": "Scotland: Stratum 5"
+        },
+        {
+          "key": "82611",
+          "value": "England"
+        },
+        {
+          "key": "82613",
+          "value": "N.Ireland"
+        },
+        {
+          "key": "82614",
+          "value": "N.Ireland: Very large schools"
+        },
+        {
+          "key": "82615",
+          "value": "Wales"
+        },
+        {
+          "key": "84000",
+          "value": "United States"
+        },
+        {
+          "key": "85801",
+          "value": "Uruguay: Liceos Publicos (Mdeo/AM)"
+        },
+        {
+          "key": "85802",
+          "value": "Uruguay: Liceos Publicos (cap. dptos interior)"
+        },
+        {
+          "key": "85803",
+          "value": "Uruguay: Liceos Publicos (rural)"
+        },
+        {
+          "key": "85804",
+          "value": "Uruguay: Escuelas tecnicas (Mdeo/AM)"
+        },
+        {
+          "key": "85805",
+          "value": "Uruguay: Escuelas tecnicas (interior)"
+        },
+        {
+          "key": "85806",
+          "value": "Uruguay: Colegios privados"
+        },
+        {
+          "key": "85808",
+          "value": "Uruguay: Small schools"
+        },
+        {
+          "key": "85809",
+          "value": "Uruguay: Very small schools"
+        },
+        {
+          "key": "89101",
+          "value": "Yugoslavia: Stratum 1"
+        },
+        {
+          "key": "89102",
+          "value": "Yugoslavia: Stratum 2"
+        },
+        {
+          "key": "89103",
+          "value": "Yugoslavia: Stratum 3"
+        },
+        {
+          "key": "89104",
+          "value": "Yugoslavia: Stratum 4"
+        },
+        {
+          "key": "89105",
+          "value": "Yugoslavia: Stratum 5"
+        },
+        {
+          "key": "89106",
+          "value": "Yugoslavia: Stratum 6"
+        },
+        {
+          "key": "89107",
+          "value": "Yugoslavia: Stratum 7"
+        },
+        {
+          "key": "89108",
+          "value": "Yugoslavia: Stratum 8"
+        }
+      ],
+      "variable_description": "STRATUM (190) STRATUM",
+      "fixed_width_specification": "640-644",
+      "Year": 2003
+    }
+  ]
+}

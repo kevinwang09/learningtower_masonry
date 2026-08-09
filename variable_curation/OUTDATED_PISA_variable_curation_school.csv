@@ -1,0 +1,16 @@
+﻿"published name in package
+",short descriptions,variable class,2000,2003,2006,2009,2012,2015,2018,2022,long description,notes
+country,Country three character,factor,cnt,CNT,CNT,CNT,CNT,CNT,CNT,,,
+school_id,school ID,factor,SCHOOLID,SCHOOLID,SCHOOLID ,SCHOOLID ,SCHOOLID,CNTSCHID,CNTSCHID,CNTSCHID,school_id,
+fund_gov,Funding government,numeric,SC04Q01,SC04Q01,SC03Q01,SC03Q01,SC02Q01,SC016Q01TA,SC016Q01TA,SC016Q01TA,Percentage of School year funding comes from: Government,
+"fund_fees
+",Funding - Student Fees,numeric,SC04Q02,SC04Q02,SC03Q02,SC03Q02,SC02Q02,SC016Q02TA,SC016Q02TA,SC016Q02TA,Percentage of School year funding comes from: Student fees or School charges paid by parents or Guardians,
+fund_donations,Funding - Benefactors,numeric,SC04Q03,SC04Q03,SC03Q03,SC03Q03,SC02Q03,SC016Q03TA,SC016Q03TA,SC016Q03TA,"Percentage of School year funding comes from: Benefactors, donations, bequests, sponsorships, parent or guardian fundraising",
+enrol_boys,Number boys,numeric,sc02q01,SC02q01,SC01Q01,SC06Q01,SC07Q01,SC002Q01TA,SC002Q01TA,SC002Q01TA,"As of [Febrauary 1, 2021], what was the total school enrolment (number of students): Number of boys",
+enrol_girls,Number girls,numeric,sc02q02,SC02q02,SC01Q02,SC06Q02,SC07Q02,SC002Q02TA,SC002Q02TA,SC002Q02TA,"As of [Febrauary 1, 2021], what was the total school enrolment (number of students): Number of Girls",
+stratio,Student-Teacher ratio,numeric,stratio,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,STRATIO,stratio,
+"public_private
+",public/private,"factor(""Public"",""Private"")",SC03Q01,SC03Q01,SC02Q01,SC02Q01,SC01Q01,SC013Q01TA,SC013Q01TA,SC013Q01TA,Is your school a public of private school,
+staff_shortage,Teacher/staff Shortage ,numeric,tcshort,TCSHORT,TCSHORT,TCSHORT,TCSHORT,STAFFSHORT,STAFFSHORT,STAFFSHORT,Teacher/staff shortage as a numeric measurement,
+sch_wgt,School weight,numeric,wnrschb,SCWEIGHT,W_FSCHWT,W_FSCHWT,W_FSCHWT,W_SCHGRNRABWT,W_SCHGRNRABWT,W_SCHGRNRABWT,W_SCHGRNRABWT,
+school_size,school size,numeric,SCHLSIZE,SCHLSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,SCHSIZE,

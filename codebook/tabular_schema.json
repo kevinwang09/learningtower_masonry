@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Validation schema for PISA codebook extracted JSON files. The canonical root key is 'codebook_entries' (matching llamaconfig.json). Legacy files using 'Variables' are also accepted.",
+  "type": "object",
+  "oneOf": [
+    {
+      "description": "Canonical format: root key 'codebook_entries', matching llamaconfig.json schema.",
+      "required": ["codebook_entries"],
+      "properties": {
+        "Year": { "type": "integer" },
+        "cookbook_type": { "type": "string", "enum": ["school", "student"] },
+        "codebook_entries": { "$ref": "#/definitions/variable_array" }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Legacy batch format: root key 'Variables' (accepted for backward compatibility).",
+      "required": ["Variables"],
+      "properties": {
+        "Variables": { "$ref": "#/definitions/variable_array" }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "variable_array": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/variable_entry" },
+      "description": "A list of variable definitions from the questionnaire codebook."
+    },
+    "variable_entry": {
+      "type": "object",
+      "required": [
+        "variable_key",
+        "variable_description",
+        "format_specifier",
+        "fixed_width_specification"
+      ],
+      "properties": {
+        "variable_key": {
+          "type": "string",
+          "description": "The unique identifier or short code for the variable (e.g., 'COUNTRY', 'SC01Q01')."
+        },
+        "format_specifier": {
+          "type": "string",
+          "description": "The format specifier from the codebook (e.g., '(A3)', 'F1', 'F8.3')."
+        },
+        "variable_key_value": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["key", "value"],
+                "properties": {
+                  "key": { "type": "string" },
+                  "value": { "type": "string" }
+                }
+              }
+            },
+            { "type": "null" }
+          ],
+          "description": "A list of code-to-label mappings, or null if the variable is continuous."
+        },
+        "variable_description": {
+          "type": "string",
+          "description": "A human-readable description of the variable."
+        },
+        "fixed_width_specification": {
+          "type": "string",
+          "description": "Fixed-width column positions, formatted as 'x-y'."
+        },
+        "Year": {
+          "type": "integer",
+          "description": "Year of the PISA survey."
+        },
+        "na_values": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Array of numeric code strings representing missing or NA data."
+        },
+        "source_page": {
+          "type": "string",
+          "description": "The page number or row number where the variable was extracted from."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

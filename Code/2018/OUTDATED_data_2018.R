@@ -1,23 +1,14 @@
----
-title: "PISA 2018 Data Import"
-author: "Kim Fitter"
-date: "12/12/2019"
-output: html_document
----
-
-```{r setup, include=FALSE}
+## ----setup, include=FALSE-----------------------------------------------------
 knitr::opts_chunk$set(echo = TRUE)
-```
 
-```{r packages}
+
+## ----packages-----------------------------------------------------------------
 library(here)
 library(tidyverse)
 library(haven)
-```
 
-Use the Haven package to read in the SPSS files.
 
-```{r read in spss sav files}
+## ----read in spss sav files---------------------------------------------------
 urls <- read_csv(here("/Code/download_urls.csv")) %>% 
   filter(year==2018)
 
@@ -121,31 +112,25 @@ sch_qqq <- read_sav(here("/Data/Raw/2018/CY07_MSU_SCH_QQQ.sav"),
                    W_SCHGRNRABWT,
                    SCHSIZE))
 
-```
 
 
-```{r view summary students}
+## ----view summary students----------------------------------------------------
 skimr::skim(stu_qqq) 
-```
 
-```{r view summary students}
+
+## ----view summary schools-----------------------------------------------------
 skimr::skim(sch_qqq) 
 
-```
 
 
-
-```{r save files output}
+## ----save files output--------------------------------------------------------
 # Student questionnaire data files
 save(stu_qqq, file= here("/Data/Output/2018/stu_qqq.rds"))
 # School questionnaire data file
 save(sch_qqq,file=here("/Data/Output/2018/sch_qqq.rds"))
-```
 
-```{r}
+
+## -----------------------------------------------------------------------------
 load("Data/Output/2018/sch_qqq.rds")
 saveRDS(sch_qqq, file = here("/Data/Output/2018/sch_qqq.rds"))
-```
-
-
 

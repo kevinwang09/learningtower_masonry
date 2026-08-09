@@ -1,0 +1,89 @@
+{
+    "tier": "cost_effective",
+    "extract_version": "latest",
+    "data_schema": {
+        "type": "object",
+        "required": [
+            "Year",
+            "cookbook_type",
+            "codebook_entries"
+        ],
+        "properties": {
+            "Year": {
+                "type": "number",
+                "description": "Year of the PISA questionnaire"
+            },
+            "cookbook_type": {
+                "type": "string",
+                "description": "\"school\" or \"student\""
+            },
+            "codebook_entries": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "variable_key",
+                        "variable_description",
+                        "variable_key_value",
+                        "format_specifier",
+                        "fixed_width_specification"
+                    ],
+                    "properties": {
+                        "variable_key": {
+                            "type": "string",
+                            "description": "The unique identifier or short code for the variable (e.g., 'COUNTRY', 'ST01Q01')."
+                        },
+                        "format_specifier": {
+                            "type": "string",
+                            "description": "The original format specifier from the codebook (e.g., '(A3)' for alphanumeric, '(F2.0)' for fixed-point number)."
+                        },
+                        "variable_key_value": {
+                            "anyOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "key",
+                                            "value"
+                                        ],
+                                        "properties": {
+                                            "key": {
+                                                "type": "string",
+                                                "description": "The specific code (numeric or alphanumeric) representing a value."
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "description": "The human-readable label corresponding to the code."
+                                            }
+                                        }
+                                    },
+                                    "description": "A list of explicit code-to-label mappings for categorical or special values (e.g., '97' for 'N/A', '1' for 'Female'). This field is optional."
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "description": "A list of explicit code-to-label mappings for categorical or special values (e.g., '97' for 'N/A', '1' for 'Female'). This field is optional."
+                        },
+                        "variable_description": {
+                            "type": "string",
+                            "description": "A detailed, human-readable description of the variable."
+                        },
+                        "fixed_width_specification": {
+                            "type": "string",
+                            "description": "String that specifies the fixed-width positions of the variable. Formated as x-y, where x and y are both integers."
+                        }
+                    },
+                    "description": "Definition of a single variable in the codebook, including its identifier, description, data type, format, position, and value mappings."
+                },
+                "description": "A list of variable definitions from the questionnaire codebook."
+            }
+        },
+        "additionalProperties": false
+    },
+    "extraction_target": "per_doc",
+    "parse_tier": "fast",
+    "product_type": "extract_v2",
+    "extract_printed_page_number": false
+}

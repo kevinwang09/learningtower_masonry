@@ -1,51 +1,236 @@
 ---
 title: "Binding all country code together"
-author: "The Freemasons"
-date: "Initiated on 19 May 2020"
+author: "Kevin Wang"
+date: "19 April 2026"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Loading package 
+
 ```{r}
-library(tidyverse)
-library(here)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(here)
+})
 ```
 
-# Loading data
+# Loading School SAV files 
+
 ```{r}
-load(here("Data/Output/countrycode_kim.rda"))
-countrycode %>% glimpse()
+extract_cnt_labels <- function(file_path) {
+  # Dynamically extract year from filepath
+  year_val <- as.integer(stringr::str_extract(file_path, "20[0-9]{2}"))
+  
+  df <- haven::read_sav(file_path, col_select = c("CNT"))
+  
+  # Assert that the CNT column is of class haven_labelled
+  stopifnot("CNT column must be of class 'haven_labelled'" = inherits(df$CNT, "haven_labelled"))
+  
+  lbls <- attr(df$CNT, "labels")
+  
+  if (is.null(lbls)) {
+    return(tibble(year = integer(), country = character(), country_name = character()))
+  }
+  
+  tibble(
+    year = year_val,
+    country = as.character(lbls),
+    country_name = names(lbls)
+  )
+}
+
+sav_files <- c(
+  here("Data/Raw/2022/CY08MSP_SCH_QQQ.SAV"),
+  here("Data/Raw/2018/SCH/CY07_MSU_SCH_QQQ.sav"),
+  here("Data/Raw/2015/CY6_MS_CMB_SCH_QQQ.sav")
+)
+
+countrycode_sav <- purrr::map_dfr(sav_files, extract_cnt_labels)
+
 ```
 
-# Adding extra rows of data
-
-According to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations, 
-+ ROM represents Romania before 2002 and 
-+ YUG represents Yugoslavia before 2003. 
-+ KHM represents Cambodia and
-+ SLV represents El Salvador and
-+ PSE represents Palestine and 
-+ GTM represents Guatemala and
-+ JAM represents Jamaica and
-+ MNG represents Mongolia and
-+ PRY represents Paraguay and
-+ QUR represents Ukrainian regions (18 of 27), see https://www.oecd.org/en/publications/pisa-2022-results-volume-i-and-ii-country-notes_ed6fbcc5-en/ukrainian-regions-18-of-27_78043794-en.html#:~:text=The%20designation%20%E2%80%9CUkrainian%20regions%20(18%20of%2027)%E2%80%9D
-+ UZB represents Uzbekistan.
-
-
-Above countries are part of the PISA data, but sometimes standard country code names will not capture these countries. Hence, we will manually add them to what Kim has already curated. 
-
 ```{r}
-countrycode <- countrycode  |>  
-  bind_rows(
-    tibble(
-      country_iso3c = c("ROM", "YUG", "KHM", "SLV", "PSE", "GTM", "JAM", "MNG", "PRY", "QUR", "UZB"), 
-      country_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukrainian regions (18 of 27)", "Uzbekistan"))) |> 
-  rename(country = country_iso3c)
+source(here("Code/process_pisa.R"))
+
+spss_files <- tibble(
+  year = c(2012, 2009, 2006, 2003, 2000),
+  syntax_file = c(
+    here("Data/Raw/2012/SPSS syntax to read in school questionnaire data file.txt"),
+    here("Data/Raw/2009/PISA2009_SPSS_school.txt"),
+    here("Data/Raw/2006/PISA2006_SPSS_school.txt"),
+    here("Data/Raw/2003/PISA2003_SPSS_school.txt"),
+    here("Data/Raw/2000/PISA2000_SPSS_school_questionnaire.txt")
+  ),
+  data_file = c(
+    here("Data/Raw/2012/INT_SCQ12_DEC03.txt"),
+    here("Data/Raw/2009/INT_SCQ09_Dec11.txt"),
+    here("Data/Raw/2006/INT_Sch06_Dec07.txt"),
+    here("Data/Raw/2003/INT_schi_2003.txt"),
+    here("Data/Raw/2000/intscho.txt")
+  )
+)
+
+extract_spss_cnt_fwf <- function(year_val, syntax_file, data_file) {
+  widths <- parse_spss_syntax(syntax_file)
+  
+  df <- readr::read_fwf(
+    file = data_file, 
+    col_positions = readr::fwf_positions(
+      start = widths$start,
+      end = widths$end,
+      col_names = as.character(widths$names)
+    ),
+    show_col_types = FALSE
+  )
+  
+  # Try to grab CNT if it exists, otherwise COUNTRY
+  if ("CNT" %in% names(df)) {
+    cnt <- as.character(df$CNT)
+  } else if ("COUNTRY" %in% names(df)) {
+    cnt <- as.character(df$COUNTRY)
+  } else {
+    return(tibble(year = integer(), country = character()))
+  }
+  
+  # Clean NA and grab unique codes for this file/year
+  cnt <- unique(cnt[!is.na(cnt)])
+  
+  res <- tibble(year = as.integer(year_val), country = cnt)
+  return(res)
+}
+
+countrycode_spss <- purrr::pmap_dfr(
+  list(spss_files$year, spss_files$syntax_file, spss_files$data_file), 
+  extract_spss_cnt_fwf
+)
+
+# Manually map specific historical and transitional codes as an internal dictionary
+country_manual_dict <- tibble(
+  country = c("ROM", "YUG", "KHM", "SLV", "PSE", "GTM", "JAM", "MNG", "PRY", "QUR", "UZB", "TAP", "AZB"), 
+  manual_name = c("Romania", "Yugoslavia", "Cambodia", "El Salvador", "Palestine", "Guatemala", "Jamaica", "Mongolia", "Paraguay", "Ukrainian regions (18 of 27)", "Uzbekistan", "Chinese Taipei", "Azerbaijan")
+)
+
+# Extract known valid mappings from SAV processing (use earliest known name as historical fallback)
+sav_names_fallback <- countrycode_sav |> 
+  dplyr::filter(!is.na(country_name) & nchar(country_name) > 0) |> 
+  dplyr::group_by(country) |> 
+  dplyr::slice_min(year, n = 1, with_ties = FALSE) |> 
+  dplyr::ungroup() |> 
+  dplyr::select(country, fallback_name = country_name)
+
+# Map SPSS codes safely using the dictionaries
+countrycode_spss_mapped <- countrycode_spss |> 
+  dplyr::left_join(sav_names_fallback, by = "country") |> 
+  dplyr::left_join(country_manual_dict, by = "country") |> 
+  dplyr::mutate(country_name = dplyr::coalesce(manual_name, fallback_name)) |> 
+  dplyr::select(year, country, country_name)
+
+# Construct final chronological countrycode ledger
+countrycode <- dplyr::bind_rows(
+  countrycode_sav,
+  countrycode_spss_mapped
+) |> 
+  dplyr::arrange(desc(year), country)
 ```
 
+# Historical and Supplemental Region Mappings
+
+According to [Wikipedia's Transitional Reservations](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Transitional_reservations), standard country codes periodically change or omit transitional/regional states historically present in the PISA surveys. For instance:
+
++ `ROM` represents Romania before 2002
++ `YUG` represents Yugoslavia before 2003
++ `KHM` represents Cambodia
++ `SLV` represents El Salvador
++ `PSE` represents Palestine
++ `GTM` represents Guatemala
++ `JAM` represents Jamaica
++ `MNG` represents Mongolia
++ `PRY` represents Paraguay
++ `QUR` represents Ukrainian regions (18 of 27)
++ `UZB` represents Uzbekistan
+
+Because standard dynamic packages often fail to capture these transitional periods accurately, we process them by mapping these specific country iso3c codes statically via a manually curated internal dictionary (`country_manual_dict`) incorporated seamlessly into the extraction pipeline above.
+
+# Audit Against Legacy Package Data
+
+Before saving, we verify exactly what has changed relative to the historical dictionary previously published in the `learningtower` package. This explicit two-sided `anti_join` on both the ISO code and the region name highlights any net new entries, deprecated codes, or nomenclature adjustments.
+
+Specifically, for nomenclature changes, the discrepancy tracking table explicitly writes out when a nomenclature shift occurred and identifies exactly which years that specific change was applied to (e.g., documenting that Turkey shifted to "Türkiye", Moldova to "Republic of Moldova", and Vietnam to "Viet Nam" in the 2022 dataset).
 ```{r}
-full_data_transfer_folder = "Data/Output/Transfer/data"
+# Safely load the legacy dataset without overwriting our newly built `countrycode` object
+env_legacy <- new.env()
+data(countrycode, package = "learningtower", envir = env_legacy)
+legacy_countrycode <- env_legacy$countrycode
+
+# Synthesize discrepancies into a unified tracking table natively
+discrepancies <- dplyr::full_join(
+  countrycode |> 
+    dplyr::group_by(country, country_name) |> 
+    dplyr::summarize(years = paste(sort(unique(year)), collapse = ", "), .groups = "drop"),
+  legacy_countrycode |> dplyr::rename(legacy_name = country_name),
+  by = "country"
+) |> 
+  dplyr::group_by(country) |> 
+  dplyr::summarize(
+    legacy_name = unique(legacy_name)[1],
+    legacy_years = paste(na.omit(years[!is.na(country_name) & !is.na(legacy_name) & country_name == legacy_name]), collapse = " ; "),
+    current_name = paste(na.omit(country_name[is.na(legacy_name) | is.na(country_name) | country_name != legacy_name]), collapse = " ; "),
+    current_years = paste(na.omit(years[is.na(legacy_name) | is.na(country_name) | country_name != legacy_name]), collapse = " ; "),
+    .groups = "drop"
+  ) |> 
+  # Isolate only the rows that do not align perfectly (i.e., any current name exists, or it was completely dropped)
+  dplyr::filter(current_name != "" | (legacy_years == "" & !is.na(legacy_name))) |> 
+  dplyr::mutate(
+    status = dplyr::case_when(
+      is.na(legacy_name) ~ "New Addition",
+      current_name == "" ~ "Dropped Legacy",
+      TRUE               ~ "Nomenclature Change"
+    )
+  ) |> 
+  dplyr::arrange(status, country)
+
+# Render beautifully using gt to explicitly classify discrepancy semantics
+discrepancies |> 
+  gt::gt() |> 
+  gt::tab_style(
+    style = gt::cell_fill(color = "#e6ffe6"), # Light green
+    locations = gt::cells_body(rows = status == "New Addition")
+  ) |> 
+  gt::tab_style(
+    style = gt::cell_fill(color = "#ffe6e6"), # Light pink
+    locations = gt::cells_body(rows = status == "Dropped Legacy")
+  ) |> 
+  gt::tab_style(
+    style = gt::cell_fill(color = "#fffbe6"), # Light yellow
+    locations = gt::cells_body(rows = status == "Nomenclature Change")
+  ) |> 
+  gt::tab_header(
+    title = "Country Nomenclature Discrepancies",
+    subtitle = "Comparing freshly parsed mappings vs learningtower legacy data"
+  ) |> 
+  gt::cols_label(
+    country = "ISO Code",
+    legacy_name = "Legacy Name",
+    legacy_years = "Legacy Years",
+    current_name = "Current Name",
+    current_years = "Current Years",
+    status = "Delta"
+  )
+```
+
+# Saving the Curated Country Registry
+
+We finally export the standardized registry mapping for deployment in the main package. Note that we ensure `distinct()` is applied right before export and the chronological `year` anchor is intentionally dropped to finalize the schema.
+
+```{r}
+# Drop metadata explicitly before finalize 
+countrycode <- countrycode |> 
+  dplyr::select(country, country_name) |> 
+  dplyr::distinct()
+
+full_data_transfer_folder <- "Data/Output/Transfer/data"
 dir.create(here(full_data_transfer_folder), recursive = TRUE, showWarnings = FALSE)
 save(countrycode, file = here(full_data_transfer_folder, "countrycode.rda"), compress = "xz")
 ```

@@ -1,0 +1,45 @@
+tasks:
+  - year: 2000
+    schema_file: llamaconfig.json
+    school_file: 2000school.pdf
+    student_file: 2000student.pdf
+  - year: 2003
+    schema_file: llamaconfig.json
+    school_file: 2003school.pdf
+    student_file: 2003student.pdf
+  - year: 2006
+    schema_file: llamaconfig.json
+    school_file: 2006school.pdf
+    student_file: 2006student.pdf
+  - year: 2009
+    schema_file: llamaconfig.json
+    school_file: 2009school.pdf
+    student_file: 2009student.pdf
+  - year: 2012
+    schema_file: llamaconfig.json
+    school_file: 2012school.pdf
+    student_file: 2012student.pdf
+  - year: 2015
+    schema_file: llamaconfig.json
+    school_file: 
+      file: 2015codebook.xlsx
+      sheet: "School"
+    student_file: 
+      file: 2015codebook.xlsx
+      sheet: "Student - QQQ"
+  - year: 2018
+    schema_file: llamaconfig.json
+    school_file: 
+      file: 2018codebook.xlsx
+      sheet: "CY07_MSU_SCH_QQQ"
+    student_file: 
+      file: 2018codebook.xlsx
+      sheet: "CY07_MSU_STU_QQQ"
+  - year: 2022
+    schema_file: llamaconfig.json
+    school_file: 
+      file: 2022codebook.xlsx
+      sheet: "CY08MSP_SCH_QQQ"
+    student_file: 
+      file: 2022codebook.xlsx
+      sheet: "CY08MSP_STU_QQQ"

@@ -1,32 +1,179 @@
-﻿"published name in package
-",short descriptions,variable class,2000,2003,2006,2009,2012,2015,2018,2022,notes
-country_iso3c,Country three character,character,cnt,CNT,CNT,CNT,CNT,CNT,CNT,CNT,
-school_id,school ID,"integer
-",SCHOOLID,SCHOOLID,SCHOOLID ,SCHOOLID ,SCHOOLID,CNTSCHID,CNTSCHID,CNTSCHID,change coding from 2012 to 2015
-student_id,Student ID,"integer
-",STIDSTD,STIDSTD,STIDSTD,STIDSTD,STIDSTD,CNTSTUID,CNTSTUID,CNTSTUID,change coding from 2012 to 2015
-mother_educ,Mother <Highest Schooling>,"integer
-",,ST11R01,ST06Q01,ST10Q01,ST13Q01,ST005Q01TA,ST005Q01TA,ST005Q01JA,
-father_educ,Father <Highest Schooling>,"integer
-",,ST13R01,ST09Q01,ST14Q01,ST17Q01,ST007Q01TA,ST007Q01TA,ST007Q01JA,
-gender,Gender ,character,ST03Q01,ST03Q01,ST04Q01,ST04Q01,ST04Q01,ST004D01T,ST004D01T,ST004Q01TA,encoded as binary
-computer,Possessions computer,character ,ST22Q04,ST17Q03,ST13Q04,ST20Q04,ST26Q04,ST011Q04TA,ST011Q04TA,ST250Q02JA,
-internet,Possessions Internet,character ,ST21Q04,ST17Q06,ST13Q06,ST20Q06,ST26Q06,ST011Q06TA,ST011Q06TA,ST250Q05JA,
-math,Plausible value 1 in mathematics,numeric,pv1math,ty,PV1MATH,PV1MATH,PV1MATH,PV1MATH,PV1MATH,PV1MATC,
-read,Plausible value 1 in reading,numeric,pv1read,PV1READ,PV1READ,PV1READ,PV1READ,PV1READ,PV1READ,PV1REAC,
-science,Plausible value 1 in science,numeric,pv1scie,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIE,PV1SCIC,
-stu_wgt,Final student weight,numeric,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,W_FSTUWT,N/A,
-,,,,,,,,,,,
-desk,Possessions desk,character ,ST21Q07,ST17Q01,ST13Q01,ST20Q01,ST26Q01,ST011Q01TA,ST011Q01TA,N/A,
-room,Possessions own room,character ,ST21Q02,ST17Q02,ST13Q02,ST20Q02,ST26Q02,ST011Q02TA,ST011Q02TA,ST250Q01JA,
-,Possessions textbooks,,,ST17Q11,ST13Q11,,ST26Q10,,ST011Q11TA,,
-dishwasher,Possessions dishwasher,character ,ST21Q01,ST17Q13,ST13Q13,ST20Q13 ,ST26Q13,,N/A,N/A,
-,How many cell phones,,,,ST14Q01,,ST27Q01,,,ST254Q06JA,
-television,How many televisions,integer,ST22Q02,,ST14Q02,ST21Q02,ST27Q02,ST012Q01TA,ST012Q01TA,ST254Q01JA,
-computer_n,How many computers,"integer
-",ST22Q04,,ST14Q03,ST21Q03 ,ST27Q03,ST012Q06NA,ST012Q06NA,"ST254Q02JA
-ST254Q03JA ",
-car,How many cars,integer,ST22Q06,,ST14Q04,ST21Q04,ST27Q04,ST012Q02TA,ST012Q02TA,ST251Q01JA,
-book,How many books at home,integer,ST37Q01,ST19Q01,ST15Q01,ST22Q01,ST28Q01,ST013Q01TA,ST013Q01TA,ST255Q01JA,
-wealth,Wealth,numeric,WEALTH,,WEALTH,WEALTH,WEALTH,WEALTH,WEALTH,N/A,created by other columns
-ESCS,"Index of economic, social and cultural status",numeric,HISEI,ESCS,ESCS,ESCS,ESCS,ESCS,ESCS,ESCS,
+# Column Definitions:
+# year: The year of the PISA cycle
+# target_name: Required output variable name in the processed data frame
+# source_col: Name of the variable in the raw source data
+# transformation: The R function applied from the transformation registry to standardize the data
+# na_values: Code or values that represent missing data
+# description: Text mapping or label describing the variable
+# type: Target R variable type (e.g. numeric, character, factor, integer) to assert the final output holds
+# note: Extra contextual information
+# PRIMARY KEY NOTE: The combination of country, school_id, and student_id forms a unique primary key for each row. None of these identifiers can contain missing values (NAs).
+year,target_name,source_col,transformation,na_values,description,type,note
+2022,country,CNT,as.character,,Country three character,character,
+2022,school_id,CNTSCHID,as.character,,school ID,character,
+2022,student_id,CNTSTUID,as.character,,Student ID,character,
+2022,mother_educ,ST005Q01JA,isced3a1,,Mother <Highest Schooling>,factor,
+2022,father_educ,ST007Q01JA,isced3a1,,Father <Highest Schooling>,factor,
+2022,gender,ST004D01T,fe1ma2,,Gender,factor,encoded as binary
+2022,computer,COMPUTER,yes1no2,,Possessions computer,factor,derived from summing ST254Q02JA and ST254Q03JA
+2022,internet,ST250Q05JA,yes1no2,,Possessions Internet,factor,
+2022,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2022,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2022,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2022,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2022,desk,,yes1no2,,Possessions desk,factor,
+2022,room,ST250Q01JA,yes1no2,,Possessions own room,factor,
+2022,dishwasher,,yes1no2,,Possessions dishwasher,factor,
+2022,television,ST254Q01JA,none1one2two3threemore4,,How many televisions,factor,
+2022,computer_n,COMPUTER_N,none1one2two3threemore4,,How many computers,factor,derived manually in data_2022
+2022,car,ST251Q01JA,none1one2two3threemore4,,How many cars,factor,
+2022,book,ST255Q01JA,book_levels_6,,How many books at home,factor,
+2022,wealth,,as.numeric,95;97;98;99,Wealth,numeric,"This variable is not present in the original PISA 2022 data"
+2022,escs,ESCS,as.numeric,95;97;98;99,Index of economic social and cultural status,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
+2018,country,CNT,as.factor,,Country three character,factor,
+2018,school_id,CNTSCHID,as.character,,school ID,character,
+2018,student_id,CNTSTUID,as.character,,Student ID,character,
+2018,mother_educ,ST005Q01TA,isced3a1,,Mother <Highest Schooling>,factor,
+2018,father_educ,ST007Q01TA,isced3a1,,Father <Highest Schooling>,factor,
+2018,gender,ST004D01T,fe1ma2,,Gender,factor,encoded as binary
+2018,computer,ST011Q04TA,yes1no2,,Possessions computer,factor,
+2018,internet,ST011Q06TA,yes1no2,,Possessions Internet,factor,
+2018,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2018,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2018,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2018,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2018,desk,ST011Q01TA,yes1no2,,Possessions desk,factor,
+2018,room,ST011Q02TA,yes1no2,,Possessions own room,factor,
+2018,dishwasher,ST011Q16NA,yes1no2,,Possessions dishwasher,factor,
+2018,television,ST012Q01TA,none1one2two3threemore4,,How many televisions,factor,
+2018,computer_n,ST012Q06NA,none1one2two3threemore4,,How many computers,factor,
+2018,car,ST012Q02TA,none1one2two3threemore4,,How many cars,factor,
+2018,book,ST013Q01TA,book_levels_6,,How many books at home,factor,
+2018,wealth,WEALTH,as.numeric,95;97;98;99,Wealth,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
+2018,escs,ESCS,as.numeric,95;97;98;99,Index of economic social and cultural status,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
+2015,country,CNT,as.factor,,Country three character,factor,
+2015,school_id,CNTSCHID,as.character,,school ID,character,
+2015,student_id,CNTSTUID,as.character,,Student ID,character,
+2015,mother_educ,ST005Q01TA,isced3a1,,Mother <Highest Schooling>,factor,
+2015,father_educ,ST007Q01TA,isced3a1,,Father <Highest Schooling>,factor,
+2015,gender,ST004D01T,fe1ma2,,Gender,factor,encoded as binary
+2015,computer,ST011Q04TA,yes1no2,,Possessions computer,factor,
+2015,internet,ST011Q06TA,yes1no2,,Possessions Internet,factor,
+2015,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2015,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2015,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2015,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2015,desk,ST011Q01TA,yes1no2,,Possessions desk,factor,
+2015,room,ST011Q02TA,yes1no2,,Possessions own room,factor,
+2015,dishwasher,,yes1no2,,Possessions dishwasher,factor,
+2015,television,ST012Q01TA,none1one2two3threemore4,,How many televisions,factor,
+2015,computer_n,ST012Q06NA,none1one2two3threemore4,,How many computers,factor,
+2015,car,ST012Q02TA,none1one2two3threemore4,,How many cars,factor,
+2015,book,ST013Q01TA,book_levels_6,,How many books at home,factor,
+2015,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2015,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2012,country,CNT,as.factor,,Country three character,factor,
+2012,school_id,SCHOOLID,as.character,,school ID,character,
+2012,student_id,StIDStd,as.character,,Student ID,character,
+2012,mother_educ,ST13Q01,isced3a1,,Mother <Highest Schooling>,factor,
+2012,father_educ,ST17Q01,isced3a1,,Father <Highest Schooling>,factor,
+2012,gender,ST04Q01,fe1ma2,,Gender,factor,encoded as binary
+2012,computer,ST26Q04,yes1no2,,Possessions computer,factor,
+2012,internet,ST26Q06,yes1no2,,Possessions Internet,factor,
+2012,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2012,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2012,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2012,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2012,desk,ST26Q01,yes1no2,,Possessions desk,factor,
+2012,room,ST26Q02,yes1no2,,Possessions own room,factor,
+2012,dishwasher,ST26Q13,yes1no2,,Possessions dishwasher,factor,
+2012,television,ST27Q02,none1one2two3threemore4,,How many televisions,factor,
+2012,computer_n,ST27Q03,none1one2two3threemore4,,How many computers,factor,
+2012,car,ST27Q04,none1one2two3threemore4,,How many cars,factor,
+2012,book,ST28Q01,book_levels_6,,How many books at home,factor,
+2012,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2012,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2009,country,CNT,as.factor,,Country three character,factor,
+2009,school_id,SCHOOLID,as.character,,school ID,character,
+2009,student_id,StIDStd,as.character,,Student ID,character,
+2009,mother_educ,ST10Q01,isced3a1,,Mother <Highest Schooling>,factor,
+2009,father_educ,ST14Q01,isced3a1,,Father <Highest Schooling>,factor,
+2009,gender,ST04Q01,fe1ma2,,Gender,factor,encoded as binary
+2009,computer,ST20Q04,yes1no2,,Possessions computer,factor,
+2009,internet,ST20Q06,yes1no2,,Possessions Internet,factor,
+2009,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2009,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2009,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2009,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2009,desk,ST20Q01,yes1no2,,Possessions desk,factor,
+2009,room,ST20Q02,yes1no2,,Possessions own room,factor,
+2009,dishwasher,ST20Q13,yes1no2,,Possessions dishwasher,factor,
+2009,television,ST21Q02,none1one2two3threemore4,,How many televisions,factor,
+2009,computer_n,ST21Q03,none1one2two3threemore4,,How many computers,factor,
+2009,car,ST21Q04,none1one2two3threemore4,,How many cars,factor,
+2009,book,ST22Q01,book_levels_6,,How many books at home,factor,
+2009,wealth,WEALTH,as.numeric,9997;9999,Wealth,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2009,escs,ESCS,as.numeric,9997;9999,Index of economic social and cultural status,numeric,"The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
+2006,country,CNT,as.character,,Country three character,character,
+2006,school_id,SCHOOLID,as.character,,school ID,character,
+2006,student_id,STIDSTD,as.character,,Student ID,character,
+2006,mother_educ,ST06Q01,isced3a1,,Mother <Highest Schooling>,factor,
+2006,father_educ,ST09Q01,isced3a1,,Father <Highest Schooling>,factor,
+2006,gender,ST04Q01,fe1ma2,,Gender,factor,encoded as binary
+2006,computer,ST13Q04,yes1no2,,Possessions computer,factor,
+2006,internet,ST13Q06,yes1no2,,Possessions Internet,factor,
+2006,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2006,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2006,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2006,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2006,desk,ST13Q01,yes1no2,,Possessions desk,factor,
+2006,room,ST13Q02,yes1no2,,Possessions own room,factor,
+2006,dishwasher,ST13Q13,yes1no2,,Possessions dishwasher,factor,
+2006,television,ST14Q02,none1one2two3threemore4,,How many televisions,factor,
+2006,computer_n,ST14Q03,none1one2two3threemore4,,How many computers,factor,
+2006,car,ST14Q04,none1one2two3threemore4,,How many cars,factor,
+2006,book,ST15Q01,book_levels_6,,How many books at home,factor,
+2006,wealth,WEALTH,as.numeric,997;999,Wealth,numeric,
+2006,escs,ESCS,as.numeric,997;999,Index of economic social and cultural status,numeric,
+2003,country,CNT,as.factor,,Country three character,factor,
+2003,school_id,SCHOOLID,as.character,,school ID,character,
+2003,student_id,STIDSTD,as.character,,Student ID,character,
+2003,mother_educ,ST11R01,isced3a1,,Mother <Highest Schooling>,factor,
+2003,father_educ,ST13R01,isced3a1,,Father <Highest Schooling>,factor,
+2003,gender,ST03Q01,fe1ma2,,Gender,factor,encoded as binary
+2003,computer,ST17Q04,yes1no2,,Possessions computer,factor,
+2003,internet,ST17Q06,yes1no2,,Possessions Internet,factor,
+2003,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
+2003,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
+2003,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
+2003,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
+2003,desk,ST17Q01,yes1no2,,Possessions desk,factor,
+2003,room,ST17Q02,yes1no2,,Possessions own room,factor,
+2003,dishwasher,ST17Q13,yes1no2,,Possessions dishwasher,factor,
+2003,television,NA,as.logical,,How many televisions,logical,missing in all entries in year 2003
+2003,computer_n,NA,as.logical,,How many computers,logical,missing in all entries in year 2003
+2003,car,NA,as.logical,,How many cars,logical,missing in all entries in year 2003
+2003,book,ST19Q01,book_levels_6,,How many books at home,factor,
+2003,wealth,NA,as.logical,,Wealth,logical,missing in all entries in year 2003
+2003,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,
+2000,country,COUNTRY,as.factor,,Country three character,factor,
+2000,school_id,SCHOOLID,as.character,,school ID,character,
+2000,student_id,STIDSTD,as.character,,Student ID,character,
+2000,mother_educ,NA,as.logical,,Mother <Highest Schooling>,logical,missing in all entries in year 2000
+2000,father_educ,NA,as.logical,,Father <Highest Schooling>,logical,missing in all entries in year 2000
+2000,gender,ST03Q01,as.factor,,Gender,factor,encoded as binary
+2000,computer,NA,as.logical,,Possessions computer,logical,missing in all entries in year 2000
+2000,internet,ST21Q04,yes1no2,,Possessions Internet,factor,
+2000,math,pv1math,as.numeric,,Plausible value 1 in mathematics,numeric,
+2000,read,pv1read,as.numeric,,Plausible value 1 in reading,numeric,
+2000,science,pv1scie,as.numeric,,Plausible value 1 in science,numeric,
+2000,stu_wgt,w_fstuwt,as.numeric,,Final student weight,numeric,
+2000,desk,ST21Q07,yes1no2,,Possessions desk,factor,
+2000,room,ST21Q02,yes1no2,,Possessions own room,factor,
+2000,dishwasher,ST21Q01,yes1no2,,Possessions dishwasher,factor,
+2000,television,ST22Q02,none1one2two3threemore4,,How many televisions,factor,
+2000,computer_n,ST22Q04,none1one2two3threemore4,,How many computers,factor,
+2000,car,ST22Q06,none1one2two3threemore4,,How many cars,factor,
+2000,book,ST37Q01,as.factor,,How many books at home,factor,
+2000,wealth,wealth,as.numeric,,Wealth,numeric,
+2000,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,"This variable is stored in a separate ESCS_PISA2000.sav file and it is not in the codebook."
