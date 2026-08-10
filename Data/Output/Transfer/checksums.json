@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-08-10T20:43:15Z",
+  "algorithm": "md5",
+  "total_files": 20,
+  "files": {
+    "data/countrycode.rda": {
+      "md5": "d101aef59e069ede9ba923afb85f17c0",
+      "size_bytes": 1408,
+      "destination_relative": "data/countrycode.rda"
+    },
+    "data/school.rda": {
+      "md5": "2f4e192eec0ee9eee683a54b8649fdf3",
+      "size_bytes": 1520472,
+      "destination_relative": "data/school.rda"
+    },
+    "data/student_subset_2000.rda": {
+      "md5": "70e68a3091f29d731b5ac4b3a71eecba",
+      "size_bytes": 38616,
+      "destination_relative": "data/student_subset_2000.rda"
+    },
+    "data/student_subset_2003.rda": {
+      "md5": "bd9899b277d6d2221134719b58972daf",
+      "size_bytes": 38492,
+      "destination_relative": "data/student_subset_2003.rda"
+    },
+    "data/student_subset_2006.rda": {
+      "md5": "3e56a8c08f23126333ae92c6783efb31",
+      "size_bytes": 45388,
+      "destination_relative": "data/student_subset_2006.rda"
+    },
+    "data/student_subset_2009.rda": {
+      "md5": "77878e354fe7f09d1bd38f76a7d2f761",
+      "size_bytes": 43184,
+      "destination_relative": "data/student_subset_2009.rda"
+    },
+    "data/student_subset_2012.rda": {
+      "md5": "4011b31194cd92e44fcafa2691c1ba52",
+      "size_bytes": 43308,
+      "destination_relative": "data/student_subset_2012.rda"
+    },
+    "data/student_subset_2015.rda": {
+      "md5": "1cfdcb15bb72a3829b050168af6b09e1",
+      "size_bytes": 49936,
+      "destination_relative": "data/student_subset_2015.rda"
+    },
+    "data/student_subset_2018.rda": {
+      "md5": "58db9bb8517e48ca0b8c8c2c17aeec8e",
+      "size_bytes": 51036,
+      "destination_relative": "data/student_subset_2018.rda"
+    },
+    "data/student_subset_2022.rda": {
+      "md5": "5d4ee52459f20ed1efed117f50d9b37e",
+      "size_bytes": 44080,
+      "destination_relative": "data/student_subset_2022.rda"
+    },
+    "student_full_data/student_2000.rds": {
+      "md5": "e445c5f8ab8b984866ef43a31480bb17",
+      "size_bytes": 2409148,
+      "destination_relative": "student_full_data/student_2000.rds"
+    },
+    "student_full_data/student_2003.rds": {
+      "md5": "4925ef1284d48a10152193f8e5f4dd7e",
+      "size_bytes": 2538912,
+      "destination_relative": "student_full_data/student_2003.rds"
+    },
+    "student_full_data/student_2006.rds": {
+      "md5": "fb8a23325126ce27e3f3fce48095ff06",
+      "size_bytes": 4352004,
+      "destination_relative": "student_full_data/student_2006.rds"
+    },
+    "student_full_data/student_2009.rds": {
+      "md5": "51748cd88b02400666d6802730175b40",
+      "size_bytes": 6095628,
+      "destination_relative": "student_full_data/student_2009.rds"
+    },
+    "student_full_data/student_2012.rds": {
+      "md5": "c069219e33f59d428c91f70f5c8d4607",
+      "size_bytes": 4988264,
+      "destination_relative": "student_full_data/student_2012.rds"
+    },
+    "student_full_data/student_2015.rds": {
+      "md5": "4397e738323fba460afafb02beaddd72",
+      "size_bytes": 8611908,
+      "destination_relative": "student_full_data/student_2015.rds"
+    },
+    "student_full_data/student_2018.rds": {
+      "md5": "3756708eb3c85f540345fee8cb2c351a",
+      "size_bytes": 10280712,
+      "destination_relative": "student_full_data/student_2018.rds"
+    },
+    "student_full_data/student_2022.rds": {
+      "md5": "fa12b6f4432681b120567eadb69320e1",
+      "size_bytes": 9566072,
+      "destination_relative": "student_full_data/student_2022.rds"
+    },
+    "README_student_data_missing_values_summary.png": {
+      "md5": "178a8750e0046626aade126555b659f2",
+      "size_bytes": 355148,
+      "destination_relative": "man/figures/README_student_data_missing_values_summary.png"
+    },
+    "README_school_data_missing_values_summary.png": {
+      "md5": "092f33e6f2814ea3d368c8b9978a246f",
+      "size_bytes": 302260,
+      "destination_relative": "man/figures/README_school_data_missing_values_summary.png"
+    }
+  }
+}
