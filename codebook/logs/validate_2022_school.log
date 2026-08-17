@@ -4,26 +4,44 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variable and NA Value Check ---
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] CNTSCHID (target: school_id) -> Exists in codebook (No NA checking required)
- [OK] SC013Q01TA (target: public_private) -> Exists in codebook (No NA checking required)
- [OK] SC016Q01TA (target: fund_gov) -> Exists in codebook (No NA checking required)
- [OK] SC016Q02TA (target: fund_fees) -> Exists in codebook (No NA checking required)
- [OK] SC016Q03TA (target: fund_donation) -> Exists in codebook (No NA checking required)
- [OK] SC002Q01TA (target: enrol_boys) -> Exists in codebook (No NA checking required)
- [OK] SC002Q02TA (target: enrol_girls) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA01 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA02 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC018Q02TA01 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC018Q02TA02 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC002Q01TA (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC002Q02TA (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA01 (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA02 (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC002Q01TA (target: school_size) -> Exists in codebook (No NA checking required)
- [OK] SC002Q02TA (target: school_size) -> Exists in codebook (No NA checking required)
+ [WARN] SC013Q01TA (target: public_private) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC016Q01TA (target: fund_gov) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC016Q02TA (target: fund_fees) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC016Q03TA (target: fund_donation) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC002Q01TA (target: enrol_boys) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC002Q02TA (target: enrol_girls) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC018Q01TA01 (target: staff_shortage) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC018Q01TA02 (target: staff_shortage) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC018Q02TA01 (target: staff_shortage) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC018Q02TA02 (target: staff_shortage) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC002Q01TA (target: stratio) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC002Q02TA (target: stratio) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC018Q01TA01 (target: stratio) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC018Q01TA02 (target: stratio) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC002Q01TA (target: school_size) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] SC002Q02TA (target: school_size) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
  [OK] W_SCHGRNRABWT (target: sch_wgt) -> Exists in codebook (No NA checking required)
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 418
+
+--- Validation Warnings ---
+- [WARNING] Variable 'SC013Q01TA' (target: public_private) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC016Q01TA' (target: fund_gov) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC016Q02TA' (target: fund_fees) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC016Q03TA' (target: fund_donation) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC002Q01TA' (target: enrol_boys) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC002Q02TA' (target: enrol_girls) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC018Q01TA01' (target: staff_shortage) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC018Q01TA02' (target: staff_shortage) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC018Q02TA01' (target: staff_shortage) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC018Q02TA02' (target: staff_shortage) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC002Q01TA' (target: stratio) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC002Q02TA' (target: stratio) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC018Q01TA01' (target: stratio) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC018Q01TA02' (target: stratio) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC002Q01TA' (target: school_size) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'SC002Q02TA' (target: school_size) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
 
 --- Validation Passed! ---
 All variables exist and NA values match.

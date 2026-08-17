@@ -5,29 +5,40 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
  [OK] STIDSTD (target: student_id) -> Exists in codebook (No NA checking required)
- [OK] ST11R01 (target: mother_educ) -> Exists in codebook (No NA checking required)
- [OK] ST13R01 (target: father_educ) -> Exists in codebook (No NA checking required)
- [OK] ST03Q01 (target: gender) -> Exists in codebook (No NA checking required)
- [OK] ST17Q04 (target: computer) -> Exists in codebook (No NA checking required)
- [OK] ST17Q06 (target: internet) -> Exists in codebook (No NA checking required)
- [OK] PV1MATH (target: math) -> Exists in codebook (No NA checking required)
+ [WARN] ST11R01 (target: mother_educ) -> Exists in codebook, but potential NA keys not in CSV: {'9'}
+ [WARN] ST13R01 (target: father_educ) -> Exists in codebook, but potential NA keys not in CSV: {'9'}
+ [WARN] ST03Q01 (target: gender) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [WARN] ST17Q04 (target: computer) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [WARN] ST17Q06 (target: internet) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [WARN] PV1MATH (target: math) -> Exists in codebook, but potential NA keys not in CSV: {'9997.0000'}
  [OK] PV1READ (target: read) -> Exists in codebook (No NA checking required)
- [OK] PV1SCIE (target: science) -> Exists in codebook (No NA checking required)
- [OK] W_FSTUWT (target: stu_wgt) -> Exists in codebook (No NA checking required)
- [OK] ST17Q01 (target: desk) -> Exists in codebook (No NA checking required)
- [OK] ST17Q02 (target: room) -> Exists in codebook (No NA checking required)
- [OK] ST17Q13 (target: dishwasher) -> Exists in codebook (No NA checking required)
- [OK] ST19Q01 (target: book) -> Exists in codebook (No NA checking required)
- [OK] ESCS (target: escs) -> Exists in codebook (No NA checking required)
+ [WARN] PV1SCIE (target: science) -> Exists in codebook, but potential NA keys not in CSV: {'9997.0000'}
+ [WARN] W_FSTUWT (target: stu_wgt) -> Exists in codebook, but potential NA keys not in CSV: {'9997.0000'}
+ [WARN] ST17Q01 (target: desk) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [WARN] ST17Q02 (target: room) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [WARN] ST17Q13 (target: dishwasher) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [WARN] ST19Q01 (target: book) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 387
 
 --- Validation Warnings ---
+- [WARNING] Variable 'ST11R01' (target: mother_educ) has potential missing value codes in codebook not listed in CSV na_values: {'9'}
+- [WARNING] Variable 'ST13R01' (target: father_educ) has potential missing value codes in codebook not listed in CSV na_values: {'9'}
+- [WARNING] Variable 'ST03Q01' (target: gender) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}. Note: encoded as binary
+- [WARNING] Variable 'ST17Q04' (target: computer) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
+- [WARNING] Variable 'ST17Q06' (target: internet) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
+- [WARNING] Variable 'PV1MATH' (target: math) has potential missing value codes in codebook not listed in CSV na_values: {'9997.0000'}
+- [WARNING] Variable 'PV1SCIE' (target: science) has potential missing value codes in codebook not listed in CSV na_values: {'9997.0000'}
+- [WARNING] Variable 'W_FSTUWT' (target: stu_wgt) has potential missing value codes in codebook not listed in CSV na_values: {'9997.0000'}
+- [WARNING] Variable 'ST17Q01' (target: desk) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
+- [WARNING] Variable 'ST17Q02' (target: room) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
+- [WARNING] Variable 'ST17Q13' (target: dishwasher) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
 - [WARNING] Variable 'NA' (target: television) not found in the extracted codebook. Note: missing in all entries in year 2003
 - [WARNING] Variable 'NA' (target: computer_n) not found in the extracted codebook. Note: missing in all entries in year 2003
 - [WARNING] Variable 'NA' (target: car) not found in the extracted codebook. Note: missing in all entries in year 2003
+- [WARNING] Variable 'ST19Q01' (target: book) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
 - [WARNING] Variable 'NA' (target: wealth) not found in the extracted codebook. Note: missing in all entries in year 2003
 
---- Validation Passed! ---
-All variables exist and NA values match.
+--- Validation Failed ---
+- [FAIL] Variable 'ESCS' (target: escs) expects NA values {'999'} but has no value mapping in codebook. Note: 

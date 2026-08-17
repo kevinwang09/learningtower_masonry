@@ -4,7 +4,7 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variable and NA Value Check ---
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] CNTSCHID (target: school_id) -> Exists in codebook (No NA checking required)
- [OK] SC013Q01TA (target: public_private) -> Exists in codebook (No NA checking required)
+ [WARN] SC013Q01TA (target: public_private) -> Exists in codebook, but potential NA keys not in CSV: {'8', '9', 'SYSTEM MISSING'}
  [OK] SC016Q01TA (target: fund_gov) -> Exists in codebook (No NA checking required)
  [OK] SC016Q02TA (target: fund_fees) -> Exists in codebook (No NA checking required)
  [OK] SC016Q03TA (target: fund_donation) -> Exists in codebook (No NA checking required)
@@ -17,6 +17,9 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 261
+
+--- Validation Warnings ---
+- [WARNING] Variable 'SC013Q01TA' (target: public_private) has potential missing value codes in codebook not listed in CSV na_values: {'8', '9', 'SYSTEM MISSING'}
 
 --- Validation Passed! ---
 All variables exist and NA values match.

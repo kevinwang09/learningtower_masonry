@@ -6,6 +6,26 @@ import os
 import yaml
 import jsonschema
 
+import re
+
+NA_KEYWORDS = {'n/a', 'missing', 'invalid', 'not applicable', 'non-response', 'no response', 'refusal', 'not reached', 'omitted'}
+
+def extract_potential_na_keys(entry):
+    potential_nas = set()
+    for na in entry.get('na_values', []):
+        if str(na).strip():
+            potential_nas.add(str(na).strip())
+    vals = entry.get('variable_key_value', entry.get('Values', [])) or []
+    for v in vals:
+        k = str(v.get('key', '')).strip()
+        val_text = str(v.get('value', '')).strip()
+        if not k:
+            continue
+        val_lower = val_text.lower()
+        if val_lower in NA_KEYWORDS or (any(re.search(r'\b' + re.escape(kw) + r'\b', val_lower) for kw in ['n/a', 'not applicable', 'missing', 'invalid', 'non-response', 'not reached']) and len(val_text) < 40):
+            potential_nas.add(k)
+    return potential_nas
+
 def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None):
     issues = []
     warnings = []
@@ -91,6 +111,15 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                     
                 entry = extracted_vars[col_upper]
                 
+                # Check for potential missing value codes defined in codebook that are missing in the CSV
+                potential_codebook_nas = extract_potential_na_keys(entry)
+                uncaptured_nas = potential_codebook_nas - expected_na_values
+                if uncaptured_nas:
+                    warn_msg = f"Variable '{col}' (target: {target_name}) has potential missing value codes in codebook not listed in CSV na_values: {{{', '.join(repr(x) for x in sorted(uncaptured_nas))}}}"
+                    if note:
+                        warn_msg += f". Note: {note}"
+                    warnings.append(warn_msg)
+
                 if expected_na_values:
                     # Check the newer 'na_values' field first
                     codebook_na_values = entry.get('na_values', [])
@@ -119,7 +148,10 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                     else:
                         print(f" [OK] {col} (target: {target_name}) -> NA values matched successfully: {{{', '.join(repr(x) for x in sorted(expected_na_values))}}}")
                 else:
-                    print(f" [OK] {col} (target: {target_name}) -> Exists in codebook (No NA checking required)")
+                    if uncaptured_nas:
+                        print(f" [WARN] {col} (target: {target_name}) -> Exists in codebook, but potential NA keys not in CSV: {{{', '.join(repr(x) for x in sorted(uncaptured_nas))}}}")
+                    else:
+                        print(f" [OK] {col} (target: {target_name}) -> Exists in codebook (No NA checking required)")
                     
         json_only_vars = set(extracted_vars.keys()) - csv_vars
         if json_only_vars:

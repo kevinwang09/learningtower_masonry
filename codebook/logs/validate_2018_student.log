@@ -3,30 +3,50 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 
 --- Variable and NA Value Check ---
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
- [OK] CNTSCHID (target: school_id) -> Exists in codebook (No NA checking required)
- [OK] CNTSTUID (target: student_id) -> Exists in codebook (No NA checking required)
- [OK] ST005Q01TA (target: mother_educ) -> Exists in codebook (No NA checking required)
- [OK] ST007Q01TA (target: father_educ) -> Exists in codebook (No NA checking required)
- [OK] ST004D01T (target: gender) -> Exists in codebook (No NA checking required)
- [OK] ST011Q04TA (target: computer) -> Exists in codebook (No NA checking required)
- [OK] ST011Q06TA (target: internet) -> Exists in codebook (No NA checking required)
- [OK] PV1MATH (target: math) -> Exists in codebook (No NA checking required)
- [OK] PV1READ (target: read) -> Exists in codebook (No NA checking required)
- [OK] PV1SCIE (target: science) -> Exists in codebook (No NA checking required)
- [OK] W_FSTUWT (target: stu_wgt) -> Exists in codebook (No NA checking required)
- [OK] ST011Q01TA (target: desk) -> Exists in codebook (No NA checking required)
- [OK] ST011Q02TA (target: room) -> Exists in codebook (No NA checking required)
- [OK] ST011Q16NA (target: dishwasher) -> Exists in codebook (No NA checking required)
- [OK] ST012Q01TA (target: television) -> Exists in codebook (No NA checking required)
- [OK] ST012Q06NA (target: computer_n) -> Exists in codebook (No NA checking required)
- [OK] ST012Q02TA (target: car) -> Exists in codebook (No NA checking required)
- [OK] ST013Q01TA (target: book) -> Exists in codebook (No NA checking required)
+ [WARN] CNTSCHID (target: school_id) -> Exists in codebook, but potential NA keys not in CSV: {'SYSTEM MISSING'}
+ [WARN] CNTSTUID (target: student_id) -> Exists in codebook, but potential NA keys not in CSV: {'SYSTEM MISSING'}
+ [WARN] ST005Q01TA (target: mother_educ) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST007Q01TA (target: father_educ) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST004D01T (target: gender) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST011Q04TA (target: computer) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST011Q06TA (target: internet) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] PV1MATH (target: math) -> Exists in codebook, but potential NA keys not in CSV: {'SYSTEM MISSING'}
+ [WARN] PV1READ (target: read) -> Exists in codebook, but potential NA keys not in CSV: {'SYSTEM MISSING'}
+ [WARN] PV1SCIE (target: science) -> Exists in codebook, but potential NA keys not in CSV: {'SYSTEM MISSING'}
+ [WARN] W_FSTUWT (target: stu_wgt) -> Exists in codebook, but potential NA keys not in CSV: {'SYSTEM MISSING'}
+ [WARN] ST011Q01TA (target: desk) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST011Q02TA (target: room) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST011Q16NA (target: dishwasher) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST012Q01TA (target: television) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST012Q06NA (target: computer_n) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST012Q02TA (target: car) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+ [WARN] ST013Q01TA (target: book) -> Exists in codebook, but potential NA keys not in CSV: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 1097
 
 --- Validation Warnings ---
+- [WARNING] Variable 'CNTSCHID' (target: school_id) has potential missing value codes in codebook not listed in CSV na_values: {'SYSTEM MISSING'}
+- [WARNING] Variable 'CNTSTUID' (target: student_id) has potential missing value codes in codebook not listed in CSV na_values: {'SYSTEM MISSING'}
+- [WARNING] Variable 'ST005Q01TA' (target: mother_educ) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST007Q01TA' (target: father_educ) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST004D01T' (target: gender) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}. Note: encoded as binary
+- [WARNING] Variable 'ST011Q04TA' (target: computer) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST011Q06TA' (target: internet) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'PV1MATH' (target: math) has potential missing value codes in codebook not listed in CSV na_values: {'SYSTEM MISSING'}
+- [WARNING] Variable 'PV1READ' (target: read) has potential missing value codes in codebook not listed in CSV na_values: {'SYSTEM MISSING'}
+- [WARNING] Variable 'PV1SCIE' (target: science) has potential missing value codes in codebook not listed in CSV na_values: {'SYSTEM MISSING'}
+- [WARNING] Variable 'W_FSTUWT' (target: stu_wgt) has potential missing value codes in codebook not listed in CSV na_values: {'SYSTEM MISSING'}
+- [WARNING] Variable 'ST011Q01TA' (target: desk) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST011Q02TA' (target: room) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST011Q16NA' (target: dishwasher) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST012Q01TA' (target: television) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST012Q06NA' (target: computer_n) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST012Q02TA' (target: car) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'ST013Q01TA' (target: book) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}
+- [WARNING] Variable 'WEALTH' (target: wealth) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}. Note: The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc.
 - [WARNING] Variable 'WEALTH' (target: wealth) is missing expected NA keys in codebook: {'95', '97', '98', '99'}. Found keys: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}. Note: The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc.
+- [WARNING] Variable 'ESCS' (target: escs) has potential missing value codes in codebook not listed in CSV na_values: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}. Note: The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc.
 - [WARNING] Variable 'ESCS' (target: escs) is missing expected NA keys in codebook: {'95', '97', '98', '99'}. Found keys: {'.I', '.M', '.N', '.V', 'SYSTEM MISSING'}. Note: The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc.
 
 --- Validation Passed! ---

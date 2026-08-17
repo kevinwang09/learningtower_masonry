@@ -161,19 +161,19 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2000,student_id,STIDSTD,as.character,,Student ID,character,
 2000,mother_educ,NA,as.logical,,Mother <Highest Schooling>,logical,missing in all entries in year 2000
 2000,father_educ,NA,as.logical,,Father <Highest Schooling>,logical,missing in all entries in year 2000
-2000,gender,ST03Q01,as.factor,,Gender,factor,encoded as binary
+2000,gender,ST03Q01,as.factor,7;8;9,Gender,factor,encoded as binary
 2000,computer,NA,as.logical,,Possessions computer,logical,missing in all entries in year 2000
-2000,internet,ST21Q04,yes1no2,,Possessions Internet,factor,
-2000,math,pv1math,as.numeric,,Plausible value 1 in mathematics,numeric,
-2000,read,pv1read,as.numeric,,Plausible value 1 in reading,numeric,
-2000,science,pv1scie,as.numeric,,Plausible value 1 in science,numeric,
+2000,internet,ST21Q04,yes1no2,7;8;9,Possessions Internet,factor,
+2000,math,pv1math,as.numeric,9997,Plausible value 1 in mathematics,numeric,
+2000,read,pv1read,as.numeric,9997,Plausible value 1 in reading,numeric,
+2000,science,pv1scie,as.numeric,9997,Plausible value 1 in science,numeric,
 2000,stu_wgt,w_fstuwt,as.numeric,,Final student weight,numeric,
-2000,desk,ST21Q07,yes1no2,,Possessions desk,factor,
-2000,room,ST21Q02,yes1no2,,Possessions own room,factor,
-2000,dishwasher,ST21Q01,yes1no2,,Possessions dishwasher,factor,
-2000,television,ST22Q02,none1one2two3threemore4,,How many televisions,factor,
-2000,computer_n,ST22Q04,none1one2two3threemore4,,How many computers,factor,
-2000,car,ST22Q06,none1one2two3threemore4,,How many cars,factor,
-2000,book,ST37Q01,as.factor,,How many books at home,factor,
+2000,desk,ST21Q07,yes1no2,7;8;9,Possessions desk,factor,
+2000,room,ST21Q02,yes1no2,7;8;9,Possessions own room,factor,
+2000,dishwasher,ST21Q01,yes1no2,7;8;9,Possessions dishwasher,factor,
+2000,television,ST22Q02,none1one2two3threemore4,7;8;9,How many televisions,factor,
+2000,computer_n,ST22Q04,none1one2two3threemore4,7;8;9,How many computers,factor,
+2000,car,ST22Q06,none1one2two3threemore4,7;8;9,How many cars,factor,
+2000,book,ST37Q01,as.factor,97;98;99,How many books at home,factor,
 2000,wealth,wealth,as.numeric,97,Wealth,numeric,
 2000,escs,ESCS,as.numeric,,Index of economic social and cultural status,numeric,"This variable is stored in a separate ESCS_PISA2000.sav file and it is not in the codebook."
