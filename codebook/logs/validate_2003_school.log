@@ -4,25 +4,19 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variable and NA Value Check ---
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
- [WARN] SC03Q01 (target: public_private) -> Exists in codebook, but potential NA keys not in CSV: {'7', '8'}
+ [OK] SC03Q01 (target: public_private) -> NA values matched successfully: {'7', '8', '9'}
  [OK] SC04Q01 (target: fund_gov) -> NA values matched successfully: {'997', '998', '999'}
  [OK] SC04Q02 (target: fund_fees) -> NA values matched successfully: {'997', '998', '999'}
  [OK] SC04Q03 (target: fund_donation) -> NA values matched successfully: {'997', '998', '999'}
- [WARN] SC02Q01 (target: enrol_boys) -> Exists in codebook, but potential NA keys not in CSV: {'997', '998'}
- [WARN] SC02Q02 (target: enrol_girls) -> Exists in codebook, but potential NA keys not in CSV: {'997', '998'}
+ [OK] SC02Q01 (target: enrol_boys) -> NA values matched successfully: {'997', '998', '999'}
+ [OK] SC02Q02 (target: enrol_girls) -> NA values matched successfully: {'997', '998', '999'}
  [OK] TCSHORT (target: staff_shortage) -> NA values matched successfully: {'997'}
  [OK] STRATIO (target: stratio) -> NA values matched successfully: {'997', '998', '999'}
  [OK] SCHLSIZE (target: school_size) -> NA values matched successfully: {'99997', '99998', '99999'}
- [WARN] SCWEIGHT (target: sch_wgt) -> Exists in codebook, but potential NA keys not in CSV: {'997'}
+ [OK] SCWEIGHT (target: sch_wgt) -> NA values matched successfully: {'997'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 178
-
---- Validation Warnings ---
-- [WARNING] Variable 'SC03Q01' (target: public_private) has potential missing value codes in codebook not listed in CSV na_values: {'7', '8'}
-- [WARNING] Variable 'SC02Q01' (target: enrol_boys) has potential missing value codes in codebook not listed in CSV na_values: {'997', '998'}
-- [WARNING] Variable 'SC02Q02' (target: enrol_girls) has potential missing value codes in codebook not listed in CSV na_values: {'997', '998'}
-- [WARNING] Variable 'SCWEIGHT' (target: sch_wgt) has potential missing value codes in codebook not listed in CSV na_values: {'997'}
 
 --- Validation Passed! ---
 All variables exist and NA values match.

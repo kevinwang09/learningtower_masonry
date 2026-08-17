@@ -138,22 +138,22 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2003,country,CNT,as.factor,,Country three character,factor,
 2003,school_id,SCHOOLID,as.character,,school ID,character,
 2003,student_id,STIDSTD,as.character,,Student ID,character,
-2003,mother_educ,ST11R01,isced3a1,,Mother <Highest Schooling>,factor,
-2003,father_educ,ST13R01,isced3a1,,Father <Highest Schooling>,factor,
-2003,gender,ST03Q01,fe1ma2,,Gender,factor,encoded as binary
-2003,computer,ST17Q04,yes1no2,,Possessions computer,factor,
-2003,internet,ST17Q06,yes1no2,,Possessions Internet,factor,
-2003,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
-2003,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
-2003,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
-2003,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
-2003,desk,ST17Q01,yes1no2,,Possessions desk,factor,
-2003,room,ST17Q02,yes1no2,,Possessions own room,factor,
-2003,dishwasher,ST17Q13,yes1no2,,Possessions dishwasher,factor,
+2003,mother_educ,ST11R01,isced3a1,9,Mother <Highest Schooling>,factor,
+2003,father_educ,ST13R01,isced3a1,9,Father <Highest Schooling>,factor,
+2003,gender,ST03Q01,fe1ma2,7;8;9,Gender,factor,encoded as binary
+2003,computer,ST17Q04,yes1no2,7;8;9,Possessions computer,factor,
+2003,internet,ST17Q06,yes1no2,7;8;9,Possessions Internet,factor,
+2003,math,PV1MATH,as.numeric,9997,Plausible value 1 in mathematics,numeric,
+2003,read,PV1READ,as.numeric,9997,Plausible value 1 in reading,numeric,
+2003,science,PV1SCIE,as.numeric,9997,Plausible value 1 in science,numeric,
+2003,stu_wgt,W_FSTUWT,as.numeric,9997,Final student weight,numeric,
+2003,desk,ST17Q01,yes1no2,7;8;9,Possessions desk,factor,
+2003,room,ST17Q02,yes1no2,7;8;9,Possessions own room,factor,
+2003,dishwasher,ST17Q13,yes1no2,7;8;9,Possessions dishwasher,factor,
 2003,television,NA,as.logical,,How many televisions,logical,missing in all entries in year 2003
 2003,computer_n,NA,as.logical,,How many computers,logical,missing in all entries in year 2003
 2003,car,NA,as.logical,,How many cars,logical,missing in all entries in year 2003
-2003,book,ST19Q01,book_levels_6,,How many books at home,factor,
+2003,book,ST19Q01,book_levels_6,7;8;9,How many books at home,factor,
 2003,wealth,NA,as.logical,,Wealth,logical,missing in all entries in year 2003
 2003,escs,ESCS,as.numeric,999,Index of economic social and cultural status,numeric,
 2000,country,COUNTRY,as.factor,,Country three character,factor,

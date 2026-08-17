@@ -10,11 +10,22 @@ import re
 
 NA_KEYWORDS = {'n/a', 'missing', 'invalid', 'not applicable', 'non-response', 'no response', 'refusal', 'not reached', 'omitted'}
 
+def normalize_key(k):
+    """Normalize keys so integer-like float representations (e.g. '9997.0000' and '9997') match."""
+    s = str(k).strip()
+    try:
+        f = float(s)
+        if f.is_integer():
+            return str(int(f))
+        return str(f)
+    except (ValueError, TypeError):
+        return s.upper()
+
 def extract_potential_na_keys(entry):
     potential_nas = set()
     for na in entry.get('na_values', []):
         if str(na).strip():
-            potential_nas.add(str(na).strip())
+            potential_nas.add(normalize_key(na))
     vals = entry.get('variable_key_value', entry.get('Values', [])) or []
     for v in vals:
         k = str(v.get('key', '')).strip()
@@ -23,7 +34,7 @@ def extract_potential_na_keys(entry):
             continue
         val_lower = val_text.lower()
         if val_lower in NA_KEYWORDS or (any(re.search(r'\b' + re.escape(kw) + r'\b', val_lower) for kw in ['n/a', 'not applicable', 'missing', 'invalid', 'non-response', 'not reached']) and len(val_text) < 40):
-            potential_nas.add(k)
+            potential_nas.add(normalize_key(k))
     return potential_nas
 
 def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None):
@@ -95,7 +106,7 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                 continue
                 
             source_cols = source_cols_str.split()
-            expected_na_values = set(na_values_str.split(';')) if na_values_str else set()
+            expected_na_values = set(normalize_key(x) for x in na_values_str.split(';')) if na_values_str else set()
             
             for col in source_cols:
                 col_upper = col.upper()
@@ -123,12 +134,12 @@ def validate_curation(json_path, csv_path, year, json_schema=None, log_file=None
                 if expected_na_values:
                     # Check the newer 'na_values' field first
                     codebook_na_values = entry.get('na_values', [])
-                    codebook_keys = set(str(k).strip() for k in codebook_na_values) if codebook_na_values else set()
+                    codebook_keys = set(normalize_key(k) for k in codebook_na_values) if codebook_na_values else set()
                     
                     # Also look in the legacy 'variable_key_value' or 'Values' mappings if needed
                     var_values = entry.get('variable_key_value', entry.get('Values'))
                     if var_values:
-                        codebook_keys.update(str(v.get('key')).strip() for v in var_values if 'key' in v)
+                        codebook_keys.update(normalize_key(v.get('key')) for v in var_values if 'key' in v and v.get('key') is not None)
                     
                     if not codebook_keys:
                         msg = f"Variable '{col}' (target: {target_name}) expects NA values {{{', '.join(repr(x) for x in sorted(expected_na_values))}}} but has no value mapping in codebook. Note: {note}"
