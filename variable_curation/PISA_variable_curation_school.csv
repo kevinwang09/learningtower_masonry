@@ -26,7 +26,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2018,sch_wgt,W_SCHGRNRABWT,as.numeric,,School weight,numeric,
 2015,country,CNT,as.character,,Country three character,character,
 2015,school_id,CNTSCHID,as.character,,school ID,character,
-2015,public_private,SC013Q01TA,public_private,,public/private,factor,
+2015,public_private,SC013Q01TA,public_private,8;9;SYSTEM MISSING,public/private,factor,
 2015,fund_gov,SC016Q01TA,as.numeric,,Percentage of School year funding comes from: Government,numeric,
 2015,fund_fees,SC016Q02TA,as.numeric,,Percentage of School year funding comes from: Student fees or School charges paid by parents or Guardians,numeric,
 2015,fund_donation,SC016Q03TA,as.numeric,,"Percentage of School year funding comes from: Benefactors, donations, bequests",numeric,

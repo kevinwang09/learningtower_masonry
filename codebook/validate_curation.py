@@ -11,8 +11,8 @@ import re
 NA_KEYWORDS = {'n/a', 'missing', 'invalid', 'not applicable', 'non-response', 'no response', 'refusal', 'not reached', 'omitted'}
 
 def normalize_key(k):
-    """Normalize keys so integer-like float representations (e.g. '9997.0000' and '9997') match."""
-    s = str(k).strip()
+    """Normalize keys so integer-like float representations and quoted strings match."""
+    s = str(k).strip().strip("'\"")
     try:
         f = float(s)
         if f.is_integer():
