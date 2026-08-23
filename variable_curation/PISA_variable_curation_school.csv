@@ -62,7 +62,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2009,sch_wgt,W_FSCHWT,as.numeric,,School weight,numeric,
 2006,country,CNT,as.character,,Country three character,character,
 2006,school_id,SCHOOLID,as.character,,school ID,character,
-2006,public_private,SC02Q01,public_private,,public/private,factor,
+2006,public_private,SC02Q01,public_private,7;8;9,public/private,factor,
 2006,fund_gov,SC03Q01,as.numeric,9997;9998;9999,Percentage of School year funding comes from: Government,numeric,
 2006,fund_fees,SC03Q02,as.numeric,9997;9998;9999,Percentage of School year funding comes from: Student fees or School charges paid by parents or Guardians,numeric,
 2006,fund_donation,SC03Q03,as.numeric,9997;9998;9999,"Percentage of School year funding comes from: Benefactors, donations, bequests",numeric,
