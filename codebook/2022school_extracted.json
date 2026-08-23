@@ -7640,10 +7640,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "1890",
@@ -7665,10 +7665,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "1902",
@@ -7698,10 +7698,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "1910",
@@ -7714,10 +7714,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1920",
@@ -7730,10 +7730,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1926",
@@ -7746,10 +7746,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1932",
@@ -7762,10 +7762,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1938",
@@ -7791,10 +7791,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "1944",
@@ -7807,10 +7807,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "1953",
@@ -7823,10 +7823,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "1959",
@@ -7839,10 +7839,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1965",
@@ -7855,10 +7855,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1971",
@@ -7871,10 +7871,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1977",
@@ -7887,10 +7887,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1983",
@@ -7903,10 +7903,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1989",
@@ -7919,10 +7919,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "1995",
@@ -7935,10 +7935,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2001",
@@ -7951,10 +7951,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2007",
@@ -7967,10 +7967,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2013",
@@ -7983,10 +7983,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2019",
@@ -7999,10 +7999,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2025",
@@ -8015,10 +8015,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2031",
@@ -8031,10 +8031,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2037",
@@ -8047,10 +8047,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2043",
@@ -8063,10 +8063,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2049",
@@ -8079,10 +8079,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2055",
@@ -8095,10 +8095,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2061",
@@ -8111,10 +8111,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2067",
@@ -8127,10 +8127,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2073",
@@ -8143,10 +8143,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2079",
@@ -8159,10 +8159,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2085",
@@ -8175,10 +8175,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2091",
@@ -8191,10 +8191,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2097",
@@ -8207,10 +8207,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2103",
@@ -8223,10 +8223,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2109",
@@ -8239,10 +8239,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2115",
@@ -8255,10 +8255,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2121",
@@ -8271,10 +8271,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2127",
@@ -8287,10 +8287,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2133",
@@ -8303,10 +8303,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2139",
@@ -8319,10 +8319,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2145",
@@ -8335,10 +8335,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2151",
@@ -8364,10 +8364,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2157",
@@ -8393,10 +8393,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2166",
@@ -8422,10 +8422,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2175",
@@ -8451,10 +8451,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2184",
@@ -8480,10 +8480,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2193",
@@ -8509,10 +8509,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2202",
@@ -8538,10 +8538,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2211",
@@ -8567,10 +8567,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2220",
@@ -8596,10 +8596,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2229",
@@ -8625,10 +8625,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2238",
@@ -8654,10 +8654,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2247",
@@ -8683,10 +8683,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2256",
@@ -8712,10 +8712,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2265",
@@ -8741,10 +8741,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2274",
@@ -8770,10 +8770,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2283",
@@ -8811,10 +8811,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2292",
@@ -8852,10 +8852,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2304",
@@ -8893,10 +8893,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2316",
@@ -8934,10 +8934,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2328",
@@ -8975,10 +8975,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2340",
@@ -9016,10 +9016,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2352",
@@ -9057,10 +9057,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2364",
@@ -9098,10 +9098,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2376",
@@ -9139,10 +9139,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2388",
@@ -9180,10 +9180,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2400",
@@ -9221,10 +9221,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2412",
@@ -9262,10 +9262,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2424",
@@ -9299,10 +9299,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2436",
@@ -9336,10 +9336,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2447",
@@ -9373,10 +9373,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2458",
@@ -9410,10 +9410,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2469",
@@ -9447,10 +9447,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2480",
@@ -9484,10 +9484,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2491",
@@ -9521,10 +9521,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2502",
@@ -9537,10 +9537,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2513",
@@ -9553,10 +9553,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2519",
@@ -9569,10 +9569,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2525",
@@ -9585,10 +9585,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2531",
@@ -9601,10 +9601,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2537",
@@ -9617,10 +9617,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2543",
@@ -9633,10 +9633,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "2549",
@@ -9658,10 +9658,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2555",
@@ -9683,10 +9683,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2563",
@@ -9708,10 +9708,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2571",
@@ -9733,10 +9733,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2579",
@@ -9758,10 +9758,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2587",
@@ -9783,10 +9783,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2595",
@@ -9808,10 +9808,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2603",
@@ -9833,10 +9833,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2611",
@@ -9858,10 +9858,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2619",
@@ -9887,10 +9887,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2627",
@@ -9916,10 +9916,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2636",
@@ -9945,10 +9945,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2645",
@@ -9974,10 +9974,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2654",
@@ -10003,10 +10003,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2663",
@@ -10032,10 +10032,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2672",
@@ -10061,10 +10061,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2681",
@@ -10090,10 +10090,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2690",
@@ -10119,10 +10119,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2699",
@@ -10148,10 +10148,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2708",
@@ -10174,10 +10174,10 @@
       ],
       "na_values": [
         "3",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2717",
@@ -10200,10 +10200,10 @@
       ],
       "na_values": [
         "3",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2726",
@@ -10226,10 +10226,10 @@
       ],
       "na_values": [
         "3",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2735",
@@ -10252,10 +10252,10 @@
       ],
       "na_values": [
         "3",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2744",
@@ -10277,10 +10277,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2753",
@@ -10302,10 +10302,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2761",
@@ -10327,10 +10327,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2769",
@@ -10352,10 +10352,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2777",
@@ -10385,10 +10385,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2785",
@@ -10418,10 +10418,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2795",
@@ -10451,10 +10451,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2805",
@@ -10484,10 +10484,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2815",
@@ -10517,10 +10517,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2825",
@@ -10550,10 +10550,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2835",
@@ -10583,10 +10583,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2845",
@@ -10599,10 +10599,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "2855",
@@ -10615,10 +10615,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "2861",
@@ -10640,10 +10640,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2867",
@@ -10665,10 +10665,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2875",
@@ -10690,10 +10690,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2883",
@@ -10715,10 +10715,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2891",
@@ -10740,10 +10740,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2899",
@@ -10765,10 +10765,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2907",
@@ -10790,10 +10790,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2915",
@@ -10815,10 +10815,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2923",
@@ -10840,10 +10840,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2931",
@@ -10865,10 +10865,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2939",
@@ -10890,10 +10890,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2947",
@@ -10915,10 +10915,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2955",
@@ -10940,10 +10940,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2963",
@@ -10973,10 +10973,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2971",
@@ -11006,10 +11006,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2981",
@@ -11039,10 +11039,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "2991",
@@ -11072,10 +11072,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3001",
@@ -11105,10 +11105,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3011",
@@ -11138,10 +11138,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3021",
@@ -11171,10 +11171,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3031",
@@ -11204,10 +11204,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3041",
@@ -11237,10 +11237,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3051",
@@ -11270,10 +11270,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3061",
@@ -11303,10 +11303,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3071",
@@ -11336,10 +11336,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3081",
@@ -11369,10 +11369,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3091",
@@ -11402,10 +11402,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3101",
@@ -11435,10 +11435,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3111",
@@ -11468,10 +11468,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3121",
@@ -11501,10 +11501,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3131",
@@ -11534,10 +11534,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3141",
@@ -11567,10 +11567,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3151",
@@ -11600,10 +11600,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3161",
@@ -11633,10 +11633,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3171",
@@ -11666,10 +11666,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3181",
@@ -11699,10 +11699,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3191",
@@ -11732,10 +11732,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3201",
@@ -11765,10 +11765,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3211",
@@ -11798,10 +11798,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3221",
@@ -11831,10 +11831,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3231",
@@ -11868,10 +11868,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3241",
@@ -11905,10 +11905,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3252",
@@ -11942,10 +11942,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3263",
@@ -11979,10 +11979,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3274",
@@ -12016,10 +12016,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3285",
@@ -12053,10 +12053,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3296",
@@ -12069,10 +12069,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3307",
@@ -12085,10 +12085,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3313",
@@ -12101,10 +12101,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3319",
@@ -12117,10 +12117,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3325",
@@ -12133,10 +12133,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3331",
@@ -12149,10 +12149,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3337",
@@ -12165,10 +12165,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3343",
@@ -12198,10 +12198,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3349",
@@ -12231,10 +12231,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3359",
@@ -12264,10 +12264,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3369",
@@ -12297,10 +12297,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3379",
@@ -12330,10 +12330,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3389",
@@ -12363,10 +12363,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3399",
@@ -12379,10 +12379,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3409",
@@ -12395,10 +12395,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "3415",
@@ -12448,10 +12448,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3421",
@@ -12501,10 +12501,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3436",
@@ -12517,10 +12517,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99995",
+        "99997",
+        "99998",
+        "99999",
         "SYSTEM MISSING"
       ],
       "source_page": "3451",
@@ -12542,10 +12542,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3457",
@@ -12567,10 +12567,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3465",
@@ -12592,10 +12592,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3473",
@@ -12617,10 +12617,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3481",
@@ -12642,10 +12642,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3489",
@@ -12667,10 +12667,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3497",
@@ -12692,10 +12692,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3505",
@@ -12717,10 +12717,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3513",
@@ -12742,10 +12742,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3521",
@@ -12767,10 +12767,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3529",
@@ -13367,10 +13367,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3681",
@@ -13392,10 +13392,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3689",
@@ -13417,10 +13417,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3697",
@@ -13454,10 +13454,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3705",
@@ -13491,10 +13491,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3716",
@@ -13528,10 +13528,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3727",
@@ -13565,10 +13565,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3738",
@@ -13590,10 +13590,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3749",
@@ -13615,10 +13615,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3757",
@@ -13640,10 +13640,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3765",
@@ -13665,10 +13665,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3773",
@@ -13690,10 +13690,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3781",
@@ -13715,10 +13715,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3789",
@@ -13740,10 +13740,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3797",
@@ -13765,10 +13765,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3805",
@@ -13790,10 +13790,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3813",
@@ -13815,10 +13815,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3821",
@@ -13840,10 +13840,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3829",
@@ -13865,10 +13865,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3837",
@@ -13890,10 +13890,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3845",
@@ -13915,10 +13915,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3853",
@@ -13940,10 +13940,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3861",
@@ -13965,10 +13965,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3869",
@@ -13990,10 +13990,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3877",
@@ -14015,10 +14015,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3885",
@@ -14040,10 +14040,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3893",
@@ -14065,10 +14065,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3901",
@@ -14090,10 +14090,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3909",
@@ -14115,10 +14115,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3917",
@@ -14144,10 +14144,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3925",
@@ -14173,10 +14173,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3934",
@@ -14202,10 +14202,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3943",
@@ -14231,10 +14231,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3952",
@@ -14260,10 +14260,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3961",
@@ -14289,10 +14289,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3970",
@@ -14319,10 +14319,10 @@
       ],
       "na_values": [
         "4",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3979",
@@ -14349,10 +14349,10 @@
       ],
       "na_values": [
         "4",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3989",
@@ -14379,10 +14379,10 @@
       ],
       "na_values": [
         "4",
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "3999",
@@ -14412,10 +14412,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4009",
@@ -14445,10 +14445,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4019",
@@ -14478,10 +14478,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4029",
@@ -14511,10 +14511,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4039",
@@ -14544,10 +14544,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4049",
@@ -14577,10 +14577,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4059",
@@ -14610,10 +14610,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4069",
@@ -14643,10 +14643,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4079",
@@ -14676,10 +14676,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4089",
@@ -14709,10 +14709,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4099",
@@ -14742,10 +14742,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4109",
@@ -14779,10 +14779,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4119",
@@ -14816,10 +14816,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4130",
@@ -14853,10 +14853,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4141",
@@ -14890,10 +14890,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4152",
@@ -14915,10 +14915,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4163",
@@ -14940,10 +14940,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4171",
@@ -14965,10 +14965,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4179",
@@ -14981,10 +14981,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "4187",
@@ -14997,10 +14997,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "995",
+        "997",
+        "998",
+        "999",
         "SYSTEM MISSING"
       ],
       "source_page": "4193",
@@ -15022,10 +15022,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4199",
@@ -15047,10 +15047,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4207",
@@ -15072,10 +15072,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4215",
@@ -15097,10 +15097,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4223",
@@ -15122,10 +15122,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4231",
@@ -15147,10 +15147,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4239",
@@ -15172,10 +15172,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4247",
@@ -15197,10 +15197,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4255",
@@ -15222,10 +15222,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4263",
@@ -15247,10 +15247,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4271",
@@ -15272,10 +15272,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4279",
@@ -15297,10 +15297,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4287",
@@ -15330,10 +15330,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4295",
@@ -15355,10 +15355,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4305",
@@ -15380,10 +15380,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4313",
@@ -15405,10 +15405,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4321",
@@ -15430,10 +15430,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4329",
@@ -15463,10 +15463,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4337",
@@ -15496,10 +15496,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4347",
@@ -15529,10 +15529,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4357",
@@ -15562,10 +15562,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4367",
@@ -15595,10 +15595,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4377",
@@ -15628,10 +15628,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4387",
@@ -15661,10 +15661,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4397",
@@ -15694,10 +15694,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4407",
@@ -15727,10 +15727,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4417",
@@ -15760,10 +15760,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4427",
@@ -15801,10 +15801,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4437",
@@ -15842,10 +15842,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4449",
@@ -15883,10 +15883,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4461",
@@ -15924,10 +15924,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4473",
@@ -15965,10 +15965,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4485",
@@ -16006,10 +16006,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4497",
@@ -16047,10 +16047,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4509",
@@ -16088,10 +16088,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4521",
@@ -16121,10 +16121,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4533",
@@ -16154,10 +16154,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4543",
@@ -16187,10 +16187,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4553",
@@ -16220,10 +16220,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4563",
@@ -16253,10 +16253,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4573",
@@ -16286,10 +16286,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4583",
@@ -16319,10 +16319,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4593",
@@ -16352,10 +16352,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4603",
@@ -16385,10 +16385,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4613",
@@ -16401,10 +16401,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9995",
+        "9997",
+        "9998",
+        "9999",
         "SYSTEM MISSING"
       ],
       "source_page": "4623",
@@ -16417,10 +16417,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9995",
+        "9997",
+        "9998",
+        "9999",
         "SYSTEM MISSING"
       ],
       "source_page": "4629",
@@ -16454,10 +16454,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4635",
@@ -16491,10 +16491,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4646",
@@ -16528,10 +16528,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4657",
@@ -16553,10 +16553,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4668",
@@ -16578,10 +16578,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4676",
@@ -16603,10 +16603,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4684",
@@ -16628,10 +16628,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4692",
@@ -16653,10 +16653,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4700",
@@ -16678,10 +16678,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4708",
@@ -16703,10 +16703,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4716",
@@ -16728,10 +16728,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4724",
@@ -16761,10 +16761,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4732",
@@ -16794,10 +16794,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4742",
@@ -16827,10 +16827,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4752",
@@ -16860,10 +16860,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4762",
@@ -16893,10 +16893,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4772",
@@ -16926,10 +16926,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4782",
@@ -16959,10 +16959,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4792",
@@ -16992,10 +16992,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4802",
@@ -17025,10 +17025,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4812",
@@ -17050,10 +17050,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4822",
@@ -17075,10 +17075,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4830",
@@ -17100,10 +17100,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4838",
@@ -17125,10 +17125,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4846",
@@ -17150,10 +17150,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4854",
@@ -17175,10 +17175,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4862",
@@ -17200,10 +17200,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4870",
@@ -17225,10 +17225,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4878",
@@ -17250,10 +17250,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4886",
@@ -17275,10 +17275,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4894",
@@ -17336,10 +17336,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4902",
@@ -17397,10 +17397,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4919",
@@ -17422,10 +17422,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4936",
@@ -17447,10 +17447,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4944",
@@ -17472,10 +17472,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4952",
@@ -17497,10 +17497,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4960",
@@ -17530,10 +17530,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4968",
@@ -17563,10 +17563,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4978",
@@ -17596,10 +17596,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4988",
@@ -17629,10 +17629,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "4998",
@@ -17662,10 +17662,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5008",
@@ -17691,10 +17691,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5018",
@@ -17720,10 +17720,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5027",
@@ -17749,10 +17749,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5036",
@@ -17778,10 +17778,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5045",
@@ -17807,10 +17807,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5054",
@@ -17836,10 +17836,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5063",
@@ -17865,10 +17865,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5072",
@@ -17894,10 +17894,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5081",
@@ -17923,10 +17923,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5090",
@@ -17952,10 +17952,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5099",
@@ -17985,10 +17985,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5108",
@@ -18018,10 +18018,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5118",
@@ -18051,10 +18051,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5128",
@@ -18084,10 +18084,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5138",
@@ -18117,10 +18117,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5148",
@@ -18150,10 +18150,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5158",
@@ -18183,10 +18183,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5168",
@@ -18208,10 +18208,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5178",
@@ -18233,10 +18233,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5186",
@@ -18258,10 +18258,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5194",
@@ -18297,10 +18297,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5203",
@@ -18313,10 +18313,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99999995",
+        "99999997",
+        "99999998",
+        "99999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5212",
@@ -18329,10 +18329,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5218",
@@ -18345,10 +18345,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5224",
@@ -18361,10 +18361,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5230",
@@ -18377,10 +18377,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5236",
@@ -18393,10 +18393,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5242",
@@ -18409,10 +18409,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99999995",
+        "99999997",
+        "99999998",
+        "99999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5248",
@@ -18425,10 +18425,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5254",
@@ -18441,10 +18441,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5260",
@@ -18457,10 +18457,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "99999995",
+        "99999997",
+        "99999998",
+        "99999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5266",
@@ -18473,10 +18473,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5272",
@@ -18489,10 +18489,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5278",
@@ -18505,10 +18505,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5284",
@@ -18521,10 +18521,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5290",
@@ -18537,10 +18537,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5296",
@@ -18566,10 +18566,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5302",
@@ -18582,10 +18582,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5311",
@@ -18598,10 +18598,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5317",
@@ -18614,10 +18614,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5323",
@@ -18630,10 +18630,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5329",
@@ -18646,10 +18646,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5335",
@@ -18662,10 +18662,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5341",
@@ -18678,10 +18678,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5347",
@@ -18694,10 +18694,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5353",
@@ -18710,10 +18710,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5359",
@@ -18726,10 +18726,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5365",
@@ -18742,10 +18742,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5371",
@@ -18758,10 +18758,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5377",
@@ -18774,10 +18774,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5383",
@@ -18790,10 +18790,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5389",
@@ -18806,10 +18806,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5395",
@@ -18822,10 +18822,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5401",
@@ -18838,10 +18838,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5407",
@@ -18854,10 +18854,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5413",
@@ -18870,10 +18870,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5419",
@@ -18923,10 +18923,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5425",
@@ -18976,10 +18976,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5440",
@@ -18992,10 +18992,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5455",
@@ -19008,10 +19008,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5461",
@@ -19041,10 +19041,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5467",
@@ -19057,10 +19057,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5477",
@@ -19098,10 +19098,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5483",
@@ -19131,10 +19131,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5495",
@@ -19160,10 +19160,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5505",
@@ -19176,10 +19176,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5514",
@@ -19192,10 +19192,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5520",
@@ -19208,10 +19208,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5526",
@@ -19224,10 +19224,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5532",
@@ -19253,10 +19253,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5538",
@@ -19282,10 +19282,10 @@
         }
       ],
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "95",
+        "97",
+        "98",
+        "99",
         "SYSTEM MISSING"
       ],
       "source_page": "5547",
@@ -19298,10 +19298,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5556",
@@ -19314,10 +19314,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5562",
@@ -19330,10 +19330,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5568",
@@ -19346,10 +19346,10 @@
       "fixed_width_specification": "",
       "variable_key_value": null,
       "na_values": [
-        ".V",
-        ".N",
-        ".I",
-        ".M",
+        "9999995",
+        "9999997",
+        "9999998",
+        "9999999",
         "SYSTEM MISSING"
       ],
       "source_page": "5574",

@@ -31,26 +31,26 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2022,wealth,,as.numeric,95;97;98;99,Wealth,numeric,"This variable is not present in the original PISA 2022 data"
 2022,escs,ESCS,as.numeric,95;97;98;99,Index of economic social and cultural status,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
 2018,country,CNT,as.factor,,Country three character,factor,
-2018,school_id,CNTSCHID,as.character,,school ID,character,
-2018,student_id,CNTSTUID,as.character,,Student ID,character,
-2018,mother_educ,ST005Q01TA,isced3a1,,Mother <Highest Schooling>,factor,
-2018,father_educ,ST007Q01TA,isced3a1,,Father <Highest Schooling>,factor,
-2018,gender,ST004D01T,fe1ma2,,Gender,factor,encoded as binary
-2018,computer,ST011Q04TA,yes1no2,,Possessions computer,factor,
-2018,internet,ST011Q06TA,yes1no2,,Possessions Internet,factor,
-2018,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
-2018,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
-2018,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
-2018,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
-2018,desk,ST011Q01TA,yes1no2,,Possessions desk,factor,
-2018,room,ST011Q02TA,yes1no2,,Possessions own room,factor,
-2018,dishwasher,ST011Q16NA,yes1no2,,Possessions dishwasher,factor,
-2018,television,ST012Q01TA,none1one2two3threemore4,,How many televisions,factor,
-2018,computer_n,ST012Q06NA,none1one2two3threemore4,,How many computers,factor,
-2018,car,ST012Q02TA,none1one2two3threemore4,,How many cars,factor,
-2018,book,ST013Q01TA,book_levels_6,,How many books at home,factor,
-2018,wealth,WEALTH,as.numeric,95;97;98;99,Wealth,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
-2018,escs,ESCS,as.numeric,95;97;98;99,Index of economic social and cultural status,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
+2018,school_id,CNTSCHID,as.character,SYSTEM MISSING,school ID,character,
+2018,student_id,CNTSTUID,as.character,SYSTEM MISSING,Student ID,character,
+2018,mother_educ,ST005Q01TA,isced3a1,95;97;98;99;SYSTEM MISSING,Mother <Highest Schooling>,factor,
+2018,father_educ,ST007Q01TA,isced3a1,95;97;98;99;SYSTEM MISSING,Father <Highest Schooling>,factor,
+2018,gender,ST004D01T,fe1ma2,5;7;8;9;SYSTEM MISSING,Gender,factor,encoded as binary
+2018,computer,ST011Q04TA,yes1no2,5;7;8;9;SYSTEM MISSING,Possessions computer,factor,
+2018,internet,ST011Q06TA,yes1no2,5;7;8;9;SYSTEM MISSING,Possessions Internet,factor,
+2018,math,PV1MATH,as.numeric,SYSTEM MISSING,Plausible value 1 in mathematics,numeric,
+2018,read,PV1READ,as.numeric,SYSTEM MISSING,Plausible value 1 in reading,numeric,
+2018,science,PV1SCIE,as.numeric,SYSTEM MISSING,Plausible value 1 in science,numeric,
+2018,stu_wgt,W_FSTUWT,as.numeric,SYSTEM MISSING,Final student weight,numeric,
+2018,desk,ST011Q01TA,yes1no2,5;7;8;9;SYSTEM MISSING,Possessions desk,factor,
+2018,room,ST011Q02TA,yes1no2,5;7;8;9;SYSTEM MISSING,Possessions own room,factor,
+2018,dishwasher,ST011Q16NA,yes1no2,5;7;8;9;SYSTEM MISSING,Possessions dishwasher,factor,
+2018,television,ST012Q01TA,none1one2two3threemore4,5;7;8;9;SYSTEM MISSING,How many televisions,factor,
+2018,computer_n,ST012Q06NA,none1one2two3threemore4,5;7;8;9;SYSTEM MISSING,How many computers,factor,
+2018,car,ST012Q02TA,none1one2two3threemore4,5;7;8;9;SYSTEM MISSING,How many cars,factor,
+2018,book,ST013Q01TA,book_levels_6,95;97;98;99;SYSTEM MISSING,How many books at home,factor,
+2018,wealth,WEALTH,as.numeric,95;97;98;99;9999995;9999997;9999998;9999999;SYSTEM MISSING,Wealth,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
+2018,escs,ESCS,as.numeric,95;97;98;99;9999995;9999997;9999998;9999999;SYSTEM MISSING,Index of economic social and cultural status,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
 2015,country,CNT,as.factor,,Country three character,factor,
 2015,school_id,CNTSCHID,as.character,,school ID,character,
 2015,student_id,CNTSTUID,as.character,,Student ID,character,

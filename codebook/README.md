@@ -60,7 +60,7 @@ Because legacy PDF codebooks have varying and complex formats (and often exceed 
 For more recent years, PISA releases codebooks in `.xlsx` format.
 * **Pandas Parsing:** The script uses `pandas` to read specific sheets defined in the YAML manifest.
 * **Heuristic Processing:** It processes each row sequentially, tracking the current "active" variable, inferring metadata, and extracting categorical discrete values into a dictionary.
-* **NA Values:** It cleanly separates valid categorical mappings from `na_values` using predefined indicators.
+* **NA Values & Slash-Separated Codes:** It cleanly separates valid categorical mappings from `na_values` using predefined indicators. Across PISA cycles, the `VAL` column represents missing values with differing slash-separated orders: 2015 formats as `97 / .N` (numeric first), whereas 2018 and 2022 format as `.N/97` (SAS dot notation first). The extractor splits on `/` and filters out SAS character syntax codes (`.V`, `.N`, `.I`, `.M`), extracting only the actual physical data values (numeric missing codes such as `95`, `97`, `98`, `99` and `SYSTEM MISSING`) into `na_values`.
 
 Both methods generate a standardized JSON file format (e.g., `2015school_extracted.json` or `2000student_extracted.json`).
 
