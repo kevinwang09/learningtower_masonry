@@ -38,7 +38,7 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2015,sch_wgt,W_SCHGRNRABWT,as.numeric,,School weight,numeric,
 2012,country,CNT,as.character,,Country three character,character,
 2012,school_id,SCHOOLID,as.character,,school ID,character,
-2012,public_private,SC01Q01,public_private,,public/private,factor,
+2012,public_private,SC01Q01,public_private,7;8;9,public/private,factor,
 2012,fund_gov,SC02Q01,as.numeric,9997;9998;9999,Percentage of School year funding comes from: Government,numeric,"The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
 2012,fund_fees,SC02Q02,as.numeric,9997;9998;9999,Percentage of School year funding comes from: Student fees or School charges paid by parents or Guardians,numeric,"The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
 2012,fund_donation,SC02Q03,as.numeric,9997;9998;9999,"Percentage of School year funding comes from: Benefactors, donations, bequests",numeric,"The 9997, 9998 and 9999 NA values were inferred from the data, since this was not documented in the codebook."
