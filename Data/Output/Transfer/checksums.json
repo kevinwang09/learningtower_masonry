@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-14T22:42:49Z",
+  "generated_at": "2026-08-24T00:36:17Z",
   "algorithm": "md5",
   "total_files": 20,
   "files": {
@@ -10,13 +10,13 @@
       "destination_relative": "data/countrycode.rda"
     },
     "data/school.rda": {
-      "md5": "2f4e192eec0ee9eee683a54b8649fdf3",
-      "size_bytes": 1520472,
+      "md5": "09fc1ed5b06841f71ac4d3302d101cc5",
+      "size_bytes": 1527196,
       "destination_relative": "data/school.rda"
     },
     "data/student_subset_2000.rda": {
-      "md5": "476ba069db1e5399c6755389275e4f44",
-      "size_bytes": 38588,
+      "md5": "b7b6d1918afc633e9fe61d8576723b93",
+      "size_bytes": 38768,
       "destination_relative": "data/student_subset_2000.rda"
     },
     "data/student_subset_2003.rda": {
@@ -25,8 +25,8 @@
       "destination_relative": "data/student_subset_2003.rda"
     },
     "data/student_subset_2006.rda": {
-      "md5": "3e56a8c08f23126333ae92c6783efb31",
-      "size_bytes": 45388,
+      "md5": "111a146c38f26c98b409c53280247455",
+      "size_bytes": 45520,
       "destination_relative": "data/student_subset_2006.rda"
     },
     "data/student_subset_2009.rda": {
@@ -50,23 +50,23 @@
       "destination_relative": "data/student_subset_2018.rda"
     },
     "data/student_subset_2022.rda": {
-      "md5": "5d4ee52459f20ed1efed117f50d9b37e",
-      "size_bytes": 44080,
+      "md5": "a2a39f5657321fc5081173ec03f99b33",
+      "size_bytes": 44144,
       "destination_relative": "data/student_subset_2022.rda"
     },
     "README_school_data_missing_values_summary.png": {
-      "md5": "092f33e6f2814ea3d368c8b9978a246f",
-      "size_bytes": 302260,
+      "md5": "d133c1547a3e0bbd32adb315da3d0c4e",
+      "size_bytes": 306604,
       "destination_relative": "man/figures/README_school_data_missing_values_summary.png"
     },
     "README_student_data_missing_values_summary.png": {
-      "md5": "edeb3deaab656c1437b456783ebf3aa3",
-      "size_bytes": 355504,
+      "md5": "4020974d4039691202d2761f02d269f5",
+      "size_bytes": 356668,
       "destination_relative": "man/figures/README_student_data_missing_values_summary.png"
     },
     "student_full_data/student_2000.rds": {
-      "md5": "2baa73579a0e11cae1b9993741707446",
-      "size_bytes": 2409376,
+      "md5": "fb21900a517677eae77a02c59a997d5c",
+      "size_bytes": 2409896,
       "destination_relative": "student_full_data/student_2000.rds"
     },
     "student_full_data/student_2003.rds": {
@@ -75,8 +75,8 @@
       "destination_relative": "student_full_data/student_2003.rds"
     },
     "student_full_data/student_2006.rds": {
-      "md5": "fb8a23325126ce27e3f3fce48095ff06",
-      "size_bytes": 4352004,
+      "md5": "b2b0fe06a0dc51303a3e9089f176217b",
+      "size_bytes": 4352156,
       "destination_relative": "student_full_data/student_2006.rds"
     },
     "student_full_data/student_2009.rds": {
@@ -100,8 +100,8 @@
       "destination_relative": "student_full_data/student_2018.rds"
     },
     "student_full_data/student_2022.rds": {
-      "md5": "fa12b6f4432681b120567eadb69320e1",
-      "size_bytes": 9566072,
+      "md5": "67e821574465f301075c12a72eada044",
+      "size_bytes": 9571448,
       "destination_relative": "student_full_data/student_2022.rds"
     }
   }
