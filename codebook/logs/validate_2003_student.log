@@ -5,20 +5,18 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
  [OK] STIDSTD (target: student_id) -> Exists in codebook (No NA checking required)
- [OK] ST11R01 (target: mother_educ) -> Exists in codebook (No NA checking required)
- [OK] ST13R01 (target: father_educ) -> Exists in codebook (No NA checking required)
- [OK] ST03Q01 (target: gender) -> Exists in codebook (No NA checking required)
- [OK] ST17Q04 (target: computer) -> Exists in codebook (No NA checking required)
- [OK] ST17Q06 (target: internet) -> Exists in codebook (No NA checking required)
- [OK] PV1MATH (target: math) -> Exists in codebook (No NA checking required)
- [OK] PV1READ (target: read) -> Exists in codebook (No NA checking required)
- [OK] PV1SCIE (target: science) -> Exists in codebook (No NA checking required)
- [OK] W_FSTUWT (target: stu_wgt) -> Exists in codebook (No NA checking required)
- [OK] ST17Q01 (target: desk) -> Exists in codebook (No NA checking required)
- [OK] ST17Q02 (target: room) -> Exists in codebook (No NA checking required)
- [OK] ST17Q13 (target: dishwasher) -> Exists in codebook (No NA checking required)
- [OK] ST19Q01 (target: book) -> Exists in codebook (No NA checking required)
- [OK] ESCS (target: escs) -> Exists in codebook (No NA checking required)
+ [OK] ST11R01 (target: mother_educ) -> NA values matched successfully: {'9'}
+ [OK] ST13R01 (target: father_educ) -> NA values matched successfully: {'9'}
+ [OK] ST03Q01 (target: gender) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST17Q04 (target: computer) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST17Q06 (target: internet) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] PV1MATH (target: math) -> NA values matched successfully: {'9997'}
+ [OK] PV1SCIE (target: science) -> NA values matched successfully: {'9997'}
+ [OK] W_FSTUWT (target: stu_wgt) -> NA values matched successfully: {'9997'}
+ [OK] ST17Q01 (target: desk) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST17Q02 (target: room) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST17Q13 (target: dishwasher) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST19Q01 (target: book) -> NA values matched successfully: {'7', '8', '9'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 387
@@ -29,5 +27,6 @@ Total variables in this category: 387
 - [WARNING] Variable 'NA' (target: car) not found in the extracted codebook. Note: missing in all entries in year 2003
 - [WARNING] Variable 'NA' (target: wealth) not found in the extracted codebook. Note: missing in all entries in year 2003
 
---- Validation Passed! ---
-All variables exist and NA values match.
+--- Validation Failed ---
+- [FAIL] Variable 'PV1READ' (target: read) expects NA values {'9997'} but has no value mapping in codebook. Note: 
+- [FAIL] Variable 'ESCS' (target: escs) expects NA values {'999'} but has no value mapping in codebook. Note: 

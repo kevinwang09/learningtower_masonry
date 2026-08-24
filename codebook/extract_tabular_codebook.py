@@ -66,10 +66,17 @@ def process_tabular_codebook(file_path, sheet_name, year, cookbook_type):
             
             # Check if this label represents missing data
             if any(indicator in label_lower for indicator in na_indicators) or val_str == "SYSTEM MISSING":
-                # Extract just the numeric code before the slash (e.g., "97 / .N" -> "97")
-                clean_na_code = val_str.split('/')[0].strip()
-                if clean_na_code:
-                    na_values.append(clean_na_code)
+                # Extract only actual data values (numeric codes or SYSTEM MISSING), ignoring SAS dot syntax (.I, .M, .N, .V)
+                if '/' in val_str:
+                    for part in val_str.split('/'):
+                        clean_part = part.strip()
+                        if clean_part and not clean_part.startswith('.'):
+                            if clean_part not in na_values:
+                                na_values.append(clean_part)
+                else:
+                    if val_str and not val_str.startswith('.'):
+                        if val_str not in na_values:
+                            na_values.append(val_str)
             else:
                 if val_str:
                     val_mappings.append({"key": val_str, "value": label_str})

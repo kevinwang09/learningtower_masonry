@@ -5,20 +5,20 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] COUNTRY (target: country) -> Exists in codebook (No NA checking required)
  [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
  [OK] STIDSTD (target: student_id) -> Exists in codebook (No NA checking required)
- [OK] ST03Q01 (target: gender) -> Exists in codebook (No NA checking required)
- [OK] ST21Q04 (target: internet) -> Exists in codebook (No NA checking required)
- [OK] pv1math (target: math) -> Exists in codebook (No NA checking required)
- [OK] pv1read (target: read) -> Exists in codebook (No NA checking required)
- [OK] pv1scie (target: science) -> Exists in codebook (No NA checking required)
+ [OK] ST03Q01 (target: gender) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST21Q04 (target: internet) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] pv1math (target: math) -> NA values matched successfully: {'9997'}
+ [OK] pv1read (target: read) -> NA values matched successfully: {'9997'}
+ [OK] pv1scie (target: science) -> NA values matched successfully: {'9997'}
  [OK] w_fstuwt (target: stu_wgt) -> Exists in codebook (No NA checking required)
- [OK] ST21Q07 (target: desk) -> Exists in codebook (No NA checking required)
- [OK] ST21Q02 (target: room) -> Exists in codebook (No NA checking required)
- [OK] ST21Q01 (target: dishwasher) -> Exists in codebook (No NA checking required)
- [OK] ST22Q02 (target: television) -> Exists in codebook (No NA checking required)
- [OK] ST22Q04 (target: computer_n) -> Exists in codebook (No NA checking required)
- [OK] ST22Q06 (target: car) -> Exists in codebook (No NA checking required)
- [OK] ST37Q01 (target: book) -> Exists in codebook (No NA checking required)
- [OK] wealth (target: wealth) -> Exists in codebook (No NA checking required)
+ [OK] ST21Q07 (target: desk) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST21Q02 (target: room) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST21Q01 (target: dishwasher) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST22Q02 (target: television) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST22Q04 (target: computer_n) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST22Q06 (target: car) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST37Q01 (target: book) -> NA values matched successfully: {'97', '98', '99'}
+ [OK] wealth (target: wealth) -> NA values matched successfully: {'97'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 400

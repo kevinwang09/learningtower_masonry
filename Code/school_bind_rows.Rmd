@@ -25,6 +25,7 @@ library(janitor)
 library(skimr)
 library(haven)
 
+knitr::opts_knit$set(root.dir = here::here())
 source(here::here("Code/process_pisa.R"))
 ```
 
@@ -36,7 +37,7 @@ See the Google Sheet for the commonly agreed variables.
 ## 2000
 
 ```{r}
-system("Rscript Code/2009/data_2000.R")
+system(glue("Rscript {here('Code/2000/data_2000.R')}"))
 sch_2000 = read_rds(here("Data/Output/2000/sch_qqq.rds"))
 glimpse(sch_2000)
 
@@ -241,8 +242,7 @@ skimr::skim(clean_2018)
 ## 2022
 
 ```{r}
-sch_2022 = read_rds(here("Data/Output/2022/sch_qqq.rds")) %>% 
-  mutate(across(where(haven::is.labelled), haven::as_factor))
+sch_2022 = read_rds(here("Data/Output/2022/sch_qqq.rds"))
 glimpse(sch_2022)
 
 # clean_2022 = sch_2022 %>% dplyr::transmute(

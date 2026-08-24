@@ -60,3 +60,11 @@ test_that("book_levels_6 convert properly", {
   expect_equal(as.character(res6), c("0-10", "101-200", "More than 500", NA))
   expect_s3_class(res6, "factor")
 })
+
+test_that("book_levels_7 converts 7-level books properly", {
+  # 7 levels test
+  res7 <- book_levels_7(c(1, 2, 4, 7, NA))
+  expect_equal(as.character(res7), c("0", "1-10", "26-100", "More than 500", NA))
+  expect_s3_class(res7, "factor")
+})
+

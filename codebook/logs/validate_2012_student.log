@@ -5,22 +5,21 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] SCHOOLID (target: school_id) -> Exists in codebook (No NA checking required)
  [OK] StIDStd (target: student_id) -> Exists in codebook (No NA checking required)
- [OK] ST13Q01 (target: mother_educ) -> Exists in codebook (No NA checking required)
- [OK] ST17Q01 (target: father_educ) -> Exists in codebook (No NA checking required)
+ [OK] ST13Q01 (target: mother_educ) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST17Q01 (target: father_educ) -> NA values matched successfully: {'7', '8', '9'}
  [OK] ST04Q01 (target: gender) -> Exists in codebook (No NA checking required)
- [OK] ST26Q04 (target: computer) -> Exists in codebook (No NA checking required)
- [OK] ST26Q06 (target: internet) -> Exists in codebook (No NA checking required)
+ [OK] ST26Q04 (target: computer) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST26Q06 (target: internet) -> NA values matched successfully: {'7', '8', '9'}
  [OK] PV1MATH (target: math) -> Exists in codebook (No NA checking required)
  [OK] PV1READ (target: read) -> Exists in codebook (No NA checking required)
  [OK] PV1SCIE (target: science) -> Exists in codebook (No NA checking required)
  [OK] W_FSTUWT (target: stu_wgt) -> Exists in codebook (No NA checking required)
- [OK] ST26Q01 (target: desk) -> Exists in codebook (No NA checking required)
- [OK] ST26Q02 (target: room) -> Exists in codebook (No NA checking required)
- [OK] ST26Q13 (target: dishwasher) -> Exists in codebook (No NA checking required)
- [OK] ST27Q02 (target: television) -> Exists in codebook (No NA checking required)
- [OK] ST27Q03 (target: computer_n) -> Exists in codebook (No NA checking required)
- [OK] ST27Q04 (target: car) -> Exists in codebook (No NA checking required)
- [OK] ST28Q01 (target: book) -> Exists in codebook (No NA checking required)
+ [OK] ST26Q01 (target: desk) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST26Q02 (target: room) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST27Q02 (target: television) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST27Q03 (target: computer_n) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST27Q04 (target: car) -> NA values matched successfully: {'7', '8', '9'}
+ [OK] ST28Q01 (target: book) -> NA values matched successfully: {'7', '8', '9'}
 
 --- Variables found in JSON but NOT in CSV ---
 Total variables in this category: 950
@@ -29,5 +28,5 @@ Total variables in this category: 950
 - [WARNING] Variable 'WEALTH' (target: wealth) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
 - [WARNING] Variable 'ESCS' (target: escs) expects NA values {'9997', '9999'} but has no value mapping in codebook. Note: The 9997 and 9999 NA values were inferred from the data, since this was not documented in the codebook.
 
---- Validation Passed! ---
-All variables exist and NA values match.
+--- Validation Failed ---
+- [FAIL] Variable 'ST26Q13' (target: dishwasher) is missing expected NA keys in codebook: {'9'}. Found keys: {'1', '2', '7', '8'}. Note: 

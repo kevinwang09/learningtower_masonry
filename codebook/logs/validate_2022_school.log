@@ -4,22 +4,22 @@ Validating /Users/kevinwang/projects/learningtower_masonry/codebook/../variable_
 --- Variable and NA Value Check ---
  [OK] CNT (target: country) -> Exists in codebook (No NA checking required)
  [OK] CNTSCHID (target: school_id) -> Exists in codebook (No NA checking required)
- [OK] SC013Q01TA (target: public_private) -> Exists in codebook (No NA checking required)
- [OK] SC016Q01TA (target: fund_gov) -> Exists in codebook (No NA checking required)
- [OK] SC016Q02TA (target: fund_fees) -> Exists in codebook (No NA checking required)
- [OK] SC016Q03TA (target: fund_donation) -> Exists in codebook (No NA checking required)
- [OK] SC002Q01TA (target: enrol_boys) -> Exists in codebook (No NA checking required)
- [OK] SC002Q02TA (target: enrol_girls) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA01 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA02 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC018Q02TA01 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC018Q02TA02 (target: staff_shortage) -> Exists in codebook (No NA checking required)
- [OK] SC002Q01TA (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC002Q02TA (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA01 (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC018Q01TA02 (target: stratio) -> Exists in codebook (No NA checking required)
- [OK] SC002Q01TA (target: school_size) -> Exists in codebook (No NA checking required)
- [OK] SC002Q02TA (target: school_size) -> Exists in codebook (No NA checking required)
+ [OK] SC013Q01TA (target: public_private) -> NA values matched successfully: {'95', '97', '98', '99', 'SYSTEM MISSING'}
+ [OK] SC016Q01TA (target: fund_gov) -> NA values matched successfully: {'995', '997', '998', '999', 'SYSTEM MISSING'}
+ [OK] SC016Q02TA (target: fund_fees) -> NA values matched successfully: {'995', '997', '998', '999', 'SYSTEM MISSING'}
+ [OK] SC016Q03TA (target: fund_donation) -> NA values matched successfully: {'995', '997', '998', '999', 'SYSTEM MISSING'}
+ [OK] SC002Q01TA (target: enrol_boys) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC002Q02TA (target: enrol_girls) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC018Q01TA01 (target: staff_shortage) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC018Q01TA02 (target: staff_shortage) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC018Q02TA01 (target: staff_shortage) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC018Q02TA02 (target: staff_shortage) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC002Q01TA (target: stratio) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC002Q02TA (target: stratio) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC018Q01TA01 (target: stratio) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC018Q01TA02 (target: stratio) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC002Q01TA (target: school_size) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
+ [OK] SC002Q02TA (target: school_size) -> NA values matched successfully: {'99995', '99997', '99998', '99999', 'SYSTEM MISSING'}
  [OK] W_SCHGRNRABWT (target: sch_wgt) -> Exists in codebook (No NA checking required)
 
 --- Variables found in JSON but NOT in CSV ---
