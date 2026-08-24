@@ -466,6 +466,19 @@ book_levels_6 = function(x){
     TRUE ~ NA_character_) %>% as.factor()
 }
 
+book_levels_7 = function(x){
+  x = as.integer(x)
+  dplyr::case_when(
+    x == 1 ~ "0",
+    x == 2 ~ "1-10",
+    x == 3 ~ "11-25",
+    x == 4 ~ "26-100",
+    x == 5 ~ "101-200",
+    x == 6 ~ "201-500",
+    x == 7 ~ "More than 500",
+    TRUE ~ NA_character_) %>% as.factor()
+}
+
 public_private = function(x){
   x = as.integer(x)
   dplyr::case_when(
@@ -487,7 +500,8 @@ transformation_registry <- list(
   "yes1no2" = function(x) { yes1no2(x) },
   "none1one2two3threemore4" = function(x) { none1one2two3threemore4(x) },
   "public_private" = function(x) { public_private(x) },
-  "book_levels_6" = function(x) { book_levels_6(x) }
+  "book_levels_6" = function(x) { book_levels_6(x) },
+  "book_levels_7" = function(x) { book_levels_7(x) }
 )
 
 #' Apply Transformations and Rename to Target

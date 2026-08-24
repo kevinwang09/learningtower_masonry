@@ -12,22 +12,22 @@ year,target_name,source_col,transformation,na_values,description,type,note
 2022,country,CNT,as.character,,Country three character,character,
 2022,school_id,CNTSCHID,as.character,,school ID,character,
 2022,student_id,CNTSTUID,as.character,,Student ID,character,
-2022,mother_educ,ST005Q01JA,isced3a1,,Mother <Highest Schooling>,factor,
-2022,father_educ,ST007Q01JA,isced3a1,,Father <Highest Schooling>,factor,
-2022,gender,ST004D01T,fe1ma2,,Gender,factor,encoded as binary
+2022,mother_educ,ST005Q01JA,isced3a1,95;97;98;99;SYSTEM MISSING,Mother <Highest Schooling>,factor,
+2022,father_educ,ST007Q01JA,isced3a1,95;97;98;99;SYSTEM MISSING,Father <Highest Schooling>,factor,
+2022,gender,ST004D01T,fe1ma2,95;97;98;99;SYSTEM MISSING,Gender,factor,encoded as binary
 2022,computer,COMPUTER,yes1no2,,Possessions computer,factor,derived from summing ST254Q02JA and ST254Q03JA
-2022,internet,ST250Q05JA,yes1no2,,Possessions Internet,factor,
+2022,internet,ST250Q05JA,yes1no2,95;97;98;99;SYSTEM MISSING,Possessions Internet,factor,
 2022,math,PV1MATH,as.numeric,,Plausible value 1 in mathematics,numeric,
 2022,read,PV1READ,as.numeric,,Plausible value 1 in reading,numeric,
 2022,science,PV1SCIE,as.numeric,,Plausible value 1 in science,numeric,
 2022,stu_wgt,W_FSTUWT,as.numeric,,Final student weight,numeric,
 2022,desk,,yes1no2,,Possessions desk,factor,
-2022,room,ST250Q01JA,yes1no2,,Possessions own room,factor,
-2022,dishwasher,,yes1no2,,Possessions dishwasher,factor,
+2022,room,ST250Q01JA,yes1no2,95;97;98;99;SYSTEM MISSING,Possessions own room,factor,
+2022,dishwasher,,yes1no2,96;97;98;99;SYSTEM MISSING,Possessions dishwasher,factor,
 2022,television,ST254Q01JA,none1one2two3threemore4,,How many televisions,factor,
 2022,computer_n,COMPUTER_N,none1one2two3threemore4,,How many computers,factor,derived manually in data_2022
-2022,car,ST251Q01JA,none1one2two3threemore4,,How many cars,factor,
-2022,book,ST255Q01JA,book_levels_6,,How many books at home,factor,
+2022,car,ST251Q01JA,none1one2two3threemore4,95;97;98;99;SYSTEM MISSING,How many cars,factor,
+2022,book,ST255Q01JA,book_levels_7,95;97;98;99;SYSTEM MISSING,How many books at home,factor,
 2022,wealth,,as.numeric,95;97;98;99,Wealth,numeric,"This variable is not present in the original PISA 2022 data"
 2022,escs,ESCS,as.numeric,95;97;98;99,Index of economic social and cultural status,numeric,"The 95/97/98/99 NA values were inferred from the data (.sav file), the cookbook unexpectedlt documented these values as 9999995 etc."
 2018,country,CNT,as.factor,,Country three character,factor,
